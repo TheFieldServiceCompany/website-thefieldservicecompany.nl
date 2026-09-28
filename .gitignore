@@ -1,0 +1,16 @@
+# Lokale geheimen en WordPress-configuratie
+.env
+.env.*
+!.env.example
+wp-config.php
+*.pem
+*.key
+
+# Database-exports en lokale back-ups
+*.sql
+*.sql.gz
+/backups/
+
+# Lokale systeembestanden
+.DS_Store
+Thumbs.db
