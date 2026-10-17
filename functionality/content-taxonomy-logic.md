@@ -140,6 +140,35 @@ Voor het vullen worden eerst de canonieke termen, hiërarchie, URL-structuur en
 redirectregels goedgekeurd. De huidige seed- en testtermen worden niet eerder
 verwijderd.
 
+### Pods-relaties van Beroepengidsartikelen
+
+Een Beroepengidsartikel gebruikt het Pods-veld `introduction` voor de zichtbare
+introductie. De standaard WordPress-samenvatting is niet de bron van die tekst.
+
+De actieve snippets lezen alle ingevulde Pods-velden met het voorvoegsel
+`relationship_`, behalve `relationship_vacature_button_url`. In de normale
+situatie selecteren we in zo'n veld de overeenkomstige term uit de
+tegenliggende vacaturetaxonomie, bijvoorbeeld vacatureterm
+`field service engineer` in `relationship_functienaam`. Verschillende
+taxonomieën worden samen als AND-filter gebruikt. Meerdere termen binnen
+`kennisgebied` worden eveneens met AND gecombineerd; binnen andere taxonomieën
+worden meerdere termen als IN/OR behandeld.
+
+De vacatureknop en de bijbehorende combo-archief-URL worden automatisch uit
+deze actieve relaties opgebouwd. `relationship_vacature_button_url` wordt
+alleen ingevuld wanneer bewust een afwijkende, expliciete taxonomieterm als
+buttonbestemming nodig is. Het veld is geen standaardverplichting en wordt niet
+gebruikt om de vacaturequery te filteren.
+
+De lijsten met gerelateerde kennisgebieden, bedrijfssectoren,
+functie-inhouden, opleidingsniveaus en werkgebieden worden afgeleid uit de open
+vacatures die aan alle actieve relaties voldoen. Onjuiste vacaturetaxonomieën
+werken daardoor rechtstreeks door in het Beroepengidsartikel. Bij `Wat is een
+Field Service Engineer?` verschijnt bijvoorbeeld alleen `LBO`, omdat de
+gekoppelde vacatures momenteel aan die term zijn gekoppeld, ook wanneer hun
+tekst MBO/HBO vraagt. Dit moet in de vacaturedata worden gecorrigeerd; het
+Beroepengidsartikel hoeft daarvoor geen handmatige opleidingsrelatie te krijgen.
+
 ## TODO: opleidingsrichtingen in vacatures, Supabase en Appsmith
 
 Voorlopig blijft de bestaande Beroepengids-taxonomie

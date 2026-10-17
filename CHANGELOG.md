@@ -1,6 +1,6 @@
 # Changelog
 
-## 2026-10-17 — Eerste blogartikel als Beroepengids-concept
+## 2026-10-17 — Eerste blogartikel naar Beroepengids gemigreerd
 
 - Van het bestaande blogartikel `Wat is een Field Service Engineer? Lees alles
   over deze geweldige baan!` een nieuw Beroepengids-concept gemaakt met post-ID
@@ -18,10 +18,22 @@
 - Het verouderde Rank Math FAQ-blok is verwijderd. Zeven unieke vragen staan nu
   als gewone H3-vragen met antwoorden onder de H2 `Veelgestelde vragen over de
   functie field service engineer`; één inhoudelijk dubbele vraag is weggelaten.
-- De conceptweergave is gecontroleerd op titel, afbeelding, breadcrumbs,
-  artikelinhoud en de nieuwe vraagstructuur. Publiceren, het oude blog
-  depubliceren en de permanente 301-redirect blijven afzonderlijke vervolgstappen
-  waarvoor eerst inhoudelijke goedkeuring nodig is.
+- De zichtbare introductie blijkt uit het Pods-veld `introduction` te komen en
+  niet uit de standaard WordPress-samenvatting. De vacatureknop wordt normaal
+  automatisch uit de gekozen `relationship_*`-velden opgebouwd;
+  `relationship_vacature_button_url` is alleen een expliciete override.
+- Het artikel is na inhoudelijke controle gepubliceerd op
+  `/beroepengids/artikel/wat-is-een-field-service-engineer/`. De bestaande 301
+  van `/blog/wat-is-een-field-service-engineer/` is rechtstreeks naar deze URL
+  omgezet en voor de lange voormalige blog-URL is eveneens een directe 301
+  toegevoegd. Beide regels zijn met de Rank Math-debugger gecontroleerd.
+- Het oude blogartikel met post-ID `19232` is na expliciete goedkeuring naar de
+  WordPress-prullenbak verplaatst en blijft daardoor herstelbaar.
+- In het dynamische blok met vacatureonderwerpen verschijnt alleen `LBO`. Dit
+  komt uit de taxonomie van de gekoppelde open vacatures, niet uit het
+  Beroepengidsartikel. Gecontroleerde vacatures noemen inhoudelijk MBO/HBO maar
+  zijn momenteel uitsluitend aan `LBO` gekoppeld; correctie van de bestaande
+  vacaturedata blijft daarom een afzonderlijke TODO.
 
 ## 2026-10-17 — Beroepengids: taxonomie Arbeidsvoorwaarden als TODO
 
