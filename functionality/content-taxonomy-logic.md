@@ -163,11 +163,13 @@ gebruikt om de vacaturequery te filteren.
 De lijsten met gerelateerde kennisgebieden, bedrijfssectoren,
 functie-inhouden, opleidingsniveaus en werkgebieden worden afgeleid uit de open
 vacatures die aan alle actieve relaties voldoen. Onjuiste vacaturetaxonomieën
-werken daardoor rechtstreeks door in het Beroepengidsartikel. Bij `Wat is een
-Field Service Engineer?` verschijnt bijvoorbeeld alleen `LBO`, omdat de
-gekoppelde vacatures momenteel aan die term zijn gekoppeld, ook wanneer hun
-tekst MBO/HBO vraagt. Dit moet in de vacaturedata worden gecorrigeerd; het
-Beroepengidsartikel hoeft daarvoor geen handmatige opleidingsrelatie te krijgen.
+werken daardoor rechtstreeks door in het Beroepengidsartikel. Dit werd zichtbaar
+toen bij `Wat is een Field Service Engineer?` aanvankelijk alleen `LBO`
+verscheen. Op 17 oktober 2026 zijn de opleidingsniveaus van alle 63
+gepubliceerde vacatures hersteld uit de oude live-WordPress-export. De
+functionele hertest toont nu HBO, LBO, MBO en Universiteit. Daarmee is bevestigd
+dat het Beroepengidsartikel geen handmatige opleidingsrelatie nodig heeft: de
+actieve snippets leiden deze lijst correct af uit de gekoppelde vacatures.
 
 ## TODO: opleidingsrichtingen in vacatures, Supabase en Appsmith
 
@@ -220,9 +222,12 @@ uitgefaseerd.
 - De bestaande vacaturetaxonomie `werkgebied` nog inhoudelijk nalopen, vullen
   en aan bestaande vacatures koppelen; daarna vergelijken met
   `beroep_werkgebied`, plaatsen, postcodes en Supabase.
-- De bestaande vacaturetaxonomie `opleidingsniveau` en
-  `beroep_opleidingsniveau` vullen vanuit één goedgekeurde canonieke
-  termenlijst en bestaande vacaturekoppelingen controleren.
+- De herstelde vacaturetaxonomie `opleidingsniveau` en
+  `beroep_opleidingsniveau` later verder gelijktrekken met één goedgekeurde
+  canonieke termenlijst. De 63 bestaande gepubliceerde vacaturekoppelingen zijn
+  op 17 oktober 2026 uit de oude live-export hersteld en exact gecontroleerd;
+  toekomstig werk betreft nieuwe vacatures, eventuele ontbrekende termen en de
+  WordPress-, Supabase- en Appsmith-keten.
 - De bestaande vacaturetaxonomie `reisprofiel` (beheerlabel `Reisprofielen`)
   inclusief termen en vacaturekoppelingen nalopen. Daarbij expliciet bepalen
   hoe de samengestelde WordPress-termen zich verhouden tot de gestructureerde

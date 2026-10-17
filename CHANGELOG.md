@@ -1,5 +1,42 @@
 # Changelog
 
+## 2026-10-17 — Opleidingsniveaus van 63 live vacatures hersteld
+
+- Vastgesteld dat de huidige vacaturetaxonomie `opleidingsniveau` tijdens een
+  eerdere migratie vrijwel al haar termkoppelingen had verloren: 26 vacatures
+  waren leeg en 33 hadden uitsluitend `LBO`; slechts 2 van de 63 gepubliceerde
+  vacatures kwamen exact overeen met de oude live-data.
+- De Updraft-databasekopieën van 16 en 17 oktober bleken aan
+  `https://dev.thefieldservicecompany.nl` te behoren en zijn daarom niet als
+  oude live-bron gebruikt. De autoritatieve bron was de volledige WordPress-
+  export `vacatures-all.xml` van de oude live-site, gemaakt op 16 oktober 2026
+  om 22:13 UTC.
+- De 63 gepubliceerde vacatures uit die export zijn op slug vergeleken met de
+  63 huidige live-vacatures. Er ontbrak geen enkele slug en er was geen extra
+  live-slug. De oude taxonomie `opleiding` is één-op-één gemapt naar de huidige
+  taxonomie `opleidingsniveau`: HBO `69`, MBO `70`, Universiteit `71` en LBO
+  `210`.
+- Na een verse voorcontrole via de WordPress REST API zijn uitsluitend de
+  `opleidingsniveau`-term-ID's van de 61 afwijkende vacatures bijgewerkt. Titels,
+  inhoud, publicatiestatus en alle andere taxonomieën zijn niet meegestuurd of
+  gewijzigd. De 2 reeds juiste vacatures zijn overgeslagen.
+- Een onafhankelijke REST-export na afloop bevestigde 63 verwachte en 63
+  aanwezige vacatures, 0 ontbrekende slugs, 0 extra slugs, 0 termverschillen en
+  0 vacatures zonder opleidingsniveau.
+- De functionele hertest van het gepubliceerde Beroepengidsartikel `Wat is een
+  Field Service Engineer?` toont onder `Opleidingsniveau` nu correct HBO, LBO,
+  MBO en Universiteit. Dit bevestigt tevens dat de snippets de vacaturedata
+  correct aggregeren en dat geen handmatige opleidingsrelatie op het artikel
+  nodig is.
+- QUIC.cloud blokkeerde de terminal-REST-aanroepen met HTTP 403. De herstel- en
+  controleaanroepen zijn daarom rechtstreeks naar de eigen Cloud86-oorsprong
+  gestuurd, met behoud van HTTPS-hostnaam en certificaatcontrole. QUIC.cloud is
+  niet uitgeschakeld.
+- Voor de herstelactie is een nieuwe toepassingssleutel van gebruiker
+  `codex-rest-audit` gemaakt. Een bij de eerste lokale overdracht ontstane maar
+  nooit gebruikte sleutel is direct daarna ingetrokken; de werkende sleutel
+  blijft volgens afspraak lokaal en buiten de repository bewaard.
+
 ## 2026-10-17 — Eerste blogartikel naar Beroepengids gemigreerd
 
 - Van het bestaande blogartikel `Wat is een Field Service Engineer? Lees alles
