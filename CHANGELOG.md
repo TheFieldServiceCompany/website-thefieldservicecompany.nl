@@ -1,5 +1,47 @@
 # Changelog
 
+## 2026-10-17 — Eerste blogartikel als Beroepengids-concept
+
+- Van het bestaande blogartikel `Wat is een Field Service Engineer? Lees alles
+  over deze geweldige baan!` een nieuw Beroepengids-concept gemaakt met post-ID
+  `27533`. Het oude blogartikel is niet gewijzigd en er is nog geen redirect
+  aangemaakt.
+- De nieuwe slug is `wat-is-een-field-service-engineer`; auteur Rudi van Vliet,
+  oorspronkelijke publicatiedatum 10 januari 2025, samenvatting en uitgelichte
+  afbeelding zijn overgenomen.
+- Alleen de bestaande Beroepengids-taxonomieterm `field service engineer`
+  (`beroep_functienaam`, term-ID `437`) is gekoppeld. Andere taxonomieën zijn
+  leeg gebleven.
+- De Rank Math-instellingen zijn overgenomen: SEO-title met `%currentyear%`, de
+  twee bestaande focuszoekwoorden en de pillar-contentmarkering. De
+  metabeschrijving blijft, net als bij de bron, gebaseerd op de samenvatting.
+- Het verouderde Rank Math FAQ-blok is verwijderd. Zeven unieke vragen staan nu
+  als gewone H3-vragen met antwoorden onder de H2 `Veelgestelde vragen over de
+  functie field service engineer`; één inhoudelijk dubbele vraag is weggelaten.
+- De conceptweergave is gecontroleerd op titel, afbeelding, breadcrumbs,
+  artikelinhoud en de nieuwe vraagstructuur. Publiceren, het oude blog
+  depubliceren en de permanente 301-redirect blijven afzonderlijke vervolgstappen
+  waarvoor eerst inhoudelijke goedkeuring nodig is.
+
+## 2026-10-17 — Beroepengids: taxonomie Arbeidsvoorwaarden als TODO
+
+- Vastgelegd dat een Beroepengidsartikel meerdere taxonomische ingangen kan
+  krijgen, bijvoorbeeld zowel de functienaam `field service engineer` als de
+  taxonomie `Arbeidsvoorwaarden` met de term `Salaris`.
+- De gekozen richting is een custom taxonomie `Arbeidsvoorwaarden`, met later
+  onder meer salaris, secundaire arbeidsvoorwaarden, toeslagen, vergoedingen,
+  bonus, pensioen, reisuren en overwerk en verblijfskosten of dagvergoedingen.
+- Vastgelegd dat Supabase hiervoor één canonieke termenlaag met WordPress-
+  mappings krijgt, terwijl concrete salaris- en toeslagbedragen gestructureerde
+  velden blijven. Appsmith moet later op beide onderdelen aansluiten.
+- Besloten de custom taxonomie nu nog niet aan te maken, omdat aan de
+  vacaturezijde nog geen overeenkomstige taxonomie of definitieve relatie
+  bestaat. Eerst wordt de gedeelde WordPress-, Supabase- en Appsmith-keten
+  ontworpen; daarna worden de bestaande Beroepengids-taxonomieën als
+  instellingenvoorbeeld gebruikt.
+- Er zijn hiervoor nog geen wijzigingen in WordPress, Pods, snippets,
+  taxonomietermen of URL-structuur uitgevoerd.
+
 ## 2026-10-17
 
 - Eerste dev-WordPress-audit vastgelegd.

@@ -151,6 +151,57 @@ beoordeling verplaatst. Per artikel voeren we later deze vaste stappen uit:
 De bestaande blogindex en de voorlopige verdeling in de Google Sheet blijven
 het uitgangspunt. Geen oude URL verdwijnt zonder een gecontroleerde redirect.
 
+### Lopend: Wat is een Field Service Engineer?
+
+Het bronartikel is als Beroepengids-concept met post-ID `27533` opgebouwd en
+gekoppeld aan de bestaande functienaam `field service engineer`. Het oude
+blogartikel blijft gepubliceerd totdat het nieuwe artikel inhoudelijk is
+goedgekeurd. Ook de 301-redirect wordt pas daarna aangemaakt.
+
+Het oude Rank Math FAQ-blok is in het concept vervangen door gewone vragen en
+antwoorden. De volgende vragen zijn tevens kandidaten voor zelfstandige
+artikelen, waarna het overzichtsartikel ernaar kan doorlinken:
+
+- wat doet een field service engineer?;
+- welke vaardigheden en kwalificaties heb je nodig?;
+- in welke bedrijfssectoren werken field service engineers?;
+- welke carrièremogelijkheden zijn er?;
+- wat verdient een field service engineer gemiddeld?;
+- welke opleiding wordt gevraagd voor deze functie?.
+
+Voor publicatie controleren we actualiteit, taal, bedragen, interne links,
+SEO-metadata en eventuele overlap met de toekomstige zelfstandige artikelen.
+
+## TODO: taxonomie Arbeidsvoorwaarden voor Beroepengids
+
+Een Beroepengidsartikel kan tegelijk onder een functienaam en onder de
+taxonomie `Arbeidsvoorwaarden` vallen. Zo hoort een artikel over het salaris
+van een field service engineer zowel bij de functienaam
+`field service engineer` als bij de term `Salaris`.
+
+De gekozen richting is een custom taxonomie `Arbeidsvoorwaarden`, met later
+bijvoorbeeld de termen `Salaris`, `Secundaire arbeidsvoorwaarden`, `Toeslagen`,
+`Vergoedingen`, `Bonus`, `Pensioen`, `Reisuren en overwerk` en
+`Verblijfskosten of dagvergoedingen`. Voor de implementatie controleren we de
+definitieve termen, slugs, hiërarchie, filters, templates, snippets en
+URL-structuur. Er worden nu nog geen Pods-definitie, termen, snippets, URL's
+of relaties toegevoegd.
+
+De taxonomie wordt bewust nog niet in Pods of WordPress aangemaakt. Aan de
+vacaturezijde bestaat nog geen overeenkomstige taxonomie of definitieve
+relatie, waardoor een onmiddellijke Beroepengids-implementatie een losstaand
+model zou opleveren. Eerst ontwerpen we de gedeelde vacature-, Beroepengids-,
+Supabase- en Appsmith-keten; daarna maken en vullen we de custom taxonomie met
+de andere Beroepengids-taxonomieën als uitgangspunt voor de instellingen.
+
+Supabase sluit hierop aan met één canonieke vocabulaire voor soorten
+arbeidsvoorwaarden en expliciete mappings naar de WordPress-termen. Artikelen,
+vacatures en waar nodig kandidaten kunnen via many-to-manyrelaties aan dezelfde
+concepten worden gekoppeld. Concrete vacaturegegevens zoals salarisminimum,
+salarismaximum, valuta, betaalperiode en bedragen van toeslagen blijven
+gestructureerde velden; de taxonomietermen vervangen die waarden niet.
+Appsmith gebruikt later dezelfde canonieke termen en gestructureerde velden.
+
 ## TODO: omvang en prestaties van WordPress
 
 De WordPress-installatie en de back-ups zijn uitzonderlijk groot. Eerst wordt
