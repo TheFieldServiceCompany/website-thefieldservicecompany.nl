@@ -11,10 +11,14 @@ naar WordPress uitgerold.
 | Code Snippet 100 | Actief | Publieke taxonomietermen toevoegen aan de WordPress-linkzoeker | WordPress term-API en native term-URL's |
 | Code Snippet 39 | Actief | Prefixen uit Elementor-archieftitels verwijderen | Elementor |
 | Code Snippet 42 | Inactief | In Pods Admin tonen aan welke posttypes een taxonomie gekoppeld is | Pods en wp-admin DOM |
-| Code Snippet 49 | Actief, maar verouderde CPT-naam | Contextclasses voor het generieke Beroepengids-archief | Queryvar `tfsc_taxonomy_archive`; controleert nog `beroep` in plaats van `beroepengids` |
+| Code Snippet 49 | Actief en gecorrigeerd | Contextclasses voor het generieke Beroepengids-archief | Queryvar `tfsc_taxonomy_archive`; LIVE-CPT-controle op `beroepengids` |
 | Code Snippet 62 | Actief | Elementor-taxonomielussen filteren op huidige taxonomie en hiërarchieniveau | Elementor Loop Taxonomy en `tfsc_taxonomy_archive` |
 | Code Snippet 9 | Actief | ALT- en title-attribuut van de uitgelichte afbeelding gelijkmaken aan de berichttitel | WordPress afbeeldingen |
-| Code Snippet 99 | Actief maar inert | Rank Math-breadcrumbs voor samengestelde vacaturearchieven | Ontbrekende functies `tfsc_is_combo_archive()` en `tfsc_get_combo_archive()` plus `TFSC_COMBO_BASE` |
+| Code Snippet 99 | Actief | Rank Math-breadcrumbs voor samengestelde vacaturearchieven | Snippet 186 levert `tfsc_is_combo_archive()`, `tfsc_get_combo_archive()` en `TFSC_COMBO_BASE` |
+| Code Snippet 148 | Actief | Custom Rank Math-sitemaps voor indexeerbare vacaturecombinaties | Snippets 186 en 193, Rank Math |
+| Code Snippet 186 | Actief | Virtuele vacature-comboarchieven, rewrites, queries, paginering en Search & Filter-synchronisatie | WordPress, Elementor Pro en Search & Filter Query 1 |
+| Code Snippet 193 | Actief | SEO, robots, canonical, metadata en indexeringsbesluit voor combo- en filter-URL's | Snippet 186 en Rank Math |
+| Code Snippet 209 | Actief en hertest | Unieke Rank Math-title en description voor de twee hoofdarchieven en zes virtuele Beroepengids-basearchieven | Rank Math en queryvar `tfsc_taxonomy_archive` |
 | `snip-tfsc` | Actief | Google Jobs/SNIP-locatieobjecten maken vanuit WordPress-locatietermen | SNIP Pro, taxonomie `locatie` en termmeta |
 | `tfsc-custom-functions` | Actief | Globale frontendaanpassingen, uploads als e-mailbijlage, styles en shortcodes | Elementor Pro, Rank Math en lokale assets |
 | `tfsc-schema-read-endpoint` | Actief | Alleen-lezen inventaris van posttypes, taxonomieën, termen en Pods | REST-authenticatie en Pods |
@@ -29,9 +33,9 @@ alle publieke en publiek opvraagbare taxonomieën toegevoegd. `post_format`
 wordt uitgesloten. Via de globale vlag `tfsc_force_native_term_link` vraagt de
 snippet om een native term-URL in plaats van een virtuele combinatie-URL.
 
-De code die deze vlag daadwerkelijk verwerkt is niet in de repository
-aangetroffen. De zoekresultaten zelf blijven bruikbaar, maar deze afhankelijkheid
-moet worden teruggevonden of opnieuw ontworpen.
+De actieve snippets 188, 189 en 190 respecteren deze vlag wanneer zij normale
+term-URL's vervangen door vacature-combo-URL's. De linkzoeker kan daardoor
+bewust de oorspronkelijke WordPress-term-URL blijven tonen.
 
 ### 39 — Archieftitel zonder WordPress-prefix
 
@@ -55,10 +59,11 @@ reageren op:
 - het Beroepengids-posttypearchief;
 - een generiek taxonomiearchief via `tfsc_taxonomy_archive`.
 
-De posttypecontrole gebruikt nog `beroep`, terwijl de huidige CPT
-`beroepengids` heet. Die tak werkt daardoor momenteel niet voor het actuele
-posttype. De taxonomietak werkt alleen wanneer een andere component de queryvar
-zet.
+De posttypecontrole gebruikte `beroep`, terwijl de huidige CPT `beroepengids`
+heet. Dit is op 17 oktober 2026 op LIVE gecorrigeerd en functioneel hertest.
+Het CPT-archief krijgt nu de class `tfsc-archive-beroepen`. De taxonomietak
+werkt wanneer een andere component de queryvar zet en bleef na de wijziging
+correct de class `tfsc-archive-taxonomy` toevoegen.
 
 ### 62 — Elementor-taxonomielussen
 
@@ -90,9 +95,200 @@ Bedoeld voor paden als:
 `Home > Vacatures > Field Service Engineer > Elektrotechniek`
 
 De URL wordt opgebouwd uit de taxonomienaam en de volledige termhiërarchie.
-De code stopt nu direct, omdat de vereiste combo-archieffuncties en constante
-niet actief in de repository aanwezig zijn. De snippet verandert de normale
-breadcrumbs daardoor momenteel niet.
+De vereiste functies en constante worden op LIVE geleverd door actieve snippet
+186. De breadcrumbfunctie is daardoor niet inert; hij moet samen met de
+combo-archieflogica worden getest.
+
+### 209 — TFSC SEO Beroepengids en Kennisbank
+
+`snippets/php/tfsc-seo-beroepengids-kennisbank-archives.php` bevat een strikt
+afgebakende mapping voor de gewone Beroepengids-pagina, het Kennisbank-CPT-
+archief en de zes virtuele Beroepengids-taxonomy-base-archieven. De code
+overschrijft uitsluitend Rank Math-title en description, plus dezelfde waarden
+voor Open Graph en Twitter. Canonicals, robots, sitemaps, vacature-combo's,
+gewone termarchieven en zichtbare pagina-inhoud blijven ongemoeid.
+
+De code staat in de repository en is na expliciete goedkeuring op LIVE als
+snippet 209 geactiveerd. Alle acht HTML-titles, meta descriptions, Open Graph-
+waarden en Twitter-waarden zijn daarna exact teruggelezen. Een vacaturearchief
+en een normaal Beroepengids-termarchief zijn als afbakeningscontrole getest en
+behielden hun bestaande metadata.
+
+Tijdens deze controle bleef de algemene onderhoudsblokkade actief. Daarom
+tonen de pagina's nog `noindex, nofollow` en geen canonical; snippet 209
+verandert die waarden niet. Canonicals en indexeerbaarheid worden opnieuw
+gecontroleerd wanneer de onderhoudsmodus en WordPress-zoekmachineblokkade bij
+de definitieve livegang worden opgeheven.
+
+### 148, 186 en 193 — vacature-comboarchieven en sitemap
+
+Deze drie actieve LIVE-snippets vormen één functionele keten:
+
+1. **186 — Base Code** registreert virtuele paden onder `/vacatures/`, leest
+   taxonomie- en termsegmenten, bouwt de vacaturequery, beperkt de resultaten
+   tot gepubliceerde vacatures met status `open`, verzorgt paginering en
+   synchroniseert Search & Filter Query 1.
+2. **193 — SEO & Canonical** bepaalt per combo de titel, beschrijving, robots,
+   canonical, Open Graph-URL en pagineringslinks. De centrale functie
+   `tfsc_combo_should_index()` wordt ook door de sitemap gebruikt.
+3. **148 — Sitemap** maakt de Rank Math-provider `combo-vacatures`, genereert
+   en cachet de toegestane combinaties en voegt de gesplitste sitemaps aan de
+   sitemapindex toe.
+
+De exacte actieve exports, inclusief alle oorspronkelijke uitleg, staan onder
+`snippets/exports/live/`.
+
+Daarnaast staat in `snippets/exports/live/all-2026-10-17/` een volledige,
+leesbare export van alle 47 LIVE-snippets: 26 actief en 21 inactief. Daarmee
+blijven ook oudere versies, tests en de uitleg bij eerdere beslissingen
+beschikbaar. Deze export is uitsluitend een back-up en wordt niet automatisch
+naar WordPress uitgerold.
+
+#### Vastgestelde LIVE-logica
+
+- verschillende taxonomieën worden met `AND` gecombineerd;
+- meerdere termen binnen één taxonomie gebruiken normaal `OR`;
+- alleen `kennisgebied` gebruikt binnen dezelfde taxonomie `AND`;
+- alleen gepubliceerde vacatures met `vac_status=open` tellen mee;
+- een combo is indexeerbaar wanneer die een `functienaam` bevat, maximaal drie
+  verschillende taxonomieën gebruikt en minimaal één resultaat heeft;
+- daarnaast is een combo met uitsluitend `locatie` indexeerbaar;
+- overige combo's zonder `functienaam`, en combo's met meer dan drie
+  taxonomieën, krijgen `noindex, follow`;
+- Search & Filter-query-URL's horen `noindex, follow` te krijgen en volgens de
+  snippetbeschrijving een canonical naar de schone `/vacatures/`-URL.
+
+#### Functionele controle op 17 oktober 2026
+
+De openbare sitemapindex bevat 32 `combo-vacatures`-sitemaps met samen 15.836
+URL's. Daarvan hebben 622 URL's twee taxonomieën en 15.214 URL's drie
+taxonomieën. Alle 15.836 bevatten `functienaam`.
+
+De huidige sitemap is dus technisch bereikbaar, gesplitst en begrensd tot twee
+of drie taxonomieën, maar er is geen geleidelijke publicatielimiet op een klein
+aantal URL's actief. De omschrijving “fase 1” en de commentaarregel “exact 2
+taxonomieën” komen niet overeen met de actuele configuratie: minimum is 2 en
+maximum is 3.
+
+Representatieve frontendtests bevestigen:
+
+- twee taxonomieën met functienaam: `index, follow` en self-canonical;
+- drie taxonomieën met functienaam: `index, follow` en self-canonical;
+- twee taxonomieën zonder functienaam: `noindex, follow`;
+- vier taxonomieën: `noindex, follow`;
+- locatie-only: `index, follow` en self-canonical;
+- Search & Filter-query-URL: `noindex, follow`.
+
+Bij de geteste `noindex`-combo's en Search & Filter-URL werd geen canonical-link
+gerenderd. Dat wijkt voor Search & Filter af van de uitleg in snippet 193 en
+moet vóór verdere indexering worden hersteld of bewust als nieuw besluit worden
+vastgelegd.
+
+#### Eerder vastgelegde keuze voor native vacature-taxonomiearchieven
+
+De oudere, bewust uitgeschakelde SEO-snippets 146, 150 en 187 beschrijven
+dezelfde strategie als de actieve opvolger 193. Dat geeft een herleidbare
+beslislijn binnen WordPress zelf:
+
+- de oorspronkelijke vacature-taxonomiearchieven blijven bereikbaar;
+- ze blijven `index, follow`;
+- een native `functienaam` canonicaliseert naar de overeenkomstige combo onder
+  `/vacatures/functienaam/.../`;
+- een native `locatie` canonicaliseert naar de overeenkomstige locatie-only
+  combo onder `/vacatures/locatie/.../`;
+- andere native vacaturetaxonomieën canonicaliseren in de huidige v2.2-code
+  naar een combo met `field-service-engineer` als functienaamcontext.
+
+Op 17 oktober 2026 is dit op LIVE gecontroleerd. De native archieven voor
+`commissioning-engineer`, `nederland` en bedrijfssector `energie` geven alle
+`index, follow` en renderen de hierboven beschreven canonical. Er is dus geen
+reden om de native archieven of snippet 193 nu uit te schakelen. De inhoudelijke
+keuze voor de vaste `field-service-engineer`-context bij andere taxonomieën
+blijft wel een expliciet herbevestigingspunt voordat onderhoudsmodus en de
+zoekmachineblokkade worden opgeheven.
+
+### Audit van actief/inactief-selectie
+
+De huidige status blijkt geen willekeurige verzameling. Vrijwel iedere oude
+versie of kloon staat uit en de nieuwste opvolger staat aan:
+
+| Inactieve voorganger(s) | Actieve opvolger |
+| --- | --- |
+| 42 en 207 | 208 |
+| 102, 195, 196 en 198 | 199 |
+| 110 | 206 |
+| 111 | 204 |
+| 122 | 189 |
+| 126 | 188 |
+| 130 | 203 |
+| 132 | 191 |
+| 134 en 201 | 202 |
+| 146, 150 en 187 | 193 |
+| 149 en 184 | 186 |
+
+Snippets 185 (`debug 6`) en 197 (`test hermes vacatures create`) zijn eveneens
+terecht inactief. Ze mogen pas na een aparte inhoudelijke vergelijking worden
+verwijderd; inactief laten is nu de veilige keuze.
+
+**Voorlopig statusbesluit:** alle 26 momenteel actieve snippets blijven aan.
+De oudere versies blijven uit. Snippet 49 is inmiddels gecorrigeerd en
+hertest. Snippet 99 heeft nog een onvolledige breadcrumb in de Rank Math-
+schema-uitvoer en snippet 193 heeft de genoemde canonical-afwijking op
+`noindex`-URL's. Deze twee punten worden eerst gericht beoordeeld en hertest;
+ze zijn geen reden om de bijbehorende functionaliteit nu geheel uit te
+schakelen.
+
+### Functionele controle Beroepengids-keten
+
+Op 17 oktober 2026 zijn drie representatieve LIVE-paden gecontroleerd:
+
+- `/beroepengids/functienamen/` wordt door snippet 113 correct als virtueel
+  taxonomie-base-archief afgehandeld, krijgt HTTP-content, het juiste
+  Elementor-template en de classes `tfsc-taxonomy-base-archive` en
+  `tfsc-archive-taxonomy`;
+- `/beroepengids/functienamen/field-service-engineer-b/` laadt als normaal
+  termarchief met de bedoelde termcontent en gerelateerde secties;
+- `/beroepengids/artikelen/` laadt als het CPT-archief van `beroepengids` en
+  toont de bedoelde template en breadcrumb.
+
+De eerste twee controles bevestigen dat snippets 62, 101, 113 en de dynamische
+archiefketen daadwerkelijk worden gebruikt en actief moeten blijven. De LIVE-
+versie van snippet 49 controleerde nog op de oude CPT-naam `beroep`. Na de
+correctie naar `beroepengids` is bevestigd dat `/beroepengids/artikelen/` de
+class `tfsc-archive-beroepen` krijgt en dat de bestaande taxonomieclass op
+`/beroepengids/functienamen/` behouden blijft.
+
+Op het taxonomie-base-archief staat bovendien zichtbaar de letterlijke tekst
+`archive_beroep_functienaam_description` in Elementor-widget `bb20f10`. Dit is
+geen snippetfout. De widget gebruikt correct de dynamische tag **TFSC Archive
+Settings Field** met instelling `description`. Het centrale Pods-veld bevat
+zelf letterlijk zijn eigen veldnaam als tijdelijke inhoud.
+
+Dezelfde placeholder is aangetroffen in de description-velden voor
+bedrijfssector, functie-inhoud, functienaam, kennisgebied, opleiding en
+werkgebied. Daarnaast bevatten twee introvelden nog de tijdelijke teksten
+`test bedrijfssector intro` en `intro functienaam`. Op 17 oktober 2026 zijn
+uitsluitend deze acht tijdelijke LIVE-waarden leeggemaakt. De bestaande echte
+Beroepengids-CPT-teksten en de kennisbankvelden zijn daarbij ongewijzigd
+gebleven. Na opslag zijn de taxonomie-base-archieven voor functienaam,
+functie-inhoud, opleidingsniveau en werkgebied opnieuw getest; op geen van deze
+pagina's wordt nog een ruwe veldnaam of de twee testteksten getoond.
+
+Ook is een naamgevingsverschil vastgesteld: de actieve WordPress-taxonomie heet
+`beroep_opleidingsniveau`, terwijl de centrale Pods-velden `opleiding` in hun
+naam gebruiken. De generieke veldopbouw zal daardoor voor dit archief niet de
+bestaande Pods-velden vinden. Snippet 113 noemt daarnaast `beroep_locatie` in de
+allowlist, maar deze taxonomie verschijnt niet in het huidige Beroepengids-
+beheermenu en heeft geen centrale archiefvelden. Beide punten worden eerst als
+datamodelbesluit beoordeeld en niet stilzwijgend hernoemd.
+
+De paginatitel is nu generiek `Archive • The Field Service Company`; voor de
+Beroepengids base-archieven is dus nog gerichte Rank Math-metadata nodig.
+
+Alle drie de paden geven tijdens deze test `noindex, nofollow`, overeenkomstig
+de nog actieve algemene zoekmachineblokkade. Canonicals kunnen pas betrouwbaar
+anoniem worden hertest nadat die blokkade bij de uiteindelijke livegang bewust
+is opgeheven.
 
 ## Plugin `snip-tfsc`
 
@@ -161,10 +357,10 @@ opgeschoond.
 - de markering `[elementor_form_no_attachment]` voorkomt een bijlage voor een
   specifieke e-mailactie.
 
-De huidige code probeert per upload altijd twintig posities te lezen en
-controleert `$_FILES` onvoldoende. Dit is bestaande technische schuld. Omdat
-lokale opslag en gegevensbehoud belangrijk zijn, mag dit pas na een back-up en
-gerichte regressietest worden aangepast.
+In de repository is voorbereid dat alleen werkelijk aanwezige, leesbare
+bestanden worden toegevoegd en dat de oorspronkelijke bestandsnaam eerst veilig
+wordt gecontroleerd. Deze correctie moet vóór uitrol met een enkel en een
+meervoudig testbestand worden getest. Lokale opslag blijft behouden.
 
 ### Overige functionaliteit
 
@@ -207,9 +403,10 @@ contractvorm, paginatitel en URL in de gerenderde Elementor-HTML. Bij een klik
 op `.button-advies` worden deze waarden als queryparameters aan het
 adviesformulier meegegeven.
 
-De geëxporteerde code bevat een hardcoded URL naar de dev-site en encodeert de
-queryparameterwaarden niet met `encodeURIComponent`. Voor gebruik op productie
-moeten beide punten worden opgelost en getest.
+De geëxporteerde code bevatte een hardcoded URL naar de dev-site en ongecodeerde
+queryparameterwaarden. In de repository gebruikt de knop nu het huidige domein
+via `window.location.origin` en `URLSearchParams`. Uitrol en een volledige
+formulierproef moeten nog plaatsvinden.
 
 ### Tracking
 

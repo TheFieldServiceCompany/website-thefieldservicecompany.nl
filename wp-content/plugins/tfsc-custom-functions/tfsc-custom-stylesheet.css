@@ -793,7 +793,7 @@ Staat bij page custom css*/
 .elementor-icon-list-items .elementor-icon-list-item .elementor-icon-list-text span{display:inline}
 
 /*Form Recaptcha*/
-  grecaptcha-badge {visibility: hidden}
+  .grecaptcha-badge {visibility: hidden}
 
 
 /* popup zero margin hidden fields*/
@@ -858,7 +858,7 @@ Staat bij page custom css*/
 }
 
 
-/*** FOOTER *** /
+/*** FOOTER ***/
  /* stretch footer tot einde als* pagina kort is*/
  .elementor-location-footer{
      flex-grow:1

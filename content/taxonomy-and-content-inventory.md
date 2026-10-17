@@ -44,17 +44,66 @@ De Sheet bevat:
 | `vac_status` | `vacancy_statuses` | WordPress-publicatiestatus aan CRM-workflow koppelen |
 | `locatie` | `geographic_areas` en vacature-relaties | Alle plaatsen en postcodes opnemen; bedrijfsadres, werklocatie en woon-/wervingsregio scheiden |
 | `werkgebied` | relatie naar `geographic_areas` | Niet als tweede losse geografie-vocabulaire onderhouden |
-| `dagen-internationaal` | `vacancy_travel_requirements` | Bandtermen naar numerieke grenzen omzetten |
+| `dagen-internationaal` | Gedeelde canonieke termen voor vacatures en kandidaten | Bestaande vacatures en kandidaten onder de juiste term indelen |
 | `reisprofiel` | `vacancy_travel_requirements` | Samengestelde labels naar concrete velden ontleden |
 
-`dagen-internationaal` en `reisprofiel` worden niet zonder beoordeling als
-losse Supabase-termenlijst gekopieerd. De bestaande betekenis blijft behouden;
-per term bepalen we samen hoe die naar de concrete reisvelden wordt vertaald.
+`dagen-internationaal` blijft een gedeelde categorie met de afgesproken termen.
+Zowel vacatures als kandidaten krijgen in Supabase relaties naar deze termen.
+Bestaande data moet later gecontroleerd worden ingedeeld. `reisprofiel` en
+eventuele aanvullende concrete reisvelden beoordelen we afzonderlijk.
+
+Voor `vac_studierichting` is besloten de inhoudelijke inrichting uit te stellen.
+Deze vacaturetaxonomie bestaat al in WordPress en heeft in het beheer het label
+`Studierichtingen`; zij hoeft dus niet opnieuw voor vacatures te worden
+aangemaakt. De huidige termen en vacaturekoppelingen worden later gezamenlijk
+gecontroleerd en waar nodig gevuld.
+De huidige uitwerking van Beroepengids blijft voorlopig beperkt tot
+`opleidingsniveau`. Als afzonderlijke TODO worden opleidingsrichtingen later in
+één traject ontworpen en doorgevoerd voor WordPress-vacatures, het
+gestructureerde Supabase-model en de vacature-invoer en -bewerking in Appsmith.
+Daarbij worden eerst de canonieke termen en slugs vastgesteld; pas daarna volgen
+koppelingen, datamigratie, Beroepengids-relaties en end-to-endtests.
+
+De eventuele latere overgang van `beroep_opleidingsniveau` naar de bredere
+Beroepengids-taxonomie `Opleidingen` is onderdeel van dezelfde TODO en gebeurt
+pas nadat de vacature-, Supabase- en Appsmith-keten gereed is. Bestaande URL's,
+relaties, snippets, sitemap en SEO worden dan als expliciete
+migratieonderdelen behandeld.
 
 Alle WordPress-plaatsen en postcodes moeten ook in Supabase beschikbaar komen.
 Daarnaast blijven de bestaande land- en provinciekoppelingen aan vacatures
 behouden. Bedrijfsadres, feitelijke vacaturelocatie en toegestane woon- of
 wervingsregio worden als afzonderlijke relaties gemodelleerd.
+De huidige regio's en grotere plaatsen zijn voor nu bepaald. Later controleren
+we als TODO of aanvullende plaatsen of postcodes nodig zijn.
+
+## TODO: vacaturetaxonomieën en Beroepengids-spiegels nalopen
+
+De volgende onderdelen worden later per taxonomie én per termenlijst samen
+beoordeeld. Er worden nu geen termen, koppelingen of Pods-definities gewijzigd.
+
+- `werkgebied` bestaat al bij vacatures, maar de definitieve termen moeten nog
+  worden gecontroleerd, gevuld en aan de juiste vacatures gekoppeld. Daarna
+  wordt de aansluiting op `beroep_werkgebied`, plaatsen, postcodes en Supabase
+  gecontroleerd.
+- `opleidingsniveau` bestaat bij vacatures en als `beroep_opleidingsniveau` in
+  de Beroepengids. De canonieke niveaus en slugs moeten nog worden vastgesteld,
+  beide termenlijsten moeten worden gevuld en bestaande vacatures moeten
+  gecontroleerd worden ingedeeld.
+- `vac_studierichting` bestaat al bij vacatures onder het beheerlabel
+  `Studierichtingen`. Later beoordelen en vullen we de termen en relaties. Pas
+  daarna ontwerpen we een bijpassende custom taxonomie voor de Beroepengids en
+  de koppeling met Supabase en Appsmith.
+- `reisprofiel` bestaat al bij vacatures onder het beheerlabel
+  `Reisprofielen`. Later beoordelen we de termen, bestaande
+  vacaturekoppelingen en de relatie met de gestructureerde reisvelden in
+  Supabase. Ook bepalen we dan of en hoe een spiegelende Beroepengids-taxonomie
+  wordt toegevoegd.
+
+Bij deze controle lopen we steeds de taxonomie-instellingen, termen, slugs,
+synoniemen, hiërarchie, bestaande vacaturekoppelingen, Beroepengids-relaties,
+filters, snippets, sitemap, REST-uitvoer, Supabase-mapping en Appsmith-invoer
+gezamenlijk na.
 
 ## Beroepengids en Kennisbank
 
@@ -83,3 +132,54 @@ URL-structuur aangemaakt.
 - ongebruikte media inventariseren en later gecontroleerd verwijderen;
 - database-opschoning voorbereiden en pas na back-up uitvoeren;
 - overbodige of dubbele taxonomietermen na de mappingbesluiten consolideren.
+
+## TODO: blogartikelen gecontroleerd verplaatsen
+
+De bestaande blogartikelen worden niet in bulk en niet zonder inhoudelijke
+beoordeling verplaatst. Per artikel voeren we later deze vaste stappen uit:
+
+1. bepalen of het artikel thuishoort in Beroepengids of Kennisbank;
+2. inhoud, actualiteit, zoekintentie en interne links beoordelen en bijwerken;
+3. de definitieve titel, nieuwe slug, taxonomieën en metadata vaststellen;
+4. het artikel naar het juiste posttype en de juiste locatie verplaatsen;
+5. in Rank Math een permanente 301-redirect van de oude URL naar de nieuwe URL
+   aanmaken;
+6. oude en nieuwe URL, canonical, sitemap, interne links en eventuele externe
+   verwijzingen controleren;
+7. pas na een geslaagde hertest het artikel als afgerond markeren.
+
+De bestaande blogindex en de voorlopige verdeling in de Google Sheet blijven
+het uitgangspunt. Geen oude URL verdwijnt zonder een gecontroleerde redirect.
+
+## TODO: omvang en prestaties van WordPress
+
+De WordPress-installatie en de back-ups zijn uitzonderlijk groot. Eerst wordt
+een alleen-lezen omvangsanalyse gemaakt; er wordt niets verwijderd zonder een
+actuele back-up, een controleerbare inventaris en expliciete goedkeuring.
+
+- uitsplitsen hoeveel ruimte uploads, database, plugins, thema's en overige
+  mappen gebruiken;
+- controleren op oude migratiebestanden, lokale back-upsets, cachemappen,
+  logbestanden en tijdelijke bestanden die onbedoeld in back-ups meekomen;
+- dubbele, ongebruikte en door Elementor gegenereerde media inventariseren,
+  inclusief de bijbehorende metadata en afgeleide afbeeldingsformaten;
+- grote databasetabellen en groei door revisies, transients, logs, crondata,
+  formulierinzendingen en verweesde Elementor-/Pods-data onderzoeken;
+- vaststellen welke onderdelen veilig van de reguliere back-up kunnen worden
+  uitgesloten en welke gegevens vanwege herstelbaarheid of bewaarplicht moeten
+  blijven bestaan;
+- daarna een gefaseerd optimalisatie- en opschoningsvoorstel maken, met vóór-
+  en nameting en een herstelplan.
+
+## TODO: Nederlandstalige formuliermeldingen
+
+Alle bezoekersmeldingen van de formulieren moeten later in duidelijk Nederlands
+worden gezet. Dit geldt voor validatie, verplichte velden, uploadfouten,
+verzendfouten en succesmeldingen. Algemene teksten zoals "This field is
+required" zijn niet duidelijk genoeg wanneer het om de verplichte
+privacyverklaring gaat. Die checkbox krijgt daarom een specifieke melding die
+expliciet uitlegt dat de privacyverklaring nog moet worden geaccepteerd.
+
+Bij de uitwerking controleren we per formulier zowel de meldingen van Elementor
+als eventuele browser-, plugin- en servermeldingen, zodat bezoekers nergens een
+onduidelijke Engelse fouttekst zien.

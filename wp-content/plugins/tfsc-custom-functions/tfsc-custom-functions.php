@@ -11,9 +11,6 @@
 
 // ** Hoe ik deze plugin gebouwd heb staat hier: https://wpmudev.com/blog/why-you-shouldnt-use-functions-php **//
 
-// filter for stopping elementor to load google fonts from website Google and load them locally//
-add_filter( 'elementor/frontend/print_google_fonts', '__return_false' );
-
 // filter om de hardcoded sidebar niet meer in de html te hebben //
 add_filter( 'show_recent_comments_widget_style', '__return_false', 99 );
 
@@ -48,7 +45,7 @@ add_action( 'wp_enqueue_scripts', 'smartwp_remove_wp_block_library_css' );
 add_filter( 'elementor/utils/get_the_archive_title','archive_callback' );
 function archive_callback( $title ) {
 if ( is_search() ) {
-return 'Jouw zoekresultaten voor:<span style="color:#00a1ff"> ' . get_search_query();
+return 'Jouw zoekresultaten voor:<span style="color:#00a1ff"> ' . esc_html( get_search_query() ) . '</span>';
 }
 return $title;
 }
@@ -74,13 +71,23 @@ if ( false === strpos( $dir, '/elementor/forms' ) ) {
     return $filename;
 }
 
-// get the original file name
-$original_filename = $_FILES['form_fields'][$FORM_FIELD_FILE_ID][$file_count]['name'];
+// Lees de oorspronkelijke naam alleen wanneer de verwachte uploadstructuur bestaat.
+$original_filename = '';
 
-// Bump counter for next file
+if ( isset( $_FILES['form_fields'][ $FORM_FIELD_FILE_ID ][ $file_count ]['name'] ) ) {
+    $original_filename = $_FILES['form_fields'][ $FORM_FIELD_FILE_ID ][ $file_count ]['name'];
+} elseif ( isset( $_FILES['form_fields']['name'][ $FORM_FIELD_FILE_ID ] ) ) {
+    $names = (array) $_FILES['form_fields']['name'][ $FORM_FIELD_FILE_ID ];
+    $original_filename = $names[ $file_count ] ?? '';
+}
+
 $file_count++;
-// Return your desired file name (original_filename)
-return $original_filename;
+
+if ( ! is_string( $original_filename ) || '' === trim( $original_filename ) ) {
+    return $filename;
+}
+
+return sanitize_file_name( wp_basename( $original_filename ) );
 
 }, 10, 4);
 
@@ -113,17 +120,20 @@ if ( empty( $files ) ) {
     return;
 }
 // Store attachment in local var
-foreach ( $files as $id => $files_array ){
+foreach ( $files as $files_array ) {
+    if ( empty( $files_array['path'] ) ) {
+        continue;
+    }
 
-    /* New Fix For multiple files */
-
-    $len = 20;
-
-for($i = 0; $i < $len; $i++) {
-            $this->attachments_array[] = $files_array['path'][$i];
-
-}
-
+    foreach ( (array) $files_array['path'] as $uploaded_file ) {
+        if (
+            is_string( $uploaded_file ) &&
+            is_file( $uploaded_file ) &&
+            is_readable( $uploaded_file )
+        ) {
+            $this->attachments_array[] = $uploaded_file;
+        }
+    }
 }
 
 // if local var has attachments setup filter hook
@@ -182,22 +192,6 @@ function tmm_add_to_header(){
 
    add_action('wp_head', 'tmm_add_to_header');
 
-
-//* Preloading JS files -> https://macarthur.me/posts/preloading-javascript-in-wordpress */
-
-add_action('wp_head', function () {
-    global $wp_scripts;
-
-    foreach ($wp_scripts->queue as $handle) {
-      $script = $wp_scripts->registered[$handle];
-
-      //-- If version is set, append to end of source.
-      $source = $script->src . ($script->ver ? "?ver={$script->ver}" : "");
-
-      //-- Spit out the tag.
-      echo "<link rel='preload' href='{$source}' as='script'/>\n";
-    }
-  }, 1);
 
 //** Rank Math Custom Code to add Estimate Read Time to articles https://wordpress.org/support/topic/estimated-reading-time-4/ **//
 

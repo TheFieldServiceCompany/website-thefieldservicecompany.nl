@@ -39,13 +39,15 @@ document.addEventListener('DOMContentLoaded', function() {
         // Verkrijg de URL van de post
         var postUrl = window.location.href;
 
-        // Construeer de URL met de dynamische gegevens
-        var url = '';
-        if (button.classList.contains('button-advies')) {
-            url = 'https://dev.thefieldservicecompany.nl/formulier-advies/?vacaturenummer=' + vacaturenummer + '&contractvorm=' + contractvorm + '&postTitle=' + postTitle + '&postUrl=' + postUrl + '&cn=' + bedrijfsnaam;
-        }
+        // Gebruik altijd het huidige domein en encodeer alle waarden veilig.
+        var url = new URL('/formulier-advies/', window.location.origin);
+        url.searchParams.set('vacaturenummer', vacaturenummer);
+        url.searchParams.set('contractvorm', contractvorm);
+        url.searchParams.set('postTitle', postTitle);
+        url.searchParams.set('postUrl', postUrl);
+        url.searchParams.set('cn', bedrijfsnaam);
 
-        return url;
+        return url.toString();
     }
 
     function navigateToPage(url) {

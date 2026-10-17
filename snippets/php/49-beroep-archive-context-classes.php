@@ -22,7 +22,7 @@
 add_filter( 'body_class', function( $classes ) {
 
     // CPT archive Beroepen.
-    if ( is_post_type_archive( 'beroep' ) ) {
+    if ( is_post_type_archive( 'beroepengids' ) ) {
         $classes[] = 'tfsc-archive-beroepen';
     }
 
