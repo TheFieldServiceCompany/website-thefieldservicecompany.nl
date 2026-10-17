@@ -1,0 +1,16 @@
+/*
+Description: Custom-StyleSheet The Field Service Company - AdminCSS
+Author:        The Field Service Company
+Author URI:    http://thefieldservicecompany.nl
+Theme URI:     https://thefieldservicecompany.nl/themes/hello-elementor
+Template:      hello-elementor
+Tags: flexible-header, custom-colors, custom-menu, custom-logo, editor-style, featured-images, rtl-language-support, threaded-comments, translation-ready
+*/
+
+
+/**LET OP DAT BIJ WIJZIGING VAN THEME, DE VERWIJZING IN FUNCTIONS
+OP REGEL 195 WORDT OMGEZET NAAR DE NIEUWE LOCATIE VAN DEZE CSS FILE**/
+
+#taxonomy-locatie #locatie-all.tabs-panel{
+    max-height:500px
+}

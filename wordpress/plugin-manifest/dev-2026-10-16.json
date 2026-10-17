@@ -1,0 +1,188 @@
+[
+  {
+    "plugin": "codepress-admin-columns/codepress-admin-columns",
+    "status": "active",
+    "name": "Admin Columns",
+    "version": "7.1.7"
+  },
+  {
+    "plugin": "advanced-cache-warmer/advanced-cache-warmer",
+    "status": "active",
+    "name": "Advanced Cache Warmer",
+    "version": "1.0.3"
+  },
+  {
+    "plugin": "advanced-form-integration-premium/advanced-form-integration",
+    "status": "active",
+    "name": "Advanced Form Integration (Premium)",
+    "version": "2.8.0"
+  },
+  {
+    "plugin": "akismet/akismet",
+    "status": "active",
+    "name": "Akismet Anti-spam: Spam Protection",
+    "version": "5.7.2"
+  },
+  {
+    "plugin": "wp-asset-clean-up/wpacu",
+    "status": "inactive",
+    "name": "Asset CleanUp: Page Speed Booster",
+    "version": "1.4.0.6"
+  },
+  {
+    "plugin": "code-snippets/code-snippets",
+    "status": "active",
+    "name": "Code Snippets",
+    "version": "4.0.0"
+  },
+  {
+    "plugin": "custom-taxonomy-order-ne/customtaxorder",
+    "status": "inactive",
+    "name": "Custom Taxonomy Order",
+    "version": "4.0.2"
+  },
+  {
+    "plugin": "duplicate-page/duplicatepage",
+    "status": "active",
+    "name": "Duplicate Page",
+    "version": "4.5.9"
+  },
+  {
+    "plugin": "elementor/elementor",
+    "status": "active",
+    "name": "Elementor",
+    "version": "4.3.5"
+  },
+  {
+    "plugin": "elementor-pro/elementor-pro",
+    "status": "active",
+    "name": "Elementor Pro",
+    "version": "4.2.3"
+  },
+  {
+    "plugin": "folders/folders",
+    "status": "active",
+    "name": "Folders",
+    "version": "3.2.8"
+  },
+  {
+    "plugin": "litespeed-cache/litespeed-cache",
+    "status": "inactive",
+    "name": "LiteSpeed Cache",
+    "version": "7.9.1"
+  },
+  {
+    "plugin": "members/members",
+    "status": "active",
+    "name": "Members",
+    "version": "3.2.26"
+  },
+  {
+    "plugin": "pods/init",
+    "status": "active",
+    "name": "Pods - Custom Content Types and Fields",
+    "version": "3.3.9.2"
+  },
+  {
+    "plugin": "query-monitor/query-monitor",
+    "status": "inactive",
+    "name": "Query Monitor",
+    "version": "4.0.7"
+  },
+  {
+    "plugin": "seo-by-rank-math/rank-math",
+    "status": "active",
+    "name": "Rank Math SEO",
+    "version": "1.0.280"
+  },
+  {
+    "plugin": "seo-by-rank-math-pro/rank-math-pro",
+    "status": "active",
+    "name": "Rank Math SEO PRO",
+    "version": "3.0.118"
+  },
+  {
+    "plugin": "snip-tfsc.php_/snip-tfsc",
+    "status": "active",
+    "name": "SNIP Job Places for TheFieldServiceCompany",
+    "version": "0.2.0"
+  },
+  {
+    "plugin": "search-filter/search-filter",
+    "status": "active",
+    "name": "Search &amp; Filter",
+    "version": "3.2.3"
+  },
+  {
+    "plugin": "search-filter-elementor/search-filter-elementor",
+    "status": "active",
+    "name": "Search &amp; Filter - Elementor Extension",
+    "version": "1.4.3"
+  },
+  {
+    "plugin": "search-filter-pro/search-filter-pro",
+    "status": "active",
+    "name": "Search &amp; Filter Pro",
+    "version": "3.2.3"
+  },
+  {
+    "plugin": "google-site-kit/google-site-kit",
+    "status": "active",
+    "name": "Site Kit by Google",
+    "version": "1.189.0"
+  },
+  {
+    "plugin": "tfsc-custom-functions/tfsc-custom-functions",
+    "status": "active",
+    "name": "TFSC Custom Functions Plugin",
+    "version": "0.1"
+  },
+  {
+    "plugin": "tfsc-seo/tfsc-seo",
+    "status": "inactive",
+    "name": "TFSC SEO",
+    "version": "0.1.7-dev"
+  },
+  {
+    "plugin": "tfsc-seo-inspector/tfsc-seo-inspector",
+    "status": "inactive",
+    "name": "TFSC SEO Inspector",
+    "version": "0.1.5"
+  },
+  {
+    "plugin": "tfsc-schema-read-endpoint/tfsc-schema-read-endpoint",
+    "status": "active",
+    "name": "TFSC Schema Read Endpoint",
+    "version": "2.0.0"
+  },
+  {
+    "plugin": "temporary-login-without-password/temporary-login-without-password",
+    "status": "inactive",
+    "name": "Tijdelijke login zonder wachtwoord",
+    "version": "1.9.10"
+  },
+  {
+    "plugin": "updraftplus/updraftplus",
+    "status": "active",
+    "name": "UpdraftPlus - Backup/Restore",
+    "version": "1.26.10"
+  },
+  {
+    "plugin": "wp-rollback/wp-rollback",
+    "status": "active",
+    "name": "WP Rollback",
+    "version": "3.2.0"
+  },
+  {
+    "plugin": "wordfence/wordfence",
+    "status": "active",
+    "name": "Wordfence Security",
+    "version": "9.0.2"
+  },
+  {
+    "plugin": "rich-snippets-wordpress-plugin/rich-snippets-wordpress-plugin",
+    "status": "active",
+    "name": "snip pro - Structured Data",
+    "version": "2.31.8"
+  }
+]

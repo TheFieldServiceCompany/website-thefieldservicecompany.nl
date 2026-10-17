@@ -1,0 +1,12 @@
+<!--
+  Template van Elementor Custom Code ID 16383.
+  De aangetroffen accountidentificatoren zijn bewust niet in Git opgenomen.
+  Dit is client-side EngageBay tracking; formulierintegraties lopen via AFI.
+-->
+<script>
+var EhAPI = EhAPI || {};
+EhAPI.after_load = function () {
+  EhAPI.set_account('ENGAGEBAY_ACCOUNT_ID', 'ENGAGEBAY_TRACKING_ID');
+  EhAPI.execute('rules');
+};
+</script>

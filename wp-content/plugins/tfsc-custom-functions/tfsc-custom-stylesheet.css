@@ -1,0 +1,927 @@
+/*
+Description: Custom-StyleSheet The Field Service Company
+Author:        The Field Service Company
+Author URI:    http://thefieldservicecompany.nl
+Theme URI:     https://thefieldservicecompany.nl/themes/hello-elementor
+Template:      hello-elementor
+Tags: flexible-header, custom-colors, custom-menu, custom-logo, editor-style, featured-images, rtl-language-support, threaded-comments, translation-ready
+*/
+
+/*
+    Add your custom styles here
+*/
+
+
+
+/* barlow-semi-condensed-regular - latin */
+/*
+@font-face {
+    font-display: swap;
+    font-family: 'Barlow Semi Condensed';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/wp-content/uploads/barlow-semi-condensed-v16-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Barlow Semi Condensed';
+    font-style: normal;
+    font-weight: 500;
+    src: url('/wp-content/uploads/barlow-semi-condensed-v16-latin-500.woff2') format('woff2');
+}
+*/
+@font-face {
+    font-display: swap;
+    font-family: 'Barlow Semi Condensed';
+    font-style: normal;
+    font-weight: 600;
+    src: url('/wp-content/uploads/barlow-semi-condensed-v16-latin-600.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Barlow Semi Condensed';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/wp-content/uploads/barlow-semi-condensed-v16-latin-700.woff2') format('woff2');
+}
+/*
+@font-face {
+    font-display: swap;
+    font-family: 'Barlow Semi Condensed';
+    font-style: normal;
+    font-weight: 800;
+    src: url('/wp-content/uploads/barlow-semi-condensed-v16-latin-800.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Barlow Semi Condensed';
+    font-style: normal;
+    font-weight: 900;
+    src: url('/wp-content/uploads/barlow-semi-condensed-v16-latin-900.woff2') format('woff2');
+}
+*/
+/*
+@font-face {
+    font-display: swap;
+    font-family: 'Inter Tight';
+    font-style: normal;
+    font-weight: 300;
+    src: url('/wp-content/uploads/inter-tight-v9-latin-300.woff2') format('woff2');
+}
+*/
+@font-face {
+    font-display: swap;
+    font-family: 'Inter Tight';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/wp-content/uploads/inter-tight-v9-latin-regular.woff2') format('woff2');
+}
+/*
+@font-face {
+    font-display: swap;
+    font-family: 'Inter Tight';
+    font-style: normal;
+    font-weight: 500;
+    src: url('/wp-content/uploads/inter-tight-v9-latin-500.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Inter Tight';
+    font-style: normal;
+    font-weight: 600;
+    src: url('/wp-content/uploads/inter-tight-v9-latin-600.woff2') format('woff2');
+}
+*/
+@font-face {
+    font-display: swap;
+    font-family: 'Inter Tight';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/wp-content/uploads/inter-tight-v9-latin-700.woff2') format('woff2');
+}
+/*
+@font-face {
+    font-display: swap;
+    font-family: 'Inter Tight';
+    font-style: normal;
+    font-weight: 800;
+    src: url('/wp-content/uploads/inter-tight-v9-latin-800.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Inter Tight';
+    font-style: normal;
+    font-weight: 900;
+    src: url('/wp-content/uploads/inter-tight-v9-latin-900.woff2') format('woff2');
+}
+*/
+/*
+@font-face {
+    font-display: swap;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/wp-content/uploads/space-grotesk-v22-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 600;
+    src: url('/wp-content/uploads/space-grotesk-v22-latin-600.woff2') format('woff2');
+}
+*/
+@font-face {
+    font-display: swap;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/wp-content/uploads/space-grotesk-v22-latin-700.woff2') format('woff2');
+}
+
+html,
+body {
+    height:100%;
+    margin: 0;
+    font-family:'Inter Tight',sans-serif;
+    font-weight:400;
+    font-size:18px;
+    line-height:30px;
+    color:#000
+}
+body{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column
+}
+
+
+.header_image-absolute,
+.header_image-absolute img {
+    inset: 0;
+    object-fit: cover;
+    object-position: top center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -100;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.elementor-heading-title,
+.elementor-button{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    color: #00355B;
+    font-weight:600;
+}
+h1.elementor-heading-title,
+.elementor-shortcode h1{
+    font-size:40px;
+    text-transform:uppercase;
+    font-weight:700
+}
+h2.elementor-heading-title,
+.elementor-shortcode h2 {
+    font-size: 24px;
+}
+
+h3.elementor-heading-title,
+.elementor-shortcode h3 {
+    font-size: 20px;
+}
+
+h4.elementor-heading-title,
+.elementor-shortcode h4 {
+    font-size: 18px;
+}
+
+h5.elementor-heading-title,
+.elementor-shortcode h5 {
+    font-size: 18px;
+}
+
+h6.elementor-heading-title,
+.elementor-shortcode h6 {
+    font-size: 18px;
+}
+.elementor-widget-theme-post-content h2{
+    margin:30px 0 8px 0;
+    font-size:26px;
+    text-transform:none
+}
+
+.elementor-widget-theme-post-content h3{
+    margin:24px 0 8px 0;
+    font-size:22px;
+    text-transform: none
+}
+
+.elementor-widget-theme-post-content h4{
+    margin:20px 0 8px 0;
+    font-size:18px;
+    text-transform: none
+}
+
+.elementor-widget-theme-post-content h5{
+    margin:20px 0 8px 0;
+    font-size:18px;
+    text-transform: none
+}
+
+.elementor-widget-theme-post-content h6{
+    margin:20px 0 8px 0;
+    font-size:18px;
+    text-transform: none
+}
+
+
+h1.elementor-heading-title a:hover,
+h2.elementor-heading-title a:hover,
+h3.elementor-heading-title a:hover,
+h4.elementor-heading-title a:hover,
+h5.elementor-heading-title a:hover,
+h6.elementor-heading-title a:hover {
+    color: #00A1FF;
+}
+a{color:#000}
+a:hover{
+    color:#00A1FF
+}
+/* voorkomen van rare randen om links en buttons */
+a:focus,.submit:focus {
+    outline: 0 !important
+}
+.elementor-widget-text-editor a{
+    text-decoration:underline;
+    font-weight:600
+}
+.elementor-icon-list-items a{
+    text-decoration:underline;
+}
+
+b, strong, .bold{
+    font-weight:700;
+    color:#000
+}
+.class-link-bold{
+    text-decoration:underline;
+    cursor:pointer
+}
+.class-link-bold:hover{color:#999}
+
+/* breadcrumb */
+.rank-math-breadcrumb{
+    font-size:0.85em
+}
+.rank-math-breadcrumb p{
+        margin-bottom:0;
+}
+.rank-math-breadcrumb a{
+    font-weight:600;
+    text-decoration: underline;
+}
+/* Icons Styling*/
+.elementor-widget .elementor-icon-list-item{
+    align-items:flex-start !important
+}
+.elementor-icon-list-icon{
+    margin-top:8px
+}
+
+
+.text-wit,
+.text-wit H1,
+.text-wit H2,
+.text-wit H3,
+.text-wit H4,
+.text-wit H5,
+.text-wit H6{color:#FFF}
+
+.text-blauw,
+.text-blauw H1,
+.text-blauw H2,
+.text-blauw H3,
+.text-blauw H4,
+.text-blauw H5,
+.text-blauw H6{color:#00A1FF}
+
+.text-center{text-align:center}
+
+.bkgr-white{background:#FFF}
+.bkgr-black{background:#000}
+.uppercase{text-transform: uppercase}
+.elementor-field-textual{border-radius:0 !important}
+.link-underline a{text-decoration:underline}
+
+/*BUTTONS*/
+.elementor-button{
+    font-weight:700;
+    text-transform:uppercase;
+    font-size:16px;
+    border-radius:0 !important;
+}
+/**Button Classes**/
+
+.button-black-white a,
+.button-black-white a:visited{
+    background-color:#111;
+    border:1px solid #111;
+    color:#FFF
+}
+.button-black-white a:hover{
+    background-color:white;
+    color:#111;
+}
+.button-trans-black a,
+.button-trans-black a:visited{
+    background-color:transparent;
+    border:1px solid #000;
+    color:#000
+}
+.button-trans-black a:hover{
+    background-color:#000;
+    color:#FFF;
+}
+.button-black-trans a,
+.button-black-trans a:visited{
+    background-color:#000;
+    border:1px solid #000;
+    color:#FFF
+}
+.button-black-trans a:hover{
+    background-color:transparent;
+    color:#000;
+}
+.button-dblue-white a,
+.button-dblue-white a:visited{
+    background-color:#00355B;
+    border:1px solid #00355B;
+    color:#FFF
+}
+.button-dblue-white a:hover{
+    background-color:#FFF;
+    color:#00355B
+}
+.button-trans-dblue a,
+.button-trans-dblue a:visited{
+    background-color:transparent;
+    border:1px solid #00355B;
+    color:#00355B
+}
+.button-trans-dblue a:hover{
+    background-color:#00355B;
+    color:#FFF;
+}
+.button-white-dblue a,
+.button-white-dblue a:visited{
+    background-color:#fff;
+    color:#00355B;
+    border:1px solid #FFF
+}
+.button-white-dblue a:hover{
+    background-color:#00355B;
+    color:#FFF
+}
+.button-dblue-trans a,
+.button-dblue-trans a:visited{
+    background-color: #00355B;
+    color:#FFF;
+    border:1px solid #00355B
+}
+.button-dblue-trans a:hover{
+    background-color: transparent;
+    color:#00355B
+}
+.button-blue-white a,
+.button-blue-white a:visited{
+    background-color:#00A1FF;
+    border:1px solid #00A1FF;
+    color:#FFF
+}
+.button-blue-white a:hover{
+    background-color:#FFF;
+    color:#00A1FF;
+}
+.button-white-blue a,
+.button-white-blue a:visited{
+    background-color:transparent;
+    border:1px solid #00A1FF;
+    color:#00A1FF
+}
+.button-white-blue a:hover{
+    background-color:#00A1FF;
+    color:#FFF
+}
+.button-blue-white-3d a,
+.button-blue-white-3d a:visited{
+    background-color:#00A1FF;
+    border-width: 1px 1px 3px 1px;
+    border-color: #1386C9;
+    border-style:solid;
+    color: #FFF
+}
+.button-blue-white-3d a:hover{
+    background-color:#FFF;
+    color:#0077B6;
+}
+.button-orange-white-3d a,
+.button-orange-white-3d a:visited{
+    background-color:#E87500;
+    border-width: 1px 1px 3px 1px;
+    border-color: #8F3D00;
+    border-style:solid;
+    color: #FFF
+}
+.button-orange-white-3d a:hover{
+    background-color:#FFF;
+    color:#8F3D00;
+}
+.button-green-white-3d a,
+.button-green-white-3d a:visited{
+    background-color:#00B900;
+    border-width: 1px 1px 3px 1px;
+    border-color: #008A00;
+    border-style:solid;
+    color: #FFF
+}
+.button-green-white-3d a:hover{
+    background-color:#FFF;
+    color:#008A00;
+    border-color:#00B900;
+}
+.button-green-white a,
+.button-green-white a:visited{
+    background-color:#00B900;
+    border-width: 1px 1px 1px 1px;
+    border-color: #00B900;
+    border-style:solid;
+    color:#FFF
+}
+.button-green-white a:hover{
+    background-color:#FFF;
+    color:#00B900
+}
+.button-trans-green a,
+.button-trans-green a:visited{
+    background-color:transparent;
+    border-width: 1px 1px 1px 1px;
+    border-color: #00B900;
+    border-style:solid;
+    color:#00B900
+}
+.button-trans-green a:hover{
+    background-color:#00B900;
+    color:#FFF
+}
+.button-orange-white a,
+.button-orange-white a:visited{
+    background-color:#FF7C00;
+    border:1px solid #FF7C00;
+    color:#FFF;
+}
+.button-orange-white a:hover{
+    background-color:#FFF;
+    color:#FF7C00
+}
+.button-trans-orange a,
+.button-trans-orange a:visited{
+    background-color:transparent;
+    border:1px solid #E87500;
+    color:#E87500
+}
+.button-trans-orange a:hover{
+    background-color: #E87500;
+    color:#FFF
+}
+.button-trans-white a,
+.button-trans-white a:visited{
+    background-color:transparent;
+    border:1px solid #FFF;
+    color:#FFF
+}
+.button-trans-white a:hover{
+    background-color:#FFF;
+    color:#111;
+}
+.button-white-black a,
+.button-white-black a:visited{
+    background-color:#FFF;
+    border:1px solid #FFF;
+    color:#111
+}
+.button-white-black a:hover{
+    background-color: #111;
+    color:#FFF
+}
+
+.tfsc_query_show-more .tfsc-query-show-more__wrapper{
+    margin:0 0 0 10px
+}
+.tfsc-query-show-more__button,
+.tfsc-query-show-more__button:visited,
+.tfsc-query-show-more__button:focus{
+    background-color:transparent;
+    border-radius:0;
+    border:none;
+    font-weight:700;
+    text-decoration:underline;
+    color:#00355B;
+    display: inline-flex;
+    align-items: center;
+    padding:0;
+    gap: 20px !important;
+}
+.tfsc-query-show-more__label{
+}
+.tfsc-query-show-more__button:hover,
+.tfsc-query-show-more__button:active{
+    background-color:transparent;
+    color:#00A1FF
+}
+.tfsc-query-show-more__icon {
+    line-height: 1;
+    font-size: 16px;
+}
+
+/* Post term buttons */
+.tfsc-post-terms {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+ }
+
+.tfsc-post-terms__item,
+.tfsc-post-terms__item:visited,
+.tfsc-post-terms__item:active{
+    display: inline-flex;
+    align-items: center;
+    font-weight:700;
+    font-size:13px;
+    padding: 0px 10px;
+    background-color:#00355B;
+    border: 1px solid #00355B;
+    color:#FFF;
+    text-transform:uppercase;
+    border-radius: 0;
+    text-decoration: none;
+}
+.tfsc-post-terms__item:hover{
+    background-color:transparent;
+    color:#00355B;
+}
+/** Beroepengids */
+/**
+/**
+ *
+ * Tax Term Archive Query Loop Scroll to top *
+/* Plaats class op element en voer het in S&F in bij Results>Scroll-to>custom.
+/* Daarna class ".tfsc-scroll-target" op element en scroll-target bepaalt de offset */
+.tfsc-scroll-target {
+    scroll-margin-top: 100px;
+}
+
+@media (max-width: 767px) {
+    .tfsc-scroll-target {
+        scroll-margin-top: 80px;
+    }
+}
+
+/*Archive*/
+
+/*selectie title description*/
+.archive.tax-functienaam .tax-display-none-before,
+.archive.tax-werkgebied .tax-display-none-after{
+    display:none
+}
+
+/*Vacature Locaties*/
+
+.vac-places .elementor-icon-list-item a{
+    padding: 0px 10px;
+    margin:0 0 6px 0;
+    background-color:#00355B;
+    border: 1px solid #00355B;
+    color:#fff;
+    font-size:15px;
+    font-weight:bold;
+}
+.vac-places .elementor-icon-list-item a:hover{
+    background-color: #fff;
+    color:#00355B;
+}
+
+/*Reviews*/
+
+#testimonial-home .swiper-slide{
+    background-color:#f2f2f2;
+    padding:20px;
+}
+
+
+/** breadcrumb**/
+/* overflow mogelijk maken op mobile */
+.tfsc-breadcrumb-scroll{
+    white-space: nowrap
+}
+
+/*Templates Vacature, Blog, etc*/
+.elementor-widget-theme-post-content figure {
+    margin:1em 0 1em 0
+}
+
+.elementor-widget-theme-post-content ol{
+    padding-left:30px
+}
+.elementor-widget-theme-post-content ul,
+.elementor-widget-text-editor ul{
+    margin-bottom:20px;
+    padding-left:0
+}
+.elementor-widget-theme-post-content ul li,
+.elementor-widget-text-editor ul li {
+    margin-left: 6px;
+    list-style: none;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.elementor-widget-theme-post-content ul li::before,
+.elementor-widget-text-editor ul li::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: #035D92;
+    flex: 0 0 8px;
+    position: relative;
+    top: 0.7em;
+}
+
+/*blog styling*/
+.single-vacature .elementor-toc__list-item,
+.single-blog .elementor-toc__list-item{margin-bottom:20px}
+
+.single-vacature .elementor-toc__list-item-text-wrapper:before,
+.single-blog .elementor-toc__list-item-text-wrapper:before{display:none}
+
+.blog-tekst .elementor-menu-anchor,
+.vacature-tekst .elementor-menu-anchor {
+    display: block;
+    position: relative;
+    top: -90px
+}
+/*voor upward scroll arrow button -> lege container met 0 padding maken bovenkant pagina en id #scroll-top geven*/
+#scroll-top{
+    display: block;
+    position: relative;
+    top: -90px
+}
+
+
+#blog-subnav a{
+    margin:0 6px 6px 0;
+    background-color: #000;
+    font-weight: 700;
+    border:1px solid #000
+}
+#blog-subnav a.elementor-item.elementor-item-active {
+    color:#E87500
+}
+#blog-subnav a:hover{
+    background-color:#fff
+}
+.blog-tekst .wp-block-separator,
+.vacature-tekst .wp-block-separator{
+    margin:40px 0px;
+    padding: 0 0 0 0;
+    border: 1px solid #00A1FF;
+}
+
+/*FAQ styling*/
+.rank-math-list-item{
+    margin:20px 0;
+    padding:10px 20px 20px 20px;
+    background:#F2F2F2
+}
+
+/* post archive pagination*/
+.elementor-pagination{
+    margin:10px 0;
+    padding:20px 0;
+    background:transparent;
+    border:1px solid  #D5D5D5;
+}
+.elementor-pagination .page-numbers{
+    margin:0 5px 0 5px;
+    padding:4px 10px;
+    border-radius:0;
+    font-weight:600;
+    font-size:0.9em
+}
+.elementor-pagination .page-numbers.current{
+    background-color:transparent;
+    border:1px solid #000;
+    color:#000;
+}
+.elementor-pagination .page-numbers:hover{
+    background-color:transparent;
+    border:1px solid #E87500;
+    color:#E87500;
+}
+
+/***** Forms *****/
+
+.elementor-field-textual.elementor-size-sm{
+    border-color:#d9d9d9}
+.elementor-field-label{
+      font-weight:700
+}
+.elementor-form-font-regular{
+    font-weight:400
+}
+.elementor-popup-modal {
+    padding-top: 120px !important;
+    padding-bottom: 20px !important;
+    box-sizing: border-box !important;
+    align-items: flex-start !important;
+    overflow-y: auto !important;
+}
+
+.elementor-popup-modal .dialog-widget-content {
+    margin: 0 auto 20px !important;
+    max-height: none !important;
+    overflow: visible !important;
+}
+
+.elementor-popup-modal .elementor-field-label{font-size:1rem}
+
+/* popup zero margin hidden fields (heb deze code in de vacature-template gezet want hij pakt hem niet vanuit de css-sheet
+Staat bij page custom css*/
+.elementor-form .elementor-field-type-hidden {margin:0 0 0 0 !important}
+
+/* form checkbox privacy statement */
+.elementor-popup-modal .dialog-message{
+    font-size:18px;
+    color:#111
+}
+.elementor-element-52ef2827,.elementor-element-70547f4f{
+    font-size:15px
+}
+.form-link-bold{
+    font-weight:700;
+    text-decoration:underline !important
+}
+.elementor-popup-modal .dialog-close-button i{
+    content: url(/wp-content/uploads/menu-close.svg);
+    max-width:15px;
+}
+
+/*Elementor counter break icon list icm Elementor setting: improved css*/
+.align-icon-list .elementor-icon-list-item a{display:inline !important}
+.elementor-icon-list-items .elementor-icon-list-item .elementor-icon-list-text a,
+.elementor-icon-list-items .elementor-icon-list-item .elementor-icon-list-text span{display:inline}
+
+/*Form Recaptcha*/
+  grecaptcha-badge {visibility: hidden}
+
+
+/* popup zero margin hidden fields*/
+.elementor-form .elementor-field-type-hidden {margin:0 0 0 0 !important}
+
+/* For Checkbox Privacy on Forms*/
+.elementor-form input[type="checkbox"]{
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+.elementor-form input[type=checkbox]+label{
+    margin-right: 1em;
+    position: relative;
+}
+.elementor-form input[type=checkbox]+label:before{
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-right: 0.5em;
+    vertical-align: -3px;
+    border: 1px solid #BDBDBD;
+    padding: 0.12em;
+    background-color: transparent;
+    background-clip: content-box;
+    transition: all 0.2s ease;
+}
+.elementor-form input[type=checkbox]+label:after{
+    border-right: 2px solid #fff;
+    border-top: 2px solid #fff;
+    content: "";
+    height: 11px;
+    left: 2px;
+    position: absolute;
+    top: 11px;
+    transform: scaleX(-1) rotate(135deg);
+    transform-origin: left top;
+    width: 6px;
+    display: none;
+}
+.elementor-form input[type=checkbox]:hover +label:before{
+    border-color: #00a1ff;
+}
+.elementor-form input[type=checkbox]:checked +label:before{
+    border-color: #00a1ff;
+    background: #00a1ff;
+}
+.elementor-form input[type=checkbox]:checked +label:after{
+     -moz-animation: check 0.8s ease 0s running;
+    -webkit-animation: check 0.8s ease 0s running;
+    animation: check 0.8s ease 0s running;
+    display: block;
+    width: 6px;
+    height: 11px;
+    border-color: #fff;
+}
+
+
+/*** FOOTER *** /
+ /* stretch footer tot einde als* pagina kort is*/
+ .elementor-location-footer{
+     flex-grow:1
+ }
+ div#section-footer{height:100%}
+/**** END FOOTER ***/
+
+
+@keyframes check {
+   0% {
+   height: 0;
+   width: 0;
+  }
+   25% {
+   height: 0;
+   width: 6px;
+  }
+   50% {
+   height: 11px;
+   width: 6px;
+  }
+}
+
+
+/*Vacatures & Archives*/
+.loop-vacature .elementor-heading-title:hover{
+    color:#00A1FF
+}
+
+
+@media only screen and (max-width: 1024px) {
+    H1.elementor-heading-title,.elementor-shortcode H1{font-size:30px}
+    H2.elementor-heading-title,.elementor-shortcode H2{font-size:24px}
+    H3.elementor-heading-title,.elementor-shortcode H3{font-size:20px}
+    H4.elementor-heading-title,.elementor-shortcode H4{font-size:18px}
+    H5.elementor-heading-title,.elementor-shortcode H5{font-size:16px}
+    H6.elementor-heading-title,.elementor-shortcode H6{font-size:14px}
+
+    .hide-mobile{
+        display:none !important
+    }
+    .elementor-popup-modal {
+        padding-top: 70px !important;
+        padding-bottom: 20px !important;
+        box-sizing: border-box !important;
+        align-items: flex-start !important;
+        overflow-y: auto !important;
+    }
+
+    .elementor-popup-modal .dialog-widget-content {
+        margin: 0 auto 20px !important;
+        max-height: none !important;
+        overflow: visible !important;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+    body,p,ul li{
+        font-size:17px;
+        line-height:28px}
+    nav.rank-math-breadcrumb p,
+    nav.rank-math-breadcrumb p a{
+        font-size:15px;
+    }
+}

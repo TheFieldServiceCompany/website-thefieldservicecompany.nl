@@ -1,0 +1,67 @@
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var buttonsAdvies = document.querySelectorAll('.button-advies');
+
+    function constructUrl(button) {
+        // Verkrijg de waarde van het dynamische veld "Vacaturenummer" uit de HTML-structuur
+        var vacaturenummer = '';
+        var elements = document.querySelectorAll('.elementor-icon-list-text');
+        elements.forEach(function(element) {
+            var text = element.innerText.trim();
+            if (text.startsWith('Vacaturenummer:')) {
+                vacaturenummer = text.replace('Vacaturenummer:', '').trim();
+            }
+        });
+
+        // Verkrijg de bedrijfsnaam uit het verborgen icoonlijstelement
+        var bedrijfsnaam = '';
+        var hiddenList = document.getElementById('pods_list_hidden');
+        if (hiddenList) {
+            var hiddenListItem = hiddenList.querySelector('.elementor-icon-list-text');
+            if (hiddenListItem) {
+                bedrijfsnaam = hiddenListItem.innerText.trim();
+            }
+        }
+
+        // Verkrijg de contractvorm en bijbehorende variabele
+        var contractvorm = '';
+        var contractvormElements = document.querySelectorAll('.elementor-icon-list-item');
+        contractvormElements.forEach(function(element) {
+            var text = element.innerText.trim();
+            if (text.startsWith('Contractvorm:')) {
+                contractvorm = text.replace('Contractvorm:', '').trim();
+            }
+        });
+
+        // Verkrijg de titel van de post
+        var postTitle = document.title.trim();
+
+        // Verkrijg de URL van de post
+        var postUrl = window.location.href;
+
+        // Construeer de URL met de dynamische gegevens
+        var url = '';
+        if (button.classList.contains('button-advies')) {
+            url = 'https://dev.thefieldservicecompany.nl/formulier-advies/?vacaturenummer=' + vacaturenummer + '&contractvorm=' + contractvorm + '&postTitle=' + postTitle + '&postUrl=' + postUrl + '&cn=' + bedrijfsnaam;
+        }
+
+        return url;
+    }
+
+    function navigateToPage(url) {
+        window.location.href = url;
+    }
+
+    function addClickListener(buttons) {
+        buttons.forEach(function(button) {
+            button.addEventListener('click', function(event) {
+                event.preventDefault();
+                var url = constructUrl(button);
+                navigateToPage(url);
+            });
+        });
+    }
+
+    addClickListener(buttonsAdvies);
+});
+</script>
