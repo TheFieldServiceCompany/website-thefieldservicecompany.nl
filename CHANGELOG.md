@@ -1,5 +1,30 @@
 # Changelog
 
+## 2026-10-17 — Alle overige vacaturetaxonomiekoppelingen gecontroleerd
+
+- Een alleen-lezen koppelingenaudit uitgevoerd voor alle 63 gepubliceerde
+  vacatures en alle tien taxonomieën die zowel in de oude live-export als op de
+  huidige live-site bestaan. Er ontbreken geen vacature-slugs en er zijn geen
+  extra slugs.
+- Na normalisatie van drie bekende termcorrecties (`high-tech` → `hightech`,
+  `service-monteur` → `servicemonteur` en `heereveen` → `heerenveen`) zijn
+  bedrijfssector, dagen internationaal, dienstverband, opleidingsniveau,
+  vacaturestatus en werkgebied volledig gelijk aan de oude live-data.
+- De resterende inhoudelijke verschillen zijn beperkt tot vacature 23277 op
+  vier taxonomieën, twee koelmonteurvacatures met minder brede functienamen en
+  zes inhoudelijk passende nieuwe koppelingen aan kennisgebied
+  `rotating-equipment`. Deze zijn niet automatisch aangepast.
+- Vastgesteld dat de huidige functienaamtaxonomie zowel `servicemonteur`
+  (term-ID 230, 16 vacatures) als `service-monteur` (term-ID 420, 1 vacature)
+  bevat. Consolidatie vereist later een expliciet SEO- en relatieplan.
+- De later toegevoegde taxonomieën `reisprofiel` en `vac_studierichting`
+  bevatten respectievelijk 25 en 18 termen, maar nog geen enkele koppeling aan
+  de 63 vacatures. Dit blijft onderdeel van de bestaande WordPress-, Supabase-,
+  Appsmith- en Beroepengids-TODO.
+- De volledige bevindingen en besluitpunten zijn vastgelegd in
+  `audits/2026-10-17-live-vacancy-taxonomy-connections.md`. Er zijn tijdens deze
+  audit geen gegevens in WordPress of Supabase gewijzigd.
+
 ## 2026-10-17 — Opleidingsniveaus van 63 live vacatures hersteld
 
 - Vastgesteld dat de huidige vacaturetaxonomie `opleidingsniveau` tijdens een
