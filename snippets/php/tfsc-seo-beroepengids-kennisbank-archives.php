@@ -8,16 +8,16 @@
  *
  * DOEL
  * ============================================================
- * Geeft acht centrale landingspagina's een unieke SEO-title en meta
+ * Geeft negen centrale landingspagina's een unieke SEO-title en meta
  * description:
  *
  * - de gewone WordPress-pagina /beroepengids/;
  * - het CPT-archief /kennisbank/;
- * - de zes virtuele taxonomy-base-archieven onder /beroepengids/.
+ * - de zeven virtuele taxonomy-base-archieven onder /beroepengids/.
  *
  * WAAROM VIA EEN SNIPPET?
  * ============================================================
- * De zes taxonomy-base-archieven zijn virtuele archieven. Ze bestaan dankzij
+ * De zeven taxonomy-base-archieven zijn virtuele archieven. Ze bestaan dankzij
  * de queryvar `tfsc_taxonomy_archive` en hebben geen eigen WordPress-term of
  * pagina waarop Rank Math losse metadata kan opslaan. Zonder deze gerichte
  * mapping gebruikt Rank Math daar een generieke archieftitel.
@@ -88,9 +88,13 @@ function tfsc_knowledge_archive_seo_data() {
             'title'       => 'Bedrijfssectoren binnen field service | Beroepengids',
             'description' => 'Ontdek bedrijfssectoren binnen field service en bekijk welke functies, machines, werkomgevingen en actuele vacatures bij jou passen.',
         ],
-        'beroep_opleiding' => [
-            'title'       => 'Opleidingen voor field service | Beroepengids',
-            'description' => 'Ontdek opleidingsniveaus en studierichtingen voor field service. Vergelijk wat je leert met passende functies, sectoren en actuele vacatures.',
+        'beroep_opleidingsniveau' => [
+            'title'       => 'Opleidingsniveaus voor field service | Beroepengids',
+            'description' => 'Vergelijk opleidingsniveaus voor field service en ontdek welke functies, studierichtingen, praktijkervaring en actuele vacatures aansluiten op jouw achtergrond.',
+        ],
+        'beroep_studierichting' => [
+            'title'       => 'Studierichtingen voor field service | Beroepengids',
+            'description' => 'Ontdek welke technische studierichtingen aansluiten op field service en vergelijk de kennis, functies, sectoren en actuele vacatures die bij jouw opleiding passen.',
         ],
         'beroep_werkgebied' => [
             'title'       => 'Werkgebieden voor fieldservicefuncties | Beroepengids',

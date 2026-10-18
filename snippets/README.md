@@ -9,18 +9,18 @@ naar WordPress uitgerold.
 | Onderdeel | Status | Functie | Belangrijkste afhankelijkheden |
 | --- | --- | --- | --- |
 | Code Snippet 100 | Actief | Publieke taxonomietermen toevoegen aan de WordPress-linkzoeker | WordPress term-API en native term-URL's |
-| Code Snippet 39 | Actief | Prefixen uit Elementor-archieftitels verwijderen | Elementor |
+| Code Snippet 39 | Actief, versie 2.0 | Prefixen uit Elementor-archieftitels verwijderen en optioneel `pods_archive_title` gebruiken | Elementor en WordPress-termmeta |
 | Code Snippet 42 | Inactief | In Pods Admin tonen aan welke posttypes een taxonomie gekoppeld is | Pods en wp-admin DOM |
 | Code Snippet 49 | Actief en gecorrigeerd | Contextclasses voor het generieke Beroepengids-archief | Queryvar `tfsc_taxonomy_archive`; LIVE-CPT-controle op `beroepengids` |
-| Code Snippet 62 | Actief, versie 2.1 | Elementor-taxonomielussen filteren op huidige taxonomie, hiërarchieniveau of directe kinderen | Elementor Loop Taxonomy en `tfsc_taxonomy_archive` |
-| Code Snippet 113 | Actief, versie 3.1 | Virtuele basisarchieven voor Beroepengids-taxonomieën | Rewrite- en querylogica voor `tfsc_taxonomy_archive` |
+| Code Snippet 62 | Actief, versie 2.0 | Elementor-taxonomielussen filteren op huidige taxonomie en hiërarchieniveau | Elementor Loop Taxonomy en `tfsc_taxonomy_archive` |
+| Code Snippet 113 | Actief, versie 3.2 | Virtuele basisarchieven voor Beroepengids-taxonomieën | Rewrite- en querylogica voor `tfsc_taxonomy_archive` |
 | Code Snippet 9 | Actief | ALT- en title-attribuut van de uitgelichte afbeelding gelijkmaken aan de berichttitel | WordPress afbeeldingen |
 | Code Snippet 99 | Actief | Rank Math-breadcrumbs voor samengestelde vacaturearchieven | Snippet 186 levert `tfsc_is_combo_archive()`, `tfsc_get_combo_archive()` en `TFSC_COMBO_BASE` |
 | Code Snippet 148 | Actief | Custom Rank Math-sitemaps voor indexeerbare vacaturecombinaties | Snippets 186 en 193, Rank Math |
 | Code Snippet 186 | Actief | Virtuele vacature-comboarchieven, rewrites, queries, paginering en Search & Filter-synchronisatie | WordPress, Elementor Pro en Search & Filter Query 1 |
 | Code Snippet 193 | Actief | SEO, robots, canonical, metadata en indexeringsbesluit voor combo- en filter-URL's | Snippet 186 en Rank Math |
-| Code Snippet 209 | Actief, versie 1.1 en hertest | Unieke Rank Math-title en description voor de twee hoofdarchieven en de virtuele Beroepengids-basearchieven, inclusief Opleidingen | Rank Math en queryvar `tfsc_taxonomy_archive` |
-| Code Snippet 215 | Actief, versie 1.1 | Beroepengids-basearchieven en de native Opleidingen-taxonomysitemap aan de Rank Math-sitemapindex toevoegen | Rank Math Sitemap API |
+| Code Snippet 209 | Actief, versie 1.2 | Unieke Rank Math-title en description voor de twee hoofdarchieven en de zeven virtuele Beroepengids-basearchieven | Rank Math en queryvar `tfsc_taxonomy_archive` |
+| Code Snippet 215 | Actief, versie 1.2 | Beroepengids-basearchieven en de twee native opleidingstaxonomysitemaps aan de Rank Math-sitemapindex toevoegen | Rank Math Sitemap API |
 | `snip-tfsc` | Actief | Google Jobs/SNIP-locatieobjecten maken vanuit WordPress-locatietermen | SNIP Pro, taxonomie `locatie` en termmeta |
 | `tfsc-custom-functions` | Actief | Globale frontendaanpassingen, uploads als e-mailbijlage, styles en shortcodes | Elementor Pro, Rank Math en lokale assets |
 | `tfsc-schema-read-endpoint` | Actief | Alleen-lezen inventaris van posttypes, taxonomieën, termen en Pods | REST-authenticatie en Pods |
@@ -39,11 +39,22 @@ De actieve snippets 188, 189 en 190 respecteren deze vlag wanneer zij normale
 term-URL's vervangen door vacature-combo-URL's. De linkzoeker kan daardoor
 bewust de oorspronkelijke WordPress-term-URL blijven tonen.
 
-### 39 — Archieftitel zonder WordPress-prefix
+### 39 — Archieftitel zonder WordPress-prefix en met Pods-override
 
 Filtert `elementor/utils/get_the_archive_title` en retourneert alleen de naam
 voor categorieën, tags, taxonomiearchieven en posttypearchieven. Daardoor toont
 Elementor geen prefixen zoals “Categorie:” of “Archieven:”.
+
+Sinds 18 oktober 2026 leest versie 2.0 op gewone custom-taxonomytermarchieven
+eerst het termmetaveld `pods_archive_title`. Een ingevulde, opgeschoonde waarde
+wordt de zichtbare Elementor-archieftitel; als het veld ontbreekt of leeg is,
+blijft de normale termnaam de fallback. De termnaam, slug, URL, breadcrumb en
+Rank Math SEO-titel worden niet gewijzigd.
+
+De actieve beroepengids-taxonomie-Pods hebben hiervoor ieder een groep
+`Archive` met een Plain Text-veld `pods_archive_title`. Snippet 232 is de
+inactieve herstelkopie van de voorafgaande versie. De tijdelijke functionele
+testsnippet 233 staat eveneens inactief.
 
 ### 42 — Connecties in Pods Admin
 
@@ -82,18 +93,21 @@ ongeldige of lege context wordt `include = [0]` gebruikt, zodat de loop bewust
 geen willekeurige termen toont. De actuele taxonomie komt uit de queryvar
 `tfsc_taxonomy_archive`.
 
-Op 18 oktober 2026 is de directe-kinderenquery toegevoegd voor de twee
-Opleidingen-parentarchieven. De actieve LIVE-versie is 2.1; snippet 210 is de
-inactieve herstelkopie van de voorafgaande versie.
+De tijdelijke directe-kinderenuitbreiding voor het eerste, gecombineerde
+Opleidingenmodel is op 18 oktober 2026 weer verwijderd. De definitieve
+structuur gebruikt twee zelfstandige taxonomieën en kan met de bestaande
+generieke queries werken. De actieve LIVE-versie is 2.0; snippet 222 is de
+inactieve herstelkopie van vóór deze controle.
 
 ### 113 — Virtuele Beroepengids-taxonomy-basearchieven
 
 Registreert de toegestane taxonomieën voor virtuele basisroutes onder
 `/beroepengids/` en zet de queryvar `tfsc_taxonomy_archive`. Op 18 oktober 2026
-is `beroep_opleiding` aan de allowlist toegevoegd, zodat
-`/beroepengids/opleidingen/` dezelfde architectuur gebruikt als onder meer
-Functienamen en Bedrijfssectoren. De actieve LIVE-versie is 3.1; snippet 211
-is de inactieve herstelkopie.
+zijn `beroep_opleidingsniveau` en `beroep_studierichting` aan de allowlist
+toegevoegd. Zij leveren de basisroutes `/beroepengids/opleidingsniveaus/` en
+`/beroepengids/studierichtingen/`. De gecombineerde `beroep_opleiding`-route
+wordt niet meer door deze snippet gepubliceerd. De actieve LIVE-versie is 3.2;
+snippet 223 is de inactieve herstelkopie.
 
 ### 9 — ALT en title voor uitgelichte afbeelding
 
@@ -131,9 +145,9 @@ waarden en Twitter-waarden zijn daarna exact teruggelezen. Een vacaturearchief
 en een normaal Beroepengids-termarchief zijn als afbakeningscontrole getest en
 behielden hun bestaande metadata.
 
-Op 18 oktober 2026 is de verouderde Opleidingsniveau-mapping vervangen door
-`beroep_opleiding`, met de SEO-metadata voor het nieuwe Opleidingen-archief.
-De actieve LIVE-versie is 1.1; snippet 212 is de inactieve herstelkopie.
+Op 18 oktober 2026 zijn afzonderlijke mappings toegevoegd voor
+`beroep_opleidingsniveau` en `beroep_studierichting`. De actieve LIVE-versie is
+1.2; snippet 224 is de inactieve herstelkopie.
 
 Tijdens deze controle bleef de algemene onderhoudsblokkade actief. Daarom
 tonen de pagina's nog `noindex, nofollow` en geen canonical; snippet 209
@@ -144,18 +158,14 @@ de definitieve livegang worden opgeheven.
 ### 215 — Beroepengidsarchieven in de Rank Math-sitemap
 
 Voegt de toegestane virtuele Beroepengids-basisroutes toe aan de eerste
-page-sitemap. Omdat Rank Math de native `beroep_opleiding`-sitemap wel correct
-genereerde maar bij uitsluitend nog lege termen niet aan de sitemapindex
-koppelde, voegt versie 1.1 dat sitemapbestand expliciet en zonder duplicaten
-aan de index toe.
+page-sitemap. Versie 1.2 koppelt daarnaast de native sitemaps voor
+`beroep_opleidingsniveau` en `beroep_studierichting` expliciet en zonder
+duplicaten aan de sitemapindex. Snippet 225 is de inactieve herstelkopie.
 
-Op LIVE zijn `/beroepengids/opleidingen/` en alle 29 parent- en kindterm-URL's
-in de sitemaproutes gecontroleerd. Snippet 215 versie 1.1 is actief; snippet
-221 is de inactieve herstelkopie van versie 1.0.
-
-De eenmalige uitvoeringssnippets 216–220 hebben de relaties, intro's,
-basistekst, Rank Math-termtitel en sitemapcache verwerkt. Ze zijn na succesvolle
-uitvoering inactief gelaten en bevatten geen gemelde codefouten.
+De twee sitemap-URL's staan in de index. De directe XML-generatie van de
+term-URL's wacht nog op de definitieve Rank Math-instelling **lege termen
+opnemen** voor beide taxonomieën; dit is als open controlepunt vastgelegd en
+wordt niet als afgerond gemeld.
 
 ### 148, 186 en 193 — vacature-comboarchieven en sitemap
 

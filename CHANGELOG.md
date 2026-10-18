@@ -1,6 +1,40 @@
 # Changelog
 
-## 2026-10-18 — Beroepengids Opleidingen LIVE uitgevoerd
+## 2026-10-18 — Generieke archieftiteloverride voor Beroepengids
+
+- Op de zeven actieve Beroepengids-taxonomie-Pods een groep `Archive` met het
+  Plain Text-veld `pods_archive_title` toegevoegd, exact volgens de bestaande
+  vacature-Podconfiguratie. Bestaande velden en relaties bleven ongemoeid.
+- Snippet 39 bijgewerkt naar versie 2.0. Een ingevulde
+  `pods_archive_title` overschrijft nu de zichtbare Elementor-archieftitel;
+  bij een leeg of ontbrekend veld blijft de normale termnaam staan.
+- Voor de wijziging inactieve herstelkopie 232 gemaakt. Tijdelijke testsnippet
+  233 is na gebruik gedeactiveerd. Ook de eerder nog actieve tijdelijke
+  Rank Math-debugsnippet 231 is bij de afsluitende controle gedeactiveerd.
+- Lege waarde, ingevulde override en herstel functioneel getest op
+  `beroep_functienaam`-term 437. De oorspronkelijke lege waarde en H1 zijn
+  hersteld. Elementor-templates, Rank Math, breadcrumbs, slugs en URL's zijn
+  niet gewijzigd.
+- Technische details en alle groep- en veld-ID's vastgelegd in
+  `audits/2026-10-18-beroepengids-archive-title-override.md`.
+
+## 2026-10-18 — Opleidingenmodel gesplitst naar twee taxonomieën
+
+- De tijdelijke gecombineerde taxonomie `beroep_opleiding` vervangen in de
+  actieve architectuur door `beroep_opleidingsniveau` en
+  `beroep_studierichting`, direct aansluitend op de twee vacaturetaxonomieën.
+- 4 opleidingsniveau- en 23 studierichtingtermen met content en relaties
+  gemigreerd. De lege testterm `Opleiding A` is verwijderd.
+- Snippets 62, 113, 202, 209 en 215 naar de gesplitste opzet gebracht met
+  inactieve herstelkopieën 222–225 en 230.
+- Pagina 24266 bevat nu twee zelfstandig werkende kaarten, exact opgebouwd
+  zoals het bestaande Functienamenblok.
+- De oude Pod `beroep_opleiding` blijft alleen tijdelijk aanwezig totdat de
+  twee nieuwe taxonomysitemaps definitief zijn gecontroleerd.
+- Actuele architectuur en open punten vastgelegd in
+  `audits/2026-10-18-beroepengids-opleidingen-split-live.md`.
+
+## 2026-10-18 — Beroepengids Opleidingen LIVE uitgevoerd (historische eerste opzet)
 
 - Op LIVE de hiërarchische Pods-taxonomie `beroep_opleiding` aangemaakt met
   `Opleidingsniveau` en `Studierichting` als parenttermen, plus 4 niveau- en

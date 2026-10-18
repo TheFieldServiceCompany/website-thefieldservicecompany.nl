@@ -11,13 +11,14 @@
  *
  * /beroepengids/functienamen/
  * /beroepengids/functie-inhoud/
- * /beroepengids/opleidingen/
+ * /beroepengids/opleidingsniveaus/
+ * /beroepengids/studierichtingen/
  *
  * Deze URL's zijn geen pagina en geen echte taxonomyterm. Rank Math kan ze
  * daarom niet automatisch uit de gewone WordPress-objecten afleiden. Deze
  * snippet voegt de toegestane, publieke Beroepengids-bases als extra URL toe
- * aan de eerste pagina van page-sitemap.xml. Daarnaast koppelt hij de native
- * beroep_opleiding-taxonomysitemap aan de sitemapindex wanneer Rank Math die
+ * aan de eerste pagina van page-sitemap.xml. Daarnaast koppelt hij de twee
+ * native opleidingstaxonomysitemaps aan de sitemapindex wanneer Rank Math die
  * door nog lege postrelaties niet zelf vermeldt.
  *
  * AFBAKENING
@@ -27,8 +28,8 @@
  * - Gewone taxonomytermarchieven blijven aan Rank Math zelf.
  * - Vacature-comboarchieven blijven aan snippet 148.
  * - Er worden geen duizenden combinaties aan page-sitemap.xml toegevoegd.
- * - Het nieuwe beroep_opleiding-sitemapbestand wordt expliciet aan de index
- *   gekoppeld zolang Rank Math het door nul gekoppelde artikelen weglaat.
+ * - De twee opleidingstaxonomysitemaps worden expliciet aan de index gekoppeld
+ *   zolang Rank Math ze door nul gekoppelde artikelen weglaat.
  */
 
 
@@ -131,34 +132,42 @@ add_filter(
  * Rank Math kan een taxonomy-sitemap met `lege termen opnemen` correct
  * genereren, maar laat die sitemap uit de index zolang alle terms nog nul
  * gekoppelde Beroepengids-artikelen hebben. De sitemap zelf bevat al wel alle
- * 29 inhoudelijk gevulde termen. Daarom koppelen we hem expliciet aan de index.
+ * 27 inhoudelijk gevulde termen. Daarom koppelen we ze expliciet aan de index.
  */
 add_filter(
     'rank_math/sitemap/index',
     function( $xml ) {
 
-        if ( ! taxonomy_exists( 'beroep_opleiding' ) ) {
-            return $xml;
+        $taxonomies = [
+            'beroep_opleidingsniveau',
+            'beroep_studierichting',
+        ];
+
+        foreach ( $taxonomies as $taxonomy_name ) {
+
+            if ( ! taxonomy_exists( $taxonomy_name ) ) {
+                continue;
+            }
+
+            $url = home_url( '/' . $taxonomy_name . '-sitemap.xml' );
+            $loc = esc_url( $url );
+
+            if (
+                false !== strpos(
+                    (string) $xml,
+                    '<loc>' . $loc . '</loc>'
+                )
+            ) {
+                continue;
+            }
+
+            $xml .=
+                "\n\t<sitemap>\n"
+                . "\t\t<loc>"
+                . $loc
+                . "</loc>\n"
+                . "\t</sitemap>";
         }
-
-        $url = home_url( '/beroep_opleiding-sitemap.xml' );
-        $loc = esc_url( $url );
-
-        if (
-            false !== strpos(
-                (string) $xml,
-                '<loc>' . $loc . '</loc>'
-            )
-        ) {
-            return $xml;
-        }
-
-        $xml .=
-            "\n\t<sitemap>\n"
-            . "\t\t<loc>"
-            . $loc
-            . "</loc>\n"
-            . "\t</sitemap>";
 
         return $xml;
     },
@@ -173,7 +182,7 @@ add_action(
     'init',
     function() {
 
-        $version = '2026-10-18-v2';
+        $version = '2026-10-18-v3';
 
         if (
             get_option( 'tfsc_beroep_base_sitemap_version' ) === $version

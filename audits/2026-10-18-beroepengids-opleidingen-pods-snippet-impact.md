@@ -1,5 +1,11 @@
 # Beroepengids Opleidingen: Pods- en snippetimpact
 
+> **Historisch ontwerp, later vervangen.** De hieronder onderzochte
+> parent-kindstructuur met `beroep_opleiding` is niet de uiteindelijke
+> architectuur geworden. De actuele LIVE-opzet gebruikt de zelfstandige
+> taxonomieën `beroep_opleidingsniveau` en `beroep_studierichting`. Zie
+> `2026-10-18-beroepengids-opleidingen-split-live.md`.
+
 Datum: 18 oktober 2026  
 Status: analyse uitgevoerd; LIVE-implementatie op 18 oktober 2026 afgerond
 

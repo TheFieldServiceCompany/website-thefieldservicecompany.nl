@@ -1,5 +1,11 @@
 # Beroepengids Opleidingen — LIVE-implementatie
 
+> **Historisch implementatieverslag, later vervangen.** Dit document beschrijft
+> de eerste gecombineerde opzet met `beroep_opleiding`. Op dezelfde datum is
+> besloten deze hiërarchie te vervangen door twee zelfstandige taxonomieën:
+> `beroep_opleidingsniveau` en `beroep_studierichting`. Zie
+> `2026-10-18-beroepengids-opleidingen-split-live.md` voor de actuele opzet.
+
 Datum: 18 oktober 2026
 
 Site: `https://thefieldservicecompany.nl`
