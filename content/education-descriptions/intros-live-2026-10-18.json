@@ -1,0 +1,139 @@
+{
+  "items": [
+    {
+      "taxonomy": "beroep_opleidingsniveau",
+      "id": 598,
+      "intro_taxonomy": "<p>Met een hbo-achtergrond kun je binnen field service doorgroeien naar functies waarin diagnose, engineering, klantadvies en projectverantwoordelijkheid samenkomen. Bekijk welke beroepen en vacatures aansluiten op jouw niveau en vakgebied.</p>"
+    },
+    {
+      "taxonomy": "beroep_opleidingsniveau",
+      "id": 599,
+      "intro_taxonomy": "<p>Een mbo-opleiding vormt een sterke praktische basis voor field service. Je werkt met machines en installaties, spoort storingen op en helpt klanten op locatie weer verder. Vergelijk hier passende beroepen en actuele vacatures.</p>"
+    },
+    {
+      "taxonomy": "beroep_opleidingsniveau",
+      "id": 600,
+      "intro_taxonomy": "<p>Vanuit vmbo of lbo kun je via praktijkervaring, een technische vervolgopleiding en aanvullende certificaten doorgroeien binnen field service. Bekijk welke routes, beroepen en vacatures passen bij jouw technische aanleg.</p>"
+    },
+    {
+      "taxonomy": "beroep_opleidingsniveau",
+      "id": 601,
+      "intro_taxonomy": "<p>Complexe storingsanalyse, nieuwe servicetechnologie en internationale projecten vragen soms om een academische benadering. Lees welke fieldserviceberoepen ruimte bieden voor onderzoek, systeemkennis, engineering en technisch advies.</p>"
+    },
+    {
+      "taxonomy": "beroep_studierichting",
+      "id": 602,
+      "intro_taxonomy": "<p>Diagnoses stellen, aandrijflijnen begrijpen en elektronische voertuigsystemen doorgronden: met autotechniek heb je een praktische basis voor mobiele service. Bekijk waar deze kennis wordt ingezet bij onderhoud, storingen en ondersteuning op locatie.</p>"
+    },
+    {
+      "taxonomy": "beroep_studierichting",
+      "id": 603,
+      "intro_taxonomy": "<p>Bedrijfswagens moeten blijven rijden. Kennis van dieseltechniek, remsystemen, hydrauliek en voertuigelektronica komt daarom direct van pas bij fieldservicewerk voor trucks, bussen, trailers en specialistische wagenparken.</p>"
+    },
+    {
+      "taxonomy": "beroep_studierichting",
+      "id": 604,
+      "intro_taxonomy": "<p>In chemische productie draait betrouwbare service om proceskennis, veiligheid en nauwkeurig meten. Deze studierichting sluit aan op werk aan procesinstallaties, doseersystemen en analyseapparatuur bij klanten en productielocaties.</p>"
+    },
+    {
+      "taxonomy": "beroep_studierichting",
+      "id": 605,
+      "intro_taxonomy": "<p>Bruggen, waterwerken, funderingen en infrastructuur vragen om materieel en installaties die onder zware omstandigheden blijven functioneren. Civiele techniek biedt een relevante basis voor inspectie, ingebruikname en service op projectlocaties.</p>"
+    },
+    {
+      "taxonomy": "beroep_studierichting",
+      "id": 606,
+      "intro_taxonomy": "<p>Printplaten, sensoren en besturingen vormen het zenuwstelsel van moderne machines. Met elektronica kun je in field service gericht meten, componenten beoordelen en storingen oplossen die verder gaan dan alleen mechanica.</p>"
+    },
+    {
+      "taxonomy": "beroep_studierichting",
+      "id": 607,
+      "intro_taxonomy": "<p>Elektrotechniek kom je in vrijwel iedere fieldserviceomgeving tegen: van schakelkasten en motoren tot beveiligingen en vermogenselektronica. Hier vind je beroepen waarin installeren, meten, onderhouden en storingen oplossen centraal staan.</p>"
+    },
+    {
+      "taxonomy": "beroep_studierichting",
+      "id": 608,
+      "intro_taxonomy": "<p>Wanneer hardware, software en communicatieprotocollen samen één product vormen, is kennis van embedded systems onmisbaar. Die combinatie past bij field service aan slimme apparaten, machinebesturingen en verbonden technische systemen.</p>"
+    },
+    {
+      "taxonomy": "beroep_studierichting",
+      "id": 609,
+      "intro_taxonomy": "<p>De energietransitie brengt steeds meer systemen op locatie: van opwekking en opslag tot laadtechniek en distributie. Energietechniek bereidt je voor op servicewerk waarin veiligheid, beschikbaarheid en betrouwbare vermogensoverdracht leidend zijn.</p>"
+    },
+    {
+      "taxonomy": "beroep_studierichting",
+      "id": 610,
+      "intro_taxonomy": "<p>Machines zijn steeds vaker verbonden met industriële netwerken, cloudplatforms en diagnose op afstand. ICT en technische informatica sluiten daardoor goed aan op field service rond OT/IT, communicatie, softwareconfiguratie en slimme apparatuur.</p>"
+    },
+    {
+      "taxonomy": "beroep_studierichting",
+      "id": 611,
+      "intro_taxonomy": "<p>PLC's, HMI's, servodrives en productielijnen komen samen in industriële automatisering. Deze kennis is bijzonder bruikbaar bij het in bedrijf stellen, optimaliseren en herstellen van geautomatiseerde installaties bij klanten.</p>"
+    },
+    {
+      "taxonomy": "beroep_studierichting",
+      "id": 612,
+      "intro_taxonomy": "<p>Gebouwgebonden installaties moeten veilig, comfortabel en energiezuinig functioneren. Met installatietechniek kun je binnen field service werken aan verwarmings-, lucht-, water- en regeltechnische systemen bij uiteenlopende klanten.</p>"
+    },
+    {
+      "taxonomy": "beroep_studierichting",
+      "id": 613,
+      "intro_taxonomy": "<p>Koeling en klimaatbeheersing mogen zelden uitvallen. Kennis van koudemiddelen, compressoren, warmtepompen en regelingen leidt daarom naar fieldservicewerk met veel diagnose, onderhoud en verantwoordelijkheid op locatie.</p>"
+    },
+    {
+      "taxonomy": "beroep_studierichting",
+      "id": 614,
+      "intro_taxonomy": "<p>In de luchtvaart gelden strenge eisen voor veiligheid, traceerbaarheid en nauwkeurig onderhoud. Een achtergrond in luchtvaarttechniek past bij service aan vliegtuigen, grondmaterieel, testapparatuur en gespecialiseerde systemen.</p>"
+    },
+    {
+      "taxonomy": "beroep_studierichting",
+      "id": 615,
+      "intro_taxonomy": "<p>Motoren, aandrijvingen en hulpsystemen moeten ook op zee betrouwbaar blijven. Maritieme techniek opent de deur naar field service aan schepen, offshore-installaties en haventechniek, vaak in een internationale werkomgeving.</p>"
+    },
+    {
+      "taxonomy": "beroep_studierichting",
+      "id": 616,
+      "intro_taxonomy": "<p>Mechatronica verbindt mechanica, elektrotechniek en besturingstechniek. Juist die brede blik helpt je in field service om complete machines te begrijpen, oorzaken sneller te vinden en verschillende disciplines bij een storing samen te brengen.</p>"
+    },
+    {
+      "taxonomy": "beroep_studierichting",
+      "id": 617,
+      "intro_taxonomy": "<p>Graafmachines, landbouwmachines en ander mobiel materieel worden gerepareerd waar ze worden ingezet. Mobiele werktuigentechniek sluit aan op field service met hydrauliek, aandrijftechniek, elektronica en veel zelfstandig werk buiten de werkplaats.</p>"
+    },
+    {
+      "taxonomy": "beroep_studierichting",
+      "id": 618,
+      "intro_taxonomy": "<p>Operationele techniek richt zich op het veilig en continu laten draaien van installaties. Die ervaring past bij fieldservicefuncties waarin je procesapparatuur controleert, onderhoud begeleidt en storingen onder bedrijfsomstandigheden oplost.</p>"
+    },
+    {
+      "taxonomy": "beroep_studierichting",
+      "id": 619,
+      "intro_taxonomy": "<p>Pompen, kleppen, leidingen en meetwaarden vertellen hoe een proces werkelijk functioneert. Met procestechniek kun je in field service productieproblemen analyseren en installaties weer stabiel, veilig en efficiënt laten draaien.</p>"
+    },
+    {
+      "taxonomy": "beroep_studierichting",
+      "id": 620,
+      "intro_taxonomy": "<p>Een robotcel presteert pas goed wanneer mechanica, programmering, veiligheid en kalibratie kloppen. Robotica sluit aan op field service rond installatie, ingebruikname, optimalisatie en storingsdiagnose van geautomatiseerde systemen.</p>"
+    },
+    {
+      "taxonomy": "beroep_studierichting",
+      "id": 621,
+      "intro_taxonomy": "<p>Scheepsbouwkunde combineert constructie, systemen en de praktijk aan boord. Dat biedt aanknopingspunten voor field service bij nieuwbouw, refits, inspecties en de ingebruikname van maritieme installaties.</p>"
+    },
+    {
+      "taxonomy": "beroep_studierichting",
+      "id": 622,
+      "intro_taxonomy": "<p>Technische bedrijfskunde helpt je techniek te verbinden met planning, processen, kosten en klantbelangen. Binnen field service is dat waardevol voor coördinatie, serviceprojecten, verbetertrajecten en leidinggevende verantwoordelijkheden.</p>"
+    },
+    {
+      "taxonomy": "beroep_studierichting",
+      "id": 623,
+      "intro_taxonomy": "<p>Meten, modelleren en verklaren staan centraal in technische natuurkunde. Die analytische basis past bij field service aan hightech apparatuur, precisiesystemen, sensortechniek en toepassingen waarin een afwijking tot op detail moet worden onderzocht.</p>"
+    },
+    {
+      "taxonomy": "beroep_studierichting",
+      "id": 624,
+      "intro_taxonomy": "<p>Van lagers en overbrengingen tot complete machineconstructies: werktuigbouwkunde geeft je inzicht in hoe apparatuur beweegt, belast wordt en slijt. Dat is een sterke basis voor onderhoud, revisie en storingswerk bij klanten.</p>"
+    }
+  ]
+}

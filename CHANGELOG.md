@@ -1,5 +1,20 @@
 # Changelog
 
+## 2026-10-18 — Opleidingen-intro's inhoudelijk herschreven
+
+- Vastgesteld dat alle 27 introducties hetzelfde generieke patroon gebruikten
+  en met `Ontdek` begonnen.
+- De 4 opleidingsniveau-intro's en 23 studierichtingintro's vervangen door
+  afzonderlijke teksten die inhoudelijk aansluiten op het betreffende niveau
+  of vakgebied en de toepassing binnen field service.
+- Alleen het Pods-veld `intro_taxonomy` aangepast. Termdescriptions,
+  relaties, namen, slugs, Rank Math en vacaturekoppelingen bleven ongewijzigd.
+- Controle na publicatie: 27 verschillende intro's, nul openingen met
+  `Ontdek`, nul afwijkingen ten opzichte van de goedgekeurde payload en nul
+  gewijzigde descriptions.
+- Live snapshot vastgelegd in
+  `content/education-descriptions/intros-live-2026-10-18.json`.
+
 ## 2026-10-18 — Tijdelijke Opleidingen-structuur opgeruimd
 
 - De vervangen Pods-taxonomie `beroep_opleiding` (ID 27600), de vier velden,
