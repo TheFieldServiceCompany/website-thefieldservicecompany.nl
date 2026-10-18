@@ -1,5 +1,21 @@
 # Changelog
 
+## 2026-10-18 — Ontbrekende taxonomy-term descriptions geïnventariseerd
+
+- Alle 12 vacaturetaxonomieën en 7 Beroepengidstaxonomieën alleen-lezen
+  gecontroleerd op het gewone WordPress-termveld `description`.
+- Bij Vacatures ontbreken descriptions bij 1 term onder Dagen internationaal,
+  8 onder Functie-inhoud, 3 opleidingsniveaus, alle 25 reisprofielen, alle 3
+  statustermen en alle 23 studierichtingen.
+- Bij Beroepengids ontbreken descriptions voor `field service engineer` en
+  `World`. Bedrijfssectoren en Kennisgebieden hebben daar nog geen termen.
+- Bedrijfssectoren, Dienstverbanden, Functienamen, Kennisgebieden, Locaties en
+  Werkgebieden aan vacaturezijde zijn volledig gevuld. De 4
+  opleidingsniveaus en 23 studierichtingen aan Beroepengidszijde zijn eveneens
+  volledig gevuld.
+- Er is niets gewijzigd. Details staan in
+  `audits/2026-10-18-taxonomy-term-description-audit.md`.
+
 ## 2026-10-18 — REST-mogelijkheden van LIVE-plugins geïnventariseerd
 
 - De actuele lijst van 32 geïnstalleerde plugins en alle geregistreerde
