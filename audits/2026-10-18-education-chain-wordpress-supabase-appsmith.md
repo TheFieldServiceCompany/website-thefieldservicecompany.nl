@@ -208,3 +208,21 @@ kind onder een andere taxonomie worden geplaatst; een hub met twee duidelijke
 ingangen voorkomt gemengde termen, onduidelijke relaties en problemen met
 filters, snippets en SEO-archieven.
 
+## Redactionele voorbereiding op 18 oktober 2026
+
+- Een herbruikbare productieprompt vastgelegd met eisen voor feitelijke
+  onderwijsinformatie, natuurlijke SEO, AI-leesbare vraagkoppen, jij-vorm en
+  concrete koppeling aan field service.
+- Alle 23 studierichtingen en alle vier opleidingsniveaus hebben een unieke
+  conceptdescription van 450–486 woorden gekregen.
+- Iedere tekst bevat exact vier vraaggerichte H2-secties. Er zijn geen formele
+  `u`-aansprekingen, verboden opvulzinnen of dubbele bodyregels aangetroffen.
+- De vier niveauteksten mogen verwijzen naar actuele TFSC-vacatures omdat hun
+  WordPress-termen koppelingen hebben. De studierichtingteksten doen nog geen
+  dergelijke claim: `vac_studierichting` heeft nog nul vacaturekoppelingen.
+- Publicatie wacht op de goedgekeurde Pods-structuur. De vacaturetaxonomieën
+  worden niet misbruikt als opslagplaats voor Beroepengidsdescriptions.
+- Bronnen, publicatievoorwaarden en dynamische CTA-regels staan in
+  `content/education-descriptions/README.md`; de teksten zelf staan in
+  `opleidingsniveaus.md` en `studierichtingen.md` in dezelfde map.
+

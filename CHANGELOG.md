@@ -1,5 +1,27 @@
 # Changelog
 
+## 2026-10-18 — Descriptions voor opleidingen voorbereid
+
+- Een vaste redactionele productieprompt toegevoegd voor unieke,
+  vraaggerichte en SEO-sterke Beroepengidsteksten over studierichtingen en
+  opleidingsniveaus.
+- Voor alle 23 goedgekeurde studierichtingen een inhoudelijk unieke description
+  geschreven over leerinhoud, toepassing in field service, passende functies
+  en relevante verdieping.
+- Voor VMBO / LBO, MBO, HBO en WO / Universiteit vier afzonderlijke
+  niveaudescriptions geschreven. VMBO wordt correct als voorbereiding op
+  beroepsonderwijs behandeld; Associate degree wordt binnen het TFSC-filter
+  onder HBO geplaatst zonder het gelijk te stellen aan een hbo-bachelor.
+- Gecontroleerd dat alle 27 teksten vier vraaggerichte H2-koppen bevatten en
+  tussen 450 en 486 woorden tellen, exclusief koppen en redactionele notities.
+- Bij de vier niveaus is een concrete TFSC-route naar aantoonbaar gekoppelde
+  vacatures opgenomen. Voor studierichtingen is bewust nog geen vacatureclaim
+  toegevoegd, omdat de WordPress-termen nog nul vacaturekoppelingen hebben.
+- Vastgelegd dat een dynamische TFSC-CTA alleen gekoppelde, actuele vacatures
+  mag tonen. De teksten zijn nog niet gepubliceerd: eerst moeten de
+  Beroepengids-Pods voor opleidingsniveau en studierichting worden ingericht en
+  getest.
+
 ## 2026-10-18 — Opleidingsniveaus en studierichtingen gesynchroniseerd
 
 - In WordPress de zichtbare niveaunamen aangepast naar `VMBO / LBO` en
