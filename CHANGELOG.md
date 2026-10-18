@@ -1,5 +1,24 @@
 # Changelog
 
+## 2026-10-18 — Dienstverbanden inhoudelijk herschreven
+
+- `Freelance/ZZP` en `Vast Dienstverband` voorzien van unieke archieftitels en
+  descriptions van 369 en 371 woorden.
+- Freelance/ZZP gepositioneerd rond vrijheid, specialistische projecten en de
+  eigen verantwoordelijkheid voor administratie, verzekeringen, pensioen,
+  vakantie, ziekte en continuïteit.
+- Vast dienstverband gepositioneerd rond rechtstreekse indiensttreding bij de
+  werkgever, kennisinvestering, betaald verlof, loondoorbetaling bij ziekte,
+  pensioenopbouw en doorgroeimogelijkheden. Geen detachering of
+  uitzendconstructie.
+- Oorspronkelijke waarden vooraf opgeslagen; beide termen via REST gepubliceerd
+  en exact opnieuw uitgelezen.
+- Het archief Vast Dienstverband in de gerenderde frontend gecontroleerd: H1,
+  vacaturelijst en description-accordion werken.
+- Geen snippets, templates, Pods-instellingen, slugs, relaties of Rank Math-
+  velden gewijzigd. Details staan in
+  `audits/2026-10-18-dienstverbanden-content-live.md`.
+
 ## 2026-10-18 — Dagen internationaal inhoudelijk herschreven
 
 - Alle vier termen van `dagen-internationaal` voorzien van een unieke
