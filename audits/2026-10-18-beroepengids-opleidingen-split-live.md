@@ -2,7 +2,7 @@
 
 Datum: 18 oktober 2026
 
-Status: actief op LIVE; enkele opruim- en sitemapcontroles staan nog open
+Status: actief op LIVE; tijdelijke gecombineerde structuur is opgeruimd
 
 ## Definitief structuurbesluit
 
@@ -27,13 +27,13 @@ content en kaart op de centrale Beroepengids-pagina.
 - 4 opleidingsniveaus en 23 studierichtingen zijn vanuit de tijdelijke
   gecombineerde structuur gekopieerd, inclusief intro, description en relatie
   naar de overeenkomstige vacatureterm.
-- Eenmalige migratiesnippet 226 verwerkte alle 27 termen zonder fout en staat
-  inactief.
+- Eenmalige migratiesnippet 226 verwerkte alle 27 termen zonder fout en is na
+  de eindcontrole verwijderd.
 - Eenmalige snippets 227–229 vulden basiscontent, Rank Math-instellingen en
-  rewrites/caches; zij staan inactief.
+  rewrites/caches; zij zijn na de eindcontrole verwijderd.
 - De lege testterm `Opleiding A` is verwijderd.
-- De verouderde Pod `beroep_opleiding` bestaat op dit meetmoment nog als
-  herstel-/opruimobject en wordt pas na de laatste sitemapcontrole verwijderd.
+- De verouderde Pod `beroep_opleiding`, zijn 29 uitsluitend dubbele termen,
+  vier velden en veldgroep zijn op 18 oktober 2026 verwijderd.
 
 ## Actieve snippets
 
@@ -67,16 +67,20 @@ banners visueel gecontroleerd.
   omdat de bijbehorende vacatureterm momenteel nul vacatures heeft.
 - De centrale Beroepengids-pagina toont 4 niveaus en de studierichtingenloop.
 - Snippets 62, 113, 202, 209 en 215 zijn actief zonder gemelde codefout.
+- Na de opruiming bestaan 4 niveaus en 23 studierichtingen; alle 27
+  vacaturetaxonomierelaties zijn gevuld.
+- De oude Pods-REST-route bestaat niet meer. Pagina 24266 bevat geen exacte
+  verwijzing naar `beroep_opleiding` en wel naar beide huidige taxonomieën.
+- In Rank Math staan sitemap en `include_empty` voor beide huidige taxonomieën
+  aan. De oude sitemapinstellingen zijn verwijderd en de cache is vernieuwd.
 
 ## Nog open
 
-1. In Rank Math voor beide nieuwe taxonomieën **lege termen opnemen** activeren
-   en daarna controleren dat de XML-sitemaps respectievelijk 4 en 23 term-URL's
-   bevatten.
-2. Daarna de oude Pod `beroep_opleiding` gecontroleerd verwijderen, rewrites en
-   sitemapcache vernieuwen en bevestigen dat de oude sitemap verdwenen is.
-3. De namingstructuur van de relatievelden door de beheerder nalopen; deze
+1. Zodra Elementor-onderhoudsmodus uitgaat, de publieke XML-responses nog één
+   keer controleren. Tijdens onderhoud retourneert de publieke site bewust
+   HTTP 503; de achterliggende Rank Math-instellingen zijn al gecontroleerd.
+2. De namingstructuur van de relatievelden door de beheerder nalopen; deze
    handmatige correcties mogen niet door automatische migraties worden
    overschreven.
-4. De definitieve waarden en koppelingen later synchroniseren en testen in
+3. De definitieve waarden en koppelingen later synchroniseren en testen in
    Supabase en Appsmith.

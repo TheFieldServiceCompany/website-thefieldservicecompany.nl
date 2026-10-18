@@ -1,5 +1,24 @@
 # Changelog
 
+## 2026-10-18 — Tijdelijke Opleidingen-structuur opgeruimd
+
+- De vervangen Pods-taxonomie `beroep_opleiding` (ID 27600), de vier velden,
+  veldgroep en alle 29 uitsluitend daarin bestaande termen verwijderd.
+- Vooraf bevestigd dat de 27 inhoudelijke waarden één-op-één aanwezig zijn in
+  `beroep_opleidingsniveau` en `beroep_studierichting`. Na afloop bevatten de
+  huidige taxonomieën nog steeds respectievelijk 4 en 23 termen, allemaal met
+  een gevulde vacaturetaxonomierelatie.
+- Oude Rank Math-sleutels en tijdelijke migratieopties verwijderd. Voor beide
+  huidige taxonomieën staan sitemap en `include_empty` aan; rewrites en de
+  Rank Math-sitemapcache zijn vernieuwd.
+- De goedgekeurde eenmalige, diagnose- en testsnippets 213, 214, 216–220,
+  226–229, 231 en 233 definitief verwijderd. De tijdelijke cleanupsnippets
+  234 en 235 zijn eveneens direct na gebruik verwijderd.
+- Herstelkopieën 210–212, 221–225, 230 en 232 bewust behouden. De actieve
+  snippets zijn gecontroleerd en melden geen codefout.
+- Uitvoering en verificatie vastgelegd in
+  `audits/2026-10-18-beroepengids-opleiding-cleanup.md`.
+
 ## 2026-10-18 — Generieke archieftiteloverride voor Beroepengids
 
 - Op de zeven actieve Beroepengids-taxonomie-Pods een groep `Archive` met het
@@ -9,8 +28,8 @@
   `pods_archive_title` overschrijft nu de zichtbare Elementor-archieftitel;
   bij een leeg of ontbrekend veld blijft de normale termnaam staan.
 - Voor de wijziging inactieve herstelkopie 232 gemaakt. Tijdelijke testsnippet
-  233 is na gebruik gedeactiveerd. Ook de eerder nog actieve tijdelijke
-  Rank Math-debugsnippet 231 is bij de afsluitende controle gedeactiveerd.
+  233 en de Rank Math-debugsnippet 231 zijn na de latere eindcontrole
+  definitief verwijderd.
 - Lege waarde, ingevulde override en herstel functioneel getest op
   `beroep_functienaam`-term 437. De oorspronkelijke lege waarde en H1 zijn
   hersteld. Elementor-templates, Rank Math, breadcrumbs, slugs en URL's zijn
@@ -29,8 +48,8 @@
   inactieve herstelkopieën 222–225 en 230.
 - Pagina 24266 bevat nu twee zelfstandig werkende kaarten, exact opgebouwd
   zoals het bestaande Functienamenblok.
-- De oude Pod `beroep_opleiding` blijft alleen tijdelijk aanwezig totdat de
-  twee nieuwe taxonomysitemaps definitief zijn gecontroleerd.
+- De oude Pod `beroep_opleiding` en zijn dubbele termen zijn na controle
+  verwijderd.
 - Actuele architectuur en open punten vastgelegd in
   `audits/2026-10-18-beroepengids-opleidingen-split-live.md`.
 
