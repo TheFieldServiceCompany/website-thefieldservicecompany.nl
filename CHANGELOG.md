@@ -1,5 +1,23 @@
 # Changelog
 
+## 2026-10-18 — Archieftitels voor vacatureopleidingen gelijkgetrokken
+
+- Voor alle 4 vacature-opleidingsniveaus `pods_archive_title` ingesteld als
+  `Field service vacatures voor opleidingsniveau [term]`.
+- Voor alle 23 vacature-studierichtingen `pods_archive_title` ingesteld als
+  `Field service vacatures voor studierichting [term]`.
+- Alle 27 waarden via REST herlezen en exact geverifieerd; de spiegelende
+  Beroepengids-taxonomieën zijn niet gewijzigd.
+- Een templateverschil opgelost waardoor single-term-combo-archieven het
+  ingevulde Pods-veld nog niet als H1 gebruikten. Vooraf inactieve
+  herstelkopie 242 gemaakt; snippet 186 daarna bijgewerkt van 4.5.3 naar
+  4.5.4 en zonder codefout herlezen.
+- HBO, Industriële Automatisering en de combinatie van beide op de gerenderde
+  frontend getest. De override werkt op single-term-archieven en de bestaande
+  combinatie-H1 blijft intact.
+- Details staan in
+  `audits/2026-10-18-vacature-education-archive-titles-live.md`.
+
 ## 2026-10-18 — Ontbrekende taxonomy-term descriptions geïnventariseerd
 
 - Alle 12 vacaturetaxonomieën en 7 Beroepengidstaxonomieën alleen-lezen

@@ -87,6 +87,19 @@ Pods-structuur en de relatievelden zijn ingericht en getest.
 - Voor publicatie zijn de bestaande vier descriptions opgeslagen. Daarna zijn
   alle vier REST-resultaten en alle vier gerenderde archieven gecontroleerd.
 
+## Archieftitels vacatureopleidingen op 18 oktober 2026
+
+- Alle vier vacature-opleidingsniveaus gebruiken als Pods-archieftitel
+  `Field service vacatures voor opleidingsniveau [term]`.
+- Alle 23 vacature-studierichtingen gebruiken
+  `Field service vacatures voor studierichting [term]`.
+- De titels zijn opgeslagen in `pods_archive_title`; termnamen en slugs zijn
+  niet gewijzigd.
+- Snippet 186 versie 4.5.4 gebruikt dit veld ook als H1 op een
+  single-term-combo-archief. Combinaties van meerdere termen behouden hun
+  bestaande compacte titelopbouw.
+- Inactieve herstelkopie van de eerdere snippetversie: ID 242.
+
 ## Canonieke termen
 
 Opleidingsniveaus: VMBO / LBO, MBO, HBO en WO / Universiteit.
