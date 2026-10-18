@@ -1,5 +1,28 @@
 # Changelog
 
+## 2026-10-18 — Opleidingenketen WordPress, Supabase en Appsmith onderzocht
+
+- Alleen-lezen vastgesteld dat WordPress bij vacatures al de twee benodigde
+  taxonomieën heeft: `opleidingsniveau` met vier gebruikte termen en
+  `vac_studierichting` met achttien nog ongebruikte termen.
+- De WordPress- en Supabase-lijsten vergeleken. Opleidingsniveau heeft twee
+  directe matches, twee naam-/synoniemmatches en één Supabase-only niveau
+  (`Associate degree (Ad)`). Bij studierichtingen zijn vijftien namen exact,
+  is één naam een duidelijke variant en heeft elk systeem twee eigen termen.
+- Bevestigd dat Supabase het juiste gescheiden model al bevat via
+  `education_levels`, `education_fields`, `vacancy_education_requirements` en
+  `candidate_education`. De productievulling en stabiele WordPress-mappings
+  ontbreken nog.
+- Bevestigd dat Appsmith beide dimensies al afzonderlijk kan selecteren,
+  opslaan en gebruiken bij vacaturematching. Nieuwbouw is niet nodig; de UI,
+  termmapping, WordPress-vacaturekoppeling, synchronisatie en tests moeten
+  worden afgemaakt.
+- Als voorstel vastgelegd: `Opleidingen` wordt een overkoepelende
+  Beroepengidsingang, terwijl opleidingsniveau en studierichting technisch
+  gescheiden blijven. Er is niets gewijzigd in WordPress, Supabase of
+  Appsmith. De volledige audit staat in
+  `audits/2026-10-18-education-chain-wordpress-supabase-appsmith.md`.
+
 ## 2026-10-17 — Alle overige vacaturetaxonomiekoppelingen gecontroleerd
 
 - Een alleen-lezen koppelingenaudit uitgevoerd voor alle 63 gepubliceerde
