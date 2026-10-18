@@ -1,9 +1,16 @@
 # Beroepengids studierichtingen: descriptions LIVE
 
 Datum: 18 oktober 2026  
-Status: uitgevoerd en gecontroleerd
+Status: foutieve eerste publicatie volledig hersteld
 
-## Resultaat
+> Correctie: deze teksten waren bedoeld voor `vac_studierichting`, niet voor
+> `beroep_studierichting`. Alle 23 bestaande Beroepengids-descriptions zijn
+> exact hersteld uit commit `bba82c6`. Het definitieve resultaat staat in
+> `2026-10-18-vacature-studierichtingen-descriptions-live.md`.
+> Alle onderstaande controles beschrijven de tijdelijke, foutieve toestand en
+> zijn geen weergave van wat nu op de Beroepengids staat.
+
+## Tijdelijk resultaat van de foutieve ronde
 
 Alle 23 termen van de Pods-taxonomie `beroep_studierichting` hebben een unieke,
 publicatieklare description. WordPress heeft na de schrijfronde alle 23

@@ -1,14 +1,16 @@
-# Opleidingsdescriptions voor de Beroepengids
+# Opleidingsdescriptions voor vacatures en Beroepengids
 
-Status: de 23 descriptions voor studierichtingen staan sinds 18 oktober 2026
-op LIVE; de vier opleidingsniveauteksten blijven afzonderlijk beheerd.
+Status: de 23 nieuwe descriptions staan sinds 18 oktober 2026 bij de
+vacaturetaxonomie `vac_studierichting` op LIVE. De eerder bestaande teksten bij
+`beroep_studierichting` zijn na een foutieve overschrijving exact hersteld.
 
 ## Doel
 
-Deze map bevat de unieke onderteksten voor de toekomstige hiërarchische
-Beroepengids-taxonomie `Opleidingen` (`beroep_opleiding`). Daarin worden
-`Opleidingsniveau` en `Studierichting` twee bovenliggende termen, met de vier
-niveaus en 23 studierichtingen als kindtermen.
+Deze map documenteert de opleidingscontent voor de vacaturetaxonomieën en de
+spiegelende Beroepengids-taxonomieën. Het bestand `studierichtingen.md` bevat
+de nieuwe, lange descriptions die op `vac_studierichting` zijn gepubliceerd.
+De al bestaande descriptions van `beroep_studierichting` blijven een
+afzonderlijke contentlaag en zijn niet door deze teksten vervangen.
 
 De twee gescheiden vacaturetaxonomieën `opleidingsniveau` en
 `vac_studierichting` zijn de canonieke bron voor de termen en relaties. De
@@ -38,9 +40,9 @@ Pods-structuur en de relatievelden zijn ingericht en getest.
    vacaturevariant alleen wanneer de term gekoppelde, actuele vacatures heeft;
    gebruik anders een route naar relevante functies of studierichtingen.
 
-## Publicatie studierichtingen op 18 oktober 2026
+## Publicatie vacature-studierichtingen op 18 oktober 2026
 
-- Alle 23 termen van `beroep_studierichting` zijn via WordPress REST voorzien
+- Alle 23 termen van `vac_studierichting` zijn via WordPress REST voorzien
   van de gecontroleerde description uit `studierichtingen.md`.
 - Iedere tekst is 437–472 woorden lang en bevat exact vier vraaggerichte
   H2-koppen.
@@ -54,10 +56,12 @@ Pods-structuur en de relatievelden zijn ingericht en getest.
   raakvlakken, passende field service functies en geloofwaardige sectoren.
 - De bestaande live descriptions zijn vooraf opgeslagen. De publicatiescript
   ondersteunt automatische rollback bij een schrijffout.
-- Na publicatie zijn alle 23 termen opnieuw uit WordPress gelezen en exact
-  vergeleken met de lokale bron. Autotechniek, Industriële Automatisering,
-  Technische Natuurkunde en Mobiele Werktuigentechniek zijn daarnaast op de
-  gerenderde frontend gecontroleerd.
+- Na publicatie zijn alle 23 vacaturetermen opnieuw uit WordPress gelezen en
+  exact vergeleken met de lokale bron. Het openbare vacaturearchief voor
+  Autotechniek is daarnaast op de gerenderde frontend gecontroleerd.
+- Een eerste publicatieronde was abusievelijk gericht op
+  `beroep_studierichting`. Die wijziging is volledig hersteld vanuit commit
+  `bba82c6` en daarna voor alle 23 Beroepengids-termen geverifieerd.
 
 ## Canonieke termen
 

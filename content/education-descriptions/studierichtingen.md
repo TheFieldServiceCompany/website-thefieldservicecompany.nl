@@ -1,7 +1,7 @@
 # Descriptions studierichtingen
 
-Status: alle 23 descriptions gepubliceerd en via WordPress REST geverifieerd op
-18 oktober 2026.
+Status: alle 23 descriptions gepubliceerd bij de vacaturetaxonomie
+`vac_studierichting` en via WordPress REST geverifieerd op 18 oktober 2026.
 
 ## Autotechniek
 
