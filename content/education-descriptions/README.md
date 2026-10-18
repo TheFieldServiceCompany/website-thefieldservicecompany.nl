@@ -12,6 +12,11 @@ de nieuwe, lange descriptions die op `vac_studierichting` zijn gepubliceerd.
 De al bestaande descriptions van `beroep_studierichting` blijven een
 afzonderlijke contentlaag en zijn niet door deze teksten vervangen.
 
+De compacte, herbruikbare schrijf- en publicatieprompt staat in
+`reusable-taxonomy-text-prompt.md`. Gebruik die voor nieuwe taxonomyteksten,
+zodat stijl, inhoudelijke controle en de keuze van de juiste WordPress-
+taxonomie vooraf vastliggen.
+
 De twee gescheiden vacaturetaxonomieën `opleidingsniveau` en
 `vac_studierichting` zijn de canonieke bron voor de termen en relaties. De
 teksten worden pas gepubliceerd nadat de spiegelende hiërarchische
