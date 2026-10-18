@@ -32,6 +32,32 @@ Het Beroepengids-archief van Industriële Automatisering toont na herstel weer
 de oorspronkelijke koppen, waaronder `Wat leer je binnen industriële
 automatisering?`.
 
+## Redactionele correctie van de openingskoppen
+
+Na de eerste correcte publicatie bij `vac_studierichting` bleken 22 van de 23
+openingskoppen nog te sterk op hetzelfde patroon te leunen. Autotechniek had al
+de gewenste opbouw; de overige 22 openingskoppen zijn herschreven.
+
+De nieuwe koppen:
+
+- beginnen afwisselend met onder meer `Waarom`, `Hoe`, `Welke`, `Wat maakt`,
+  `Waar liggen` en `Van ... naar ...`;
+- gebruiken afwisselend `studie`, `studierichting`, `achtergrond` of alleen de
+  vakterm;
+- leggen direct een relatie met service, field service, machines, installaties
+  of de betreffende bedrijfssector;
+- vermijden het herhaalde patroon `Wat leer je tijdens de opleiding ...`;
+- blijven zelfstandig begrijpelijke zoekvragen.
+
+Waar een bestaande tweede H2 door de nieuwe openingskop dubbelop werd, is die
+eveneens aangepast. De 22 gewijzigde vacaturetermen zijn gepubliceerd en alle
+23 vacaturedescriptions zijn daarna opnieuw exact via REST geverifieerd.
+
+Frontendsteekproeven voor Industriële Automatisering, Procestechniek en
+Technische Bedrijfskunde tonen de nieuwe gevarieerde koppen. Een gelijktijdige
+controle van Beroepengids Industriële Automatisering bevestigt dat de
+Beroepengids ongewijzigd is gebleven.
+
 ## Herstelbestanden
 
 Direct voor de correctie zijn beide actuele reeksen lokaal opgeslagen:
