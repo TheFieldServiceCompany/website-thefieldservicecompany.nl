@@ -1,6 +1,7 @@
 # Opleidingsdescriptions voor de Beroepengids
 
-Status: 27 gecontroleerde concepten gereed; nog niet op LIVE gepubliceerd.
+Status: de 23 descriptions voor studierichtingen staan sinds 18 oktober 2026
+op LIVE; de vier opleidingsniveauteksten blijven afzonderlijk beheerd.
 
 ## Doel
 
@@ -36,6 +37,27 @@ Pods-structuur en de relatievelden zijn ingericht en getest.
 7. Voeg onder de description een dynamische TFSC-CTA toe. Toon de
    vacaturevariant alleen wanneer de term gekoppelde, actuele vacatures heeft;
    gebruik anders een route naar relevante functies of studierichtingen.
+
+## Publicatie studierichtingen op 18 oktober 2026
+
+- Alle 23 termen van `beroep_studierichting` zijn via WordPress REST voorzien
+  van de gecontroleerde description uit `studierichtingen.md`.
+- Iedere tekst is 437–472 woorden lang en bevat exact vier vraaggerichte
+  H2-koppen.
+- Iedere tekst gebruikt zowel `opleiding [term]` als `studierichting [term]`
+  en schrijft `field service` consequent als twee woorden.
+- Algemene koppen zijn vervangen door zoekvragen waarin de opleiding,
+  studierichting, relevante techniek, machines of sectoren herkenbaar zijn.
+- Autotechniek is inhoudelijk herschreven rond de overdracht van mechanica,
+  elektronica, koeling, sensoren en diagnose naar industriële machinebouw.
+- Voor het schrijven is per richting gecontroleerd op concrete technische
+  raakvlakken, passende field service functies en geloofwaardige sectoren.
+- De bestaande live descriptions zijn vooraf opgeslagen. De publicatiescript
+  ondersteunt automatische rollback bij een schrijffout.
+- Na publicatie zijn alle 23 termen opnieuw uit WordPress gelezen en exact
+  vergeleken met de lokale bron. Autotechniek, Industriële Automatisering,
+  Technische Natuurkunde en Mobiele Werktuigentechniek zijn daarnaast op de
+  gerenderde frontend gecontroleerd.
 
 ## Canonieke termen
 

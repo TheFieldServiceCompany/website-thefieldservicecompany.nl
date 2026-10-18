@@ -1,86 +1,90 @@
 # Descriptions studierichtingen
 
-Status: concepten voor inhoudelijke beoordeling; nog niet gepubliceerd.
+Status: alle 23 descriptions gepubliceerd en via WordPress REST geverifieerd op
+18 oktober 2026.
 
 ## Autotechniek
 
 Slug: `autotechniek`
 
-### Wat leer je binnen autotechniek?
+### Waarom biedt de studierichting Autotechniek kansen om te werken in field service?
 
-Een opleiding autotechniek leert je voertuigen systematisch onderhouden,
-onderzoeken en repareren. Je verdiept je in aandrijving, remmen, onderstel,
-elektrische installaties, motormanagement en steeds vaker in hybride en
-elektrische systemen. Daarbij werk je met technische documentatie,
-diagnoseapparatuur en meetmiddelen. Je leert een klacht vertalen naar een
-controleplan, meetwaarden beoordelen en pas daarna bepalen welk onderdeel of
-welke afstelling aandacht nodig heeft.
+Met de opleiding Autotechniek leer je veel meer dan alleen aan auto's werken.
+Een moderne auto is een technisch systeem waarin mechanica, elektronica,
+aandrijftechniek, koeltechniek, sensoren en besturingen samenwerken. Precies
+die combinatie kom je ook tegen in industriële machines en installaties.
 
-De precieze inhoud verschilt per niveau en onderwijsinstelling. In een
-praktijkgerichte route ligt het accent vaker op inspectie, montage en
-reparatie. Op een hoger niveau komen voertuigsystemen, data, regeltechniek en
-het onderbouwen van technische keuzes uitgebreider aan bod. Veilig werken en
-zorgvuldig rapporteren vormen in alle gevallen een belangrijke basis.
+Dat maakt de studierichting Autotechniek een interessante basis voor een
+loopbaan in field service. Je gebruikt jouw technische inzicht dan niet
+uitsluitend voor voertuigen, maar bijvoorbeeld ook voor separatoren,
+compressoren, verpakkingsmachines, pompen, luchtbehandelingssystemen en andere
+machines bij klanten. Als jij graag onderzoekt waarom een systeem niet goed
+functioneert en voldoening krijgt van een machine die na jouw werk weer draait,
+kan field service verrassend goed bij je passen.
 
-### Hoe sluit autotechniek aan op field service?
+### Welke kennis uit de opleiding Autotechniek herken je in industriële machines?
 
-De diagnoseaanpak uit autotechniek is direct bruikbaar wanneer je op locatie
-aan mobiele techniek werkt. Je kunt symptomen ordenen, foutcodes uitlezen,
-sensoren controleren en mechanische of elektrische oorzaken van elkaar
-scheiden. Dat is relevant bij service aan personen- en bedrijfswagens, maar
-ook bij intern transportmaterieel, speciaalvoertuigen en machines met een
-vergelijkbare aandrijving of voertuigelektronica.
+Veel kennis uit de opleiding Autotechniek is direct of indirect toepasbaar
+binnen de machinebouw. Denk aan het beoordelen van slijtage, demonteren en
+monteren van onderdelen, meten van toleranties en systematisch opsporen van
+storingen. Ook lagers, afdichtingen, aandrijvingen, motoren, koelsystemen en
+elektrische verbindingen vind je buiten de autotechniek terug.
 
-Field service voegt een extra dimensie toe: je werkt niet altijd in een
-volledig uitgeruste werkplaats. Je moet vooraf de juiste onderdelen en
-meetmiddelen inschatten, rekening houden met de omgeving van de klant en
-duidelijk uitleggen wat een voertuig wel of niet veilig kan. Een tijdelijke
-oplossing mag nooit ten koste gaan van verkeersveiligheid of betrouwbaarheid.
+De diagnose verschilt per machine, maar de manier van denken blijft
+herkenbaar. Je verzamelt informatie, voert metingen uit, sluit mogelijke
+oorzaken uit en bepaalt welke reparatie nodig is. Jouw ervaring met sensoren
+en elektronische voertuigsystemen helpt je bovendien om industriële
+besturingen beter te leren begrijpen.
 
-Ook onderhoudsplanning sluit goed aan op deze achtergrond. Door slijtage,
-storingscodes en onderhoudshistorie samen te bekijken, kun je inschatten welk
-werk direct nodig is en wat tijdens een volgend gepland bezoek kan gebeuren.
-Dat voorkomt onnodige uitval en helpt een klant om onderdelen en inzet van het
-voertuig beter te plannen.
+Een PLC-besturing is geen voertuigcomputer en een industriële elektromotor is
+geen automotor. Toch vormen jouw technische basis, praktische vaardigheden en
+gevoel voor samenwerkende systemen een waardevol vertrekpunt. Met
+producttrainingen en praktijkervaring kun je deze kennis verder uitbreiden.
 
-### Welke functies en technische omgevingen passen hierbij?
+### In welke machinebouw- en field service sectoren kun je met Autotechniek werken?
 
-Met autotechniek kun je onder meer werken als servicemonteur,
-diagnosetechnicus of fieldservicemonteur voor voertuigen en mobiel materieel.
-Je vindt dit werk bij dealerorganisaties, wagenparkbeheerders, leveranciers
-van speciaalvoertuigen, verhuurbedrijven en fabrikanten van voertuigsystemen.
-Ook technische ondersteuning, garantieonderzoek of producttraining kunnen
-aansluiten wanneer je ervaring hebt met diagnose en klantcontact.
+De opleiding Autotechniek kan aansluiten op mechanische en elektromechanische
+functies binnen onder meer de machinebouw, procesindustrie,
+voedingsmiddelenindustrie, maritieme sector en industriële luchtbehandeling.
 
-Let op het verschil tussen autotechniek en bedrijfsautotechniek. Bij zware
-voertuigen spelen andere belastingen, pneumatiek, hydrauliek en opbouwsystemen
-een grotere rol. Voor mobiele werktuigen zijn juist terreinomstandigheden,
-machinebesturing en hydraulische functies belangrijk. De basis kan overlappen,
-maar de productkennis is niet zonder meer uitwisselbaar.
+Een concreet voorbeeld is het onderhouden en reviseren van separatoren en
+decanters. Daarbij demonteer je machines, controleer je onderdelen op slijtage,
+voer je metingen uit en bouw je de installatie opnieuw op. Dat vraagt dezelfde
+praktische nauwkeurigheid en mechanische denkwijze die je tijdens de opleiding
+Autotechniek ontwikkelt.
 
-### Welke aanvullende kennis maakt je sterker in het veld?
+Ook bij verpakkingsmachines, compressoren, pompen, aandrijfsystemen en mobiele
+machines kan jouw achtergrond van pas komen. Welke overstap mogelijk is, hangt
+af van jouw ervaring, interesses en bereidheid om nieuwe technieken te leren.
+Je hoeft dus niet iedere technologie al te beheersen voordat je kunt beginnen.
 
-Voor elektrische voertuigen kan aantoonbare kennis van hoogvoltsystemen en de
-bijbehorende veiligheidsprocedures nodig zijn. Bij moderne voertuigen zijn
-CAN-communicatie, software-updates en het lezen van live data steeds
-belangrijker. Training van een fabrikant helpt je vervolgens om merkspecifieke
-testprocedures en componenten goed te begrijpen.
+### Hoe vind je een field service vacature die bij jouw opleiding Autotechniek past?
 
-Vergelijk vacatures daarom op het type voertuig, de aandrijftechniek en de
-mate van zelfstandig klantbezoek. Zo zie je of jouw autotechnische basis direct
-past of dat een specialisatie in diagnose, elektrische aandrijving of mobiel
-materieel de juiste volgende stap is.
+Kijk niet alleen naar vacatures waarin Autotechniek letterlijk wordt genoemd.
+Let vooral op de werkzaamheden en technieken in de functie. Vacatures met
+mechanisch onderhoud, storingsdiagnose, revisie, montage, testen en
+inbedrijfstelling kunnen goed aansluiten op jouw opleiding.
 
-Feitencheck: brede onderwijsinhoud autotechniek; geen instelling-specifieke
-curriculumclaim.  
-Interne linkdoelen: bedrijfsautotechniek; mobiele werktuigentechniek;
-elektronica; servicemonteur; voertuigvacatures.
+Vraag jezelf af waar jij energie van krijgt. Werk je graag aan bewegende
+onderdelen? Vind je het interessant om mechanische en elektrische storingen te
+combineren? Of spreekt het je aan om zelfstandig naar klanten te reizen en daar
+technische problemen op te lossen?
+
+The Field Service Company biedt field service vacatures waarbij de opleiding
+of studierichting Autotechniek een passende achtergrond kan zijn. Zo ontdek je
+waar jouw kennis van voertuigen, techniek en diagnose kan uitgroeien tot een
+afwisselende loopbaan in de industriële machinebouw.
+
+Feitencheck: brede onderwijsinhoud Autotechniek en actuele TFSC-vacature voor
+service aan separatoren en decanters; geen instelling-specifieke curriculumclaim.
+Interne linkdoelen: Bedrijfsautotechniek; Mobiele Werktuigentechniek;
+Mechatronica; Werktuigbouwkunde; separatoren- en decantervacatures.
 
 ## Bedrijfsautotechniek
 
 Slug: `bedrijfsautotechniek`
 
-### Wat leer je bij bedrijfsautotechniek?
+### Welke techniek leer je binnen de opleiding Bedrijfsautotechniek?
 
 Bedrijfsautotechniek richt zich op zware voertuigen en de systemen die nodig
 zijn om ze betrouwbaar inzetbaar te houden. Je kunt leren werken aan
@@ -96,7 +100,7 @@ herkennen, oorzaken uitsluiten en beoordelen of een voertuig veilig terug de
 weg op kan. Omdat stilstand bij transport direct gevolgen heeft voor planning
 en kosten, zijn nauwkeurigheid en tempo allebei belangrijk.
 
-### Waarom is deze richting relevant voor field service?
+### Waarom sluit de studierichting Bedrijfsautotechniek aan op field service voor zwaar materieel?
 
 Zware voertuigen kunnen niet bij iedere storing eenvoudig naar een werkplaats.
 Daarom vindt service geregeld plaats op een bedrijfsterrein, bij een depot,
@@ -117,7 +121,7 @@ onderdeel uit een bepaalde serie. Door werkorders en diagnosegegevens te
 vergelijken, lever je informatie waarmee een organisatie herhaling kan
 voorkomen en onderhoud slimmer kan organiseren.
 
-### Welke fieldservicefuncties sluiten aan?
+### Welke field service functies passen bij vrachtwagens, voertuigopbouwen en mobiele machines?
 
 Passende functies zijn onder meer bedrijfswagenmonteur buitendienst,
 diagnosetechnicus, servicemonteur voor trailers of opbouwen en field service
@@ -132,7 +136,7 @@ temperatuurregeling of digitaal fleetmanagementsysteem. Controleer daarom in
 een vacature altijd welke voertuigtypen en opbouwen centraal staan en hoeveel
 ervaring de werkgever met die systemen verwacht.
 
-### Hoe kun je je binnen bedrijfsautotechniek specialiseren?
+### Hoe vind je een field service vacature die bij jouw opleiding Bedrijfsautotechniek past?
 
 Je kunt je verdiepen in diagnose, voertuignetwerken, elektrische of
 alternatieve aandrijving, pneumatiek, hydrauliek of een specifieke opbouw.
@@ -155,7 +159,7 @@ diagnosetechniek; buitendienstvacatures.
 
 Slug: `chemische-technologie`
 
-### Wat leer je binnen chemische technologie?
+### Wat leer je tijdens de opleiding Chemische Technologie over industriële processen?
 
 Chemische technologie gaat over het beheersen en verbeteren van processen
 waarin grondstoffen worden omgezet in bruikbare producten. Je kunt leren over
@@ -170,7 +174,7 @@ filter of leidingstelsel, en hoe beïnvloeden temperatuur, druk en samenstelling
 het resultaat? De concrete vakken verschillen per opleiding, maar het
 systematisch verbinden van proceskennis en meetdata staat vaak centraal.
 
-### Hoe gebruik je deze kennis in field service?
+### Hoe gebruik je de studierichting Chemische Technologie bij field service aan procesinstallaties?
 
 Bij service in de procesindustrie is een apparaat nooit volledig los te zien
 van het proces waarin het draait. Een afwijkende meting kan ontstaan door een
@@ -191,9 +195,9 @@ acceptatiecriteria en traceerbare rapportage. Vooral in gereguleerde processen
 kan de manier waarop je een handeling documenteert net zo belangrijk zijn als
 de technische ingreep zelf.
 
-### Welke functies en sectoren kunnen aansluiten?
+### Welke servicefuncties passen bij chemie, food, farmacie en waterbehandeling?
 
-Je kunt terechtkomen als service engineer, commissioning engineer,
+Binnen field service kun je terechtkomen als service engineer, commissioning engineer,
 processpecialist of technisch productspecialist. Relevante omgevingen zijn
 chemie, farmacie, voedingsmiddelen, waterbehandeling, energie en leveranciers
 van procesapparatuur of meetinstrumenten. Sommige rollen zijn vooral praktisch
@@ -210,7 +214,7 @@ Je kunt ook bijdragen aan de uitleg richting de klant. Door meetresultaten te
 vertalen naar hun effect op kwaliteit, opbrengst of verbruik wordt duidelijk
 waarom een aanpassing nodig is en welke procesconditie bewaakt moet worden.
 
-### Waarin kun je je verder ontwikkelen?
+### Hoe ontwikkel je je met de opleiding Chemische Technologie richting commissioning en procesanalyse?
 
 Mogelijke specialisaties zijn procesanalyse, instrumentatie, watertechnologie,
 validatie, ATEX-omgevingen of commissioning van complete skids. Ook kennis van
@@ -218,7 +222,7 @@ PLC- en regelsystemen helpt wanneer meetwaarden en actuatoren onderdeel zijn
 van een geautomatiseerd proces. Fabrikanttraining leert je vervolgens hoe een
 specifiek instrument wordt onderhouden en gecontroleerd.
 
-Kies vacatures op basis van het proces én de apparatuur. Kijk of je vooral
+Kies field service vacatures op basis van het proces én de apparatuur. Kijk of je vooral
 metingen valideert, mechanische componenten onderhoudt, systemen in bedrijf
 stelt of klanten adviseert over procesprestaties. Daarmee vind je de rol waarin
 jouw chemisch-technologische kennis werkelijk toepasbaar is.
@@ -232,7 +236,7 @@ commissioning engineer; procesindustrievacatures.
 
 Slug: `civiele-techniek`
 
-### Wat leer je binnen civiele techniek?
+### Wat leer je tijdens de opleiding Civiele Techniek over infrastructuur en waterwerken?
 
 Civiele techniek richt zich op de gebouwde omgeving en infrastructuur. Je kunt
 leren over constructies, materialen, grond, water, wegen en het organiseren
@@ -245,11 +249,11 @@ theoretische analyse toe.
 De richting bestaat uit verschillende specialisaties. Waterbouw vraagt andere
 kennis dan constructies, ondergrondse infrastructuur of verkeerstechniek.
 Daarom is civiele techniek geen directe opleiding voor iedere
-fieldservicefunctie. De aansluiting ontstaat vooral waar technische systemen
+field service functie. De aansluiting ontstaat vooral waar technische systemen
 onderdeel zijn van infrastructuur of waar installatie, inspectie en onderhoud
 op projectlocaties samenkomen.
 
-### Waar raakt civiele techniek aan field service?
+### Waar raakt de studierichting Civiele Techniek aan field service?
 
 Bruggen, tunnels, sluizen, gemalen en waterwerken bevatten mechanische,
 elektrische en geautomatiseerde installaties. Ook monitoringssystemen,
@@ -271,7 +275,7 @@ te bepalen welke ingreep urgent is, welke storing zich ontwikkelt en hoe een
 vervanging kan worden uitgevoerd zonder het complete object onnodig buiten
 gebruik te stellen.
 
-### Welke functies en projecten kunnen passen?
+### Welke field service projecten vind je bij bruggen, sluizen, gemalen en tunnels?
 
 Mogelijke rollen zijn inspecteur, servicetechnicus, commissioning engineer,
 site engineer of technisch projectcoördinator voor infrastructurele systemen.
@@ -286,7 +290,7 @@ civieltechnische opleiding biedt vooral waarde doordat je het complete object,
 de projectfasen en de randvoorwaarden begrijpt. Dat maakt samenwerking met
 specialistische monteurs en engineers effectiever.
 
-### Hoe maak je jouw profiel geschikt voor service op locatie?
+### Hoe vind je een technische servicefunctie die bij jouw opleiding Civiele Techniek past?
 
 Verdiep je in het technische systeem waaraan je wilt werken. Voor gemalen kan
 dat pomptechniek en besturing zijn; voor tunnels gaat het bijvoorbeeld om
@@ -313,7 +317,7 @@ commissioning; infrastructuurvacatures.
 
 Slug: `elektronica`
 
-### Wat leer je tijdens een opleiding elektronica?
+### Welke kennis bouw je op tijdens de opleiding Elektronica?
 
 Elektronica draait om het ontwerpen, meten en begrijpen van schakelingen die
 signalen verwerken of apparatuur aansturen. Je kunt leren werken met analoge
@@ -329,7 +333,7 @@ Solderen en printplaten beoordelen kunnen onderdeel zijn van de praktijk, maar
 moderne elektronicaservice bestaat ook uit modulegerichte diagnose,
 firmwarecontrole en het analyseren van communicatie tussen onderdelen.
 
-### Hoe wordt elektronicakennis gebruikt in field service?
+### Hoe helpt de studierichting Elektronica bij storingsdiagnose in field service?
 
 Veel machines en meetinstrumenten vertrouwen op elektronische besturing,
 sensoren en vermogenselektronica. Wanneer een systeem uitvalt, moet je bepalen
@@ -354,7 +358,7 @@ Bij oudere apparatuur speelt beschikbaarheid van onderdelen mee. Dan moet je
 kunnen beoordelen of een vervangende module elektrisch en functioneel
 compatibel is en welke test nodig is voordat de klant ermee verder kan.
 
-### Welke functies en apparatuur sluiten aan?
+### Aan welke hightechapparatuur en meetsystemen kun je met Elektronica werken?
 
 Elektronica past bij functies als field service engineer, servicetechnicus,
 test engineer en technisch supportspecialist. Je kunt werken aan medische
@@ -369,7 +373,7 @@ installaties. Elektronica zoomt sterker in op schakelingen, componenten en
 signalen. Bekijk daarom welke spanningsniveaus, apparatuur en meetmethoden in
 een vacature worden genoemd.
 
-### Welke verdieping vergroot je mogelijkheden?
+### Hoe vind je een field service vacature die bij jouw opleiding Elektronica past?
 
 Embedded systems, industriële communicatie en digitale signaalverwerking zijn
 logische verdiepingen. Voor service aan specifieke apparatuur zijn
@@ -391,7 +395,7 @@ field service engineer; hightechvacatures.
 
 Slug: `elektrotechniek`
 
-### Wat leer je binnen elektrotechniek?
+### Wat leer je tijdens de opleiding Elektrotechniek over energie, motoren en besturingen?
 
 Elektrotechniek gaat over het opwekken, verdelen, schakelen, meten en
 gebruiken van elektrische energie en signalen. Afhankelijk van de opleiding
@@ -407,7 +411,7 @@ netberekeningen uitgebreider aan bod. In beide gevallen is systematisch werken
 belangrijk: je volgt het schema, bepaalt waar het verwachte signaal ontbreekt
 en onderbouwt de reparatie met metingen.
 
-### Waarom is elektrotechniek belangrijk in field service?
+### Waarom biedt de studierichting Elektrotechniek zoveel mogelijkheden in field service?
 
 Vrijwel iedere moderne machine of installatie heeft een elektrische
 energievoorziening en besturing. Op locatie kun je te maken krijgen met een
@@ -431,7 +435,7 @@ moment van meten nog werkt.
 Daarmee worden opeenvolgende servicebezoeken ook inhoudelijk met elkaar
 vergelijkbaar.
 
-### Welke functies en systemen sluiten aan?
+### Welke field service functies vind je bij energiesystemen, machinebouw en maritieme installaties?
 
 Elektrotechniek past bij servicemonteur, field service engineer,
 commissioning engineer en specialist in elektrische aandrijvingen. Je kunt
@@ -447,7 +451,7 @@ verschilt. Bij geautomatiseerde machines moet je vaak samenwerken met een
 PLC- of softwarespecialist om elektrische en logische oorzaken uit elkaar te
 houden.
 
-### Welke verdieping helpt je verder?
+### Hoe ontwikkel je jouw opleiding Elektrotechniek richting commissioning en storingsanalyse?
 
 Je kunt je specialiseren in industriële automatisering, aandrijftechniek,
 energievoorziening, meet- en regeltechniek of inspectie. Bevoegdheden en
@@ -468,7 +472,7 @@ energietechniek; commissioning engineer; elektrotechnische vacatures.
 
 Slug: `embedded-systems`
 
-### Wat leer je bij embedded systems?
+### Wat leer je tijdens de opleiding Embedded Systems over hardware en software?
 
 Embedded systems combineert elektronica en software in apparaten die een
 specifieke taak uitvoeren. Je kunt leren programmeren voor microcontrollers,
@@ -484,7 +488,7 @@ tussen hardwareontwerp en softwareontwikkeling. Kenmerkend is dat je beide
 kanten moet kunnen lezen: een fout in meetdata kan ontstaan door code, maar
 ook door voeding, bekabeling, timing of een defecte sensor.
 
-### Hoe helpt embedded kennis bij field service?
+### Hoe helpt de studierichting Embedded Systems bij complexe field service storingen?
 
 Steeds meer machines, instrumenten en voertuigen bevatten slimme modules met
 eigen firmware. Tijdens service moet je kunnen bepalen of een probleem lokaal
@@ -505,7 +509,7 @@ back-up; daarna test je de kritieke functies en houd je een beheerste
 terugvalmogelijkheid. Zo voorkom je dat een ogenschijnlijk kleine wijziging een
 apparaat onbruikbaar maakt.
 
-### Welke functies en producten passen hierbij?
+### Bij welke slimme machines en apparaten komt kennis van Embedded Systems van pas?
 
 Embedded systems sluit aan op rollen als field service engineer,
 support engineer, test engineer en commissioning engineer voor intelligente
@@ -519,7 +523,7 @@ is niet in iedere servicerol nodig. Soms draait het vooral om configureren,
 firmware laden en communicatie analyseren. Lees daarom of de vacature vraagt
 om ontwikkeling, diagnose, integratie of productondersteuning.
 
-### Waarin kun je je verder specialiseren?
+### Hoe vind je een field service functie die bij jouw opleiding Embedded Systems past?
 
 Relevante verdiepingen zijn realtime software, industriële protocollen,
 cybersecurity, draadloze communicatie en hardware-in-the-loop testen. Ook
@@ -541,7 +545,7 @@ software engineer; hightech service.
 
 Slug: `energietechniek`
 
-### Wat leer je binnen energietechniek?
+### Wat leer je tijdens de opleiding Energietechniek over opwekking, opslag en distributie?
 
 Energietechniek behandelt systemen die energie opwekken, omzetten, opslaan,
 verdelen of efficiënt gebruiken. Afhankelijk van de opleiding werk je met
@@ -557,7 +561,7 @@ energietechniek kijkt eerder naar warmteoverdracht, turbines of
 koelprocessen. Voor field service is vooral belangrijk welke installaties en
 spannings- of temperatuurbereiken je daadwerkelijk hebt leren kennen.
 
-### Hoe sluit energietechniek aan op field service?
+### Hoe sluit de studierichting Energietechniek aan op field service?
 
 Energiesystemen moeten niet alleen efficiënt zijn, maar ook beschikbaar en
 veilig. Serviceprofessionals voeren inspecties uit, analyseren afwijkende
@@ -578,7 +582,7 @@ tussen normale variatie door belasting en een patroon dat werkelijk op
 degradatie wijst. Dat maakt een onderhoudsadvies technisch én economisch beter
 onderbouwd.
 
-### Welke functies en sectoren kunnen passen?
+### Welke field service functies vind je bij noodstroom, renewable energy en energiesystemen?
 
 Mogelijke rollen zijn service engineer, commissioning engineer,
 onderhoudsspecialist en technisch adviseur voor energie-installaties. Je kunt
@@ -587,7 +591,7 @@ leveranciers van opslag- en conversiesystemen. Ook industriële bedrijven
 hebben specialisten nodig voor noodstroom, elektrische aandrijvingen en
 energiebeheer.
 
-Fieldservicewerk kan bovendien sterk verschillen per locatie. Een installatie
+Werk in field service kan bovendien sterk verschillen per locatie. Een installatie
 op een fabrieksterrein, windpark of afgelegen energiehub stelt andere eisen aan
 toegang, reserveonderdelen en voorbereiding. Reisprofiel en storingsdienst zijn
 daarom relevante onderdelen van de functie, naast het technische specialisme.
@@ -598,7 +602,7 @@ energieopslag gaat. Een achtergrond in netberekeningen maakt je niet
 automatisch specialist in turbines, en ervaring met warmte-installaties is
 niet hetzelfde als bevoegdheid voor elektrische vermogenssystemen.
 
-### Welke aanvullende kennis is waardevol?
+### Hoe maak je met de opleiding Energietechniek het verschil tijdens commissioning en onderhoud?
 
 Verdieping in elektrotechniek, vermogenselektronica, regeltechniek en
 monitoring vergroot je mogelijkheden. Bij batterijen en hoogspanning zijn
@@ -624,7 +628,7 @@ vermogenselektronica; commissioning; energievacatures.
 
 Slug: `ict-technische-informatica`
 
-### Wat leer je binnen ICT en technische informatica?
+### Wat leer je tijdens de opleiding ICT & Technische Informatica over verbonden systemen?
 
 ICT & Technische Informatica is bij The Field Service Company een brede
 studierichting voor opleidingen waarin software, computersystemen, netwerken
@@ -640,7 +644,7 @@ netwerken, cybersecurity, industriële communicatie of embedded software.
 Daarom is deze term bewust breed als filter, maar moet je bij iedere functie
 controleren welke kennis en projecten werkelijk relevant zijn.
 
-### Hoe wordt ICT-kennis toegepast in field service?
+### Hoe gebruik je de studierichting ICT & Technische Informatica in moderne field service?
 
 Moderne apparatuur is verbonden met lokale netwerken, cloudplatforms en
 remote-supportomgevingen. Een servicemedewerker kan configuraties controleren,
@@ -663,7 +667,7 @@ organisatie controleert dat het probleem niet op andere systemen terugkeert.
 
 Heldere klantcommunicatie hoort bij iedere stap van die technische aanpak.
 
-### Welke functies en systemen passen hierbij?
+### Welke servicefuncties passen bij industriële netwerken, software en remote support?
 
 Deze achtergrond kan aansluiten op support engineer, softwaregerichte field
 service engineer, implementation engineer en specialist in remote diagnostics.
@@ -678,7 +682,7 @@ aanvullende automatiserings- of elektrotechnische kennis nodig zijn. Voor
 server- en netwerkbeheer zijn juist protocollen, virtualisatie en security
 belangrijker.
 
-### Hoe bouw je een fieldserviceprofiel met ICT op?
+### Hoe bouw je met de opleiding ICT & Technische Informatica een sterk field service profiel op?
 
 Kies projecten waarin software een tastbaar systeem aanstuurt of ondersteunt.
 Verdiep je in netwerkanalyse, API's, databases, industriële protocollen of
@@ -700,7 +704,7 @@ engineer; remote diagnostics; digitale servicevacatures.
 
 Slug: `industriele-automatisering`
 
-### Wat leer je binnen industriële automatisering?
+### Wat leer je tijdens de opleiding Industriële Automatisering over PLC's en productielijnen?
 
 Industriële automatisering draait om het besturen, bewaken en optimaliseren van
 machines en processen. Je kunt leren werken met PLC's, HMI's, SCADA,
@@ -715,7 +719,7 @@ functies en beoordeel je veiligheid en prestaties van het complete systeem.
 De gebruikte merken verschillen, maar logisch denken en gecontroleerd testen
 blijven overdraagbare vaardigheden.
 
-### Waarom past industriële automatisering bij field service?
+### Waarom past de studierichting Industriële Automatisering zo goed bij field service?
 
 Een geautomatiseerde installatie kan stilvallen door hardware, software,
 communicatie of procescondities. Op locatie moet je snel vaststellen welk deel
@@ -744,7 +748,7 @@ overschreven.
 
 Zo blijft de installatie ook na overdracht beheersbaar.
 
-### Welke functies en sectoren sluiten aan?
+### Welke field service functies vind je in machinebouw, food en procesindustrie?
 
 Mogelijke functies zijn automation engineer, PLC engineer, commissioning
 engineer en field service engineer voor geautomatiseerde systemen. Je kunt
@@ -757,7 +761,7 @@ Controleer welke platforms en processen een werkgever gebruikt. Ervaring met
 is breder inzetbaar. Voor functionele veiligheid, motion control of
 procesautomatisering kan een aparte specialisatie nodig zijn.
 
-### Hoe ontwikkel je je tot sterke servicespecialist?
+### Hoe ontwikkel je je met de opleiding Industriële Automatisering tot servicespecialist?
 
 Combineer programmeerkennis met elektrisch meten en begrip van de machine of
 het proces. Leer back-ups, wijzigingen en testresultaten zorgvuldig beheren.
@@ -778,7 +782,7 @@ commissioningvacatures.
 
 Slug: `installatietechniek`
 
-### Wat leer je binnen installatietechniek?
+### Wat leer je tijdens de opleiding Installatietechniek over gebouw- en klimaatsystemen?
 
 Installatietechniek gaat over het aanleggen, inregelen, onderhouden en
 verbeteren van technische voorzieningen in gebouwen en industriële omgevingen.
@@ -794,7 +798,7 @@ selecteert componenten en beoordeelt energiegebruik en regelgedrag. In beide
 gevallen is de samenhang belangrijk: een pomp, klep, sensor en regeling moeten
 samen de gewenste temperatuur, druk of stroming leveren.
 
-### Hoe sluit installatietechniek aan op field service?
+### Hoe sluit de studierichting Installatietechniek aan op field service bij klanten?
 
 Gebouw- en procesinstallaties moeten jarenlang betrouwbaar blijven werken.
 Tijdens service controleer je slijtage, vervuiling, lekkage, druk, temperatuur
@@ -810,7 +814,7 @@ en leg je meetwaarden en instellingen vast. Daardoor kan een volgende
 servicemedewerker veranderingen herkennen en wordt preventief onderhoud beter
 planbaar.
 
-### Welke functies en omgevingen passen hierbij?
+### Welke servicefuncties vind je bij utiliteit, energie en industriële installaties?
 
 Passende functies zijn servicemonteur installatietechniek, inbedrijfsteller,
 maintenance engineer en field service engineer voor gebouwgebonden of
@@ -832,7 +836,7 @@ media, temperaturen en vermogens in een vacature voorkomen. Voor bepaalde
 handelingen kunnen specifieke certificaten, aanwijzingen of wettelijke eisen
 gelden.
 
-### Hoe kun je je verder specialiseren?
+### Hoe vind je een field service vacature die bij jouw opleiding Installatietechniek past?
 
 Je kunt kiezen voor koude- en klimaattechniek, meet- en regeltechniek,
 waterzijdig inregelen, duurzame warmte of industriële utilities. Kennis van
@@ -857,7 +861,7 @@ meet- en regeltechniek; servicemonteur; installatievacatures.
 
 Slug: `koude-en-klimaattechniek`
 
-### Wat leer je bij koude- en klimaattechniek?
+### Wat leer je tijdens de opleiding Koude- en Klimaattechniek over complete koelsystemen?
 
 Koude- en klimaattechniek richt zich op het koelen, verwarmen, ventileren en
 conditioneren van ruimtes, producten en processen. Je kunt leren hoe een
@@ -873,7 +877,7 @@ regeling kunnen grote gevolgen hebben voor prestaties. Voor werkzaamheden met
 koudemiddelen gelden bovendien specifieke veiligheids- en
 vakbekwaamheidseisen.
 
-### Waarom is deze richting sterk verbonden met field service?
+### Waarom is de studierichting Koude- en Klimaattechniek sterk verbonden met field service?
 
 Koel- en klimaatsystemen staan verspreid bij klanten en moeten vaak continu
 beschikbaar zijn. Denk aan voedselopslag, productieprocessen, winkels,
@@ -900,7 +904,7 @@ handelingen en gebruikte hoeveelheden zorgvuldig vast en voorkomt onnodig
 verlies van koudemiddel. Welke formele eisen gelden, hangt af van installatie,
 koudemiddel en de taak die je uitvoert.
 
-### Welke functies en sectoren sluiten aan?
+### Welke field service functies vind je in koeltechniek, scheepvaart en procesinstallaties?
 
 Mogelijke functies zijn koelmonteur, servicemonteur klimaattechniek,
 commissioning engineer en field service engineer voor industriële koeling of
@@ -915,7 +919,7 @@ temperatuurregeling in een productieproces. Lees daarom verder dan de algemene
 term HVAC en controleer koudemiddel, vermogen, toepassing en bereik van de
 servicedienst.
 
-### Welke ontwikkeling is mogelijk?
+### Hoe groei je met de opleiding Koude- en Klimaattechniek door als servicespecialist?
 
 Je kunt je verdiepen in natuurlijke koudemiddelen, warmtepompen,
 energiemonitoring, lekdetectie of complexe regeltechniek. De juiste
@@ -937,7 +941,7 @@ koelmonteur; HVAC-vacatures.
 
 Slug: `luchtvaarttechniek`
 
-### Wat leer je binnen luchtvaarttechniek?
+### Wat leer je tijdens de opleiding Luchtvaarttechniek over betrouwbare technische systemen?
 
 Luchtvaarttechniek behandelt het ontwerp, de werking en het onderhoud van
 vliegtuigen en luchtvaartsystemen. Je kunt leren over aerodynamica,
@@ -954,7 +958,7 @@ betrouwbaarheid. Een diploma alleen geeft niet automatisch iedere
 luchtvaartbevoegdheid; aanvullende erkenning, ervaring en typegerichte training
 kunnen vereist zijn.
 
-### Hoe sluit luchtvaarttechniek aan op field service?
+### Hoe sluit de studierichting Luchtvaarttechniek aan op industriële field service?
 
 Luchtvaartonderhoud vindt plaats waar het toestel of systeem beschikbaar is:
 in een hangar, op een platform of bij gespecialiseerde apparatuur op een
@@ -980,7 +984,7 @@ grondvoeding, simulatoren en onderhoudstools. Luchtvaartkennis helpt je de
 operationele context en vereiste discipline begrijpen, ook wanneer je niet
 rechtstreeks aan een luchtwaardig onderdeel werkt.
 
-### Welke functies en technische omgevingen passen?
+### Bij welke hightechmachines en kritische installaties komt Luchtvaarttechniek van pas?
 
 Afhankelijk van opleiding en bevoegdheden kun je werken als
 onderhoudstechnicus, avionicaspecialist, field service engineer,
@@ -995,7 +999,7 @@ daarom het systeem, het type toestel en de vereiste erkenningen in een
 vacature. Ook taalvaardigheid is relevant, omdat technische documentatie en
 internationale samenwerking vaak Engelstalig zijn.
 
-### Hoe ontwikkel je een betrouwbaar serviceprofiel?
+### Hoe vertaal je jouw opleiding Luchtvaarttechniek naar een field service vacature?
 
 Verdiep je in één systeemgebied en bouw aantoonbare ervaring op volgens de
 geldende procedures. Training in human factors, veiligheid, kwaliteitsborging
@@ -1016,7 +1020,7 @@ test engineer; luchtvaartvacatures.
 
 Slug: `maritieme-techniek`
 
-### Wat leer je binnen maritieme techniek?
+### Wat leer je tijdens de opleiding Maritieme Techniek over installaties aan boord?
 
 Maritieme techniek richt zich op schepen en de systemen die hun voortstuwing,
 energievoorziening, besturing en bedrijfsvoering mogelijk maken. Je kunt leren
@@ -1030,7 +1034,7 @@ wal. Voor field service is vooral relevant dat je begrijpt hoe installaties in
 een beperkte ruimte samenwerken en hoe sterk bereikbaarheid, corrosie,
 trillingen en continu bedrijf het onderhoud beïnvloeden.
 
-### Hoe wordt maritieme kennis gebruikt in field service?
+### Hoe gebruik je de studierichting Maritieme Techniek in internationale field service?
 
 Schepen en offshore-installaties bevinden zich niet altijd dicht bij een vaste
 werkplaats. Servicemedewerkers reizen naar haven, werf of schip om storingen te
@@ -1056,7 +1060,7 @@ zijn. Je controleert dan samen met bemanning en andere leveranciers of het
 systeem in echte bedrijfsvoering stabiel blijft en of instellingen correct
 zijn overgedragen.
 
-### Welke functies en systemen sluiten aan?
+### Welke servicefuncties vind je bij schepen, offshore-installaties en haventechniek?
 
 Maritieme techniek kan passen bij service engineer, commissioning engineer,
 maritiem servicemonteur en specialist in voortstuwing of hulpsystemen. Je kunt
@@ -1070,14 +1074,14 @@ brug. Ook het reisprofiel is belangrijk: sommige functies spelen zich vooral
 in Nederlandse havens af, andere vragen internationale inzet en verblijf aan
 boord.
 
-### Welke verdieping vergroot je inzetbaarheid?
+### Hoe ontwikkel je jouw opleiding Maritieme Techniek richting commissioning en onderhoud?
 
 Je kunt je specialiseren in rotating equipment, elektrische voortstuwing,
 hydrauliek, maritieme automatisering of emissiereductie. Fabrikanttraining
 maakt je vertrouwd met specifieke systemen en foutcodes. Veiligheidstraining en
 toegangseisen hangen af van schip, haven en offshoreomgeving.
 
-Vergelijk bij iedere stap het systeem, de vloot en de locatie van het werk. Zo
+Vergelijk bij iedere field service stap het systeem, de vloot en de locatie van het werk. Zo
 wordt duidelijk of je vooral onderhoud uitvoert, complexe storingen analyseert,
 nieuwe installaties in bedrijf stelt of als productspecialist bemanning en
 servicepartners ondersteunt.
@@ -1091,7 +1095,7 @@ commissioning engineer; maritieme vacatures.
 
 Slug: `mechatronica`
 
-### Wat leer je tijdens een opleiding mechatronica?
+### Wat leer je tijdens de opleiding Mechatronica over complete machines?
 
 Mechatronica combineert werktuigbouwkunde, elektrotechniek en besturing in één
 technisch systeem. Je kunt leren hoe mechanische constructies, motoren,
@@ -1106,7 +1110,7 @@ Op engineeringniveau ontwerp je functies, bereken je onderdelen en werk je
 vaker aan systeemintegratie. Mechatronica maakt je breed, maar productkennis en
 verdieping blijven nodig om aan complexe apparatuur zelfstandig te werken.
 
-### Waarom past mechatronica goed bij field service?
+### Waarom is de studierichting Mechatronica een sterke basis voor field service?
 
 Veel storingen bevinden zich precies op de grens tussen disciplines. Een
 positioneerfout kan ontstaan door mechanische speling, een sensor, bekabeling,
@@ -1132,7 +1136,7 @@ welke component moeilijk bereikbaar is, welke melding ontbreekt of welke
 afstelling vaak verloopt, draag je bij aan een machine die later beter te
 onderhouden is.
 
-### Welke functies en machines sluiten aan?
+### Welke field service functies vind je bij verpakkingsmachines, robots en productielijnen?
 
 Mechatronica past bij servicemonteur, field service engineer,
 commissioning engineer en maintenance engineer voor geautomatiseerde
@@ -1147,7 +1151,7 @@ servotechniek of softwarekennis. Een brede opleiding helpt je samenwerken,
 maar je ervaring moet aansluiten op de complexiteit en technologie van de
 machine.
 
-### Hoe bouw je verdieping op vanuit mechatronica?
+### Hoe kies je een specialisatie die past bij jouw opleiding Mechatronica?
 
 Kies een specialisme dat past bij je interesse, zoals motion control,
 robotica, industriële automatisering of precisietechniek. Leer wijzigingen en
@@ -1169,7 +1173,7 @@ automatisering; robotica; machinebouwvacatures.
 
 Slug: `mobiele-werktuigentechniek`
 
-### Wat leer je binnen mobiele werktuigentechniek?
+### Wat leer je tijdens de opleiding Mobiele Werktuigentechniek over krachtige machines?
 
 Mobiele werktuigentechniek richt zich op machines die buiten een vaste
 productieopstelling werken. Denk aan bouw-, landbouw-, grondverzet- en
@@ -1185,7 +1189,7 @@ uitgebreider aan bod. Kenmerkend is dat machines onder zware en wisselende
 omstandigheden functioneren, waardoor vervuiling, trillingen, temperatuur en
 bediening grote invloed op slijtage en storingen hebben.
 
-### Waarom is dit een echte fieldservicerichting?
+### Waarom leidt de studierichting Mobiele Werktuigentechniek bijna vanzelf naar field service?
 
 Grote mobiele machines kunnen bij uitval vaak niet eenvoudig naar een
 werkplaats. De servicemonteur gaat daarom naar bouwplaats, akker, depot of
@@ -1207,7 +1211,7 @@ bekabeling, een sensor of de besturingslogica. Je kijkt ook naar gebruik en
 omstandigheden: overbelasting, vuil of een verkeerde afstelling kunnen een
 technisch onderdeel onnodig verdacht maken.
 
-### Welke functies en machines passen hierbij?
+### Aan welke kranen, grondverzetmachines en hydraulische systemen kun je werken?
 
 Passende functies zijn servicemonteur mobiele werktuigen,
 diagnosetechnicus en field service engineer voor bouw-, landbouw- of
@@ -1228,7 +1232,7 @@ die praktijkwaarneming te combineren met telematica en metingen verkort je de
 diagnose en voorkom je dat de machine na een oppervlakkige test opnieuw
 uitvalt.
 
-### Welke verdieping helpt je doorgroeien?
+### Hoe vind je een field service vacature die bij jouw opleiding Mobiele Werktuigentechniek past?
 
 Hydraulische diagnose, CAN-communicatie, telematica en elektrische aandrijving
 zijn waardevolle specialisaties. Remote monitoring kan laten zien wanneer
@@ -1249,7 +1253,7 @@ servicemonteur; mobiele-machinesvacatures.
 
 Slug: `operationele-techniek`
 
-### Wat leer je binnen operationele techniek?
+### Wat leer je tijdens de opleiding Operationele Techniek over draaiende installaties?
 
 Operationele techniek richt zich op het bedienen, bewaken en onderhouden van
 installaties die continu of volgens een vast proces functioneren. Je kunt
@@ -1264,7 +1268,7 @@ afwijkingen rapporteren en werkzaamheden veilig voorbereiden. Je begrijpt niet
 alleen een los apparaat, maar vooral de functie ervan binnen de totale
 installatie.
 
-### Hoe sluit operationele techniek aan op field service?
+### Hoe sluit de studierichting Operationele Techniek aan op field service?
 
 Service aan proces- en energieapparatuur vindt plaats in een installatie die
 vaak niet zomaar kan worden stilgezet. Een serviceprofessional moet daarom
@@ -1289,9 +1293,9 @@ isolaties, werkvergunningen en overdrachtsmomenten met de verantwoordelijke
 operators. Na service wordt de installatie stapsgewijs opgebouwd, zodat een
 afwijking vroeg zichtbaar wordt en niet pas bij volle belasting.
 
-### Welke functies en omgevingen passen hierbij?
+### Welke servicefuncties vind je bij energiecentrales, compressoren en procesinstallaties?
 
-Operationele techniek kan aansluiten op operator-technicus,
+Binnen field service kan Operationele Techniek aansluiten op operator-technicus,
 onderhoudstechnicus, service engineer en commissioning engineer. Je kunt
 werken in energiecentrales, afvalverwerking, waterbehandeling, chemie,
 voedingsmiddelen of aan maritieme installaties. Ook leveranciers van pompen,
@@ -1303,7 +1307,7 @@ installatie verschilt van het reviseren van een turbine of programmeren van
 een besturing. Bekijk daarom of een vacature vooral procesinzicht, mechanisch
 onderhoud, elektrotechniek of commissioning vraagt.
 
-### Hoe kun je je verder specialiseren?
+### Hoe zet je jouw opleiding Operationele Techniek in bij onderhoud en commissioning?
 
 Mogelijke richtingen zijn rotating equipment, stoomtechniek,
 waterbehandeling, energie-efficiëntie en meet- en regeltechniek. Training in
@@ -1311,7 +1315,7 @@ veilig werk, werkvergunningen en specifieke installatieprocedures is vaak
 belangrijk. Met conditiebewaking en trendanalyse leer je bovendien vroege
 signalen van slijtage of vervuiling herkennen.
 
-Kies een rol op basis van de installatie, het continuïteitsrisico en jouw
+Kies een field service rol op basis van de installatie, het continuïteitsrisico en jouw
 plaats in het proces. Zo weet je of je vooral wilt bedienen en bewaken,
 onderhoud uitvoeren, complexe storingen analyseren of nieuwe systemen veilig
 in bedrijf brengen.
@@ -1327,7 +1331,7 @@ commissioning engineer; procesvacatures.
 
 Slug: `procestechniek`
 
-### Wat leer je binnen procestechniek?
+### Wat leer je tijdens de opleiding Procestechniek over productieprocessen?
 
 Procestechniek gaat over het beheersen van productieprocessen waarin
 grondstoffen via opeenvolgende stappen een product worden. Je kunt leren hoe
@@ -1343,7 +1347,7 @@ optimalisatie, ontwerp en complexere analyse. Voor field service is vooral het
 procesbegrip waardevol: je weet onder welke omstandigheden apparatuur moet
 presteren.
 
-### Hoe helpt procestechniek bij service op locatie?
+### Hoe helpt de studierichting Procestechniek bij field service aan procesapparatuur?
 
 Een storing in procesapparatuur is niet altijd een defect in het apparaat
 zelf. Cavitatie, vervuiling, verkeerde klepstanden of afwijkende grondstoffen
@@ -1368,7 +1372,7 @@ voorbereiding bepaalt welke inspecties, revisies en tests binnen dat venster
 haalbaar zijn. Daarmee verbindt procestechnische kennis de servicehandeling aan
 de continuïteit van de complete fabriek.
 
-### Welke functies en sectoren sluiten aan?
+### Welke servicefuncties vind je in food, chemie, waterbehandeling en energie?
 
 Procestechniek kan passen bij service engineer, commissioning engineer,
 onderhoudstechnicus en specialist in procesapparatuur. Relevante sectoren zijn
@@ -1382,7 +1386,7 @@ technologie gaat vaak dieper in op omzettingen, stoffen en procesontwerp. De
 gebieden overlappen, maar een vacature kan duidelijk één van beide accenten
 hebben.
 
-### Welke verdieping maakt je sterker?
+### Hoe vind je een field service vacature die bij jouw opleiding Procestechniek past?
 
 Instrumentatie, meet- en regeltechniek, rotating equipment en
 onderhoudsstrategie zijn logische specialisaties. Kennis van
@@ -1404,7 +1408,7 @@ procesautomatisering; service engineer; procesindustrievacatures.
 
 Slug: `robotica`
 
-### Wat leer je binnen robotica?
+### Wat leer je tijdens de opleiding Robotica over complete robotcellen?
 
 Robotica combineert mechanica, elektronica, besturing en software om machines
 gericht te laten bewegen en waarnemen. Je kunt leren werken met
@@ -1419,7 +1423,7 @@ kunstmatige intelligentie of industriële integratie. Voor field service is
 vooral relevant dat je een robot nooit los ziet van tooling, celbesturing en
 de machine eromheen.
 
-### Hoe sluit robotica aan op field service?
+### Hoe sluit de studierichting Robotica aan op field service bij productielijnen?
 
 Industriële robots werken in cellen met hekwerken, veiligheidssensoren,
 transport en productgereedschap. Een fout kan ontstaan in de robotcontroller,
@@ -1440,7 +1444,7 @@ nieuwe beweging, maar ook relevante beveiligingen en herstelprocedures. Een
 snellere cyclus is nooit een verbetering wanneer de risico's niet opnieuw zijn
 beoordeeld.
 
-### Welke functies en toepassingen passen hierbij?
+### Welke servicefuncties vind je bij industriële robots, cobots en vision-systemen?
 
 Mogelijke functies zijn robotprogrammeur, commissioning engineer,
 servicetechnicus en field service engineer voor robotcellen. Je kunt werken in
@@ -1459,7 +1463,7 @@ een back-up en bepaalt wie de machine lokaal veilig kan bedienen. Iedere
 wijziging wordt vastgelegd en na afloop onder gecontroleerde omstandigheden
 getest. Zo blijft ook ondersteuning op afstand herleidbaar.
 
-### Hoe bouw je een sterk roboticaspecialisme?
+### Hoe ontwikkel je jouw opleiding Robotica tot een sterk field service specialisme?
 
 Verdiep je in motion control, industriële netwerken, functionele veiligheid of
 vision, afhankelijk van de toepassing. Fabrikanttraining helpt bij specifieke
@@ -1480,7 +1484,7 @@ systems; commissioning engineer; roboticavacatures.
 
 Slug: `scheepsbouwkunde`
 
-### Wat leer je binnen scheepsbouwkunde?
+### Wat leer je tijdens de opleiding Scheepsbouwkunde over schepen en constructies?
 
 Scheepsbouwkunde richt zich op het ontwerpen, construeren en realiseren van
 schepen en drijvende constructies. Je kunt leren over rompvorm, stabiliteit,
@@ -1502,7 +1506,7 @@ relevant is voor sterkte, vermoeiing of waterdichtheid en wanneer een
 specialistische beoordeling nodig is. Een foto zonder locatie, maat en
 belasting zegt daarvoor vaak te weinig.
 
-### Waar raakt scheepsbouwkunde aan field service?
+### Waar raakt de studierichting Scheepsbouwkunde aan field service?
 
 Tijdens de levensduur van een schip worden onderdelen geïnspecteerd,
 gerepareerd en aangepast. Een servicevraag kan gevolgen hebben voor gewicht,
@@ -1525,7 +1529,7 @@ weergeven.
 
 Zo blijft de technische historie ook bij latere verbouwingen bruikbaar.
 
-### Welke functies en projecten kunnen aansluiten?
+### Welke serviceprojecten vind je bij werven, retrofits en maritieme leveranciers?
 
 Mogelijke rollen zijn field engineer, surveyor, commissioning engineer,
 project engineer en servicecoördinator bij werven en maritieme leveranciers.
@@ -1538,7 +1542,7 @@ aanvullende disciplinekennis nodig. Scheepsbouwkunde levert juist de context
 om te beoordelen hoe zo'n systeem fysiek in het schip wordt opgenomen en
 welke constructieve beperkingen gelden.
 
-### Hoe ontwikkel je je richting praktijk en service?
+### Hoe vertaal je jouw opleiding Scheepsbouwkunde naar werk op locatie?
 
 Ervaring met productie, inspectie en maatvoering helpt om ontwerpen
 uitvoerbaar te maken. Je kunt je verdiepen in constructies, corrosie,
@@ -1546,7 +1550,7 @@ composieten, retrofitengineering of classificatie-eisen. CAD- en
 3D-scantechnieken zijn waardevol wanneer bestaande schepen niet volledig
 overeenkomen met oude tekeningen.
 
-Vergelijk functies op scheepstype, projectfase en discipline. Zo zie je of jij
+Vergelijk field service functies op scheepstype, projectfase en discipline. Zo zie je of jij
 vooral wilt ontwerpen, inspecteren, wijzigingen voorbereiden of de uitvoering
 en inbedrijfstelling op locatie wilt begeleiden.
 
@@ -1559,7 +1563,7 @@ commissioning; scheepsbouwvacatures.
 
 Slug: `technische-bedrijfskunde`
 
-### Wat leer je binnen technische bedrijfskunde?
+### Wat leer je tijdens de opleiding Technische Bedrijfskunde over serviceorganisaties?
 
 Technische bedrijfskunde verbindt techniek met processen, organisatie en
 besluitvorming. Je kunt leren hoe productie, onderhoud, logistiek, kwaliteit
@@ -1580,7 +1584,7 @@ verbeteringen onderbouwen. Projectmanagement, operations, onderhoudsconcepten
 en verandermanagement kunnen onderdeel zijn van het programma. De precieze
 inhoud verschilt per onderwijsinstelling en gekozen specialisatie.
 
-### Hoe sluit technische bedrijfskunde aan op field service?
+### Hoe verbindt de studierichting Technische Bedrijfskunde techniek en field service?
 
 Een serviceorganisatie moet monteurs, onderdelen, kennis en klantafspraken op
 het juiste moment samenbrengen. Technische bedrijfskunde helpt om responstijd,
@@ -1600,7 +1604,7 @@ technisch-bedrijfskundige kennis kun je scenario's vergelijken en afspraken
 ontwerpen die uitvoerbaar zijn voor de serviceorganisatie én begrijpelijk voor
 de klant.
 
-### Welke functies passen bij deze studierichting?
+### Welke functies vind je in servicecoördinatie, maintenance en technisch management?
 
 Mogelijke rollen zijn servicecoördinator, maintenance engineer,
 procesverbeteraar, projectleider en service manager. Je kunt werken bij
@@ -1620,14 +1624,14 @@ documentatie en escalatieroutes klaarstaan. Door service al tijdens ontwerp en
 lancering mee te nemen, voorkom je dat onderhoudbaarheid pas na de eerste
 storingen aandacht krijgt.
 
-### Hoe bouw je geloofwaardigheid in een technische serviceomgeving?
+### Hoe maak je jouw opleiding Technische Bedrijfskunde waardevol voor een field service team?
 
 Leer de machines, klanten en werkorders achter de cijfers kennen. Loop mee met
 servicemedewerkers en controleer of een voorgestelde werkwijze praktisch
 uitvoerbaar is. Verdieping in onderhoudsstrategie, reliability, data-analyse
 of servicecontracten kan je helpen om gerichte verbeteringen te ontwerpen.
 
-Kies vacatures op basis van het beslisniveau en de technische context. Zo vind
+Kies field service vacatures op basis van het beslisniveau en de technische context. Zo vind
 je een rol waarin je techniek en organisatie werkelijk verbindt, in plaats van
 alleen algemene managementtaken uit te voeren.
 
@@ -1640,7 +1644,7 @@ manager; onderhoudsstrategie; technische managementvacatures.
 
 Slug: `technische-natuurkunde`
 
-### Wat leer je binnen technische natuurkunde?
+### Wat leer je tijdens de opleiding Technische Natuurkunde over meten en analyseren?
 
 Technische natuurkunde gebruikt natuurkundige modellen en experimenten om
 technische problemen te begrijpen en op te lossen. Je kunt werken met
@@ -1655,7 +1659,7 @@ theorie en experimentele discipline waardevol. Je kunt een onbekend
 foutverschijnsel ontleden zonder direct op één voor de hand liggende oorzaak te
 springen.
 
-### Hoe gebruik je natuurkundige kennis in field service?
+### Hoe gebruik je de studierichting Technische Natuurkunde in specialistische field service?
 
 Hightechapparatuur en meetinstrumenten zijn gevoelig voor temperatuur,
 trilling, vacuüm, licht, elektromagnetische velden of materiaaleigenschappen.
@@ -1675,7 +1679,7 @@ welke onzekerheid daarbij hoort. Je legt condities en resultaten zo vast dat
 een collega of ontwikkelteam de proef kan herhalen. Daarmee wordt een
 servicebezoek ook een bron van betrouwbare informatie voor productverbetering.
 
-### Welke functies en sectoren sluiten aan?
+### Welke servicefuncties vind je bij hightech-, meet- en vacuümapparatuur?
 
 Mogelijke functies zijn specialistisch field service engineer,
 application engineer, test engineer en systems engineer. Je kunt werken met
@@ -1694,7 +1698,7 @@ worden beïnvloed door mechanische trilling of temperatuurregeling. Je hoeft
 niet iedere reparatie zelf uit te voeren, maar kunt wel een test ontwerpen die
 de juiste specialist naar de waarschijnlijke oorzaak leidt.
 
-### Hoe maak je jouw analytische profiel praktisch inzetbaar?
+### Hoe vertaal je jouw opleiding Technische Natuurkunde naar praktisch werk op locatie?
 
 Zoek ervaring met meetopstellingen, instrumentbesturing en foutanalyse.
 Verdiep je in het domein van het product, bijvoorbeeld optica,
@@ -1716,7 +1720,7 @@ test engineer; hightechvacatures.
 
 Slug: `werktuigbouwkunde`
 
-### Wat leer je binnen werktuigbouwkunde?
+### Wat leer je tijdens de opleiding Werktuigbouwkunde over machines en beweging?
 
 Werktuigbouwkunde gaat over het ontwerpen, maken en onderhouden van machines
 en mechanische systemen. Je kunt leren over constructies, materialen,
@@ -1731,7 +1735,7 @@ komen ontwerp, simulatie en systeemkeuze uitgebreider aan bod. Voor field
 service is in beide gevallen belangrijk dat je slijtage, speling, belasting en
 uitlijning kunt verbinden aan het gedrag van de complete machine.
 
-### Waarom is werktuigbouwkunde relevant voor field service?
+### Waarom biedt de studierichting Werktuigbouwkunde zoveel mogelijkheden in field service?
 
 Machines worden op locatie blootgesteld aan belasting, vervuiling, temperatuur
 en gebruik dat niet altijd overeenkomt met de ontwerpsituatie. Bij een storing
@@ -1752,7 +1756,7 @@ elektrotechniek en automatisering, omdat een moderne machine alleen goed
 presteert wanneer mechanica, aandrijving en besturing op elkaar zijn
 afgestemd. Duidelijke metingen voorkomen discussies op basis van aannames.
 
-Fieldservicewerk vraagt ook praktische planning. Een zwaar onderdeel, hijsmiddel
+Werk in field service vraagt ook praktische planning. Een zwaar onderdeel, hijsmiddel
 of specialistisch meetinstrument moet op het juiste moment beschikbaar zijn.
 Je beoordeelt bereikbaarheid en demontagevolgorde voordat een machine wordt
 stilgezet. Na montage voer je controles en een proef onder belasting uit en
@@ -1760,7 +1764,7 @@ leg je uitgangswaarden vast voor toekomstig onderhoud.
 
 Daarmee wordt het volgende onderhoud aantoonbaar beter voorbereid.
 
-### Welke functies en sectoren kunnen aansluiten?
+### Welke servicefuncties vind je bij rotating equipment, machinebouw en maritieme techniek?
 
 Werktuigbouwkunde past bij servicemonteur, field service engineer,
 commissioning engineer en maintenance engineer. Je kunt werken in machinebouw,
@@ -1773,7 +1777,7 @@ met rotating equipment is niet hetzelfde als ervaring met fijnmechanica of
 hydraulische machines. Bekijk daarom welke apparatuur, toleranties en
 meetmethoden in de vacature centraal staan.
 
-### Welke verdieping helpt je verder?
+### Hoe vind je een field service vacature die bij jouw opleiding Werktuigbouwkunde past?
 
 Je kunt je specialiseren in onderhoud, constructie, thermodynamica,
 stromingsleer, hydrauliek of reliability. Trillingsanalyse, uitlijning en

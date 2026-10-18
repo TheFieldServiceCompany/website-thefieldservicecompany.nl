@@ -29,9 +29,15 @@ Gebruik als type `[STUDIERICHTING]` of `[OPLEIDINGSNIVEAU]`.
 
 - Schrijf 450–550 woorden, exclusief koppen.
 - Schrijf energiek, concreet en in natuurlijk Nederlands vanuit de jij-vorm.
+- Schrijf uitnodigend en motiverend: laat de lezer enthousiast worden over de
+  technische mogelijkheden, zonder holle superlatieven of verkooppraat.
 - Gebruik `field service` als vakgebied. Gebruik functienamen in lopende
   zinnen met kleine letters, behalve aan het begin van een zin.
 - Beantwoord vier logische zoekvragen met beschrijvende H2-koppen.
+- Maak ook iedere H2 zelfstandig betekenisvol. Zet de werkelijke term in de
+  kop en combineer die waar natuurlijk met `opleiding`, `studierichting`,
+  `field service`, een concreet machinetype of een concrete sector. Vermijd
+  koppen als `Welke sectoren passen hierbij?` en `Hoe vind je een vacature?`.
 - Open direct met de betekenis van de term en de belangrijkste aansluiting op
   field service; begin niet met een algemene definitie van techniek.
 - Beschrijf bij een studierichting:
@@ -67,6 +73,13 @@ Gebruik als type `[STUDIERICHTING]` of `[OPLEIDINGSNIVEAU]`.
 
 - Verwerk `[TERM]`, `[TERM] opleiding`, `field service` en relevante natuurlijke
   varianten waar ze inhoudelijk passen; forceer geen exacte zoekterm.
+- Gebruik bij studierichtingen zowel de natuurlijke combinatie `opleiding
+  [TERM]` als `studierichting [TERM]`. Een losse term zoals `Autotechniek` is
+  voor zoekmachines en lezers niet altijd herkenbaar als opleiding.
+- Leg overdraagbare techniek concreet uit. Benoem bijvoorbeeld hoe mechanica,
+  elektrotechniek, koeling, sensoren of besturing uit een voertuig of ander
+  bekend systeem terugkomen in industriële machines. Laat de raakvlakken zien
+  in plaats van alleen te stellen dat een richting aansluit.
 - Schrijf voor de zoekintenties: wat leer je, hoe sluit het aan, welke functies
   passen en hoe kun je je ontwikkelen.
 - Geef alinea's een duidelijk onderwerp en een zelfstandig te begrijpen eerste
