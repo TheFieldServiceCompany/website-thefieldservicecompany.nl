@@ -1,7 +1,7 @@
 # Opleidingenketen: WordPress, Supabase en Appsmith
 
 Datum: 18 oktober 2026  
-Status: alleen-lezen controle en ontwerpvoorstel; geen data of configuratie gewijzigd
+Status: ontwerp goedgekeurd; eerste WordPress–Supabase-synchronisatie uitgevoerd en gecontroleerd
 
 ## Aanbevolen model
 
@@ -150,4 +150,61 @@ expliciete WordPress-post-ID-koppeling nodig in `external_identifiers`.
 8. De gekozen waarden vanuit Supabase naar de twee WordPress-taxonomieën
    synchroniseren en REST, filters, snippets, sitemap en SEO-archieven testen.
 9. Daarna de spiegelende Beroepengidsstructuur voor Opleidingen afmaken.
+
+## Uitvoering op 18 oktober 2026
+
+### WordPress
+
+- Term-ID `210` zichtbaar hernoemd van `LBO` naar `VMBO / LBO`; de bestaande
+  slug `lbo` en alle 36 vacaturekoppelingen zijn behouden.
+- Term-ID `71` zichtbaar hernoemd van `Universiteit` naar `WO / Universiteit`;
+  de bestaande slug `universiteit` en alle 12 vacaturekoppelingen zijn
+  behouden.
+- Aan `vac_studierichting` zijn vijf termen toegevoegd:
+  - `Industriële Automatisering` — term-ID `564`;
+  - `Civiele Techniek` — term-ID `565`;
+  - `Mobiele Werktuigentechniek` — term-ID `566`;
+  - `Koude- en Klimaattechniek` — term-ID `567`;
+  - `Operationele Techniek` — term-ID `568`.
+- De eindcontrole via WordPress REST geeft exact vier niveaus en 23
+  studierichtingen. De nieuwe studierichtingen hebben nog geen
+  vacaturekoppelingen; inhoudelijke indeling volgt afzonderlijk.
+
+### Supabase
+
+- `Associate degree (Ad)` is gedeactiveerd als zelfstandig filter. De term had
+  nul kandidaat- en nul vacaturekoppelingen; er is dus geen bestaande relatie
+  verloren gegaan.
+- De vier actieve niveaus hebben nu een vaste sortering: VMBO / LBO, MBO, HBO
+  en WO / Universiteit.
+- `Technische Informatica / ICT` is hernoemd naar
+  `ICT & Technische Informatica`.
+- `Mobiele Werktuigen` is hernoemd naar `Mobiele Werktuigentechniek`.
+- Embedded Systems, Robotica, Industriële Automatisering, Koude- en
+  Klimaattechniek en Operationele Techniek zijn toegevoegd. Civiele Techniek
+  en Mobiele Werktuigentechniek bestonden inhoudelijk al in Supabase.
+- `source_term_mappings` bevat nu vier unieke mappings voor
+  `opleidingsniveau` en 23 unieke mappings voor `vac_studierichting`; iedere
+  WordPress-term-ID verwijst naar precies één Supabase-UUID.
+- Alle betrokken tabellen hadden en houden RLS ingeschakeld.
+
+### Appsmith-controle
+
+- De bestaande vacaturefunctie levert na de synchronisatie vier niveauopties
+  en 23 studierichtingopties.
+- De bestaande kandidaatfunctie levert dezelfde vier niveauopties en 23
+  studierichtingopties.
+- Er bestaan geen kandidaat- of vacaturekoppelingen naar het gedeactiveerde
+  Ad-record.
+- De Appsmith-UI is nog niet gewijzigd. Nederlandse labels, opslagtests,
+  matchingtests en verdere kandidaat-/vacaturevulling zijn de volgende stap.
+
+### Pods en Beroepengids
+
+Pods is nog niet gewijzigd. Aanbevolen blijft om `Opleidingen` als centrale
+Beroepengids-hub te gebruiken en opleidingsniveau en studierichting als twee
+afzonderlijke taxonomieën te modelleren. Taxonomieën kunnen niet werkelijk als
+kind onder een andere taxonomie worden geplaatst; een hub met twee duidelijke
+ingangen voorkomt gemengde termen, onduidelijke relaties en problemen met
+filters, snippets en SEO-archieven.
 

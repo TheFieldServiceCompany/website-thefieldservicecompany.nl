@@ -1,5 +1,28 @@
 # Changelog
 
+## 2026-10-18 — Opleidingsniveaus en studierichtingen gesynchroniseerd
+
+- In WordPress de zichtbare niveaunamen aangepast naar `VMBO / LBO` en
+  `WO / Universiteit`, met behoud van de bestaande slugs, URL's en alle
+  vacaturekoppelingen.
+- De vijf goedgekeurde studierichtingen aan de vacaturetaxonomie toegevoegd:
+  Industriële Automatisering, Civiele Techniek, Mobiele
+  Werktuigentechniek, Koude- en Klimaattechniek en Operationele Techniek.
+- Supabase gelijkgetrokken naar vier actieve niveaus en 23 actieve
+  studierichtingen. Associate degree is zonder dataverlies gedeactiveerd als
+  zelfstandig filter, omdat het record geen kandidaat- of vacaturekoppelingen
+  had en binnen TFSC onder HBO valt.
+- Vier opleidingsniveau- en 23 studierichtingmappings van WordPress-term-ID
+  naar Supabase-UUID vastgelegd in `source_term_mappings`.
+- Eindcontrole bevestigt dat WordPress en Supabase exact dezelfde namen en
+  aantallen bevatten. De bestaande Appsmith-functies voor zowel kandidaten als
+  vacatures leveren automatisch dezelfde 4 niveau- en 23
+  studierichtingopties.
+- Appsmith-schermen en Pods zijn nog niet gewijzigd. Appsmith wordt hierna aan
+  beide kanten Nederlandstalig getest; voor Pods blijft het voorstel een
+  centrale pagina `Opleidingen` met afzonderlijke taxonomieën voor
+  opleidingsniveau en studierichting.
+
 ## 2026-10-18 — Opleidingenketen WordPress, Supabase en Appsmith onderzocht
 
 - Alleen-lezen vastgesteld dat WordPress bij vacatures al de twee benodigde
