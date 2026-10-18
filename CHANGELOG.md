@@ -1,5 +1,26 @@
 # Changelog
 
+## 2026-10-18 — Functie-inhoud volledig gevuld
+
+- De acht nog lege termen onder `functie-inhoud` voorzien van unieke
+  archieftitels en descriptions van 400–409 woorden: Sales, Storingen,
+  Technical Support, Testen, Training, Troubleshooting, Upgrades en
+  Werkvoorbereiding.
+- Sales gericht op technische serviceverkoop, waaronder spare parts,
+  onderhoud, advies, upgrades en servicecontracten.
+- Storingen en troubleshooting bewust afzonderlijk uitgewerkt als
+  respectievelijk direct herstel en systematische root-causeanalyse.
+- Werkvoorbereiding beschreven rond zowel klantprojecten vóór vertrek als de
+  voorbereiding vanuit kantoor, werkplaats of magazijn.
+- Alle acht waarden via REST gepubliceerd en exact opnieuw uitgelezen. De
+  gerenderde archieven Storingen en Werkvoorbereiding tonen de nieuwe H1 en
+  description correct.
+- Geen snippets, templates, Pods-instellingen, relaties of Rank Math-velden
+  gewijzigd. De ontbrekende functienaamterm `Werkvoorbereider` is alleen als
+  later te beoordelen aandachtspunt vastgelegd.
+- Details staan in
+  `audits/2026-10-18-functie-inhoud-eight-terms-live.md`.
+
 ## 2026-10-18 — Dienstverbanden inhoudelijk herschreven
 
 - `Freelance/ZZP` en `Vast Dienstverband` voorzien van unieke archieftitels en

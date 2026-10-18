@@ -105,6 +105,11 @@ synoniemen, hiërarchie, bestaande vacaturekoppelingen, Beroepengids-relaties,
 filters, snippets, sitemap, REST-uitvoer, Supabase-mapping en Appsmith-invoer
 gezamenlijk na.
 
+- `Werkvoorbereider` komt voor als functietitel in een gepubliceerde vacature,
+  maar ontbreekt momenteel als aparte term onder `functienaam`. Later bepalen
+  we of dit een canonieke functienaamterm wordt en aan welke vacatures die term
+  moet worden gekoppeld. Er is nu bewust geen term aangemaakt.
+
 ## Beroepengids en Kennisbank
 
 De zes bestaande Beroepengids-taxonomieën worden na goedkeuring een inhoudelijke

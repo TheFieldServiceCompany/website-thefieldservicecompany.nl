@@ -15,7 +15,7 @@ vallen buiten deze telling.
 | Bedrijfssectoren | 33 | 33 | 0 |
 | Dagen internationaal | 4 | 4 | 0 |
 | Dienstverbanden | 2 | 2 | 0 |
-| Functie-inhoud | 29 | 21 | 8 |
+| Functie-inhoud | 29 | 29 | 0 |
 | Functienamen | 32 | 32 | 0 |
 | Kennisgebieden | 25 | 25 | 0 |
 | Locaties | 60 | 60 | 0 |
@@ -27,8 +27,6 @@ vallen buiten deze telling.
 
 Ontbrekende vacaturetermen:
 
-- **Functie-inhoud:** Sales, Storingen, Technical Support, Testen, Training,
-  Troubleshooting, Upgrades en Werkvoorbereiding.
 - **Opleidingsniveaus:** HBO, MBO en WO / Universiteit.
 - **Reisprofielen:** alle 25 termen.
 - **Status:** Gesloten Oud, Ingevuld en Open.
@@ -67,3 +65,8 @@ hetzelfde als termdescriptions.
 > Update 18 oktober 2026: de vier descriptions van `dagen-internationaal` zijn
 > inmiddels volledig herschreven en gecontroleerd. Zie
 > `2026-10-18-dagen-internationaal-content-live.md`.
+
+> Update 18 oktober 2026: de acht ontbrekende descriptions van
+> `functie-inhoud` zijn inmiddels volledig geschreven, gepubliceerd en
+> gecontroleerd. Daarmee zijn alle 29 termen gevuld. Zie
+> `2026-10-18-functie-inhoud-eight-terms-live.md`.
