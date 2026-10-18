@@ -17,6 +17,24 @@ Deze scheiding sluit al aan op WordPress, Supabase en Appsmith. Niveau en
 studierichting mogen daarom niet als gelijksoortige termen in één platte
 taxonomie worden samengevoegd.
 
+## Besluiten na inhoudelijke bespreking
+
+- De publieke niveau-indeling blijft compact: `VMBO / LBO`, `MBO`, `HBO` en
+  `WO / Universiteit`.
+- LBO wordt met VMBO in één historisch en praktisch filter ondergebracht. MBO
+  blijft een afzonderlijk niveau: VMBO bereidt voor op het mbo en is er niet
+  mee samengevoegd.
+- Een Associate degree (Ad) wordt voor TFSC niet als afzonderlijk publiek
+  vacaturefilter gebruikt, maar onder de brede HBO-selectie meegenomen. De
+  precieze diplomanaam kan in de ruwe kandidaatgegevens behouden blijven.
+- De brede zichtbare studierichting `ICT & Technische Informatica` blijft
+  gehandhaafd. De huidige Supabase-naam `Technische Informatica / ICT` moet
+  later naar die canonieke naam worden gemapt of hernoemd.
+- `Mobiele werktuigen` is een geldige opleidingsrichting. Voor de termenlijst
+  heeft `Mobiele werktuigentechniek` de voorkeur, met onder meer `Mobiele
+  Werktuigen`, `Technicus mobiele werktuigen` en `Voertuigen en mobiele
+  werktuigen` als herkenbare varianten.
+
 ## WordPress: huidige vacaturetaxonomieën
 
 ### Opleidingsniveau
@@ -116,8 +134,8 @@ expliciete WordPress-post-ID-koppeling nodig in `external_identifiers`.
 
 ## Veilige uitvoeringsvolgorde
 
-1. Samen de vijf niveaus en twintig unieke voorgestelde studierichtingen
-   beoordelen, inclusief de vier verschillen tussen beide systemen.
+1. De vier publieke niveaus en de uitgebreide lijst met studierichtingen
+   definitief beoordelen, inclusief naamvarianten en synoniemen.
 2. De definitieve namen, slugs, synoniemen en sortering vaststellen.
 3. WordPress-termen en Supabase-concepten via stabiele mappings koppelen.
 4. De 63 WordPress-vacatures aan de juiste Supabase-vacatures koppelen of

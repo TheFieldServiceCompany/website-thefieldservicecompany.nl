@@ -22,6 +22,14 @@
   gescheiden blijven. Er is niets gewijzigd in WordPress, Supabase of
   Appsmith. De volledige audit staat in
   `audits/2026-10-18-education-chain-wordpress-supabase-appsmith.md`.
+- Daarna inhoudelijk besloten dat de publieke niveaufilters `VMBO / LBO`,
+  `MBO`, `HBO` en `WO / Universiteit` worden. Associate degree (Ad) krijgt
+  geen eigen publiek filter maar valt voor TFSC onder HBO, terwijl de precieze
+  diplomanaam als ruwe kandidaatwaarde kan worden behouden.
+- Besloten de brede studierichting `ICT & Technische Informatica` te behouden.
+  `Mobiele werktuigentechniek` is bevestigd als geldige studierichting, met de
+  officiële en gangbare opleidingsnamen als synoniemen. Deze besluiten zijn
+  alleen gedocumenteerd; er is nog geen data gewijzigd.
 
 ## 2026-10-17 — Alle overige vacaturetaxonomiekoppelingen gecontroleerd
 
