@@ -1,7 +1,30 @@
 # Beroepengids Opleidingen: Pods- en snippetimpact
 
 Datum: 18 oktober 2026  
-Status: ontwerp en alleen-lezen impactanalyse; nog niet op LIVE uitgevoerd
+Status: analyse uitgevoerd; LIVE-implementatie op 18 oktober 2026 afgerond
+
+## LIVE-resultaat
+
+- Pods-taxonomie 27600 `beroep_opleiding` is aangemaakt met velden 27601–27604.
+- De boom bevat 2 parenttermen en 27 kindtermen: 4 opleidingsniveaus en 23
+  studierichtingen.
+- Alle 27 kinderen hebben de juiste relatie naar `opleidingsniveau` of
+  `vac_studierichting`, een korte intro en een unieke lange description.
+- Snippets 62, 113 en 209 zijn na inactieve herstelkopieën 210, 211 en 212
+  aangepast en actief getest.
+- Snippet 215 versie 1.1 voegt de basis-URL en de native
+  `beroep_opleiding`-sitemap correct aan de Rank Math-sitemapindex toe. De
+  herstelkopie is snippet 221.
+- Pagina 24266 verwijst nu met heading, kaartlink, taxonomielus en tekstlink
+  naar Opleidingen. De oorspronkelijke Elementor-data staat in
+  `audits/exports/page-24266-beroepengids-before-opleidingen-2026-10-18.json`.
+- De basis, parents, kindtermen, relaties, vacatureknop en beide sitemaproutes
+  zijn functioneel gecontroleerd. De onderhoudsmodus bleef aan.
+
+Nog open: de 301 van `/beroepengids/opleidingsniveau/` naar
+`/beroepengids/opleidingen/`, de oude testterm en taxonomy gecontroleerd
+opruimen, en een aparte beslissing over de positie van de lange description
+en de generieke vacaturesecties op de twee parentarchieven.
 
 ## Besluit en begripsafbakening
 
@@ -194,5 +217,6 @@ risico's zijn niet de relaties zelf, maar:
 - oude URL's die zonder redirect verdwijnen;
 - lege termarchieven die buiten de sitemap blijven.
 
-Er zijn tijdens deze analyse geen live Pods, termen, snippets, pagina's of
-redirects gewijzigd.
+Tijdens de oorspronkelijke analyse zijn geen live onderdelen gewijzigd. De
+daaropvolgende LIVE-uitvoering is hierboven vastgelegd; redirects en het
+opruimen van de oude testtaxonomy zijn nog niet uitgevoerd.

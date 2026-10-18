@@ -1,5 +1,34 @@
 # Changelog
 
+## 2026-10-18 — Beroepengids Opleidingen LIVE uitgevoerd
+
+- Op LIVE de hiërarchische Pods-taxonomie `beroep_opleiding` aangemaakt met
+  `Opleidingsniveau` en `Studierichting` als parenttermen, plus 4 niveau- en
+  23 studierichtingtermen.
+- Alle 27 kindtermen gekoppeld aan de juiste bestaande vacaturetaxonomie en
+  voorzien van een unieke intro en SEO-description. Het virtuele
+  Opleidingen-archief kreeg eveneens een intro en een description van 459
+  woorden.
+- Snippets 62, 113 en 209 veilig aangepast. Voor iedere wijziging is eerst een
+  inactieve kopie gemaakt: respectievelijk snippets 210, 211 en 212.
+- Snippet 215 uitgebreid naar versie 1.1 voor de Rank Math-sitemapindex, met
+  inactieve herstelkopie 221. Zowel `/beroepengids/opleidingen/` als de
+  taxonomy-sitemap met alle 29 termen staan nu in de sitemapindex.
+- De kaart op Beroepengids-pagina 24266 aangepast naar **Opleidingen**, met de
+  juiste link, taxonomielus, introverwijzing en interne tekstlink. De
+  oorspronkelijke Elementor-data is bewaard in
+  `audits/exports/page-24266-beroepengids-before-opleidingen-2026-10-18.json`.
+- De parentarchieven bevatten nu navigatielijsten naar hun directe kinderen.
+  De Rank Math-titelformule voor opleidingstermen is ingesteld op
+  `%term% voor field service | Beroepengids`.
+- Basisarchief, parentterm, kindterm, relaties, vacatureknop, sitemap en
+  Beroepengidsingang functioneel gecontroleerd. Daarna is de LiteSpeed-cache
+  volledig opgeschoond. Onderhoudsmodus en de tijdelijke algemene noindex zijn
+  bewust niet gewijzigd.
+- Nog open: de oude basis-URL redirecten, de oude testterm gecontroleerd
+  opruimen, beslissen over plaatsing van de lange termdescription onderaan en
+  de generieke vacaturesecties op parentarchieven conditioneren.
+
 ## 2026-10-18 — Pods- en snippetimpact voor Opleidingen vastgesteld
 
 - Het Beroepengidsmodel verduidelijkt: één hiërarchische Pods-taxonomie

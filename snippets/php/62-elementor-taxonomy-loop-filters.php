@@ -16,6 +16,15 @@
  *
  * current_taxonomy
  * current_taxonomy_level_X
+ *
+ * current_term_children
+ *
+ * Toont op een normaal hiërarchisch taxonomy-termarchief uitsluitend de
+ * directe kinderen van de huidige term. Dit is bijvoorbeeld nodig voor:
+ *
+ * Opleidingen
+ * → Opleidingsniveau
+ * → uitsluitend VMBO / LBO, MBO, HBO en WO / Universiteit
  */
 
 
@@ -119,6 +128,47 @@ add_filter(
 
             $args['include'] =
                 $ids ?: [ 0 ];
+
+            return $args;
+        }
+
+
+        /**
+         * ====================================================
+         * current_term_children
+         * ====================================================
+         *
+         * Werkt op een normaal taxonomy-termarchief en toont
+         * alleen de directe kinderen van de huidige term.
+         *
+         * Bladterm zonder kinderen:
+         * → bewust geen terms tonen.
+         */
+
+        if ( 'current_term_children' === $query_id ) {
+
+            $term = get_queried_object();
+
+            if (
+                ! $term instanceof WP_Term ||
+                ! taxonomy_exists( $term->taxonomy ) ||
+                ! is_taxonomy_hierarchical( $term->taxonomy )
+            ) {
+                $args['include'] = [ 0 ];
+                return $args;
+            }
+
+            unset(
+                $args['term_taxonomy_id'],
+                $args['post_taxonomy_term_taxonomy_id'],
+                $args['include']
+            );
+
+            $args['taxonomy']   = $term->taxonomy;
+            $args['parent']     = (int) $term->term_id;
+            $args['hide_empty'] = false;
+            $args['orderby']    = 'name';
+            $args['order']      = 'ASC';
 
             return $args;
         }

@@ -88,9 +88,9 @@ function tfsc_knowledge_archive_seo_data() {
             'title'       => 'Bedrijfssectoren binnen field service | Beroepengids',
             'description' => 'Ontdek bedrijfssectoren binnen field service en bekijk welke functies, machines, werkomgevingen en actuele vacatures bij jou passen.',
         ],
-        'beroep_opleidingsniveau' => [
-            'title'       => 'Opleidingsniveaus voor fieldservicefuncties | Beroepengids',
-            'description' => 'Vergelijk opleidingsniveaus binnen field service en ontdek welke functies, ontwikkelroutes en vacatures bij jouw achtergrond passen.',
+        'beroep_opleiding' => [
+            'title'       => 'Opleidingen voor field service | Beroepengids',
+            'description' => 'Ontdek opleidingsniveaus en studierichtingen voor field service. Vergelijk wat je leert met passende functies, sectoren en actuele vacatures.',
         ],
         'beroep_werkgebied' => [
             'title'       => 'Werkgebieden voor fieldservicefuncties | Beroepengids',
