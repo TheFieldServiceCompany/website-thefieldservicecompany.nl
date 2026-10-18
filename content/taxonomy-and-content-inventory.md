@@ -121,6 +121,32 @@ Voor Kennisbank moet eerst de inhoudsstructuur worden ontworpen: onderwerpen,
 contenttypes, doelgroepen en eventueel niveau. Pas daarna worden taxonomieën en
 URL-structuur aangemaakt.
 
+## TODO: centrale overzichtspagina voor alle archieven
+
+Later bouwen we één centrale, duidelijk navigeerbare pagina waarop alle
+relevante archieven worden genoemd en bezoekers rechtstreeks kunnen
+doorklikken. Deze pagina wordt geen losse verzameling links, maar een logisch
+ingedeelde ingang naar onder meer vacaturearchieven, Beroepengids,
+Kennisbank, functie-inhoud, functienamen, bedrijfssectoren, kennisgebieden,
+opleidingen, werkgebieden en reisprofielen.
+
+Voor uitvoering bepalen we eerst:
+
+- welke archieven publiek, indexeerbaar en inhoudelijk sterk genoeg zijn;
+- de groepering, volgorde, labels en korte begeleidende teksten;
+- hoe lege, interne, dubbele of nog onvoltooide archieven worden uitgesloten;
+- welke verbindingen automatisch uit WordPress-taxonomieën kunnen worden
+  opgebouwd en welke handmatig redactioneel worden gekozen;
+- interne links, breadcrumbs, sitemap, structured data en SEO-titel en
+  description;
+- hoe de pagina bezoekers én zoekmachines helpt de volledige inhoudsstructuur
+  te begrijpen zonder een kunstmatige linkdirectory te worden.
+
+De dubbele en overlappende termen bij `reisprofiel` zijn deels bewust als
+zoektermvarianten aangemaakt. Ze worden daarom niet verwijderd of
+samengevoegd voordat het doelmodel voor zoektermen, filters, archieven,
+Supabase en Appsmith gezamenlijk is besloten.
+
 ## Veilige volgorde
 
 1. Per vacaturetaxonomie het doelmodel goedkeuren.

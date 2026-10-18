@@ -1,5 +1,17 @@
 # Changelog
 
+## 2026-10-19 — Centrale archievenpagina en reisprofielen als TODO vastgelegd
+
+- TODO toegevoegd voor één centrale, logisch gegroepeerde overzichtspagina
+  waar bezoekers naar alle relevante publieke archieven kunnen doorklikken.
+- Vastgelegd dat vóór bouw eerst indexeerbaarheid, inhoudskwaliteit,
+  groepering, interne links, sitemap en automatische versus handmatige
+  opbouw worden bepaald.
+- Vastgelegd dat de dubbele reisprofieltermen deels bewust als
+  zoektermvarianten bestaan en niet zonder gezamenlijk modelbesluit worden
+  verwijderd of samengevoegd.
+- Er zijn geen WordPress-termen, relaties, teksten of instellingen gewijzigd.
+
 ## 2026-10-18 — Alle functie-inhoudtitels gelijkgetrokken
 
 - De resterende twintig `pods_archive_title`-velden onder `functie-inhoud`
