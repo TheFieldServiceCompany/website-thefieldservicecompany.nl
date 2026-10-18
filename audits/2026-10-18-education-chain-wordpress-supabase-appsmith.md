@@ -229,3 +229,27 @@ snippetimpact en veilige uitvoeringsvolgorde staan in
   `content/education-descriptions/README.md`; de teksten zelf staan in
   `opleidingsniveaus.md` en `studierichtingen.md` in dezelfde map.
 
+## Live vacaturekoppelingen op 18 oktober 2026
+
+- Alle 63 gepubliceerde vacatures zijn via WordPress REST gekoppeld aan
+  passende termen uit `vac_studierichting`.
+- De indeling is bedoeld voor vindbaarheid en navigatie, niet als harde
+  diploma-eis. Daarom is onderscheid gemaakt tussen een directe inhoudelijke
+  aansluiting en een passende overstaproute met relevante technische
+  werkervaring.
+- Elektrotechniek, Mechatronica en Werktuigbouwkunde zijn als brede technische
+  basis aan alle 63 vacatures gekoppeld. De overige richtingen zijn alleen
+  toegevoegd waar product, sector, werkzaamheden of overdraagbare ervaring
+  daar inhoudelijk aanleiding toe geven.
+- Koude- en klimaattechnische vacatures zijn nadrukkelijk ook gekoppeld aan
+  mechanische, elektrotechnische, mechatronische en industriële-
+  automatiseringsrichtingen.
+- De vacature voor separatoren en decanters is aanvullend gekoppeld aan
+  Autotechniek, Bedrijfsautotechniek, Civiele Techniek en Luchtvaarttechniek,
+  omdat relevante onderhouds-, diagnose- en machine-ervaring hier zwaarder
+  kan wegen dan de exacte diplomanaam.
+- Bestaande WordPress-koppelingen zijn behouden; de bewerking heeft uitsluitend
+  aangevuld. Vooraf is een herstelbestand gemaakt.
+- De eindstand omvat 338 vacature-termrelaties. Na het schrijven zijn alle 63
+  vacatures afzonderlijk opnieuw via REST gelezen en exact gevalideerd.
+
