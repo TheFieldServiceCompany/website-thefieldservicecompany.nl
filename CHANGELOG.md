@@ -1,5 +1,25 @@
 # Changelog
 
+## 2026-10-18 — Rank Math-audit Opleidingen uitgevoerd
+
+- Rank Math-instellingen, live HTML-meta, robots, canonicals en de werkelijke
+  XML-sitemaps van beide Opleidingen-taxonomieën alleen-lezen gecontroleerd.
+- Titles werken volgens het ingestelde patroon. De twee virtuele
+  basisarchieven hebben afzonderlijke titles en descriptions.
+- Vastgesteld dat alle 27 termarchieven hun volledige lange termdescription
+  als meta-description gebruiken: circa 3.619–4.058 tekens. Dit moet vóór
+  indexering worden vervangen door unieke korte meta-descriptions.
+- Rank Math heeft `noindex_empty_taxonomies` ingeschakeld, terwijl alle 27
+  termen voor WordPress een post count van nul hebben. Hiervoor is een smalle
+  oplossing nodig die uitsluitend deze twee inhoudelijk gevulde taxonomieën
+  indexeerbaar maakt.
+- Sitemapindex geeft XML/HTTP 200 en bevat beide taxonomysitemaps eenmaal. De
+  afzonderlijke sitemaps bevatten exact 4 en 23 URL's. De oude
+  `beroep_opleiding`-sitemap geeft 404.
+- Elementor-onderhoudsmodus bleef aan; er zijn geen Rank Math-waarden of
+  content gewijzigd. Details en hersteladvies staan in
+  `audits/2026-10-18-rank-math-education-audit.md`.
+
 ## 2026-10-18 — Opleidingen-intro's inhoudelijk herschreven
 
 - Vastgesteld dat alle 27 introducties hetzelfde generieke patroon gebruikten
