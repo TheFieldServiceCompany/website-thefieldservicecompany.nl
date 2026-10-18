@@ -57,37 +57,19 @@ Na instructie is voor de acht termen het exacte schema toegepast:
 placeholder; er staan geen aanhalingstekens in de live titels. De aangepaste
 H1 van Sales is op de gerenderde frontend gecontroleerd.
 
-Van alle 29 functie-inhoudtermen voldoen er nu 9 exact aan het schema:
-`Adviseren` en de acht termen uit bovenstaande tabel. De overige 20 zijn
-alleen gecontroleerd en bewust niet gewijzigd. Hun huidige waarden zijn:
+Na aanvullend akkoord zijn ook de overige twintig titels gelijkgetrokken.
+Daarmee voldoen alle 29 functie-inhoudtermen aan het vaste format. De enige
+bewuste uitzondering is de term `Field service`; daarvoor luidt de titel
+exact `Field service vacatures met functie-inhoud field service`.
 
-| Term | Huidige `pods_archive_title` |
-| --- | --- |
-| Commissioning | Field Service Vacatures met functie-inhoud Commissioning |
-| Diagnose | Field Service Vacatures met functie-inhoud Diagnose |
-| Field service | Field Service Vacatures met functie-inhoud Field Service |
-| Inbedrijfstellen | Field Service Vacatures met functie-inhoud Inbedrijfstellen |
-| Inspectie | Field Service Vacatures met functie-inhoud Inspectie |
-| Installatie | Field Service Vacatures met functie-inhoud Installatie |
-| Instructie | Field Service Vacatures met functie-inhoud Instructie |
-| Kalibratie | Field Service Vacatures met functie-inhoud Kalibratie |
-| Leidinggeven | Field Service Vacatures met functie-inhoud Leidinggeven |
-| Maintenance | Field Service Vacatures met functie-inhoud Maintenance |
-| Modificaties | Field Service Vacatures met functie-inhoud Modificaties |
-| Onderhoud | Field Service Vacatures met functie-inhoud Onderhoud |
-| Overhalen | Field Service Vacatures met functie-inhoud Overhalen |
-| Planning | Field Service Vacatures met functie-inhoud Planning |
-| PLC Analyse | Field Service Vacatures met functie-inhoud PLC Analyse |
-| PLC Programmeren | Field Service Vacatures met functie-inhoud PLC Programmeren |
-| Programmeren | Field Service Vacatures met functie-inhoud Programmeren |
-| Rapportages | Field Service Vacatures met functie-inhoud Rapportages |
-| Reparatie | Field Service Vacatures met functie-inhoud Reparatie |
-| Revisie | Field Service Vacatures met functie-inhoud Revisie |
-
-Bij deze twintig zit de schema-afwijking in de hoofdletters van
-`Field Service Vacatures`. Bij de term `Field service` wijkt daarnaast de
-hoofdletter van `Service` in de ingevoegde termnaam af van de actuele
-WordPress-termnaam. Correctie hiervan vereist apart akkoord.
+De twintig aanvullend gepubliceerde waarden staan exact in
+`content/functie-inhoud/functie-inhoud-overige-titels-live.json`. De eerdere
+waarden zijn vóór de wijziging opgeslagen in
+`work/functie-inhoud-remaining-title-schema-2026-10-18/before.json`. Na
+publicatie zijn 20 van 20 waarden opnieuw exact uitgelezen. Een afsluitende
+vergelijking van de volledige taxonomie bevestigde 29 van 29 correcte titels.
+De H1's van `Field service` en `Commissioning` zijn daarnaast op de
+gerenderde frontend gecontroleerd.
 
 Niet gewijzigd:
 

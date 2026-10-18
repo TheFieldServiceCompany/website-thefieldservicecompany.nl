@@ -1,5 +1,20 @@
 # Changelog
 
+## 2026-10-18 — Alle functie-inhoudtitels gelijkgetrokken
+
+- De resterende twintig `pods_archive_title`-velden onder `functie-inhoud`
+  aangepast naar `Field service vacatures met functie-inhoud [term]`.
+- Voor de term `Field service` de expliciete uitzondering toegepast:
+  `Field service vacatures met functie-inhoud field service`.
+- De volledige taxonomie opnieuw via REST gecontroleerd: 29 van 29 titels
+  komen exact overeen met het afgesproken format.
+- De publieke H1's van Field service en Commissioning aanvullend gecontroleerd.
+- Uitsluitend de twintig titelvelden gewijzigd; descriptions, relaties,
+  termnamen, snippets, templates en Pods-instellingen zijn niet aangepast.
+- De exacte waarden staan in
+  `content/functie-inhoud/functie-inhoud-overige-titels-live.json` en de
+  controle in `audits/2026-10-18-functie-inhoud-eight-terms-live.md`.
+
 ## 2026-10-18 — Acht functie-inhoudtitels volgens vast schema gezet
 
 - De archieftitels van Sales, Storingen, Technical Support, Testen, Training,
