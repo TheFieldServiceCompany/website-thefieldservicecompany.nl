@@ -3,6 +3,8 @@
 Status: de 23 nieuwe descriptions staan sinds 18 oktober 2026 bij de
 vacaturetaxonomie `vac_studierichting` op LIVE. De eerder bestaande teksten bij
 `beroep_studierichting` zijn na een foutieve overschrijving exact hersteld.
+De vier vacaturetermen van `opleidingsniveau` hebben eveneens gecontroleerde
+live descriptions; `beroep_opleidingsniveau` is daarbij niet gewijzigd.
 
 ## Doel
 
@@ -67,6 +69,23 @@ Pods-structuur en de relatievelden zijn ingericht en getest.
 - Een eerste publicatieronde was abusievelijk gericht op
   `beroep_studierichting`. Die wijziging is volledig hersteld vanuit commit
   `bba82c6` en daarna voor alle 23 Beroepengids-termen geverifieerd.
+
+## Publicatie vacature-opleidingsniveaus op 18 oktober 2026
+
+- Alle vier termen van `opleidingsniveau` zijn voorzien van een nieuwe of
+  volledig herschreven description.
+- De teksten behandelen het niveau zelf en maken duidelijk dat studierichting,
+  werkervaring en productkennis afzonderlijke factoren zijn.
+- VMBO / LBO is praktisch en historisch correct beschreven: VMBO is
+  voorbereidend onderwijs en LBO een oude benaming.
+- MBO legt de verbinding tussen praktijk en vaktheorie; HBO tussen analyse en
+  systeemdenken; WO / Universiteit tussen academische diepgang en specifieke
+  complexe toepassingen.
+- HBO en WO zijn niet automatisch gekoppeld aan meer verantwoordelijkheid of
+  senioriteit.
+- De teksten zijn bewust compact gehouden op 293–309 woorden.
+- Voor publicatie zijn de bestaande vier descriptions opgeslagen. Daarna zijn
+  alle vier REST-resultaten en alle vier gerenderde archieven gecontroleerd.
 
 ## Canonieke termen
 
