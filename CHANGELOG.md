@@ -1,5 +1,23 @@
 # Changelog
 
+## 2026-10-18 — Dagen internationaal inhoudelijk herschreven
+
+- Alle vier termen van `dagen-internationaal` voorzien van een unieke
+  archieftitel en een nieuwe description van 369–411 woorden.
+- `Geen` bewust gepositioneerd als nationaal field service werk met technische
+  afwisseling en ruimte voor het privéleven.
+- De drie internationale categorieën inhoudelijk opgebouwd van avontuur met
+  balans via een internationale levensstijl naar field service als complete
+  lifestyle.
+- Bestaande descriptions vooraf opgeslagen; alle vier nieuwe teksten via REST
+  gepubliceerd en exact opnieuw uitgelezen.
+- De al bestaande Pods-titelvelden via de WordPress-interface ingevuld omdat
+  deze taxonomie ze niet als schrijfbaar REST-veld ontsluit. Alle vier waarden
+  na opslag gecontroleerd.
+- Geen snippets, templates, Pods-instellingen, slugs, relaties of Rank Math-
+  velden gewijzigd. Details staan in
+  `audits/2026-10-18-dagen-internationaal-content-live.md`.
+
 ## 2026-10-18 — Archieftitels voor vacatureopleidingen gelijkgetrokken
 
 - Voor alle 4 vacature-opleidingsniveaus `pods_archive_title` ingesteld als

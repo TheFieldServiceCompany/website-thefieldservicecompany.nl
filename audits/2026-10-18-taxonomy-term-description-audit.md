@@ -13,7 +13,7 @@ vallen buiten deze telling.
 | Taxonomie | Termen | Gevuld | Ontbreekt |
 | --- | ---: | ---: | ---: |
 | Bedrijfssectoren | 33 | 33 | 0 |
-| Dagen internationaal | 4 | 3 | 1 |
+| Dagen internationaal | 4 | 4 | 0 |
 | Dienstverbanden | 2 | 2 | 0 |
 | Functie-inhoud | 29 | 21 | 8 |
 | Functienamen | 32 | 32 | 0 |
@@ -27,7 +27,6 @@ vallen buiten deze telling.
 
 Ontbrekende vacaturetermen:
 
-- **Dagen internationaal:** Geen.
 - **Functie-inhoud:** Sales, Storingen, Technical Support, Testen, Training,
   Troubleshooting, Upgrades en Werkvoorbereiding.
 - **Opleidingsniveaus:** HBO, MBO en WO / Universiteit.
@@ -64,3 +63,7 @@ Studierichtingen, opleidingsniveaus, functie-inhoud en reisprofielen zijn wel
 inhoudelijke kandidaatarchieven. Controleer daarnaast apart de descriptions
 van de virtuele taxonomy-basearchieven en de Pods-introvelden; die zijn niet
 hetzelfde als termdescriptions.
+
+> Update 18 oktober 2026: de vier descriptions van `dagen-internationaal` zijn
+> inmiddels volledig herschreven en gecontroleerd. Zie
+> `2026-10-18-dagen-internationaal-content-live.md`.
