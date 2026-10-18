@@ -1,5 +1,25 @@
 # Changelog
 
+## 2026-10-18 — REST-mogelijkheden van LIVE-plugins geïnventariseerd
+
+- De actuele lijst van 32 geïnstalleerde plugins en alle geregistreerde
+  REST-namespaces via de beveiligde WordPress-inlog alleen-lezen vergeleken.
+- Bevestigd dat Code Snippets, Pods, Search & Filter, Elementor, Rank Math,
+  Wordfence, Site Kit, Akismet, SNIP Pro en WP Rollback eigen REST-routes
+  registreren. LiteSpeed en Advanced Form Integration hebben slechts beperkte
+  routes.
+- Bevestigd dat WordPress Core pluginstatus en -installaties via
+  `/wp/v2/plugins` ontsluit voor een bevoegde beheerder.
+- Alle vijf Pods-posttypes en twintig Pods-taxonomieën hebben `rest_enable=1`.
+  De vacature-Pod staat expliciet op `read_all=1` en `write_all=1`; de
+  customvelden zijn aantoonbaar aanwezig in de vacature-REST-respons.
+- UpdraftPlus, WPvivid, Admin Columns, Advanced Cache Warmer, Duplicate Page,
+  Members en WordPress Importer registreren momenteel geen eigen REST-
+  namespace. Voor back-up en restore blijft de GUI bewust de voorkeursroute.
+- Er zijn geen plugin- of Pods-instellingen gewijzigd. De volledige matrix en
+  aanbevolen werkwijze staan in
+  `audits/2026-10-18-live-plugin-rest-capabilities.md`.
+
 ## 2026-10-18 — Elementor-relatiequery behoudt vacaturestatusfilters
 
 - Oorzaak vastgesteld in actieve Code Snippet 204: de query
