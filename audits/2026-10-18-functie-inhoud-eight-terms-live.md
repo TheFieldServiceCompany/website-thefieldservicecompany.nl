@@ -12,14 +12,14 @@ de jij-vorm en met een concrete koppeling naar field service.
 
 | Term | Archieftitel | Woorden | Gekoppelde vacatures tijdens controle |
 | --- | --- | ---: | ---: |
-| Sales | Field service vacatures met technische sales | 400 | 3 |
-| Storingen | Field service vacatures voor storingen en service | 409 | 47 |
-| Technical Support | Technical support vacatures in field service | 402 | 0 |
-| Testen | Field service vacatures voor testen en opleveren | 400 | 0 |
-| Training | Field service vacatures met technische training | 400 | 0 |
-| Troubleshooting | Troubleshooting vacatures in field service | 400 | 0 |
-| Upgrades | Field service vacatures voor upgrades en retrofits | 401 | 45 |
-| Werkvoorbereiding | Field service vacatures met werkvoorbereiding | 400 | 0 |
+| Sales | Field service vacatures met functie-inhoud Sales | 400 | 3 |
+| Storingen | Field service vacatures met functie-inhoud Storingen | 409 | 47 |
+| Technical Support | Field service vacatures met functie-inhoud Technical Support | 402 | 0 |
+| Testen | Field service vacatures met functie-inhoud Testen | 400 | 0 |
+| Training | Field service vacatures met functie-inhoud Training | 400 | 0 |
+| Troubleshooting | Field service vacatures met functie-inhoud Troubleshooting | 400 | 0 |
+| Upgrades | Field service vacatures met functie-inhoud Upgrades | 401 | 45 |
+| Werkvoorbereiding | Field service vacatures met functie-inhoud Werkvoorbereiding | 400 | 0 |
 
 De exacte live teksten staan in
 `content/functie-inhoud/functie-inhoud-acht-termen-live.json`.
@@ -49,6 +49,45 @@ De openbare archieven `Storingen` en `Werkvoorbereiding` zijn aanvullend op de
 gerenderde frontend gecontroleerd. Beide tonen de nieuwe H1 en de nieuwe
 description. Ook het lege archief Werkvoorbereiding blijft dus technisch
 bereikbaar en gebruikt de generieke template correct.
+
+## Controle titelschema van de volledige taxonomie
+
+Na instructie is voor de acht termen het exacte schema toegepast:
+`Field service vacatures met functie-inhoud [term]`. Het woord `term` is een
+placeholder; er staan geen aanhalingstekens in de live titels. De aangepaste
+H1 van Sales is op de gerenderde frontend gecontroleerd.
+
+Van alle 29 functie-inhoudtermen voldoen er nu 9 exact aan het schema:
+`Adviseren` en de acht termen uit bovenstaande tabel. De overige 20 zijn
+alleen gecontroleerd en bewust niet gewijzigd. Hun huidige waarden zijn:
+
+| Term | Huidige `pods_archive_title` |
+| --- | --- |
+| Commissioning | Field Service Vacatures met functie-inhoud Commissioning |
+| Diagnose | Field Service Vacatures met functie-inhoud Diagnose |
+| Field service | Field Service Vacatures met functie-inhoud Field Service |
+| Inbedrijfstellen | Field Service Vacatures met functie-inhoud Inbedrijfstellen |
+| Inspectie | Field Service Vacatures met functie-inhoud Inspectie |
+| Installatie | Field Service Vacatures met functie-inhoud Installatie |
+| Instructie | Field Service Vacatures met functie-inhoud Instructie |
+| Kalibratie | Field Service Vacatures met functie-inhoud Kalibratie |
+| Leidinggeven | Field Service Vacatures met functie-inhoud Leidinggeven |
+| Maintenance | Field Service Vacatures met functie-inhoud Maintenance |
+| Modificaties | Field Service Vacatures met functie-inhoud Modificaties |
+| Onderhoud | Field Service Vacatures met functie-inhoud Onderhoud |
+| Overhalen | Field Service Vacatures met functie-inhoud Overhalen |
+| Planning | Field Service Vacatures met functie-inhoud Planning |
+| PLC Analyse | Field Service Vacatures met functie-inhoud PLC Analyse |
+| PLC Programmeren | Field Service Vacatures met functie-inhoud PLC Programmeren |
+| Programmeren | Field Service Vacatures met functie-inhoud Programmeren |
+| Rapportages | Field Service Vacatures met functie-inhoud Rapportages |
+| Reparatie | Field Service Vacatures met functie-inhoud Reparatie |
+| Revisie | Field Service Vacatures met functie-inhoud Revisie |
+
+Bij deze twintig zit de schema-afwijking in de hoofdletters van
+`Field Service Vacatures`. Bij de term `Field service` wijkt daarnaast de
+hoofdletter van `Service` in de ingevoegde termnaam af van de actuele
+WordPress-termnaam. Correctie hiervan vereist apart akkoord.
 
 Niet gewijzigd:
 

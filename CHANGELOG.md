@@ -1,5 +1,21 @@
 # Changelog
 
+## 2026-10-18 — Acht functie-inhoudtitels volgens vast schema gezet
+
+- De archieftitels van Sales, Storingen, Technical Support, Testen, Training,
+  Troubleshooting, Upgrades en Werkvoorbereiding gecorrigeerd naar
+  `Field service vacatures met functie-inhoud [term]`, zonder
+  aanhalingstekens.
+- Alle 29 titels van `functie-inhoud` exact met dit schema vergeleken: 9
+  voldoen volledig en 20 gebruiken nog `Field Service Vacatures` met andere
+  hoofdletters. Deze twintig zijn alleen geïnventariseerd en niet gewijzigd.
+- De nieuwe H1 van Sales op de gerenderde frontend gecontroleerd.
+- Alleen de acht expliciet opgedragen titelvelden zijn gewijzigd; descriptions,
+  relaties, termnamen, snippets, templates en Pods-instellingen bleven
+  onaangeraakt.
+- De volledige afwijkingenlijst staat in
+  `audits/2026-10-18-functie-inhoud-eight-terms-live.md`.
+
 ## 2026-10-18 — Functie-inhoud volledig gevuld
 
 - De acht nog lege termen onder `functie-inhoud` voorzien van unieke
