@@ -218,39 +218,40 @@ naar WordPress uitgerold.
 - meerdere termen binnen één taxonomie gebruiken normaal `OR`;
 - alleen `kennisgebied` gebruikt binnen dezelfde taxonomie `AND`;
 - alleen gepubliceerde vacatures met `vac_status=open` tellen mee;
-- een combo is indexeerbaar wanneer die een `functienaam` bevat, maximaal drie
+- een combo is indexeerbaar wanneer die een `functienaam` bevat, maximaal twee
   verschillende taxonomieën gebruikt en minimaal één resultaat heeft;
 - daarnaast is een combo met uitsluitend `locatie` indexeerbaar;
-- overige combo's zonder `functienaam`, en combo's met meer dan drie
+- overige combo's zonder `functienaam`, en combo's met meer dan twee
   taxonomieën, krijgen `noindex, follow`;
 - Search & Filter-query-URL's horen `noindex, follow` te krijgen en volgens de
   snippetbeschrijving een canonical naar de schone `/vacatures/`-URL.
 
-#### Functionele controle op 17 oktober 2026
+#### Fase 1 live gezet en gecontroleerd op 19 oktober 2026
 
-De openbare sitemapindex bevat 32 `combo-vacatures`-sitemaps met samen 15.836
-URL's. Daarvan hebben 622 URL's twee taxonomieën en 15.214 URL's drie
-taxonomieën. Alle 15.836 bevatten `functienaam`.
+Snippet 148 en snippet 193 begrenzen de eerste publicatiefase nu beide tot
+maximaal twee verschillende taxonomieën. De URL-cache van snippet 148 gebruikt
+een nieuwe sleutel. Daarna is de Rank Math-sitemapmodule eenmaal uit- en weer
+ingeschakeld, zodat Rank Math de sitemapindex op de normale manier opnieuw
+opbouwde.
 
-De huidige sitemap is dus technisch bereikbaar, gesplitst en begrensd tot twee
-of drie taxonomieën, maar er is geen geleidelijke publicatielimiet op een klein
-aantal URL's actief. De omschrijving “fase 1” en de commentaarregel “exact 2
-taxonomieën” komen niet overeen met de actuele configuratie: minimum is 2 en
-maximum is 3.
+De openbare sitemapindex bevat sindsdien precies twee
+`combo-vacatures`-sitemaps met samen 800 unieke URL's: 501 in deel 1 en 299 in
+deel 2. Alle 800 URL's bevatten exact twee taxonomieën; er zijn geen URL's met
+drie of meer taxonomieën aangetroffen.
 
 Representatieve frontendtests bevestigen:
 
 - twee taxonomieën met functienaam: `index, follow` en self-canonical;
-- drie taxonomieën met functienaam: `index, follow` en self-canonical;
-- twee taxonomieën zonder functienaam: `noindex, follow`;
-- vier taxonomieën: `noindex, follow`;
-- locatie-only: `index, follow` en self-canonical;
-- Search & Filter-query-URL: `noindex, follow`.
+- drie taxonomieën met functienaam: `noindex, follow` en geen canonical;
+- de homepage blijft bereikbaar met HTTP 200.
 
-Bij de geteste `noindex`-combo's en Search & Filter-URL werd geen canonical-link
-gerenderd. Dat wijkt voor Search & Filter af van de uitleg in snippet 193 en
-moet vóór verdere indexering worden hersteld of bewust als nieuw besluit worden
-vastgelegd.
+Een zwaardere, tijdelijke poging om alle Rank Math-sitemapcaches vanuit de
+snippet te verwijderen bleek onnodig belastend en is volledig teruggedraaid.
+De actieve snippet bevat geen permanente cache-bypass of globale
+cacheverwijdering. Inactieve herstelkopie 245 bevat de terugzetbare versie van
+snippet 148; ook de eerdere veiligheidskopieën 243, 244 en 246 zijn bewaard.
+De definitieve controle staat in
+`audits/2026-10-19-combo-sitemap-max-two-taxonomies.md`.
 
 #### Eerder vastgelegde keuze voor native vacature-taxonomiearchieven
 

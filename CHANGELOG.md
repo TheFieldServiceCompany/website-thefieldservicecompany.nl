@@ -1,5 +1,26 @@
 # Changelog
 
+## 2026-10-19 — Vacaturecombinaties beperkt tot twee taxonomieën
+
+- Snippet 148 begrensd tot exact twee taxonomieën per sitemap-URL en voorzien
+  van een nieuwe cache-sleutel voor deze eerste publicatiefase.
+- Snippet 193 begrensd tot maximaal twee taxonomieën voor indexering; een
+  combinatie met drie taxonomieën krijgt nu `noindex, follow`.
+- De uitleg in de snippet en de pluginomschrijving gelijkgetrokken met deze
+  grens van twee taxonomieën.
+- De Rank Math-sitemapmodule eenmaal uit- en weer ingeschakeld om de
+  sitemapindex via de bestaande, eenvoudige werkwijze opnieuw op te bouwen.
+- Live resultaat gecontroleerd: twee combo-sitemaps met respectievelijk 501 en
+  299 URL's, samen 800 unieke URL's met exact twee taxonomieën.
+- Een tweedimensionale test-URL geeft `index, follow` met self-canonical; een
+  driedimensionale test-URL geeft `noindex, follow` zonder canonical.
+- Een tijdelijk geteste zwaardere cacheverwijdering is teruggedraaid; de
+  actieve code bevat alleen de eenvoudige limiet en normale cachewerking.
+- Inactieve herstelkopieën 243, 244, 245 en 246 blijven in WordPress bewaard.
+  Er zijn geen vacatures, taxonomietermen of overige pagina-inhoud gewijzigd.
+- Details staan in
+  `audits/2026-10-19-combo-sitemap-max-two-taxonomies.md`.
+
 ## 2026-10-19 — LIVE opnieuw indexeerbaar gecontroleerd
 
 - Homepage, Vacatures, Beroepengids, Kennisbank en een functie-inhoudarchief
