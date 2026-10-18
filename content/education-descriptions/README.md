@@ -4,15 +4,15 @@ Status: 27 gecontroleerde concepten gereed; nog niet op LIVE gepubliceerd.
 
 ## Doel
 
-Deze map bevat de unieke onderteksten voor de toekomstige Beroepengids-hub
-`Opleidingen` en de twee afzonderlijke taxonomieën:
+Deze map bevat de unieke onderteksten voor de toekomstige hiërarchische
+Beroepengids-taxonomie `Opleidingen` (`beroep_opleiding`). Daarin worden
+`Opleidingsniveau` en `Studierichting` twee bovenliggende termen, met de vier
+niveaus en 23 studierichtingen als kindtermen.
 
-- opleidingsniveau;
-- studierichting.
-
-De vacaturetaxonomieën `opleidingsniveau` en `vac_studierichting` zijn de
-canonieke bron voor de termen. De teksten worden pas gepubliceerd nadat de
-spiegelende Pods-structuur en de relatievelden zijn goedgekeurd en getest.
+De twee gescheiden vacaturetaxonomieën `opleidingsniveau` en
+`vac_studierichting` zijn de canonieke bron voor de termen en relaties. De
+teksten worden pas gepubliceerd nadat de spiegelende hiërarchische
+Pods-structuur en de relatievelden zijn ingericht en getest.
 
 ## Omvang
 

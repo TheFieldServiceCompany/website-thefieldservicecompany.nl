@@ -1,5 +1,30 @@
 # Changelog
 
+## 2026-10-18 — Pods- en snippetimpact voor Opleidingen vastgesteld
+
+- Het Beroepengidsmodel verduidelijkt: één hiërarchische Pods-taxonomie
+  `beroep_opleiding`, met `Opleidingsniveau` en `Studierichting` als
+  parenttermen en de 4 + 23 canonieke waarden als kindtermen.
+- Vastgelegd dat er geen gewone Beroepengidspagina komt;
+  `/beroepengids/opleidingen/` wordt een virtueel taxonomy-basearchief zoals
+  functie-inhoud en bedrijfssectoren.
+- Alleen-lezen vastgesteld dat de bestaande Pods-velden
+  `archive_beroep_opleiding_intro` en `archive_beroep_opleiding_description`
+  door snippet 202 automatisch passen op de interne naam
+  `beroep_opleiding`.
+- De snippetimpact per onderdeel vastgelegd. Verplicht zijn een kleine
+  allowlistwijziging in snippet 113 en een SEO-mapping in snippet 209.
+  Snippet 62 krijgt waarschijnlijk een directe-kinderenquery. De generieke
+  relatie-, termveld- en vacatureknopsnippets kunnen ongewijzigd blijven.
+- Vastgelegd dat snippet 131 niet voor Opleidingen moet worden gebruikt,
+  omdat deze één doeltaxonomie per basisarchief verwacht terwijl Opleidingen
+  twee gescheiden vacaturetaxonomieën spiegelt.
+- Sitemap-, Elementor-, URL- en redirectimpact plus een veilige
+  uitvoeringsvolgorde gedocumenteerd in
+  `audits/2026-10-18-beroepengids-opleidingen-pods-snippet-impact.md`.
+- Er zijn nog geen live Pods, termen, snippets, templates of redirects
+  gewijzigd.
+
 ## 2026-10-18 — Descriptions voor opleidingen voorbereid
 
 - Een vaste redactionele productieprompt toegevoegd voor unieke,
@@ -18,9 +43,9 @@
   vacatures opgenomen. Voor studierichtingen is bewust nog geen vacatureclaim
   toegevoegd, omdat de WordPress-termen nog nul vacaturekoppelingen hebben.
 - Vastgelegd dat een dynamische TFSC-CTA alleen gekoppelde, actuele vacatures
-  mag tonen. De teksten zijn nog niet gepubliceerd: eerst moeten de
-  Beroepengids-Pods voor opleidingsniveau en studierichting worden ingericht en
-  getest.
+  mag tonen. De teksten zijn nog niet gepubliceerd: eerst moet de
+  hiërarchische Beroepengids-Pod `beroep_opleiding` met beide relatietakken
+  worden ingericht en getest.
 
 ## 2026-10-18 — Opleidingsniveaus en studierichtingen gesynchroniseerd
 
@@ -41,9 +66,10 @@
   vacatures leveren automatisch dezelfde 4 niveau- en 23
   studierichtingopties.
 - Appsmith-schermen en Pods zijn nog niet gewijzigd. Appsmith wordt hierna aan
-  beide kanten Nederlandstalig getest; voor Pods blijft het voorstel een
-  centrale pagina `Opleidingen` met afzonderlijke taxonomieën voor
-  opleidingsniveau en studierichting.
+  beide kanten Nederlandstalig getest. Voor de Beroepengids is inmiddels één
+  hiërarchische taxonomie `beroep_opleiding` vastgesteld, met
+  `Opleidingsniveau` en `Studierichting` als twee afzonderlijke termtakken en
+  zonder gewone pagina `Opleidingen`.
 
 ## 2026-10-18 — Opleidingenketen WordPress, Supabase en Appsmith onderzocht
 
@@ -63,8 +89,10 @@
   termmapping, WordPress-vacaturekoppeling, synchronisatie en tests moeten
   worden afgemaakt.
 - Als voorstel vastgelegd: `Opleidingen` wordt een overkoepelende
-  Beroepengidsingang, terwijl opleidingsniveau en studierichting technisch
-  gescheiden blijven. Er is niets gewijzigd in WordPress, Supabase of
+  Beroepengidsingang, terwijl opleidingsniveau en studierichting aan de
+  datakant technisch gescheiden blijven. Dit is later verduidelijkt als één
+  hiërarchische Beroepengids-taxonomie met twee termtakken, zonder gewone
+  pagina. Er was op dit moment nog niets gewijzigd in WordPress, Supabase of
   Appsmith. De volledige audit staat in
   `audits/2026-10-18-education-chain-wordpress-supabase-appsmith.md`.
 - Daarna inhoudelijk besloten dat de publieke niveaufilters `VMBO / LBO`,

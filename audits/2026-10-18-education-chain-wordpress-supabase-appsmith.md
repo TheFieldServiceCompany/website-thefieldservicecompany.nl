@@ -3,19 +3,20 @@
 Datum: 18 oktober 2026  
 Status: ontwerp goedgekeurd; eerste WordPress–Supabase-synchronisatie uitgevoerd en gecontroleerd
 
-## Aanbevolen model
+## Goedgekeurd model
 
-Gebruik `Opleidingen` als overkoepelend onderwerp of ingang in de
-Beroepengids, maar houd de onderliggende gegevens in twee afzonderlijke
-dimensies:
+Houd opleidingsniveau en studierichting in het vacature-, Supabase- en
+Appsmithmodel als twee afzonderlijke gegevensdimensies:
 
 1. **Opleidingsniveau** — het niveau waarop iemand is opgeleid of waarop een
    vacature is gericht.
 2. **Studierichting** — het vakgebied van de opleiding.
 
-Deze scheiding sluit al aan op WordPress, Supabase en Appsmith. Niveau en
-studierichting mogen daarom niet als gelijksoortige termen in één platte
-taxonomie worden samengevoegd.
+Deze scheiding sluit al aan op WordPress, Supabase en Appsmith. In de
+Beroepengids worden ze als twee duidelijke takken gespiegeld binnen één
+hiërarchische Pods-taxonomie `beroep_opleiding`: de parenttermen
+`Opleidingsniveau` en `Studierichting` krijgen daaronder respectievelijk de
+vier niveaus en 23 studierichtingen. Het wordt dus geen platte menglijst.
 
 ## Besluiten na inhoudelijke bespreking
 
@@ -201,12 +202,14 @@ expliciete WordPress-post-ID-koppeling nodig in `external_identifiers`.
 
 ### Pods en Beroepengids
 
-Pods is nog niet gewijzigd. Aanbevolen blijft om `Opleidingen` als centrale
-Beroepengids-hub te gebruiken en opleidingsniveau en studierichting als twee
-afzonderlijke taxonomieën te modelleren. Taxonomieën kunnen niet werkelijk als
-kind onder een andere taxonomie worden geplaatst; een hub met twee duidelijke
-ingangen voorkomt gemengde termen, onduidelijke relaties en problemen met
-filters, snippets en SEO-archieven.
+Pods is nog niet gewijzigd. Het goedgekeurde ontwerp gebruikt één
+hiërarchische Beroepengids-taxonomie `beroep_opleiding` met de parenttermen
+`Opleidingsniveau` en `Studierichting`. De vacaturetaxonomieën blijven wel
+gescheiden. Er komt geen gewone Beroepengidspagina: de ingang
+`/beroepengids/opleidingen/` wordt hetzelfde soort virtueel taxonomy-
+basisarchief als functienamen, functie-inhoud en bedrijfssectoren. De volledige
+snippetimpact en veilige uitvoeringsvolgorde staan in
+`2026-10-18-beroepengids-opleidingen-pods-snippet-impact.md`.
 
 ## Redactionele voorbereiding op 18 oktober 2026
 

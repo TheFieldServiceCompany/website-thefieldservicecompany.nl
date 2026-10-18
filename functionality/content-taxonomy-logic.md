@@ -167,22 +167,27 @@ werken daardoor rechtstreeks door in het Beroepengidsartikel. Dit werd zichtbaar
 toen bij `Wat is een Field Service Engineer?` aanvankelijk alleen `LBO`
 verscheen. Op 17 oktober 2026 zijn de opleidingsniveaus van alle 63
 gepubliceerde vacatures hersteld uit de oude live-WordPress-export. De
-functionele hertest toont nu HBO, LBO, MBO en Universiteit. Daarmee is bevestigd
+functionele hertest toont nu HBO, VMBO / LBO, MBO en WO / Universiteit. Daarmee is bevestigd
 dat het Beroepengidsartikel geen handmatige opleidingsrelatie nodig heeft: de
 actieve snippets leiden deze lijst correct af uit de gekoppelde vacatures.
 
-## TODO: opleidingsrichtingen in vacatures, Supabase en Appsmith
+## Ontwerp: Opleidingen in Beroepengids, vacatures, Supabase en Appsmith
 
-Voorlopig blijft de bestaande Beroepengids-taxonomie
-`beroep_opleidingsniveau` ongewijzigd en gekoppeld aan het bestaande
-vacature-`opleidingsniveau`. Er wordt nu geen overkoepelende taxonomie
-`Opleidingen` aangemaakt en er worden geen opleidingsrichtingen vooruitlopend
-ingericht of gekoppeld.
+De Beroepengids krijgt één hiërarchische taxonomie `beroep_opleiding` met het
+publieke label `Opleidingen`. `Opleidingsniveau` en `Studierichting` worden
+daarin parenttermen; de vier niveaus en 23 studierichtingen worden kindtermen.
+Er komt geen gewone Beroepengidspagina. De ingang wordt een virtueel
+taxonomy-basearchief onder `/beroepengids/opleidingen/`, overeenkomstig de
+bestaande archieven voor functie-inhoud en bedrijfssectoren.
+
+De bestaande Beroepengids-testtaxonomy `beroep_opleidingsniveau` wordt pas
+uitgefaseerd nadat de nieuwe boom, relaties, templates, sitemap en redirects
+zijn getest.
 
 De vacaturetaxonomie voor opleidingsrichtingen bestaat al: de technische naam
 is `vac_studierichting` en het zichtbare beheerlabel is `Studierichtingen`.
-Het latere werk betreft dus het controleren en vullen van de termen en
-vacaturekoppelingen, plus het ontwerpen van de bijpassende
+Het werk betreft dus het gecontroleerd vullen van vacaturekoppelingen en het
+spiegelen van de bestaande dimensies naar de goedgekeurde
 Beroepengids-taxonomie; niet het opnieuw aanmaken van de vacaturetaxonomie.
 
 Later pakken we dit als één samenhangend traject op:
@@ -197,34 +202,27 @@ Later pakken we dit als één samenhangend traject op:
    opleidingsrichtingen in plaats van vrije tekst;
 4. Appsmith aanpassen zodat opleidingsrichtingen bij vacatures kunnen worden
    bekeken, toegevoegd en gewijzigd met dezelfde canonieke waarden;
-5. de Beroepengids-taxonomie `Opleidingen`, de Pods-relaties en de betrokken
-   snippets uitbreiden, zodat opleidingsrichtingen naar de juiste vacatures
-   kunnen doorlinken;
+5. `beroep_opleiding`, de twee parenttermen, 27 kindtermen en de Pods-relaties
+   inrichten; niveaukinderen koppelen aan `opleidingsniveau` en
+   studierichtingkinderen aan `vac_studierichting`;
 6. synchronisatie, validatie, bestaande data, filters, REST-uitvoer en
    end-to-endwerking in WordPress, Supabase en Appsmith gezamenlijk testen.
 
-Deze TODO is alleen een ontwerp- en implementatieopdracht voor later. Er worden
-nu geen opleidingsrichtingen, mappings of databasevelden aangemaakt of
-gewijzigd.
-
-Pas wanneer opleidingsrichtingen in WordPress-vacatures, Supabase en Appsmith
-volledig zijn ontworpen, gevuld en getest, beoordelen we de overgang naar één
-overkoepelende Beroepengids-taxonomie `Opleidingen`. Die kan dan
-`Opleidingsniveau`, `Opleidingsrichting` en eventuele aanvullende onderwerpen
-onderbrengen. Bij die overgang horen expliciet: migratie van bestaande
-Beroepengids-termen en Pods-relaties, aanpassing van snippets en sitemap,
-controle van templates, filters en SEO, behoud of 301-redirect van bestaande
-URL's en een functionele hertest voordat `beroep_opleidingsniveau` wordt
-uitgefaseerd.
+Het ontwerp is vastgesteld, maar tijdens de impactanalyse nog niet live
+uitgevoerd. Bij de overgang horen expliciet: aanpassing van snippets en
+sitemap, controle van templates, filters en SEO, behoud of 301-redirect van
+bestaande URL's en een functionele hertest voordat
+`beroep_opleidingsniveau` wordt uitgefaseerd. Zie voor de uitwerking
+`audits/2026-10-18-beroepengids-opleidingen-pods-snippet-impact.md`.
 
 ## TODO: werkgebieden, opleidingsniveaus en reisprofielen
 
 - De bestaande vacaturetaxonomie `werkgebied` nog inhoudelijk nalopen, vullen
   en aan bestaande vacatures koppelen; daarna vergelijken met
   `beroep_werkgebied`, plaatsen, postcodes en Supabase.
-- De herstelde vacaturetaxonomie `opleidingsniveau` en
-  `beroep_opleidingsniveau` later verder gelijktrekken met één goedgekeurde
-  canonieke termenlijst. De 63 bestaande gepubliceerde vacaturekoppelingen zijn
+- De herstelde vacaturetaxonomie `opleidingsniveau` later spiegelen naar de
+  tak `Opleidingsniveau` van `beroep_opleiding`. De 63 bestaande gepubliceerde
+  vacaturekoppelingen zijn
   op 17 oktober 2026 uit de oude live-export hersteld en exact gecontroleerd;
   toekomstig werk betreft nieuwe vacatures, eventuele ontbrekende termen en de
   WordPress-, Supabase- en Appsmith-keten.
