@@ -1,5 +1,24 @@
 # Changelog
 
+## 2026-10-18 — Elementor-relatiequery behoudt vacaturestatusfilters
+
+- Oorzaak vastgesteld in actieve Code Snippet 204: de query
+  `relationship_posts` verving de volledige bestaande Elementor `tax_query`.
+  Daardoor verdween onder meer de ingestelde uitsluiting
+  `vac_status = Ingevuld` zodra relatievelden werden toegepast.
+- Vooraf inactieve herstelkopie 240 gemaakt en herkenbaar benoemd.
+- Snippet 204 bijgewerkt van versie 3.0 naar 3.1. De bestaande Elementor-
+  voorwaarden en de relatievoorwaarden worden nu als twee geneste groepen met
+  `AND` gecombineerd; de interne `AND`/`IN`-logica van beide groepen blijft
+  intact.
+- Functioneel getest op de Beroepengidsarchieven **Maritieme techniek** en
+  **MBO**. De ingevulde vacature *Internationaal Service Monteur Maritiem*
+  wordt niet meer getoond, terwijl gekoppelde open vacatures zichtbaar
+  blijven.
+- REST-herlezing bevestigt dat snippet 204 actief is en geen codefout meldt.
+  Details staan in
+  `audits/2026-10-18-elementor-relationship-query-preserve-filters.md`.
+
 ## 2026-10-18 — Rank Math-audit Opleidingen uitgevoerd
 
 - Rank Math-instellingen, live HTML-meta, robots, canonicals en de werkelijke

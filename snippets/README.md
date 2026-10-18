@@ -19,6 +19,7 @@ naar WordPress uitgerold.
 | Code Snippet 148 | Actief | Custom Rank Math-sitemaps voor indexeerbare vacaturecombinaties | Snippets 186 en 193, Rank Math |
 | Code Snippet 186 | Actief | Virtuele vacature-comboarchieven, rewrites, queries, paginering en Search & Filter-synchronisatie | WordPress, Elementor Pro en Search & Filter Query 1 |
 | Code Snippet 193 | Actief | SEO, robots, canonical, metadata en indexeringsbesluit voor combo- en filter-URL's | Snippet 186 en Rank Math |
+| Code Snippet 204 | Actief, versie 3.1 | Elementor-postqueries filteren via Pods-relaties zonder bestaande Elementor-filters te overschrijven | Pods, Elementor Query ID `relationship_posts` en taxonomieën van de gekozen Source |
 | Code Snippet 209 | Actief, versie 1.2 | Unieke Rank Math-title en description voor de twee hoofdarchieven en de zeven virtuele Beroepengids-basearchieven | Rank Math en queryvar `tfsc_taxonomy_archive` |
 | Code Snippet 215 | Actief, versie 1.2 | Beroepengids-basearchieven en de twee native opleidingstaxonomysitemaps aan de Rank Math-sitemapindex toevoegen | Rank Math Sitemap API |
 | `snip-tfsc` | Actief | Google Jobs/SNIP-locatieobjecten maken vanuit WordPress-locatietermen | SNIP Pro, taxonomie `locatie` en termmeta |
@@ -108,6 +109,26 @@ toegevoegd. Zij leveren de basisroutes `/beroepengids/opleidingsniveaus/` en
 `/beroepengids/studierichtingen/`. De gecombineerde `beroep_opleiding`-route
 wordt niet meer door deze snippet gepubliceerd. De actieve LIVE-versie is 3.2;
 snippet 223 is de inactieve herstelkopie.
+
+### 204 — Gerelateerde posts via Pods-relaties
+
+Haakt in op Elementor Query ID `relationship_posts`. De snippet leest alle
+Pods-velden met prefix `relationship_`, normaliseert de gekoppelde termen en
+gebruikt alleen taxonomieën die bij de in Elementor gekozen Source horen.
+Verschillende relatietaxonomieën worden met `AND` gecombineerd; meerdere
+termen binnen één taxonomie gebruiken `IN`.
+
+Versie 3.0 verving aan het einde de volledige bestaande `tax_query`. Daardoor
+verdwenen filters die in Elementor zelf waren ingesteld, waaronder de
+uitsluiting van vacatures met `vac_status = Ingevuld`. Versie 3.1 behoudt de
+bestaande Elementor-query en plaatst die samen met de relatiequery in een
+nieuwe bovenliggende `AND`-groep. Zo moeten vacatures zowel aan de Elementor-
+voorwaarden als aan de gekozen relaties voldoen.
+
+De actieve LIVE-snippet is 204. Snippet 240 is de inactieve herstelkopie van
+versie 3.0. De correctie is functioneel getest op de archieven Maritieme
+techniek en MBO: de ingevulde testvacature verdween en gekoppelde open
+vacatures bleven staan.
 
 ### 9 — ALT en title voor uitgelichte afbeelding
 
