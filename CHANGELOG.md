@@ -1,5 +1,20 @@
 # Changelog
 
+## 2026-10-19 — LIVE opnieuw indexeerbaar gecontroleerd
+
+- Homepage, Vacatures, Beroepengids, Kennisbank en een functie-inhoudarchief
+  geven HTTP 200 en `follow, index`; de sitebrede `noindex, nofollow` is weg.
+- `robots.txt` en de sitemapindex zijn bereikbaar.
+- Het bestaande canonicalbeleid van snippet 193 opnieuw zichtbaar en op
+  meerdere taxonomieën bevestigd: andere native vacaturetaxonomieën dan
+  functienaam en locatie verwijzen momenteel naar een combo met
+  `field-service-engineer` als vaste context.
+- Vastgelegd dat dit canonicalbesluit en de 15.836 combo-URL's zonder
+  geleidelijke sitemaplimiet op 20 oktober als eerste SEO-punten opnieuw
+  worden beoordeeld.
+- Er is niets in WordPress gewijzigd. Details staan in
+  `audits/2026-10-19-live-indexability-reenabled.md`.
+
 ## 2026-10-19 — Centrale archievenpagina en reisprofielen als TODO vastgelegd
 
 - TODO toegevoegd voor één centrale, logisch gegroepeerde overzichtspagina
