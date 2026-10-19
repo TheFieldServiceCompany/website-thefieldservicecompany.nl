@@ -109,23 +109,217 @@ of aliassen. Meerdere WordPress-termen mogen dan naar dezelfde canonieke
 betekenis verwijzen. Appsmith toont één operationele keuze of één concreet veld,
 niet iedere SEO-variant als aparte waarde.
 
-## Eerstvolgende werkvolgorde
+## Uitvoeringsstatus
 
-1. Lees alleen-lezen alle 25 actuele WordPress-termen, slugs, beschrijvingen,
-   tellingen en vacaturekoppelingen uit.
-2. Maak per term een controlematrix met dimensie, betekenis, mogelijke alias,
-   Supabase-doelveld en eventuele informatie die niet veilig kan worden
-   afgeleid.
-3. Leg conflicten en ontbrekende keuzes aan de gebruiker voor. Verwijder of
+1. [x] Alle 25 actuele WordPress-termen, slugs, beschrijvingen, tellingen en
+   vacaturekoppelingen alleen-lezen uitlezen.
+2. [x] Per term een controlematrix maken met dimensie, betekenis, mogelijke
+   alias, Supabase-doelveld en informatie die niet veilig kan worden afgeleid.
+3. [ ] Conflicten en ontbrekende keuzes aan de gebruiker voorleggen. Verwijder of
    hernoem geen termen.
-4. Besluit welke termen publiek/SEO blijven en welke canonieke keuzes Appsmith
+4. [ ] Besluiten welke termen publiek/SEO blijven en welke canonieke keuzes Appsmith
    toont.
-5. Leg dezelfde aanpak vast voor de overige WordPress-taxonomieën en
+5. [x] Dezelfde aanpak vastleggen voor de overige WordPress-taxonomieën en
    keuzelijsten.
-6. Maak pas na goedkeuring een testbaar implementatie- en migratieplan voor
+6. [ ] Pas na goedkeuring een testbaar implementatie- en migratieplan maken voor
    WordPress, Supabase en Appsmith.
-7. Schrijf Reisprofiel-descriptions en leg vacaturekoppelingen pas vast nadat
+7. [ ] Reisprofiel-descriptions schrijven en vacaturekoppelingen pas vastleggen nadat
    het model is goedgekeurd; anders wordt de huidige vermenging versterkt.
 
 Er zijn voor deze reconstructie geen gegevens of instellingen in WordPress,
 Supabase of Appsmith gewijzigd.
+
+## Actuele alleen-lezen inventarisatie
+
+Op 19 oktober 2026 is de LIVE-taxonomie opnieuw via de publieke WordPress REST-
+API uitgelezen. De ruwe momentopname staat in
+`audits/exports/reisprofiel-live-2026-10-19.json`.
+
+- Er zijn 25 termen.
+- Alle 25 descriptions zijn leeg.
+- Zes termen hebben `count = 1`; de overige negentien hebben `count = 0`.
+- De zes gebruikte termen staan allemaal op vacature `23277`, `Field Service
+  Engineer HVAC Koeltechniek | Internationaal Allround`.
+- De taxonomie is hiërarchisch geregistreerd, maar alle termen staan op het
+  hoogste niveau.
+
+## Voorstel per term
+
+Dit is een voorstel en nog geen verwijderopdracht. Voor verwijdering worden
+eerst de vacaturekoppeling, redirects, indexering en descriptions geregeld.
+
+| ID | Huidige term | Gebruik | Voorstel | Canonieke bestemming of reden |
+| ---: | --- | ---: | --- | --- |
+| 468 | Internationaal reizen | 1 | Verwijderen uit Reisprofiel | `international_travel_required` en Werkgebied Internationaal |
+| 469 | Nationaal reizen | 0 | Verwijderen uit Reisprofiel | Internationaal reizen = nee en Werkgebied Nederland |
+| 470 | Hotelovernachting | 0 | **Houden** | Publiek label voor `overnight_stays_required` |
+| 471 | Vaak van huis | 1 | Verwijderen als losse term | Te vaag; afleiden uit internationale dagen en nachten van huis |
+| 472 | Langdurig op locatie | 0 | **Houden** | Publiek profiel op basis van maximale aaneengesloten nachten; grens nog bepalen |
+| 473 | Kort op locatie | 0 | Samenvoegen/verwijderen | Synoniem van `Korte trips` |
+| 474 | Veel vliegen | 1 | Verwijderen als losse term | Geen canoniek vervoersmiddelveld; als zoekterm in teksten behouden |
+| 476 | Bijna elke dag thuis | 0 | **Houden** | Publiek profiel voor geen of zeer weinig overnachtingen; grens nog bepalen |
+| 480 | Hotelovernachting 25% | 0 | Samenvoegen/verwijderen | Percentage is niet exact en overlapt met nachten thuis |
+| 481 | Hotelovernachting 50% | 1 | Samenvoegen/verwijderen | Naar `Hotelovernachting`; percentage in description bewaren |
+| 482 | Hotelovernachting 75% | 0 | Samenvoegen/verwijderen | Percentage is niet exact en overlapt met nachten thuis |
+| 483 | Nachten thuis 100% | 0 | Samenvoegen/verwijderen | Naar `Bijna elke dag thuis` |
+| 484 | Nachten thuis 75% | 0 | Verwijderen als losse term | Omgekeerde en onnauwkeurige variant van hotelovernachtingspercentage |
+| 485 | Nachten thuis 50% | 1 | Verwijderen als losse term | Omgekeerde duplicaatvariant; verwerken in description Hotelovernachting |
+| 486 | Nachten thuis 25% | 0 | Verwijderen als losse term | Omgekeerde en onnauwkeurige variant van hotelovernachtingspercentage |
+| 487 | Weekenden thuis | 0 | **Houden** | Publiek label voor `weekend_travel_required = false` |
+| 488 | Hotelovernachting weekdagen | 0 | Samenvoegen/verwijderen | Combinatie van Hotelovernachting en Weekenden thuis |
+| 489 | Korte trips | 0 | **Houden** | Publiek profiel op basis van maximale aaneengesloten nachten; grens nog bepalen |
+| 490 | Reizen Nederland | 0 | Verwijderen uit Reisprofiel | Werkgebied Nederland |
+| 491 | Reizen Internationaal | 1 | Verwijderen uit Reisprofiel | Duplicaat van Internationaal reizen; naar veld en Werkgebied |
+| 492 | Reizen Nationaal | 0 | Verwijderen uit Reisprofiel | Duplicaat van Nationaal reizen |
+| 493 | Reizen Benelux | 0 | Verwijderen uit Reisprofiel | Werkgebied Benelux |
+| 494 | Reizen België | 0 | Verwijderen uit Reisprofiel | Werkgebied België |
+| 495 | Reizen Duitsland | 0 | Verwijderen uit Reisprofiel | Werkgebied Duitsland |
+| 496 | Reizen Polen | 0 | Verwijderen uit Reisprofiel | Eerst Polen als canoniek Werkgebied beoordelen |
+
+Voorgesteld eindresultaat: vijf duidelijke publieke Reisprofielen behouden:
+
+1. `Hotelovernachting`;
+2. `Langdurig op locatie`;
+3. `Bijna elke dag thuis`;
+4. `Weekenden thuis`;
+5. `Korte trips`.
+
+### Voorgestelde afleidingsregels
+
+Deze grenzen zijn concreet genoeg om te testen, maar worden pas na goedkeuring
+gebruikt:
+
+| Publiek Reisprofiel | Vacatureveldregel in Supabase |
+| --- | --- |
+| Bijna elke dag thuis | `overnight_stays_required = false`; een onbekende waarde levert geen profiel op |
+| Hotelovernachting | `overnight_stays_required = true` |
+| Korte trips | `max_consecutive_nights_away` tussen 1 en 7 |
+| Langdurig op locatie | `max_consecutive_nights_away` vanaf 8 |
+| Weekenden thuis | `overnight_stays_required = true` én `weekend_travel_required = false` |
+
+Een vacature kan dus bijvoorbeeld zowel `Hotelovernachting` als `Korte trips`
+hebben. Dat zijn geen doublures: het ene zegt dat overnachten voorkomt en het
+andere hoe lang een aaneengesloten reis maximaal duurt. Bij een onbekende bron-
+waarde wordt geen label gegokt.
+
+De andere twintig termen worden na goedkeuring gemapt, samengevoegd of
+verwijderd. De zes nu gebruikte termen vallen allemaal in die groep. Vacature
+`23277` moet daarom vóór verwijdering expliciet worden omgezet naar de juiste
+Werkgebieden en gestructureerde reisvelden. Alleen `Hotelovernachting` kan uit
+de huidige twee percentage-termen veilig als breder label worden afgeleid; de
+overige waarden worden niet gegokt.
+
+### Zoekwoorden en bestaande URL's bewaren
+
+Verwijderen uit de taxonomie betekent niet dat de woorden uit de website
+verdwijnen:
+
+- percentages, `nachten thuis` en `hotelovernachting weekdagen` komen
+  natuurlijk terug in de description van `Hotelovernachting` en waar passend
+  bij `Weekenden thuis`;
+- `kort op locatie` komt terug bij `Korte trips`;
+- `vaak van huis` komt terug bij `Langdurig op locatie` en de relevante
+  Dagen-internationaal-archieven;
+- `veel vliegen`, `internationaal reizen` en `reizen internationaal` komen
+  terug in descriptions van Werkgebied Internationaal/Wereldwijd en de
+  Dagen-internationaal-archieven;
+- landnamen en regiovarianten komen terug op de bijbehorende
+  Werkgebied-archieven.
+
+Voor iedere verwijderde publieke term wordt vóór verwijdering bepaald of een
+301-redirect nodig is. Een term wordt niet simpelweg verwijderd met een 404
+als de URL geïndexeerd is, verkeer heeft of externe links ontvangt.
+
+## Actuele Supabase-controle
+
+Project: `tfsc-crm-ats-staging` (`bpfocgapqsrokmargsjr`). Alle controles waren
+alleen-lezen.
+
+### Schema
+
+De benodigde gestructureerde velden bestaan al:
+
+- kandidaten: internationaal reizen, maximaal internationale dagen per jaar,
+  maximaal aaneengesloten nachten weg, overnachtingen en weekendreizen;
+- vacatures: dezelfde vijf reiskenmerken als requirements;
+- werkgebieden: aparte relaties naar `geographic_areas`;
+- mobiliteit: woon-werkafstand, verhuizen en eigen vervoer staan apart.
+
+Er is geen veld voor vervoersmiddel of `veel vliegen`. Als dat operationeel
+filterbaar moet blijven, vereist dat later een afzonderlijk modelbesluit. Het
+mag niet stilzwijgend als ja/nee-reisveld worden geïnterpreteerd.
+
+### Geen gekopieerde WordPress-doublures
+
+- `source_term_mappings` bevat geen mapping voor `reisprofiel`.
+- `observed_terms` bevat geen van de 25 Reisprofiel-labels.
+- De ruwe bronvelden van de kandidaat-reisvoorkeuren bevatten de besproken
+  WordPress-labels niet.
+- Landen en regio's uit de Reisprofiel-lijst bestaan al canoniek in
+  `geographic_areas`: België, Duitsland, Nederland, Polen, Benelux, Europa en
+  World Wide.
+
+Er hoeft dus geen lijst met 25 dubbele termen uit Supabase te worden verwijderd.
+
+### Wel aanwezige kandidaatdata die later moet worden beoordeeld
+
+`candidate_travel_preferences` bevat 1.773 op 10 september 2026 geïmporteerde
+records:
+
+- alle 1.773 zijn `unreviewed` en hebben `origin_method = imported`;
+- alle 1.773 staan op internationaal reizen = ja;
+- maximaal internationale dagen: 35 × 120, 1.377 × 200 en 361 × onbekend;
+- maximaal aaneengesloten nachten: 17 × 7, 85 × 28, 528 × 56 en 1.143 ×
+  onbekend;
+- overnachtingen en weekendreizen zijn bij alle 1.773 nog onbekend.
+
+De ruwe EngageBay-keuzes zijn behouden. Open categorieën zijn niet foutief als
+maximum ingevuld: alle 358 records met `vanaf 200 dagen` hebben een onbekend
+maximum en alle 167 records met `vanaf 9 weken` hebben een onbekend maximum.
+Deze records zijn dus geen kopieën van de WordPress-doublures, maar de kwaliteit
+en betekenis moeten vóór gebruik voor automatische matching wel worden
+gevalideerd. Er wordt nu niets verwijderd of overschreven.
+
+### Vacaturedata
+
+Er staat één ingevuld record in `vacancy_travel_requirements` en één in
+`vacancy_mobility_requirements`. Beide horen bij de bestaande Codex-
+verificatievacature, niet bij de live WordPress-vacature `23277`. De echte
+WordPress-vacatures zijn op deze gestructureerde velden dus nog niet
+gesynchroniseerd.
+
+## Actuele Appsmith-controle
+
+Repository `tfsc-appsmith-crm`, branch `crm-layout-redesign`, gecontroleerde
+commit `e709b22`.
+
+Appsmith kan de volgende reiswaarden voor kandidaten en vacatures al tonen en
+opslaan:
+
+- werkgebieden;
+- internationaal reizen;
+- maximum internationale dagen per jaar;
+- maximum aaneengesloten nachten weg;
+- overnachtingen;
+- weekendreizen;
+- eigen vervoer en verhuizen;
+- bij kandidaten ook maximale enkele woon-werkafstand.
+
+De matchlogica vergelijkt werkgebieden, internationaal reizen,
+overnachtingen, weekendreizen, internationale dagen, eigen vervoer en
+verhuizen afzonderlijk. Het voorgestelde opschonen van WordPress sluit daarom
+aan op de bestaande Appsmith/Supabase-opbouw.
+
+## Besluiten vóór uitvoering
+
+1. Goedkeuren of de vijf voorgestelde Reisprofielen de definitieve publieke
+   set worden.
+2. De voorgestelde afleidingsregels voor `Korte trips`, `Langdurig op locatie`,
+   `Bijna elke dag thuis`, `Hotelovernachting` en `Weekenden thuis` goedkeuren
+   of aanpassen.
+3. Besluiten of `Veel vliegen` alleen een zoekterm in descriptions wordt of
+   een nieuw, afzonderlijk vervoersmiddelveld nodig heeft.
+4. De omzetting van vacature `23277` vooraf als controlelijst tonen.
+5. Per te verwijderen term de redirectbestemming en SEO-status controleren.
+6. Pas daarna WordPress wijzigen en vervolgens de goedgekeurde mapping naar
+   Supabase/Appsmith implementeren en testen.

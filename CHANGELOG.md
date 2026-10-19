@@ -1,5 +1,29 @@
 # Changelog
 
+## 2026-10-19 — Reisprofielen live geïnventariseerd en syncplan vastgelegd
+
+- De 25 LIVE-Reisprofiel-termen via WordPress REST alleen-lezen vastgelegd,
+  inclusief slugs, lege descriptions, gebruikstellers en de ene gekoppelde
+  vacature.
+- Voorgesteld vijf onderscheidende publieke profielen te behouden en twintig
+  overlappende, geografische of niet-canonieke termen gecontroleerd te mappen,
+  samen te voegen of te verwijderen. Zoekvarianten blijven in descriptions en
+  relevante archiefteksten behouden; oude URL's worden vóór verwijdering op
+  redirects en indexering beoordeeld.
+- Supabase alleen-lezen gecontroleerd. De gestructureerde reis-, werkgebied- en
+  mobiliteitsvelden bestaan al; de 25 WordPress-termen zijn niet als dubbele
+  vocabulaire of termmappings gekopieerd.
+- Vastgelegd dat 1.773 geïmporteerde kandidaat-reisrecords nog `unreviewed`
+  zijn en later inhoudelijk moeten worden gevalideerd, maar niet blind worden
+  verwijderd of overschreven.
+- Bevestigd dat Opleidingsniveau 4 en Studierichting 23 actieve WordPress-naar-
+  Supabase-mappings hebben. Een centrale herhaalbare werkwijze voor alle
+  WordPress–Supabase–Appsmith-keuzes is toegevoegd.
+- Er zijn geen livegegevens of instellingen in WordPress, Supabase of Appsmith
+  gewijzigd. Zie
+  `audits/2026-10-19-reisprofielen-wordpress-supabase-appsmith.md` en
+  `audits/2026-10-19-wordpress-supabase-appsmith-sync-plan.md`.
+
 ## 2026-10-19 — Reisprofielen en CRM-architectuur gecorrigeerd
 
 - Gecorrigeerd dat Appsmith het CRM en de beheerinterface is en Supabase de

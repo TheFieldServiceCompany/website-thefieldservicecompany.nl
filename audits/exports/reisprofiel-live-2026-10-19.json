@@ -1,0 +1,45 @@
+{
+  "source": "https://thefieldservicecompany.nl/wp-json/wp/v2/reisprofiel",
+  "environment": "LIVE",
+  "checked_on": "2026-10-19",
+  "taxonomy": {
+    "name": "Reisprofielen",
+    "slug": "reisprofiel",
+    "post_types": ["vacature"],
+    "hierarchical": true,
+    "rest_base": "reisprofiel"
+  },
+  "terms": [
+    {"id": 468, "name": "Internationaal reizen", "slug": "internationaal-reizen", "count": 1, "description": ""},
+    {"id": 469, "name": "Nationaal reizen", "slug": "nationaal-reizen", "count": 0, "description": ""},
+    {"id": 470, "name": "Hotelovernachting", "slug": "hotelovernachting", "count": 0, "description": ""},
+    {"id": 471, "name": "Vaak van huis", "slug": "vaak-van-huis", "count": 1, "description": ""},
+    {"id": 472, "name": "Langdurig op locatie", "slug": "langdurig-op-locatie", "count": 0, "description": ""},
+    {"id": 473, "name": "Kort op locatie", "slug": "kort-op-locatie", "count": 0, "description": ""},
+    {"id": 474, "name": "Veel vliegen", "slug": "veel-vliegen", "count": 1, "description": ""},
+    {"id": 476, "name": "Bijna elke dag thuis", "slug": "bijna-elke-dag-thuis", "count": 0, "description": ""},
+    {"id": 480, "name": "Hotelovernachting 25%", "slug": "hotelovernachting-25", "count": 0, "description": ""},
+    {"id": 481, "name": "Hotelovernachting 50%", "slug": "hotelovernachting-50", "count": 1, "description": ""},
+    {"id": 482, "name": "Hotelovernachting 75%", "slug": "hotelovernachting-75", "count": 0, "description": ""},
+    {"id": 483, "name": "Nachten thuis 100%", "slug": "nachten-thuis-100", "count": 0, "description": ""},
+    {"id": 484, "name": "Nachten thuis 75%", "slug": "nachten-thuis-75", "count": 0, "description": ""},
+    {"id": 485, "name": "Nachten thuis 50%", "slug": "nachten-thuis-50", "count": 1, "description": ""},
+    {"id": 486, "name": "Nachten thuis 25%", "slug": "nachten-thuis-25", "count": 0, "description": ""},
+    {"id": 487, "name": "Weekenden thuis", "slug": "weekenden-thuis", "count": 0, "description": ""},
+    {"id": 488, "name": "Hotelovernachting weekdagen", "slug": "hotelovernachting-weekdagen", "count": 0, "description": ""},
+    {"id": 489, "name": "Korte trips", "slug": "korte-trips", "count": 0, "description": ""},
+    {"id": 490, "name": "Reizen Nederland", "slug": "reizen-nederland", "count": 0, "description": ""},
+    {"id": 491, "name": "Reizen Internationaal", "slug": "reizen-internationaal", "count": 1, "description": ""},
+    {"id": 492, "name": "Reizen Nationaal", "slug": "reizen-nationaal", "count": 0, "description": ""},
+    {"id": 493, "name": "Reizen Benelux", "slug": "reizen-benelux", "count": 0, "description": ""},
+    {"id": 494, "name": "Reizen België", "slug": "reizen-belgie", "count": 0, "description": ""},
+    {"id": 495, "name": "Reizen Duitsland", "slug": "reizen-duitsland", "count": 0, "description": ""},
+    {"id": 496, "name": "Reizen Polen", "slug": "reizen-polen", "count": 0, "description": ""}
+  ],
+  "used_term_vacancy": {
+    "id": 23277,
+    "slug": "field-service-engineer-hvac-koeltechniek-internationaal-allround",
+    "title": "Field Service Engineer HVAC Koeltechniek | Internationaal Allround",
+    "term_ids": [481, 468, 485, 491, 471, 474]
+  }
+}

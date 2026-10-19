@@ -18,17 +18,20 @@ gewijzigd; open afhankelijkheden worden niet stilzwijgend overgeslagen.
 1. [x] **Doelarchitectuur bevestigd.** Appsmith is het CRM en de
    beheerinterface, Supabase is de canonieke database en EngageBay is alleen
    legacy- en migratiebron.
-2. [ ] **Reisprofielen alleen-lezen inventariseren en classificeren.** Alle 25
+2. [x] **Reisprofielen alleen-lezen inventariseren en classificeren.** Alle 25
    actuele termen, slugs, descriptions, tellingen en vacaturekoppelingen
    vastleggen en per term bepalen of het om gebied, reisomvang,
    overnachtingen, thuisnachten, weekendreizen of reispatroon gaat.
 3. [ ] **Reisprofiel-mapping en aliasbeleid goedkeuren.** Bewuste
    zoektermvarianten in WordPress behouden waar ze publiek nut hebben, maar
    koppelen aan één canonieke betekenis of concreet Supabase-veld; geen
-   dubbele operationele keuzes in Appsmith maken.
+   dubbele operationele keuzes in Appsmith maken. Voorstel: vijf termen houden
+   en twintig termen mappen, samenvoegen of verwijderen; zie de audit.
 4. [ ] **Volledige WordPress–Supabase–Appsmith-keuzematrix maken.** Naast
    Reisprofielen ook Werkgebieden, Dagen internationaal en de resterende
    taxonomieën en keuzelijsten vergelijken op naam, betekenis, ID en status.
+   Opleidingsniveau heeft al 4 en Studierichting 23 actieve mappings; deze
+   worden in de end-to-endcontrole opnieuw gevalideerd.
 5. [ ] **Publieke WordPress-structuur afronden.** Pas na goedkeuring van de
    matrix descriptions, vacaturekoppelingen, archieven en eventuele
    Beroepengids-spiegels gecontroleerd afwerken.
