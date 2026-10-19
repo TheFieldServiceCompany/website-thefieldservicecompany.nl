@@ -1,5 +1,30 @@
 # Changelog
 
+## 2026-10-19 — LIVE-formulieren en Supabase-koppelopties geïnventariseerd
+
+- De zes actuele Elementor-formulieren op LIVE zijn alleen-lezen uitgelezen:
+  veld-ID's, types, verplichtheid, privacyvelden, verborgen bronvelden,
+  uploadlimieten, bestandstypen, opslagwijze en ingestelde acties staan nu in
+  `audits/2026-10-19-formulier-supabase-appsmith-nulmeting.md`.
+- AFI Premium 2.10.3 heeft zes actieve Elementor→EngageBay-integraties. Het
+  LIVE-overzicht markeert alle zes als falend in de afgelopen zeven dagen. Er
+  zijn geen foutpayloads, inzendingen, persoonsgegevens of bestanden geopend.
+- Het LIVE-scherm voor een nieuwe AFI-integratie biedt alleen EngageBay en
+  EngageBay [PRO] als bestemming. Supabase en een algemene Webhook zijn op
+  deze installatie niet selecteerbaar.
+- Bestaande WordPress/Elementor-koppelopties zijn onderzocht. Er is geen
+  passende volwassen directe Elementor→Supabase-plugin gevonden. De voorkeur
+  blijft een kleine lokale TFSC-outboxconnector naar een beveiligde,
+  idempotente Supabase Edge Function. WP Webhooks Pro is vastgelegd als
+  serieuze pluginvariant; een directe Elementor Webhook is alleen geschikt
+  voor een afgeschermde proef zonder duurzaam retrymechanisme.
+- `TODO.md` markeert de LIVE-formulier- en uploadinventaris als afgerond. De
+  eerstvolgende stap is de per-formulier mapping naar bestaande
+  Supabase-records en Appsmith-weergaven, met expliciete beslispunten voor
+  toestemming, deduplicatie en bestanden.
+- Er zijn geen WordPress-, Elementor-, AFI-, Supabase- of Appsmith-
+  instellingen of gegevens gewijzigd.
+
 ## 2026-10-19 — Formulierkoppeling naar actuele werkprioriteit verplaatst
 
 - Op verzoek van de gebruiker staat de koppeling van de zes LIVE WordPress-

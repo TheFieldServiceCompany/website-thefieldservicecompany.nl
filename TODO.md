@@ -11,10 +11,10 @@ Op 19 oktober 2026 heeft de gebruiker de werkprioriteit verlegd van travel naar
 de koppeling van de WordPress-formulieren met Supabase en Appsmith. Travel
 blijft open staan, maar wordt niet eerst uitgevoerd.
 
-1. [ ] De actuele configuratie van Registratie, Solliciteren,
+1. [x] De actuele configuratie van Registratie, Solliciteren,
    Werkgeverscontact, Mailing, Advies en Vraag op LIVE alleen-lezen uitlezen:
    formulier-ID, veld-ID, type, verplichtheid, toestemming, uploads, limieten
-   en alle ingestelde acties.
+   en alle ingestelde acties. Afgerond op 19 oktober; zie de actuele nulmeting.
 2. [ ] Per formulier vastleggen welk bestaand Supabase-record en welke relaties
    moeten ontstaan. Geen nieuwe tabellen ontwerpen voordat deze mapping is
    goedgekeurd.
@@ -119,9 +119,12 @@ gewijzigd; open afhankelijkheden worden niet stilzwijgend overgeslagen.
    EngageBay-bron, Appsmith-weergave en bestaande importlogica controleren.
 8. [ ] **Exacte grens van de eerdere kandidaatimport vastleggen.** Het laatste
    betrouwbare bron-ID of eindmoment bewijzen; niet op een datum gokken.
-9. [ ] **Actuele formulieren en uploads inventariseren.** Registratie,
+9. [x] **Actuele formulieren en uploads inventariseren.** Registratie,
    sollicitatie, werkgeverscontact, mailing, advies en vraag inclusief
-   Elementor-veld-ID's, bestandstypen, limieten en bestaande acties vastleggen.
+   Elementor-veld-ID's, bestandstypen, limieten en bestaande acties zijn op
+   19 oktober alleen-lezen vastgelegd. Alle zes actieve AFI-koppelingen naar
+   EngageBay staan in het LIVE-overzicht als falend in de afgelopen zeven
+   dagen. Zie `audits/2026-10-19-formulier-supabase-appsmith-nulmeting.md`.
 10. [ ] **Eigenaarschap en privacybesluiten nemen.** Per gegeven het leidende
    systeem, toestemming, bewaartermijn, verwijderroute en logbeleid bepalen.
 11. [ ] **Deduplicatie- en koppelregels goedkeuren.** E-mail, telefoon,
@@ -131,7 +134,9 @@ gewijzigd; open afhankelijkheden worden niet stilzwijgend overgeslagen.
    het bestaande Supabase-model dat Appsmith beheert.
 13. [ ] **Technisch ontwerp definitief goedkeuren.** Lokale Elementor-opslag,
    WordPress-outbox, beveiligde Edge Function, idempotentie, retries,
-   `dead_letter`/`review` en herstelprocedure vastleggen.
+   `dead_letter`/`review` en herstelprocedure vastleggen. De bestaande
+   pluginopties en het voorlopige voorkeursontwerp staan in
+   `audits/2026-10-19-wordpress-elementor-supabase-koppelopties.md`.
 14. [ ] **WordPress-connector en lokale outbox bouwen.** Werken na succesvolle
    Elementor-opslag, met unieke submission-UUID en zonder geheimen of
    persoonsgegevens in browsercode of gewone logs.
