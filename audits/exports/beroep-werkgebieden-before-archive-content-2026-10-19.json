@@ -1,0 +1,448 @@
+{
+  "created_at": "2026-10-19",
+  "taxonomy": "beroep_werkgebied",
+  "terms": [
+    {
+      "id": 757,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/werkgebieden/belgie/",
+      "name": "België",
+      "slug": "belgie",
+      "taxonomy": "beroep_werkgebied",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_werkgebied/757",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_werkgebied"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_werkgebied"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_werkgebied=757"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 758,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/werkgebieden/benelux/",
+      "name": "Benelux",
+      "slug": "benelux",
+      "taxonomy": "beroep_werkgebied",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_werkgebied/758",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_werkgebied"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_werkgebied"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_werkgebied=758"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 759,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/werkgebieden/duitsland/",
+      "name": "Duitsland",
+      "slug": "duitsland",
+      "taxonomy": "beroep_werkgebied",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_werkgebied/759",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_werkgebied"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_werkgebied"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_werkgebied=759"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 760,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/werkgebieden/europa/",
+      "name": "Europa",
+      "slug": "europa",
+      "taxonomy": "beroep_werkgebied",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_werkgebied/760",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_werkgebied"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_werkgebied"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_werkgebied=760"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 761,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/werkgebieden/internationaal/",
+      "name": "Internationaal",
+      "slug": "internationaal",
+      "taxonomy": "beroep_werkgebied",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_werkgebied/761",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_werkgebied"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_werkgebied"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_werkgebied=761"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 762,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/werkgebieden/luxemburg/",
+      "name": "Luxemburg",
+      "slug": "luxemburg",
+      "taxonomy": "beroep_werkgebied",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_werkgebied/762",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_werkgebied"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_werkgebied"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_werkgebied=762"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 763,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/werkgebieden/nederland/",
+      "name": "Nederland",
+      "slug": "nederland",
+      "taxonomy": "beroep_werkgebied",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_werkgebied/763",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_werkgebied"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_werkgebied"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_werkgebied=763"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 764,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/werkgebieden/wereldwijd/",
+      "name": "Wereldwijd",
+      "slug": "wereldwijd",
+      "taxonomy": "beroep_werkgebied",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_werkgebied/764",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_werkgebied"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_werkgebied"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_werkgebied=764"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    }
+  ],
+  "metadata": [
+    {
+      "id": 757,
+      "slug": "belgie",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 758,
+      "slug": "benelux",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 759,
+      "slug": "duitsland",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 760,
+      "slug": "europa",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 761,
+      "slug": "internationaal",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 762,
+      "slug": "luxemburg",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 763,
+      "slug": "nederland",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 764,
+      "slug": "wereldwijd",
+      "intro": "",
+      "archive_title": ""
+    }
+  ]
+}

@@ -1,5 +1,25 @@
 # Changelog
 
+## 2026-10-19 — Beroepengids-werkgebieden als artikelarchief ingericht
+
+- Alle 8 bestaande descriptions, intro's en archieftitels van
+  `beroep_werkgebied` zijn LIVE ingericht als artikelarchief.
+- Iedere H1 gebruikt `Werkgebied [term] | Artikelen`; iedere description
+  begint met `Werkgebied [term]` als H2 en bevat daarna drie compacte,
+  inhoudelijk unieke alinea's.
+- De gelijknamige vacaturedescriptions zijn als inhoudelijke bron gebruikt.
+  Geografische inzet wordt expliciet gescheiden van internationale dagen,
+  maximale reisduur, hotelnachten en weekenden thuis.
+- De descriptions bevatten 110–118 woorden en de intro's 19–22 woorden.
+- Alle 24 waarden zijn na publicatie exact via REST geverifieerd. Alle acht
+  openbare Werkgebied-archieven zijn gecontroleerd op H1, H2 en SEO-output.
+- Hiermee hebben alle 127 eerder gespiegeld aangemaakte Beroepengids-termen
+  een description, intro en archieftitel als artikelarchief.
+- Er zijn geen termen, slugs, parents, relaties, Pods, velden, vacatures,
+  artikelen of template-instellingen gewijzigd.
+- Volledig log:
+  `audits/2026-10-19-beroepengids-werkgebieden-live.md`.
+
 ## 2026-10-19 — Beroepengids-kennisgebieden als artikelarchief ingericht
 
 - Alle 25 bestaande descriptions, intro's en archieftitels van

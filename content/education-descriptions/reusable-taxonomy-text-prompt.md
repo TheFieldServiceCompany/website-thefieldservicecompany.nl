@@ -33,8 +33,8 @@ Gebruik bij uitgebreide taxonomyteksten standaard vier zelfstandig
 begrijpelijke H2-vragen. Laat de eerste H2 direct de verbinding leggen tussen
 `[TERM]` en service, field service, machines of de relevante sector. Volg voor
 de Beroepengids-archieven van studierichtingen, functienamen,
-bedrijfssectoren, functie-inhoud en kennisgebieden de afwijkende, compacte
-structuur die hieronder expliciet is vastgelegd.
+bedrijfssectoren, functie-inhoud, kennisgebieden en werkgebieden de afwijkende,
+compacte structuur die hieronder expliciet is vastgelegd.
 
 Gebruik bij onderwijscontent natuurlijke varianten zoals `opleiding [TERM]`,
 `studierichting [TERM]`, `studie [TERM]` en `achtergrond in [TERM]`; zet ze
@@ -191,6 +191,36 @@ Control en Servotechniek. Leg de technische samenhang uit en laat de concrete
 vacature bepalen welke platformkennis, bevoegdheid of ervaring nodig is. Maak
 iedere intro en description inhoudelijk uniek.
 
+### Extra regels voor een Beroepengids-werkgebied
+
+Een Beroepengids-werkgebied is een artikelarchief over de geografische inzet
+van field service functies. Gebruik als Pods-archieftitel exact:
+
+`Werkgebied [TERM] | Artikelen`
+
+Plaats direct boven de drie descriptionalinea's exact deze H2:
+
+`Werkgebied [TERM]`
+
+Lever een korte, uitnodigende intro die het gebied direct met field service
+verbindt. Schrijf vervolgens drie compacte alinea's:
+
+1. een grove introductie op het geografische gebied en de mogelijke technische
+   werkomgevingen;
+2. een verwijzing naar toekomstige artikelen over functies, sectoren, taal,
+   cultuur, planning, arbeidsvoorwaarden of reizen;
+3. uitleg hoe die artikelen helpen functies en vacatures op standplaats,
+   klantenverdeling, reispatroon en technische inhoud te vergelijken.
+
+Gebruik de gelijknamige vacaturedescription als inhoudelijke bron, maar
+kopieer deze niet. Een werkgebied zegt waar iemand inzetbaar is en niet
+automatisch hoe vaak of hoe lang iemand reist. Houd internationale dagen,
+maximale reisduur, hotelnachten en weekenden thuis daarom als afzonderlijke
+kenmerken herkenbaar. Maak geen kunstmatig hard verschil tussen Internationaal
+en Wereldwijd wanneer vacatures die termen overlappend gebruiken; laat de
+concrete landen en reisafspraken doorslaggevend zijn. Maak iedere intro en
+description inhoudelijk uniek.
+
 Behandel waar relevant:
 
 - de belangrijkste kennis en vaardigheden;
@@ -209,14 +239,14 @@ website relaties automatisch vult. De template levert de H1; gebruik in de
 description alleen H2-koppen en alinea's.
 
 Lever voor een Beroepengids-functienaam, -studierichting, -bedrijfssector,
--functie-inhoud of -kennisgebied eerst een concept
+-functie-inhoud, -kennisgebied of -werkgebied eerst een concept
 met archieftitel, intro, de goedgekeurde archiefalinea's, woordenaantal,
 feitencontrole en de exact bedoelde WordPress-taxonomie. Neem bij een
 functienaam de H2 `Functienaam [TERM]` en bij een studierichting de H2
 `Studierichting [TERM]` op. Gebruik bij een bedrijfssector de H2
-`Bedrijfssector [TERM]`, bij functie-inhoud de H2 `Functie-inhoud [TERM]` en
-bij een kennisgebied de H2 `Kennisgebied [TERM]`. Alle vijf blijven zonder
-`| Artikelen`.
+`Bedrijfssector [TERM]`, bij functie-inhoud `Functie-inhoud [TERM]`, bij een
+kennisgebied `Kennisgebied [TERM]` en bij een werkgebied `Werkgebied [TERM]`.
+Alle zes blijven zonder `| Artikelen`.
 Lever bij andere uitgebreide taxonomyteksten eerst vier H2-koppen en de
 volledige tekst, tenzij voor die taxonomie een andere goedgekeurde structuur
 is vastgelegd.
@@ -252,6 +282,8 @@ Publiceer pas na inhoudelijke goedkeuring.
   blijft de tekst eerlijk over overlappende vacaturetermen?
 - Begint een Beroepengids-kennisgebied met `Kennisgebied [TERM]` als H2 en
   beschrijft de tekst de technische toepassing zonder eisen te verzinnen?
+- Begint een Beroepengids-werkgebied met `Werkgebied [TERM]` als H2 en blijft
+  het onderscheid tussen geografische inzet en reisintensiteit duidelijk?
 - Bevat iedere alinea concrete informatie in plaats van algemene claims?
 - Kloppen opleiding, machines, technieken, functies en sectoren inhoudelijk?
 - Is de tekst prettig, actief en motiverend om te lezen?
