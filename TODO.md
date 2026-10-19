@@ -132,7 +132,7 @@ werkgevermodel.
 - [ ] CRM-uitval opvangen met retry, zichtbare foutstatus en handmatige
   herstelactie zonder de oorspronkelijke inzending opnieuw te laten invullen.
 
-### Fase 6 — testen en gecontroleerd omschakelen
+### Fase 6 — testen, kandidaten inhalen en gecontroleerd omschakelen
 
 - [ ] Testen met synthetische gegevens: nieuwe, bestaande en ambigue kandidaat;
   nieuwe en bestaande werkgever/contactpersoon; dubbele verzending; verkeerd
@@ -142,6 +142,21 @@ werkgevermodel.
   nooit dubbele personen, sollicitaties, contacten of documenten maakt.
 - [ ] Eerst in schaduwmodus naast de bestaande AFI/EngageBay-route draaien en
   uitkomsten vergelijken.
+- [ ] Het exacte eindmoment of laatste submission-ID van de eerdere
+  kandidaatimport naar Supabase terugvinden en als controleerbare grens
+  vastleggen; niet gokken op een datum.
+- [ ] Alleen de kandidaatregistraties en sollicitaties ná die grens uit
+  Elementor inventariseren, inclusief de aanwezigheid van een cv, maar zonder
+  persoonsgegevens of bestanden in GitHub te zetten.
+- [ ] Eerst een droge inhaalcontrole maken met aantallen: nieuw, al aanwezig,
+  betrouwbaar te koppelen, ambigu en fout. Matchen gebeurt via genormaliseerd
+  e-mailadres, telefoonnummer, LinkedIn-profiel en bestaande externe ID's.
+- [ ] De goedgekeurde ontbrekende kandidaten, sollicitaties en cv-relaties via
+  exact dezelfde idempotente verwerkingsroute als nieuwe inzendingen naar
+  Supabase en daarna EngageBay sturen. Iedere broninzending krijgt een vaste
+  submission-UUID, zodat opnieuw uitvoeren geen duplicaten maakt.
+- [ ] Na de inhaalslag aantallen en relaties tussen Elementor, Supabase en
+  EngageBay afstemmen en alle ambigue gevallen handmatig beoordelen.
 - [ ] Pas na een geslaagde end-to-endcontrole de oude AFI-route per formulier
   uitschakelen. Niet alle formulieren tegelijk omschakelen.
 - [ ] Monitoring, foutoverzicht en een korte herstelhandleiding opleveren.

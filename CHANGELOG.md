@@ -12,6 +12,11 @@
   voor personen, kandidaatprofielen, sollicitaties, bedrijven,
   contactpersonen, documenten en externe ID's. Er zijn geen database-,
   WordPress- of CRM-wijzigingen uitgevoerd.
+- Een gecontroleerde kandidaat-inhaalslag toegevoegd voor registraties en
+  sollicitaties die ná de eerdere Supabase-import via de website zijn
+  binnengekomen. Eerst wordt de exacte importgrens teruggevonden, daarna volgt
+  een droge deduplicatiecontrole en pas vervolgens verwerking via dezelfde
+  idempotente route als nieuwe inzendingen.
 
 ## 2026-10-19 — Vacaturecombinaties beperkt tot twee taxonomieën
 
