@@ -157,10 +157,18 @@ formulieren een actieve providerintegratie. Het ontbreken van de widgetactie
 is daarom op zichzelf geen bewijs dat de AFI-hook niet draait; het actuele
 AFI-foutoverzicht is het relevante operationele signaal.
 
-In het live scherm voor een nieuwe AFI-integratie zijn uitsluitend EngageBay
-en EngageBay [PRO] als actieplatform beschikbaar. `Supabase` en `Webhook`
-worden daar niet aangeboden. De huidige AFI-installatie kan daardoor niet
-zonder nadere plugin-/licentiewijziging als Supabase-route worden gebruikt.
+Correctie na controle van **AFI > Settings**: AFI bevat 343 activeerbare
+platforms. Alleen EngageBay is momenteel geactiveerd. Het scherm voor een
+nieuwe integratie toont alleen geactiveerde platforms en liet daarom uitsluitend
+EngageBay en EngageBay [PRO] zien. De algemene `Webhook`-koppeling bestaat wel,
+maar staat uit. Er is geen afzonderlijke native `Supabase`-koppeling nodig als
+AFI via Webhook een beveiligde Supabase Edge Function aanroept.
+
+De AFI-jobqueue en logging staan aan. Op het controlemoment meldde de queue
+`0 pending`, `0 failed` en een laatste run vier uur eerder. Automatische
+logverwijdering staat op `0` dagen, dus onbeperkt bewaren, en foutmeldingen per
+e-mail staan uit. Deze twee privacy- en beheerinstellingen moeten vóór de
+nieuwe route bewust worden besloten; er is nu niets aan gewijzigd.
 
 ## Alleen-lezen Supabase-controle
 

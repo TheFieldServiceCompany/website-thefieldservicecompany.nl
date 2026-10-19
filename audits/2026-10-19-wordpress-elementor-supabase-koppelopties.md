@@ -12,24 +12,26 @@ datamodel in Supabase schrijft. De gevonden plugins met `Supabase` in de naam
 richten zich op login/authenticatie, zoekindexen, chats of een eigen specifiek
 datamodel; niet op kandidaat-, sollicitatie-, document- en werkgeversintake.
 
-De beste route blijft daarom:
+De beste bestaande route is daarom:
 
 1. Elementor bewaart de inzending lokaal en blijft tijdens de overgang de
    bestaande e-mail- en AFI-acties uitvoeren.
-2. Een kleine TFSC-connector haakt server-side aan op een succesvolle
-   Elementor-inzending en schrijft een lokaal outboxitem met een unieke
-   submission-ID.
-3. Een achtergrondtaak levert het bericht met beperkte headers en een
-   ondertekend verzoek af bij één Supabase Edge Function.
+2. In de al geïnstalleerde AFI Premium-plugin wordt, pas na goedkeuring, het
+   bestaande maar inactieve platform `Webhook` geactiveerd.
+3. AFI levert de inzending via de al ingeschakelde jobqueue, met beperkte
+   headers, een unieke submission-ID en een ondertekend verzoek af bij één
+   Supabase Edge Function.
 4. De Edge Function valideert bron, handtekening, tijdvenster, bestandstype,
    grootte en idempotentiesleutel en verwerkt pas daarna de goedgekeurde
    mapping naar de bestaande tabellen en private Storage.
-5. Mislukte afleveringen blijven herstelbaar in WordPress; functionele
-   twijfelgevallen krijgen in Supabase/Appsmith een reviewstatus.
+5. AFI-log en resend ondersteunen technisch herstel; functionele
+   twijfelgevallen krijgen in Supabase/Appsmith een reviewstatus. Loginhoud en
+   bewaartermijn worden vóór ingebruikname privacybewust ingesteld.
 
-Dit vraagt iets meer gericht ontwikkelwerk dan alleen een webhook aanklikken,
-maar voorkomt een derde CRM of externe verwerker en sluit precies aan op het
-bestaande Supabase/Appsmith-model.
+Hiermee is geen nieuwe WordPress-plugin en waarschijnlijk geen afzonderlijke
+TFSC-outboxplugin nodig. De eigen ontwikkeling blijft beperkt tot het
+ontvangstcontract, de Edge Function, idempotente verwerking, bestandsroute en
+Appsmith-review.
 
 ## Beoordeelde mogelijkheden
 
@@ -52,22 +54,27 @@ Nadelen voor de definitieve TFSC-route:
 Beoordeling: geschikt voor een synthetische proef of als transport achter een
 lokale outbox, niet als enige veiligheidslaag.
 
-### 2. Huidige Advanced Form Integration Premium — behouden voor legacy
+### 2. Huidige Advanced Form Integration Premium — voorkeursroute
 
 LIVE staan AFI Premium 2.10.3 en zes actieve Elementor→EngageBay-integraties.
 Alle zes worden in het AFI-overzicht als falend in de afgelopen zeven dagen
-aangemerkt. Het scherm voor een nieuwe integratie biedt op deze installatie
-alleen EngageBay en EngageBay [PRO]; geen Supabase en geen algemene Webhook.
+aangemerkt.
 
-De actuele openbare pluginbeschrijving van AFI noemt voor de algemene versie
-wel webhooks, achtergrondverwerking via Action Scheduler, activiteitenlogs en
-handmatig opnieuw verzenden. Dat maakt een andere AFI-uitgave theoretisch
-interessant, maar is geen reden om de bestaande Premium-installatie te
-vervangen of om te bouwen: daarmee kan de huidige legacyroute en licentie
-worden geraakt.
+De eerste controle van `Add New` liet alleen EngageBay zien. Dat was geen
+volledige platformlijst: **AFI > Settings** bevat 343 activeerbare platforms en
+alleen EngageBay staat nu aan. `Webhook` is aanwezig maar inactief. AFI's
+jobqueue en logging staan al aan. De queue meldde bij controle `0 pending`,
+`0 failed`; automatische logverwijdering staat uit en foutmail staat uit.
 
-Beoordeling: laten staan voor EngageBay en schaduwvergelijking; niet als nieuwe
-Supabase-route kiezen zonder afzonderlijke migratie- en licentieproef.
+De actuele openbare pluginbeschrijving bevestigt daarnaast algemene Webhooks,
+achtergrondverwerking via Action Scheduler, activiteitenlogs en handmatig
+opnieuw verzenden. Via de Webhook kan AFI server-side één Supabase Edge
+Function aanroepen; een native Supabase-platform in AFI is daarvoor niet
+nodig.
+
+Beoordeling: beste bestaande pluginroute. Eerst veldmapping en ontvangstcontract
+goedkeuren; daarna Webhook activeren en met synthetische data per formulier in
+schaduwmodus testen. De EngageBay-integraties blijven tijdens die proef staan.
 
 ### 3. WP Webhooks Pro — serieuze pluginoptie
 
@@ -92,8 +99,8 @@ Aandachtspunten:
 - eerst in een geïsoleerde proef aantonen dat fouten niet tot verloren of
   dubbele kandidaten, sollicitaties of documenten leiden.
 
-Beoordeling: beste kant-en-klare pluginvariant als de voorkeur uitgaat naar een
-visuele WordPress-workflow.
+Beoordeling: goede terugvaloptie, maar niet eerst installeren zolang AFI de
+benodigde Webhook, queue, logging en resend al biedt.
 
 ### 4. Zapier, Make, Pabbly, OttoKit/SureTriggers en vergelijkbare diensten
 
@@ -132,11 +139,12 @@ Beoordeling: niet geschikt voor dit project.
 
 ## Voorgestelde keuze
 
-Start met het functionele contract en de veldmapping. Bouw daarna de kleine
-TFSC-connector plus Edge Function. Houd WP Webhooks Pro als terugvaloptie als
-de gebruiker liever pluginbeheer en visuele retries heeft dan een kleine eigen
-connector. Gebruik de directe Elementor Webhook alleen voor een afgeschermde
-synthetische proef, niet als definitieve levering zonder lokale outbox.
+Start met het functionele contract en de veldmapping. Gebruik daarna AFI
+Webhook plus één beveiligde Supabase Edge Function als eerste proefroute. Zet
+Webhook en de nieuwe integraties alleen na expliciete goedkeuring aan en test
+eerst synthetisch in schaduwmodus. Houd WP Webhooks Pro en een kleine eigen
+outboxconnector alleen als terugvalopties. Gebruik de directe Elementor Webhook
+niet als definitieve levering zonder aantoonbare queue en herstelroute.
 
 ## Bronnen
 

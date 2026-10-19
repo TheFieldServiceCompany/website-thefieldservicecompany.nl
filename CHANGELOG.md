@@ -9,15 +9,18 @@
 - AFI Premium 2.10.3 heeft zes actieve Elementor→EngageBay-integraties. Het
   LIVE-overzicht markeert alle zes als falend in de afgelopen zeven dagen. Er
   zijn geen foutpayloads, inzendingen, persoonsgegevens of bestanden geopend.
-- Het LIVE-scherm voor een nieuwe AFI-integratie biedt alleen EngageBay en
-  EngageBay [PRO] als bestemming. Supabase en een algemene Webhook zijn op
-  deze installatie niet selecteerbaar.
+- Correctie op de eerste AFI-interpretatie: `Add New` toont alleen platforms
+  die onder **AFI > Settings** zijn geactiveerd. AFI bevat 343 activeerbare
+  platforms; alleen EngageBay staat aan. De algemene Webhook bestaat wel maar
+  staat uit. De AFI-jobqueue en logging staan al aan; automatische
+  logverwijdering en foutmail staan uit.
 - Bestaande WordPress/Elementor-koppelopties zijn onderzocht. Er is geen
-  passende volwassen directe Elementor→Supabase-plugin gevonden. De voorkeur
-  blijft een kleine lokale TFSC-outboxconnector naar een beveiligde,
-  idempotente Supabase Edge Function. WP Webhooks Pro is vastgelegd als
-  serieuze pluginvariant; een directe Elementor Webhook is alleen geschikt
-  voor een afgeschermde proef zonder duurzaam retrymechanisme.
+  passende native Elementor→Supabase-plugin nodig: de voorlopige voorkeur is
+  de bestaande AFI Webhook met jobqueue, logging en resend naar een beveiligde,
+  idempotente Supabase Edge Function. WP Webhooks Pro en een kleine lokale
+  TFSC-outboxconnector blijven terugvalopties. Een directe Elementor Webhook is
+  alleen geschikt voor een afgeschermde proef zonder duurzaam
+  retrymechanisme.
 - `TODO.md` markeert de LIVE-formulier- en uploadinventaris als afgerond. De
   eerstvolgende stap is de per-formulier mapping naar bestaande
   Supabase-records en Appsmith-weergaven, met expliciete beslispunten voor

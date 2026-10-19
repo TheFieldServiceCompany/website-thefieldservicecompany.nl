@@ -136,7 +136,10 @@ gewijzigd; open afhankelijkheden worden niet stilzwijgend overgeslagen.
    WordPress-outbox, beveiligde Edge Function, idempotentie, retries,
    `dead_letter`/`review` en herstelprocedure vastleggen. De bestaande
    pluginopties en het voorlopige voorkeursontwerp staan in
-   `audits/2026-10-19-wordpress-elementor-supabase-koppelopties.md`.
+   `audits/2026-10-19-wordpress-elementor-supabase-koppelopties.md`. AFI heeft
+   al een inactieve algemene Webhook, actieve jobqueue, logging en resend en is
+   daarom de voorlopige voorkeursconnector; een eigen outboxplugin is alleen
+   nodig als de AFI-proef niet aan de acceptatiecriteria voldoet.
 14. [ ] **WordPress-connector en lokale outbox bouwen.** Werken na succesvolle
    Elementor-opslag, met unieke submission-UUID en zonder geheimen of
    persoonsgegevens in browsercode of gewone logs.
