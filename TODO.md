@@ -5,6 +5,37 @@ Laatst bijgewerkt: 19 oktober 2026
 Dit is de centrale werklijst. Detailbesluiten en testresultaten blijven in de
 bestaande documenten onder `audits/`, `content/` en `functionality/` staan.
 
+## Actuele prioriteit — formulieren naar Supabase/Appsmith
+
+Op 19 oktober 2026 heeft de gebruiker de werkprioriteit verlegd van travel naar
+de koppeling van de WordPress-formulieren met Supabase en Appsmith. Travel
+blijft open staan, maar wordt niet eerst uitgevoerd.
+
+1. [ ] De actuele configuratie van Registratie, Solliciteren,
+   Werkgeverscontact, Mailing, Advies en Vraag op LIVE alleen-lezen uitlezen:
+   formulier-ID, veld-ID, type, verplichtheid, toestemming, uploads, limieten
+   en alle ingestelde acties.
+2. [ ] Per formulier vastleggen welk bestaand Supabase-record en welke relaties
+   moeten ontstaan. Geen nieuwe tabellen ontwerpen voordat deze mapping is
+   goedgekeurd.
+3. [ ] Ieder Elementor-veld naast de bestaande Supabase-kolom en de relevante
+   Appsmith-weergave of -invoer zetten; ontbrekende doelen en twijfelgevallen
+   expliciet markeren.
+4. [ ] Deduplicatie, bron-ID, toestemming, eigenaarschap en bewaartermijn per
+   formulier laten goedkeuren.
+5. [ ] Daarna pas het technische ontwerp voor lokale Elementor-opslag,
+   WordPress-outbox, beveiligde server-side aflevering, idempotentie, retries
+   en handmatige review definitief maken.
+6. [ ] De koppeling eerst synthetisch en in schaduwmodus naast AFI/EngageBay
+   testen. EngageBay pas per formulier uitschakelen nadat verwerking in
+   Supabase en beheer in Appsmith aantoonbaar correct zijn.
+
+Eerste actuele Supabase-controle: het bestaande personen-, kandidaat-,
+sollicitatie-, vacature-, werkgevers- en documentenmodel is aanwezig en de
+gecontroleerde tabellen hebben RLS. Er is nog geen intake-, submission- of
+outboxtabel en het project heeft nog geen Edge Function. Zie
+`audits/2026-10-19-formulier-supabase-appsmith-nulmeting.md`.
+
 ## Uitvoervolgorde — één punt tegelijk
 
 Deze lijst is de gezamenlijke werkvolgorde. We pakken steeds één genummerd
@@ -74,6 +105,12 @@ gewijzigd; open afhankelijkheden worden niet stilzwijgend overgeslagen.
    grotendeels gelijkgetrokken; de bestaande vacaturedata is nog niet
    gesynchroniseerd. Frontendplaatsing, vacaturekoppeling en een volledige
    live end-to-endtest blijven open. Daarna volgen de overige keuzes.
+   Als afzonderlijke latere migratiestap moeten bovendien alle bestaande LIVE
+   WordPress-vacatures in Supabase worden opgenomen, op aantallen en relaties
+   worden gereconcilieerd en daarna in Appsmith zichtbaar en beheerbaar zijn.
+   Appsmith blijft daarbij de beheerinterface op Supabase en krijgt geen
+   tweede kopie van de vacaturedata. Dit is vastgelegd, maar heeft nu geen
+   voorrang op de formulierkoppeling.
 
 ### B. Formulieren, intake en inhaalslag
 
@@ -132,21 +169,18 @@ gewijzigd; open afhankelijkheden worden niet stilzwijgend overgeslagen.
     controleren op indexeerbaarheid, inhoud en duplicaten.
 26. [ ] **Search & Filter- en overige `noindex`-combo's controleren.** Robots,
     canonical, sitemap en interne links nalopen.
-27. [ ] **Travelarchieven en oude URL's controleren.** Dit betekent uitsluitend:
-    de bestaande descriptions van Reisduur, Weekenden thuis, Hotel
-    nachten/maand en Dagen internationaal inhoudelijk nalopen en voor de
-    verwijderde oude Reisprofiel-URL's per URL een redirect, vervangende
-    contentbestemming of bewuste 410-status voorstellen. Er worden hierbij
-    geen nieuwe velden of termen gemaakt.
-28. [ ] **Indexeerbaarheid van de nieuwe Beroepengids-termarchieven
-    beslissen.** De tot nu toe openbaar gecontroleerde archieven geven
-    `follow, noindex` zonder canonical. Dit is niet tijdens de contentrondes
-    ingesteld. Rank Math heeft globaal `noindex_empty_taxonomies` aan staan en
-    WordPress telt deze termen als leeg, omdat Pods-relaties de gewone
-    termtelling niet verhogen. Eerst per Beroepengids-taxonomie telling,
-    robots en canonical controleren; daarna kiezen tussen een gerichte
-    uitzondering of eerst gewone artikeltoewijzingen. De globale bescherming
-    voor werkelijk lege taxonomieën niet ongecontroleerd uitschakelen.
+27. [ ] **Travelarchiefteksten controleren.** Loop uitsluitend de bestaande
+    descriptions van Reisduur, Weekenden thuis, Hotel nachten/maand en Dagen
+    internationaal inhoudelijk na. Er worden hierbij geen nieuwe velden of
+    termen gemaakt. De verwijderde oude Reisprofiel-URL's hoeven niet te worden
+    omgeleid of als 410 te worden behandeld: Google had er geen toegang toe en
+    ze waren niet geïndexeerd.
+28. [x] **Robotsbeleid voor lege Beroepengids-termarchieven bevestigd.** De
+    robotsinstellingen en terminstellingen zijn door de gebruiker ingericht.
+    Lege taxonomiearchieven mogen `noindex` blijven zolang er geen werkelijk
+    Beroepengidsartikel aan is gekoppeld. De globale Rank Math-instelling
+    `noindex_empty_taxonomies` blijft daarom gewenst; hiervoor hoeft geen
+    hardcoded uitzondering of aanvullende wijziging te worden gemaakt.
 29. [ ] **Centrale overzichtspagina voor publieke archieven ontwerpen.** Alleen
     goedgekeurde, indexeerbare archieven opnemen.
     Beschrijvende reisthema's zo nodig als sterke Beroepengids- of
@@ -164,10 +198,10 @@ gewijzigd; open afhankelijkheden worden niet stilzwijgend overgeslagen.
     media en grote tabellen eerst inventariseren; alleen na back-up en expliciet
     akkoord opschonen.
 
-## Eerst oppakken: open punten uit de vorige werksessie
+## Geparkeerd: travelpunten uit de vorige werksessie
 
-De afgesproken volgorde is eerst het travelgedeelte bij vacatures afronden en
-pas daarna beslissen welke Beroepengids-archieven indexeerbaar worden.
+Deze punten blijven open, maar zijn op 19 oktober achter de formulierkoppeling
+geplaatst. Het robotsbeleid voor lege Beroepengids-archieven staat al vast.
 
 1. [ ] **Alleen-lezen travelnulmeting per vacature maken.** Controleer alle
    huidige WordPress-koppelingen en vacatureteksten voor Reisduur, Weekenden
@@ -186,14 +220,9 @@ pas daarna beslissen welke Beroepengids-archieven indexeerbaar worden.
    directionele matching en de zichtbare vacature-uitvoer met een synthetische
    vacature. De gebruiker plaatst de bestaande Search & Filter-velden 14, 15
    en 16 zelf in de frontend-GUI; daarna wordt de publieke filtering getest.
-6. [ ] **Travelarchieven en verwijderde URL's nalopen.** Controleer bestaande
-   descriptions en leg per oude Reisprofiel-URL een voorstel voor redirect,
-   contentbestemming of 410 voor. Voer SEO-wijzigingen pas na akkoord uit.
-7. [ ] **Daarna Beroepengids-indexering beslissen.** Inventariseer eerst per
-   nieuwe taxonomie de echte WordPress-termtelling, robots en canonical. Maak
-   daarna een gericht voorstel; wijzig Rank Math of canonicals niet zonder
-   akkoord.
-
+6. [ ] **Travelarchiefteksten nalopen.** Controleer alleen de bestaande
+   descriptions. De verwijderde oude Reisprofiel-URL's behoeven geen redirect
+   of 410, omdat Google er geen toegang toe had en ze niet waren geïndexeerd.
 - [ ] Beslissen hoe de canonical van losse vacaturetaxonomiearchieven moet
   werken. Functie-inhoud, bedrijfssector, dienstverband, dagen internationaal
   en vergelijkbare archieven verwijzen nu naar een combo met de vaste context

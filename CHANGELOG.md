@@ -1,5 +1,40 @@
 # Changelog
 
+## 2026-10-19 — Formulierkoppeling naar actuele werkprioriteit verplaatst
+
+- Op verzoek van de gebruiker staat de koppeling van de zes LIVE WordPress-
+  formulieren met Supabase en Appsmith nu bovenaan de centrale werklijst.
+  Travel blijft open, maar is geparkeerd.
+- De eerste actuele Supabase-nulmeting is alleen-lezen uitgevoerd. Het project
+  is gezond en het bestaande model voor personen, kandidaten, sollicitaties,
+  vacatures, werkgevers, contacten, documenten en externe bron-ID's is
+  aanwezig. De gecontroleerde tabellen hebben RLS en bestaande policies.
+- Er is nog geen intake-, submission- of outboxtabel gevonden en er is nog geen
+  Supabase Edge Function. Appsmith-functies voor kandidaatbeheer en documenten
+  zijn wel aanwezig.
+- De eerstvolgende stap is het exact uitlezen van de zes LIVE-
+  formulierconfiguraties, gevolgd door een veldmapping die eerst wordt
+  goedgekeurd. Er zijn geen schema's, formulieren, functies of gegevens
+  gewijzigd.
+
+## 2026-10-19 — Robotsbeleid en latere vacaturemigratie bevestigd
+
+- De controle van redirects, vervangende bestemmingen of 410-statussen voor de
+  verwijderde oude Reisprofiel-URL's is uit de actieve TODO gehaald. Google had
+  geen toegang tot deze URL's en ze waren niet geïndexeerd; omleiden is daarom
+  niet nodig.
+- Vastgelegd dat alle bestaande LIVE WordPress-vacatures later gecontroleerd
+  in Supabase moeten worden opgenomen, inclusief reconciliatie van aantallen
+  en relaties en controle van de weergave en het beheer in Appsmith. Deze
+  migratie heeft nu geen prioriteit boven de formulierkoppeling.
+- De gebruiker heeft bevestigd dat robots en termen zijn ingericht. Lege
+  Beroepengids-taxonomiearchieven mogen bewust `noindex` blijven zolang er geen
+  werkelijk artikel aan is gekoppeld. `noindex_empty_taxonomies` blijft daarom
+  gewenst en er wordt geen hardcoded uitzondering toegevoegd.
+- Het alleen-lezen onderzoek naar een aanvullende robots-override is op verzoek
+  gestopt. Er zijn geen wijzigingen uitgevoerd in WordPress, Rank Math,
+  Supabase of Appsmith.
+
 ## 2026-10-19 — Werkvolgorde travel en Beroepengids-indexering verduidelijkt
 
 - Vastgelegd dat de vier travelonderdelen al als structuur bestaan in
