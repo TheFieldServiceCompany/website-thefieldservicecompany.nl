@@ -14,6 +14,9 @@ verschillende namen of dubbele keuzes afhangen.
 - WordPress gebruikt geschikte publieke labels, archieven en filters.
 - Een WordPress-zoekterm hoeft niet als extra canonieke waarde in Supabase te
   bestaan; hij mag als alias of tekstvariant naar dezelfde betekenis wijzen.
+- Langere en beschrijvende zoekvragen horen bij voorkeur in sterke
+  landingspagina's of Beroepengidsartikelen met een dynamisch vacatureblok,
+  niet als extra filterwaarde.
 
 ## Vier soorten synchronisatie
 
@@ -62,7 +65,8 @@ voor `vac_studierichting`, alle actief. Er zijn nog geen mappings voor
 
 ## Werkvolgorde
 
-1. Reisprofielen besluiten, veilig omzetten en verifiëren.
+1. Reisprofielen en de filterdimensie `Verblijfsduur` besluiten, veilig
+   omzetten en verifiëren.
 2. Dagen internationaal als numerieke/bandmapping formaliseren.
 3. Werkgebieden, landen en regio's volledig gelijk trekken.
 4. Opleidingsniveaus en studierichtingen opnieuw end-to-end valideren:
@@ -71,7 +75,8 @@ voor `vac_studierichting`, alle actief. Er zijn nog geen mappings voor
 5. De overige vacaturetaxonomieën één voor één behandelen, te beginnen bij de
    filters met bestaand gebruik.
 6. Pas daarna eventuele Beroepengids-spiegels en de centrale archievenpagina
-   vanuit de goedgekeurde set opbouwen.
+   vanuit de goedgekeurde set opbouwen. Beschrijvende reisthema's kunnen als
+   Beroepengidsartikel of landingspagina een dynamisch vacatureblok krijgen.
 7. Een herhaalbaar alleen-lezen synchronisatierapport maken dat ontbrekende,
    inactieve, dubbele en niet-gemapte waarden meldt.
 

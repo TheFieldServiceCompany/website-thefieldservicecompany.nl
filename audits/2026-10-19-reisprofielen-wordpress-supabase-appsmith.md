@@ -152,22 +152,22 @@ eerst de vacaturekoppeling, redirects, indexering en descriptions geregeld.
 | ---: | --- | ---: | --- | --- |
 | 468 | Internationaal reizen | 1 | Verwijderen uit Reisprofiel | `international_travel_required` en Werkgebied Internationaal |
 | 469 | Nationaal reizen | 0 | Verwijderen uit Reisprofiel | Internationaal reizen = nee en Werkgebied Nederland |
-| 470 | Hotelovernachting | 0 | **Houden** | Publiek label voor `overnight_stays_required` |
+| 470 | Hotelovernachting | 0 | **Houden en hernoemen** | `Hotelovernachtingen`; publiek label voor `overnight_stays_required` |
 | 471 | Vaak van huis | 1 | Verwijderen als losse term | Te vaag; afleiden uit internationale dagen en nachten van huis |
-| 472 | Langdurig op locatie | 0 | **Houden** | Publiek profiel op basis van maximale aaneengesloten nachten; grens nog bepalen |
-| 473 | Kort op locatie | 0 | Samenvoegen/verwijderen | Synoniem van `Korte trips` |
+| 472 | Langdurig op locatie | 0 | **Houden en hernoemen** | `Lang verblijf`; onderdeel van filterdimensie Verblijfsduur |
+| 473 | Kort op locatie | 0 | Samenvoegen/verwijderen | Synoniem; als zoekvariant opnemen bij `Kort verblijf` |
 | 474 | Veel vliegen | 1 | Verwijderen als losse term | Geen canoniek vervoersmiddelveld; als zoekterm in teksten behouden |
 | 476 | Bijna elke dag thuis | 0 | **Houden** | Publiek profiel voor geen of zeer weinig overnachtingen; grens nog bepalen |
 | 480 | Hotelovernachting 25% | 0 | Samenvoegen/verwijderen | Percentage is niet exact en overlapt met nachten thuis |
-| 481 | Hotelovernachting 50% | 1 | Samenvoegen/verwijderen | Naar `Hotelovernachting`; percentage in description bewaren |
+| 481 | Hotelovernachting 50% | 1 | Samenvoegen/verwijderen | Naar `Hotelovernachtingen`; percentage in description bewaren |
 | 482 | Hotelovernachting 75% | 0 | Samenvoegen/verwijderen | Percentage is niet exact en overlapt met nachten thuis |
 | 483 | Nachten thuis 100% | 0 | Samenvoegen/verwijderen | Naar `Bijna elke dag thuis` |
 | 484 | Nachten thuis 75% | 0 | Verwijderen als losse term | Omgekeerde en onnauwkeurige variant van hotelovernachtingspercentage |
-| 485 | Nachten thuis 50% | 1 | Verwijderen als losse term | Omgekeerde duplicaatvariant; verwerken in description Hotelovernachting |
+| 485 | Nachten thuis 50% | 1 | Verwijderen als losse term | Omgekeerde duplicaatvariant; verwerken in description Hotelovernachtingen |
 | 486 | Nachten thuis 25% | 0 | Verwijderen als losse term | Omgekeerde en onnauwkeurige variant van hotelovernachtingspercentage |
 | 487 | Weekenden thuis | 0 | **Houden** | Publiek label voor `weekend_travel_required = false` |
-| 488 | Hotelovernachting weekdagen | 0 | Samenvoegen/verwijderen | Combinatie van Hotelovernachting en Weekenden thuis |
-| 489 | Korte trips | 0 | **Houden** | Publiek profiel op basis van maximale aaneengesloten nachten; grens nog bepalen |
+| 488 | Hotelovernachting weekdagen | 0 | Samenvoegen/verwijderen | Combinatie van Hotelovernachtingen en Weekenden thuis |
+| 489 | Korte trips | 0 | **Houden en hernoemen** | `Kort verblijf`; onderdeel van filterdimensie Verblijfsduur |
 | 490 | Reizen Nederland | 0 | Verwijderen uit Reisprofiel | Werkgebied Nederland |
 | 491 | Reizen Internationaal | 1 | Verwijderen uit Reisprofiel | Duplicaat van Internationaal reizen; naar veld en Werkgebied |
 | 492 | Reizen Nationaal | 0 | Verwijderen uit Reisprofiel | Duplicaat van Nationaal reizen |
@@ -176,13 +176,30 @@ eerst de vacaturekoppeling, redirects, indexering en descriptions geregeld.
 | 495 | Reizen Duitsland | 0 | Verwijderen uit Reisprofiel | Werkgebied Duitsland |
 | 496 | Reizen Polen | 0 | Verwijderen uit Reisprofiel | Eerst Polen als canoniek Werkgebied beoordelen |
 
-Voorgesteld eindresultaat: vijf duidelijke publieke Reisprofielen behouden:
+Voorgesteld eindresultaat: vijf duidelijke publieke Reisprofielen behouden,
+waarvan drie onder een kortere en preciezere naam:
 
-1. `Hotelovernachting`;
-2. `Langdurig op locatie`;
+1. `Hotelovernachtingen`;
+2. `Lang verblijf`;
 3. `Bijna elke dag thuis`;
 4. `Weekenden thuis`;
-5. `Korte trips`.
+5. `Kort verblijf`.
+
+### Naam en filterdimensie: Verblijfsduur
+
+`Korte trips` kan ook afstand, frequentie of het aantal reizen suggereren.
+`Projectduur` is onjuist, omdat een internationaal project maanden kan duren
+terwijl een medewerker telkens kort op locatie is. Het voorstel is daarom:
+
+- **filteronderwerp:** `Verblijfsduur`;
+- **korte opties:** `Kort verblijf` en `Lang verblijf`;
+- **onderliggende waarde:** maximale aaneengesloten nachten weg.
+
+Supabase bevat nu `max_consecutive_nights_away`: een maximum, geen gemiddelde.
+Daarom gebruiken filter en automatische koppeling niet het woord `gemiddeld`.
+De descriptions mogen wel uitleggen wat bij werkgevers doorgaans of gemiddeld
+voorkomt, zolang duidelijk blijft dat de vacaturewaarde een maximum of
+verwachting is.
 
 ### Voorgestelde afleidingsregels
 
@@ -192,20 +209,26 @@ gebruikt:
 | Publiek Reisprofiel | Vacatureveldregel in Supabase |
 | --- | --- |
 | Bijna elke dag thuis | `overnight_stays_required = false`; een onbekende waarde levert geen profiel op |
-| Hotelovernachting | `overnight_stays_required = true` |
-| Korte trips | `max_consecutive_nights_away` tussen 1 en 7 |
-| Langdurig op locatie | `max_consecutive_nights_away` vanaf 8 |
+| Hotelovernachtingen | `overnight_stays_required = true` |
+| Kort verblijf | `max_consecutive_nights_away` tussen 1 en 7 |
+| Lang verblijf | `max_consecutive_nights_away` vanaf 8 |
 | Weekenden thuis | `overnight_stays_required = true` én `weekend_travel_required = false` |
 
-Een vacature kan dus bijvoorbeeld zowel `Hotelovernachting` als `Korte trips`
+Een vacature kan dus bijvoorbeeld zowel `Hotelovernachtingen` als `Kort verblijf`
 hebben. Dat zijn geen doublures: het ene zegt dat overnachten voorkomt en het
 andere hoe lang een aaneengesloten reis maximaal duurt. Bij een onbekende bron-
 waarde wordt geen label gegokt.
 
+`Weekdagen weg` wordt niet als tweede filterterm toegevoegd. Het overlapt sterk
+met `Weekenden thuis` en de bestaande velden bewijzen niet dat iemand iedere
+werkdag weg is. De woorden kunnen wel in de description van
+`Hotelovernachtingen` en `Weekenden thuis` worden gebruikt, met een nuance als
+“doorgaans op weekdagen van huis”.
+
 De andere twintig termen worden na goedkeuring gemapt, samengevoegd of
 verwijderd. De zes nu gebruikte termen vallen allemaal in die groep. Vacature
 `23277` moet daarom vóór verwijdering expliciet worden omgezet naar de juiste
-Werkgebieden en gestructureerde reisvelden. Alleen `Hotelovernachting` kan uit
+Werkgebieden en gestructureerde reisvelden. Alleen `Hotelovernachtingen` kan uit
 de huidige twee percentage-termen veilig als breder label worden afgeleid; de
 overige waarden worden niet gegokt.
 
@@ -214,12 +237,13 @@ overige waarden worden niet gegokt.
 Verwijderen uit de taxonomie betekent niet dat de woorden uit de website
 verdwijnen:
 
-- percentages, `nachten thuis` en `hotelovernachting weekdagen` komen
-  natuurlijk terug in de description van `Hotelovernachting` en waar passend
+- percentages, `nachten thuis`, `weekdagen weg` en
+  `hotelovernachting weekdagen` komen natuurlijk terug in de description van
+  `Hotelovernachtingen` en waar passend
   bij `Weekenden thuis`;
-- `kort op locatie` komt terug bij `Korte trips`;
-- `vaak van huis` komt terug bij `Langdurig op locatie` en de relevante
-  Dagen-internationaal-archieven;
+- `korte trips` en `kort op locatie` komen terug bij `Kort verblijf`;
+- `langdurig op locatie` en `vaak van huis` komen terug bij `Lang verblijf` en
+  de relevante Dagen-internationaal-archieven;
 - `veel vliegen`, `internationaal reizen` en `reizen internationaal` komen
   terug in descriptions van Werkgebied Internationaal/Wereldwijd en de
   Dagen-internationaal-archieven;
@@ -229,6 +253,28 @@ verdwijnen:
 Voor iedere verwijderde publieke term wordt vóór verwijdering bepaald of een
 301-redirect nodig is. Een term wordt niet simpelweg verwijderd met een 404
 als de URL geïndexeerd is, verkeer heeft of externe links ontvangt.
+
+### Uitgebreidere zoekvragen buiten het filter
+
+Niet iedere beschrijvende zoekterm hoeft een filterterm of taxonomiearchief te
+worden. Voor onderwerpen zoals `veel vliegen voor werk`, `internationaal werken
+als field service engineer`, `korte internationale projecten`,
+`hotelovernachtingen voor werk` en `weekenden thuis in field service` kan later
+een inhoudelijke landingspagina of Beroepengidsartikel worden gemaakt.
+
+Zo'n pagina kan:
+
+- het onderwerp uitgebreid en genuanceerd uitleggen;
+- de langere zoekvarianten verwerken zonder de filters te vervuilen;
+- linken naar Werkgebieden, Dagen internationaal en Verblijfsduur;
+- onderaan een dynamisch vacatureblok tonen dat op de canonieke Supabase-
+  velden en WordPress-mapping is gebaseerd.
+
+De voorkeursrichting is een herkenbare sectie binnen de Beroepengids, zoals
+`Werken in field service` of `Reizen en verblijf`. Eerst wordt gecontroleerd of
+dit binnen de bestaande Beroepengidsstructuur logisch past; anders wordt een
+gerichte landingspagina gebruikt. Er worden geen dunne archiefpagina's gemaakt
+alleen om een extra zoekwoord te bezitten.
 
 ## Actuele Supabase-controle
 
@@ -312,14 +358,18 @@ aan op de bestaande Appsmith/Supabase-opbouw.
 
 ## Besluiten vóór uitvoering
 
-1. Goedkeuren of de vijf voorgestelde Reisprofielen de definitieve publieke
-   set worden.
-2. De voorgestelde afleidingsregels voor `Korte trips`, `Langdurig op locatie`,
-   `Bijna elke dag thuis`, `Hotelovernachting` en `Weekenden thuis` goedkeuren
+1. Goedkeuren of de vijf voorgestelde Reisprofielen en de namen
+   `Hotelovernachtingen`, `Kort verblijf`, `Lang verblijf`,
+   `Bijna elke dag thuis` en `Weekenden thuis` de definitieve publieke set
+   worden.
+2. De voorgestelde afleidingsregels voor `Kort verblijf`, `Lang verblijf`,
+   `Bijna elke dag thuis`, `Hotelovernachtingen` en `Weekenden thuis` goedkeuren
    of aanpassen.
 3. Besluiten of `Veel vliegen` alleen een zoekterm in descriptions wordt of
    een nieuw, afzonderlijk vervoersmiddelveld nodig heeft.
 4. De omzetting van vacature `23277` vooraf als controlelijst tonen.
 5. Per te verwijderen term de redirectbestemming en SEO-status controleren.
-6. Pas daarna WordPress wijzigen en vervolgens de goedgekeurde mapping naar
+6. Besluiten of uitgebreidere reisthema's als Beroepengidsartikelen of aparte
+   landingspagina's worden uitgewerkt.
+7. Pas daarna WordPress wijzigen en vervolgens de goedgekeurde mapping naar
    Supabase/Appsmith implementeren en testen.

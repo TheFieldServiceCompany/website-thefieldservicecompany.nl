@@ -26,7 +26,9 @@ gewijzigd; open afhankelijkheden worden niet stilzwijgend overgeslagen.
    zoektermvarianten in WordPress behouden waar ze publiek nut hebben, maar
    koppelen aan één canonieke betekenis of concreet Supabase-veld; geen
    dubbele operationele keuzes in Appsmith maken. Voorstel: vijf termen houden
-   en twintig termen mappen, samenvoegen of verwijderen; zie de audit.
+   en twintig termen mappen, samenvoegen of verwijderen. Naamvoorstel:
+   `Hotelovernachtingen`, `Kort verblijf`, `Lang verblijf`, `Bijna elke dag
+   thuis` en `Weekenden thuis`; zie de audit.
 4. [ ] **Volledige WordPress–Supabase–Appsmith-keuzematrix maken.** Naast
    Reisprofielen ook Werkgebieden, Dagen internationaal en de resterende
    taxonomieën en keuzelijsten vergelijken op naam, betekenis, ID en status.
@@ -101,6 +103,9 @@ gewijzigd; open afhankelijkheden worden niet stilzwijgend overgeslagen.
     automatisch samenvoegen of verwijderen.
 28. [ ] **Centrale overzichtspagina voor publieke archieven ontwerpen.** Alleen
     goedgekeurde, indexeerbare archieven opnemen.
+    Beschrijvende reisthema's zo nodig als sterke Beroepengids- of
+    landingspagina met een dynamisch vacatureblok uitwerken, niet als extra
+    filterterm.
 29. [ ] **LiteSpeed JavaScript veilig instellen en Clarity testen.** Combine en
     `Combine External and Inline` uitschakelen, deferred behouden en Clarity
     anoniem verifiëren.

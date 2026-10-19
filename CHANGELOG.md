@@ -1,5 +1,20 @@
 # Changelog
 
+## 2026-10-19 — Naamrichting Verblijfsduur en contentlaag vastgelegd
+
+- Voorgesteld de korte filterdimensie `Verblijfsduur` te gebruiken met de
+  opties `Kort verblijf` en `Lang verblijf`, omdat Supabase de maximale
+  aaneengesloten nachten weg bewaart en niet de gemiddelde projectduur.
+- Voorgesteld `Hotelovernachting` te hernoemen naar
+  `Hotelovernachtingen` en `Weekenden thuis` als korte filterterm te behouden.
+- `Weekdagen weg` niet als tweede overlappende filterterm voorgesteld; de
+  zoekvariant wordt verwerkt in descriptions met de juiste nuance.
+- Vastgelegd dat langere, beschrijvende reisthema's later als inhoudelijke
+  landingspagina of Beroepengidsartikel met een dynamisch vacatureblok kunnen
+  worden uitgewerkt, zonder voor iedere zoekterm een extra filterwaarde te
+  maken.
+- Er zijn geen livegegevens of instellingen gewijzigd.
+
 ## 2026-10-19 — Reisprofielen live geïnventariseerd en syncplan vastgelegd
 
 - De 25 LIVE-Reisprofiel-termen via WordPress REST alleen-lezen vastgelegd,
