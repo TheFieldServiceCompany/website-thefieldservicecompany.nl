@@ -1,18 +1,21 @@
 # Opleidingsdescriptions voor vacatures en Beroepengids
 
-Status: de 23 nieuwe descriptions staan sinds 18 oktober 2026 bij de
-vacaturetaxonomie `vac_studierichting` op LIVE. De eerder bestaande teksten bij
-`beroep_studierichting` zijn na een foutieve overschrijving exact hersteld.
-De vier vacaturetermen van `opleidingsniveau` hebben eveneens gecontroleerde
-live descriptions; `beroep_opleidingsniveau` is daarbij niet gewijzigd.
+Status: de 23 vacaturedescriptions staan sinds 18 oktober 2026 bij
+`vac_studierichting` op LIVE. Op 19 oktober 2026 zijn daarnaast alle 23
+descriptions en intro's van `beroep_studierichting` bewust herschreven rond de
+vraag wat iemand met de betreffende studie binnen field service kan doen. De
+vier vacaturetermen van `opleidingsniveau` hebben eveneens gecontroleerde live
+descriptions; `beroep_opleidingsniveau` is daarbij niet gewijzigd.
 
 ## Doel
 
 Deze map documenteert de opleidingscontent voor de vacaturetaxonomieën en de
 spiegelende Beroepengids-taxonomieën. Het bestand `studierichtingen.md` bevat
 de nieuwe, lange descriptions die op `vac_studierichting` zijn gepubliceerd.
-De al bestaande descriptions van `beroep_studierichting` blijven een
-afzonderlijke contentlaag en zijn niet door deze teksten vervangen.
+`beroep-studierichtingen.md` bevat de afzonderlijke, actuele contentlaag voor
+`beroep_studierichting`. Deze Beroepengids-teksten zijn geen kopie van de
+vacaturedescriptions: zij verbinden iedere opleiding of studie expliciet aan
+mogelijke field service functies, sectoren en loopbaankeuzes.
 
 De compacte, herbruikbare schrijf- en publicatieprompt staat in
 `reusable-taxonomy-text-prompt.md`. Gebruik die voor nieuwe taxonomyteksten,
@@ -27,9 +30,29 @@ Pods-structuur en de relatievelden zijn ingericht en getest.
 ## Omvang
 
 - 4 descriptions voor opleidingsniveaus;
-- 23 descriptions voor studierichtingen;
+- 23 descriptions voor vacaturestudierichtingen;
+- 23 descriptions en 23 uitnodigende intro's voor Beroepengids-
+  studierichtingen;
 - gerealiseerde lengte per description: 450–486 woorden exclusief koppen en
   redactionele notities.
+
+De Beroepengids-descriptions van 19 oktober bevatten 261–390 woorden en ieder
+vier unieke vraaggerichte H2-koppen. De intro's bevatten 28–36 woorden.
+
+## Publicatie Beroepengids-studierichtingen op 19 oktober 2026
+
+- Alle 23 bestaande descriptions zijn bewust overschreven; er zijn geen
+  termen, slugs, Pods of velden toegevoegd of gewijzigd.
+- Alle 23 bestaande velden `intro_taxonomy` zijn vervangen door een korte,
+  uitnodigende intro met een directe inhoudelijke link naar field service.
+- De 92 H2-koppen zijn letterlijk uniek en variëren per studierichting.
+- De teksten behandelen primair wat iemand met de opleiding, studierichting of
+  studieachtergrond binnen field service kan doen. Uitgebreide uitleg over het
+  uitvoeren van technische handelingen is bewust vermeden.
+- Iedere tekst eindigt met een eigen adviesroute en een natuurlijke verwijzing
+  naar The Field Service Company als specialist in field service functies.
+- Canonieke bron: `beroep-studierichtingen.md`; herstelbestand:
+  `../../audits/exports/beroep-studierichtingen-before-rewrite-2026-10-19.json`.
 
 ## Publicatievoorwaarden
 

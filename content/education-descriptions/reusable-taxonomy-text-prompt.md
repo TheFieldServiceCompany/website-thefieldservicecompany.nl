@@ -40,6 +40,41 @@ Gebruik bij onderwijscontent natuurlijke varianten zoals `opleiding [TERM]`,
 niet allemaal geforceerd in iedere kop. Schrijf `field service` als twee
 woorden. Gebruik functienamen in lopende zinnen met kleine letters.
 
+### Extra regels voor een Beroepengids-studierichting
+
+Een losse term zoals `Elektrotechniek` zegt niet vanzelf dat de pagina over
+een studie gaat. Maak daarom vanaf de eerste H2 en openingsalinea expliciet dat
+het om een opleiding, studierichting of studieachtergrond gaat. Wissel
+`opleiding`, `studierichting`, `studie` en `achtergrond` natuurlijk af.
+
+Schrijf geen algemene opleidingssamenvatting en leg niet uitgebreid uit hoe de
+lezer later een technische handeling bij een klant uitvoert. Beantwoord in
+plaats daarvan de hoofdvraag:
+
+`Wat kan ik met deze studie binnen field service en welke functie, techniek,
+sector of werkomgeving past bij mij?`
+
+Leg de nadruk op mogelijke field service functies, passende machines en
+sectoren, verschillen tussen loopbaanrichtingen, benodigde aanvullende
+producttraining en de keuze voor een passende field service baan. Gebruik de
+gekoppelde vacatures als inhoudelijke inspiratie, maar maak van een kenmerk uit
+één vacature nooit een algemene waarheid.
+
+Wanneer meerdere studierichtingen tegelijk worden geschreven, mag niet steeds
+dezelfde H2-structuur met alleen een andere term worden herhaald. Maak iedere
+set van vier vragen inhoudelijk en taalkundig eigen aan de studierichting.
+Controleer automatisch dat geen H2 letterlijk dubbel voorkomt.
+
+Eindig met een natuurlijke adviesroute. Help de lezer eerst zelfstandig
+vergelijken op techniek, functie, sector, verantwoordelijkheid en reizen. Maak
+daarna een bescheiden knipoog naar The Field Service Company als specialist
+die kan adviseren en helpen de mooiste passende field service baan te vinden.
+
+Lever naast de description een korte, enthousiaste intro van twee of drie
+zinnen. De intro moet de studierichting direct verbinden met field service en
+de lezer uitnodigen verder te lezen; gebruik niet één generieke zin waarin
+alleen de termnaam wordt vervangen.
+
 Behandel waar relevant:
 
 - de belangrijkste kennis en vaardigheden;

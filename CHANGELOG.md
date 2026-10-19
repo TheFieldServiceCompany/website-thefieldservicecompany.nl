@@ -1,5 +1,25 @@
 # Changelog
 
+## 2026-10-19 — Beroepengids-studierichtingen inhoudelijk herschreven
+
+- Alle 23 descriptions van `beroep_studierichting` zijn LIVE herschreven rond
+  de vraag wat iemand met de betreffende studie binnen field service kan doen.
+- Iedere term heeft vier inhoudelijk eigen vraagkoppen; de volledige set bevat
+  92 letterlijk unieke H2-koppen en geen herhaald koppenstramien.
+- Alle 23 bestaande velden `intro_taxonomy` bevatten nu een korte,
+  enthousiaste intro van twee zinnen met een directe link naar field service.
+- De teksten gebruiken `opleiding`, `studierichting`, `studie` en
+  `achtergrond` natuurlijk en behandelen mogelijke functies, systemen,
+  sectoren, loopbaankeuzes en een adviesroute naar The Field Service Company.
+- Alle 46 waarden zijn na publicatie exact via REST geverifieerd. Autotechniek,
+  Elektrotechniek en Technische Bedrijfskunde zijn daarnaast openbaar en
+  cachevrij gecontroleerd; alle pagina's gaven HTTP 200 en toonden de nieuwe
+  intro en description.
+- Er zijn geen termen, slugs, relaties, Pods, velden, archieftitels of
+  template-instellingen gewijzigd.
+- Volledig log:
+  `audits/2026-10-19-beroepengids-studierichtingen-herschreven-live.md`.
+
 ## 2026-10-19 — Beroepengids-taxonomieën gelijkgetrokken met vacatures
 
 - De termen en slugs van Bedrijfssectoren, Functie-inhoud, Functienamen,
