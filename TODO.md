@@ -13,84 +13,110 @@ pas daarna af. De uitgebreidere acceptatiecriteria en deelstappen staan in de
 secties verderop in dit document. De volgorde kan alleen bewust worden
 gewijzigd; open afhankelijkheden worden niet stilzwijgend overgeslagen.
 
-### A. WordPress–Supabase–CRM-koppeling
+### A. WordPress-taxonomieën, Supabase en Appsmith
 
-1. [ ] **Nieuw doel-CRM kiezen.** EngageBay blijft uitsluitend legacy- en
-   migratiebron. Zonder deze keuze wordt geen CRM-specifieke mapping of code
-   gemaakt.
-2. [ ] **Alleen-lezen nulmeting afronden en documenteren.** Git, live
+1. [x] **Doelarchitectuur bevestigd.** Appsmith is het CRM en de
+   beheerinterface, Supabase is de canonieke database en EngageBay is alleen
+   legacy- en migratiebron.
+2. [ ] **Reisprofielen alleen-lezen inventariseren en classificeren.** Alle 25
+   actuele termen, slugs, descriptions, tellingen en vacaturekoppelingen
+   vastleggen en per term bepalen of het om gebied, reisomvang,
+   overnachtingen, thuisnachten, weekendreizen of reispatroon gaat.
+3. [ ] **Reisprofiel-mapping en aliasbeleid goedkeuren.** Bewuste
+   zoektermvarianten in WordPress behouden waar ze publiek nut hebben, maar
+   koppelen aan één canonieke betekenis of concreet Supabase-veld; geen
+   dubbele operationele keuzes in Appsmith maken.
+4. [ ] **Volledige WordPress–Supabase–Appsmith-keuzematrix maken.** Naast
+   Reisprofielen ook Werkgebieden, Dagen internationaal en de resterende
+   taxonomieën en keuzelijsten vergelijken op naam, betekenis, ID en status.
+5. [ ] **Publieke WordPress-structuur afronden.** Pas na goedkeuring van de
+   matrix descriptions, vacaturekoppelingen, archieven en eventuele
+   Beroepengids-spiegels gecontroleerd afwerken.
+6. [ ] **Synchronisatieplan ontwerpen en testen.** Vastleggen hoe WordPress-
+   bronwaarden aan canonieke Supabase-records worden gekoppeld en hoe Appsmith
+   die waarden zonder doublures beheert. Nog geen gelijktijdige livewijziging.
+
+### B. Formulieren, intake en inhaalslag
+
+7. [ ] **Alleen-lezen nulmeting voor formulieren afronden.** Live
    WordPress-formulieren, Supabase-schema/constraints/RLS/functions,
    EngageBay-bron, Appsmith-weergave en bestaande importlogica controleren.
-3. [ ] **Exacte grens van de eerdere kandidaatimport vastleggen.** Het laatste
+8. [ ] **Exacte grens van de eerdere kandidaatimport vastleggen.** Het laatste
    betrouwbare bron-ID of eindmoment bewijzen; niet op een datum gokken.
-4. [ ] **Actuele formulieren en uploads inventariseren.** Registratie,
+9. [ ] **Actuele formulieren en uploads inventariseren.** Registratie,
    sollicitatie, werkgeverscontact, mailing, advies en vraag inclusief
    Elementor-veld-ID's, bestandstypen, limieten en bestaande acties vastleggen.
-5. [ ] **Eigenaarschap en privacybesluiten nemen.** Per gegeven het leidende
+10. [ ] **Eigenaarschap en privacybesluiten nemen.** Per gegeven het leidende
    systeem, toestemming, bewaartermijn, verwijderroute en logbeleid bepalen.
-6. [ ] **Deduplicatie- en koppelregels goedkeuren.** E-mail, telefoon,
+11. [ ] **Deduplicatie- en koppelregels goedkeuren.** E-mail, telefoon,
    LinkedIn en externe ID's normaliseren; ambigue gevallen altijd naar
    handmatige controle sturen.
-7. [ ] **Volledige veldmapping goedkeuren.** Ieder Elementor-veld koppelen aan
-   het bestaande Supabase-model en, na punt 1, aan het nieuwe CRM-model.
-8. [ ] **Technisch ontwerp definitief goedkeuren.** Lokale Elementor-opslag,
+12. [ ] **Volledige veldmapping goedkeuren.** Ieder Elementor-veld koppelen aan
+   het bestaande Supabase-model dat Appsmith beheert.
+13. [ ] **Technisch ontwerp definitief goedkeuren.** Lokale Elementor-opslag,
    WordPress-outbox, beveiligde Edge Function, idempotentie, retries,
    `dead_letter`/`review` en herstelprocedure vastleggen.
-9. [ ] **WordPress-connector en lokale outbox bouwen.** Werken na succesvolle
+14. [ ] **WordPress-connector en lokale outbox bouwen.** Werken na succesvolle
    Elementor-opslag, met unieke submission-UUID en zonder geheimen of
    persoonsgegevens in browsercode of gewone logs.
-10. [ ] **Supabase-intake en idempotente verwerking bouwen.** Bestaande
+15. [ ] **Supabase-intake en idempotente verwerking bouwen.** Bestaande
     tabellen en relaties hergebruiken; eventuele schemawijzigingen via een
     beoordeelde migratie, minimale rechten en passende RLS uitvoeren.
-11. [ ] **Cv- en documentroute bouwen.** Besluit over private Supabase Storage,
+16. [ ] **Cv- en documentroute bouwen.** Besluit over private Supabase Storage,
     MIME-/groottecontrole, documentversies, relaties en herstelbaarheid eerst
     goedkeuren.
-12. [ ] **Synchronisatie naar het nieuwe CRM bouwen.** Alleen vanuit de
-    duurzame intake, met externe ID's, rate-limitafhandeling, retries en
-    zichtbare foutstatus.
-13. [ ] **Synthetische end-to-endtests uitvoeren.** Nieuwe, bestaande en
+17. [ ] **Appsmith-weergave en beheer aansluiten.** De nieuwe Supabase-records
+    en foutstatussen in het bestaande CRM tonen en beheren zonder een tweede
+    synchronisatielaag of dubbel datamodel.
+18. [ ] **Synthetische end-to-endtests uitvoeren.** Nieuwe, bestaande en
     ambigue records, duplicaten, verkeerde/te grote bestanden en uitval/herstel
-    van Supabase en CRM testen.
-14. [ ] **Schaduwmodus naast AFI/EngageBay draaien.** Uitkomsten vergelijken
+    van Supabase en fouten in Appsmith testen.
+19. [ ] **Schaduwmodus naast AFI/EngageBay draaien.** Uitkomsten vergelijken
     zonder de bestaande productieroute of lokale Elementor-inzendingen uit te
     schakelen.
-15. [ ] **Backfill-droogloop maken.** Elementor en EngageBay vanaf de bewezen
+20. [ ] **Backfill-droogloop maken.** Elementor en EngageBay vanaf de bewezen
     grens onderling en tegen Supabase ontdubbelen; alleen aantallen voor nieuw,
     bestaand, betrouwbaar, ambigu en fout vastleggen.
-16. [ ] **Goedgekeurde backfill uitvoeren en reconciliëren.** Dezelfde
+21. [ ] **Goedgekeurde backfill uitvoeren en reconciliëren.** Dezelfde
     idempotente route gebruiken, relaties en aantallen controleren en geen
     persoonsgegevens of exports in GitHub opnemen.
-17. [ ] **Gecontroleerd omschakelen.** AFI per formulier uitschakelen, niet
+22. [ ] **Gecontroleerd omschakelen.** AFI per formulier uitschakelen, niet
     alles tegelijk; monitoring, foutoverzicht en herstelhandleiding opleveren.
 
-### B. SEO, content en websitekwaliteit
+### C. SEO, content en websitekwaliteit
 
-18. [ ] **Canonicalstrategie voor losse vacaturetaxonomiearchieven kiezen.**
+23. [ ] **Canonicalstrategie voor losse vacaturetaxonomiearchieven kiezen.**
     Beslissen tussen de huidige combo-canonical en self-canonicals.
-19. [ ] **Snippet 193 veilig aanpassen en testen.** Eerst een inactieve
-    herstelkopie maken; alleen uitvoeren na punt 18.
-20. [ ] **Combo-sitemap monitoren.** De 800 URL's met exact twee taxonomieën
+24. [ ] **Snippet 193 veilig aanpassen en testen.** Eerst een inactieve
+    herstelkopie maken; alleen uitvoeren na punt 23.
+25. [ ] **Combo-sitemap monitoren.** De 800 URL's met exact twee taxonomieën
     controleren op indexeerbaarheid, inhoud en duplicaten.
-21. [ ] **Search & Filter- en overige `noindex`-combo's controleren.** Robots,
+26. [ ] **Search & Filter- en overige `noindex`-combo's controleren.** Robots,
     canonical, sitemap en interne links nalopen.
-22. [ ] **Reisprofielen uitwerken.** De 25 beschrijvingen schrijven en dubbele
-    zoekvarianten alleen na inhoudelijk besluit samenvoegen of verwijderen.
-23. [ ] **Centrale overzichtspagina voor publieke archieven ontwerpen.** Alleen
+27. [ ] **Reisprofielen inhoudelijk uitwerken.** Pas na punt 2 en 3 de
+    goedgekeurde publieke termen van descriptions voorzien; zoekvarianten niet
+    automatisch samenvoegen of verwijderen.
+28. [ ] **Centrale overzichtspagina voor publieke archieven ontwerpen.** Alleen
     goedgekeurde, indexeerbare archieven opnemen.
-24. [ ] **LiteSpeed JavaScript veilig instellen en Clarity testen.** Combine en
+29. [ ] **LiteSpeed JavaScript veilig instellen en Clarity testen.** Combine en
     `Combine External and Inline` uitschakelen, deferred behouden en Clarity
     anoniem verifiëren.
-25. [ ] **`font-display: swap` instellen en visueel testen.** Elementor-layout
+30. [ ] **`font-display: swap` instellen en visueel testen.** Elementor-layout
     en fonts op representatieve pagina's controleren.
-26. [ ] **Resterende taxonomieën en content gefaseerd afwerken.** Werkgebied,
+31. [ ] **Resterende taxonomieën en content gefaseerd afwerken.** Werkgebied,
     vacaturekoppelingen, blogmigraties, Arbeidsvoorwaarden en formulierteksten
     één gecontroleerd onderdeel tegelijk behandelen.
-27. [ ] **WordPress-omvang en prestaties meten en optimaliseren.** Ongebruikte
+32. [ ] **WordPress-omvang en prestaties meten en optimaliseren.** Ongebruikte
     media en grote tabellen eerst inventariseren; alleen na back-up en expliciet
     akkoord opschonen.
 
 ## Eerst oppakken: open punten uit de vorige werksessie
 
+- [ ] Reisprofielen als eerstvolgend modelonderwerp uitwerken. Eerst de 25
+  termen classificeren en mappen op de gestructureerde Supabase/Appsmith-
+  velden. Pas daarna descriptions en vacaturekoppelingen afwerken. Dubbele
+  termen kunnen bewuste zoekvarianten zijn en worden niet zonder gezamenlijk
+  besluit verwijderd of samengevoegd.
 - [ ] Beslissen hoe de canonical van losse vacaturetaxonomiearchieven moet
   werken. Functie-inhoud, bedrijfssector, dienstverband, dagen internationaal
   en vergelijkbare archieven verwijzen nu naar een combo met de vaste context
@@ -104,9 +130,6 @@ gewijzigd; open afhankelijkheden worden niet stilzwijgend overgeslagen.
   meer taxonomieën zijn bereikbaar maar `noindex`.
 - [ ] Search & Filter-URL's en andere `noindex`-combo's controleren op robots,
   canonical, sitemapvermelding en interne links.
-- [ ] Reisprofielen als volgend inhoudelijk onderwerp uitwerken. De 25 termen
-  hebben nog geen descriptions. Dubbele termen kunnen bewuste zoekvarianten
-  zijn en worden niet zonder gezamenlijk besluit verwijderd of samengevoegd.
 - [ ] Later één centrale overzichtspagina voor alle goedgekeurde publieke
   archieven ontwerpen.
 
@@ -121,20 +144,20 @@ gewijzigd; open afhankelijkheden worden niet stilzwijgend overgeslagen.
 - [ ] Uploadlimieten en toegestane bestandstypen van registratie en
   sollicitatie documenteren en testen.
 
-## Project: WordPress, Supabase en CRM verbinden
+## Project: WordPress, Supabase en Appsmith verbinden
 
 ### Uitgangspunt
 
 Een inzending wordt altijd eerst duurzaam in Elementor opgeslagen. Een storing
-bij Supabase, CRM of e-mail mag nooit formulierwaarden of een cv laten
+bij Supabase, Appsmith of e-mail mag nooit formulierwaarden of een cv laten
 verdwijnen. Persoonsgegevens, cv's, sleutels en echte formulierwaarden komen
 niet in GitHub of gewone foutlogs.
 
 ### Fase 1 — besluiten en veldmapping
 
-- [ ] Het nieuwe doel-CRM vaststellen. EngageBay blijft niet het CRM; het is
-  alleen de huidige legacy-bestemming van Advanced Form Integration totdat de
-  nieuwe koppeling bewezen werkt.
+- [x] De doelarchitectuur staat vast: Appsmith is het CRM, Supabase de
+  canonieke database en EngageBay alleen de huidige legacy-bestemming van
+  Advanced Form Integration en een latere migratiebron.
 - [ ] Per formulier vastleggen wat er moet ontstaan:
   - Registratie: `person` en `candidate_profile`, met toestemming en eventueel
     document.
@@ -142,19 +165,20 @@ niet in GitHub of gewone foutlogs.
     aan de juiste vacature koppelen.
   - Werkgeverscontact: `person`, `company_contact` en `company` koppelen of
     gecontroleerd aanmaken.
-  - Mailing, advies en vraag: bepalen welke gegevens naar Supabase en welke
-    uitsluitend naar het CRM gaan.
-- [ ] Per gegeven bepalen welk systeem leidend is: WordPress-inzending,
-  Supabase of CRM. Dit geldt minimaal voor kandidaten, werkgevers, contacten,
-  sollicitaties, vacatures, documenten, toestemming en communicatievoorkeuren.
+  - Mailing, advies en vraag: bepalen welke gegevens in Supabase thuishoren en
+    welke alleen als communicatie-inzending bewaard blijven.
+- [ ] Per gegeven bepalen wat leidend is: de oorspronkelijke WordPress-
+  inzending of het canonieke record in Supabase. Dit geldt minimaal voor
+  kandidaten, werkgevers, contacten, sollicitaties, vacatures, documenten,
+  toestemming en communicatievoorkeuren.
 - [ ] Een volledige veldmapping maken van ieder Elementor-veld naar de
-  bestaande Supabase-kolom en het bijbehorende CRM-veld.
+  bestaande Supabase-kolom en de bijbehorende Appsmith-invoer of -weergave.
 - [ ] Regels voor herkennen en samenvoegen vastleggen: genormaliseerd
   e-mailadres, telefoonnummer, LinkedIn-profiel en bestaande externe ID's.
   Twijfelgevallen gaan naar handmatige controle en overschrijven nooit
   stilzwijgend bestaande gegevens.
 - [ ] Bewaartermijnen, verwijderverzoeken en toestemming uitwerken voor
-  WordPress, Supabase, CRM en cv-bestanden.
+  WordPress, Supabase/Appsmith en cv-bestanden.
 
 ### Fase 2 — bestaande systemen alleen-lezen inventariseren
 
@@ -164,8 +188,6 @@ niet in GitHub of gewone foutlogs.
 - [ ] Bestaande EngageBay-ID's als historische externe ID's en de tabel
   `external_identifiers` gebruiken om dubbele personen, kandidaten, contacten
   en bedrijven te voorkomen; EngageBay is daarmee geen doelarchitectuur.
-- [ ] De officiële CRM-API controleren op authenticatie, rate limits,
-  idempotentie, contact-/bedrijfsrelaties en foutmeldingen.
 - [ ] Vaststellen hoe Appsmith de nieuwe en bestaande records toont en welke
   queries of formulieren later moeten worden aangepast.
 - [ ] De actuele WordPress-formulierconfiguratie exporteren als herstelpunt.
@@ -181,8 +203,8 @@ werkgevermodel.
 
 - [ ] Een WordPress-connector maken die na lokale Elementor-opslag een
   minimaal outboxrecord met unieke submission-UUID aanmaakt.
-- [ ] Geen formuliergegevens of bestanden vanuit browser-JavaScript rechtstreeks
-  naar Supabase of het CRM sturen.
+- [ ] Geen formuliergegevens of bestanden vanuit browser-JavaScript
+  rechtstreeks naar Supabase sturen.
 - [ ] De WordPress-server laten afleveren bij een beveiligde Supabase Edge
   Function. Authenticatie, geheimen en een handtekening blijven uitsluitend
   server-side.
@@ -207,22 +229,22 @@ werkgevermodel.
 - [ ] Een WordPress-upload pas opruimen nadat bestand, metadata en relaties
   aantoonbaar correct in Supabase staan én de bewaartermijn dit toestaat.
 
-### Fase 5 — CRM-synchronisatie
+### Fase 5 — Appsmith aansluiten op de Supabase-intake
 
-- [ ] Vanuit de duurzame Supabase-intake naar de officiële CRM-API sturen.
-  WordPress stuurt niet parallel onafhankelijk naar twee systemen; dat zou
-  afwijkende of dubbele records veroorzaken.
-- [ ] Externe CRM-ID's centraal bewaren in `external_identifiers`.
+- [ ] Appsmith de duurzaam verwerkte Supabase-records en hun intake- of
+  foutstatus laten tonen. Er komt geen tweede CRM-kopie naast Supabase.
+- [ ] Externe bron-ID's centraal bewaren in `external_identifiers`.
 - [ ] Kandidaat, werkgever, contactpersoon en sollicitatie met hun onderlinge
   relaties synchroniseren.
-- [ ] CRM-uitval opvangen met retry, zichtbare foutstatus en handmatige
-  herstelactie zonder de oorspronkelijke inzending opnieuw te laten invullen.
+- [ ] Supabase- of Appsmith-fouten zichtbaar maken en een handmatige
+  herstelactie bieden zonder de oorspronkelijke inzending opnieuw te laten
+  invullen.
 
 ### Fase 6 — testen, kandidaten inhalen en gecontroleerd omschakelen
 
 - [ ] Testen met synthetische gegevens: nieuwe, bestaande en ambigue kandidaat;
   nieuwe en bestaande werkgever/contactpersoon; dubbele verzending; verkeerd
-  bestand; te groot bestand; uitval van Supabase; uitval van CRM; herstel na
+  bestand; te groot bestand; uitval van Supabase; fout in Appsmith; herstel na
   uitval.
 - [ ] Controleren dat elke inzending lokaal bewaard blijft en dat herhalen
   nooit dubbele personen, sollicitaties, contacten of documenten maakt.
@@ -243,18 +265,18 @@ werkgevermodel.
   e-mailadres, telefoonnummer, LinkedIn-profiel en bestaande externe ID's.
 - [ ] De goedgekeurde ontbrekende kandidaten, sollicitaties en cv-relaties via
   exact dezelfde idempotente verwerkingsroute als nieuwe inzendingen naar
-  Supabase en daarna het nieuwe doel-CRM sturen. Iedere broninzending krijgt
+  Supabase sturen en daarna in Appsmith controleren. Iedere broninzending krijgt
   een vaste submission-UUID, zodat opnieuw uitvoeren geen duplicaten maakt.
-- [ ] Na de inhaalslag aantallen en relaties tussen Elementor, Supabase en
-  het nieuwe doel-CRM afstemmen en alle ambigue gevallen handmatig beoordelen.
+- [ ] Na de inhaalslag aantallen en relaties tussen Elementor, Supabase en de
+  Appsmith-weergave afstemmen en alle ambigue gevallen handmatig beoordelen.
 - [ ] Pas na een geslaagde end-to-endcontrole de oude AFI-route per formulier
   uitschakelen. Niet alle formulieren tegelijk omschakelen.
 - [ ] Monitoring, foutoverzicht en een korte herstelhandleiding opleveren.
 
 ## Overige bestaande backlog
 
-- [ ] WordPress-, Supabase- en Appsmith-taxonomieën verder gelijktrekken,
-  waaronder werkgebied, Reisprofielen en de resterende vacaturekoppelingen.
+- [ ] Na Reisprofielen de resterende WordPress-, Supabase- en Appsmith-
+  taxonomieën en keuzelijsten volgens dezelfde canonieke mapping afwerken.
 - [ ] Blogartikelen één voor één actualiseren, naar Beroepengids of Kennisbank
   verplaatsen en met een geteste 301-redirect migreren.
 - [ ] Taxonomie Arbeidsvoorwaarden later als gedeeld model ontwerpen.

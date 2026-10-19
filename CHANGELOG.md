@@ -1,13 +1,28 @@
 # Changelog
 
+## 2026-10-19 — Reisprofielen en CRM-architectuur gecorrigeerd
+
+- Gecorrigeerd dat Appsmith het CRM en de beheerinterface is en Supabase de
+  canonieke database; EngageBay blijft uitsluitend legacy- en migratiebron.
+- De uitvoervolgorde aangepast: eerst de WordPress-taxonomieën afronden,
+  beginnend met de 25 Reisprofiel-termen en hun relatie met de bestaande
+  gestructureerde reis- en mobiliteitsvelden in Supabase/Appsmith.
+- De eerdere Reisprofiel-bespreking vastgelegd, inclusief de gemengde
+  dimensies, bekende doublures en het besluit dat bewuste zoektermvarianten
+  niet automatisch worden verwijderd of als dubbele Appsmith-keuzes worden
+  overgenomen.
+- Er zijn geen gegevens of instellingen in WordPress, Supabase of Appsmith
+  gewijzigd. Details staan in
+  `audits/2026-10-19-reisprofielen-wordpress-supabase-appsmith.md`.
+
 ## 2026-10-19 — Centrale TODO en integratieroute
 
 - Een centrale `TODO.md` toegevoegd met de open SEO- en sitemapcontroles uit
   de vorige werksessie, de eerstvolgende LiteSpeed-/Clarity- en
   formuliercontroles en de bestaande content- en onderhoudsbacklog.
-- De geplande WordPress–Supabase–CRM-koppeling uitgewerkt in zes veilige fasen:
+- De geplande WordPress–Supabase–Appsmith-koppeling uitgewerkt in zes veilige fasen:
   veldmapping, alleen-lezen inventarisatie, duurzame ontvangst/foutopvang,
-  private documentopslag, CRM-synchronisatie en gecontroleerde omschakeling.
+  private documentopslag, Appsmith-aansluiting en gecontroleerde omschakeling.
 - Alleen-lezen bevestigd dat het bestaande Supabase-model al relaties bevat
   voor personen, kandidaatprofielen, sollicitaties, bedrijven,
   contactpersonen, documenten en externe ID's. Er zijn geen database-,
@@ -18,8 +33,7 @@
   een droge deduplicatiecontrole en pas vervolgens verwerking via dezelfde
   idempotente route als nieuwe inzendingen.
 - Gecorrigeerd dat EngageBay niet het toekomstige CRM blijft. Het staat alleen
-  als tijdelijke legacyroute en historische externe-ID-bron in de roadmap; het
-  nieuwe doel-CRM moet nog worden vastgelegd.
+  als tijdelijke legacyroute en historische externe-ID-bron in de roadmap.
 - De kandidaat-inhaalslag uitgebreid naar twee bronnen: latere Elementor-
   inzendingen én latere EngageBay-kandidaten. Beide bronnen worden eerst
   onderling en daarna tegen Supabase ontdubbeld.
