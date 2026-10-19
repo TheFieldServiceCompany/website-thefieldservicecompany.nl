@@ -2,7 +2,7 @@
 
 Datum: 19 oktober 2026  
 Omgeving: LIVE WordPress  
-Status: additive structuur uitgevoerd en via publieke REST gecontroleerd
+Status: canonieke structuur uitgevoerd en via publieke REST gecontroleerd
 
 ## Uitgevoerde wijzigingen
 
@@ -12,9 +12,11 @@ Status: additive structuur uitgevoerd en via publieke REST gecontroleerd
   `Weekenden thuis`.
 - Beide taxonomieën zijn openbaar, openbaar opvraagbaar, hiërarchisch,
   gekoppeld aan post type `vacature` en beschikbaar via WordPress REST.
-- Er zijn geen bestaande termen, URL's of vacaturekoppelingen verwijderd of
-  automatisch omgezet.
-- Vacature `23277` is niet gewijzigd.
+- De eerste uitvoering was additive. Later op 19 oktober zijn de 25 oude
+  Reisprofiel-termen na expliciet akkoord verwijderd.
+- Vacature `23277` zelf is niet verwijderd. Door verwijdering van de oude
+  termen heeft hij geen Reisduur-relatie meer; er is niets automatisch naar
+  een nieuwe waarde omgezet.
 
 ### Reisduur in `reisprofiel`
 
@@ -24,10 +26,13 @@ Status: additive structuur uitgevoerd en via publieke REST gecontroleerd
 | 626 | 2–7 dagen | `2-7-dagen` | 0 |
 | 631 | 8–14 dagen | `8-14-dagen` | 0 |
 | 627 | 15–30 dagen | `15-30-dagen` | 0 |
-| 632 | 31+ dagen | `31-plus-dagen` | 0 |
+| 632 | meer dan 30 dagen | `meer-dan-30-dagen` | 0 |
 
 Iedere term heeft een korte operationele description die de meetbare band
-uitlegt. De oorspronkelijke 25 legacytermen staan nog in dezelfde taxonomie.
+uitlegt. De oorspronkelijke 25 legacytermen zijn later op 19 oktober na
+expliciet akkoord verwijderd. Vacature `23277` bleef bestaan, maar heeft na
+die termverwijdering geen Reisduur-relatie en moet inhoudelijk opnieuw worden
+geclassificeerd.
 
 ### Weekenden thuis in `weekenden-thuis`
 
@@ -42,18 +47,25 @@ uitlegt. De oorspronkelijke 25 legacytermen staan nog in dezelfde taxonomie.
 Iedere term heeft een korte operationele description. `Onbekend` wordt niet
 als term opgeslagen; een ontbrekende waarde blijft de lege datastatus.
 
+### Hotel nachten/maand
+
+De taxonomie `hotel-nachten-maand` is later dezelfde dag LIVE toegevoegd met
+de waarden 0, 1–7, 8–14 en 15–31. De term-ID's zijn respectievelijk 635, 636,
+637 en 638. Alle tellingen waren bij de REST-controle 0.
+
 ## Search & Filter
 
-Twee ingeschakelde velden zijn aan de bestaande query `Vacatures` toegevoegd:
+Drie ingeschakelde velden zijn aan de bestaande query `Vacatures` toegevoegd:
 
 | Veld-ID | Naam | Bron | Toegestane termen | Matchwijze |
 | ---: | --- | --- | --- | --- |
 | 14 | Reisduur | `reisprofiel` | uitsluitend de vijf nieuwe duurbanden | any |
 | 15 | Weekenden thuis | `weekenden-thuis` | uitsluitend 0%, 25%, 50%, 75%, 100% | any |
+| 16 | Hotel nachten/maand | `hotel-nachten-maand` | uitsluitend 0, 1–7, 8–14, 15–31 | any |
 
-Beide velden gebruiken checkboxes en automatisch verzenden. Tri-state is
-uitgeschakeld. De velden bestaan nu in Search & Filter, maar zijn in deze stap
-niet in een Elementor-layout geplaatst. Omdat alle nieuwe termen nog
+De velden gebruiken checkboxes en `match any`. De velden bestaan nu in Search
+& Filter, maar zijn niet in een Elementor-layout geplaatst; die koppeling doet
+de gebruiker handmatig. Omdat alle nieuwe termen nog
 `count = 0` hebben, leveren de filters pas resultaten op nadat vacatures
 inhoudelijk zijn gevalideerd en gekoppeld.
 
@@ -65,9 +77,11 @@ De publieke REST-controle gaf:
   `vacature`;
 - `weekenden-thuis`: naam en REST-basis `Weekenden thuis` /
   `weekenden-thuis`, gekoppeld aan `vacature`;
-- alle tien nieuwe termen kwamen terug met de bedoelde slug en description;
-- alle tien nieuwe termen hadden nog telling 0;
-- de legacytermen en hun bestaande tellingen waren nog aanwezig.
+- alle canonieke Reisduur-, Weekenden-thuis- en Hotel-nachten-termen kwamen
+  terug met de bedoelde slug en description;
+- alle nieuwe termen hadden nog telling 0;
+- de later uitgevoerde REST-controle gaf voor `reisprofiel` alleen de vijf
+  canonieke Reisduur-termen terug.
 
 ## Appsmith-branchcontrole
 
@@ -100,7 +114,8 @@ Na de WordPress-uitvoering is de GitHub-branchhistorie van
 ## Nog niet uitgevoerd
 
 - Geen automatische mapping of wijziging van bestaande vacatures.
-- Geen verwijdering of redirect van legacytermen.
+- Redirects en eventuele herbestemming van oude Reisprofiel-URL's blijven
+  inhoudelijk te beoordelen; de legacytermen zelf zijn verwijderd.
 - Geen plaatsing van de nieuwe Search & Filter-velden in Elementor.
 - Geen Appsmith-deployment. Alleen de editorbranch is naar de correcte branch
   `crm-layout-redesign` gezet; de inhoudelijke live test van de nieuwe

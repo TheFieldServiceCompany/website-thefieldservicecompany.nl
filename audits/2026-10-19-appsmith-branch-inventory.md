@@ -1,33 +1,33 @@
-# Appsmith-branches — alleen-lezen inventarisatie
+# Appsmith-branches — inventarisatie en uitgevoerde opschoning
 
 Datum: 19 oktober 2026  
 Repository: `TheFieldServiceCompany/tfsc-appsmith-crm`  
 Actuele werkbranch: `crm-layout-redesign`  
-Referentiecommit: `6f182a4`
+Referentiecommit: `47972ac`
 
 ## Doel
 
-De repository bevat meerdere oude feature-, herstel- en backfillbranches. Deze
-inventarisatie bepaalt uitsluitend hun positie ten opzichte van de actuele
-werkbranch. Er is geen branch verwijderd.
+De remote commitgrafiek en open pull requests zijn eerst alleen-lezen
+gecontroleerd. Er waren geen open pull requests. Alleen branches waarvan de
+head volledig in `crm-layout-redesign` was opgenomen, kwamen voor verwijdering
+in aanmerking. Branches met een unieke commit en de actieve backfillbranch zijn
+behouden.
 
 ## Behouden
 
 | Branch | Reden |
 | --- | --- |
-| `crm-layout-redesign` | Actuele Appsmith-werkbranch; bevat de nieuwste functionele lijn en de travelwijziging |
-| `main` | Standaardbranch; inhoudelijk achtergelopen, maar niet verwijderen tijdens branchopschoning |
+| `crm-layout-redesign` | Actuele Appsmith-werkbranch; remote head `47972ac` |
+| `main` | Standaardbranch; niet verwijderen |
+| `document-preview-backfill` | Gemerged, maar nog bewust in gebruik door de afzonderlijke backfillchat/worktree |
 
-## Volledig opgenomen in `crm-layout-redesign`
+## Verwijderd van GitHub
 
-De headcommit van iedere onderstaande branch is een voorouder van
-`crm-layout-redesign`. Deze branches bevatten volgens de commitgrafiek geen
-unieke commits meer en zijn kandidaten voor latere verwijdering na één laatste
-naam- en PR-controle:
+De volgende branches bevatten geen unieke commit meer en zijn na expliciet
+akkoord van GitHub verwijderd:
 
 - `candidate-document-archive-employer-review`;
 - `candidate-technical-profile-fix`;
-- `document-preview-backfill`;
 - `vacancy-edit`;
 - `vacancy-language-requirements`;
 - `work/candidate-documents-company`;
@@ -36,8 +36,9 @@ naam- en PR-controle:
 - `work/general-contact-profile`.
 
 `document-preview-backfill` is met commit `204e1ec` in de actuele branch
-opgenomen. De daarna bewust verwijderde oude pagina's maken deze historische
-branch niet tot de huidige basis.
+opgenomen. Commit `445b20d` verwijderde daarna bewust de oude pagina's
+`Candidates` en `Vacancies_Old`. De branch is dus niet de huidige basis, maar
+blijft bestaan zolang de afzonderlijke backfilltaak hem nog nodig heeft.
 
 ## Eerst handmatig beoordelen
 
@@ -55,12 +56,14 @@ Deze vier branches worden pas verwijderd nadat hun unieke diff inhoudelijk is
 beoordeeld en expliciet is besloten of de commit vervallen is, al elders is
 gerealiseerd of alsnog moet worden overgenomen.
 
-## Veilige vervolgstappen
+## Verificatie en vervolgstappen
 
-1. Openstaande PR's en branchgebruik in Appsmith controleren.
-2. De vier unieke commits inhoudelijk vergelijken met de actuele pagina's.
-3. Een definitieve lijst `behouden`, `reeds gemerged` en `unieke wijziging`
-   tonen.
-4. Alleen na expliciet akkoord de bevestigde remote branches verwijderen.
-5. Na verwijdering de actuele werkbranch en standaardbranch opnieuw controleren.
+Een nieuwe remote controle bevestigde dat nog exact zeven branches bestaan:
+`main`, `crm-layout-redesign`, `document-preview-backfill` en de vier branches
+met unieke commits uit de tabel hierboven.
+
+1. De vier unieke commits inhoudelijk vergelijken met de actuele pagina's.
+2. Per branch besluiten of de wijziging vervallen, elders gerealiseerd of
+   alsnog over te nemen is.
+3. Pas na nieuw expliciet akkoord een volgende remote branch verwijderen.
 

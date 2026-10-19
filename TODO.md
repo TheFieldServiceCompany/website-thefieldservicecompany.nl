@@ -25,36 +25,33 @@ gewijzigd; open afhankelijkheden worden niet stilzwijgend overgeslagen.
 3. [x] **Reisprofiel-mapping en aliasbeleid goedkeuren.** Bewuste
    zoektermvarianten in WordPress behouden waar ze publiek nut hebben, maar
    koppelen aan één canonieke betekenis of concreet Supabase-veld; geen
-   dubbele operationele keuzes in Appsmith maken. Herzien voorstel: de gemengde
-   Reisprofiel-lijst vervangen door `Reisduur` (`Elke nacht thuis`, `2–7`,
-   `8–14`, `15–30`, `31+ dagen`) en `Weekenden thuis` (0%, 25%, 50%, 75%,
-   100%). Overnachten operationeel afleiden bij alle opties behalve `Elke
-   nacht thuis`; het accommodatietype kan daar niet uit worden afgeleid.
-   `Hotelovernachtingen` als zoekwoord in descriptions/content behouden.
-   Reisfrequentie wordt niet als aparte dimensie toegevoegd. De additive LIVE-
-   structuur is uitgevoerd: Reisduur gebruikt de bestaande slug `reisprofiel`,
-   Weekenden thuis gebruikt `weekenden-thuis`, tien termen hebben operationele
-   descriptions en Search & Filter-velden 14 en 15 tonen uitsluitend de nieuwe
-   canonieke keuzes. Legacytermen en vacature `23277` zijn niet gewijzigd.
+   dubbele operationele keuzes in Appsmith maken. Het definitieve model gebruikt
+   `Reisduur` (`Elke nacht thuis`, `2–7`, `8–14`, `15–30`, `meer dan 30
+   dagen`), `Weekenden thuis` (0%, 25%, 50%, 75%, 100%) en apart `Hotel
+   nachten/maand` (0, 1–7, 8–14, 15–31). Reisfrequentie vervalt. De 25 oude
+   Reisprofiel-termen zijn LIVE verwijderd; vacature `23277` bestaat nog en
+   moet inhoudelijk opnieuw worden geclassificeerd. Search & Filter-velden 14,
+   15 en 16 bestaan, maar zijn niet in de zichtbare frontend-GUI geplaatst.
 4. [ ] **Volledige WordPress–Supabase–Appsmith-keuzematrix maken.** Naast
    Reisprofielen ook Werkgebieden, Dagen internationaal en de resterende
    taxonomieën en keuzelijsten vergelijken op naam, betekenis, ID en status.
    Opleidingsniveau heeft al 4 en Studierichting 23 actieve mappings; deze
-   worden in de end-to-endcontrole opnieuw gevalideerd.
+   worden in de end-to-endcontrole opnieuw gevalideerd. Leg voor `Dagen
+   internationaal` ook de exacte bandgrenzen naar het numerieke Supabaseveld
+   vast; ID 358 heet LIVE `Meer dan 200 dagen`.
 5. [ ] **Publieke WordPress-structuur afronden.** Pas na goedkeuring van de
    matrix descriptions, vacaturekoppelingen, archieven en eventuele
-   Beroepengids-spiegels gecontroleerd afwerken.
+   Beroepengids-spiegels gecontroleerd afwerken. Valideer eerst vacature
+   `23277` en de overige vacatures voordat Reisduur, Weekenden thuis en Hotel
+   nachten/maand worden gekoppeld. De frontendplaatsing van de drie bestaande
+   Search & Filter-velden doet de gebruiker handmatig.
 6. [ ] **Synchronisatieplan ontwerpen en testen.** Het travel-deel is in
    Supabase en de Appsmith-bron uitgevoerd en met rollbacktests gecontroleerd.
    De WordPress-taxonomiestructuur en Search & Filter-objecten zijn additive
-   LIVE aangemaakt en via REST geverifieerd. Frontendplaatsing en inhoudelijke
-   vacaturekoppeling volgen na validatie. De travelcommit staat correct op de
-   actuele Appsmith-werkbranch `crm-layout-redesign`; de historische branch
-   `document-preview-backfill` is daarin al gemerged en bevat nog de bewust
-   verwijderde oude pagina's. De live Appsmith-editor staat op
-   `crm-layout-redesign`; pull is niet nodig omdat de pullactie uitgeschakeld
-   was en er geen te committen wijzigingen waren. De inhoudelijke live test
-   van de nieuwe travelvelden blijft open. Daarna volgen de overige keuzes.
+   LIVE aangemaakt en via REST geverifieerd. De actuele Appsmith-werkbranch is
+   `crm-layout-redesign`; commit `47972ac` bevat ook het definitieve label
+   `More than 30 days`. Frontendplaatsing, vacaturekoppeling en een volledige
+   inhoudelijke live test blijven open. Daarna volgen de overige keuzes.
 
 ### B. Formulieren, intake en inhaalslag
 
@@ -113,9 +110,9 @@ gewijzigd; open afhankelijkheden worden niet stilzwijgend overgeslagen.
     controleren op indexeerbaarheid, inhoud en duplicaten.
 26. [ ] **Search & Filter- en overige `noindex`-combo's controleren.** Robots,
     canonical, sitemap en interne links nalopen.
-27. [ ] **Reisprofielen inhoudelijk uitwerken.** Pas na punt 2 en 3 de
-    goedgekeurde publieke termen van descriptions voorzien; zoekvarianten niet
-    automatisch samenvoegen of verwijderen.
+27. [ ] **Travelarchieven inhoudelijk afronden.** Controleer de descriptions
+    van Reisduur, Weekenden thuis, Hotel nachten/maand en Dagen internationaal,
+    plus redirects of contentbestemmingen voor de verwijderde oude termen.
 28. [ ] **Centrale overzichtspagina voor publieke archieven ontwerpen.** Alleen
     goedgekeurde, indexeerbare archieven opnemen.
     Beschrijvende reisthema's zo nodig als sterke Beroepengids- of
@@ -135,11 +132,11 @@ gewijzigd; open afhankelijkheden worden niet stilzwijgend overgeslagen.
 
 ## Eerst oppakken: open punten uit de vorige werksessie
 
-- [ ] Reisprofielen als eerstvolgend modelonderwerp uitwerken. Eerst de 25
-  termen classificeren en mappen op de gestructureerde Supabase/Appsmith-
-  velden. Pas daarna descriptions en vacaturekoppelingen afwerken. Dubbele
-  termen kunnen bewuste zoekvarianten zijn en worden niet zonder gezamenlijk
-  besluit verwijderd of samengevoegd.
+- [ ] Het uitgevoerde travelmodel afronden met inhoudelijke vacaturevalidatie.
+  Reisduur, Weekenden thuis en Hotel nachten/maand bestaan in WordPress,
+  Supabase en Appsmith; de 25 oude Reisprofiel-termen zijn verwijderd. Toon
+  vóór invullen per vacature de voorgestelde canonieke waarden en controleer
+  oude URL's, descriptions en redirects.
 - [ ] Beslissen hoe de canonical van losse vacaturetaxonomiearchieven moet
   werken. Functie-inhoud, bedrijfssector, dienstverband, dagen internationaal
   en vergelijkbare archieven verwijzen nu naar een combo met de vaste context

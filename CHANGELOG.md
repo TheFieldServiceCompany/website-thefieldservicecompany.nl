@@ -1,5 +1,33 @@
 # Changelog
 
+## 2026-10-19 — Canoniek travelmodel afgerond en Appsmith-branches opgeschoond
+
+- De definitieve travelvelden zijn voor kandidaat en vacature gelijkgetrokken:
+  `International travel`, `Max international days / year`, `Maximum travel
+  duration`, `Weekends home` en `Hotel nights/month`.
+- Supabase-migratie `20261019151611_canonical_travel_fields_and_appsmith` is
+  toegepast en getest. De 1.773 kandidaat-reisrecords en het bestaande
+  vacature-reisrecord zijn behouden en niet automatisch geconverteerd.
+- Appsmith gebruikt op `crm-layout-redesign` dezelfde veldnamen en
+  validatiewaarden. De rasteroverlap van de travelvelden en de afwijkende
+  desktoppositie van de kandidaat-documentpreview zijn gecorrigeerd.
+- Het langste Reisduur-label is definitief `meer dan 30 dagen` in WordPress en
+  `More than 30 days` in Appsmith. De interne waarde blijft
+  `days_31_plus`.
+- LIVE WordPress bevat nu alleen de vijf canonieke Reisduur-termen. De 25 oude
+  Reisprofiel-termen zijn verwijderd; vacature `23277` bestaat nog en heeft nu
+  geen Reisduur-relatie, zodat die later inhoudelijk opnieuw wordt ingevuld.
+- De nieuwe LIVE-taxonomie `Hotel nachten/maand` bevat 0, 1–7, 8–14 en 15–31.
+  Search & Filter-veld #16 is aangemaakt, maar bewust niet in de zichtbare GUI
+  geplaatst.
+- `Dagen internationaal`-term ID 358 heet nu `Meer dan 200 dagen`; de slug
+  `vanaf-200-dagen` bleef behouden.
+- Acht volledig opgenomen remote Appsmith-branches zijn verwijderd. De
+  actuele werkbranch, `main`, de actieve backfillbranch en vier branches met
+  elk één unieke commit zijn behouden.
+- Volledig log:
+  `audits/2026-10-19-travel-uitvoering-appsmith-en-branchopschoning.md`.
+
 ## 2026-10-19 — Reisduur en Weekenden thuis additive LIVE in WordPress
 
 - Het beheerlabel van de bestaande taxonomie `reisprofiel` is LIVE aangepast
@@ -31,9 +59,11 @@
   dit is geen reisduur van één dag maar betekent dat er niet buitenshuis wordt
   overnacht.
 - Reisduur vastgesteld op `Elke nacht thuis`, `2–7 dagen`, `8–14 dagen`,
-  `15–30 dagen` en `31+ dagen`; Weekenden thuis op 0%, 25%, 50%, 75% en 100%.
-- Reisfrequentie als aparte dimensie geschrapt. Hotelovernachtingen blijft een
-  content- en SEO-term en is geen aparte operationele filter.
+  `15–30 dagen` en `meer dan 30 dagen`; Weekenden thuis op 0%, 25%, 50%, 75%
+  en 100%.
+- Reisfrequentie als aparte dimensie geschrapt. Hotelovernachtingen is later
+  die dag alsnog als het meetbare veld `Hotel nachten/maand` toegevoegd,
+  omdat dit ook bij nationaal werk relevant is.
 - Vier nullable velden plus check constraints toegevoegd in Supabase staging;
   Appsmith-read/savefuncties, widgets en matching daarop aangepast.
 - De 1.773 bestaande kandidaatreisrecords en het bestaande vacature-record
@@ -47,6 +77,11 @@
   verwijderen.
 
 ## 2026-10-19 — Reisduur en Weekenden thuis meetbaar gemaakt
+
+Dit was een tussenbesluit. Het is later dezelfde dag aangescherpt door
+`1 dag` te vervangen door `Elke nacht thuis`, `31+ dagen` te hernoemen naar
+`meer dan 30 dagen` en `Hotel nachten/maand` als aparte meetbare dimensie toe
+te voegen.
 
 - Het eerdere voorstel met `Kort verblijf` en `Lang verblijf` ingetrokken;
   deze labels zijn zonder vaste grens niet meetbaar.

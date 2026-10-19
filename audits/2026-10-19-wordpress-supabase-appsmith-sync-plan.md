@@ -52,8 +52,8 @@ gekopieerd.
 | --- | --- | --- |
 | Opleidingsniveau | `education_levels` | 4 actieve WordPress-mappings aanwezig; opnieuw valideren in eindcontrole |
 | Studierichting | `education_fields` | 23 actieve WordPress-mappings aanwezig; Appsmith-repository is hierop uitgelijnd |
-| Reisprofiel | Gestructureerde travel-velden | Besluit goedgekeurd; Supabase en Appsmith-bron uitgevoerd met meetbare Reisduur-banden en percentages Weekenden thuis; WordPress additive omzetting nog afronden |
-| Dagen internationaal | Numerieke travel-velden | Bandmapping bestaat inhoudelijk, maar moet als formele conversieregel worden vastgelegd |
+| Reisprofiel | Gestructureerde travel-velden | Uitgevoerd als Reisduur, Weekenden thuis en Hotel nachten/maand; 25 oude termen verwijderd; vacaturekoppelingen inhoudelijk opnieuw valideren |
+| Dagen internationaal | Numerieke travel-velden | ID 358 heet LIVE `Meer dan 200 dagen`; volledige bandmapping moet nog als formele conversieregel worden vastgelegd |
 | Werkgebied | `geographic_areas` en werkgebiedrelaties | Canonieke landen/regio's bestaan; volledige WordPress-mapping en relaties nog controleren |
 | Mobiliteit | Aparte mobility-tabellen | Bewust buiten Reisprofiel houden |
 | Overige vacaturetaxonomieën | Diverse canonieke tabellen | Bestaande centrale taxonomie-inventaris per onderwerp beoordelen en bevestigen |
@@ -65,10 +65,10 @@ voor `vac_studierichting`, alle actief. Er zijn nog geen mappings voor
 
 ## Werkvolgorde
 
-1. Reisprofielen en de meetbare filterdimensies `Reisduur` en `Weekenden thuis`
-   besluiten, veilig omzetten en verifiëren. Overnachten wordt dan uit
-   Reisduur afgeleid; het accommodatietype niet. `Hotelovernachtingen` blijft
-   daarnaast een contentzoekwoord.
+1. De uitgevoerde dimensies `Reisduur`, `Weekenden thuis` en `Hotel
+   nachten/maand` inhoudelijk op bestaande vacatures valideren. Hotelnachten
+   blijven apart meetbaar omdat ook nationaal werk hotelovernachtingen kan
+   vereisen.
 2. Dagen internationaal als numerieke/bandmapping formaliseren.
 3. Werkgebieden, landen en regio's volledig gelijk trekken.
 4. Opleidingsniveaus en studierichtingen opnieuw end-to-end valideren:
@@ -99,6 +99,7 @@ bron is daarop aangepast op de juiste werkbranch `crm-layout-redesign`.
 `document-preview-backfill` is een gemergede historische voorouder; de oude
 pagina's `Candidates` en `Vacancies_Old` zijn daarna bewust verwijderd.
 Bestaande kandidaat- en vacaturewaarden zijn niet geconverteerd. De WordPress-
-structuur is additive LIVE toegevoegd en via REST geverifieerd;
-legacyrelaties, descriptions, redirects en inhoudelijke vacaturemapping
-blijven open.
+structuur is LIVE toegevoegd en via REST geverifieerd. De 25 oude
+Reisprofiel-termen zijn verwijderd; redirects, descriptions en inhoudelijke
+vacaturemapping blijven open. Search & Filter-velden 14, 15 en 16 zijn niet in
+de frontend-GUI geplaatst.
