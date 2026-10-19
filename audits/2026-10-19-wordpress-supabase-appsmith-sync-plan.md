@@ -1,7 +1,7 @@
 # Synchronisatieplan — WordPress, Supabase en Appsmith
 
 Datum: 19 oktober 2026  
-Status: centrale werkwijze; alleen-lezen inventarisatie gestart
+Status: centrale werkwijze; eerste meetbare travel-dimensies uitgevoerd
 
 ## Doel
 
@@ -52,7 +52,7 @@ gekopieerd.
 | --- | --- | --- |
 | Opleidingsniveau | `education_levels` | 4 actieve WordPress-mappings aanwezig; opnieuw valideren in eindcontrole |
 | Studierichting | `education_fields` | 23 actieve WordPress-mappings aanwezig; Appsmith-repository is hierop uitgelijnd |
-| Reisprofiel | Gestructureerde travel-velden | 25 termen geïnventariseerd; herzien voorstel is de gemengde lijst te vervangen door meetbare Reisduur-banden en percentages Weekenden thuis |
+| Reisprofiel | Gestructureerde travel-velden | Besluit goedgekeurd; Supabase en Appsmith-bron uitgevoerd met meetbare Reisduur-banden en percentages Weekenden thuis; WordPress additive omzetting nog afronden |
 | Dagen internationaal | Numerieke travel-velden | Bandmapping bestaat inhoudelijk, maar moet als formele conversieregel worden vastgelegd |
 | Werkgebied | `geographic_areas` en werkgebiedrelaties | Canonieke landen/regio's bestaan; volledige WordPress-mapping en relaties nog controleren |
 | Mobiliteit | Aparte mobility-tabellen | Bewust buiten Reisprofiel houden |
@@ -93,5 +93,8 @@ voor `vac_studierichting`, alle actief. Er zijn nog geen mappings voor
   controlematrix en terugvalplan.
 - Geen persoonsgegevens, bronexports of cv-inhoud in GitHub opnemen.
 
-Tijdens deze inventarisatie is niets gewijzigd in WordPress, Supabase of
-Appsmith.
+Op 19 oktober zijn de nieuwe nullable travelvelden, controles, Appsmith-
+lees/schrijffuncties en matching toegepast op Supabase staging. De Appsmith-
+bron is daarop aangepast. Bestaande kandidaat- en vacaturewaarden zijn niet
+geconverteerd. De WordPress-structuur blijft additive totdat legacyrelaties,
+descriptions en redirects zijn gevalideerd.

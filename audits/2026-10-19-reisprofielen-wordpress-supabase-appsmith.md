@@ -1,7 +1,7 @@
 # Reisprofielen — WordPress, Supabase en Appsmith
 
 Datum: 19 oktober 2026  
-Status: teruggevonden besluitvorming en alleen-lezen architectuurcontrole
+Status: model goedgekeurd; Supabase en Appsmith uitgevoerd; WordPress additive omzetting voorbereid
 
 ## Bevestigde architectuur
 
@@ -99,7 +99,7 @@ Ze moeten wel dezelfde betekenis delen.
 | --- | --- | --- |
 | Land, regio of internationaal werkgebied | `geographic_areas`, `vacancy_work_areas` en kandidaat-werkgebiedvoorkeuren | Hoort operationeel niet in één algemeen Reisprofiel |
 | Omvang internationaal werk | `dagen-internationaal` plus de velden voor maximaal aantal internationale dagen | Eerst de grenzen van iedere term exact vastleggen |
-| Reisduur per afzonderlijke reis | Meetbaar aantal aaneengesloten reisdagen, met publieke banden | `1 dag` moet apart staan van `2–7 dagen` om overnachten exact te kunnen afleiden |
+| Reisduur per afzonderlijke reis | Meetbare duurband per aaneengesloten reis | `Elke nacht thuis` betekent geen overnachting; iedere hogere band impliceert minimaal één overnachting |
 | Weekenden thuis | Percentage van de weekenden dat iemand thuis is of een vacature naar verwachting thuis biedt | Banden 0%, 25%, 50%, 75% en 100%; onbekend blijft apart |
 | Eigen vervoer, woon-werkafstand en verhuizen | Mobility-velden | Niet onder Reisprofiel opslaan |
 | Korte trips, langdurig op locatie, veel vliegen en vaak van huis | Zoekwoorden en contentthema's | Niet als subjectieve of dubbele operationele keuze in Appsmith toevoegen |
@@ -115,19 +115,18 @@ niet iedere SEO-variant als aparte waarde.
    vacaturekoppelingen alleen-lezen uitlezen.
 2. [x] Per term een controlematrix maken met dimensie, betekenis, mogelijke
    alias, Supabase-doelveld en informatie die niet veilig kan worden afgeleid.
-3. [ ] Conflicten en ontbrekende keuzes aan de gebruiker voorleggen. Verwijder of
-   hernoem geen termen.
-4. [ ] Besluiten welke termen publiek/SEO blijven en welke canonieke keuzes Appsmith
-   toont.
+3. [x] Conflicten en ontbrekende keuzes aan de gebruiker voorleggen.
+4. [x] Besluiten welke canonieke keuzes Appsmith toont.
 5. [x] Dezelfde aanpak vastleggen voor de overige WordPress-taxonomieën en
    keuzelijsten.
-6. [ ] Pas na goedkeuring een testbaar implementatie- en migratieplan maken voor
+6. [x] Na goedkeuring een testbaar implementatie- en migratieplan maken voor
    WordPress, Supabase en Appsmith.
 7. [ ] Reisprofiel-descriptions schrijven en vacaturekoppelingen pas vastleggen nadat
    het model is goedgekeurd; anders wordt de huidige vermenging versterkt.
 
-Er zijn voor deze reconstructie geen gegevens of instellingen in WordPress,
-Supabase of Appsmith gewijzigd.
+De inventarisatie begon alleen-lezen. Na expliciete goedkeuring zijn Supabase
+en de Appsmith-bron additive aangepast; WordPress-legacytermen zijn nog niet
+verwijderd of omgezet.
 
 ## Actuele alleen-lezen inventarisatie
 
@@ -157,7 +156,7 @@ eerst de vacaturekoppeling, redirects, indexering en descriptions geregeld.
 | 472 | Langdurig op locatie | 0 | Verwijderen als subjectieve filterterm | Alleen na inhoudelijke controle naar een meetbare Reisduur-band mappen; zoekvariant in descriptions bewaren |
 | 473 | Kort op locatie | 0 | Verwijderen als subjectieve filterterm | Alleen na inhoudelijke controle naar een meetbare Reisduur-band mappen; zoekvariant in descriptions bewaren |
 | 474 | Veel vliegen | 1 | Verwijderen als losse term | Geen canoniek vervoersmiddelveld; als zoekterm in teksten behouden |
-| 476 | Bijna elke dag thuis | 0 | Verwijderen als subjectieve filterterm | Mogelijk `Reisduur = 1 dag`, maar alleen na inhoudelijke controle; zoekvariant bewaren |
+| 476 | Bijna elke dag thuis | 0 | Verwijderen als subjectieve filterterm | Mogelijk `Reisduur = Elke nacht thuis`, maar alleen na inhoudelijke controle; zoekvariant bewaren |
 | 480 | Hotelovernachting 25% | 0 | Verwijderen als filterterm | Niet gelijk aan 25% weekenden thuis; niet automatisch converteren |
 | 481 | Hotelovernachting 50% | 1 | Verwijderen als filterterm | Niet gelijk aan 50% weekenden thuis; gekoppelde vacature handmatig valideren |
 | 482 | Hotelovernachting 75% | 0 | Verwijderen als filterterm | Niet gelijk aan 75% weekenden thuis; niet automatisch converteren |
@@ -190,16 +189,17 @@ en is nog niet in WordPress uitgevoerd.
 het project en niet het totale aantal reisdagen per jaar. Voor de publieke
 filter worden deze banden voorgesteld:
 
-1. `1 dag`;
+1. `Elke nacht thuis`;
 2. `2–7 dagen`;
 3. `8–14 dagen`;
 4. `15–30 dagen`;
 5. `31+ dagen`.
 
 `0 dagen` hoort niet in Reisduur: dat betekent dat geen reis plaatsvindt en
-wordt door het aparte ja/nee-veld voor reizen afgedekt. `1 dag` staat bewust
-los van `2–7 dagen`. Daardoor betekent `1 dag` altijd dezelfde dag thuis en
-betekent iedere hogere band automatisch minimaal één overnachting. Een losse
+wordt door het aparte ja/nee-veld voor reizen afgedekt. `Elke nacht thuis`
+betekent dat iemand na iedere werkdag thuis overnacht; het is nadrukkelijk geen
+reisduur van één dag. Iedere hogere band betekent automatisch minimaal één
+overnachting. Een losse
 filterterm `Hotelovernachtingen` is dan operationeel niet nodig zolang alleen
 de afwezigheidsduur relevant is. Reisduur bewijst wel een overnachting, maar
 niet of die in een hotel, appartement, schip of andere accommodatie is. Het
@@ -237,9 +237,9 @@ Ook hier verschilt de semantiek per kant:
 - vacature: **verwacht percentage weekenden thuis**.
 
 De huidige booleans `weekend_travel_acceptable` en
-`weekend_travel_required` kunnen deze vijf waarden niet exact opslaan. Dit
-vereist na goedkeuring een schema- en matchingwijziging in Supabase/Appsmith;
-er is nu niets gewijzigd.
+`weekend_travel_required` kunnen deze vijf waarden niet exact opslaan. De
+nieuwe percentagevelden zijn daarom nullable toegevoegd; bestaande waarden
+zijn niet automatisch geconverteerd.
 
 ### Wat daarnaast al wordt afgedekt
 
@@ -254,13 +254,10 @@ maar de overige hoofdvragen bestaan al als aparte velden:
 | Hoe vaak is iemand in het weekend thuis? | Nieuw percentage Weekenden thuis |
 | Is internationaal reizen aanvaardbaar/verplicht? | Bestaand ja/nee-veld |
 
-Daarmee zijn de belangrijkste filter- en matchingvragen gedekt. Alleen
-**reisfrequentie** blijft als mogelijk ontbrekende kwantitatieve dimensie over:
-twee vacatures kunnen evenveel internationale dagen en dezelfde Reisduur
-hebben, maar het ene patroon kan uit veel losse reizen bestaan en het andere
-uit enkele reizen. Het advies is dit niet direct toe te voegen. Eerst wordt
-gecontroleerd of werkgevers en kandidaten hier werkelijk op willen filteren;
-zo ja, dan hoort er later een apart meetbaar aantal reizen per jaar bij.
+Daarmee zijn de belangrijkste filter- en matchingvragen gedekt.
+**Reisfrequentie vervalt als aparte dimensie.** Als de verdeling van reizen
+later inhoudelijk relevant blijkt, wordt dat eerst als nieuwe, aantoonbare
+behoefte beoordeeld en niet alsnog in Reisduur verstopt.
 
 Vervoersmiddel, type accommodatie en planbaarheid/vaste rotatie worden vooralsnog
 als descriptions of contentthema behandeld. Ze worden alleen nieuwe canonieke
@@ -315,20 +312,55 @@ dit binnen de bestaande Beroepengidsstructuur logisch past; anders wordt een
 gerichte landingspagina gebruikt. Er worden geen dunne archiefpagina's gemaakt
 alleen om een extra zoekwoord te bezitten.
 
+## Uitvoering op 19 oktober 2026
+
+Supabase staging (`bpfocgapqsrokmargsjr`) bevat nu:
+
+- kandidaat: `max_trip_duration_band` en
+  `min_weekends_home_percentage`;
+- vacature: `expected_trip_duration_band` en
+  `expected_weekends_home_percentage`;
+- check constraints voor precies de vijf duurcodes en 0/25/50/75/100;
+- bijgewerkte Appsmith-read/savefuncties en directionele matching;
+- legacy booleanmatching als terugval wanneer de nieuwe vacaturewaarde leeg is.
+
+De 1.773 bestaande kandidaat-reisrecords en het bestaande vacature-reisrecord
+hebben voor de nieuwe velden `NULL` gehouden. Rollbacktests voor lezen,
+opslaan, wissen, revisiebeveiliging en rechten zijn geslaagd. De Appsmith-
+widgets zijn aangepast naar de meetbare selecties; oude overnachtingswidgets
+zijn verborgen, niet verwijderd.
+
+Live migraties:
+
+- `20261019111559_measurable_travel_profile_fields`;
+- `20261019111640_measurable_candidate_travel_workspot`;
+- `20261019111730_measurable_vacancy_travel`;
+- `20261019111924_measurable_vacancy_matching`.
+
+Voor WordPress wordt de bestaande interne taxonomy-slug `reisprofiel`
+behouden en alleen het beheerlabel naar Reisduur omgezet. De vijf nieuwe
+Reisduur-termen worden additive toegevoegd. `Weekenden thuis` wordt een tweede
+taxonomie met vijf percentagewaarden. De 25 legacytermen blijven staan totdat
+vacature `23277`, descriptions, indexering en redirects handmatig zijn
+gevalideerd.
+
 ## Actuele Supabase-controle
 
-Project: `tfsc-crm-ats-staging` (`bpfocgapqsrokmargsjr`). Alle controles waren
-alleen-lezen.
+Project: `tfsc-crm-ats-staging` (`bpfocgapqsrokmargsjr`). Eerst is alleen-lezen
+geïnventariseerd; daarna zijn de goedgekeurde additive migraties toegepast.
 
 ### Schema
 
-De benodigde gestructureerde velden bestaan al:
+De bestaande gestructureerde velden blijven aanwezig:
 
 - kandidaten: internationaal reizen, maximaal internationale dagen per jaar,
   maximaal aaneengesloten nachten weg, overnachtingen en weekendreizen;
 - vacatures: dezelfde vijf huidige reiskenmerken als requirements;
 - werkgebieden: aparte relaties naar `geographic_areas`;
 - mobiliteit: woon-werkafstand, verhuizen en eigen vervoer staan apart.
+
+Daarnaast zijn de vier meetbare duur- en weekendvelden toegevoegd die in de
+uitvoeringssectie hierboven staan. De legacyvelden zijn niet verwijderd.
 
 Er is geen veld voor vervoersmiddel of `veel vliegen`. Als dat operationeel
 filterbaar moet blijven, vereist dat later een afzonderlijk modelbesluit. Het
@@ -375,11 +407,10 @@ gesynchroniseerd.
 
 ## Actuele Appsmith-controle
 
-Repository `tfsc-appsmith-crm`, branch `crm-layout-redesign`, gecontroleerde
-commit `e709b22`.
+Repository `tfsc-appsmith-crm`, branch `crm-layout-redesign`.
 
-Appsmith kan de volgende huidige reiswaarden voor kandidaten en vacatures al
-tonen en opslaan:
+Appsmith kan de volgende reiswaarden voor kandidaten en vacatures tonen en
+opslaan:
 
 - werkgebieden;
 - internationaal reizen;
@@ -390,28 +421,19 @@ tonen en opslaan:
 - eigen vervoer en verhuizen;
 - bij kandidaten ook maximale enkele woon-werkafstand.
 
-De matchlogica vergelijkt werkgebieden, internationaal reizen,
-overnachtingen, weekendreizen, internationale dagen, eigen vervoer en
-verhuizen afzonderlijk. Reisduur in dagen en het percentage Weekenden thuis
-zijn nog niet als zodanig aanwezig. De huidige nachten- en booleanvelden mogen
-daarom pas na een goedgekeurde migratie worden vervangen of afgeleid.
+De Candidate- en Vacancy-pagina's bevatten daarnaast selecties voor Reisduur
+en Weekenden thuis met exact dezelfde vijf waarden als Supabase.
 
-## Besluiten vóór uitvoering
+De matchlogica vergelijkt nu ook de directionele Reisduur en Weekenden thuis.
+Legacy overnachtings- en weekendbooleans blijven alleen als terugval actief
+wanneer de nieuwe vacaturewaarde leeg is.
 
-1. Goedkeuren of `Reisduur` met `1 dag`, `2–7 dagen`, `8–14 dagen`,
-   `15–30 dagen` en `31+ dagen` de definitieve publieke set wordt.
-2. Goedkeuren of `Weekenden thuis` de waarden 0%, 25%, 50%, 75% en 100%
-   krijgt en of de vierweekse uitleg de juiste betekenis vastlegt.
-3. Goedkeuren dat `Hotelovernachtingen` geen aparte operationele filter wordt.
-   Vanaf Reisduur 2 dagen is een overnachting afleidbaar, maar niet het type
-   accommodatie; het hotelzoekwoord blijft in descriptions/content.
-4. Besluiten of reisfrequentie voorlopig alleen content blijft of later een
-   apart meetbaar veld nodig heeft.
-5. Besluiten of `Veel vliegen` alleen een zoekterm in descriptions wordt of
+## Resterende besluiten vóór legacy-opruiming
+
+1. Besluiten of `Veel vliegen` alleen een zoekterm in descriptions wordt of
    een nieuw, afzonderlijk vervoersmiddelveld nodig heeft.
-6. De omzetting van vacature `23277` vooraf als controlelijst tonen.
-7. Per te verwijderen term de redirectbestemming en SEO-status controleren.
-8. Besluiten of uitgebreidere reisthema's als Beroepengidsartikelen of aparte
+2. De omzetting van vacature `23277` vooraf als controlelijst tonen.
+3. Per te verwijderen term de redirectbestemming en SEO-status controleren.
+4. Besluiten of uitgebreidere reisthema's als Beroepengidsartikelen of aparte
    landingspagina's worden uitgewerkt.
-9. Pas daarna WordPress wijzigen en vervolgens de goedgekeurde mapping naar
-   Supabase/Appsmith implementeren en testen.
+5. Pas daarna legacytermen en legacyvelden eventueel verwijderen.

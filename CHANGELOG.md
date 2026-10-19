@@ -1,5 +1,26 @@
 # Changelog
 
+## 2026-10-19 — Meetbaar travelmodel uitgevoerd in Supabase en Appsmith
+
+- Definitief besloten dat de eerste Reisduur-optie `Elke nacht thuis` heet;
+  dit is geen reisduur van één dag maar betekent dat er niet buitenshuis wordt
+  overnacht.
+- Reisduur vastgesteld op `Elke nacht thuis`, `2–7 dagen`, `8–14 dagen`,
+  `15–30 dagen` en `31+ dagen`; Weekenden thuis op 0%, 25%, 50%, 75% en 100%.
+- Reisfrequentie als aparte dimensie geschrapt. Hotelovernachtingen blijft een
+  content- en SEO-term en is geen aparte operationele filter.
+- Vier nullable velden plus check constraints toegevoegd in Supabase staging;
+  Appsmith-read/savefuncties, widgets en matching daarop aangepast.
+- De 1.773 bestaande kandidaatreisrecords en het bestaande vacature-record
+  niet automatisch geconverteerd. Nieuwe waarden blijven leeg tot inhoudelijke
+  validatie.
+- Rollbacktests voor kandidaat en vacature geslaagd. Bestaande legacyvelden en
+  terugvalmatching blijven beschikbaar.
+- De additive WordPress-uitvoering voorbereid: bestaande interne slug
+  `reisprofiel` behouden als Reisduur, een tweede taxonomie Weekenden thuis
+  toevoegen en legacytermen pas na relatie-, redirect- en contentcontrole
+  verwijderen.
+
 ## 2026-10-19 — Reisduur en Weekenden thuis meetbaar gemaakt
 
 - Het eerdere voorstel met `Kort verblijf` en `Lang verblijf` ingetrokken;

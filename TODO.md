@@ -22,15 +22,16 @@ gewijzigd; open afhankelijkheden worden niet stilzwijgend overgeslagen.
    actuele termen, slugs, descriptions, tellingen en vacaturekoppelingen
    vastleggen en per term bepalen of het om gebied, reisomvang,
    overnachtingen, thuisnachten, weekendreizen of reispatroon gaat.
-3. [ ] **Reisprofiel-mapping en aliasbeleid goedkeuren.** Bewuste
+3. [x] **Reisprofiel-mapping en aliasbeleid goedkeuren.** Bewuste
    zoektermvarianten in WordPress behouden waar ze publiek nut hebben, maar
    koppelen aan één canonieke betekenis of concreet Supabase-veld; geen
    dubbele operationele keuzes in Appsmith maken. Herzien voorstel: de gemengde
-   Reisprofiel-lijst vervangen door `Reisduur` (`1 dag`, `2–7`, `8–14`,
-   `15–30`, `31+ dagen`) en `Weekenden thuis` (0%, 25%, 50%, 75%, 100%).
-   Overnachten operationeel afleiden vanaf 2 reisdagen; het accommodatietype
-   kan daar niet uit worden afgeleid. `Hotelovernachtingen` als zoekwoord in
-   descriptions/content behouden; zie de audit.
+   Reisprofiel-lijst vervangen door `Reisduur` (`Elke nacht thuis`, `2–7`,
+   `8–14`, `15–30`, `31+ dagen`) en `Weekenden thuis` (0%, 25%, 50%, 75%,
+   100%). Overnachten operationeel afleiden bij alle opties behalve `Elke
+   nacht thuis`; het accommodatietype kan daar niet uit worden afgeleid.
+   `Hotelovernachtingen` als zoekwoord in descriptions/content behouden.
+   Reisfrequentie wordt niet als aparte dimensie toegevoegd.
 4. [ ] **Volledige WordPress–Supabase–Appsmith-keuzematrix maken.** Naast
    Reisprofielen ook Werkgebieden, Dagen internationaal en de resterende
    taxonomieën en keuzelijsten vergelijken op naam, betekenis, ID en status.
@@ -39,9 +40,10 @@ gewijzigd; open afhankelijkheden worden niet stilzwijgend overgeslagen.
 5. [ ] **Publieke WordPress-structuur afronden.** Pas na goedkeuring van de
    matrix descriptions, vacaturekoppelingen, archieven en eventuele
    Beroepengids-spiegels gecontroleerd afwerken.
-6. [ ] **Synchronisatieplan ontwerpen en testen.** Vastleggen hoe WordPress-
-   bronwaarden aan canonieke Supabase-records worden gekoppeld en hoe Appsmith
-   die waarden zonder doublures beheert. Nog geen gelijktijdige livewijziging.
+6. [ ] **Synchronisatieplan ontwerpen en testen.** Het travel-deel is in
+   Supabase en de Appsmith-bron uitgevoerd en met rollbacktests gecontroleerd.
+   De WordPress-taxonomiestructuur en publieke filters moeten nog worden
+   afgerond en via REST worden geverifieerd. Daarna volgen de overige keuzes.
 
 ### B. Formulieren, intake en inhaalslag
 
