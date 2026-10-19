@@ -5,6 +5,90 @@ Laatst bijgewerkt: 19 oktober 2026
 Dit is de centrale werklijst. Detailbesluiten en testresultaten blijven in de
 bestaande documenten onder `audits/`, `content/` en `functionality/` staan.
 
+## Uitvoervolgorde — één punt tegelijk
+
+Deze lijst is de gezamenlijke werkvolgorde. We pakken steeds één genummerd
+punt op, leggen het besluit, de wijziging en de verificatie vast en vinken het
+pas daarna af. De uitgebreidere acceptatiecriteria en deelstappen staan in de
+secties verderop in dit document. De volgorde kan alleen bewust worden
+gewijzigd; open afhankelijkheden worden niet stilzwijgend overgeslagen.
+
+### A. WordPress–Supabase–CRM-koppeling
+
+1. [ ] **Nieuw doel-CRM kiezen.** EngageBay blijft uitsluitend legacy- en
+   migratiebron. Zonder deze keuze wordt geen CRM-specifieke mapping of code
+   gemaakt.
+2. [ ] **Alleen-lezen nulmeting afronden en documenteren.** Git, live
+   WordPress-formulieren, Supabase-schema/constraints/RLS/functions,
+   EngageBay-bron, Appsmith-weergave en bestaande importlogica controleren.
+3. [ ] **Exacte grens van de eerdere kandidaatimport vastleggen.** Het laatste
+   betrouwbare bron-ID of eindmoment bewijzen; niet op een datum gokken.
+4. [ ] **Actuele formulieren en uploads inventariseren.** Registratie,
+   sollicitatie, werkgeverscontact, mailing, advies en vraag inclusief
+   Elementor-veld-ID's, bestandstypen, limieten en bestaande acties vastleggen.
+5. [ ] **Eigenaarschap en privacybesluiten nemen.** Per gegeven het leidende
+   systeem, toestemming, bewaartermijn, verwijderroute en logbeleid bepalen.
+6. [ ] **Deduplicatie- en koppelregels goedkeuren.** E-mail, telefoon,
+   LinkedIn en externe ID's normaliseren; ambigue gevallen altijd naar
+   handmatige controle sturen.
+7. [ ] **Volledige veldmapping goedkeuren.** Ieder Elementor-veld koppelen aan
+   het bestaande Supabase-model en, na punt 1, aan het nieuwe CRM-model.
+8. [ ] **Technisch ontwerp definitief goedkeuren.** Lokale Elementor-opslag,
+   WordPress-outbox, beveiligde Edge Function, idempotentie, retries,
+   `dead_letter`/`review` en herstelprocedure vastleggen.
+9. [ ] **WordPress-connector en lokale outbox bouwen.** Werken na succesvolle
+   Elementor-opslag, met unieke submission-UUID en zonder geheimen of
+   persoonsgegevens in browsercode of gewone logs.
+10. [ ] **Supabase-intake en idempotente verwerking bouwen.** Bestaande
+    tabellen en relaties hergebruiken; eventuele schemawijzigingen via een
+    beoordeelde migratie, minimale rechten en passende RLS uitvoeren.
+11. [ ] **Cv- en documentroute bouwen.** Besluit over private Supabase Storage,
+    MIME-/groottecontrole, documentversies, relaties en herstelbaarheid eerst
+    goedkeuren.
+12. [ ] **Synchronisatie naar het nieuwe CRM bouwen.** Alleen vanuit de
+    duurzame intake, met externe ID's, rate-limitafhandeling, retries en
+    zichtbare foutstatus.
+13. [ ] **Synthetische end-to-endtests uitvoeren.** Nieuwe, bestaande en
+    ambigue records, duplicaten, verkeerde/te grote bestanden en uitval/herstel
+    van Supabase en CRM testen.
+14. [ ] **Schaduwmodus naast AFI/EngageBay draaien.** Uitkomsten vergelijken
+    zonder de bestaande productieroute of lokale Elementor-inzendingen uit te
+    schakelen.
+15. [ ] **Backfill-droogloop maken.** Elementor en EngageBay vanaf de bewezen
+    grens onderling en tegen Supabase ontdubbelen; alleen aantallen voor nieuw,
+    bestaand, betrouwbaar, ambigu en fout vastleggen.
+16. [ ] **Goedgekeurde backfill uitvoeren en reconciliëren.** Dezelfde
+    idempotente route gebruiken, relaties en aantallen controleren en geen
+    persoonsgegevens of exports in GitHub opnemen.
+17. [ ] **Gecontroleerd omschakelen.** AFI per formulier uitschakelen, niet
+    alles tegelijk; monitoring, foutoverzicht en herstelhandleiding opleveren.
+
+### B. SEO, content en websitekwaliteit
+
+18. [ ] **Canonicalstrategie voor losse vacaturetaxonomiearchieven kiezen.**
+    Beslissen tussen de huidige combo-canonical en self-canonicals.
+19. [ ] **Snippet 193 veilig aanpassen en testen.** Eerst een inactieve
+    herstelkopie maken; alleen uitvoeren na punt 18.
+20. [ ] **Combo-sitemap monitoren.** De 800 URL's met exact twee taxonomieën
+    controleren op indexeerbaarheid, inhoud en duplicaten.
+21. [ ] **Search & Filter- en overige `noindex`-combo's controleren.** Robots,
+    canonical, sitemap en interne links nalopen.
+22. [ ] **Reisprofielen uitwerken.** De 25 beschrijvingen schrijven en dubbele
+    zoekvarianten alleen na inhoudelijk besluit samenvoegen of verwijderen.
+23. [ ] **Centrale overzichtspagina voor publieke archieven ontwerpen.** Alleen
+    goedgekeurde, indexeerbare archieven opnemen.
+24. [ ] **LiteSpeed JavaScript veilig instellen en Clarity testen.** Combine en
+    `Combine External and Inline` uitschakelen, deferred behouden en Clarity
+    anoniem verifiëren.
+25. [ ] **`font-display: swap` instellen en visueel testen.** Elementor-layout
+    en fonts op representatieve pagina's controleren.
+26. [ ] **Resterende taxonomieën en content gefaseerd afwerken.** Werkgebied,
+    vacaturekoppelingen, blogmigraties, Arbeidsvoorwaarden en formulierteksten
+    één gecontroleerd onderdeel tegelijk behandelen.
+27. [ ] **WordPress-omvang en prestaties meten en optimaliseren.** Ongebruikte
+    media en grote tabellen eerst inventariseren; alleen na back-up en expliciet
+    akkoord opschonen.
+
 ## Eerst oppakken: open punten uit de vorige werksessie
 
 - [ ] Beslissen hoe de canonical van losse vacaturetaxonomiearchieven moet
