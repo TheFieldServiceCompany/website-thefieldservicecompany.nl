@@ -48,8 +48,9 @@ niet in GitHub of gewone foutlogs.
 
 ### Fase 1 — besluiten en veldmapping
 
-- [ ] Bevestigen of EngageBay het doel-CRM blijft. De formulieren gebruiken nu
-  Advanced Form Integration om gegevens naar EngageBay te sturen.
+- [ ] Het nieuwe doel-CRM vaststellen. EngageBay blijft niet het CRM; het is
+  alleen de huidige legacy-bestemming van Advanced Form Integration totdat de
+  nieuwe koppeling bewezen werkt.
 - [ ] Per formulier vastleggen wat er moet ontstaan:
   - Registratie: `person` en `candidate_profile`, met toestemming en eventueel
     document.
@@ -76,8 +77,9 @@ niet in GitHub of gewone foutlogs.
 - [ ] De relevante Supabase-tabellen, constraints, RLS-regels, functies en
   bestaande importlogica volledig documenteren voordat er iets wordt
   gewijzigd.
-- [ ] Bestaande EngageBay-ID's en de tabel `external_identifiers` gebruiken om
-  dubbele personen, kandidaten, contacten en bedrijven te voorkomen.
+- [ ] Bestaande EngageBay-ID's als historische externe ID's en de tabel
+  `external_identifiers` gebruiken om dubbele personen, kandidaten, contacten
+  en bedrijven te voorkomen; EngageBay is daarmee geen doelarchitectuur.
 - [ ] De officiële CRM-API controleren op authenticatie, rate limits,
   idempotentie, contact-/bedrijfsrelaties en foutmeldingen.
 - [ ] Vaststellen hoe Appsmith de nieuwe en bestaande records toont en welke
@@ -140,23 +142,27 @@ werkgevermodel.
   uitval.
 - [ ] Controleren dat elke inzending lokaal bewaard blijft en dat herhalen
   nooit dubbele personen, sollicitaties, contacten of documenten maakt.
-- [ ] Eerst in schaduwmodus naast de bestaande AFI/EngageBay-route draaien en
-  uitkomsten vergelijken.
+- [ ] Eerst in schaduwmodus naast de bestaande AFI/EngageBay-legacyroute
+  draaien en uitkomsten vergelijken.
 - [ ] Het exacte eindmoment of laatste submission-ID van de eerdere
   kandidaatimport naar Supabase terugvinden en als controleerbare grens
   vastleggen; niet gokken op een datum.
 - [ ] Alleen de kandidaatregistraties en sollicitaties ná die grens uit
   Elementor inventariseren, inclusief de aanwezigheid van een cv, maar zonder
   persoonsgegevens of bestanden in GitHub te zetten.
+- [ ] Ook de kandidaten en sollicitatiegegevens die ná die grens in EngageBay
+  zijn binnengekomen inventariseren. Elementor en EngageBay zijn beide
+  migratiebronnen; de gecombineerde set wordt vóór import ontdubbeld tegen
+  Supabase en onderling.
 - [ ] Eerst een droge inhaalcontrole maken met aantallen: nieuw, al aanwezig,
   betrouwbaar te koppelen, ambigu en fout. Matchen gebeurt via genormaliseerd
   e-mailadres, telefoonnummer, LinkedIn-profiel en bestaande externe ID's.
 - [ ] De goedgekeurde ontbrekende kandidaten, sollicitaties en cv-relaties via
   exact dezelfde idempotente verwerkingsroute als nieuwe inzendingen naar
-  Supabase en daarna EngageBay sturen. Iedere broninzending krijgt een vaste
-  submission-UUID, zodat opnieuw uitvoeren geen duplicaten maakt.
+  Supabase en daarna het nieuwe doel-CRM sturen. Iedere broninzending krijgt
+  een vaste submission-UUID, zodat opnieuw uitvoeren geen duplicaten maakt.
 - [ ] Na de inhaalslag aantallen en relaties tussen Elementor, Supabase en
-  EngageBay afstemmen en alle ambigue gevallen handmatig beoordelen.
+  het nieuwe doel-CRM afstemmen en alle ambigue gevallen handmatig beoordelen.
 - [ ] Pas na een geslaagde end-to-endcontrole de oude AFI-route per formulier
   uitschakelen. Niet alle formulieren tegelijk omschakelen.
 - [ ] Monitoring, foutoverzicht en een korte herstelhandleiding opleveren.

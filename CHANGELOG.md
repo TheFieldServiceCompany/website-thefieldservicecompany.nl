@@ -17,6 +17,15 @@
   binnengekomen. Eerst wordt de exacte importgrens teruggevonden, daarna volgt
   een droge deduplicatiecontrole en pas vervolgens verwerking via dezelfde
   idempotente route als nieuwe inzendingen.
+- Gecorrigeerd dat EngageBay niet het toekomstige CRM blijft. Het staat alleen
+  als tijdelijke legacyroute en historische externe-ID-bron in de roadmap; het
+  nieuwe doel-CRM moet nog worden vastgelegd.
+- De kandidaat-inhaalslag uitgebreid naar twee bronnen: latere Elementor-
+  inzendingen én latere EngageBay-kandidaten. Beide bronnen worden eerst
+  onderling en daarna tegen Supabase ontdubbeld.
+- `HANDOFF-2026-10-19.md` toegevoegd voor voortzetting in een nieuwe lokale
+  Codex-chat, inclusief verbindingen, veiligheidsgrenzen, open taken en lokale
+  startinstructies.
 
 ## 2026-10-19 — Vacaturecombinaties beperkt tot twee taxonomieën
 
