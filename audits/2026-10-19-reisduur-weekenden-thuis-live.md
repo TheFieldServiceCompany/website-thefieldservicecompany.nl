@@ -74,26 +74,29 @@ De publieke REST-controle gaf:
 Na de WordPress-uitvoering is de GitHub-branchhistorie van
 `TheFieldServiceCompany/tfsc-appsmith-crm` opnieuw gecontroleerd.
 
-- De travelwijziging van deze sessie staat op `crm-layout-redesign` in commit
-  `6f182a4`.
-- Vóór die commit was `document-preview-backfill` de laatst bijgewerkte remote
-  branch: commit `8dbceef` van 15 oktober 2026.
-- `document-preview-backfill` bevat acht pagina's, waaronder `Candidates` en
-  `Vacancies_Old`.
-- `crm-layout-redesign` bevat zes pagina's en mist die twee. Commit `445b20d`
-  verwijderde ze daar bewust met bericht `Remove legacy candidate and vacancy
-  pages`.
+- De gebruikte en actuele werkbranch is `crm-layout-redesign`.
+- `document-preview-backfill` eindigt op `8dbceef` en is daarna met mergecommit
+  `204e1ec` opgenomen in `crm-layout-redesign`; het is dus een historische
+  voorouder en geen nieuwere of completere werkbasis.
+- Commit `445b20d` verwijderde vervolgens bewust de oude pagina's `Candidates`
+  en `Vacancies_Old` met bericht `Remove legacy candidate and vacancy pages`.
+  Kandidaatfunctionaliteit zit daarna in de actuele Contacts/Contact Detail-
+  opbouw.
+- Na die verwijdering volgen op `crm-layout-redesign` nog commits voor de
+  documentpreview-worker, originele en PDF-downloads, kandidaatvoorkeuren en
+  de WordPress-opleidingsuitlijning.
+- De laatste commit vóór de travelwijziging was `e709b22` (`data: align
+  education taxonomies with WordPress`, 18 oktober 2026).
+- De travelwijziging van deze sessie staat daar correct bovenop in `6f182a4`.
 
-Daarom wordt `crm-layout-redesign` niet stilzwijgend als nieuwe Appsmith-basis
-gebruikt. Eerst moet de travelwijziging gecontroleerd naar de complete,
-bedoelde branch worden overgezet en in Appsmith worden getest. In deze stap is
-geen Appsmith-app gepulld, gedeployd of van branch gewisseld.
+In deze stap is geen Appsmith-app gepulld, gedeployd of van branch gewisseld.
 
 ## Nog niet uitgevoerd
 
 - Geen automatische mapping of wijziging van bestaande vacatures.
 - Geen verwijdering of redirect van legacytermen.
 - Geen plaatsing van de nieuwe Search & Filter-velden in Elementor.
-- Geen wijziging aan de live Appsmith-app.
+- Geen wijziging aan de live Appsmith-app; de bronwijziging staat wel op de
+  correcte branch `crm-layout-redesign`.
 - Geen wijziging aan de bestaande kandidaatreisrecords in Supabase.
 

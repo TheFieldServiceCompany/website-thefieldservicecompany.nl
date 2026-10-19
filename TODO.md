@@ -48,9 +48,10 @@ gewijzigd; open afhankelijkheden worden niet stilzwijgend overgeslagen.
    Supabase en de Appsmith-bron uitgevoerd en met rollbacktests gecontroleerd.
    De WordPress-taxonomiestructuur en Search & Filter-objecten zijn additive
    LIVE aangemaakt en via REST geverifieerd. Frontendplaatsing en inhoudelijke
-   vacaturekoppeling volgen na validatie. De travelcommit staat nu op
-   `crm-layout-redesign`, maar moet eerst gecontroleerd naar de complete
-   Appsmith-branch `document-preview-backfill` worden overgezet en getest.
+   vacaturekoppeling volgen na validatie. De travelcommit staat correct op de
+   actuele Appsmith-werkbranch `crm-layout-redesign`; de historische branch
+   `document-preview-backfill` is daarin al gemerged en bevat nog de bewust
+   verwijderde oude pagina's. Een live Appsmith-pull en test blijven open.
    Daarna volgen de overige keuzes.
 
 ### B. Formulieren, intake en inhaalslag

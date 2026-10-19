@@ -95,9 +95,10 @@ voor `vac_studierichting`, alle actief. Er zijn nog geen mappings voor
 
 Op 19 oktober zijn de nieuwe nullable travelvelden, controles, Appsmith-
 lees/schrijffuncties en matching toegepast op Supabase staging. De Appsmith-
-bron is daarop aangepast, maar staat nog op `crm-layout-redesign` en moet naar
-de complete branch `document-preview-backfill` worden gereconcilieerd voordat
-Appsmith wordt gepulld of gedeployd. Bestaande kandidaat- en vacaturewaarden
-zijn niet geconverteerd. De WordPress-structuur is additive LIVE toegevoegd en
-via REST geverifieerd; legacyrelaties, descriptions, redirects en inhoudelijke
-vacaturemapping blijven open.
+bron is daarop aangepast op de juiste werkbranch `crm-layout-redesign`.
+`document-preview-backfill` is een gemergede historische voorouder; de oude
+pagina's `Candidates` en `Vacancies_Old` zijn daarna bewust verwijderd.
+Bestaande kandidaat- en vacaturewaarden zijn niet geconverteerd. De WordPress-
+structuur is additive LIVE toegevoegd en via REST geverifieerd;
+legacyrelaties, descriptions, redirects en inhoudelijke vacaturemapping
+blijven open.

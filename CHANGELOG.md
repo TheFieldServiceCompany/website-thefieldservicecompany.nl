@@ -14,10 +14,11 @@
 - REST bevestigde beide vacaturetaxonomieën, alle tien slugs en descriptions,
   en telling 0 voor de nieuwe termen. De legacytermen en bestaande relaties
   bleven aanwezig.
-- GitHub bevestigde dat `document-preview-backfill` vóór de nieuwe travelcommit
-  de laatst bijgewerkte en completere Appsmith-branch was. De travelcommit
-  `6f182a4` staat nog op `crm-layout-redesign`; Appsmith is niet gepulld of
-  gedeployd en de wijziging moet eerst gecontroleerd worden overgezet.
+- GitHub bevestigde dat `crm-layout-redesign` de actuele Appsmith-werkbranch
+  is. `document-preview-backfill` is daarin al gemerged; `Candidates` en
+  `Vacancies_Old` zijn vervolgens bewust verwijderd. Travelcommit `6f182a4`
+  staat correct boven op de laatste bestaande commit `e709b22`. Appsmith is
+  nog niet gepulld of gedeployd.
 - Volledig uitvoeringslog:
   `audits/2026-10-19-reisduur-weekenden-thuis-live.md`.
 

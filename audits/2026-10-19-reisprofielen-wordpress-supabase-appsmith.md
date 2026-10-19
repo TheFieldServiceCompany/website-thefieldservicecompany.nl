@@ -1,7 +1,7 @@
 # Reisprofielen — WordPress, Supabase en Appsmith
 
 Datum: 19 oktober 2026  
-Status: model goedgekeurd; Supabase uitgevoerd; WordPress additive structuur LIVE; Appsmith-branch moet worden gereconcilieerd
+Status: model goedgekeurd; Supabase en Appsmith-bron uitgevoerd; WordPress additive structuur LIVE
 
 ## Bevestigde architectuur
 
@@ -412,9 +412,9 @@ gesynchroniseerd.
 
 ## Actuele Appsmith-controle
 
-Repository `tfsc-appsmith-crm`. De travelwijziging staat in commit `6f182a4`
-op `crm-layout-redesign`, maar die branch blijkt niet de complete laatst
-gebruikte Appsmith-basis te zijn.
+Repository `tfsc-appsmith-crm`, branch `crm-layout-redesign`. De
+travelwijziging staat in commit `6f182a4` boven op de bestaande actuele
+branchhistorie.
 
 Appsmith kan de volgende reiswaarden voor kandidaten en vacatures tonen en
 opslaan:
@@ -435,12 +435,13 @@ De matchlogica vergelijkt nu ook de directionele Reisduur en Weekenden thuis.
 Legacy overnachtings- en weekendbooleans blijven alleen als terugval actief
 wanneer de nieuwe vacaturewaarde leeg is.
 
-GitHub laat zien dat `document-preview-backfill` vóór deze travelcommit de
-laatst bijgewerkte remote branch was (`8dbceef`, 15 oktober 2026). Die branch
-bevat `Candidates` en `Vacancies_Old`; `crm-layout-redesign` mist beide sinds
-commit `445b20d` (`Remove legacy candidate and vacancy pages`). De wijziging
-wordt daarom eerst gecontroleerd naar de bedoelde complete branch overgezet.
-Er is nog geen live Appsmith-pull of deployment gedaan.
+GitHub laat zien dat `document-preview-backfill` op `8dbceef` eindigt en met
+mergecommit `204e1ec` is opgenomen in `crm-layout-redesign`. Commit `445b20d`
+verwijderde daarna bewust de oude pagina's `Candidates` en `Vacancies_Old`.
+Na die opschoning volgen op dezelfde branch nog de documentpreview-,
+kandidaatvoorkeur- en opleidingscommits. De laatste commit vóór de
+travelwijziging was `e709b22` van 18 oktober 2026. `crm-layout-redesign` is dus
+de juiste werkbranch. Er is nog geen live Appsmith-pull of deployment gedaan.
 
 ## Resterende besluiten vóór legacy-opruiming
 
