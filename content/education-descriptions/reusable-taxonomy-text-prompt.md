@@ -33,8 +33,8 @@ Gebruik bij uitgebreide taxonomyteksten standaard vier zelfstandig
 begrijpelijke H2-vragen. Laat de eerste H2 direct de verbinding leggen tussen
 `[TERM]` en service, field service, machines of de relevante sector. Volg voor
 de Beroepengids-archieven van studierichtingen, functienamen,
-bedrijfssectoren en functie-inhoud de afwijkende, compacte structuur die
-hieronder expliciet is vastgelegd.
+bedrijfssectoren, functie-inhoud en kennisgebieden de afwijkende, compacte
+structuur die hieronder expliciet is vastgelegd.
 
 Gebruik bij onderwijscontent natuurlijke varianten zoals `opleiding [TERM]`,
 `studierichting [TERM]`, `studie [TERM]` en `achtergrond in [TERM]`; zet ze
@@ -162,6 +162,35 @@ Troubleshooting, Maintenance en Onderhoud of Overhalen en Revisie. Leg het
 overlapgebied kort uit en laat de concrete vacature-inhoud doorslaggevend zijn.
 Maak iedere intro en description inhoudelijk uniek.
 
+### Extra regels voor een Beroepengids-kennisgebied
+
+Een Beroepengids-kennisgebied is een artikelarchief over technische kennis die
+in verschillende field service functies kan terugkomen. Gebruik als
+Pods-archieftitel exact:
+
+`Kennisgebied [TERM] | Artikelen`
+
+Plaats direct boven de drie descriptionalinea's exact deze H2:
+
+`Kennisgebied [TERM]`
+
+Lever een korte, uitnodigende intro die het kennisgebied direct met field
+service verbindt. Schrijf vervolgens drie compacte alinea's:
+
+1. een grove introductie op het kennisgebied en de concrete technische
+   toepassing binnen field service;
+2. een verwijzing naar toekomstige artikelen over systemen, technieken,
+   diagnose, opleidingen, veiligheid, functies of sectoren;
+3. uitleg hoe die artikelen helpen functies en vacatures op technische
+   diepgang, toepassing en verantwoordelijkheid te vergelijken.
+
+Gebruik de gelijknamige vacaturedescription als inhoudelijke bron, maar
+kopieer deze niet. Maak geen kunstmatig harde grenzen tussen verwante domeinen
+zoals Besturingstechniek, PLC Techniek en Industrial Automation, of Motion
+Control en Servotechniek. Leg de technische samenhang uit en laat de concrete
+vacature bepalen welke platformkennis, bevoegdheid of ervaring nodig is. Maak
+iedere intro en description inhoudelijk uniek.
+
 Behandel waar relevant:
 
 - de belangrijkste kennis en vaardigheden;
@@ -179,14 +208,15 @@ wereld` en `onmisbare schakel`. Maak geen handmatige vacaturelinks wanneer de
 website relaties automatisch vult. De template levert de H1; gebruik in de
 description alleen H2-koppen en alinea's.
 
-Lever voor een Beroepengids-functienaam, -studierichting, -bedrijfssector of
--functie-inhoud eerst een concept
+Lever voor een Beroepengids-functienaam, -studierichting, -bedrijfssector,
+-functie-inhoud of -kennisgebied eerst een concept
 met archieftitel, intro, de goedgekeurde archiefalinea's, woordenaantal,
 feitencontrole en de exact bedoelde WordPress-taxonomie. Neem bij een
 functienaam de H2 `Functienaam [TERM]` en bij een studierichting de H2
 `Studierichting [TERM]` op. Gebruik bij een bedrijfssector de H2
-`Bedrijfssector [TERM]` en bij functie-inhoud de H2 `Functie-inhoud [TERM]`.
-Alle vier blijven zonder `| Artikelen`.
+`Bedrijfssector [TERM]`, bij functie-inhoud de H2 `Functie-inhoud [TERM]` en
+bij een kennisgebied de H2 `Kennisgebied [TERM]`. Alle vijf blijven zonder
+`| Artikelen`.
 Lever bij andere uitgebreide taxonomyteksten eerst vier H2-koppen en de
 volledige tekst, tenzij voor die taxonomie een andere goedgekeurde structuur
 is vastgelegd.
@@ -220,6 +250,8 @@ Publiceer pas na inhoudelijke goedkeuring.
   helpt de tekst sectorfuncties en vacatures vergelijken?
 - Begint Beroepengids-functie-inhoud met `Functie-inhoud [TERM]` als H2 en
   blijft de tekst eerlijk over overlappende vacaturetermen?
+- Begint een Beroepengids-kennisgebied met `Kennisgebied [TERM]` als H2 en
+  beschrijft de tekst de technische toepassing zonder eisen te verzinnen?
 - Bevat iedere alinea concrete informatie in plaats van algemene claims?
 - Kloppen opleiding, machines, technieken, functies en sectoren inhoudelijk?
 - Is de tekst prettig, actief en motiverend om te lezen?

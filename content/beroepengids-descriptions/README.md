@@ -1,8 +1,8 @@
 # Beroepengids-content per taxonomieterm
 
-Status: alle 32 Functienamen, alle 33 Bedrijfssectoren en alle 29
-Functie-inhoud-termen hebben sinds 19 oktober 2026 gecontroleerde descriptions,
-intro's en archieftitels op LIVE.
+Status: alle 32 Functienamen, alle 33 Bedrijfssectoren, alle 29
+Functie-inhoud-termen en alle 25 Kennisgebieden hebben sinds 19 oktober 2026
+gecontroleerde descriptions, intro's en archieftitels op LIVE.
 
 ## Doel en inhoud
 
@@ -18,29 +18,36 @@ titels staat steeds dat de inhoud van de vacature doorslaggevend is.
 
 ## Bestanden en relatie
 
-- Canonieke bronnen: `beroep-functienamen.md`, `beroep-bedrijfssectoren.md` en
-  `beroep-functie-inhoud.md`.
+- Canonieke bronnen: `beroep-functienamen.md`, `beroep-bedrijfssectoren.md`,
+  `beroep-functie-inhoud.md` en `beroep-kennisgebieden.md`.
 - Validatie: `../../scripts/build-beroep-functienamen.mjs` en
   `../../scripts/build-beroep-bedrijfssectoren.mjs` en
-  `../../scripts/build-beroep-functie-inhoud.mjs`.
+  `../../scripts/build-beroep-functie-inhoud.mjs` en
+  `../../scripts/build-beroep-kennisgebieden.mjs`.
 - Veilige publicatie en rollback:
   `../../scripts/publish-beroep-functienamen.py`.
 - Publicatie en rollback Bedrijfssectoren:
   `../../scripts/publish-beroep-bedrijfssectoren.py`.
 - Publicatie en rollback Functie-inhoud:
   `../../scripts/publish-beroep-functie-inhoud.py`.
+- Publicatie en rollback Kennisgebieden:
+  `../../scripts/publish-beroep-kennisgebieden.py`.
 - Herstelbestand Functienamen:
   `../../audits/exports/beroep-functienamen-before-archive-rewrite-2026-10-19.json`.
 - Herstelbestand Bedrijfssectoren:
   `../../audits/exports/beroep-bedrijfssectoren-before-archive-content-2026-10-19.json`.
 - Herstelbestand Functie-inhoud:
   `../../audits/exports/beroep-functie-inhoud-before-archive-content-2026-10-19.json`.
+- Herstelbestand Kennisgebieden:
+  `../../audits/exports/beroep-kennisgebieden-before-archive-content-2026-10-19.json`.
 - Uitvoeringslog Functienamen:
   `../../audits/2026-10-19-beroepengids-functienamen-live.md`.
 - Uitvoeringslog Bedrijfssectoren:
   `../../audits/2026-10-19-beroepengids-bedrijfssectoren-live.md`.
 - Uitvoeringslog Functie-inhoud:
   `../../audits/2026-10-19-beroepengids-functie-inhoud-live.md`.
+- Uitvoeringslog Kennisgebieden:
+  `../../audits/2026-10-19-beroepengids-kennisgebieden-live.md`.
 
 De bestaande Pods-relatie `relationship_beroep_functienaam` koppelt iedere
 Beroepengids-term aan de gelijknamige vacaturetaxonomie `functienaam`. Deze
@@ -53,6 +60,11 @@ Ook deze relaties zijn tijdens de contentpublicatie niet gewijzigd.
 De bestaande Pods-relatie `relationship_functie-inhoud` koppelt iedere
 Beroepengids-term aan de gelijknamige vacaturetaxonomie `functie-inhoud`. Ook
 deze 29 relaties zijn tijdens de contentpublicatie niet gewijzigd.
+
+De bestaande Pods-relatie `relationship_kennisgebied` koppelt ieder
+Beroepengids-kennisgebied aan de gelijknamige vacaturetaxonomie
+`kennisgebied`. Ook deze 25 relaties zijn tijdens de contentpublicatie niet
+gewijzigd.
 
 ## Gevalideerde omvang
 
@@ -95,3 +107,14 @@ in de bron zorgt dat de builder die bestaande opmaak behoudt.
 - iedere intro en description verbindt de werkzaamheid met field service;
 - overlappende begrippen worden als verwante vacaturetermen uitgelegd; de
   concrete vacature-inhoud blijft bepalend.
+
+## Gevalideerde omvang Kennisgebieden
+
+- 25 bestaande termen;
+- 25 descriptions van 100–110 woorden, één H2 en exact drie alinea's;
+- 25 unieke intro's van 17–21 woorden;
+- 25 archieftitels volgens `Kennisgebied [term] | Artikelen`;
+- iedere description begint met `Kennisgebied [term]` als H2;
+- iedere intro en description verbindt het kennisgebied met field service;
+- verwante domeinen worden in hun technische samenhang geplaatst zonder
+  vacature-eisen of specialistische bevoegdheden te veralgemeniseren.

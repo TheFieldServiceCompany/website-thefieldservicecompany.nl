@@ -1,0 +1,1383 @@
+{
+  "created_at": "2026-10-19",
+  "taxonomy": "beroep_kennisgebied",
+  "terms": [
+    {
+      "id": 732,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/kennisgebieden/besturingstechniek/",
+      "name": "Besturingstechniek",
+      "slug": "besturingstechniek",
+      "taxonomy": "beroep_kennisgebied",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_kennisgebied/732",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_kennisgebied"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_kennisgebied"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_kennisgebied=732"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 733,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/kennisgebieden/elektronica/",
+      "name": "Elektronica",
+      "slug": "elektronica",
+      "taxonomy": "beroep_kennisgebied",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_kennisgebied/733",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_kennisgebied"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_kennisgebied"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_kennisgebied=733"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 734,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/kennisgebieden/elektrotechniek/",
+      "name": "Elektrotechniek",
+      "slug": "elektrotechniek",
+      "taxonomy": "beroep_kennisgebied",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_kennisgebied/734",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_kennisgebied"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_kennisgebied"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_kennisgebied=734"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 735,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/kennisgebieden/energietechniek/",
+      "name": "Energietechniek",
+      "slug": "energietechniek",
+      "taxonomy": "beroep_kennisgebied",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_kennisgebied/735",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_kennisgebied"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_kennisgebied"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_kennisgebied=735"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 736,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/kennisgebieden/frequentieregelaars/",
+      "name": "Frequentieregelaars",
+      "slug": "frequentieregelaars",
+      "taxonomy": "beroep_kennisgebied",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_kennisgebied/736",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_kennisgebied"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_kennisgebied"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_kennisgebied=736"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 737,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/kennisgebieden/hoogspanning/",
+      "name": "Hoogspanning",
+      "slug": "hoogspanning",
+      "taxonomy": "beroep_kennisgebied",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_kennisgebied/737",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_kennisgebied"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_kennisgebied"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_kennisgebied=737"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 738,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/kennisgebieden/hydrauliek/",
+      "name": "Hydrauliek",
+      "slug": "hydrauliek",
+      "taxonomy": "beroep_kennisgebied",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_kennisgebied/738",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_kennisgebied"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_kennisgebied"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_kennisgebied=738"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 739,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/kennisgebieden/industrial-automation/",
+      "name": "Industrial Automation",
+      "slug": "industrial-automation",
+      "taxonomy": "beroep_kennisgebied",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_kennisgebied/739",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_kennisgebied"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_kennisgebied"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_kennisgebied=739"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 740,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/kennisgebieden/koeltechniek/",
+      "name": "Koeltechniek",
+      "slug": "koeltechniek",
+      "taxonomy": "beroep_kennisgebied",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_kennisgebied/740",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_kennisgebied"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_kennisgebied"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_kennisgebied=740"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 741,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/kennisgebieden/laagspanning/",
+      "name": "Laagspanning",
+      "slug": "laagspanning",
+      "taxonomy": "beroep_kennisgebied",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_kennisgebied/741",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_kennisgebied"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_kennisgebied"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_kennisgebied=741"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 742,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/kennisgebieden/mechanisch/",
+      "name": "Mechanisch",
+      "slug": "mechanisch",
+      "taxonomy": "beroep_kennisgebied",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_kennisgebied/742",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_kennisgebied"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_kennisgebied"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_kennisgebied=742"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 743,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/kennisgebieden/mechatronica/",
+      "name": "Mechatronica",
+      "slug": "mechatronica",
+      "taxonomy": "beroep_kennisgebied",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_kennisgebied/743",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_kennisgebied"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_kennisgebied"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_kennisgebied=743"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 744,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/kennisgebieden/meet-en-regeltechniek/",
+      "name": "Meet- en Regeltechniek",
+      "slug": "meet-en-regeltechniek",
+      "taxonomy": "beroep_kennisgebied",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_kennisgebied/744",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_kennisgebied"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_kennisgebied"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_kennisgebied=744"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 745,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/kennisgebieden/motion-control/",
+      "name": "Motion Control",
+      "slug": "motion-control",
+      "taxonomy": "beroep_kennisgebied",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_kennisgebied/745",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_kennisgebied"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_kennisgebied"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_kennisgebied=745"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 746,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/kennisgebieden/plc-techniek/",
+      "name": "PLC Techniek",
+      "slug": "plc-techniek",
+      "taxonomy": "beroep_kennisgebied",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_kennisgebied/746",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_kennisgebied"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_kennisgebied"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_kennisgebied=746"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 747,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/kennisgebieden/pneumatiek/",
+      "name": "Pneumatiek",
+      "slug": "pneumatiek",
+      "taxonomy": "beroep_kennisgebied",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_kennisgebied/747",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_kennisgebied"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_kennisgebied"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_kennisgebied=747"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 748,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/kennisgebieden/procestechniek/",
+      "name": "Procestechniek",
+      "slug": "procestechniek",
+      "taxonomy": "beroep_kennisgebied",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_kennisgebied/748",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_kennisgebied"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_kennisgebied"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_kennisgebied=748"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 749,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/kennisgebieden/profibus-ethernet/",
+      "name": "Profibus &amp; Ethernet",
+      "slug": "profibus-ethernet",
+      "taxonomy": "beroep_kennisgebied",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_kennisgebied/749",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_kennisgebied"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_kennisgebied"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_kennisgebied=749"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 750,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/kennisgebieden/robotica-robotics/",
+      "name": "Robotica &amp; Robotics",
+      "slug": "robotica-robotics",
+      "taxonomy": "beroep_kennisgebied",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_kennisgebied/750",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_kennisgebied"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_kennisgebied"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_kennisgebied=750"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 751,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/kennisgebieden/rotating-equipment/",
+      "name": "Rotating Equipment",
+      "slug": "rotating-equipment",
+      "taxonomy": "beroep_kennisgebied",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_kennisgebied/751",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_kennisgebied"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_kennisgebied"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_kennisgebied=751"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 752,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/kennisgebieden/servotechniek/",
+      "name": "Servotechniek",
+      "slug": "servotechniek",
+      "taxonomy": "beroep_kennisgebied",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_kennisgebied/752",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_kennisgebied"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_kennisgebied"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_kennisgebied=752"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 753,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/kennisgebieden/uitlijnen-trillinganalyse/",
+      "name": "Uitlijnen &amp; Trillinganalyse",
+      "slug": "uitlijnen-trillinganalyse",
+      "taxonomy": "beroep_kennisgebied",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_kennisgebied/753",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_kennisgebied"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_kennisgebied"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_kennisgebied=753"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 754,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/kennisgebieden/vacuumtechniek/",
+      "name": "Vacuümtechniek",
+      "slug": "vacuumtechniek",
+      "taxonomy": "beroep_kennisgebied",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_kennisgebied/754",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_kennisgebied"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_kennisgebied"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_kennisgebied=754"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 755,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/kennisgebieden/visiontechniek/",
+      "name": "Visiontechniek",
+      "slug": "visiontechniek",
+      "taxonomy": "beroep_kennisgebied",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_kennisgebied/755",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_kennisgebied"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_kennisgebied"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_kennisgebied=755"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 756,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/kennisgebieden/werktuigbouwkunde/",
+      "name": "Werktuigbouwkunde",
+      "slug": "werktuigbouwkunde",
+      "taxonomy": "beroep_kennisgebied",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_kennisgebied/756",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_kennisgebied"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_kennisgebied"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_kennisgebied=756"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    }
+  ],
+  "metadata": [
+    {
+      "id": 732,
+      "slug": "besturingstechniek",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 733,
+      "slug": "elektronica",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 734,
+      "slug": "elektrotechniek",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 735,
+      "slug": "energietechniek",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 736,
+      "slug": "frequentieregelaars",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 737,
+      "slug": "hoogspanning",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 738,
+      "slug": "hydrauliek",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 739,
+      "slug": "industrial-automation",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 740,
+      "slug": "koeltechniek",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 741,
+      "slug": "laagspanning",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 742,
+      "slug": "mechanisch",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 743,
+      "slug": "mechatronica",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 744,
+      "slug": "meet-en-regeltechniek",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 745,
+      "slug": "motion-control",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 746,
+      "slug": "plc-techniek",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 747,
+      "slug": "pneumatiek",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 748,
+      "slug": "procestechniek",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 749,
+      "slug": "profibus-ethernet",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 750,
+      "slug": "robotica-robotics",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 751,
+      "slug": "rotating-equipment",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 752,
+      "slug": "servotechniek",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 753,
+      "slug": "uitlijnen-trillinganalyse",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 754,
+      "slug": "vacuumtechniek",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 755,
+      "slug": "visiontechniek",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 756,
+      "slug": "werktuigbouwkunde",
+      "intro": "",
+      "archive_title": ""
+    }
+  ]
+}

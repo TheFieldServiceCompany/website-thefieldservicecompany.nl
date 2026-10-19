@@ -1,5 +1,27 @@
 # Changelog
 
+## 2026-10-19 — Beroepengids-kennisgebieden als artikelarchief ingericht
+
+- Alle 25 bestaande descriptions, intro's en archieftitels van
+  `beroep_kennisgebied` zijn LIVE ingericht als artikelarchief.
+- Iedere H1 gebruikt `Kennisgebied [term] | Artikelen`; iedere description
+  begint met `Kennisgebied [term]` als H2 en bevat daarna drie compacte,
+  inhoudelijk unieke alinea's.
+- De gelijknamige vacaturedescriptions zijn als inhoudelijke bron gebruikt.
+  Verwante domeinen zijn in hun technische samenhang beschreven zonder
+  specifieke vacature-eisen of bevoegdheden te veralgemeniseren.
+- De descriptions bevatten 100–110 woorden en de intro's 17–21 woorden.
+- Alle 75 waarden zijn na publicatie exact via REST geverifieerd.
+  Elektrotechniek, Mechatronica, Profibus & Ethernet, Rotating Equipment en
+  Vacuümtechniek zijn ook op de openbare pagina gecontroleerd.
+- De eerste publicatiepoging signaleerde drie HTML-entiteiten in intro's en is
+  volledig automatisch teruggedraaid; de gecontroleerde tweede uitvoering
+  slaagde zonder restwijzigingen of tijdelijk endpoint.
+- Er zijn geen termen, slugs, parents, relaties, Pods, velden, vacatures,
+  artikelen of template-instellingen gewijzigd.
+- Volledig log:
+  `audits/2026-10-19-beroepengids-kennisgebieden-live.md`.
+
 ## 2026-10-19 — Beroepengids-functie-inhoud als artikelarchief ingericht
 
 - Alle 29 bestaande descriptions, intro's en archieftitels van
