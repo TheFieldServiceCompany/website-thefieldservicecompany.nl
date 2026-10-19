@@ -296,6 +296,12 @@ werkgevermodel.
 
 ## Overige bestaande backlog
 
+- [ ] Appsmith-branches gecontroleerd opschonen. `crm-layout-redesign` is de
+  actuele werkbranch en `main` blijft behouden. Negen branches zijn volledig
+  in de actuele lijn opgenomen; vier afgesplitste branches hebben elk één
+  unieke commit en moeten eerst inhoudelijk worden beoordeeld. Geen remote
+  branch verwijderen zonder expliciet akkoord. Zie
+  `audits/2026-10-19-appsmith-branch-inventory.md`.
 - [ ] Na Reisprofielen de resterende WordPress-, Supabase- en Appsmith-
   taxonomieën en keuzelijsten volgens dezelfde canonieke mapping afwerken.
 - [ ] Blogartikelen één voor één actualiseren, naar Beroepengids of Kennisbank
