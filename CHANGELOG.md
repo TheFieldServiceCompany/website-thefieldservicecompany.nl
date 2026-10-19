@@ -1,5 +1,22 @@
 # Changelog
 
+## 2026-10-19 — Werkvolgorde travel en Beroepengids-indexering verduidelijkt
+
+- Vastgelegd dat de vier travelonderdelen al als structuur bestaan in
+  WordPress, Supabase en Appsmith. Het open werk betreft de exacte
+  band-naar-getal-mapping, inhoudelijke classificatie van bestaande vacatures,
+  gecontroleerde synchronisatie en een end-to-endtest; er worden niet opnieuw
+  velden of termen ontworpen.
+- De afgesproken volgorde staat nu als afvinkbare stappen in `TODO.md`: eerst
+  het travelgedeelte bij vacatures afronden, daarna pas beslissen welke nieuwe
+  Beroepengids-termarchieven indexeerbaar worden.
+- Verduidelijkt dat de tijdens openbare controles gevonden SEO-output
+  `follow, noindex` zonder canonical niet door de contentrondes is ingesteld.
+  Rank Math heeft `noindex_empty_taxonomies` globaal aan staan en WordPress
+  telt uitsluitend via Pods gekoppelde termarchieven technisch als leeg.
+- Er zijn bij deze documentatieronde geen wijzigingen uitgevoerd in
+  WordPress, Supabase, Appsmith, Rank Math, Pods of Search & Filter.
+
 ## 2026-10-19 — Beroepengids-werkgebieden als artikelarchief ingericht
 
 - Alle 8 bestaande descriptions, intro's en archieftitels van
