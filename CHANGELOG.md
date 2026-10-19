@@ -1,5 +1,24 @@
 # Changelog
 
+## 2026-10-19 — Beroepengids-functie-inhoud als artikelarchief ingericht
+
+- Alle 29 bestaande descriptions, intro's en archieftitels van
+  `beroep_functie-inhoud` zijn LIVE ingericht als artikelarchief.
+- Iedere H1 gebruikt `Functie-inhoud [term] | Artikelen`; iedere description
+  begint met `Functie-inhoud [term]` als H2 en bevat daarna drie compacte,
+  inhoudelijk unieke alinea's.
+- De gelijknamige vacaturedescriptions zijn als inhoudelijke bron gebruikt.
+  Overlappende begrippen worden eerlijk als verwante vacaturetermen behandeld;
+  de concrete vacature-inhoud blijft doorslaggevend.
+- De descriptions bevatten 100–113 woorden en de intro's 19–24 woorden.
+- Alle 87 waarden zijn na publicatie exact via REST geverifieerd.
+  Commissioning, Diagnose, Field service, PLC Programmeren en Technical Support
+  zijn ook op de openbare pagina gecontroleerd.
+- Er zijn geen termen, slugs, parents, relaties, Pods, velden, vacatures,
+  artikelen of template-instellingen gewijzigd.
+- Volledig log:
+  `audits/2026-10-19-beroepengids-functie-inhoud-live.md`.
+
 ## 2026-10-19 — Beroepengids-bedrijfssectoren als artikelarchief ingericht
 
 - Alle 33 bestaande descriptions, intro's en archieftitels van

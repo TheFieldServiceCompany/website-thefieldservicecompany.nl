@@ -52,9 +52,11 @@ gewijzigd; open afhankelijkheden worden niet stilzwijgend overgeslagen.
    afzonderlijke descriptions, uitnodigende intro's en archieftitels als
    artikelarchief; alle 96 waarden zijn LIVE geverifieerd. Ook de 33
    Bedrijfssectoren hebben unieke descriptions, intro's en archieftitels; alle
-   99 waarden zijn LIVE geverifieerd. De descriptions van de overige 62
-   spiegeltermen (Functie-inhoud, Kennisgebieden en Werkgebieden) zijn nog leeg
-   en blijven onderdeel van de latere inhoudelijke ronde.
+   99 waarden zijn LIVE geverifieerd. Ook de 29 Functie-inhoud-termen hebben
+   unieke descriptions, intro's en archieftitels; alle 87 waarden zijn LIVE
+   geverifieerd. De descriptions van de overige 33 spiegeltermen (25
+   Kennisgebieden en 8 Werkgebieden) zijn nog leeg en blijven onderdeel van de
+   latere inhoudelijke ronde.
    De 23 Beroepengids-studierichtingen hebben sinds 19 oktober descriptions,
    uitnodigende intro's en archieftitels als artikelarchief. Alle 69 waarden
    zijn LIVE geverifieerd.

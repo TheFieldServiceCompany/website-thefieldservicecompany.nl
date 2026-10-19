@@ -18,6 +18,7 @@ RESOLVE = "thefieldservicecompany.nl:443:45.82.188.97"
 TAXONOMY = "beroep_bedrijfssector"
 ENDPOINT = "/wp-json/tfsc-admin/v1/beroep-bedrijfssector-content-20261019"
 EXPECTED_COUNT = 33
+SNIPPET_NAME = "TFSC TEMP Beroepengids bedrijfssector content 2026-10-19"
 
 
 class PublishError(RuntimeError):
@@ -263,7 +264,7 @@ def install_snippet(client: Client) -> int:
         "POST",
         "/wp-json/code-snippets/v1/snippets",
         {
-            "name": "TFSC TEMP Beroepengids bedrijfssector content 2026-10-19",
+            "name": SNIPPET_NAME,
             "desc": "Tijdelijk beheerders-endpoint voor bestaande intro- en archieftitelvelden; na verificatie verwijderd.",
             "code": metadata_snippet(),
             "tags": ["temporary", "content"],

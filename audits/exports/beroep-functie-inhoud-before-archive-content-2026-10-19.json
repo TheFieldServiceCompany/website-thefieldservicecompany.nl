@@ -1,0 +1,2183 @@
+{
+  "created_at": "2026-10-19",
+  "taxonomy": "beroep_functie-inhoud",
+  "terms": [
+    {
+      "id": 672,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/functie-inhoud/adviseren/",
+      "name": "Adviseren",
+      "slug": "adviseren",
+      "taxonomy": "beroep_functie-inhoud",
+      "parent": 0,
+      "meta": [],
+      "intro_taxonomy": "",
+      "relationship_vacature_button_url": false,
+      "relationship_functie-inhoud": [
+        {
+          "pods_archive_title": "Field service vacatures met functie-inhoud Adviseren",
+          "term_id": 352,
+          "name": "Adviseren",
+          "slug": "adviseren",
+          "description": "<h2>Adviseren als onderdeel van field service</h2>\r\nAdviseren binnen field service betekent dat een engineer technische kennis en praktijkervaring gebruikt om klanten gericht te helpen bij het gebruik, onderhoud en verbeteren van machines of installaties. Het advies ontstaat meestal tijdens werkzaamheden op locatie, bijvoorbeeld na een storing, inspectie, onderhoudsbeurt of inbedrijfstelling. De engineer ziet de installatie in de praktijk, beoordeelt de technische situatie en kan daardoor aangeven welke vervolgstappen technisch verstandig zijn.\r\n\r\nHet gaat daarbij niet alleen om vertellen wat er defect is. Een engineer kan bijvoorbeeld adviseren om een versleten component preventief te vervangen, instellingen aan te passen, onderhoudsintervallen te wijzigen of een technische upgrade uit te voeren. Ook uitleg over correct gebruik van een machine, eenvoudige onderhoudswerkzaamheden of het voorkomen van terugkerende storingen kan onderdeel zijn van het advies. In technische field service functies worden dergelijke aanbevelingen vaak vastgelegd in servicerapporten en besproken met operators, onderhoudsmedewerkers of technische verantwoordelijken.\r\n<h2>Advies op basis van diagnose en onderhoud</h2>\r\nDe inhoud van het advies hangt af van de installatie. Bij CNC-machines kan het bijvoorbeeld gaan om aandrijvingen, servosystemen, besturingen of mechanische nauwkeurigheid. Bij geautomatiseerde productielijnen kunnen sensoren, actuatoren, PLC-besturingen en communicatie tussen verschillende machineonderdelen een rol spelen. In de procesindustrie kan advies betrekking hebben op pompen, afsluiters, instrumentatie, aandrijvingen of andere onderdelen van een installatie.\r\n\r\nEen goed technisch advies begint daarom vrijwel altijd met onderzoek. Engineers gebruiken storingsgegevens, technische documentatie, tekeningen, meetwaarden en hun eigen waarnemingen om een situatie te beoordelen. Vervolgens moeten zij kunnen uitleggen wat de mogelijke oorzaak is, welke oplossing passend is en waarom.\r\n<h2>Technische kennis kunnen vertalen naar de praktijk</h2>\r\nAdviseren vraagt om kennis van de techniek waarmee wordt gewerkt. Dat kan mechanica, elektrotechniek, mechatronica, industriële automatisering of een combinatie hiervan zijn. Daarnaast is het belangrijk om technische informatie begrijpelijk over te brengen zonder belangrijke details weg te laten.\r\n\r\nAdviseren is een belangrijk onderdeel van de functie-inhoud van veel field service vacatures van The Field Service Company. Kandidaten die graag technische problemen analyseren en hun kennis gebruiken om klanten verder te helpen, kunnen via deze functie-inhoud gericht vacatures vinden waarin adviseren daadwerkelijk onderdeel van het dagelijkse werk is.",
+          "taxonomy": "functie-inhoud",
+          "parent": 0,
+          "term_taxonomy_id": 352,
+          "term_group": 0,
+          "count": 14,
+          "object_id": null,
+          "term_order": "0",
+          "id": 352
+        }
+      ],
+      "pods_archive_title": "",
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functie-inhoud/672",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functie-inhoud"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_functie-inhoud"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_functie-inhoud=672"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 673,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/functie-inhoud/commissioning/",
+      "name": "Commissioning",
+      "slug": "commissioning",
+      "taxonomy": "beroep_functie-inhoud",
+      "parent": 0,
+      "meta": [],
+      "intro_taxonomy": "",
+      "relationship_vacature_button_url": false,
+      "relationship_functie-inhoud": [
+        {
+          "pods_archive_title": "Field service vacatures met functie-inhoud Commissioning",
+          "term_id": 418,
+          "name": "Commissioning",
+          "slug": "commissioning",
+          "description": "<h2>Commissioning vacatures binnen field service</h2>\r\nCommissioning binnen field service is het gecontroleerd testen, opstarten en technisch vrijgeven van een nieuwe of aangepaste machine of installatie. Deze werkzaamheden vinden meestal plaats nadat de mechanische en elektrische montage grotendeels is afgerond. De engineer controleert vervolgens of alle subsystemen correct samenwerken en of de installatie functioneert volgens de technische specificaties en het bedoelde proces.\r\n\r\nCommissioning komt veel voor binnen machinebouw, industriële automatisering en system integration. Daarbij kan het gaan om complete productielijnen, verpakkingsmachines, transportsystemen, robots, procesinstallaties, pompsystemen of andere geautomatiseerde machines. Engineers werken vaak eerst vanuit een testplan en bouwen de installatie stap voor stap op van losse functies naar een volledig werkend systeem.\r\n<h2>Testen van hardware, software en procesfuncties</h2>\r\nEen belangrijk onderdeel is het uitvoeren van I/O-tests. Hierbij wordt gecontroleerd of sensoren, schakelaars, actuatoren, kleppen en andere veldcomponenten correct communiceren met de besturing. Daarnaast kunnen PLC- en HMI-functies, industriële netwerken, frequentieregelaars, servoaandrijvingen en veiligheidsfuncties worden getest.\r\n\r\nDaarna volgen functionele tests waarbij complete machinebewegingen en processequenties worden doorlopen. Een engineer controleert bijvoorbeeld of transportbanden in de juiste volgorde starten, een robot zijn posities correct bereikt of een procesinstallatie op de juiste signalen reageert. Afwijkingen worden geanalyseerd en waar nodig worden instellingen, softwareparameters of mechanische afstellingen aangepast.\r\n<h2>Van eerste opstart naar stabiele productie</h2>\r\nCommissioning vindt niet alleen plaats bij volledig nieuwe machines. Ook na een retrofit, uitbreiding, softwarewijziging of technische modernisering kan een installatie opnieuw worden gecommissioned. Tijdens de eerste productie kunnen bovendien aanvullende optimalisaties nodig zijn om een systeem stabiel en reproduceerbaar te laten draaien.\r\n\r\nTechnische kennis van elektrotechniek, mechanica, mechatronica en industriële automatisering is daarbij vaak belangrijk. Engineers moeten schema’s kunnen lezen, PLC-signalen begrijpen, storingen systematisch kunnen analyseren en veilig kunnen werken tijdens het testen van bewegende apparatuur.\r\n\r\nCommissioning is een belangrijk onderdeel van veel field service vacatures van The Field Service Company. Kandidaten die graag machines testen, opstarten en technisch gereedmaken voor productie, kunnen via deze functie-inhoud gericht vacatures vinden waarin commissioning een belangrijk deel van het dagelijkse werk vormt.",
+          "taxonomy": "functie-inhoud",
+          "parent": 0,
+          "term_taxonomy_id": 418,
+          "term_group": 0,
+          "count": 0,
+          "object_id": null,
+          "term_order": "0",
+          "id": 418
+        }
+      ],
+      "pods_archive_title": "",
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functie-inhoud/673",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functie-inhoud"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_functie-inhoud"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_functie-inhoud=673"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 674,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/functie-inhoud/diagnose/",
+      "name": "Diagnose",
+      "slug": "diagnose",
+      "taxonomy": "beroep_functie-inhoud",
+      "parent": 0,
+      "meta": [],
+      "intro_taxonomy": "",
+      "relationship_vacature_button_url": false,
+      "relationship_functie-inhoud": [
+        {
+          "pods_archive_title": "Field service vacatures met functie-inhoud Diagnose",
+          "term_id": 457,
+          "name": "Diagnose",
+          "slug": "diagnose",
+          "description": "<h2>Diagnose als onderdeel van field service</h2>\r\nDiagnose binnen field service betekent het systematisch onderzoeken van een storing, afwijking of prestatieprobleem aan een machine of installatie. De engineer probeert niet alleen vast te stellen welk onderdeel niet goed functioneert, maar vooral waarom het probleem ontstaat. Dat gebeurt meestal op locatie bij de klant, waar de machine onder echte bedrijfsomstandigheden kan worden beoordeeld.\r\n\r\nDiagnose kan nodig zijn bij onverwachte stilstand, terugkerende foutmeldingen, kwaliteitsproblemen, afwijkende bewegingen of wanneer een installatie niet meer volgens specificatie presteert. De engineer verzamelt technische informatie, controleert foutcodes en alarmhistorie, spreekt eventueel met operators en voert metingen en functietests uit.\r\n<h2>Meten, uitsluiten en de oorzaak vinden</h2>\r\nAfhankelijk van de machine kan diagnose betrekking hebben op mechanische, elektrische, pneumatische, hydraulische of softwarematige systemen. Bij geautomatiseerde productiemachines kunnen bijvoorbeeld sensoren, aandrijvingen, servomotoren, PLC-besturingen en industriële communicatie worden gecontroleerd. Bij procesinstallaties kunnen pompen, afsluiters, instrumentatie en meet- en regeltechniek onderdeel van het onderzoek zijn.\r\n\r\nEen engineer werkt daarbij vaak volgens een logisch uitsluitproces. Een foutmelding van een sensor betekent bijvoorbeeld niet automatisch dat de sensor zelf defect is. Ook bekabeling, voeding, vervuiling, verkeerde afstelling of een probleem in de besturing kan de oorzaak zijn. Door meetwaarden, schema’s en systeemgedrag met elkaar te vergelijken wordt het probleem steeds verder afgebakend.\r\n<h2>Van storing naar gerichte oplossing</h2>\r\nGoede diagnose voorkomt onnodig vervangen van onderdelen en maakt reparaties gerichter. Na het vaststellen van de oorzaak kan de engineer bepalen welke reparatie, instelling of technische aanpassing nodig is. De bevindingen worden vaak vastgelegd in een servicerapport, zodat ook duidelijk is wat is onderzocht en welke maatregelen zijn genomen.\r\n\r\nBelangrijke vaardigheden zijn technisch inzicht, logisch redeneren en het kunnen lezen van elektrische schema’s, mechanische tekeningen en technische documentatie. Afhankelijk van het systeem zijn ook kennis van PLC’s, meetapparatuur, aandrijftechniek, mechanica of procestechniek belangrijk.\r\n\r\nDiagnose is een belangrijk onderdeel van veel field service vacatures van The Field Service Company. Kandidaten die graag technische problemen analyseren en oorzaken systematisch achterhalen, kunnen via deze functie-inhoud gericht vacatures vinden waarin diagnose een belangrijk deel van het werk vormt.",
+          "taxonomy": "functie-inhoud",
+          "parent": 0,
+          "term_taxonomy_id": 457,
+          "term_group": 0,
+          "count": 0,
+          "object_id": null,
+          "term_order": "0",
+          "id": 457
+        }
+      ],
+      "pods_archive_title": "",
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functie-inhoud/674",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functie-inhoud"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_functie-inhoud"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_functie-inhoud=674"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 675,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/functie-inhoud/field-service/",
+      "name": "Field service",
+      "slug": "field-service",
+      "taxonomy": "beroep_functie-inhoud",
+      "parent": 0,
+      "meta": [],
+      "intro_taxonomy": "",
+      "relationship_vacature_button_url": false,
+      "relationship_functie-inhoud": [
+        {
+          "pods_archive_title": "Vacatures met functie-inhoud field service",
+          "term_id": 419,
+          "name": "Field service",
+          "slug": "field-service",
+          "description": "<h2>Field Service als technisch werk op locatie</h2>\r\nField service is technisch werk aan machines, installaties en systemen op locatie bij de klant. De engineer werkt daar waar de apparatuur daadwerkelijk wordt gebruikt: in een fabriek, productieomgeving, energie-installatie, werkplaats of andere technische omgeving. Daardoor bestaat field service meestal uit een combinatie van installatie, inbedrijfstelling, onderhoud, inspectie, diagnose, reparatie en technische ondersteuning.\r\n\r\nDe exacte inhoud verschilt sterk per sector. Een engineer kan bijvoorbeeld werken aan CNC-machines, verpakkingslijnen, procesinstallaties, industriële robots, transportsystemen, warmtebehandelingsinstallaties, pompen of complete geautomatiseerde productielijnen. In andere functies ligt de nadruk juist op elektrische installaties, besturingssystemen of gespecialiseerde apparatuur.\r\n<h2>Van installatie tot storing en onderhoud</h2>\r\nField service begint vaak al bij de installatie van nieuwe apparatuur. Machines worden op locatie opgebouwd, aangesloten, gecontroleerd en vervolgens getest of in bedrijf gesteld. Zodra de installatie operationeel is, verschuift het werk naar preventief onderhoud, inspecties en het oplossen van technische storingen.\r\n\r\nBij een storing moet een engineer bijvoorbeeld foutmeldingen analyseren, elektrische metingen uitvoeren, mechanische componenten controleren of PLC-signalen onderzoeken. Vervolgens wordt bepaald welke reparatie, afstelling of vervanging nodig is. Ook upgrades, modificaties en het opnieuw testen van machines na werkzaamheden kunnen onderdeel zijn van field service.\r\n\r\nOmdat werkzaamheden bij klanten plaatsvinden, moet een engineer vaak zelfstandig technische beslissingen kunnen nemen. Technische documentatie, elektrische schema’s, mechanische tekeningen en servicemanuals vormen daarbij belangrijke hulpmiddelen.\r\n<h2>Brede technische kennis in de praktijk</h2>\r\nWelke kennis nodig is, hangt af van de apparatuur. Binnen machinebouw is een combinatie van mechanica, elektrotechniek en mechatronica gebruikelijk. Bij geautomatiseerde installaties zijn daarnaast PLC-besturingen, sensoren, aandrijftechniek, pneumatiek, hydrauliek en industriële communicatie relevant.\r\n\r\nField Service vormt een belangrijk onderdeel van de functie-inhoud van de field service vacatures die The Field Service Company aanbiedt. Kandidaten die specifiek willen werken aan machines en installaties bij klanten kunnen via deze functie-inhoud gericht vacatures vinden waarin technisch werk op locatie centraal staat.",
+          "taxonomy": "functie-inhoud",
+          "parent": 0,
+          "term_taxonomy_id": 419,
+          "term_group": 0,
+          "count": 0,
+          "object_id": null,
+          "term_order": "0",
+          "id": 419
+        }
+      ],
+      "pods_archive_title": "",
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functie-inhoud/675",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functie-inhoud"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_functie-inhoud"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_functie-inhoud=675"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 676,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/functie-inhoud/inbedrijfstellen/",
+      "name": "Inbedrijfstellen",
+      "slug": "inbedrijfstellen",
+      "taxonomy": "beroep_functie-inhoud",
+      "parent": 0,
+      "meta": [],
+      "intro_taxonomy": "",
+      "relationship_vacature_button_url": false,
+      "relationship_functie-inhoud": [
+        {
+          "pods_archive_title": "Field service vacatures met functie-inhoud Inbedrijfstellen",
+          "term_id": 220,
+          "name": "Inbedrijfstellen",
+          "slug": "inbedrijfstellen",
+          "description": "<h2>Inbedrijfstellen vacatures als onderdeel van field service</h2>\r\nInbedrijfstellen binnen field service betekent dat een engineer een nieuwe, aangepaste of opnieuw opgebouwde machine technisch gereedmaakt voor gebruik. De installatie is op dat moment meestal mechanisch en elektrisch opgebouwd, maar moet nog worden gecontroleerd, ingesteld en getest voordat productie kan starten. De engineer beoordeelt stap voor stap of alle onderdelen correct functioneren en samenwerken.\r\n\r\nDit soort werkzaamheden komt veel voor bij machinebouwers, system integrators en technische dienstverleners. Het kan gaan om verpakkingsmachines, assemblagelijnen, transportsystemen, robots, CNC-machines, procesinstallaties of complete geautomatiseerde productiesystemen.\r\n<h2>Controleren, afstellen en opstarten</h2>\r\nEen inbedrijfstelling begint vaak met controles van bekabeling, elektrische aansluitingen, sensoren, actuatoren, pneumatiek, hydrauliek en veiligheidsvoorzieningen. Daarna worden besturingen, aandrijvingen en andere systeemcomponenten getest. Bij geautomatiseerde machines kunnen ook PLC-signalen, HMI-functies, industriële communicatie en softwareparameters worden gecontroleerd.\r\n\r\nVervolgens wordt de installatie stapsgewijs opgestart. Engineers testen afzonderlijke functies en daarna complete machinebewegingen of processequenties. Mechanische onderdelen kunnen worden uitgelijnd of afgesteld en sensoren of meetinstrumenten kunnen worden gekalibreerd. Afwijkingen die tijdens het testen naar voren komen, worden direct onderzocht en waar mogelijk opgelost.\r\n<h2>Van technische installatie naar productie</h2>\r\nInbedrijfstellen gebeurt niet alleen bij nieuwe machines. Ook na een retrofit, verplaatsing, uitbreiding of grote revisie kan een installatie opnieuw in bedrijf worden gesteld. Soms loopt het werk door tot de eerste productie, zodat de engineer kan beoordelen of de machine ook onder belasting stabiel functioneert.\r\n\r\nTechnische vaardigheden verschillen per installatie, maar kennis van mechanica, elektrotechniek, mechatronica en industriële automatisering is vaak belangrijk. Engineers moeten schema’s en tekeningen kunnen lezen, logisch kunnen testen en storingen kunnen analyseren. Bij geautomatiseerde machines is kennis van PLC’s, sensoren, aandrijvingen en veiligheidsbesturingen vaak relevant.\r\n\r\nInbedrijfstellen is een belangrijk onderdeel van veel field service vacatures van The Field Service Company. Kandidaten die graag nieuwe machines opstarten, testen en technisch gereedmaken voor productie, kunnen via deze functie-inhoud gericht vacatures vinden waarin inbedrijfstellen een belangrijk deel van het werk vormt.",
+          "taxonomy": "functie-inhoud",
+          "parent": 0,
+          "term_taxonomy_id": 220,
+          "term_group": 0,
+          "count": 45,
+          "object_id": null,
+          "term_order": "0",
+          "id": 220
+        }
+      ],
+      "pods_archive_title": "",
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functie-inhoud/676",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functie-inhoud"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_functie-inhoud"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_functie-inhoud=676"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 677,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/functie-inhoud/inspectie/",
+      "name": "Inspectie",
+      "slug": "inspectie",
+      "taxonomy": "beroep_functie-inhoud",
+      "parent": 0,
+      "meta": [],
+      "intro_taxonomy": "",
+      "relationship_vacature_button_url": false,
+      "relationship_functie-inhoud": [
+        {
+          "pods_archive_title": "Field service vacatures met functie-inhoud Inspectie",
+          "term_id": 414,
+          "name": "Inspectie",
+          "slug": "inspectie",
+          "description": "<h2>Inspectie als onderdeel van field service vacatures</h2>\r\nInspectie binnen field service betekent dat een engineer op locatie de technische staat, werking en veiligheid van een machine of installatie controleert. Het doel is om afwijkingen, slijtage, beschadigingen of verkeerde instellingen vroegtijdig te herkennen voordat deze tot stilstand, kwaliteitsproblemen of grotere schade leiden.\r\n\r\nInspecties komen voor tijdens periodiek onderhoud, na een storing, voor een inbedrijfstelling of wanneer een installatie na langere tijd opnieuw moet worden beoordeeld. Afhankelijk van de sector kan een engineer werken aan productiemachines, verpakkingslijnen, transportsystemen, pompen, compressoren, aandrijvingen, procesinstallaties, robots of elektrische installaties.\r\n<h2>Controleren van onderdelen en systeemgedrag</h2>\r\nTijdens een inspectie wordt niet alleen visueel gekeken. Mechanische onderdelen kunnen worden gecontroleerd op slijtage, speling, scheurvorming, vervuiling, lekkage of verkeerde uitlijning. Bij elektrische systemen gaat het bijvoorbeeld om bekabeling, aansluitingen, schakelkasten, beveiligingen en componenten die tekenen van oververhitting of beschadiging vertonen.\r\n\r\nBij geautomatiseerde installaties kunnen ook sensoren, actuatoren, aandrijvingen en besturingscomponenten worden meegenomen. Daarnaast kunnen engineers meetwaarden controleren zoals temperatuur, druk, stroom, spanning, trillingen of andere proceswaarden. Welke controles relevant zijn, hangt af van de machine en de voorgeschreven onderhouds- of inspectieprocedure.\r\n<h2>Bevindingen beoordelen en opvolgen</h2>\r\nEen belangrijk onderdeel van inspectie is het beoordelen van wat er met de bevindingen moet gebeuren. Niet iedere afwijking vraagt om directe vervanging. Soms is afstellen voldoende, terwijl in andere gevallen aanvullend onderhoud, diagnose of reparatie nodig is. De engineer legt bevindingen daarom meestal vast in een servicerapport en kan aanbevelingen doen voor vervolgstappen.\r\n\r\nVoor inspectiewerk zijn technisch inzicht, nauwkeurig werken en kennis van de betreffende installatie belangrijk. Engineers moeten technische tekeningen, schema’s en onderhoudsdocumentatie kunnen gebruiken en meetresultaten correct kunnen interpreteren.\r\n\r\nInspectie is een belangrijk onderdeel van veel field service vacatures van The Field Service Company. Kandidaten die graag machines technisch beoordelen en afwijkingen vroegtijdig herkennen, kunnen via deze functie-inhoud gericht vacatures vinden waarin inspectie een belangrijk deel van het dagelijkse werk vormt.",
+          "taxonomy": "functie-inhoud",
+          "parent": 0,
+          "term_taxonomy_id": 414,
+          "term_group": 0,
+          "count": 3,
+          "object_id": null,
+          "term_order": "0",
+          "id": 414
+        }
+      ],
+      "pods_archive_title": "",
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functie-inhoud/677",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functie-inhoud"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_functie-inhoud"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_functie-inhoud=677"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 678,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/functie-inhoud/installatie/",
+      "name": "Installatie",
+      "slug": "installatie",
+      "taxonomy": "beroep_functie-inhoud",
+      "parent": 0,
+      "meta": [],
+      "intro_taxonomy": "",
+      "relationship_vacature_button_url": false,
+      "relationship_functie-inhoud": [
+        {
+          "pods_archive_title": "Field service vacatures met functie-inhoud Installatie",
+          "term_id": 255,
+          "name": "Installatie",
+          "slug": "installatie",
+          "description": "<h2>Installatie van machines en systemen binnen field service</h2>\r\nInstallatie binnen field service betekent het op locatie plaatsen, opbouwen, monteren en aansluiten van machines, installaties of complete technische systemen. De termen installeren, installatie, montage en machine-installatie worden daarbij vaak naast elkaar gebruikt. In de machinebouw vormt deze fase de verbinding tussen de bouw van een machine en het latere testen en inbedrijfstellen bij de klant.\r\n\r\nEen installatie kan bestaan uit één zelfstandige machine, maar ook uit meerdere gekoppelde modules of een complete productielijn. Denk aan CNC-machines, verpakkingsmachines, transportsystemen, robots, procesapparatuur, energie-installaties of geautomatiseerde productiesystemen. Bij omvangrijke projecten werken field service engineers tijdens de installatie samen met monteurs, elektriciens, projectteams en technische medewerkers van de klant.\r\n<h2>Monteren, positioneren en aansluiten</h2>\r\nMechanische installatiewerkzaamheden kunnen bestaan uit het plaatsen en uitlijnen van machineframes, monteren van losse modules, verbinden van transportsystemen en aansluiten van pneumatische of hydraulische delen. Daarbij moet worden gecontroleerd of onderdelen correct zijn gemonteerd en of bewegende delen voldoende vrijloop en uitlijning hebben.\r\n\r\nAan de elektrische kant kunnen voedingsaansluitingen, motoren, schakelkasten, sensoren, actuatoren en veldbekabeling worden aangesloten of gecontroleerd. Bij geautomatiseerde installaties kunnen daarnaast PLC-systemen, industriële netwerken, servoaandrijvingen, frequentieregelaars en veiligheidscomponenten onderdeel van de installatie zijn.\r\n\r\nEngineers werken hierbij aan de hand van mechanische tekeningen, elektrische schema’s, installatie-instructies en projectdocumentatie. Afwijkingen tussen de situatie op locatie en de engineering moeten tijdig worden herkend en teruggekoppeld.\r\n<h2>Installatie als voorbereiding op commissioning</h2>\r\nInstalleren en inbedrijfstellen worden vaak in één functie gecombineerd, maar zijn technisch verschillende werkzaamheden. Tijdens de installatie ligt de nadruk op het correct opbouwen en aansluiten van de apparatuur. Daarna volgen controles, functionele tests en commissioning om vast te stellen of het complete systeem daadwerkelijk correct werkt.\r\n\r\nTechnisch inzicht, nauwkeurigheid en kennis van mechanica, elektrotechniek of mechatronica zijn daarom belangrijk. Bij complexere installaties is ook ervaring met automatisering, aandrijftechniek, pneumatiek of hydrauliek relevant.\r\n\r\nInstallatie is een belangrijk onderdeel van veel field service vacatures van The Field Service Company. Kandidaten die specifiek zoeken naar installatie-, montage- of opbouwwerk bij klanten kunnen via deze functie-inhoud gericht field service vacatures vinden die aansluiten op dit type werkzaamheden.",
+          "taxonomy": "functie-inhoud",
+          "parent": 0,
+          "term_taxonomy_id": 255,
+          "term_group": 0,
+          "count": 39,
+          "object_id": null,
+          "term_order": "0",
+          "id": 255
+        }
+      ],
+      "pods_archive_title": "",
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functie-inhoud/678",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functie-inhoud"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_functie-inhoud"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_functie-inhoud=678"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 679,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/functie-inhoud/instructie/",
+      "name": "Instructie",
+      "slug": "instructie",
+      "taxonomy": "beroep_functie-inhoud",
+      "parent": 0,
+      "meta": [],
+      "intro_taxonomy": "",
+      "relationship_vacature_button_url": false,
+      "relationship_functie-inhoud": [
+        {
+          "pods_archive_title": "Field service vacatures met functie-inhoud Instructie",
+          "term_id": 463,
+          "name": "Instructie",
+          "slug": "instructie",
+          "description": "<h2>Instructie geven binnen field service</h2>\r\nInstructie binnen field service betekent dat een engineer gebruikers, operators of technische medewerkers uitlegt hoe een machine, installatie of systeem correct moet worden bediend, gecontroleerd en onderhouden. De termen instructie, uitleg, gebruikersinstructie, operatortraining en technische training liggen daarbij dicht bij elkaar. Vaak vindt deze kennisoverdracht plaats nadat een machine is geïnstalleerd, in bedrijf gesteld, aangepast of gerepareerd.\r\n\r\nDe engineer kent de machine technisch en vertaalt die kennis naar praktisch gebruik op locatie. Daarbij kan worden uitgelegd hoe een installatie wordt gestart en gestopt, welke instellingen operators mogen aanpassen, hoe productwissels worden uitgevoerd en hoe meldingen of alarmen moeten worden geïnterpreteerd. Bij onderhoudspersoneel kan de instructie verder gaan en ook dagelijkse controles, preventief onderhoud en eenvoudige storingsanalyse omvatten.\r\n<h2>Uitleg aan operators en technische diensten</h2>\r\nWelke instructies nodig zijn, hangt sterk af van het systeem. Bij geautomatiseerde productielijnen kan een engineer uitleg geven over HMI-bediening, recepturen, sensoren, machinebewegingen en veiligheidsfuncties. Bij CNC-machines kunnen bediening, machine-instellingen en specifieke werkprocedures aan bod komen. Bij procesinstallaties kan instructie betrekking hebben op pompen, kleppen, instrumentatie, regelingen en de juiste volgorde van proceshandelingen.\r\n\r\nInstructie gebeurt vaak direct aan de machine. Hierdoor kunnen operators handelingen zelf uitvoeren terwijl de engineer controleert of deze correct worden begrepen. Ook storingssituaties kunnen worden besproken, zodat gebruikers weten welke controles zij zelf kunnen uitvoeren en wanneer technische service nodig is.\r\n<h2>Kennis overdragen na technisch werk</h2>\r\nInstructie vormt regelmatig het laatste onderdeel van installatie en commissioning. Nadat een machine technisch is getest en vrijgegeven, moet de klant er zelfstandig mee kunnen werken. Engineers gebruiken daarvoor bijvoorbeeld handleidingen, elektrische schema’s, bedieningsschermen en praktische demonstraties.\r\n\r\nNaast technische kennis vraagt dit om het vermogen om complexe techniek begrijpelijk uit te leggen. Een engineer moet kunnen inschatten welke informatie relevant is voor een operator en welke verdieping nodig is voor onderhoudsmedewerkers.\r\n\r\nInstructie is een belangrijk onderdeel van veel field service vacatures van The Field Service Company. Kandidaten die technische werkzaamheden graag combineren met het uitleggen van machines en systemen kunnen via deze functie-inhoud gericht field service vacatures vinden waarin instructie en technische kennisoverdracht onderdeel van het werk vormen.",
+          "taxonomy": "functie-inhoud",
+          "parent": 0,
+          "term_taxonomy_id": 463,
+          "term_group": 0,
+          "count": 0,
+          "object_id": null,
+          "term_order": "0",
+          "id": 463
+        }
+      ],
+      "pods_archive_title": "",
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functie-inhoud/679",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functie-inhoud"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_functie-inhoud"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_functie-inhoud=679"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 680,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/functie-inhoud/kalibratie/",
+      "name": "Kalibratie",
+      "slug": "kalibratie",
+      "taxonomy": "beroep_functie-inhoud",
+      "parent": 0,
+      "meta": [],
+      "intro_taxonomy": "",
+      "relationship_vacature_button_url": false,
+      "relationship_functie-inhoud": [
+        {
+          "pods_archive_title": "Field service vacatures met functie-inhoud Kalibratie",
+          "term_id": 459,
+          "name": "Kalibratie",
+          "slug": "kalibratie",
+          "description": "<h2>Kalibratie of calibratie binnen field service?</h2>\r\nKalibratie binnen field service betekent het controleren en waar nodig afstellen van meetinstrumenten, sensoren of complete meetsystemen zodat de gemeten waarde overeenkomt met een bekende referentie. Ook de schrijfwijze calibratie komt in technische documentatie en internationale werkomgevingen veel voor. In de praktijk gaat het bij kalibreren of calibreren om het vaststellen van meetafwijkingen en het beoordelen of een instrument nog binnen de toegestane toleranties werkt.\r\n\r\nDeze werkzaamheden komen voor aan onder andere druktransmitters, temperatuursensoren, flowmeters, weegsystemen, positioneringssystemen, meetkoppen, analysers en andere industriële instrumentatie. Ook machines met nauwkeurige positionering of procesregeling kunnen periodieke kalibratie nodig hebben.\r\n<h2>Meten, vergelijken en afstellen</h2>\r\nEen engineer vergelijkt tijdens een kalibratie de waarde van het te controleren instrument met een referentie waarvan de nauwkeurigheid bekend is. Daarbij kan op meerdere meetpunten worden getest om te bepalen of de afwijking over het volledige meetbereik acceptabel blijft.\r\n\r\nWanneer het instrument afstelmogelijkheden heeft, kan een engineer bijvoorbeeld een nulwaarde, span, offset of andere parameter corrigeren. Daarna wordt opnieuw gemeten om te controleren of de afwijking is verminderd. Kalibratie en afstelling zijn daarom nauw met elkaar verbonden, maar niet hetzelfde: een kalibratie brengt de afwijking in kaart, terwijl afstellen bedoeld is om die afwijking te corrigeren.\r\n<h2>Kalibreren tijdens service en onderhoud</h2>\r\nKalibraties worden uitgevoerd tijdens periodiek onderhoud, na vervanging van een sensor, na reparaties of wanneer meetwaarden twijfelachtig zijn. Ook tijdens installatie en commissioning kan kalibratie nodig zijn voordat een machine of procesinstallatie correct kan functioneren.\r\n\r\nTechnische kennis van meet- en regeltechniek, elektrotechniek en instrumentatie is hierbij belangrijk. Engineers moeten meetbereiken, toleranties en signalen kunnen interpreteren en veilig met kalibratieapparatuur kunnen werken. Daarnaast is correcte documentatie belangrijk, omdat meetresultaten en uitgevoerde correcties vaak moeten worden vastgelegd.\r\n\r\nKalibratie en calibratie zijn belangrijke onderdelen van verschillende field service vacatures van The Field Service Company. Kandidaten die graag nauwkeurig werken aan meetinstrumenten, sensoren en regelsystemen kunnen via deze functie-inhoud gericht field service vacatures vinden waarin kalibreren, calibreren en technische metingen onderdeel van het dagelijkse werk zijn.",
+          "taxonomy": "functie-inhoud",
+          "parent": 0,
+          "term_taxonomy_id": 459,
+          "term_group": 0,
+          "count": 0,
+          "object_id": null,
+          "term_order": "0",
+          "id": 459
+        }
+      ],
+      "pods_archive_title": "",
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functie-inhoud/680",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functie-inhoud"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_functie-inhoud"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_functie-inhoud=680"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 681,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/functie-inhoud/leidinggeven/",
+      "name": "Leidinggeven",
+      "slug": "leidinggeven",
+      "taxonomy": "beroep_functie-inhoud",
+      "parent": 0,
+      "meta": [],
+      "intro_taxonomy": "",
+      "relationship_vacature_button_url": false,
+      "relationship_functie-inhoud": [
+        {
+          "pods_archive_title": "Field service vacatures met functie-inhoud Leidinggeven",
+          "term_id": 263,
+          "name": "Leidinggeven",
+          "slug": "leidinggeven",
+          "description": "<h2>Leidinggeven binnen field service</h2>\r\nLeidinggeven binnen field service betekent dat een ervaren engineer, supervisor of technisch verantwoordelijke werkzaamheden op locatie coördineert en andere engineers of monteurs technisch aanstuurt. De termen leidinggeven, aansturen, begeleiden, supervisie en technisch leiderschap worden hierbij vaak in vergelijkbare context gebruikt. Het gaat niet alleen om personele verantwoordelijkheid, maar vooral om zorgen dat werkzaamheden veilig, technisch correct en volgens planning worden uitgevoerd.\r\n\r\nLeidinggevende taken komen veel voor tijdens installaties, commissioning, onderhoudsstops, grote reparaties en complexe storingen. Een lead engineer of supervisor kan bijvoorbeeld bepalen hoe werkzaamheden worden verdeeld, welke engineer aan een bepaald systeem werkt en in welke volgorde testen of werkzaamheden worden uitgevoerd.\r\n<h2>Engineers en werkzaamheden aansturen</h2>\r\nBinnen machinebouw en industriële service kan een leidinggevende engineer teams begeleiden die werken aan productielijnen, robotsystemen, energie-installaties, aandrijfsystemen, procesapparatuur of industriële automatisering. Daarbij blijft de functie vaak sterk technisch. De engineer helpt bij complexe diagnoses, beoordeelt technische beslissingen en ondersteunt collega's wanneer problemen tijdens installatie of commissioning niet direct kunnen worden opgelost.\r\n\r\nOok het coördineren van externe monteurs en onderaannemers kan onderdeel zijn van leidinggeven. Op grotere projecten moet worden afgestemd met projectmanagement, engineering en de technische organisatie van de klant. Daarnaast kan de verantwoordelijke engineer controleren of werkzaamheden volgens tekeningen, procedures en veiligheidsvoorschriften worden uitgevoerd.\r\n<h2>Technisch leiderschap op locatie</h2>\r\nLeidinggeven binnen field service vraagt om overzicht. Een engineer moet niet alleen begrijpen wat technisch moet gebeuren, maar ook kunnen bepalen welke werkzaamheden prioriteit hebben en welke gevolgen vertragingen of technische afwijkingen voor het project hebben. Bij storingen kan een leidinggevende daarnaast fungeren als technisch escalatiepunt voor minder ervaren engineers.\r\n\r\nErvaring met de betreffende machines of installaties is daarom belangrijk. Daarnaast zijn vaardigheden nodig op het gebied van planning, communicatie, probleemoplossing, veiligheidsbewustzijn en het controleren van uitgevoerde werkzaamheden.\r\n\r\nLeidinggeven is een belangrijk onderdeel van verschillende field service vacatures van The Field Service Company. Kandidaten die hun technische ervaring willen combineren met het aansturen en begeleiden van engineers kunnen via deze functie-inhoud gericht field service vacatures vinden waarin leidinggeven, supervisie of technisch leiderschap onderdeel van het werk vormt.",
+          "taxonomy": "functie-inhoud",
+          "parent": 0,
+          "term_taxonomy_id": 263,
+          "term_group": 0,
+          "count": 14,
+          "object_id": null,
+          "term_order": "0",
+          "id": 263
+        }
+      ],
+      "pods_archive_title": "",
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functie-inhoud/681",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functie-inhoud"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_functie-inhoud"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_functie-inhoud=681"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 682,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/functie-inhoud/maintenance/",
+      "name": "Maintenance",
+      "slug": "maintenance",
+      "taxonomy": "beroep_functie-inhoud",
+      "parent": 0,
+      "meta": [],
+      "intro_taxonomy": "",
+      "relationship_vacature_button_url": false,
+      "relationship_functie-inhoud": [
+        {
+          "pods_archive_title": "Field service vacatures met functie-inhoud Maintenance",
+          "term_id": 497,
+          "name": "Maintenance",
+          "slug": "maintenance",
+          "description": "<h2>Maintenance als onderdeel van field service</h2>\r\nMaintenance binnen field service is de Engelse term voor onderhoud aan machines, installaties en technische systemen op locatie bij de klant. In internationale technische organisaties worden maintenance, preventive maintenance, corrective maintenance en equipment maintenance vaak gebruikt naast Nederlandse termen als onderhoud, preventief onderhoud en correctief onderhoud. Binnen field service gaat het om het in goede technische conditie houden van apparatuur en het beperken van ongeplande stilstand.\r\n\r\nMaintenance kan gepland of ongepland plaatsvinden. Bij preventief onderhoud worden machines volgens een vast onderhoudsschema geïnspecteerd, gereinigd, gesmeerd en gecontroleerd. Slijtdelen kunnen worden vervangen voordat ze defect raken. Corrective maintenance of breakdown maintenance vindt juist plaats nadat een storing of technisch defect is ontstaan.\r\n<h2>Preventive en corrective maintenance</h2>\r\nDe precieze maintenance-werkzaamheden hangen af van het type installatie. Bij productiemachines kunnen engineers lagers, geleidingen, riemen, koppelingen, afdichtingen en aandrijvingen controleren. Bij elektrische en geautomatiseerde systemen gaat het bijvoorbeeld om motoren, sensoren, bekabeling, schakelkasten, frequentieregelaars en PLC-gerelateerde componenten.\r\n\r\nMaintenance komt voor aan onder andere CNC-machines, verpakkingslijnen, transportsystemen, pompen, compressoren, robots, procesapparatuur en complete geautomatiseerde productielijnen. Tijdens grotere onderhoudsstops kunnen onderdelen worden gedemonteerd, geïnspecteerd, vervangen en opnieuw gemonteerd. Daarna wordt de installatie getest voordat deze weer in productie gaat.\r\n<h2>Conditie beoordelen en storingen voorkomen</h2>\r\nTijdens maintenance kijkt een engineer niet alleen naar werkzaamheden die volgens het onderhoudsschema moeten worden uitgevoerd. Ook de algemene conditie van de installatie wordt beoordeeld. Afwijkende trillingen, lekkages, speling, beschadigde bekabeling, temperatuurverschillen of ongebruikelijke slijtage kunnen aanleiding zijn voor verdere diagnose of aanvullende reparaties.\r\n\r\nDaarvoor zijn technisch inzicht en kennis van mechanica, elektrotechniek, mechatronica of industriële automatisering belangrijk. Ook het interpreteren van onderhoudsdocumentatie, elektrische schema’s, meetwaarden en servicerapporten hoort vaak bij maintenancewerk.\r\n\r\nMaintenance is een belangrijk onderdeel van veel field service vacatures van The Field Service Company. Kandidaten die specifiek zoeken naar preventive maintenance, corrective maintenance of technisch onderhoud bij klanten kunnen via deze functie-inhoud gericht field service vacatures vinden waarin maintenance een belangrijk deel van het dagelijkse werk vormt.",
+          "taxonomy": "functie-inhoud",
+          "parent": 0,
+          "term_taxonomy_id": 497,
+          "term_group": 0,
+          "count": 0,
+          "object_id": null,
+          "term_order": "0",
+          "id": 497
+        }
+      ],
+      "pods_archive_title": "",
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functie-inhoud/682",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functie-inhoud"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_functie-inhoud"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_functie-inhoud=682"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 683,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/functie-inhoud/modificaties/",
+      "name": "Modificaties",
+      "slug": "modificaties",
+      "taxonomy": "beroep_functie-inhoud",
+      "parent": 0,
+      "meta": [],
+      "intro_taxonomy": "",
+      "relationship_vacature_button_url": false,
+      "relationship_functie-inhoud": [
+        {
+          "pods_archive_title": "Field service vacatures met functie-inhoud Modificaties",
+          "term_id": 460,
+          "name": "Modificaties",
+          "slug": "modificaties",
+          "description": "<h2>Modificaties aan machines binnen field service</h2>\r\nModificaties binnen field service zijn technische wijzigingen aan bestaande machines, installaties of systemen. Dat kan gaan om een relatief kleine aanpassing, maar ook om een uitgebreide ombouw, upgrade of retrofit. Het doel is meestal om functionaliteit te verbeteren, verouderde componenten te vervangen, de betrouwbaarheid te verhogen of een machine geschikt te maken voor nieuwe productie-eisen.\r\n\r\nModificeren komt veel voor bij machines die al langere tijd in bedrijf zijn. Denk aan CNC-machines, verpakkingslijnen, productiemachines, robotsystemen, procesinstallaties of geautomatiseerde transportsystemen. Een engineer kan bijvoorbeeld een aandrijving vervangen, nieuwe sensoren toevoegen, een besturingscomponent aanpassen of een bestaand systeem uitbreiden met extra functies.\r\n<h2>Ombouwen, upgraden en opnieuw instellen</h2>\r\nBij een mechanische modificatie kunnen constructiedelen, geleidingen, aandrijvingen of machineonderdelen worden aangepast of vervangen. Elektrotechnische modificaties kunnen betrekking hebben op schakelkasten, bekabeling, motoren, frequentieregelaars of veiligheidscomponenten. Bij geautomatiseerde installaties horen ook softwarewijzigingen, PLC-aanpassingen, nieuwe I/O-signalen en wijzigingen in HMI-schermen tot de mogelijkheden.\r\n\r\nEen retrofit gaat vaak verder dan een gewone reparatie. Daarbij wordt een bestaand systeem gedeeltelijk gemoderniseerd, bijvoorbeeld door verouderde elektronica, besturingen of aandrijftechniek te vervangen terwijl de rest van de machine behouden blijft. Ook upgrades vallen onder modificaties wanneer bestaande apparatuur nieuwe functionaliteit krijgt.\r\n<h2>Testen na een technische wijziging</h2>\r\nNa modificatiewerkzaamheden moet de engineer controleren of de aangepaste installatie correct en veilig functioneert. Dat kan betekenen dat aansluitingen worden gecontroleerd, softwareparameters opnieuw worden ingesteld en complete machinefuncties worden getest. Bij grotere aanpassingen kan daarna opnieuw een gedeeltelijke commissioning of inbedrijfstelling nodig zijn.\r\n\r\nTechnische kennis van mechanica, elektrotechniek, mechatronica en industriële automatisering is hierbij vaak belangrijk. Engineers moeten bestaande schema’s en tekeningen kunnen begrijpen en tegelijk kunnen beoordelen hoe een wijziging invloed heeft op andere onderdelen van de machine.\r\n\r\nModificaties zijn een belangrijk onderdeel van veel field service vacatures van The Field Service Company. Kandidaten die graag bestaande machines aanpassen, ombouwen, upgraden of moderniseren, kunnen via deze functie-inhoud gericht field service vacatures vinden waarin modificatie-, retrofit- en upgradeprojecten onderdeel van het werk vormen.",
+          "taxonomy": "functie-inhoud",
+          "parent": 0,
+          "term_taxonomy_id": 460,
+          "term_group": 0,
+          "count": 0,
+          "object_id": null,
+          "term_order": "0",
+          "id": 460
+        }
+      ],
+      "pods_archive_title": "",
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functie-inhoud/683",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functie-inhoud"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_functie-inhoud"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_functie-inhoud=683"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 684,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/functie-inhoud/onderhoud/",
+      "name": "Onderhoud",
+      "slug": "onderhoud",
+      "taxonomy": "beroep_functie-inhoud",
+      "parent": 0,
+      "meta": [],
+      "intro_taxonomy": "",
+      "relationship_vacature_button_url": false,
+      "relationship_functie-inhoud": [
+        {
+          "pods_archive_title": "Field service vacatures met functie-inhoud Onderhoud",
+          "term_id": 221,
+          "name": "Onderhoud",
+          "slug": "onderhoud",
+          "description": "<h2>Onderhoud als onderdeel van field service</h2>\r\nOnderhoud binnen field service betekent het technisch verzorgen van machines en installaties op locatie bij de klant om storingen te voorkomen, slijtage te beheersen en de installatie betrouwbaar te laten functioneren. Daarbij kan het gaan om preventief onderhoud, periodiek onderhoud, correctief onderhoud, gepland onderhoud of onderhoud na een storing. Afhankelijk van de functie voert een field service engineer één of meerdere van deze onderhoudsvormen uit.\r\n\r\nPreventief onderhoud wordt uitgevoerd voordat een storing ontstaat. De engineer controleert onderdelen volgens een onderhoudsschema, vervangt slijtdelen en beoordeelt of componenten nog in goede technische staat verkeren. Correctief onderhoud vindt juist plaats wanneer een storing of defect al aanwezig is en herstel nodig is.\r\n<h2>Inspecteren, vervangen en afstellen</h2>\r\nOnderhoudswerkzaamheden kunnen bestaan uit inspecteren, reinigen, smeren, afstellen, meten en vervangen van onderdelen. Bij mechanische machines kan het bijvoorbeeld gaan om lagers, riemen, koppelingen, afdichtingen, geleidingen of aandrijvingen. Bij elektrische en geautomatiseerde installaties kunnen motoren, sensoren, schakelaars, bekabeling, frequentieregelaars en besturingscomponenten worden gecontroleerd.\r\n\r\nField service engineers werken aan uiteenlopende systemen, zoals productielijnen, verpakkingsmachines, CNC-machines, compressoren, generatoren, pompen, robots, procesinstallaties en roterende apparatuur. Bij grotere machines kan onderhoud ook bestaan uit demontage, inspectie en revisie van complete componenten voordat deze opnieuw worden gemonteerd en getest.\r\n<h2>Onderhoud combineren met diagnose</h2>\r\nTijdens een onderhoudsbeurt kunnen technische afwijkingen zichtbaar worden die nog geen storing veroorzaken. Denk aan speling, lekkage, afwijkende trillingen, verhoogde temperatuur of beschadigde bekabeling. De engineer beoordeelt vervolgens of direct ingrijpen nodig is of dat een reparatie tijdens een volgende onderhoudsstop kan worden gepland.\r\n\r\nDaarvoor zijn technisch inzicht en kennis van mechanica, elektrotechniek, mechatronica of industriële automatisering belangrijk. Ook het lezen van onderhoudsdocumentatie, elektrische schema’s en servicemanuals hoort vaak bij het werk.\r\n\r\nOnderhoud is een belangrijk onderdeel van veel field service vacatures van The Field Service Company. Kandidaten die graag machines onderhouden, inspecteren en technisch in goede conditie houden, kunnen via deze functie-inhoud gericht field service vacatures vinden waarin preventief, periodiek of correctief onderhoud een belangrijk deel van het dagelijkse werk vormt.",
+          "taxonomy": "functie-inhoud",
+          "parent": 0,
+          "term_taxonomy_id": 221,
+          "term_group": 0,
+          "count": 45,
+          "object_id": null,
+          "term_order": "0",
+          "id": 221
+        }
+      ],
+      "pods_archive_title": "",
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functie-inhoud/684",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functie-inhoud"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_functie-inhoud"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_functie-inhoud=684"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 685,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/functie-inhoud/overhalen/",
+      "name": "Overhalen",
+      "slug": "overhalen",
+      "taxonomy": "beroep_functie-inhoud",
+      "parent": 0,
+      "meta": [],
+      "intro_taxonomy": "",
+      "relationship_vacature_button_url": false,
+      "relationship_functie-inhoud": [
+        {
+          "pods_archive_title": "Field service vacatures met functie-inhoud Overhalen",
+          "term_id": 499,
+          "name": "Overhalen",
+          "slug": "overhalen",
+          "description": "<h2>Overhalen als onderdeel van field service</h2>\r\nOverhalen binnen field service betekent het uitgebreid demonteren, inspecteren, herstellen en opnieuw opbouwen van machines, installaties of technische componenten. In technische en internationale omgevingen worden hiervoor ook termen gebruikt als overhaul, overhauling, revisie, rebuild en groot onderhoud. De werkzaamheden gaan verder dan regulier onderhoud of een eenvoudige reparatie, omdat een systeem tijdens een overhaul vaak grotendeels uit elkaar wordt genomen en technisch opnieuw wordt beoordeeld.\r\n\r\nOverhalen komt veel voor bij roterende en zwaarbelaste apparatuur. Denk aan pompen, compressoren, turbines, generatoren, tandwielkasten, elektromotoren, aandrijvingen, ventilatoren en andere rotating equipment. Ook delen van productie- en procesinstallaties kunnen tijdens een geplande onderhoudsstop worden overhaald.\r\n<h2>Demonteren, inspecteren en herstellen</h2>\r\nEen overhaul begint meestal met het veilig buiten bedrijf stellen en demonteren van de installatie. Componenten worden vervolgens gereinigd en gecontroleerd op slijtage, beschadiging, corrosie, vervorming en maatvoering. Assen, lagers, afdichtingen, impellers, slijtringen, koppelingen en andere onderdelen kunnen daarbij afzonderlijk worden beoordeeld.\r\n\r\nVersleten of beschadigde onderdelen worden vervangen, hersteld of opnieuw bewerkt. Afhankelijk van de installatie kunnen werkzaamheden bestaan uit machining, vervangen van lagers en seals, dynamisch balanceren en opnieuw uitlijnen van assen en aandrijvingen. Daarna wordt het systeem volgens technische specificaties opnieuw gemonteerd.\r\n<h2>Testen na een overhaul</h2>\r\nNa het overhalen moet worden vastgesteld of de machine opnieuw correct functioneert. Daarbij kunnen bijvoorbeeld uitlijning, trillingen, temperatuur, druk, lekkage en andere bedrijfswaarden worden gecontroleerd. Bij complete machines kan een functionele test of gedeeltelijke inbedrijfstelling volgen voordat de installatie weer wordt vrijgegeven voor productie.\r\n\r\nOverhalen vraagt vooral om sterke mechanische kennis, nauwkeurig meten en inzicht in toleranties, lageringen, afdichtingen en uitlijning. Afhankelijk van de apparatuur kunnen ook hydrauliek, elektrotechniek, instrumentatie en conditiebewaking belangrijk zijn.\r\n\r\nOverhalen is een belangrijk onderdeel van verschillende field service vacatures van The Field Service Company. Kandidaten die graag machines grondig demonteren, technisch beoordelen en opnieuw opbouwen, kunnen via deze functie-inhoud gericht field service vacatures vinden waarin overhaul, overhauling, revisie en groot onderhoud onderdeel van het werk vormen.",
+          "taxonomy": "functie-inhoud",
+          "parent": 0,
+          "term_taxonomy_id": 499,
+          "term_group": 0,
+          "count": 0,
+          "object_id": null,
+          "term_order": "0",
+          "id": 499
+        }
+      ],
+      "pods_archive_title": "",
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functie-inhoud/685",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functie-inhoud"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_functie-inhoud"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_functie-inhoud=685"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 686,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/functie-inhoud/planning/",
+      "name": "Planning",
+      "slug": "planning",
+      "taxonomy": "beroep_functie-inhoud",
+      "parent": 0,
+      "meta": [],
+      "intro_taxonomy": "",
+      "relationship_vacature_button_url": false,
+      "relationship_functie-inhoud": [
+        {
+          "pods_archive_title": "Field service vacatures met functie-inhoud Planning",
+          "term_id": 350,
+          "name": "Planning",
+          "slug": "planning",
+          "description": "<h2>Planning als onderdeel van field service</h2>\r\nPlanning binnen field service betekent het voorbereiden, afstemmen en organiseren van technische werkzaamheden op locatie bij de klant. Dat kan gaan om serviceplanning, werkplanning, onderhoudsplanning, projectplanning of het plannen van installaties en inbedrijfstellingen. Een goede planning zorgt ervoor dat engineers, onderdelen, gereedschappen en technische documentatie op het juiste moment beschikbaar zijn.\r\n\r\nBinnen field service komt planning voor bij zowel korte servicebezoeken als grotere technische projecten. Denk aan preventief onderhoud, storingsbezoeken, machine-installaties, commissioning, modificaties of revisies. Bij complexe werkzaamheden kan een planning meerdere dagen of weken beslaan en moeten verschillende technische disciplines na elkaar of juist gelijktijdig worden ingezet.\r\n<h2>Werkzaamheden en middelen op elkaar afstemmen</h2>\r\nEen field service engineer of supervisor kan vooraf bepalen welke werkzaamheden moeten worden uitgevoerd, hoeveel tijd daarvoor nodig is en welke middelen nodig zijn. Daarbij wordt gekeken naar technische tekeningen, onderhoudshistorie, foutmeldingen, onderdelenlijsten en informatie van de klant.\r\n\r\nOok de beschikbaarheid van reserveonderdelen, meetapparatuur, hijsmiddelen, specialistisch gereedschap en externe monteurs kan onderdeel zijn van de planning. Bij internationale projecten spelen daarnaast reistijd, transport, toegang tot de locatie en lokale veiligheidsprocedures een rol.\r\n\r\nTijdens onderhoudsstops is planning extra belangrijk. Machines of complete productielijnen mogen vaak maar beperkte tijd buiten bedrijf zijn. Werkzaamheden moeten dan in een logische volgorde worden uitgevoerd, bijvoorbeeld eerst demontage en inspectie, daarna reparatie of vervanging en tenslotte montage, testen en inbedrijfstelling.\r\n<h2>Planning aanpassen tijdens het werk</h2>\r\nIn de praktijk verandert een technische planning regelmatig. Tijdens een inspectie kan extra slijtage worden ontdekt, een onderdeel kan later beschikbaar zijn of een storing kan complexer blijken dan vooraf verwacht. Engineers moeten dan kunnen beoordelen welke werkzaamheden prioriteit hebben en welke gevolgen wijzigingen hebben voor de rest van het project.\r\n\r\nTechnisch inzicht is hierbij belangrijk, omdat een goede planning alleen mogelijk is wanneer iemand begrijpt hoe werkzaamheden technisch met elkaar samenhangen. Daarnaast zijn overzicht, communicatie, documentatie en het kunnen inschatten van benodigde tijd belangrijke vaardigheden.\r\n\r\nPlanning is een belangrijk onderdeel van veel field service vacatures van The Field Service Company. Kandidaten die techniek graag combineren met organiseren, coördineren en voorbereiden kunnen via deze functie-inhoud gericht field service vacatures vinden waarin serviceplanning, werkplanning of projectplanning onderdeel van het werk vormt.",
+          "taxonomy": "functie-inhoud",
+          "parent": 0,
+          "term_taxonomy_id": 350,
+          "term_group": 0,
+          "count": 14,
+          "object_id": null,
+          "term_order": "0",
+          "id": 350
+        }
+      ],
+      "pods_archive_title": "",
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functie-inhoud/686",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functie-inhoud"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_functie-inhoud"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_functie-inhoud=686"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 687,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/functie-inhoud/plc-analyse/",
+      "name": "PLC Analyse",
+      "slug": "plc-analyse",
+      "taxonomy": "beroep_functie-inhoud",
+      "parent": 0,
+      "meta": [],
+      "intro_taxonomy": "",
+      "relationship_vacature_button_url": false,
+      "relationship_functie-inhoud": [
+        {
+          "pods_archive_title": "Field service vacatures met functie-inhoud PLC Analyse",
+          "term_id": 224,
+          "name": "PLC Analyse",
+          "slug": "plc-analyse",
+          "description": "<h2>PLC Analyse als onderdeel van field service</h2>\r\nPLC Analyse binnen field service betekent het onderzoeken van de besturing van een machine of installatie om storingen, afwijkingen en onverwacht gedrag te verklaren. Daarbij worden ook termen gebruikt als PLC-diagnose, PLC troubleshooting, storingsanalyse en besturingsanalyse. De engineer kijkt niet alleen naar de fysieke machine, maar onderzoekt ook welke signalen de PLC ontvangt, welke logica wordt uitgevoerd en waarom bepaalde uitgangen, bewegingen of processtappen wel of niet worden aangestuurd.\r\n\r\nPLC Analyse komt veel voor bij geautomatiseerde productielijnen, verpakkingsmachines, transportsystemen, robots, procesinstallaties, assemblagemachines en andere industriële automatisering. Het speelt vooral een rol bij storingen die niet direct mechanisch of elektrisch zichtbaar zijn.\r\n<h2>Signalen en programmaverloop analyseren</h2>\r\nTijdens een PLC-diagnose kan een engineer online meekijken in het PLC-programma en controleren welke ingangen en uitgangen actief zijn. Een sensor kan bijvoorbeeld fysiek correct functioneren, terwijl het signaal niet bij de besturing aankomt. Andersom kan de PLC een uitgang aansturen terwijl een motor, klep of actuator niet reageert.\r\n\r\nOok interlocks, timers, tellers, alarmen en sequenties worden onderzocht. Door het programmaverloop stap voor stap te volgen kan worden vastgesteld waarom een machinecyclus stopt of een bepaalde functie niet wordt vrijgegeven. Daarbij worden vaak elektrische schema’s, I/O-lijsten, foutmeldingen en HMI-informatie gecombineerd.\r\n<h2>Van PLC-storing naar technische oorzaak</h2>\r\nEen PLC Analyse betekent niet automatisch dat het probleem in de software zit. De besturing wordt juist gebruikt als hulpmiddel om het complete systeem te begrijpen. Een fout kan uiteindelijk worden veroorzaakt door een defecte sensor, kabelbreuk, frequentieregelaar, veiligheidscircuit, pneumatische component of verkeerde machine-instelling.\r\n\r\nVoor deze werkzaamheden zijn kennis van industriële automatisering, elektrotechniek en PLC-logica belangrijk. Engineers moeten ladderdiagrammen, functionele blokken of andere programmeerstructuren kunnen interpreteren en begrijpen hoe PLC’s samenwerken met HMI’s, aandrijvingen, sensoren en industriële netwerken.\r\n\r\nPLC Analyse is een belangrijk onderdeel van verschillende field service vacatures van The Field Service Company. Kandidaten die graag storingen onderzoeken vanuit de besturing kunnen via deze functie-inhoud gericht field service vacatures vinden waarin PLC-diagnose, troubleshooting en analyse van industriële automatisering onderdeel van het werk vormen.",
+          "taxonomy": "functie-inhoud",
+          "parent": 0,
+          "term_taxonomy_id": 224,
+          "term_group": 0,
+          "count": 17,
+          "object_id": null,
+          "term_order": "0",
+          "id": 224
+        }
+      ],
+      "pods_archive_title": "",
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functie-inhoud/687",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functie-inhoud"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_functie-inhoud"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_functie-inhoud=687"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 688,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/functie-inhoud/plc-programmeren/",
+      "name": "PLC Programmeren",
+      "slug": "plc-programmeren",
+      "taxonomy": "beroep_functie-inhoud",
+      "parent": 0,
+      "meta": [],
+      "intro_taxonomy": "",
+      "relationship_vacature_button_url": false,
+      "relationship_functie-inhoud": [
+        {
+          "pods_archive_title": "Field service vacatures met functie-inhoud PLC Programmeren",
+          "term_id": 498,
+          "name": "PLC Programmeren",
+          "slug": "plc-programmeren",
+          "description": "<h2>PLC Programmeren als onderdeel van field service</h2>\r\nPLC Programmeren binnen field service betekent het ontwikkelen, aanpassen en testen van besturingssoftware voor machines en industriële installaties op locatie bij de klant. Naast PLC-programmering worden ook termen gebruikt als PLC programming, besturingssoftware aanpassen, softwaremodificatie en programmeren van industriële automatisering. Het werk komt vooral voor bij geautomatiseerde machines waarbij de PLC bewegingen, processen en veiligheidsvoorwaarden aanstuurt.\r\n\r\nIn field service kan PLC-software worden aangepast tijdens installatie, commissioning, storingzoeken, een retrofit of uitbreiding van een bestaande machine. Dat kan gaan om productielijnen, verpakkingsmachines, transportsystemen, robots, procesinstallaties, aandrijfsystemen of andere geautomatiseerde apparatuur.\r\n<h2>Veelgebruikte PLC-platformen</h2>\r\nBinnen field service wordt met uiteenlopende PLC-platformen en programmeeromgevingen gewerkt. Veelvoorkomende voorbeelden zijn:\r\n<ul>\r\n \t<li>Siemens – SIMATIC S7-1200, S7-1500 en TIA Portal</li>\r\n \t<li>Rockwell Automation / Allen-Bradley – CompactLogix, ControlLogix en Studio 5000</li>\r\n \t<li>Schneider Electric – Modicon-platformen</li>\r\n \t<li>Beckhoff – TwinCAT en PC-based control</li>\r\n \t<li>Mitsubishi Electric – MELSEC-platformen</li>\r\n \t<li>Omron – NX- en NJ-series met Sysmac Studio</li>\r\n \t<li>ABB – AC500</li>\r\n \t<li>B&amp;R – Automation Studio</li>\r\n \t<li>Bosch Rexroth – ctrlX AUTOMATION</li>\r\n \t<li>WAGO – onder andere CODESYS-gebaseerde controllers</li>\r\n \t<li>Phoenix Contact – PLCnext</li>\r\n \t<li>CODESYS – als programmeerplatform bij verschillende fabrikanten</li>\r\n</ul>\r\nWelke omgeving wordt gebruikt, hangt af van de machinebouwer, sector, bestaande installatie en technische standaard van de eindklant.\r\n<h2>Logica aanpassen en functies testen</h2>\r\nPLC-programmeren kan bestaan uit het schrijven of wijzigen van logica voor machinefuncties, sequenties, interlocks, timers, tellers en alarmen. Afhankelijk van het platform wordt gewerkt met programmeertalen zoals Ladder Diagram, Function Block Diagram en Structured Text.\r\n\r\nTijdens commissioning kunnen bijvoorbeeld nieuwe sensoren, actuatoren, frequentieregelaars of servoaandrijvingen in de besturing worden opgenomen. Ook communicatie via industriële netwerken en koppelingen met HMI-, SCADA- of externe systemen kunnen onderdeel van het werk zijn.\r\n\r\nNa een softwarewijziging moet worden gecontroleerd of de aanpassing technisch correct functioneert. Daarbij speelt de interactie tussen software, elektrische componenten en mechanische bewegingen een belangrijke rol.\r\n\r\nPLC Programmeren is een belangrijk onderdeel van verschillende field service vacatures van The Field Service Company. Kandidaten die graag besturingssoftware ontwikkelen, wijzigen en testen kunnen via deze functie-inhoud gericht field service vacatures vinden waarin PLC-programmering en industriële automatisering onderdeel van het werk vormen.",
+          "taxonomy": "functie-inhoud",
+          "parent": 0,
+          "term_taxonomy_id": 498,
+          "term_group": 0,
+          "count": 0,
+          "object_id": null,
+          "term_order": "0",
+          "id": 498
+        }
+      ],
+      "pods_archive_title": "",
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functie-inhoud/688",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functie-inhoud"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_functie-inhoud"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_functie-inhoud=688"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 689,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/functie-inhoud/programmeren/",
+      "name": "Programmeren",
+      "slug": "programmeren",
+      "taxonomy": "beroep_functie-inhoud",
+      "parent": 0,
+      "meta": [],
+      "intro_taxonomy": "",
+      "relationship_vacature_button_url": false,
+      "relationship_functie-inhoud": [
+        {
+          "pods_archive_title": "Field service vacatures met functie-inhoud Programmeren",
+          "term_id": 223,
+          "name": "Programmeren",
+          "slug": "programmeren",
+          "description": "<h2>Programmeren als onderdeel van field service</h2>\r\nProgrammeren binnen field service is breder dan alleen PLC-programmering. Moderne machines en industriële installaties bevatten vaak meerdere programmeerbare systemen die samen de besturing, bediening, beweging en procesbewaking verzorgen. Tijdens installatie, commissioning, modificaties en storingen kan software worden ontwikkeld, aangepast, geconfigureerd of opnieuw getest.\r\n\r\nHet kan daarbij gaan om productielijnen, verpakkingsmachines, robots, CNC-machines, transportsystemen, procesinstallaties, assemblagemachines en andere geautomatiseerde systemen. Programmeren vindt zowel bij nieuwe machines als bij bestaande installaties plaats, bijvoorbeeld wanneer functionaliteit wordt uitgebreid of verouderde besturingstechniek wordt vervangen.\r\n<h2>Wat kan er worden geprogrammeerd?</h2>\r\nBinnen industriële field service kunnen verschillende systemen programmeerbaar zijn, waaronder:\r\n<ul>\r\n \t<li>PLC’s en industriële controllers voor machine- en procesbesturing;</li>\r\n \t<li>HMI-panelen voor bediening, instellingen, alarmen en diagnose;</li>\r\n \t<li>SCADA-systemen voor visualisatie, monitoring en procesgegevens;</li>\r\n \t<li>robotcontrollers voor bewegingen, trajecten, handling en productiecycli;</li>\r\n \t<li>motion controllers voor positionering en gesynchroniseerde bewegingen;</li>\r\n \t<li>servo- en aandrijfsystemen voor snelheid, positie en koppel;</li>\r\n \t<li>CNC-besturingen voor geautomatiseerde machinebewegingen;</li>\r\n \t<li>veiligheidscontrollers voor programmeerbare veiligheidsfuncties;</li>\r\n \t<li>vision-systemen voor inspectie, positionering en productherkenning;</li>\r\n \t<li>communicatie tussen machines, databases, MES-systemen en andere industriële systemen.</li>\r\n</ul>\r\nDe werkzaamheden kunnen variëren van het aanpassen van enkele parameters tot het wijzigen van complete machinecycli of softwarefuncties.\r\n<h2>Programmeren tijdens commissioning en service</h2>\r\nTijdens commissioning kunnen bijvoorbeeld I/O-signalen worden gekoppeld, machinebewegingen worden ingesteld, HMI-schermen worden aangepast en processequenties worden getest. Bij een modificatie kan nieuwe apparatuur in bestaande software worden geïntegreerd. Tijdens troubleshooting kan analyse van de programmatuur nodig zijn om te bepalen waarom een machine niet de verwachte stap uitvoert.\r\n\r\nAfhankelijk van het systeem wordt gewerkt met onder andere Ladder Diagram, Function Block Diagram, Structured Text, scripts, robotprogramma’s en specifieke programmeer- of configuratieomgevingen. Naast programmeerkennis is inzicht in elektrotechniek, automatisering, sensoren, industriële communicatie en de werking van de machine belangrijk. Software en fysieke techniek beïnvloeden elkaar immers voortdurend.\r\n\r\nProgrammeren is een belangrijk onderdeel van verschillende field service vacatures van The Field Service Company. Kandidaten die graag software, besturing en industriële techniek combineren, kunnen via deze functie-inhoud gericht field service vacatures vinden waarin programmeren een belangrijk onderdeel van het werk vormt.",
+          "taxonomy": "functie-inhoud",
+          "parent": 0,
+          "term_taxonomy_id": 223,
+          "term_group": 0,
+          "count": 5,
+          "object_id": null,
+          "term_order": "0",
+          "id": 223
+        }
+      ],
+      "pods_archive_title": "",
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functie-inhoud/689",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functie-inhoud"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_functie-inhoud"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_functie-inhoud=689"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 690,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/functie-inhoud/rapportages/",
+      "name": "Rapportages",
+      "slug": "rapportages",
+      "taxonomy": "beroep_functie-inhoud",
+      "parent": 0,
+      "meta": [],
+      "intro_taxonomy": "",
+      "relationship_vacature_button_url": false,
+      "relationship_functie-inhoud": [
+        {
+          "pods_archive_title": "Field service vacatures met functie-inhoud Rapportages",
+          "term_id": 348,
+          "name": "Rapportages",
+          "slug": "rapportages",
+          "description": "<h2>Rapportages als onderdeel van field service</h2>\r\nRapportages binnen field service zijn technische verslagen waarin wordt vastgelegd wat er op locatie is uitgevoerd, gemeten, vastgesteld en eventueel geadviseerd. Ook termen als servicerapport, serviceverslag, onderhoudsrapport, inspectierapport en werkrapport worden hiervoor gebruikt. Goede rapportage zorgt ervoor dat technische informatie niet alleen mondeling wordt overgedragen, maar ook beschikbaar blijft voor vervolgwerk, onderhoudsplanning en storingsanalyse.\r\n\r\nEen rapportage kan worden gemaakt na onderhoud, een storing, installatie, commissioning, inspectie, kalibratie, modificatie of reparatie. De inhoud verschilt per type werkzaamheden, maar moet vooral duidelijk maken wat de technische situatie was en welke acties zijn uitgevoerd.\r\n<h2>Metingen, storingen en werkzaamheden vastleggen</h2>\r\nBinnen field service kan bijvoorbeeld worden vastgelegd welke storing is gemeld, welke foutcodes aanwezig waren, welke onderdelen zijn gecontroleerd en welke metingen zijn uitgevoerd. Ook vervangen componenten, aangepaste instellingen, softwarewijzigingen en uitgevoerde tests kunnen in het servicerapport worden opgenomen.\r\n\r\nBij onderhoud kan een rapportage informatie bevatten over slijtage, lekkage, speling, vervuiling, trillingen of andere afwijkingen. Bij commissioning kunnen testresultaten, instellingen, I/O-controles en openstaande technische punten worden vastgelegd. Bij inspecties en kalibraties kunnen meetwaarden en toleranties belangrijk zijn.\r\n\r\nOok foto’s, serienummers, onderdeelcodes, meetrapporten en opmerkingen van de klant kunnen onderdeel zijn van de documentatie.\r\n<h2>Technische informatie voor vervolgwerk</h2>\r\nEen goede rapportage helpt om later snel te begrijpen wat eerder aan een machine is gedaan. Daardoor kan een terugkerende storing beter worden geanalyseerd en hoeft onderzoek niet telkens opnieuw te beginnen. Rapportages kunnen daarnaast worden gebruikt voor onderhoudshistorie, garantieafhandeling, spare-partsplanning en voorbereiding van toekomstige servicebezoeken.\r\n\r\nTechnische nauwkeurigheid is hierbij belangrijk. Een rapport moet duidelijk onderscheid maken tussen waarnemingen, uitgevoerde werkzaamheden en aanbevelingen. Binnen field service is het daarom belangrijk om technische bevindingen helder en gestructureerd te kunnen vastleggen.\r\n\r\nRapportages zijn een belangrijk onderdeel van veel field service vacatures van The Field Service Company. Kandidaten die zorgvuldig werken en technische bevindingen goed kunnen documenteren, kunnen via deze functie-inhoud gericht field service vacatures vinden waarin servicerapportage, onderhoudsrapporten en technische documentatie onderdeel van het werk vormen.",
+          "taxonomy": "functie-inhoud",
+          "parent": 0,
+          "term_taxonomy_id": 348,
+          "term_group": 0,
+          "count": 29,
+          "object_id": null,
+          "term_order": "0",
+          "id": 348
+        }
+      ],
+      "pods_archive_title": "",
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functie-inhoud/690",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functie-inhoud"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_functie-inhoud"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_functie-inhoud=690"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 691,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/functie-inhoud/reparatie/",
+      "name": "Reparatie",
+      "slug": "reparatie",
+      "taxonomy": "beroep_functie-inhoud",
+      "parent": 0,
+      "meta": [],
+      "intro_taxonomy": "",
+      "relationship_vacature_button_url": false,
+      "relationship_functie-inhoud": [
+        {
+          "pods_archive_title": "Field service vacatures met functie-inhoud Reparatie",
+          "term_id": 225,
+          "name": "Reparatie",
+          "slug": "reparatie",
+          "description": "<h2>Reparatie als onderdeel van field service</h2>\r\nReparatie binnen field service betekent het herstellen van defecte of beschadigde machines, installaties en technische systemen op locatie bij de klant. Ook termen als herstelwerkzaamheden, machineherstel, correctief onderhoud, componentreparatie en repair worden hiervoor gebruikt. Reparaties volgen vaak op een storing of diagnose, maar kunnen ook ontstaan tijdens inspectie of onderhoud wanneer beschadiging of overmatige slijtage wordt vastgesteld.\r\n\r\nBinnen field service kan reparatie plaatsvinden aan productielijnen, CNC-machines, verpakkingsmachines, robots, pompen, compressoren, transportsystemen, procesinstallaties en andere industriële apparatuur. De werkzaamheden kunnen mechanisch, elektrisch, pneumatisch, hydraulisch of besturingstechnisch zijn.\r\n<h2>Onderdelen herstellen of vervangen</h2>\r\nEen reparatie kan relatief eenvoudig zijn, zoals het vervangen van een sensor, lager, relais, afdichting of kabel. Bij complexere storingen kunnen grotere componenten worden gedemonteerd, hersteld of vervangen. Denk aan motoren, aandrijvingen, tandwielkasten, pompen, cilinders, kleppen of besturingscomponenten.\r\n\r\nMechanische reparaties kunnen bestaan uit demonteren, opnieuw uitlijnen, vervangen van slijtdelen of herstellen van beschadigde onderdelen. Bij elektrische systemen kunnen bekabeling, voedingen, schakelaars, motorbesturingen en frequentieregelaars worden gecontroleerd en vervangen. Ook pneumatische en hydraulische systemen kunnen reparaties nodig hebben aan ventielen, leidingen, cilinders en afdichtingen.\r\n<h2>Testen na de reparatie</h2>\r\nNa herstelwerkzaamheden moet worden gecontroleerd of de oorspronkelijke storing daadwerkelijk is verdwenen en of de installatie weer correct functioneert. Daarvoor kunnen elektrische metingen, functietests, druktests, proefbewegingen of complete machinecycli worden uitgevoerd. Bij geautomatiseerde installaties kan daarnaast worden gecontroleerd of sensoren, PLC-signalen en aandrijvingen weer correct samenwerken.\r\n\r\nTechnisch inzicht en storingsdiagnose zijn belangrijk, omdat reparatie meestal pas effectief is wanneer de oorzaak van het defect bekend is. Afhankelijk van de apparatuur zijn kennis van mechanica, elektrotechniek, mechatronica, hydrauliek, pneumatiek en industriële automatisering relevant.\r\n\r\nReparatie is een belangrijk onderdeel van veel field service vacatures van The Field Service Company. Kandidaten die graag storingen herstellen en machines weer technisch bedrijfsklaar maken, kunnen via deze functie-inhoud gericht field service vacatures vinden waarin reparatie, herstelwerkzaamheden en correctief onderhoud een belangrijk onderdeel van het werk vormen.",
+          "taxonomy": "functie-inhoud",
+          "parent": 0,
+          "term_taxonomy_id": 225,
+          "term_group": 0,
+          "count": 42,
+          "object_id": null,
+          "term_order": "0",
+          "id": 225
+        }
+      ],
+      "pods_archive_title": "",
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functie-inhoud/691",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functie-inhoud"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_functie-inhoud"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_functie-inhoud=691"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 692,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/functie-inhoud/revisie/",
+      "name": "Revisie",
+      "slug": "revisie",
+      "taxonomy": "beroep_functie-inhoud",
+      "parent": 0,
+      "meta": [],
+      "intro_taxonomy": "",
+      "relationship_vacature_button_url": false,
+      "relationship_functie-inhoud": [
+        {
+          "pods_archive_title": "Field service vacatures met functie-inhoud Revisie",
+          "term_id": 461,
+          "name": "Revisie",
+          "slug": "revisie",
+          "description": "<h2>Revisie als onderdeel van field service</h2>\r\nRevisie binnen field service betekent het grondig inspecteren, herstellen en opnieuw opbouwen van machines, installaties of technische componenten. Ook termen als overhaul, groot onderhoud, revisiewerk, refurbishment en rebuild worden hiervoor gebruikt. Een revisie gaat doorgaans verder dan een gewone reparatie: onderdelen worden systematisch gedemonteerd, beoordeeld, gereinigd, gemeten en waar nodig hersteld of vervangen.\r\n\r\nRevisiewerk komt voor aan onder andere pompen, compressoren, motoren, tandwielkasten, turbines, aandrijvingen, cilinders, kleppen, spindels en complete machine-units. Ook grotere productiemachines of installatiedelen kunnen tijdens een geplande stilstand geheel of gedeeltelijk worden gereviseerd.\r\n<h2>Demonteren, inspecteren en opnieuw opbouwen</h2>\r\nEen revisie begint meestal met demontage. Onderdelen worden uit de machine gehaald en gecontroleerd op slijtage, beschadiging, vervorming, corrosie of speling. Waar nodig worden toleranties en maatvoering gecontroleerd met meetgereedschap.\r\n\r\nVersleten lagers, afdichtingen, koppelingen, pakkingen, bussen of andere componenten kunnen worden vervangen. Onderdelen die nog bruikbaar zijn kunnen worden gereinigd, nabewerkt of opnieuw afgesteld. Daarna wordt het systeem volgens technische documentatie en voorgeschreven toleranties weer opgebouwd.\r\n\r\nBij complexere revisies kunnen ook elektrische componenten, sensoren, bekabeling, aandrijvingen of besturingselementen worden vernieuwd. Een revisie kan daardoor gecombineerd worden met een retrofit of modernisering.\r\n<h2>Testen na een overhaul</h2>\r\nNa montage moet worden gecontroleerd of het gereviseerde systeem weer correct functioneert. Afhankelijk van de installatie kunnen draairichting, uitlijning, trillingen, temperatuur, druk, lekkage, elektrische waarden en belastingsgedrag worden getest. Bij complete machines kan daarna opnieuw een functionele test of gedeeltelijke inbedrijfstelling nodig zijn.\r\n\r\nVoor revisiewerk zijn nauwkeurigheid, technisch inzicht en kennis van mechanica vaak belangrijk. Afhankelijk van de installatie spelen ook elektrotechniek, hydrauliek, pneumatiek, meet- en regeltechniek en industriële automatisering een rol.\r\n\r\nRevisie is een belangrijk onderdeel van verschillende field service vacatures van The Field Service Company. Kandidaten die graag machines demonteren, technisch beoordelen en volledig opnieuw opbouwen, kunnen via deze functie-inhoud gericht field service vacatures vinden waarin revisie, overhaul en groot onderhoud een belangrijk onderdeel van het werk vormen.",
+          "taxonomy": "functie-inhoud",
+          "parent": 0,
+          "term_taxonomy_id": 461,
+          "term_group": 0,
+          "count": 0,
+          "object_id": null,
+          "term_order": "0",
+          "id": 461
+        }
+      ],
+      "pods_archive_title": "",
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functie-inhoud/692",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functie-inhoud"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_functie-inhoud"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_functie-inhoud=692"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 693,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/functie-inhoud/sales/",
+      "name": "Sales",
+      "slug": "sales",
+      "taxonomy": "beroep_functie-inhoud",
+      "parent": 0,
+      "meta": [],
+      "intro_taxonomy": "",
+      "relationship_vacature_button_url": false,
+      "relationship_functie-inhoud": [
+        {
+          "pods_archive_title": "Field service vacatures met functie-inhoud Sales",
+          "term_id": 349,
+          "name": "Sales",
+          "slug": "sales",
+          "description": "<h2>Technische sales in field service begint bij goed luisteren</h2>\n<p>Sales binnen field service is iets anders dan algemene verkoop. Je staat dicht bij machines, klanten en serviceteams en begrijpt wat een technische organisatie werkelijk nodig heeft. Een klant belt misschien voor een onderdeel, maar tijdens het gesprek blijkt dat gepland onderhoud, een upgrade of extra training een veel betere oplossing is. Door de juiste vragen te stellen verbind je techniek, service en commercie op een geloofwaardige manier.</p>\n<h2>Wat verkoop en adviseer je binnen field service?</h2>\n<p>Afhankelijk van de organisatie gaat het om spare parts, slijtdelen, servicebezoeken, onderhoudscontracten, revisies, inspecties, trainingen, retrofits of complete technische verbeteringen. Je kunt adviseren over de vervanging van verouderde componenten, de beschikbaarheid van reserveonderdelen of maatregelen waarmee een klant stilstand voorkomt. Soms ontstaat een kans tijdens een bezoek op locatie; soms vanuit een servicerapport, storingshistorie of gesprek met maintenance en productie.</p>\n<p>Technische sales komt terug in functies als service engineer, servicecoördinator, parts specialist, accountmanager service en aftersales engineer. Ook een field service engineer kan commerciële kansen herkennen zonder een traditionele verkoper te zijn. Jij ziet de installatie draaien, kent de problemen van de gebruiker en kunt daarom concreet uitleggen welke oplossing waarde toevoegt.</p>\n<h2>Hoe bouw je vertrouwen op bij technische klanten?</h2>\n<p>Goede sales in service draait niet om zoveel mogelijk aanbieden. Je maakt heldere afspraken, belooft alleen wat uitvoerbaar is en zorgt dat de voorgestelde oplossing past bij de machine, planning en het budget van de klant. Daarvoor overleg je met engineering, planning, magazijn, inkoop en servicemonteurs. Je vertaalt technische informatie naar een duidelijk voorstel en blijft betrokken wanneer de opdracht wordt uitgevoerd.</p>\n<p>Commercieel inzicht helpt je kansen herkennen, maar technische nieuwsgierigheid en betrouwbaarheid bepalen of klanten terugkomen. Je moet begrijpen wat productiestilstand kost, waarom onderdelen op tijd beschikbaar moeten zijn en welke risico’s een verouderde installatie oplevert. Zo wordt sales een verlengstuk van professioneel klantadvies.</p>\n<h2>Vind een field service vacature waarin techniek en sales samenkomen</h2>\n<p>Past het bij jou om klanten te adviseren, relaties op te bouwen en vanuit techniek nieuwe mogelijkheden te herkennen? Vergelijk dan per vacature hoeveel tijd je op locatie werkt, welke producten je adviseert en of de nadruk ligt op parts, onderhoud, servicecontracten of upgrades. The Field Service Company koppelt technische sales aan field service vacatures waarin jouw kennis niet alleen machines helpt verbeteren, maar ook duurzame samenwerking en nieuwe serviceomzet creëert.</p>",
+          "taxonomy": "functie-inhoud",
+          "parent": 0,
+          "term_taxonomy_id": 349,
+          "term_group": 0,
+          "count": 3,
+          "object_id": null,
+          "term_order": "0",
+          "id": 349
+        }
+      ],
+      "pods_archive_title": "",
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functie-inhoud/693",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functie-inhoud"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_functie-inhoud"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_functie-inhoud=693"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 694,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/functie-inhoud/storingen/",
+      "name": "Storingen",
+      "slug": "storingen",
+      "taxonomy": "beroep_functie-inhoud",
+      "parent": 0,
+      "meta": [],
+      "intro_taxonomy": "",
+      "relationship_vacature_button_url": false,
+      "relationship_functie-inhoud": [
+        {
+          "pods_archive_title": "Field service vacatures met functie-inhoud Storingen",
+          "term_id": 326,
+          "name": "Storingen",
+          "slug": "storingen",
+          "description": "<h2>Storingen oplossen wanneer iedere minuut telt</h2>\n<p>Een stilstaande machine kan een complete productie, logistieke operatie of technische installatie raken. Bij storingen draait field service daarom om snel reageren, veilig handelen en de klant weer verder helpen. Je verzamelt informatie, reist naar de locatie of start met ondersteuning op afstand en bepaalt wat nodig is om de installatie verantwoord beschikbaar te krijgen. De druk kan hoog zijn, maar juist dat maakt storingswerk voor veel technici aantrekkelijk. Je ziet direct wat jouw vakkennis oplevert: productie komt weer op gang, medewerkers kunnen verder en de klant ervaart dat er echt iemand naast hem staat.</p>\n<h2>Hoe pak je een storing op locatie aan?</h2>\n<p>Een goede voorbereiding begint voordat je vertrekt. Je bekijkt eerdere servicerapporten, foutmeldingen, tekeningen en de configuratie van de machine. Je overlegt met de klant over wat er gebeurde en neemt passende meetmiddelen, gereedschap en mogelijke onderdelen mee. Op locatie controleer je eerst de veiligheid en de actuele situatie. Daarna onderzoek je mechanische, elektrische, softwarematige of procesgerelateerde oorzaken.</p>\n<p>Soms is de oplossing direct zichtbaar: een versleten lager, defecte sensor, losse verbinding of verkeerd ingestelde parameter. In andere gevallen maak je de installatie eerst tijdelijk operationeel en plan je later een duurzame reparatie. Je legt duidelijk uit wat je hebt gevonden, welke risico’s nog bestaan en wat nodig is om herhaling te voorkomen. Daarmee geef je de klant niet alleen een draaiende machine, maar ook vertrouwen.</p>\n<h2>Wat maakt storingsdienst binnen field service uitdagend?</h2>\n<p>Storingen laten zich niet altijd plannen. Afhankelijk van de werkgever kun je deelnemen aan een bereikbaarheidsdienst, vroeg vertrekken of incidenteel langer op locatie blijven. Je moet rustig blijven wanneer operators, productie en management op een oplossing wachten. Tegelijk hoef je het niet alleen te doen: sterke serviceorganisaties bieden ondersteuning vanuit technical support, engineering, onderdelenvoorziening en ervaren collega’s.</p>\n<p>Storingswerk verschilt van uitgebreide troubleshooting. Bij een storing staat de directe uitval en het herstel centraal. Troubleshooting richt zich vaker op een complexe, terugkerende of moeilijk verklaarbare oorzaak. In de praktijk kunnen beide natuurlijk in dezelfde opdracht samenkomen.</p>\n<h2>Vind een field service vacature waarin jij storingen oplost</h2>\n<p>Krijg jij energie van urgentie, techniek en zichtbaar resultaat? Bekijk dan met welke machines je werkt, hoe de storingsdienst is ingericht, welk werkgebied je krijgt en welke ondersteuning beschikbaar is. The Field Service Company koppelt storingen aan vacatures waarin servicemonteurs en field service engineers klanten helpen wanneer techniek onverwacht stilvalt en deskundig optreden het verschil maakt.</p>",
+          "taxonomy": "functie-inhoud",
+          "parent": 0,
+          "term_taxonomy_id": 326,
+          "term_group": 0,
+          "count": 47,
+          "object_id": null,
+          "term_order": "0",
+          "id": 326
+        }
+      ],
+      "pods_archive_title": "",
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functie-inhoud/694",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functie-inhoud"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_functie-inhoud"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_functie-inhoud=694"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 695,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/functie-inhoud/technical-support/",
+      "name": "Technical Support",
+      "slug": "technical-support",
+      "taxonomy": "beroep_functie-inhoud",
+      "parent": 0,
+      "meta": [],
+      "intro_taxonomy": "",
+      "relationship_vacature_button_url": false,
+      "relationship_functie-inhoud": [
+        {
+          "pods_archive_title": "Field service vacatures met functie-inhoud Technical Support",
+          "term_id": 465,
+          "name": "Technical Support",
+          "slug": "technical-support",
+          "description": "<h2>Technical support houdt field service in beweging</h2>\n<p>Achter iedere sterke field service organisatie staat technische ondersteuning die informatie, ervaring en mensen bij elkaar brengt. Als technical support specialist help je klanten en service engineers wanneer een vraag niet met een standaardantwoord kan worden opgelost. Je analyseert meldingen, denkt op afstand mee en zorgt dat de juiste kennis beschikbaar komt voordat kostbare tijd verloren gaat. Daarmee heb je dagelijks invloed op de snelheid en kwaliteit van service, ook wanneer je zelf niet naast de machine staat. Die rol maakt je onmisbaar voor collega’s én klanten.</p>\n<h2>Wat doe je binnen technical support voor machines en installaties?</h2>\n<p>Je ontvangt technische vragen via telefoon, e-mail, servicetickets of een remote verbinding. Eerst bepaal je wat er precies gebeurt: welke foutmelding verschijnt, wanneer ontstond het probleem, wat is al gecontroleerd en welke uitvoering van de machine staat bij de klant? Vervolgens raadpleeg je tekeningen, manuals, stuklijsten, softwareversies, servicerapporten en eerdere oplossingen.</p>\n<p>Veel vragen kun je op afstand oplossen door een engineer of klant stap voor stap door controles en instellingen te begeleiden. Bij complexere problemen schakel je engineering, software, productie of een productspecialist in. Moet iemand naar de klant, dan zorg je voor een goede overdracht met relevante documentatie, mogelijke oorzaken en benodigde onderdelen. Zo vertrekt de field service engineer beter voorbereid.</p>\n<h2>Hoe bouw je technische kennis op en deel je die?</h2>\n<p>Technical support is meer dan reageren op losse vragen. Je herkent patronen in storingen, verbetert instructies en legt oplossingen vast in een kennisbank. Je kunt bijdragen aan servicebulletins, trainingen, FAQ’s en terugkoppeling naar engineering. Wanneer hetzelfde component of softwareprobleem vaker terugkomt, help je de organisatie van incidentbestrijding naar structurele verbetering.</p>\n<p>Daarvoor heb je brede technische kennis en sterke communicatie nodig. Je moet ingewikkelde informatie duidelijk kunnen uitleggen aan een ervaren engineer én aan een klant die de machine minder goed kent. Rust, logisch denken en doorvragen zijn minstens zo belangrijk als direct het antwoord weten.</p>\n<h2>Past een technical support vacature bij jou?</h2>\n<p>Technical support past bij technici die graag problemen analyseren, collega’s helpen en overzicht houden over meerdere klantvragen. De functie kan grotendeels vanuit de zaak worden uitgevoerd, maar producttraining, testen of bezoeken op locatie kunnen onderdeel blijven van het werk. The Field Service Company koppelt technical support aan vacatures waarin jij de technische verbinding vormt tussen klanten, field service, engineering en de organisatie achter de machine.</p>",
+          "taxonomy": "functie-inhoud",
+          "parent": 0,
+          "term_taxonomy_id": 465,
+          "term_group": 0,
+          "count": 0,
+          "object_id": null,
+          "term_order": "0",
+          "id": 465
+        }
+      ],
+      "pods_archive_title": "",
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functie-inhoud/695",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functie-inhoud"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_functie-inhoud"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_functie-inhoud=695"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 696,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/functie-inhoud/testen/",
+      "name": "Testen",
+      "slug": "testen",
+      "taxonomy": "beroep_functie-inhoud",
+      "parent": 0,
+      "meta": [],
+      "intro_taxonomy": "",
+      "relationship_vacature_button_url": false,
+      "relationship_functie-inhoud": [
+        {
+          "pods_archive_title": "Field service vacatures met functie-inhoud Testen",
+          "term_id": 458,
+          "name": "Testen",
+          "slug": "testen",
+          "description": "<h2>Testen bewijst dat een machine klaar is voor de praktijk</h2>\n<p>Voordat een machine, installatie of upgrade wordt opgeleverd, moet duidelijk zijn dat alles veilig en volgens afspraak functioneert. Testen binnen field service betekent daarom veel meer dan controleren of een systeem aan gaat. Je verifieert functies, beveiligingen, prestaties en samenwerking tussen mechanica, elektrotechniek, software en het proces van de klant. Jouw bevindingen bepalen of de volgende stap verantwoord kan worden gezet. Je bent de kritische schakel tussen bouwen, in bedrijf stellen en een klant die op de installatie moet kunnen vertrouwen. Het eindresultaat telt echt.</p>\n<h2>Welke testen voer je uit in machinebouw en field service?</h2>\n<p>In de werkplaats kun je betrokken zijn bij een Factory Acceptance Test. Je controleert bijvoorbeeld bewegingen, sensoren, aandrijvingen, I/O, softwarelogica, veiligheidscircuits en afgesproken capaciteit voordat de machine wordt verzonden. Op klantlocatie volgt vaak een Site Acceptance Test waarbij de installatie wordt beoordeeld in de werkelijke productieomgeving en met de aansluitingen, grondstoffen of producten van de gebruiker.</p>\n<p>Bij onderhoud, reparaties en upgrades test je eveneens gericht. Na vervanging van een onderdeel controleer je niet alleen de reparatie, maar ook de invloed op andere functies. Bij een softwarewijziging kijk je naar communicatie, sequenties, alarmen en beveiligingen. Je legt meetwaarden, afwijkingen en openstaande punten vast zodat klant en projectteam weten wat gereed is en wat nog aandacht vraagt.</p>\n<h2>Waarom vraagt technisch testen om nieuwsgierigheid en discipline?</h2>\n<p>Een goede tester volgt procedures, maar kijkt ook verder wanneer het gedrag niet logisch voelt. Je simuleert situaties, probeert grenswaarden en stelt vragen over wat een operator in de praktijk kan doen. Daarbij werk je vaak samen met commissioning engineers, software engineers, monteurs, operators en kwaliteitsmedewerkers. Duidelijke communicatie voorkomt dat een afwijking wordt gemist of later opnieuw discussie ontstaat.</p>\n<p>Testen kan plaatsvinden onder tijdsdruk, zeker vlak voor verzending of oplevering. Toch mogen veiligheid en kwaliteit nooit worden overgeslagen. Juist jouw nauwkeurigheid helpt kostbare storingen, herstelbezoeken en productieverlies na ingebruikname voorkomen.</p>\n<h2>Vind een field service vacature waarin testen belangrijk is</h2>\n<p>Werk jij graag systematisch en wil je met eigen ogen zien dat techniek doet wat is beloofd? Kijk dan of een vacature FAT, SAT, functionele testen, inspecties of oplevering noemt. Vergelijk ook hoeveel je in de werkplaats en op klantlocatie werkt. The Field Service Company koppelt testen aan field service vacatures waarin jij kwaliteit zichtbaar maakt en machines met vertrouwen overdraagt aan de klant.</p>",
+          "taxonomy": "functie-inhoud",
+          "parent": 0,
+          "term_taxonomy_id": 458,
+          "term_group": 0,
+          "count": 0,
+          "object_id": null,
+          "term_order": "0",
+          "id": 458
+        }
+      ],
+      "pods_archive_title": "",
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functie-inhoud/696",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functie-inhoud"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_functie-inhoud"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_functie-inhoud=696"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 697,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/functie-inhoud/training/",
+      "name": "Training",
+      "slug": "training",
+      "taxonomy": "beroep_functie-inhoud",
+      "parent": 0,
+      "meta": [],
+      "intro_taxonomy": "",
+      "relationship_vacature_button_url": false,
+      "relationship_functie-inhoud": [
+        {
+          "pods_archive_title": "Field service vacatures met functie-inhoud Training",
+          "term_id": 462,
+          "name": "Training",
+          "slug": "training",
+          "description": "<h2>Technische training maakt klanten zelfstandig en zeker</h2>\n<p>Een nieuwe machine levert pas echt waarde wanneer operators en onderhoudstechnici begrijpen hoe zij ermee moeten werken. Training is daarom een belangrijk onderdeel van veel field service functies. Je draagt kennis over na installatie, commissioning, onderhoud of een upgrade en helpt de klant om veilig te bedienen, dagelijkse controles uit te voeren en eenvoudige afwijkingen vroeg te herkennen. Goede uitleg vergroot bovendien het eigenaarschap op de werkvloer: gebruikers begrijpen waarom een handeling belangrijk is en gaan bewuster met de techniek om. Dat geeft vertrouwen.</p>\n<h2>Wie train je en welke kennis draag je over?</h2>\n<p>Je kunt operators uitleg geven over bediening, omstellen, productwissels en alarmmeldingen. Maintenance-teams hebben juist behoefte aan kennis over preventief onderhoud, slijtdelen, diagnose en veilig werken aan de installatie. Soms train je distributeurs, lokale servicepartners of nieuwe collega’s die later zelfstandig ondersteuning gaan bieden. De inhoud en diepgang moeten dus aansluiten op de doelgroep.</p>\n<p>Een goede training combineert theorie met de echte machine. Je gebruikt tekeningen, manuals, procedures en voorbeelden, maar laat deelnemers vooral zelf oefenen. Je demonstreert wat normaal gedrag is, bespreekt veelvoorkomende fouten en controleert of de uitleg begrepen wordt. Bij internationale projecten geef je regelmatig training in het Engels en houd je rekening met verschillen in ervaring, taal en werkcultuur.</p>\n<h2>Wat maakt een field service engineer een goede trainer?</h2>\n<p>Technische kennis alleen is niet genoeg. Je moet structuur aanbrengen, rustig uitleggen en ingewikkelde processen terugbrengen tot begrijpelijke stappen. Door vragen te stellen ontdek je wat deelnemers al weten en waar onzekerheid zit. Een goede trainer creëert een omgeving waarin mensen fouten durven bespreken, want juist daar ontstaan waardevolle leermomenten.</p>\n<p>Training geeft ook informatie terug aan jouw eigen organisatie. Vragen van klanten kunnen laten zien dat een handleiding onduidelijk is, een bedieningsscherm verbetering nodig heeft of een onderhoudsprocedure praktischer kan. Zo helpt kennisoverdracht niet alleen de gebruiker, maar ook het product en de serviceorganisatie vooruit.</p>\n<h2>Vind een field service vacature waarin jij kennis overdraagt</h2>\n<p>Krijg jij energie van techniek uitleggen en anderen zien groeien? Controleer dan of een vacature klanttraining, operatortraining, instructie of begeleiding van lokale technici noemt. Vraag ook hoeveel voorbereiding, lesmateriaal en internationale inzet erbij horen. The Field Service Company koppelt training aan field service vacatures waarin jij niet alleen een machine oplevert, maar klanten de kennis geeft om er veilig, betrouwbaar en met vertrouwen mee te werken.</p>",
+          "taxonomy": "functie-inhoud",
+          "parent": 0,
+          "term_taxonomy_id": 462,
+          "term_group": 0,
+          "count": 0,
+          "object_id": null,
+          "term_order": "0",
+          "id": 462
+        }
+      ],
+      "pods_archive_title": "",
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functie-inhoud/697",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functie-inhoud"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_functie-inhoud"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_functie-inhoud=697"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 698,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/functie-inhoud/troubleshooting/",
+      "name": "Troubleshooting",
+      "slug": "troubleshooting",
+      "taxonomy": "beroep_functie-inhoud",
+      "parent": 0,
+      "meta": [],
+      "intro_taxonomy": "",
+      "relationship_vacature_button_url": false,
+      "relationship_functie-inhoud": [
+        {
+          "pods_archive_title": "Field service vacatures met functie-inhoud Troubleshooting",
+          "term_id": 456,
+          "name": "Troubleshooting",
+          "slug": "troubleshooting",
+          "description": "<h2>Troubleshooting begint waar het voor de hand liggende antwoord stopt</h2>\n<p>Sommige technische problemen verdwijnen na een reset of vervanging. Andere storingen keren terug, ontstaan alleen onder specifieke omstandigheden of lijken uit meerdere systemen tegelijk te komen. Bij troubleshooting onderzoek je zo’n probleem systematisch totdat je de werkelijke oorzaak begrijpt. Je doel is niet alleen de machine opnieuw laten draaien, maar voorkomen dat dezelfde fout later terugkomt. Dat maakt iedere opdracht anders: je combineert technische kennis met onderzoek, praktijkervaring en het vermogen om schijnbaar losse aanwijzingen met elkaar te verbinden. Je leert de machine en het proces daardoor steeds grondiger en beter kennen.</p>\n<h2>Hoe analyseer je een complexe storing?</h2>\n<p>Je begint met feiten verzamelen. Wat ziet de operator, wanneer treedt het probleem op en wat veranderde vlak ervoor? Je bekijkt foutcodes, trends, logbestanden, PLC-signalen, meetwaarden, tekeningen en servicerapporten. Daarna formuleer je mogelijke oorzaken en test je die één voor één. Zo voorkom je dat onderdelen op goed geluk worden vervangen of dat een symptoom voor de oorzaak wordt aangezien.</p>\n<p>De oorzaak kan mechanisch, elektrisch, softwarematig of procesgerelateerd zijn. Een onregelmatige beweging kan bijvoorbeeld ontstaan door slijtage, een sensor, communicatievertraging, verkeerde parameters of variatie in het product. Juist de wisselwerking tussen disciplines maakt troubleshooting uitdagend. Je overlegt daarom regelmatig met operators, maintenance, software engineers, engineering en productspecialisten.</p>\n<h2>Wat is het verschil tussen storingen oplossen en troubleshooting?</h2>\n<p>Bij een storing ligt de eerste nadruk vaak op veilig en snel herstel van de installatie. Troubleshooting gaat dieper wanneer de oorzaak onduidelijk, complex of terugkerend is. Soms maak je eerst een tijdelijke oplossing om productie mogelijk te maken en voer je daarna aanvullende metingen uit. Uiteindelijk leg je de root cause, gekozen oplossing en preventieve aanbevelingen helder vast.</p>\n<p>Dit werk vraagt geduld, nieuwsgierigheid en logisch denken. Je moet onder druk overzicht houden en durven erkennen wanneer extra expertise nodig is. De voldoening is groot wanneer losse signalen samenkomen en jij een probleem oplost waar anderen niet doorheen kwamen.</p>\n<h2>Vind een field service vacature met complexe troubleshooting</h2>\n<p>Zoek jij technische diepgang en wil je iedere opdracht als een onderzoek benaderen? Kijk dan naar de complexiteit van de machines, beschikbare diagnosemiddelen, samenwerking met engineering en ruimte voor root-causeanalyse. The Field Service Company koppelt troubleshooting aan field service vacatures waarin analytische technici complexe problemen ontrafelen en klanten helpen met oplossingen die verder gaan dan alleen het bestrijden van symptomen.</p>",
+          "taxonomy": "functie-inhoud",
+          "parent": 0,
+          "term_taxonomy_id": 456,
+          "term_group": 0,
+          "count": 0,
+          "object_id": null,
+          "term_order": "0",
+          "id": 456
+        }
+      ],
+      "pods_archive_title": "",
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functie-inhoud/698",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functie-inhoud"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_functie-inhoud"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_functie-inhoud=698"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 699,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/functie-inhoud/upgrades/",
+      "name": "Upgrades",
+      "slug": "upgrades",
+      "taxonomy": "beroep_functie-inhoud",
+      "parent": 0,
+      "meta": [],
+      "intro_taxonomy": "",
+      "relationship_vacature_button_url": false,
+      "relationship_functie-inhoud": [
+        {
+          "pods_archive_title": "Field service vacatures met functie-inhoud Upgrades",
+          "term_id": 222,
+          "name": "Upgrades",
+          "slug": "upgrades",
+          "description": "<h2>Upgrades geven bestaande machines een nieuwe toekomst</h2>\n<p>Een goede machine kan technisch nog jaren mee, terwijl onderdelen, software of veiligheidseisen verouderd raken. Met upgrades en retrofits verbeter je bestaande installaties zonder dat de klant direct een volledig nieuwe machine hoeft te kopen. Je combineert kennis van het oorspronkelijke systeem met moderne componenten en zorgt dat oud en nieuw betrouwbaar samenwerken. Voor klanten is dat vaak een slimme investering: de vertrouwde installatie blijft behouden, terwijl prestaties, beschikbaarheid en onderhoudbaarheid weer aansluiten op de eisen van vandaag. Tegelijk verminder je verspilling en voorkom je dat technisch waardevolle installaties onnodig vroeg worden vervangen.</p>\n<h2>Welke upgrades voer je binnen field service uit?</h2>\n<p>Upgrades kunnen bestaan uit nieuwe aandrijvingen, sensoren, PLC’s, bedieningspanelen, software, veiligheidscomponenten of energiezuinigere techniek. Ook mechanische aanpassingen, capaciteitsverbetering, remote monitoring en vervanging van niet meer leverbare onderdelen komen veel voor. Soms gaat het om één duidelijk component; bij grotere retrofits wordt een complete besturing of machinefunctie vernieuwd.</p>\n<p>Vooraf onderzoek je de actuele staat, configuratie en documentatie van de installatie. Je controleert aansluitingen, beschikbare ruimte, softwareversies en mogelijke gevolgen voor andere systemen. Daarna bereid je onderdelen, gereedschap, back-ups, tekeningen en een uitvoeringsplan voor. Op locatie bouw je de wijziging in, pas je instellingen aan en test je samen met de klant of alle functies en beveiligingen correct werken.</p>\n<h2>Waarom zijn upgrades technisch zo interessant?</h2>\n<p>Bij nieuwbouw is de uitgangssituatie bekend. Bij een bestaande machine kom je aanpassingen, slijtage en keuzes uit verschillende bouwjaren tegen. Je moet daarom zorgvuldig analyseren en soms creatief oplossen zonder veiligheid, kwaliteit of planning uit het oog te verliezen. Productiestilstand is vaak beperkt, waardoor voorbereiding en samenwerking met engineering, software en werkvoorbereiding essentieel zijn.</p>\n<p>Na oplevering leg je vast wat is gewijzigd en geef je operators of maintenance uitleg over de nieuwe werking. Een sterke upgrade verhoogt beschikbaarheid, veiligheid, snelheid of gebruiksgemak en maakt toekomstig onderhoud beter uitvoerbaar. Het resultaat is direct zichtbaar in de dagelijkse productie van de klant.</p>\n<h2>Vind een field service vacature met upgrades en retrofits</h2>\n<p>Werk jij graag aan bestaande techniek en vind je het interessant om systemen slimmer, veiliger en toekomstbestendig te maken? Vergelijk dan per vacature welke disciplines, machines en softwareplatformen worden gebruikt en hoeveel voorbereiding of internationaal reizen erbij hoort. The Field Service Company koppelt upgrades aan field service vacatures waarin jij technische levensduur verlengt en klanten helpt meer uit hun installaties te halen.</p>",
+          "taxonomy": "functie-inhoud",
+          "parent": 0,
+          "term_taxonomy_id": 222,
+          "term_group": 0,
+          "count": 45,
+          "object_id": null,
+          "term_order": "0",
+          "id": 222
+        }
+      ],
+      "pods_archive_title": "",
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functie-inhoud/699",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functie-inhoud"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_functie-inhoud"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_functie-inhoud=699"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 700,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/functie-inhoud/werkvoorbereiding/",
+      "name": "Werkvoorbereiding",
+      "slug": "werkvoorbereiding",
+      "taxonomy": "beroep_functie-inhoud",
+      "parent": 0,
+      "meta": [],
+      "intro_taxonomy": "",
+      "relationship_vacature_button_url": false,
+      "relationship_functie-inhoud": [
+        {
+          "pods_archive_title": "Field service vacatures met functie-inhoud Werkvoorbereiding",
+          "term_id": 464,
+          "name": "Werkvoorbereiding",
+          "slug": "werkvoorbereiding",
+          "description": "<h2>Werkvoorbereiding bepaalt hoe sterk een field service project start</h2>\n<p>Wanneer een engineer bij de klant aankomt, moet duidelijk zijn wat er gaat gebeuren, welke onderdelen nodig zijn en onder welke omstandigheden het werk wordt uitgevoerd. Werkvoorbereiding brengt techniek, mensen, materiaal en planning vooraf bij elkaar. Een goede voorbereiding voorkomt verrassingen op locatie en geeft servicemonteurs, field service engineers en projectteams de ruimte om hun werk veilig en efficiënt uit te voeren. Je bent vaak degene die vooruitkijkt, knelpunten zichtbaar maakt en ervoor zorgt dat een technisch goed plan ook praktisch uitvoerbaar wordt. Dankzij jouw overzicht kunnen collega’s zich bij de klant concentreren op de techniek, terwijl tijd, materiaal en afspraken vooraf al goed zijn georganiseerd.</p>\n<h2>Wat bereid je voor voordat iemand naar de klant vertrekt?</h2>\n<p>Je controleert de opdracht, tekeningen, servicerapporten, stuklijsten en technische historie. Je bepaalt welke onderdelen, gereedschappen en meetmiddelen meegaan en controleert of speciale certificaten, vergunningen of veiligheidsdocumenten nodig zijn. Bij internationale projecten kunnen ook transport, douane, visa, vluchten, hotels en lokale toegangseisen onderdeel van de voorbereiding zijn.</p>\n<p>Daarnaast stem je de planning af met de klant, monteurs, engineering, magazijn, inkoop en eventuele contractors. Je wilt weten wanneer een machine beschikbaar is, welke werkzaamheden de klant zelf uitvoert en welke afhankelijkheden bestaan. Door risico’s en ontbrekende informatie vroeg te signaleren voorkom je dat een project op locatie stilvalt door een onderdeel, tekening of afspraak die nog ontbreekt.</p>\n<h2>Werk je als werkvoorbereider op de zaak of ook bij projecten?</h2>\n<p>Veel werkvoorbereiding gebeurt vanuit kantoor, werkplaats of magazijn. Je organiseert meerdere opdrachten tegelijk en ondersteunt collega’s die onderweg zijn. Bij grotere installaties, onderhoudsstops of retrofits kun je ook dichter bij het project werken, bijvoorbeeld tijdens de opstart of wanneer planning en materiaalstromen dagelijks veranderen.</p>\n<p>Na afloop verwerk je terugkoppeling, gebruikte onderdelen, wijzigingen en openstaande acties. Zo wordt de volgende servicebeurt beter voorbereid en blijft technische documentatie actueel. Werkvoorbereiding is daarmee geen losse administratieve stap, maar een doorlopende verbinding tussen voorbereiding, uitvoering en verbetering.</p>\n<h2>Vind een field service vacature met werkvoorbereiding</h2>\n<p>Ben jij technisch sterk, georganiseerd en krijg je voldoening wanneer een project dankzij jouw voorbereiding soepel verloopt? Kijk dan of een vacature draait om serviceplanning, projectvoorbereiding, parts, documentatie of ondersteuning van engineers op locatie. The Field Service Company koppelt werkvoorbereiding aan field service vacatures waarin jij ervoor zorgt dat mensen met de juiste informatie en middelen aan hun klantproject beginnen.</p>",
+          "taxonomy": "functie-inhoud",
+          "parent": 0,
+          "term_taxonomy_id": 464,
+          "term_group": 0,
+          "count": 0,
+          "object_id": null,
+          "term_order": "0",
+          "id": 464
+        }
+      ],
+      "pods_archive_title": "",
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functie-inhoud/700",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functie-inhoud"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_functie-inhoud"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_functie-inhoud=700"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    }
+  ],
+  "metadata": [
+    {
+      "id": 672,
+      "slug": "adviseren",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 673,
+      "slug": "commissioning",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 674,
+      "slug": "diagnose",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 675,
+      "slug": "field-service",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 676,
+      "slug": "inbedrijfstellen",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 677,
+      "slug": "inspectie",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 678,
+      "slug": "installatie",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 679,
+      "slug": "instructie",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 680,
+      "slug": "kalibratie",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 681,
+      "slug": "leidinggeven",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 682,
+      "slug": "maintenance",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 683,
+      "slug": "modificaties",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 684,
+      "slug": "onderhoud",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 685,
+      "slug": "overhalen",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 686,
+      "slug": "planning",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 687,
+      "slug": "plc-analyse",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 688,
+      "slug": "plc-programmeren",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 689,
+      "slug": "programmeren",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 690,
+      "slug": "rapportages",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 691,
+      "slug": "reparatie",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 692,
+      "slug": "revisie",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 693,
+      "slug": "sales",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 694,
+      "slug": "storingen",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 695,
+      "slug": "technical-support",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 696,
+      "slug": "testen",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 697,
+      "slug": "training",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 698,
+      "slug": "troubleshooting",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 699,
+      "slug": "upgrades",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 700,
+      "slug": "werkvoorbereiding",
+      "intro": "",
+      "archive_title": ""
+    }
+  ]
+}

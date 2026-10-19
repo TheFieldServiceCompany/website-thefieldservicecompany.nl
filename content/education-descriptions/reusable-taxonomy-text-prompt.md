@@ -32,9 +32,9 @@ gericht op field service en de specifieke term.
 Gebruik bij uitgebreide taxonomyteksten standaard vier zelfstandig
 begrijpelijke H2-vragen. Laat de eerste H2 direct de verbinding leggen tussen
 `[TERM]` en service, field service, machines of de relevante sector. Volg voor
-de Beroepengids-archieven van studierichtingen, functienamen en
-bedrijfssectoren de afwijkende, compacte structuur die hieronder expliciet is
-vastgelegd.
+de Beroepengids-archieven van studierichtingen, functienamen,
+bedrijfssectoren en functie-inhoud de afwijkende, compacte structuur die
+hieronder expliciet is vastgelegd.
 
 Gebruik bij onderwijscontent natuurlijke varianten zoals `opleiding [TERM]`,
 `studierichting [TERM]`, `studie [TERM]` en `achtergrond in [TERM]`; zet ze
@@ -134,6 +134,34 @@ inhoudelijke inspiratie, maar kopieer de lange vacaturetekst niet. Maak van
 een toepassing bij één werkgever geen universele sectoreis. Maak iedere intro
 en description uniek en sectorspecifiek.
 
+### Extra regels voor Beroepengids-functie-inhoud
+
+Een Beroepengids-term voor functie-inhoud is een artikelarchief over een
+werkzaamheid of verantwoordelijkheidsgebied binnen field service. Gebruik als
+Pods-archieftitel exact:
+
+`Functie-inhoud [TERM] | Artikelen`
+
+Plaats direct boven de drie descriptionalinea's exact deze H2:
+
+`Functie-inhoud [TERM]`
+
+Lever een korte, uitnodigende intro die de werkzaamheid direct met field
+service verbindt. Schrijf vervolgens drie compacte alinea's:
+
+1. een grove introductie op de werkzaamheid en de technische praktijk;
+2. een verwijzing naar toekomstige artikelen over technieken, machines,
+   opleidingen, werkcontext, reizen of doorgroei;
+3. uitleg hoe die artikelen helpen functies en vacatures op inhoud en
+   verantwoordelijkheid te vergelijken.
+
+Gebruik de gelijknamige vacaturedescription als inhoudelijke bron, maar
+kopieer deze niet. Maak geen kunstmatig verschil tussen termen die werkgevers
+door elkaar gebruiken, zoals Commissioning en Inbedrijfstellen, Diagnose en
+Troubleshooting, Maintenance en Onderhoud of Overhalen en Revisie. Leg het
+overlapgebied kort uit en laat de concrete vacature-inhoud doorslaggevend zijn.
+Maak iedere intro en description inhoudelijk uniek.
+
 Behandel waar relevant:
 
 - de belangrijkste kennis en vaardigheden;
@@ -151,13 +179,14 @@ wereld` en `onmisbare schakel`. Maak geen handmatige vacaturelinks wanneer de
 website relaties automatisch vult. De template levert de H1; gebruik in de
 description alleen H2-koppen en alinea's.
 
-Lever voor een Beroepengids-functienaam, -studierichting of -bedrijfssector
-eerst een concept
+Lever voor een Beroepengids-functienaam, -studierichting, -bedrijfssector of
+-functie-inhoud eerst een concept
 met archieftitel, intro, de goedgekeurde archiefalinea's, woordenaantal,
 feitencontrole en de exact bedoelde WordPress-taxonomie. Neem bij een
 functienaam de H2 `Functienaam [TERM]` en bij een studierichting de H2
 `Studierichting [TERM]` op. Gebruik bij een bedrijfssector de H2
-`Bedrijfssector [TERM]`. Alle drie blijven zonder `| Artikelen`.
+`Bedrijfssector [TERM]` en bij functie-inhoud de H2 `Functie-inhoud [TERM]`.
+Alle vier blijven zonder `| Artikelen`.
 Lever bij andere uitgebreide taxonomyteksten eerst vier H2-koppen en de
 volledige tekst, tenzij voor die taxonomie een andere goedgekeurde structuur
 is vastgelegd.
@@ -189,6 +218,8 @@ Publiceer pas na inhoudelijke goedkeuring.
   zonder `| Artikelen`, en verwijst de tekst naar latere artikelen?
 - Begint een Beroepengids-bedrijfssector met `Bedrijfssector [TERM]` als H2 en
   helpt de tekst sectorfuncties en vacatures vergelijken?
+- Begint Beroepengids-functie-inhoud met `Functie-inhoud [TERM]` als H2 en
+  blijft de tekst eerlijk over overlappende vacaturetermen?
 - Bevat iedere alinea concrete informatie in plaats van algemene claims?
 - Kloppen opleiding, machines, technieken, functies en sectoren inhoudelijk?
 - Is de tekst prettig, actief en motiverend om te lezen?

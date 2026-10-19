@@ -1,7 +1,8 @@
 # Beroepengids-content per taxonomieterm
 
-Status: alle 32 Functienamen en alle 33 Bedrijfssectoren hebben sinds 19
-oktober 2026 gecontroleerde descriptions, intro's en archieftitels op LIVE.
+Status: alle 32 Functienamen, alle 33 Bedrijfssectoren en alle 29
+Functie-inhoud-termen hebben sinds 19 oktober 2026 gecontroleerde descriptions,
+intro's en archieftitels op LIVE.
 
 ## Doel en inhoud
 
@@ -17,22 +18,29 @@ titels staat steeds dat de inhoud van de vacature doorslaggevend is.
 
 ## Bestanden en relatie
 
-- Canonieke bronnen: `beroep-functienamen.md` en
-  `beroep-bedrijfssectoren.md`.
+- Canonieke bronnen: `beroep-functienamen.md`, `beroep-bedrijfssectoren.md` en
+  `beroep-functie-inhoud.md`.
 - Validatie: `../../scripts/build-beroep-functienamen.mjs` en
-  `../../scripts/build-beroep-bedrijfssectoren.mjs`.
+  `../../scripts/build-beroep-bedrijfssectoren.mjs` en
+  `../../scripts/build-beroep-functie-inhoud.mjs`.
 - Veilige publicatie en rollback:
   `../../scripts/publish-beroep-functienamen.py`.
 - Publicatie en rollback Bedrijfssectoren:
   `../../scripts/publish-beroep-bedrijfssectoren.py`.
+- Publicatie en rollback Functie-inhoud:
+  `../../scripts/publish-beroep-functie-inhoud.py`.
 - Herstelbestand Functienamen:
   `../../audits/exports/beroep-functienamen-before-archive-rewrite-2026-10-19.json`.
 - Herstelbestand Bedrijfssectoren:
   `../../audits/exports/beroep-bedrijfssectoren-before-archive-content-2026-10-19.json`.
+- Herstelbestand Functie-inhoud:
+  `../../audits/exports/beroep-functie-inhoud-before-archive-content-2026-10-19.json`.
 - Uitvoeringslog Functienamen:
   `../../audits/2026-10-19-beroepengids-functienamen-live.md`.
 - Uitvoeringslog Bedrijfssectoren:
   `../../audits/2026-10-19-beroepengids-bedrijfssectoren-live.md`.
+- Uitvoeringslog Functie-inhoud:
+  `../../audits/2026-10-19-beroepengids-functie-inhoud-live.md`.
 
 De bestaande Pods-relatie `relationship_beroep_functienaam` koppelt iedere
 Beroepengids-term aan de gelijknamige vacaturetaxonomie `functienaam`. Deze
@@ -41,6 +49,10 @@ relaties zijn in deze contentronde niet gewijzigd.
 De bestaande Pods-relatie `relationship_bedrijfssector` koppelt iedere
 Beroepengids-sector aan de gelijknamige vacaturetaxonomie `bedrijfssector`.
 Ook deze relaties zijn tijdens de contentpublicatie niet gewijzigd.
+
+De bestaande Pods-relatie `relationship_functie-inhoud` koppelt iedere
+Beroepengids-term aan de gelijknamige vacaturetaxonomie `functie-inhoud`. Ook
+deze 29 relaties zijn tijdens de contentpublicatie niet gewijzigd.
 
 ## Gevalideerde omvang
 
@@ -72,3 +84,14 @@ in de bron zorgt dat de builder die bestaande opmaak behoudt.
 - iedere intro en description verbindt de sector met field service;
 - de bestaande lange vacaturedescriptions zijn gebruikt als inhoudelijke bron,
   maar niet gekopieerd naar de Beroepengids.
+
+## Gevalideerde omvang Functie-inhoud
+
+- 29 bestaande termen;
+- 29 descriptions van 100–113 woorden, één H2 en exact drie alinea's;
+- 29 unieke intro's van 19–24 woorden;
+- 29 archieftitels volgens `Functie-inhoud [term] | Artikelen`;
+- iedere description begint met `Functie-inhoud [term]` als H2;
+- iedere intro en description verbindt de werkzaamheid met field service;
+- overlappende begrippen worden als verwante vacaturetermen uitgelegd; de
+  concrete vacature-inhoud blijft bepalend.
