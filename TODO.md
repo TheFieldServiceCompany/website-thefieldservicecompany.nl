@@ -31,7 +31,11 @@ gewijzigd; open afhankelijkheden worden niet stilzwijgend overgeslagen.
    100%). Overnachten operationeel afleiden bij alle opties behalve `Elke
    nacht thuis`; het accommodatietype kan daar niet uit worden afgeleid.
    `Hotelovernachtingen` als zoekwoord in descriptions/content behouden.
-   Reisfrequentie wordt niet als aparte dimensie toegevoegd.
+   Reisfrequentie wordt niet als aparte dimensie toegevoegd. De additive LIVE-
+   structuur is uitgevoerd: Reisduur gebruikt de bestaande slug `reisprofiel`,
+   Weekenden thuis gebruikt `weekenden-thuis`, tien termen hebben operationele
+   descriptions en Search & Filter-velden 14 en 15 tonen uitsluitend de nieuwe
+   canonieke keuzes. Legacytermen en vacature `23277` zijn niet gewijzigd.
 4. [ ] **Volledige WordPress–Supabase–Appsmith-keuzematrix maken.** Naast
    Reisprofielen ook Werkgebieden, Dagen internationaal en de resterende
    taxonomieën en keuzelijsten vergelijken op naam, betekenis, ID en status.
@@ -42,8 +46,12 @@ gewijzigd; open afhankelijkheden worden niet stilzwijgend overgeslagen.
    Beroepengids-spiegels gecontroleerd afwerken.
 6. [ ] **Synchronisatieplan ontwerpen en testen.** Het travel-deel is in
    Supabase en de Appsmith-bron uitgevoerd en met rollbacktests gecontroleerd.
-   De WordPress-taxonomiestructuur en publieke filters moeten nog worden
-   afgerond en via REST worden geverifieerd. Daarna volgen de overige keuzes.
+   De WordPress-taxonomiestructuur en Search & Filter-objecten zijn additive
+   LIVE aangemaakt en via REST geverifieerd. Frontendplaatsing en inhoudelijke
+   vacaturekoppeling volgen na validatie. De travelcommit staat nu op
+   `crm-layout-redesign`, maar moet eerst gecontroleerd naar de complete
+   Appsmith-branch `document-preview-backfill` worden overgezet en getest.
+   Daarna volgen de overige keuzes.
 
 ### B. Formulieren, intake en inhaalslag
 

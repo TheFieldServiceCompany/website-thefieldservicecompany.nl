@@ -1,7 +1,7 @@
 # Reisprofielen — WordPress, Supabase en Appsmith
 
 Datum: 19 oktober 2026  
-Status: model goedgekeurd; Supabase en Appsmith uitgevoerd; WordPress additive omzetting voorbereid
+Status: model goedgekeurd; Supabase uitgevoerd; WordPress additive structuur LIVE; Appsmith-branch moet worden gereconcilieerd
 
 ## Bevestigde architectuur
 
@@ -121,12 +121,16 @@ niet iedere SEO-variant als aparte waarde.
    keuzelijsten.
 6. [x] Na goedkeuring een testbaar implementatie- en migratieplan maken voor
    WordPress, Supabase en Appsmith.
-7. [ ] Reisprofiel-descriptions schrijven en vacaturekoppelingen pas vastleggen nadat
-   het model is goedgekeurd; anders wordt de huidige vermenging versterkt.
+7. [x] De tien nieuwe canonieke WordPress-termen met operationele descriptions
+   additive toevoegen en via REST verifiëren.
+8. [ ] Legacytermen, vacature `23277`, redirects, archiefteksten en definitieve
+   frontendplaatsing handmatig valideren voordat iets wordt verwijderd of
+   omgezet.
 
-De inventarisatie begon alleen-lezen. Na expliciete goedkeuring zijn Supabase
-en de Appsmith-bron additive aangepast; WordPress-legacytermen zijn nog niet
-verwijderd of omgezet.
+De inventarisatie begon alleen-lezen. Na expliciete goedkeuring zijn Supabase,
+de Appsmith-bron en de additive WordPress-structuur aangepast. WordPress-
+legacytermen zijn niet verwijderd of omgezet. Zie voor de exacte live-ID's en
+verificatie `2026-10-19-reisduur-weekenden-thuis-live.md`.
 
 ## Actuele alleen-lezen inventarisatie
 
@@ -179,9 +183,10 @@ Het eerdere voorstel om vijf publieke Reisprofielen te behouden is na
 inhoudelijke bespreking ingetrokken. `Kort verblijf`, `Lang verblijf` en
 `Bijna elke dag thuis` zijn zonder vaste grens niet meetbaar.
 
-Voorgesteld eindresultaat: de gemengde taxonomie `Reisprofiel` op termijn
-vervangen door twee meetbare filterdimensies. Dit is een structureel voorstel
-en is nog niet in WordPress uitgevoerd.
+Het goedgekeurde eindresultaat vervangt de gemengde taxonomie `Reisprofiel` op
+termijn door twee meetbare filterdimensies. De additive WordPress-structuur is
+LIVE uitgevoerd; de legacytermen blijven aanwezig totdat relaties, redirects
+en content zijn gevalideerd.
 
 ### Filterdimensie 1: Reisduur
 
@@ -407,7 +412,9 @@ gesynchroniseerd.
 
 ## Actuele Appsmith-controle
 
-Repository `tfsc-appsmith-crm`, branch `crm-layout-redesign`.
+Repository `tfsc-appsmith-crm`. De travelwijziging staat in commit `6f182a4`
+op `crm-layout-redesign`, maar die branch blijkt niet de complete laatst
+gebruikte Appsmith-basis te zijn.
 
 Appsmith kan de volgende reiswaarden voor kandidaten en vacatures tonen en
 opslaan:
@@ -427,6 +434,13 @@ en Weekenden thuis met exact dezelfde vijf waarden als Supabase.
 De matchlogica vergelijkt nu ook de directionele Reisduur en Weekenden thuis.
 Legacy overnachtings- en weekendbooleans blijven alleen als terugval actief
 wanneer de nieuwe vacaturewaarde leeg is.
+
+GitHub laat zien dat `document-preview-backfill` vóór deze travelcommit de
+laatst bijgewerkte remote branch was (`8dbceef`, 15 oktober 2026). Die branch
+bevat `Candidates` en `Vacancies_Old`; `crm-layout-redesign` mist beide sinds
+commit `445b20d` (`Remove legacy candidate and vacancy pages`). De wijziging
+wordt daarom eerst gecontroleerd naar de bedoelde complete branch overgezet.
+Er is nog geen live Appsmith-pull of deployment gedaan.
 
 ## Resterende besluiten vóór legacy-opruiming
 

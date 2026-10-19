@@ -1,5 +1,26 @@
 # Changelog
 
+## 2026-10-19 — Reisduur en Weekenden thuis additive LIVE in WordPress
+
+- Het beheerlabel van de bestaande taxonomie `reisprofiel` is LIVE aangepast
+  naar `Reisduur`; de interne slug en alle 25 legacytermen zijn behouden.
+- De openbare vacaturetaxonomie `weekenden-thuis` is LIVE toegevoegd en via
+  REST beschikbaar gemaakt.
+- Vijf Reisduur-banden en vijf percentages Weekenden thuis zijn met meetbare
+  operationele descriptions toegevoegd. Geen vacature is automatisch gemapt.
+- Search & Filter-velden `Reisduur` (#14) en `Weekenden thuis` (#15) zijn
+  ingeschakeld voor de query `Vacatures`, met uitsluitend de vijf canonieke
+  waarden per veld en `match any`.
+- REST bevestigde beide vacaturetaxonomieën, alle tien slugs en descriptions,
+  en telling 0 voor de nieuwe termen. De legacytermen en bestaande relaties
+  bleven aanwezig.
+- GitHub bevestigde dat `document-preview-backfill` vóór de nieuwe travelcommit
+  de laatst bijgewerkte en completere Appsmith-branch was. De travelcommit
+  `6f182a4` staat nog op `crm-layout-redesign`; Appsmith is niet gepulld of
+  gedeployd en de wijziging moet eerst gecontroleerd worden overgezet.
+- Volledig uitvoeringslog:
+  `audits/2026-10-19-reisduur-weekenden-thuis-live.md`.
+
 ## 2026-10-19 — Meetbaar travelmodel uitgevoerd in Supabase en Appsmith
 
 - Definitief besloten dat de eerste Reisduur-optie `Elke nacht thuis` heet;
