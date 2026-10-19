@@ -36,6 +36,7 @@ for (const section of sections) {
   if (archiveTitle !== `Studierichting ${name} | Artikelen`) {
     throw new Error(`Onverwachte archieftitel bij ${name}: ${archiveTitle}`);
   }
+  const descriptionHeading = `Studierichting ${name}`;
   if (!/field service/i.test(intro)) {
     throw new Error(`Intro mist field service bij ${name}`);
   }
@@ -80,8 +81,8 @@ for (const section of sections) {
   if (headingCount !== 1) {
     throw new Error(`${name} heeft ${headingCount} H2-koppen; verwacht 1`);
   }
-  if (!description.startsWith(`<h2>${escapeHtml(archiveTitle)}</h2>`)) {
-    throw new Error(`Description begint niet met de archieftitel bij ${name}`);
+  if (!description.startsWith(`<h2>${escapeHtml(descriptionHeading)}</h2>`)) {
+    throw new Error(`Description begint niet met de juiste H2 bij ${name}`);
   }
   if (paragraphCount !== 3) {
     throw new Error(`${name} heeft ${paragraphCount} alinea's; verwacht 3`);
@@ -101,6 +102,7 @@ for (const section of sections) {
     name,
     slug,
     archiveTitle,
+    descriptionHeading,
     intro,
     description,
     headingCount,

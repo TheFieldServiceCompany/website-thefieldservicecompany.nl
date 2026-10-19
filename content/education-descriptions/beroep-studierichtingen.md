@@ -3,7 +3,7 @@
 Doeltaxonomie: `beroep_studierichting`
 
 Iedere term gebruikt dezelfde artikelarchiefstructuur: archieftitel, korte
-intro, dezelfde titel als H2 en drie compacte alinea's. Uitgebreide vragen
+intro, compacte H2 zonder `| Artikelen` en drie alinea's. Uitgebreide vragen
 worden later als zelfstandige artikelen uitgewerkt.
 
 ## Autotechniek
@@ -14,7 +14,7 @@ Archive title: Studierichting Autotechniek | Artikelen
 
 Intro: Met de studierichting Autotechniek ontwikkel je praktische kennis van voertuigen, diagnose en onderhoud. Ontdek via onze artikelen hoe je die achtergrond kunt inzetten in field service.
 
-### Studierichting Autotechniek | Artikelen
+### Studierichting Autotechniek
 
 De studierichting Autotechniek leert je mechanische, elektrische en elektronische voertuigsystemen begrijpen. Die brede technische basis kan ook buiten de garage relevant zijn, bijvoorbeeld bij mobiele machines, specialistische voertuigen, laadtechniek, testapparatuur en andere systemen die op locatie service nodig hebben.
 
@@ -30,7 +30,7 @@ Archive title: Studierichting Bedrijfsautotechniek | Artikelen
 
 Intro: Bedrijfsautotechniek combineert voertuigkennis met zware techniek en professioneel materieel. Lees hoe deze studierichting aansluit op field service rond trucks, bussen en gespecialiseerde voertuigen.
 
-### Studierichting Bedrijfsautotechniek | Artikelen
+### Studierichting Bedrijfsautotechniek
 
 De studierichting Bedrijfsautotechniek richt zich op zware voertuigen, aandrijflijnen, remsystemen, hydrauliek en voertuigelektronica. Die kennis past bij werk aan trucks, bussen, trailers en speciaal materieel, maar kan ook een basis vormen voor service aan mobiele werktuigen en logistieke systemen.
 
@@ -46,7 +46,7 @@ Archive title: Studierichting Chemische Technologie | Artikelen
 
 Intro: De studierichting Chemische Technologie verbindt proceskennis, veiligheid en nauwkeurig meten. Ontdek artikelen over field service functies rond productie-installaties, analyseapparatuur en procestechniek.
 
-### Studierichting Chemische Technologie | Artikelen
+### Studierichting Chemische Technologie
 
 Tijdens de studierichting Chemische Technologie leer je processen, stoffen en industriële productie begrijpen. Deze achtergrond kan relevant zijn voor technische service aan procesinstallaties, laboratoriumapparatuur, doseersystemen, waterbehandeling en meet- en analysetechniek.
 
@@ -62,7 +62,7 @@ Archive title: Studierichting Civiele Techniek | Artikelen
 
 Intro: Civiele Techniek draait om infrastructuur, constructies en projecten in de gebouwde omgeving. Lees hoe deze studierichting kan aansluiten op technische project- en field service functies.
 
-### Studierichting Civiele Techniek | Artikelen
+### Studierichting Civiele Techniek
 
 De studierichting Civiele Techniek geeft inzicht in constructies, infrastructuur, waterwerken en uitvoering op projectlocaties. Binnen field service kan die achtergrond van waarde zijn bij inspectie, installatie, commissioning en onderhoud van technische systemen die deel uitmaken van infrastructuur of grote bouwprojecten.
 
@@ -78,7 +78,7 @@ Archive title: Studierichting Elektronica | Artikelen
 
 Intro: Met de studierichting Elektronica leer je schakelingen, sensoren en besturingen doorgronden. Ontdek artikelen over field service rond slimme apparatuur, meettechniek en complexe elektronische systemen.
 
-### Studierichting Elektronica | Artikelen
+### Studierichting Elektronica
 
 De studierichting Elektronica richt zich op componenten, printplaten, signalen, sensoren en digitale systemen. Die kennis is bruikbaar bij service aan medische apparatuur, meetinstrumenten, industriële besturingen, communicatiesystemen en andere producten waarin elektronica een centrale rol speelt.
 
@@ -94,7 +94,7 @@ Archive title: Studierichting Elektrotechniek | Artikelen
 
 Intro: Elektrotechniek vormt een sterke basis voor service aan machines, installaties en energiesystemen. Lees welke field service functies en technische richtingen aansluiten op deze veelzijdige studie.
 
-### Studierichting Elektrotechniek | Artikelen
+### Studierichting Elektrotechniek
 
 De studierichting Elektrotechniek leert je werken met elektrische installaties, aandrijvingen, schakelingen, beveiligingen en besturingen. Daardoor sluit de opleiding aan op uiteenlopende technische omgevingen, van machinebouw en industriële automatisering tot energie, gebouwen en maritieme systemen.
 
@@ -110,7 +110,7 @@ Archive title: Studierichting Embedded Systems | Artikelen
 
 Intro: Embedded Systems verbindt elektronica, software en slimme apparaten. Ontdek via onze artikelen hoe deze studierichting past bij field service rond verbonden en programmeerbare technische systemen.
 
-### Studierichting Embedded Systems | Artikelen
+### Studierichting Embedded Systems
 
 De studierichting Embedded Systems draait om hardware en software die samen één technisch product vormen. Denk aan sensoren, microcontrollers, communicatieprotocollen en realtime besturing. Die combinatie is relevant bij service aan slimme machines, medische apparatuur, robots en andere verbonden systemen.
 
@@ -126,7 +126,7 @@ Archive title: Studierichting Energietechniek | Artikelen
 
 Intro: Energietechniek richt zich op het veilig opwekken, opslaan en verdelen van energie. Lees over field service functies rond netten, laadtechniek en duurzame energiesystemen.
 
-### Studierichting Energietechniek | Artikelen
+### Studierichting Energietechniek
 
 De studierichting Energietechniek geeft kennis van elektrische energie, vermogenssystemen, beveiliging en energiedistributie. Deze achtergrond sluit aan op technische service rond zonne- en windenergie, batterijsystemen, laadinfra, transformatoren en andere installaties die betrouwbaar beschikbaar moeten blijven.
 
@@ -142,7 +142,7 @@ Archive title: Studierichting ICT & Technische Informatica | Artikelen
 
 Intro: ICT en Technische Informatica brengen software, netwerken en technische systemen samen. Ontdek artikelen over field service rond OT, connectiviteit en slimme apparatuur.
 
-### Studierichting ICT & Technische Informatica | Artikelen
+### Studierichting ICT & Technische Informatica
 
 De studierichting ICT & Technische Informatica geeft inzicht in software, netwerken, data en systeemintegratie. Omdat machines steeds vaker verbonden en op afstand uitleesbaar zijn, is deze kennis relevant bij service aan industriële netwerken, besturingen, servers en slimme technische producten.
 
@@ -158,7 +158,7 @@ Archive title: Studierichting Industriële Automatisering | Artikelen
 
 Intro: Industriële Automatisering draait om PLC’s, aandrijvingen en slimme productielijnen. Lees welke field service functies passen bij deze technische studierichting.
 
-### Studierichting Industriële Automatisering | Artikelen
+### Studierichting Industriële Automatisering
 
 De studierichting Industriële Automatisering leert je machines en processen besturen met PLC's, HMI's, servodrives en industriële netwerken. Die kennis is belangrijk bij het installeren, in bedrijf stellen, optimaliseren en herstellen van geautomatiseerde systemen bij productiebedrijven en machinebouwers.
 
@@ -174,7 +174,7 @@ Archive title: Studierichting Installatietechniek | Artikelen
 
 Intro: Installatietechniek geeft een praktische basis voor verwarmings-, lucht-, water- en regelsystemen. Ontdek artikelen over de field service functies die hierop aansluiten.
 
-### Studierichting Installatietechniek | Artikelen
+### Studierichting Installatietechniek
 
 De studierichting Installatietechniek richt zich op technische voorzieningen in gebouwen en andere locaties. Je leert over verwarming, ventilatie, water, leidingwerk en vaak ook meet- en regeltechniek. Deze kennis sluit aan op onderhoud, storingen, inspectie en commissioning bij klanten.
 
@@ -190,7 +190,7 @@ Archive title: Studierichting Koude- en Klimaattechniek | Artikelen
 
 Intro: Koude- en Klimaattechniek draait om betrouwbare koeling, verwarming en klimaatbeheersing. Lees over field service functies waarin diagnose, onderhoud en veiligheid centraal staan.
 
-### Studierichting Koude- en Klimaattechniek | Artikelen
+### Studierichting Koude- en Klimaattechniek
 
 De studierichting Koude- en Klimaattechniek leert je werken met compressoren, koudemiddelen, warmtepompen en regelingen. De kennis is toepasbaar bij service aan koelinstallaties, airconditioning, klimaatsystemen en temperatuurkritische apparatuur in uiteenlopende sectoren.
 
@@ -206,7 +206,7 @@ Archive title: Studierichting Luchtvaarttechniek | Artikelen
 
 Intro: Luchtvaarttechniek combineert nauwkeurig onderhoud met strenge veiligheids- en kwaliteitseisen. Ontdek hoe deze studierichting kan aansluiten op gespecialiseerde field service functies.
 
-### Studierichting Luchtvaarttechniek | Artikelen
+### Studierichting Luchtvaarttechniek
 
 De studierichting Luchtvaarttechniek geeft kennis van constructies, aandrijvingen, avionica en onderhoudsprocessen waarin veiligheid en traceerbaarheid leidend zijn. Die achtergrond kan relevant zijn bij service aan vliegtuigen, grondmaterieel, testapparatuur en andere hoogwaardige technische systemen.
 
@@ -222,7 +222,7 @@ Archive title: Studierichting Maritieme Techniek | Artikelen
 
 Intro: Maritieme Techniek richt zich op schepen, aandrijvingen en systemen die onder zware omstandigheden functioneren. Lees over internationale field service kansen binnen de maritieme sector.
 
-### Studierichting Maritieme Techniek | Artikelen
+### Studierichting Maritieme Techniek
 
 De studierichting Maritieme Techniek brengt werktuigbouwkunde, elektrotechniek en scheepssystemen samen. Die kennis past bij technische service aan motoren, pompen, navigatie, energievoorziening en andere installaties aan boord, in havens of op offshorelocaties.
 
@@ -238,7 +238,7 @@ Archive title: Studierichting Mechatronica | Artikelen
 
 Intro: Mechatronica verbindt mechanica, elektrotechniek en besturingstechniek. Ontdek artikelen over field service functies waarin je complete machines en systemen leert doorgronden.
 
-### Studierichting Mechatronica | Artikelen
+### Studierichting Mechatronica
 
 De studierichting Mechatronica leert je kijken naar de samenwerking tussen mechanische onderdelen, elektronica, aandrijvingen en software. Daardoor vormt deze opleiding een brede basis voor service aan machines, robots, productielijnen en andere geautomatiseerde systemen.
 
@@ -254,7 +254,7 @@ Archive title: Studierichting Mobiele Werktuigentechniek | Artikelen
 
 Intro: Mobiele Werktuigentechniek draait om krachtige machines die worden onderhouden waar ze worden ingezet. Lees over field service functies rond hydrauliek, aandrijving en elektronica.
 
-### Studierichting Mobiele Werktuigentechniek | Artikelen
+### Studierichting Mobiele Werktuigentechniek
 
 De studierichting Mobiele Werktuigentechniek geeft kennis van landbouwmachines, bouwmaterieel en andere mobiele werktuigen. Mechanica, hydrauliek, motoren en voertuigelektronica komen daarbij samen. Service vindt vaak plaats op locatie, omdat de machine niet eenvoudig naar een werkplaats kan.
 
@@ -270,7 +270,7 @@ Archive title: Studierichting Operationele Techniek | Artikelen
 
 Intro: Operationele Techniek richt zich op het veilig en continu laten draaien van technische installaties. Ontdek artikelen over de aansluiting met onderhoud, commissioning en field service.
 
-### Studierichting Operationele Techniek | Artikelen
+### Studierichting Operationele Techniek
 
 De studierichting Operationele Techniek leert je installaties bedienen, bewaken en onderhouden onder bedrijfsomstandigheden. Je ontwikkelt inzicht in processen, veiligheid, energie en technische beschikbaarheid. Die ervaring kan aansluiten op servicefuncties rond productie-, energie- en procesinstallaties.
 
@@ -286,7 +286,7 @@ Archive title: Studierichting Procestechniek | Artikelen
 
 Intro: Procestechniek leert je begrijpen hoe productie-installaties veilig, stabiel en efficiënt functioneren. Lees over field service functies rond pompen, kleppen en meet- en regeltechniek.
 
-### Studierichting Procestechniek | Artikelen
+### Studierichting Procestechniek
 
 De studierichting Procestechniek richt zich op industriële processen, apparatuur en de samenhang tussen druk, temperatuur, stroming en kwaliteit. Die kennis is waardevol bij technische service aan pompen, kleppen, doseersystemen, analyseapparatuur en complete procesinstallaties.
 
@@ -302,7 +302,7 @@ Archive title: Studierichting Robotica | Artikelen
 
 Intro: Robotica combineert mechanica, elektronica, software en beweging. Ontdek artikelen over field service functies rond robotcellen, automatisering en slimme machines.
 
-### Studierichting Robotica | Artikelen
+### Studierichting Robotica
 
 De studierichting Robotica leert je hoe sensoren, aandrijvingen, besturingen en software samen een bewegend systeem vormen. Die brede kennis past bij service aan industriële robots, logistieke systemen, cobots en andere geautomatiseerde toepassingen bij klanten.
 
@@ -318,7 +318,7 @@ Archive title: Studierichting Scheepsbouwkunde | Artikelen
 
 Intro: Scheepsbouwkunde verbindt constructie, techniek en de praktijk aan boord. Lees hoe deze studierichting aansluit op field service, inspectie en internationale maritieme projecten.
 
-### Studierichting Scheepsbouwkunde | Artikelen
+### Studierichting Scheepsbouwkunde
 
 De studierichting Scheepsbouwkunde geeft inzicht in scheepsconstructies, stabiliteit, materiaalgebruik en technische systemen. Deze achtergrond kan relevant zijn bij nieuwbouw, refits, inspecties, commissioning en service aan installaties op schepen en offshoreprojecten.
 
@@ -334,7 +334,7 @@ Archive title: Studierichting Technische Bedrijfskunde | Artikelen
 
 Intro: Technische Bedrijfskunde verbindt techniek met processen, planning en organisatie. Ontdek artikelen over coördinerende en leidinggevende functies binnen field service.
 
-### Studierichting Technische Bedrijfskunde | Artikelen
+### Studierichting Technische Bedrijfskunde
 
 De studierichting Technische Bedrijfskunde leert je technische vraagstukken bekijken vanuit processen, kosten, mensen en klantbelangen. Die combinatie sluit aan op functies waarin service moet worden gepland, verbeterd en aangestuurd, zonder de technische praktijk uit het oog te verliezen.
 
@@ -350,7 +350,7 @@ Archive title: Studierichting Technische Natuurkunde | Artikelen
 
 Intro: Technische Natuurkunde combineert meten, modelleren en diepgaande analyse. Lees over field service functies rond hightech apparatuur, sensoren en precisiesystemen.
 
-### Studierichting Technische Natuurkunde | Artikelen
+### Studierichting Technische Natuurkunde
 
 De studierichting Technische Natuurkunde geeft een analytische basis voor complexe technische systemen. Je leert verschijnselen meten, verklaren en modelleren. Die kennis kan relevant zijn bij service aan laboratoriumapparatuur, halfgeleidersystemen, optica, sensortechniek en andere hightech toepassingen.
 
@@ -366,7 +366,7 @@ Archive title: Studierichting Werktuigbouwkunde | Artikelen
 
 Intro: Werktuigbouwkunde geeft inzicht in machines, krachten, materialen en beweging. Ontdek via onze artikelen hoeveel field service richtingen bij deze brede technische studie passen.
 
-### Studierichting Werktuigbouwkunde | Artikelen
+### Studierichting Werktuigbouwkunde
 
 De studierichting Werktuigbouwkunde vormt een brede basis voor het begrijpen en verbeteren van machines en installaties. Kennis van constructies, aandrijvingen, materialen, thermodynamica en onderhoud is bruikbaar in vrijwel iedere sector waarin technische systemen op locatie moeten blijven presteren.
 

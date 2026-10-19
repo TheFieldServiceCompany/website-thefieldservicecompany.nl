@@ -36,9 +36,9 @@ Pods-structuur en de relatievelden zijn ingericht en getest.
 - gerealiseerde lengte per description: 450–486 woorden exclusief koppen en
   redactionele notities.
 
-De definitieve Beroepengids-descriptions van 19 oktober bevatten 104–123
-woorden, één H2 met de archieftitel en drie alinea's. De intro's bevatten
-19–26 woorden.
+De definitieve Beroepengids-descriptions van 19 oktober bevatten 102–121
+woorden, één H2 zonder de archieftitelsuffix `| Artikelen` en drie alinea's.
+De intro's bevatten 19–26 woorden.
 
 ## Publicatie Beroepengids-studierichtingen op 19 oktober 2026
 
@@ -47,8 +47,8 @@ woorden, één H2 met de archieftitel en drie alinea's. De intro's bevatten
 - Alle 23 bestaande velden `intro_taxonomy` zijn vervangen door een korte,
   uitnodigende intro met een directe inhoudelijke link naar field service.
 - Alle 23 bestaande velden `pods_archive_title` gebruiken
-  `Studierichting [term] | Artikelen`; dezelfde tekst staat als H2 boven de
-  description.
+  `Studierichting [term] | Artikelen`; de H2 boven de description gebruikt
+  `Studierichting [term]` zonder `| Artikelen`.
 - Iedere description introduceert de studierichting, benoemt toekomstige
   artikelonderwerpen en helpt de lezer functies en vacatures vergelijken.
 - Uitgebreide vragen zijn bewust uit de archive-description gehaald en worden
@@ -63,7 +63,7 @@ woorden, één H2 met de archieftitel en drie alinea's. De intro's bevatten
 2. De testterm `Opleiding A` niet hergebruiken als definitieve term.
 3. Eerst de taxonomie en slugs vastleggen; daarna teksten importeren.
 4. Per term controleren dat de H1 door de template wordt geleverd en dat de
-   description begint met dezelfde archieftitel als H2.
+   description begint met de voor die taxonomie vastgelegde H2.
 5. Na publicatie de openbare pagina, interne links, canonieke URL, metadata en
    mobiele weergave controleren.
 6. Pas na inhoudelijke koppeling vacatures of beroepsartikelen tonen; lege of

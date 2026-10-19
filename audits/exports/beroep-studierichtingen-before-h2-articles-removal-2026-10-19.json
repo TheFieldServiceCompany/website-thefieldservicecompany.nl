@@ -1,0 +1,1273 @@
+{
+  "created_at": "2026-10-19",
+  "taxonomy": "beroep_studierichting",
+  "terms": [
+    {
+      "id": 602,
+      "count": 0,
+      "description": "<h2>Studierichting Autotechniek | Artikelen</h2>\n\n<p>De studierichting Autotechniek leert je mechanische, elektrische en elektronische voertuigsystemen begrijpen. Die brede technische basis kan ook buiten de garage relevant zijn, bijvoorbeeld bij mobiele machines, specialistische voertuigen, laadtechniek, testapparatuur en andere systemen die op locatie service nodig hebben.</p>\n\n<p>In dit archief verzamelen we artikelen over wat je met Autotechniek binnen field service kunt doen. Je leest over passende functies, aanvullende producttraining, storingsdiagnose, gereedschap en sectoren waarin voertuigkennis van waarde is. Ook overstappen, salaris, reizen en doorgroeimogelijkheden kunnen worden uitgediept.</p>\n\n<p>De artikelen helpen je jouw studieachtergrond vertalen naar concrete loopbaanmogelijkheden. Zo kun je functies en vacatures vergelijken op techniek, klantomgeving en verantwoordelijkheid en ontdekken welke field service richting na Autotechniek bij je past.</p>",
+      "link": "https://thefieldservicecompany.nl/beroepengids/studierichtingen/autotechniek/",
+      "name": "Autotechniek",
+      "slug": "autotechniek",
+      "taxonomy": "beroep_studierichting",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_studierichting/602",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_studierichting"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_studierichting"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_studierichting=602"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 603,
+      "count": 0,
+      "description": "<h2>Studierichting Bedrijfsautotechniek | Artikelen</h2>\n\n<p>De studierichting Bedrijfsautotechniek richt zich op zware voertuigen, aandrijflijnen, remsystemen, hydrauliek en voertuigelektronica. Die kennis past bij werk aan trucks, bussen, trailers en speciaal materieel, maar kan ook een basis vormen voor service aan mobiele werktuigen en logistieke systemen.</p>\n\n<p>Onder deze studierichting verzamelen we artikelen over field service functies, diagnose, onderhoud en de technische ontwikkelingen binnen bedrijfsvoertuigen. We behandelen ook opleidingen, certificaten, werkplaatsen versus buitendienst, salaris, storingsdiensten en mogelijkheden om door te groeien naar specialist of technisch adviseur.</p>\n\n<p>Zo krijg je inzicht in de loopbaanrichtingen die vanuit Bedrijfsautotechniek mogelijk zijn. De artikelen helpen je bepalen welke voertuigen, klanten en serviceomgeving passen bij jouw praktische ervaring en ambities.</p>",
+      "link": "https://thefieldservicecompany.nl/beroepengids/studierichtingen/bedrijfsautotechniek/",
+      "name": "Bedrijfsautotechniek",
+      "slug": "bedrijfsautotechniek",
+      "taxonomy": "beroep_studierichting",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_studierichting/603",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_studierichting"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_studierichting"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_studierichting=603"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 604,
+      "count": 0,
+      "description": "<h2>Studierichting Chemische Technologie | Artikelen</h2>\n\n<p>Tijdens de studierichting Chemische Technologie leer je processen, stoffen en industriële productie begrijpen. Deze achtergrond kan relevant zijn voor technische service aan procesinstallaties, laboratoriumapparatuur, doseersystemen, waterbehandeling en meet- en analysetechniek.</p>\n\n<p>In dit archief vind je artikelen over loopbanen waarin Chemische Technologie en field service samenkomen. Onderwerpen zijn onder meer geschikte functies, technische systemen, veiligheid, aanvullende elektrotechnische of mechanische kennis, klantlocaties en producttraining. Ook salaris, reizen en doorgroei naar specialistische rollen kunnen aan bod komen.</p>\n\n<p>De artikelen helpen je verder kijken dan een klassieke proces- of laboratoriumfunctie. Zo kun je beoordelen welke technische werkomgeving en verantwoordelijkheden aansluiten bij jouw studie en welke field service vacatures een logische volgende stap vormen.</p>",
+      "link": "https://thefieldservicecompany.nl/beroepengids/studierichtingen/chemische-technologie/",
+      "name": "Chemische Technologie",
+      "slug": "chemische-technologie",
+      "taxonomy": "beroep_studierichting",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_studierichting/604",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_studierichting"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_studierichting"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_studierichting=604"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 605,
+      "count": 0,
+      "description": "<h2>Studierichting Civiele Techniek | Artikelen</h2>\n\n<p>De studierichting Civiele Techniek geeft inzicht in constructies, infrastructuur, waterwerken en uitvoering op projectlocaties. Binnen field service kan die achtergrond van waarde zijn bij inspectie, installatie, commissioning en onderhoud van technische systemen die deel uitmaken van infrastructuur of grote bouwprojecten.</p>\n\n<p>Dit archief verzamelt artikelen over functies, sectoren en aanvullende kennis voor afgestudeerden in Civiele Techniek. Je leest over projectwerk, veiligheid, technische installaties, samenwerking met aannemers en klanten en de verhouding tussen kantoor en locatie. Ook salaris, reizen en doorgroeimogelijkheden worden behandeld.</p>\n\n<p>Zo ontdek je welke richting binnen techniek en service bij je past. De artikelen helpen je vacatures vergelijken op projecttype, technische diepgang en verantwoordelijkheid en laten zien waar Civiele Techniek en field service elkaar raken.</p>",
+      "link": "https://thefieldservicecompany.nl/beroepengids/studierichtingen/civiele-techniek/",
+      "name": "Civiele Techniek",
+      "slug": "civiele-techniek",
+      "taxonomy": "beroep_studierichting",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_studierichting/605",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_studierichting"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_studierichting"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_studierichting=605"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 606,
+      "count": 0,
+      "description": "<h2>Studierichting Elektronica | Artikelen</h2>\n\n<p>De studierichting Elektronica richt zich op componenten, printplaten, signalen, sensoren en digitale systemen. Die kennis is bruikbaar bij service aan medische apparatuur, meetinstrumenten, industriële besturingen, communicatiesystemen en andere producten waarin elektronica een centrale rol speelt.</p>\n\n<p>In dit archief verzamelen we artikelen over field service functies voor mensen met een achtergrond in Elektronica. Je leest over diagnose, meten, kalibreren, software, producttraining en de samenwerking tussen hardware en engineering. Daarnaast komen opleidingen, salaris, reizen, specialisaties en doorgroei aan bod.</p>\n\n<p>De artikelen helpen je bepalen hoeveel praktisch werk, analyse en klantcontact je in een functie zoekt. Zo kun je vacatures vergelijken en ontdekken welke elektronische toepassingen en field service werkomgevingen aansluiten bij jouw studie.</p>",
+      "link": "https://thefieldservicecompany.nl/beroepengids/studierichtingen/elektronica/",
+      "name": "Elektronica",
+      "slug": "elektronica",
+      "taxonomy": "beroep_studierichting",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_studierichting/606",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_studierichting"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_studierichting"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_studierichting=606"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 607,
+      "count": 0,
+      "description": "<h2>Studierichting Elektrotechniek | Artikelen</h2>\n\n<p>De studierichting Elektrotechniek leert je werken met elektrische installaties, aandrijvingen, schakelingen, beveiligingen en besturingen. Daardoor sluit de opleiding aan op uiteenlopende technische omgevingen, van machinebouw en industriële automatisering tot energie, gebouwen en maritieme systemen.</p>\n\n<p>In dit archief vind je artikelen over wat je met Elektrotechniek binnen field service kunt doen. We behandelen passende functies, storingsanalyse, veiligheid, meetmiddelen, aanvullende productkennis en verschillen tussen uitvoerend en adviserend werk. Ook salaris, reizen, internationale projecten en doorgroei komen aan bod.</p>\n\n<p>Zo kun je jouw elektrotechnische achtergrond koppelen aan een concrete loopbaanrichting. De artikelen helpen je functies en vacatures vergelijken op spanning, systeemcomplexiteit, klantomgeving en verantwoordelijkheid en ondersteunen je bij het vinden van een passende field service baan.</p>",
+      "link": "https://thefieldservicecompany.nl/beroepengids/studierichtingen/elektrotechniek/",
+      "name": "Elektrotechniek",
+      "slug": "elektrotechniek",
+      "taxonomy": "beroep_studierichting",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_studierichting/607",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_studierichting"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_studierichting"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_studierichting=607"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 608,
+      "count": 1,
+      "description": "<h2>Studierichting Embedded Systems | Artikelen</h2>\n\n<p>De studierichting Embedded Systems draait om hardware en software die samen één technisch product vormen. Denk aan sensoren, microcontrollers, communicatieprotocollen en realtime besturing. Die combinatie is relevant bij service aan slimme machines, medische apparatuur, robots en andere verbonden systemen.</p>\n\n<p>In dit artikelarchief lees je over field service functies waarin kennis van Embedded Systems van waarde is. Onderwerpen zijn diagnose, firmware, interfaces, remote support, meetapparatuur en samenwerking met development. Ook opleidingen, producttraining, salaris, reizen en doorgroei naar specialistische rollen worden besproken.</p>\n\n<p>De artikelen helpen je kiezen tussen ontwikkeling, technische ondersteuning en werk bij klanten op locatie. Zo ontdek je welke functies en sectoren aansluiten bij jouw studie en hoeveel hardware, software en klantcontact je in je loopbaan wilt combineren.</p>",
+      "link": "https://thefieldservicecompany.nl/beroepengids/studierichtingen/embedded-systems/",
+      "name": "Embedded Systems",
+      "slug": "embedded-systems",
+      "taxonomy": "beroep_studierichting",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_studierichting/608",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_studierichting"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_studierichting"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_studierichting=608"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 609,
+      "count": 0,
+      "description": "<h2>Studierichting Energietechniek | Artikelen</h2>\n\n<p>De studierichting Energietechniek geeft kennis van elektrische energie, vermogenssystemen, beveiliging en energiedistributie. Deze achtergrond sluit aan op technische service rond zonne- en windenergie, batterijsystemen, laadinfra, transformatoren en andere installaties die betrouwbaar beschikbaar moeten blijven.</p>\n\n<p>In dit archief verzamelen we artikelen over field service loopbanen binnen de energiesector. Je leest over functies, veiligheidsregels, meet- en schakeltechniek, commissioning, onderhoud en aanvullende certificaten. Ook salaris, consignatie, reisgebied, internationale projecten en doorgroeimogelijkheden krijgen aandacht.</p>\n\n<p>Zo kun je bepalen welk deel van de energieketen bij je past. De artikelen helpen je vacatures vergelijken op techniek, spanning, verantwoordelijkheid en werkomgeving en geven richting aan een carrière waarin Energietechniek en field service samenkomen.</p>",
+      "link": "https://thefieldservicecompany.nl/beroepengids/studierichtingen/energietechniek/",
+      "name": "Energietechniek",
+      "slug": "energietechniek",
+      "taxonomy": "beroep_studierichting",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_studierichting/609",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_studierichting"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_studierichting"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_studierichting=609"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 610,
+      "count": 0,
+      "description": "<h2>Studierichting ICT &amp; Technische Informatica | Artikelen</h2>\n\n<p>De studierichting ICT &amp; Technische Informatica geeft inzicht in software, netwerken, data en systeemintegratie. Omdat machines steeds vaker verbonden en op afstand uitleesbaar zijn, is deze kennis relevant bij service aan industriële netwerken, besturingen, servers en slimme technische producten.</p>\n\n<p>In dit archief vind je artikelen over field service functies voor technisch informatici. Onderwerpen zijn OT en IT, communicatieprotocollen, configuratie, cybersecurity, remote diagnose en samenwerking met hardware- en softwareteams. Ook opleiding, certificaten, salaris, reizen en doorgroei worden uitgewerkt.</p>\n\n<p>De artikelen helpen je kiezen tussen een vooral digitale rol en een functie waarin je ook bij klanten en installaties werkt. Zo kun je vacatures vergelijken en ontdekken welke combinatie van ICT, techniek en field service bij jou past.</p>",
+      "link": "https://thefieldservicecompany.nl/beroepengids/studierichtingen/ict-technische-informatica/",
+      "name": "ICT &amp; Technische Informatica",
+      "slug": "ict-technische-informatica",
+      "taxonomy": "beroep_studierichting",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_studierichting/610",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_studierichting"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_studierichting"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_studierichting=610"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 611,
+      "count": 0,
+      "description": "<h2>Studierichting Industriële Automatisering | Artikelen</h2>\n\n<p>De studierichting Industriële Automatisering leert je machines en processen besturen met PLC&#039;s, HMI&#039;s, servodrives en industriële netwerken. Die kennis is belangrijk bij het installeren, in bedrijf stellen, optimaliseren en herstellen van geautomatiseerde systemen bij productiebedrijven en machinebouwers.</p>\n\n<p>In dit archief verzamelen we artikelen over field service loopbanen binnen automatisering. Je leest over commissioning, softwarediagnose, elektrotechniek, veiligheid, remote support en contact met operators en engineers. Daarnaast komen opleidingen, producttraining, salaris, internationale projecten en doorgroei aan bod.</p>\n\n<p>Zo ontdek je welke combinatie van programmeren en praktisch werk op locatie bij je past. De artikelen helpen je vacatures vergelijken op platform, machine, sector en reisverwachting en geven richting aan je carrière na Industriële Automatisering.</p>",
+      "link": "https://thefieldservicecompany.nl/beroepengids/studierichtingen/industriele-automatisering/",
+      "name": "Industriële Automatisering",
+      "slug": "industriele-automatisering",
+      "taxonomy": "beroep_studierichting",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_studierichting/611",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_studierichting"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_studierichting"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_studierichting=611"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 612,
+      "count": 0,
+      "description": "<h2>Studierichting Installatietechniek | Artikelen</h2>\n\n<p>De studierichting Installatietechniek richt zich op technische voorzieningen in gebouwen en andere locaties. Je leert over verwarming, ventilatie, water, leidingwerk en vaak ook meet- en regeltechniek. Deze kennis sluit aan op onderhoud, storingen, inspectie en commissioning bij klanten.</p>\n\n<p>In dit artikelarchief lees je over field service functies binnen gebouwgebonden techniek en specialistische installaties. We behandelen opleidingen, certificaten, gereedschap, veiligheid, energieprestaties en klantcontact. Ook salaris, consignatie, servicegebieden en doorgroeimogelijkheden naar specialist of werkvoorbereiding komen aan bod.</p>\n\n<p>De artikelen helpen je bepalen welke technische discipline en werkomgeving bij je past. Zo kun je vacatures vergelijken en ontdekken hoe je vanuit Installatietechniek een passende loopbaan in field service opbouwt.</p>",
+      "link": "https://thefieldservicecompany.nl/beroepengids/studierichtingen/installatietechniek/",
+      "name": "Installatietechniek",
+      "slug": "installatietechniek",
+      "taxonomy": "beroep_studierichting",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_studierichting/612",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_studierichting"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_studierichting"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_studierichting=612"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 613,
+      "count": 0,
+      "description": "<h2>Studierichting Koude- en Klimaattechniek | Artikelen</h2>\n\n<p>De studierichting Koude- en Klimaattechniek leert je werken met compressoren, koudemiddelen, warmtepompen en regelingen. De kennis is toepasbaar bij service aan koelinstallaties, airconditioning, klimaatsystemen en temperatuurkritische apparatuur in uiteenlopende sectoren.</p>\n\n<p>In dit archief verzamelen we artikelen over field service carrières binnen koel- en klimaattechniek. Onderwerpen zijn onderhoud, lekcontrole, storingsanalyse, certificering, energiegebruik en contact met klanten. Ook opleiding, salaris, consignatie, reizen en doorgroei naar specialistische of coördinerende functies worden besproken.</p>\n\n<p>Zo krijg je zicht op de verschillende werkomgevingen achter deze studie. De artikelen helpen je functies vergelijken op techniek, installatiegrootte en verantwoordelijkheid en ondersteunen je bij het kiezen van een passende field service richting.</p>",
+      "link": "https://thefieldservicecompany.nl/beroepengids/studierichtingen/koude-en-klimaattechniek/",
+      "name": "Koude- en Klimaattechniek",
+      "slug": "koude-en-klimaattechniek",
+      "taxonomy": "beroep_studierichting",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_studierichting/613",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_studierichting"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_studierichting"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_studierichting=613"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 614,
+      "count": 0,
+      "description": "<h2>Studierichting Luchtvaarttechniek | Artikelen</h2>\n\n<p>De studierichting Luchtvaarttechniek geeft kennis van constructies, aandrijvingen, avionica en onderhoudsprocessen waarin veiligheid en traceerbaarheid leidend zijn. Die achtergrond kan relevant zijn bij service aan vliegtuigen, grondmaterieel, testapparatuur en andere hoogwaardige technische systemen.</p>\n\n<p>In dit archief vind je artikelen over mogelijke field service loopbanen na Luchtvaarttechniek. We behandelen functies, certificering, kwaliteitsdocumentatie, diagnose, internationale werkomgevingen en aanvullende producttraining. Ook salaris, ploegendienst, reizen en overstappen naar andere hightechsectoren komen aan bod.</p>\n\n<p>De artikelen helpen je jouw specialistische opleiding breder te vertalen. Zo kun je vacatures vergelijken op regelgeving, techniek en klantomgeving en ontdekken welke field service carrière aansluit bij jouw luchtvaarttechnische kennis.</p>",
+      "link": "https://thefieldservicecompany.nl/beroepengids/studierichtingen/luchtvaarttechniek/",
+      "name": "Luchtvaarttechniek",
+      "slug": "luchtvaarttechniek",
+      "taxonomy": "beroep_studierichting",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_studierichting/614",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_studierichting"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_studierichting"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_studierichting=614"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 615,
+      "count": 0,
+      "description": "<h2>Studierichting Maritieme Techniek | Artikelen</h2>\n\n<p>De studierichting Maritieme Techniek brengt werktuigbouwkunde, elektrotechniek en scheepssystemen samen. Die kennis past bij technische service aan motoren, pompen, navigatie, energievoorziening en andere installaties aan boord, in havens of op offshorelocaties.</p>\n\n<p>Onder deze studierichting verzamelen we artikelen over field service functies in de maritieme wereld. Je leest over onderhoud, commissioning, veiligheid, werken aan boord en samenwerking met bemanning en werven. Ook opleidingen, certificaten, salaris, internationale reizen en doorgroeimogelijkheden worden behandeld.</p>\n\n<p>Zo kun je bepalen welk type schip, systeem en reispatroon bij je past. De artikelen helpen je vacatures vergelijken en geven richting aan een loopbaan waarin Maritieme Techniek en internationale field service samenkomen.</p>",
+      "link": "https://thefieldservicecompany.nl/beroepengids/studierichtingen/maritieme-techniek/",
+      "name": "Maritieme Techniek",
+      "slug": "maritieme-techniek",
+      "taxonomy": "beroep_studierichting",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_studierichting/615",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_studierichting"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_studierichting"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_studierichting=615"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 616,
+      "count": 0,
+      "description": "<h2>Studierichting Mechatronica | Artikelen</h2>\n\n<p>De studierichting Mechatronica leert je kijken naar de samenwerking tussen mechanische onderdelen, elektronica, aandrijvingen en software. Daardoor vormt deze opleiding een brede basis voor service aan machines, robots, productielijnen en andere geautomatiseerde systemen.</p>\n\n<p>In dit archief verzamelen we artikelen over wat je met Mechatronica binnen field service kunt doen. Onderwerpen zijn storingsdiagnose, onderhoud, commissioning, technische functies, producttraining en specialiseren in hardware of software. Ook salaris, reizen, klantcontact en doorgroeimogelijkheden komen aan bod.</p>\n\n<p>De artikelen helpen je kiezen welke technische combinatie en werkomgeving bij je passen. Zo kun je functies en vacatures vergelijken en ontdekken waar jouw mechatronische achtergrond het beste tot zijn recht komt binnen field service.</p>",
+      "link": "https://thefieldservicecompany.nl/beroepengids/studierichtingen/mechatronica/",
+      "name": "Mechatronica",
+      "slug": "mechatronica",
+      "taxonomy": "beroep_studierichting",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_studierichting/616",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_studierichting"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_studierichting"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_studierichting=616"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 617,
+      "count": 0,
+      "description": "<h2>Studierichting Mobiele Werktuigentechniek | Artikelen</h2>\n\n<p>De studierichting Mobiele Werktuigentechniek geeft kennis van landbouwmachines, bouwmaterieel en andere mobiele werktuigen. Mechanica, hydrauliek, motoren en voertuigelektronica komen daarbij samen. Service vindt vaak plaats op locatie, omdat de machine niet eenvoudig naar een werkplaats kan.</p>\n\n<p>In dit archief vind je artikelen over field service loopbanen met mobiele machines. Je leest over diagnose, onderhoud, servicewagens, gereedschap, opleidingen en producttraining. Daarnaast behandelen we salaris, storingsdiensten, reisgebieden, seizoensdrukte en doorgroei naar specialist of technisch adviseur.</p>\n\n<p>Zo krijg je inzicht in de verschillende sectoren en machines die bij deze studie passen. De artikelen helpen je vacatures vergelijken en bepalen welke vorm van mobiele field service aansluit bij jouw praktische aanleg.</p>",
+      "link": "https://thefieldservicecompany.nl/beroepengids/studierichtingen/mobiele-werktuigentechniek/",
+      "name": "Mobiele Werktuigentechniek",
+      "slug": "mobiele-werktuigentechniek",
+      "taxonomy": "beroep_studierichting",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_studierichting/617",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_studierichting"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_studierichting"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_studierichting=617"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 618,
+      "count": 0,
+      "description": "<h2>Studierichting Operationele Techniek | Artikelen</h2>\n\n<p>De studierichting Operationele Techniek leert je installaties bedienen, bewaken en onderhouden onder bedrijfsomstandigheden. Je ontwikkelt inzicht in processen, veiligheid, energie en technische beschikbaarheid. Die ervaring kan aansluiten op servicefuncties rond productie-, energie- en procesinstallaties.</p>\n\n<p>In dit artikelarchief behandelen we field service mogelijkheden voor mensen met een achtergrond in Operationele Techniek. Onderwerpen zijn storingsanalyse, onderhoud, inspectie, commissioning, klantlocaties en aanvullende technische kennis. Ook opleiding, salaris, ploegendienst, reizen en doorgroei komen aan bod.</p>\n\n<p>De artikelen helpen je bepalen of je op één locatie wilt blijven of juist verschillende installaties en klanten wilt ondersteunen. Zo kun je vacatures vergelijken en een passende volgende stap binnen technische service kiezen.</p>",
+      "link": "https://thefieldservicecompany.nl/beroepengids/studierichtingen/operationele-techniek/",
+      "name": "Operationele Techniek",
+      "slug": "operationele-techniek",
+      "taxonomy": "beroep_studierichting",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_studierichting/618",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_studierichting"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_studierichting"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_studierichting=618"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 619,
+      "count": 0,
+      "description": "<h2>Studierichting Procestechniek | Artikelen</h2>\n\n<p>De studierichting Procestechniek richt zich op industriële processen, apparatuur en de samenhang tussen druk, temperatuur, stroming en kwaliteit. Die kennis is waardevol bij technische service aan pompen, kleppen, doseersystemen, analyseapparatuur en complete procesinstallaties.</p>\n\n<p>In dit archief verzamelen we artikelen over field service loopbanen na Procestechniek. Je leest over onderhoud, diagnose, commissioning, veiligheid, procesmetingen en samenwerking met operators en engineers. Daarnaast komen opleidingen, producttraining, salaris, reizen en specialistische doorgroei aan bod.</p>\n\n<p>Zo ontdek je hoe proceskennis kan worden ingezet buiten een vaste productieomgeving. De artikelen helpen je functies en vacatures vergelijken op installatie, sector en verantwoordelijkheid en geven richting aan een technische servicecarrière.</p>",
+      "link": "https://thefieldservicecompany.nl/beroepengids/studierichtingen/procestechniek/",
+      "name": "Procestechniek",
+      "slug": "procestechniek",
+      "taxonomy": "beroep_studierichting",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_studierichting/619",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_studierichting"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_studierichting"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_studierichting=619"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 620,
+      "count": 0,
+      "description": "<h2>Studierichting Robotica | Artikelen</h2>\n\n<p>De studierichting Robotica leert je hoe sensoren, aandrijvingen, besturingen en software samen een bewegend systeem vormen. Die brede kennis past bij service aan industriële robots, logistieke systemen, cobots en andere geautomatiseerde toepassingen bij klanten.</p>\n\n<p>In dit archief vind je artikelen over field service carrières binnen Robotica. Onderwerpen zijn installatie, kalibratie, programmering, storingsdiagnose, veiligheid en samenwerking met productie en engineering. Ook opleiding, producttraining, salaris, internationale projecten en doorgroei worden behandeld.</p>\n\n<p>De artikelen helpen je bepalen of je vooral wilt programmeren, sleutelen, in bedrijf stellen of klanten ondersteunen. Zo kun je vacatures vergelijken en ontdekken welke combinatie van robottechniek en field service aansluit bij jouw studie en interesses.</p>",
+      "link": "https://thefieldservicecompany.nl/beroepengids/studierichtingen/robotica/",
+      "name": "Robotica",
+      "slug": "robotica",
+      "taxonomy": "beroep_studierichting",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_studierichting/620",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_studierichting"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_studierichting"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_studierichting=620"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 621,
+      "count": 0,
+      "description": "<h2>Studierichting Scheepsbouwkunde | Artikelen</h2>\n\n<p>De studierichting Scheepsbouwkunde geeft inzicht in scheepsconstructies, stabiliteit, materiaalgebruik en technische systemen. Deze achtergrond kan relevant zijn bij nieuwbouw, refits, inspecties, commissioning en service aan installaties op schepen en offshoreprojecten.</p>\n\n<p>In dit archief verzamelen we artikelen over field service mogelijkheden na Scheepsbouwkunde. Je leest over functies, werven, projectlocaties, kwaliteitscontrole, samenwerking aan boord en aanvullende systeemkennis. Ook salaris, internationale reizen, projectduur en doorgroei naar supervision of management komen aan bod.</p>\n\n<p>Zo kun je jouw kennis van het complete schip verbinden met concrete technische rollen. De artikelen helpen je vacatures vergelijken op projecttype, systeem en reispatroon en ondersteunen je bij het kiezen van een maritieme field service loopbaan.</p>",
+      "link": "https://thefieldservicecompany.nl/beroepengids/studierichtingen/scheepsbouwkunde/",
+      "name": "Scheepsbouwkunde",
+      "slug": "scheepsbouwkunde",
+      "taxonomy": "beroep_studierichting",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_studierichting/621",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_studierichting"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_studierichting"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_studierichting=621"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 622,
+      "count": 0,
+      "description": "<h2>Studierichting Technische Bedrijfskunde | Artikelen</h2>\n\n<p>De studierichting Technische Bedrijfskunde leert je technische vraagstukken bekijken vanuit processen, kosten, mensen en klantbelangen. Die combinatie sluit aan op functies waarin service moet worden gepland, verbeterd en aangestuurd, zonder de technische praktijk uit het oog te verliezen.</p>\n\n<p>In dit artikelarchief lees je over field service loopbanen zoals Service Coördinator, projectleider en Service Manager. We behandelen planning, KPI&#039;s, klantprocessen, onderhoudsorganisatie, aanvullende praktijkkennis en de stap vanuit of naar techniek. Ook salaris, reizen en doorgroeimogelijkheden krijgen aandacht.</p>\n\n<p>De artikelen helpen je bepalen hoeveel techniek en organisatie je in je werk wilt combineren. Zo kun je functies en vacatures vergelijken en ontdekken welke rol na Technische Bedrijfskunde aansluit bij jouw kwaliteiten en ambities.</p>",
+      "link": "https://thefieldservicecompany.nl/beroepengids/studierichtingen/technische-bedrijfskunde/",
+      "name": "Technische Bedrijfskunde",
+      "slug": "technische-bedrijfskunde",
+      "taxonomy": "beroep_studierichting",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_studierichting/622",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_studierichting"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_studierichting"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_studierichting=622"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 623,
+      "count": 0,
+      "description": "<h2>Studierichting Technische Natuurkunde | Artikelen</h2>\n\n<p>De studierichting Technische Natuurkunde geeft een analytische basis voor complexe technische systemen. Je leert verschijnselen meten, verklaren en modelleren. Die kennis kan relevant zijn bij service aan laboratoriumapparatuur, halfgeleidersystemen, optica, sensortechniek en andere hightech toepassingen.</p>\n\n<p>In dit archief verzamelen we artikelen over field service mogelijkheden voor technisch natuurkundigen. Onderwerpen zijn diagnose, kalibratie, meetonzekerheid, producttraining en samenwerking met research en engineering. Ook opleiding, salaris, internationale klanten, reizen en specialistische doorgroei worden besproken.</p>\n\n<p>Zo ontdek je waar jouw theoretische diepgang praktisch wordt ingezet. De artikelen helpen je functies vergelijken op technologie, klantomgeving en verantwoordelijkheid en geven richting aan een loopbaan waarin analyse en field service samenkomen.</p>",
+      "link": "https://thefieldservicecompany.nl/beroepengids/studierichtingen/technische-natuurkunde/",
+      "name": "Technische Natuurkunde",
+      "slug": "technische-natuurkunde",
+      "taxonomy": "beroep_studierichting",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_studierichting/623",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_studierichting"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_studierichting"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_studierichting=623"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 624,
+      "count": 0,
+      "description": "<h2>Studierichting Werktuigbouwkunde | Artikelen</h2>\n\n<p>De studierichting Werktuigbouwkunde vormt een brede basis voor het begrijpen en verbeteren van machines en installaties. Kennis van constructies, aandrijvingen, materialen, thermodynamica en onderhoud is bruikbaar in vrijwel iedere sector waarin technische systemen op locatie moeten blijven presteren.</p>\n\n<p>In dit archief vind je artikelen over field service functies na Werktuigbouwkunde. We behandelen onderhoud, storingsdiagnose, commissioning, installatie, technische specialisaties en de keuze tussen praktisch en engineeringsgericht werk. Ook opleiding, producttraining, salaris, reizen en doorgroei komen aan bod.</p>\n\n<p>De artikelen helpen je de breedte van je studie vertalen naar een concrete richting. Zo kun je functies en vacatures vergelijken op machine, sector en verantwoordelijkheid en een field service baan kiezen die aansluit bij jouw kennis en manier van werken.</p>",
+      "link": "https://thefieldservicecompany.nl/beroepengids/studierichtingen/werktuigbouwkunde/",
+      "name": "Werktuigbouwkunde",
+      "slug": "werktuigbouwkunde",
+      "taxonomy": "beroep_studierichting",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_studierichting/624",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_studierichting"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_studierichting"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_studierichting=624"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    }
+  ],
+  "intros": [
+    {
+      "id": 602,
+      "slug": "autotechniek",
+      "intro": "Met de studierichting Autotechniek ontwikkel je praktische kennis van voertuigen, diagnose en onderhoud. Ontdek via onze artikelen hoe je die achtergrond kunt inzetten in field service.",
+      "archive_title": "Studierichting Autotechniek | Artikelen"
+    },
+    {
+      "id": 603,
+      "slug": "bedrijfsautotechniek",
+      "intro": "Bedrijfsautotechniek combineert voertuigkennis met zware techniek en professioneel materieel. Lees hoe deze studierichting aansluit op field service rond trucks, bussen en gespecialiseerde voertuigen.",
+      "archive_title": "Studierichting Bedrijfsautotechniek | Artikelen"
+    },
+    {
+      "id": 604,
+      "slug": "chemische-technologie",
+      "intro": "De studierichting Chemische Technologie verbindt proceskennis, veiligheid en nauwkeurig meten. Ontdek artikelen over field service functies rond productie-installaties, analyseapparatuur en procestechniek.",
+      "archive_title": "Studierichting Chemische Technologie | Artikelen"
+    },
+    {
+      "id": 605,
+      "slug": "civiele-techniek",
+      "intro": "Civiele Techniek draait om infrastructuur, constructies en projecten in de gebouwde omgeving. Lees hoe deze studierichting kan aansluiten op technische project- en field service functies.",
+      "archive_title": "Studierichting Civiele Techniek | Artikelen"
+    },
+    {
+      "id": 606,
+      "slug": "elektronica",
+      "intro": "Met de studierichting Elektronica leer je schakelingen, sensoren en besturingen doorgronden. Ontdek artikelen over field service rond slimme apparatuur, meettechniek en complexe elektronische systemen.",
+      "archive_title": "Studierichting Elektronica | Artikelen"
+    },
+    {
+      "id": 607,
+      "slug": "elektrotechniek",
+      "intro": "Elektrotechniek vormt een sterke basis voor service aan machines, installaties en energiesystemen. Lees welke field service functies en technische richtingen aansluiten op deze veelzijdige studie.",
+      "archive_title": "Studierichting Elektrotechniek | Artikelen"
+    },
+    {
+      "id": 608,
+      "slug": "embedded-systems",
+      "intro": "Embedded Systems verbindt elektronica, software en slimme apparaten. Ontdek via onze artikelen hoe deze studierichting past bij field service rond verbonden en programmeerbare technische systemen.",
+      "archive_title": "Studierichting Embedded Systems | Artikelen"
+    },
+    {
+      "id": 609,
+      "slug": "energietechniek",
+      "intro": "Energietechniek richt zich op het veilig opwekken, opslaan en verdelen van energie. Lees over field service functies rond netten, laadtechniek en duurzame energiesystemen.",
+      "archive_title": "Studierichting Energietechniek | Artikelen"
+    },
+    {
+      "id": 610,
+      "slug": "ict-technische-informatica",
+      "intro": "ICT en Technische Informatica brengen software, netwerken en technische systemen samen. Ontdek artikelen over field service rond OT, connectiviteit en slimme apparatuur.",
+      "archive_title": "Studierichting ICT & Technische Informatica | Artikelen"
+    },
+    {
+      "id": 611,
+      "slug": "industriele-automatisering",
+      "intro": "Industriële Automatisering draait om PLC’s, aandrijvingen en slimme productielijnen. Lees welke field service functies passen bij deze technische studierichting.",
+      "archive_title": "Studierichting Industriële Automatisering | Artikelen"
+    },
+    {
+      "id": 612,
+      "slug": "installatietechniek",
+      "intro": "Installatietechniek geeft een praktische basis voor verwarmings-, lucht-, water- en regelsystemen. Ontdek artikelen over de field service functies die hierop aansluiten.",
+      "archive_title": "Studierichting Installatietechniek | Artikelen"
+    },
+    {
+      "id": 613,
+      "slug": "koude-en-klimaattechniek",
+      "intro": "Koude- en Klimaattechniek draait om betrouwbare koeling, verwarming en klimaatbeheersing. Lees over field service functies waarin diagnose, onderhoud en veiligheid centraal staan.",
+      "archive_title": "Studierichting Koude- en Klimaattechniek | Artikelen"
+    },
+    {
+      "id": 614,
+      "slug": "luchtvaarttechniek",
+      "intro": "Luchtvaarttechniek combineert nauwkeurig onderhoud met strenge veiligheids- en kwaliteitseisen. Ontdek hoe deze studierichting kan aansluiten op gespecialiseerde field service functies.",
+      "archive_title": "Studierichting Luchtvaarttechniek | Artikelen"
+    },
+    {
+      "id": 615,
+      "slug": "maritieme-techniek",
+      "intro": "Maritieme Techniek richt zich op schepen, aandrijvingen en systemen die onder zware omstandigheden functioneren. Lees over internationale field service kansen binnen de maritieme sector.",
+      "archive_title": "Studierichting Maritieme Techniek | Artikelen"
+    },
+    {
+      "id": 616,
+      "slug": "mechatronica",
+      "intro": "Mechatronica verbindt mechanica, elektrotechniek en besturingstechniek. Ontdek artikelen over field service functies waarin je complete machines en systemen leert doorgronden.",
+      "archive_title": "Studierichting Mechatronica | Artikelen"
+    },
+    {
+      "id": 617,
+      "slug": "mobiele-werktuigentechniek",
+      "intro": "Mobiele Werktuigentechniek draait om krachtige machines die worden onderhouden waar ze worden ingezet. Lees over field service functies rond hydrauliek, aandrijving en elektronica.",
+      "archive_title": "Studierichting Mobiele Werktuigentechniek | Artikelen"
+    },
+    {
+      "id": 618,
+      "slug": "operationele-techniek",
+      "intro": "Operationele Techniek richt zich op het veilig en continu laten draaien van technische installaties. Ontdek artikelen over de aansluiting met onderhoud, commissioning en field service.",
+      "archive_title": "Studierichting Operationele Techniek | Artikelen"
+    },
+    {
+      "id": 619,
+      "slug": "procestechniek",
+      "intro": "Procestechniek leert je begrijpen hoe productie-installaties veilig, stabiel en efficiënt functioneren. Lees over field service functies rond pompen, kleppen en meet- en regeltechniek.",
+      "archive_title": "Studierichting Procestechniek | Artikelen"
+    },
+    {
+      "id": 620,
+      "slug": "robotica",
+      "intro": "Robotica combineert mechanica, elektronica, software en beweging. Ontdek artikelen over field service functies rond robotcellen, automatisering en slimme machines.",
+      "archive_title": "Studierichting Robotica | Artikelen"
+    },
+    {
+      "id": 621,
+      "slug": "scheepsbouwkunde",
+      "intro": "Scheepsbouwkunde verbindt constructie, techniek en de praktijk aan boord. Lees hoe deze studierichting aansluit op field service, inspectie en internationale maritieme projecten.",
+      "archive_title": "Studierichting Scheepsbouwkunde | Artikelen"
+    },
+    {
+      "id": 622,
+      "slug": "technische-bedrijfskunde",
+      "intro": "Technische Bedrijfskunde verbindt techniek met processen, planning en organisatie. Ontdek artikelen over coördinerende en leidinggevende functies binnen field service.",
+      "archive_title": "Studierichting Technische Bedrijfskunde | Artikelen"
+    },
+    {
+      "id": 623,
+      "slug": "technische-natuurkunde",
+      "intro": "Technische Natuurkunde combineert meten, modelleren en diepgaande analyse. Lees over field service functies rond hightech apparatuur, sensoren en precisiesystemen.",
+      "archive_title": "Studierichting Technische Natuurkunde | Artikelen"
+    },
+    {
+      "id": 624,
+      "slug": "werktuigbouwkunde",
+      "intro": "Werktuigbouwkunde geeft inzicht in machines, krachten, materialen en beweging. Ontdek via onze artikelen hoeveel field service richtingen bij deze brede technische studie passen.",
+      "archive_title": "Studierichting Werktuigbouwkunde | Artikelen"
+    }
+  ]
+}

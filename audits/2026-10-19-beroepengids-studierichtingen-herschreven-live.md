@@ -17,10 +17,10 @@ Per term is toegepast:
 
 1. archieftitel `Studierichting [term] | Artikelen`;
 2. een volledig nieuwe, korte intro met field service verbinding;
-3. dezelfde archieftitel als H2 boven de description;
+3. H2 `Studierichting [term]` boven de description, zonder `| Artikelen`;
 4. drie unieke compacte archiefalinea's.
 
-De descriptions bevatten 104–123 woorden en de intro's 19–26 woorden.
+De descriptions bevatten 102–121 woorden en de intro's 19–26 woorden.
 
 ## Uitgevoerde livewijzigingen
 
@@ -63,6 +63,13 @@ Tijdens de uitvoering werkte de beveiliging tweemaal zoals bedoeld:
 
 De derde publicatieronde slaagde volledig.
 
+Daarna is op verzoek uitsluitend de suffix ` | Artikelen` uit de eerste H2
+van alle 23 descriptions verwijderd. De intro's, de drie bestaande
+descriptionalinea's en de Pods-archieftitels zijn daarbij ongewijzigd gebleven.
+De uitvoering accepteerde alleen deze exacte H2-wijziging en stopte bij ieder
+ander inhoudelijk verschil. Het herstelbestand staat in
+`audits/exports/beroep-studierichtingen-before-h2-articles-removal-2026-10-19.json`.
+
 ## Verificatie
 
 Na de definitieve publicatie zijn alle waarden opnieuw uit LIVE gelezen en
@@ -74,6 +81,11 @@ exact met de lokale bron vergeleken:
 - afwijkingen: 0;
 - tijdelijke snippet verwijderd: ja.
 
+De H2-correctie is daarna afzonderlijk via de standaard WordPress REST API
+gecontroleerd: 23 van 23 descriptions exact, intro's niet aangeraakt en
+archieftitels niet aangeraakt. Het tijdelijke beheerdersendpoint gaf daarna
+HTTP 404 en was dus verwijderd.
+
 Openbare cache-omzeilende controles zijn uitgevoerd voor:
 
 - Autotechniek;
@@ -82,8 +94,9 @@ Openbare cache-omzeilende controles zijn uitgevoerd voor:
 - Technische Bedrijfskunde;
 - Werktuigbouwkunde.
 
-Alle vijf URL's gaven HTTP 200 en toonden exact de nieuwe H1, dezelfde titel
-als H2, de juiste intro en alle drie archiefalinea's.
+Alle vijf URL's gaven HTTP 200. Na de H2-correctie zijn Autotechniek, ICT &
+Technische Informatica en Werktuigbouwkunde opnieuw openbaar gecontroleerd:
+de H1 bevat nog `| Artikelen` en de description-H2 niet.
 
 ## Bronnen
 

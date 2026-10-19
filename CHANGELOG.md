@@ -26,12 +26,15 @@
 
 - Alle 23 descriptions, intro's en archieftitels van
   `beroep_studierichting` zijn LIVE ingericht als artikelarchief.
-- Iedere description begint met `Studierichting [term] | Artikelen` als H2 en
+- Iedere description begint met `Studierichting [term]` als H2 en
   bevat daarna drie compacte alinea's over de studie, toekomstige artikelen en
   het vergelijken van field service functies en vacatures.
+- De H1/Pods-archieftitel blijft `Studierichting [term] | Artikelen`; alleen
+  de suffix `| Artikelen` is uit de H2 verwijderd. Intro's en alinea's zijn
+  daarbij ongewijzigd gebleven.
 - De eerdere vier uitgebreide vraagkoppen per term zijn verwijderd en worden
   later als zelfstandige artikelen uitgewerkt.
-- De descriptions bevatten 104–123 woorden en de intro's 19–26 woorden.
+- De descriptions bevatten 102–121 woorden en de intro's 19–26 woorden.
 - Alle 69 waarden zijn exact via REST geverifieerd. Vijf openbare archieven
   gaven HTTP 200 en toonden de juiste H1, H2, intro en drie alinea's.
 - Er zijn geen termen, slugs, relaties, Pods, velden, vacatures, artikelen of

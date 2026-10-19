@@ -51,7 +51,11 @@ Gebruik als bestaande Pods-archieftitel exact:
 
 `Studierichting [TERM] | Artikelen`
 
-Plaats dezelfde tekst als één H2 direct boven de drie descriptionalinea's.
+Plaats direct boven de drie descriptionalinea's exact deze H2, dus zonder de
+archieftitelsuffix `| Artikelen`:
+
+`Studierichting [TERM]`
+
 Lever daarnaast een korte, uitnodigende intro die de studierichting direct met
 field service verbindt. Schrijf vervolgens:
 
@@ -118,9 +122,10 @@ description alleen H2-koppen en alinea's.
 Lever voor een Beroepengids-functienaam of -studierichting eerst een concept
 met archieftitel, intro, de goedgekeurde archiefalinea's, woordenaantal,
 feitencontrole en de exact bedoelde WordPress-taxonomie. Neem bij een
-studierichting ook de identieke archieftitel als H2 op. Lever bij andere
-uitgebreide taxonomyteksten eerst vier H2-koppen en de volledige tekst, tenzij
-voor die taxonomie een andere goedgekeurde structuur is vastgelegd.
+studierichting ook de H2 `Studierichting [TERM]` zonder `| Artikelen` op.
+Lever bij andere uitgebreide taxonomyteksten eerst vier H2-koppen en de
+volledige tekst, tenzij voor die taxonomie een andere goedgekeurde structuur
+is vastgelegd.
 
 Publiceer pas na inhoudelijke goedkeuring.
 
@@ -145,8 +150,8 @@ Publiceer pas na inhoudelijke goedkeuring.
 - Volgt de tekst de goedgekeurde structuur voor deze specifieke taxonomie?
 - Is een Beroepengids-functienaam duidelijk een introductie op artikelen en
   niet zelf een verzameling halve artikelen?
-- Begint een Beroepengids-studierichting met de goedgekeurde archieftitel als
-  H2 en verwijst de tekst naar latere artikelen?
+- Begint een Beroepengids-studierichting met `Studierichting [TERM]` als H2,
+  zonder `| Artikelen`, en verwijst de tekst naar latere artikelen?
 - Bevat iedere alinea concrete informatie in plaats van algemene claims?
 - Kloppen opleiding, machines, technieken, functies en sectoren inhoudelijk?
 - Is de tekst prettig, actief en motiverend om te lezen?
