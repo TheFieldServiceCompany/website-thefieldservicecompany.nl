@@ -7,10 +7,14 @@
 - Iedere description bevat drie compacte alinea's: introductie op de
   functienaam, verwijzing naar toekomstige artikelen en uitleg hoe de lezer
   daarmee functies en vacatures kan vergelijken.
+- Iedere description begint nu met `Functienaam [term]` als H2. De
+  H1/Pods-archieftitel blijft `Functienaam [term] | Artikelen`; intro's en de
+  drie bestaande alinea's zijn bij deze H2-toevoeging niet gewijzigd.
 - De eerdere vier H2-vragen per term zijn verwijderd. Die zoekvragen worden
   later als zelfstandige artikelen uitgewerkt.
 - Alle H1's gebruiken het patroon `Functienaam [term] | Artikelen`; de
-  descriptions bevatten 104–143 woorden en de intro's 21–38 woorden.
+  descriptions bevatten inclusief H2 107–147 woorden en de intro's 21–38
+  woorden.
 - De teksten zijn gebaseerd op de inhoud en het titelgebruik in actuele
   vacatures. Overlappende titels en spellingvarianten worden eerlijk
   uitgelegd en niet als kunstmatig verschillende beroepen gepresenteerd.

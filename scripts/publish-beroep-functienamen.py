@@ -304,6 +304,32 @@ def update_descriptions(
     return changed
 
 
+def validate_h2_only_change(
+    content_by_slug: dict[str, dict[str, Any]],
+    terms_by_slug: dict[str, dict[str, Any]],
+) -> None:
+    """Sta uitsluitend het toevoegen van de functienaam-H2 toe."""
+    for slug, item in content_by_slug.items():
+        intended = item["description"]
+        current = terms_by_slug[slug].get("description", "")
+        if current == intended:
+            continue
+        heading = f"<h2>{html.escape(item['descriptionHeading'])}</h2>"
+        if not intended.startswith(heading):
+            raise PublishError(f"Opgebouwde H2 ontbreekt bij {slug}")
+        previous = intended[len(heading):]
+        if previous.startswith("\r\n\r\n"):
+            previous = previous[4:]
+        elif previous.startswith("\n\n"):
+            previous = previous[2:]
+        else:
+            raise PublishError(f"Onverwachte scheiding na H2 bij {slug}")
+        if current != previous:
+            raise PublishError(
+                f"Description van {slug} wijkt buiten de toegestane H2-toevoeging af"
+            )
+
+
 def restore_descriptions(
     client: Client, terms_before: list[dict[str, Any]]
 ) -> None:
@@ -321,6 +347,7 @@ def main() -> int:
     parser.add_argument("--node", default="node")
     parser.add_argument("--backup")
     parser.add_argument("--apply", action="store_true")
+    parser.add_argument("--descriptions-only", action="store_true")
     args = parser.parse_args()
 
     content = build_content(args.node)
@@ -344,6 +371,51 @@ def main() -> int:
         return 0
     if not args.backup:
         raise PublishError("--backup is verplicht bij --apply")
+
+    if args.descriptions_only:
+        validate_h2_only_change(content_by_slug, terms_by_slug)
+        Path(args.backup).write_text(
+            json.dumps(
+                {
+                    "created_at": "2026-10-19",
+                    "taxonomy": TAXONOMY,
+                    "terms": terms_before,
+                },
+                ensure_ascii=False,
+                indent=2,
+            )
+            + "\n",
+            encoding="utf-8",
+        )
+        try:
+            descriptions_changed = update_descriptions(
+                client, content_by_slug, terms_by_slug
+            )
+            terms_after = fetch_terms(client)
+            _after_content, after_by_slug = preflight(content, terms_after)
+            mismatches = [
+                slug
+                for slug, item in content_by_slug.items()
+                if after_by_slug[slug].get("description", "") != item["description"]
+            ]
+            if mismatches:
+                raise PublishError(
+                    f"Eindcontrole mislukt voor descriptions: {mismatches}"
+                )
+        except Exception:
+            restore_descriptions(client, terms_before)
+            raise
+        audit.update(
+            {
+                "descriptions_changed": descriptions_changed,
+                "descriptions_verified": 32,
+                "intros_touched": False,
+                "archive_titles_touched": False,
+                "backup": args.backup,
+            }
+        )
+        print(json.dumps(audit, ensure_ascii=False, indent=2))
+        return 0
 
     snippet_id: int | None = None
     intros_before: list[dict[str, Any]] | None = None

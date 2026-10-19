@@ -84,6 +84,11 @@ Gebruik als bestaande Pods-archieftitel exact:
 
 `Functienaam [TERM] | Artikelen`
 
+Plaats direct boven de drie descriptionalinea's exact deze H2, dus zonder de
+archieftitelsuffix `| Artikelen`:
+
+`Functienaam [TERM]`
+
 Lever daarnaast een korte, uitnodigende intro met een directe verbinding naar
 field service. Schrijf vervolgens drie compacte alinea's:
 
@@ -122,7 +127,8 @@ description alleen H2-koppen en alinea's.
 Lever voor een Beroepengids-functienaam of -studierichting eerst een concept
 met archieftitel, intro, de goedgekeurde archiefalinea's, woordenaantal,
 feitencontrole en de exact bedoelde WordPress-taxonomie. Neem bij een
-studierichting ook de H2 `Studierichting [TERM]` zonder `| Artikelen` op.
+functienaam de H2 `Functienaam [TERM]` en bij een studierichting de H2
+`Studierichting [TERM]` op, beide zonder `| Artikelen`.
 Lever bij andere uitgebreide taxonomyteksten eerst vier H2-koppen en de
 volledige tekst, tenzij voor die taxonomie een andere goedgekeurde structuur
 is vastgelegd.

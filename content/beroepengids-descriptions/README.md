@@ -33,12 +33,19 @@ relaties zijn in deze contentronde niet gewijzigd.
 ## Gevalideerde omvang
 
 - 32 bestaande termen;
-- 32 descriptions van 104–143 woorden en exact drie alinea's;
+- 32 descriptions van 107–147 woorden, één H2 en exact drie alinea's;
 - 32 uitnodigende intro's van 21–38 woorden;
 - 32 archieftitels volgens `Functienaam [term] | Artikelen`;
-- geen H2-vragen in de descriptions;
+- iedere description begint met `Functienaam [term]` als H2;
+- geen losse H2-vragen in de descriptions;
 - iedere intro en description bevat de relatie met field service.
 
-De template levert de H1 en dynamische blokken. De descriptions bevatten
-daarom alleen archiefintroductie in alinea's, zonder handmatig toegevoegde
+De template levert de H1 en dynamische blokken. De H1/Pods-archieftitel blijft
+`Functienaam [term] | Artikelen`; de description-H2 gebruikt
+`Functienaam [term]` zonder `| Artikelen`. Verder bevatten de descriptions
+alleen archiefintroductie in alinea's, zonder handmatig toegevoegde
 vacaturelinks, losse artikelvragen of templatecode.
+
+De bestaande live description van Commissioning Engineer gebruikt platte
+alinea-opmaak in plaats van `<p>`-tags. De marker `Description markup: plain`
+in de bron zorgt dat de builder die bestaande opmaak behoudt.

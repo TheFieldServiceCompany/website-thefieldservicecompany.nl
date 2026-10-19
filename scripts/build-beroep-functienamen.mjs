@@ -29,6 +29,8 @@ for (const section of sections) {
   const slug = body.match(/^Slug:\s*`([^`]+)`/m)?.[1];
   const archiveTitle = body.match(/^Archive title:\s*(.+)$/m)?.[1]?.trim();
   const intro = body.match(/^Intro:\s*(.+)$/m)?.[1]?.trim();
+  const descriptionMarkup =
+    body.match(/^Description markup:\s*(.+)$/m)?.[1]?.trim() || 'html';
 
   if (!slug || !archiveTitle || !intro) {
     throw new Error(`Slug, archieftitel of intro ontbreekt bij ${name}`);
@@ -36,6 +38,10 @@ for (const section of sections) {
   if (archiveTitle !== `Functienaam ${name} | Artikelen`) {
     throw new Error(`Onverwachte archieftitel bij ${name}: ${archiveTitle}`);
   }
+  if (!['html', 'plain'].includes(descriptionMarkup)) {
+    throw new Error(`Onbekende descriptionopmaak bij ${name}`);
+  }
+  const descriptionHeading = `Functienaam ${name}`;
   if (!/field service/i.test(intro)) {
     throw new Error(`Intro mist field service bij ${name}`);
   }
@@ -44,14 +50,21 @@ for (const section of sections) {
     .replace(/^Slug:.*$/m, '')
     .replace(/^Archive title:.*$/m, '')
     .replace(/^Intro:.*$/m, '')
+    .replace(/^Description markup:.*$/m, '')
     .trim();
-  const blocks = [];
+  const blocks = [`<h2>${escapeHtml(descriptionHeading)}</h2>`];
   let paragraph = [];
 
   const flushParagraph = () => {
     const value = paragraph.join(' ').replace(/\s+/g, ' ').trim();
     paragraph = [];
-    if (value) blocks.push(`<p>${escapeHtml(value)}</p>`);
+    if (value) {
+      blocks.push(
+        descriptionMarkup === 'plain'
+          ? escapeHtml(value)
+          : `<p>${escapeHtml(value)}</p>`,
+      );
+    }
   };
 
   for (const rawLine of content.split(/\r?\n/)) {
@@ -64,14 +77,22 @@ for (const section of sections) {
   }
   flushParagraph();
 
-  const description = blocks.join('\n\n');
-  const paragraphCount = (description.match(/<p>/g) || []).length;
+  const separator = descriptionMarkup === 'plain' ? '\r\n\r\n' : '\n\n';
+  const description = blocks.join(separator);
+  const headingCount = (description.match(/<h2>/g) || []).length;
+  const paragraphCount = blocks.length - 1;
   const wordCount = description
     .replace(/<[^>]+>/g, ' ')
     .replace(/\s+/g, ' ')
     .trim()
     .split(' ').length;
 
+  if (headingCount !== 1) {
+    throw new Error(`${name} heeft ${headingCount} H2-koppen; verwacht 1`);
+  }
+  if (!description.startsWith(`<h2>${escapeHtml(descriptionHeading)}</h2>`)) {
+    throw new Error(`Description begint niet met de juiste H2 bij ${name}`);
+  }
   if (paragraphCount !== 3) {
     throw new Error(`${name} heeft ${paragraphCount} alinea's; verwacht 3`);
   }
@@ -92,8 +113,11 @@ for (const section of sections) {
     name,
     slug,
     archiveTitle,
+    descriptionHeading,
+    descriptionMarkup,
     intro,
     description,
+    headingCount,
     paragraphCount,
     wordCount,
   });

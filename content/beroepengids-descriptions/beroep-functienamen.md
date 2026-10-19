@@ -2,9 +2,10 @@
 
 Doeltaxonomie: `beroep_functienaam`
 
-De template levert de H1 via `pods_archive_title`. Iedere description is een
-compacte introductie op het artikelarchief en bevat bewust geen losse
-artikelvragen als H2-koppen.
+De template levert de H1 via `pods_archive_title`. De contentbuilder plaatst
+automatisch `Functienaam [term]` als H2 boven iedere bestaande description.
+Iedere description is een compacte introductie op het artikelarchief en bevat
+bewust geen losse artikelvragen als H2-koppen.
 
 ## Service Engineer
 
@@ -252,6 +253,8 @@ Slug: `commissioning-engineer`
 Archive title: Functienaam Commissioning Engineer | Artikelen
 
 Intro: Een Commissioning Engineer test en stelt technische systemen in bedrijf voordat ze volledig worden overgedragen. Lees artikelen over deze specialistische functie binnen projecten en field service.
+
+Description markup: plain
 
 De functienaam Commissioning Engineer hoort bij het gecontroleerd opstarten, testen en opleveren van machines en installaties. Het werk brengt techniek, planning, veiligheid en samenwerking samen. Afhankelijk van het project ligt de nadruk op elektrotechniek, mechanica, procesbesturing, software of een combinatie daarvan.
 
