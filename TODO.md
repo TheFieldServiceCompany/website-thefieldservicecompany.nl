@@ -25,10 +25,12 @@ gewijzigd; open afhankelijkheden worden niet stilzwijgend overgeslagen.
 3. [ ] **Reisprofiel-mapping en aliasbeleid goedkeuren.** Bewuste
    zoektermvarianten in WordPress behouden waar ze publiek nut hebben, maar
    koppelen aan één canonieke betekenis of concreet Supabase-veld; geen
-   dubbele operationele keuzes in Appsmith maken. Voorstel: vijf termen houden
-   en twintig termen mappen, samenvoegen of verwijderen. Naamvoorstel:
-   `Hotelovernachtingen`, `Kort verblijf`, `Lang verblijf`, `Bijna elke dag
-   thuis` en `Weekenden thuis`; zie de audit.
+   dubbele operationele keuzes in Appsmith maken. Herzien voorstel: de gemengde
+   Reisprofiel-lijst vervangen door `Reisduur` (`1 dag`, `2–7`, `8–14`,
+   `15–30`, `31+ dagen`) en `Weekenden thuis` (0%, 25%, 50%, 75%, 100%).
+   Overnachten operationeel afleiden vanaf 2 reisdagen; het accommodatietype
+   kan daar niet uit worden afgeleid. `Hotelovernachtingen` als zoekwoord in
+   descriptions/content behouden; zie de audit.
 4. [ ] **Volledige WordPress–Supabase–Appsmith-keuzematrix maken.** Naast
    Reisprofielen ook Werkgebieden, Dagen internationaal en de resterende
    taxonomieën en keuzelijsten vergelijken op naam, betekenis, ID en status.

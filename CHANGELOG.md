@@ -1,5 +1,26 @@
 # Changelog
 
+## 2026-10-19 — Reisduur en Weekenden thuis meetbaar gemaakt
+
+- Het eerdere voorstel met `Kort verblijf` en `Lang verblijf` ingetrokken;
+  deze labels zijn zonder vaste grens niet meetbaar.
+- Als nieuwe publieke filterdimensie `Reisduur` voorgesteld met `1 dag`,
+  `2–7 dagen`, `8–14 dagen`, `15–30 dagen` en `31+ dagen`.
+- Vastgelegd dat `0 dagen` geen Reisduur is maar geen reis betekent, en dat
+  `1 dag` apart moet staan om overnachtingen exact te kunnen afleiden.
+- `Weekenden thuis` voorgesteld als 0%, 25%, 50%, 75% en 100%, met onbekend als
+  aparte lege datastatus. De huidige ja/nee-velden in Supabase zijn hiervoor
+  onvoldoende en worden niet zonder goedgekeurde migratie gewijzigd.
+- `Hotelovernachtingen` niet langer als aparte operationele filter voorgesteld;
+  vanaf een Reisduur van 2 dagen is minimaal één overnachting afleidbaar, maar
+  niet het type accommodatie. Het zoekwoord blijft beschikbaar voor
+  descriptions, landingspagina's en SEO.
+- Vastgelegd dat Werkgebieden en Dagen internationaal de andere hoofdvragen al
+  afdekken. Reisfrequentie is de enige mogelijke aanvullende kwantitatieve
+  dimensie en wordt alleen toegevoegd als daar aantoonbare filter- of
+  matchbehoefte voor is.
+- Er zijn geen livegegevens, databasevelden of instellingen gewijzigd.
+
 ## 2026-10-19 — Naamrichting Verblijfsduur en contentlaag vastgelegd
 
 - Voorgesteld de korte filterdimensie `Verblijfsduur` te gebruiken met de

@@ -52,7 +52,7 @@ gekopieerd.
 | --- | --- | --- |
 | Opleidingsniveau | `education_levels` | 4 actieve WordPress-mappings aanwezig; opnieuw valideren in eindcontrole |
 | Studierichting | `education_fields` | 23 actieve WordPress-mappings aanwezig; Appsmith-repository is hierop uitgelijnd |
-| Reisprofiel | Gestructureerde travel-velden | 25 termen geïnventariseerd; voorstel 5 houden en 20 mappen/samenvoegen/verwijderen wacht op goedkeuring |
+| Reisprofiel | Gestructureerde travel-velden | 25 termen geïnventariseerd; herzien voorstel is de gemengde lijst te vervangen door meetbare Reisduur-banden en percentages Weekenden thuis |
 | Dagen internationaal | Numerieke travel-velden | Bandmapping bestaat inhoudelijk, maar moet als formele conversieregel worden vastgelegd |
 | Werkgebied | `geographic_areas` en werkgebiedrelaties | Canonieke landen/regio's bestaan; volledige WordPress-mapping en relaties nog controleren |
 | Mobiliteit | Aparte mobility-tabellen | Bewust buiten Reisprofiel houden |
@@ -65,8 +65,10 @@ voor `vac_studierichting`, alle actief. Er zijn nog geen mappings voor
 
 ## Werkvolgorde
 
-1. Reisprofielen en de filterdimensie `Verblijfsduur` besluiten, veilig
-   omzetten en verifiëren.
+1. Reisprofielen en de meetbare filterdimensies `Reisduur` en `Weekenden thuis`
+   besluiten, veilig omzetten en verifiëren. Overnachten wordt dan uit
+   Reisduur afgeleid; het accommodatietype niet. `Hotelovernachtingen` blijft
+   daarnaast een contentzoekwoord.
 2. Dagen internationaal als numerieke/bandmapping formaliseren.
 3. Werkgebieden, landen en regio's volledig gelijk trekken.
 4. Opleidingsniveaus en studierichtingen opnieuw end-to-end valideren:
