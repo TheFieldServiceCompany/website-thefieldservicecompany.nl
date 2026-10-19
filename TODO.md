@@ -45,6 +45,11 @@ gewijzigd; open afhankelijkheden worden niet stilzwijgend overgeslagen.
    `23277` en de overige vacatures voordat Reisduur, Weekenden thuis en Hotel
    nachten/maand worden gekoppeld. De frontendplaatsing van de drie bestaande
    Search & Filter-velden doet de gebruiker handmatig.
+   De vijf Beroepengids-spiegels voor Bedrijfssectoren, Functie-inhoud,
+   Functienamen, Kennisgebieden en Werkgebieden zijn op 19 oktober LIVE
+   gelijkgetrokken met de vacaturetermen: 127 namen/slugs en 127 bestaande
+   relaties zijn gecontroleerd. Hun descriptions zijn bewust nog leeg en
+   blijven onderdeel van de latere inhoudelijke ronde.
 6. [ ] **Synchronisatieplan ontwerpen en testen.** Het travel-deel is in
    Supabase en de Appsmith-bron uitgevoerd en met rollbacktests gecontroleerd.
    De WordPress-taxonomiestructuur en Search & Filter-objecten zijn additive

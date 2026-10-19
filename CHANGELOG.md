@@ -1,5 +1,24 @@
 # Changelog
 
+## 2026-10-19 — Beroepengids-taxonomieën gelijkgetrokken met vacatures
+
+- De termen en slugs van Bedrijfssectoren, Functie-inhoud, Functienamen,
+  Kennisgebieden en Werkgebieden zijn LIVE één-op-één naar de bestaande
+  Beroepengids-taxonomieën gespiegeld.
+- 126 ontbrekende termen zijn via de standaard WordPress REST API aangemaakt;
+  daarbij zijn uitsluitend `name` en `slug` verstuurd. De ene bestaande
+  Functienaam is alleen qua hoofdletters gelijkgetrokken.
+- De vijf al bestaande Pods-relatievelden zijn gebruikt. 126 lege relaties
+  zijn ingevuld en de ene bestaande correcte relatie is behouden; de
+  eindcontrole bevestigt 127 van 127 matches op slug.
+- De eindtotalen zijn 33 Bedrijfssectoren, 29 Functie-inhoud-termen, 32
+  Functienamen, 25 Kennisgebieden en 8 Werkgebieden.
+- Er zijn geen descriptions, intro's, archieftitels of SEO-teksten ingevuld en
+  geen Pods, velden of GUI-configuraties gewijzigd. Alle 127 doeltermen hebben
+  nog een lege description.
+- Volledig log:
+  `audits/2026-10-19-beroepengids-vacaturetaxonomieen-live.md`.
+
 ## 2026-10-19 — Canoniek travelmodel afgerond en Appsmith-branches opgeschoond
 
 - De definitieve travelvelden zijn voor kandidaat en vacature gelijkgetrokken:
