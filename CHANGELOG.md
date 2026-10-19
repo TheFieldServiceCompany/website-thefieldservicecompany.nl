@@ -1,5 +1,24 @@
 # Changelog
 
+## 2026-10-19 — Beroepengids-bedrijfssectoren als artikelarchief ingericht
+
+- Alle 33 bestaande descriptions, intro's en archieftitels van
+  `beroep_bedrijfssector` zijn LIVE ingericht als artikelarchief.
+- Iedere H1 gebruikt `Bedrijfssector [term] | Artikelen`; iedere description
+  begint met `Bedrijfssector [term]` als H2 en bevat daarna drie compacte,
+  sectorspecifieke alinea's.
+- De bestaande lange vacaturedescriptions zijn als inhoudelijke bron gebruikt.
+  De nieuwe Beroepengids-teksten introduceren toekomstige artikelen en zijn
+  geen kopieën van de vacatureteksten.
+- De descriptions bevatten 100–125 woorden en de intro's 17–24 woorden.
+- Alle 99 waarden zijn na publicatie exact via REST geverifieerd. Aerospace &
+  Luchtvaart, Machinebouw, Semiconductor, Watertechnologie en HVAC &
+  Klimaattechniek zijn ook op de openbare pagina gecontroleerd.
+- Er zijn geen termen, slugs, parents, relaties, Pods, velden, vacatures,
+  artikelen of template-instellingen gewijzigd.
+- Volledig log:
+  `audits/2026-10-19-beroepengids-bedrijfssectoren-live.md`.
+
 ## 2026-10-19 — Beroepengids-functienamen als artikelarchief ingericht
 
 - Alle 32 bestaande descriptions, intro's en archieftitels van

@@ -1,0 +1,1823 @@
+{
+  "created_at": "2026-10-19",
+  "taxonomy": "beroep_bedrijfssector",
+  "terms": [
+    {
+      "id": 639,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/bedrijfssectoren/aerospace-luchtvaart/",
+      "name": "Aerospace &amp; Luchtvaart",
+      "slug": "aerospace-luchtvaart",
+      "taxonomy": "beroep_bedrijfssector",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_bedrijfssector/639",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_bedrijfssector"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_bedrijfssector"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_bedrijfssector=639"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 640,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/bedrijfssectoren/agritech/",
+      "name": "Agritech",
+      "slug": "agritech",
+      "taxonomy": "beroep_bedrijfssector",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_bedrijfssector/640",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_bedrijfssector"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_bedrijfssector"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_bedrijfssector=640"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 641,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/bedrijfssectoren/bouwmachines/",
+      "name": "Bouwmachines",
+      "slug": "bouwmachines",
+      "taxonomy": "beroep_bedrijfssector",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_bedrijfssector/641",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_bedrijfssector"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_bedrijfssector"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_bedrijfssector=641"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 642,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/bedrijfssectoren/chemische-industrie/",
+      "name": "Chemische Industrie",
+      "slug": "chemische-industrie",
+      "taxonomy": "beroep_bedrijfssector",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_bedrijfssector/642",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_bedrijfssector"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_bedrijfssector"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_bedrijfssector=642"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 643,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/bedrijfssectoren/defensie/",
+      "name": "Defensie",
+      "slug": "defensie",
+      "taxonomy": "beroep_bedrijfssector",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_bedrijfssector/643",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_bedrijfssector"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_bedrijfssector"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_bedrijfssector=643"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 644,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/bedrijfssectoren/energie/",
+      "name": "Energie",
+      "slug": "energie",
+      "taxonomy": "beroep_bedrijfssector",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_bedrijfssector/644",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_bedrijfssector"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_bedrijfssector"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_bedrijfssector=644"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 645,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/bedrijfssectoren/food-processing/",
+      "name": "Food Processing",
+      "slug": "food-processing",
+      "taxonomy": "beroep_bedrijfssector",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_bedrijfssector/645",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_bedrijfssector"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_bedrijfssector"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_bedrijfssector=645"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 646,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/bedrijfssectoren/grafische-industrie/",
+      "name": "Grafische Industrie",
+      "slug": "grafische-industrie",
+      "taxonomy": "beroep_bedrijfssector",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_bedrijfssector/646",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_bedrijfssector"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_bedrijfssector"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_bedrijfssector=646"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 647,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/bedrijfssectoren/heavy-lifting/",
+      "name": "Heavy Lifting",
+      "slug": "heavy-lifting",
+      "taxonomy": "beroep_bedrijfssector",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_bedrijfssector/647",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_bedrijfssector"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_bedrijfssector"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_bedrijfssector=647"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 648,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/bedrijfssectoren/hightech/",
+      "name": "Hightech",
+      "slug": "hightech",
+      "taxonomy": "beroep_bedrijfssector",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_bedrijfssector/648",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_bedrijfssector"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_bedrijfssector"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_bedrijfssector=648"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 649,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/bedrijfssectoren/hvac-klimaattechniek/",
+      "name": "HVAC &amp; Klimaattechniek",
+      "slug": "hvac-klimaattechniek",
+      "taxonomy": "beroep_bedrijfssector",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_bedrijfssector/649",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_bedrijfssector"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_bedrijfssector"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_bedrijfssector=649"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 650,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/bedrijfssectoren/industrial-automation/",
+      "name": "Industrial Automation",
+      "slug": "industrial-automation",
+      "taxonomy": "beroep_bedrijfssector",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_bedrijfssector/650",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_bedrijfssector"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_bedrijfssector"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_bedrijfssector=650"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 651,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/bedrijfssectoren/koeltechniek/",
+      "name": "Koeltechniek",
+      "slug": "koeltechniek",
+      "taxonomy": "beroep_bedrijfssector",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_bedrijfssector/651",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_bedrijfssector"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_bedrijfssector"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_bedrijfssector=651"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 652,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/bedrijfssectoren/logistics-intern-transport/",
+      "name": "Logistics &amp; Intern Transport",
+      "slug": "logistics-intern-transport",
+      "taxonomy": "beroep_bedrijfssector",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_bedrijfssector/652",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_bedrijfssector"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_bedrijfssector"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_bedrijfssector=652"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 653,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/bedrijfssectoren/machinebouw/",
+      "name": "Machinebouw",
+      "slug": "machinebouw",
+      "taxonomy": "beroep_bedrijfssector",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_bedrijfssector/653",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_bedrijfssector"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_bedrijfssector"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_bedrijfssector=653"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 654,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/bedrijfssectoren/maritiem/",
+      "name": "Maritiem",
+      "slug": "maritiem",
+      "taxonomy": "beroep_bedrijfssector",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_bedrijfssector/654",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_bedrijfssector"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_bedrijfssector"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_bedrijfssector=654"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 655,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/bedrijfssectoren/material-handling/",
+      "name": "Material Handling",
+      "slug": "material-handling",
+      "taxonomy": "beroep_bedrijfssector",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_bedrijfssector/655",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_bedrijfssector"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_bedrijfssector"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_bedrijfssector=655"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 656,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/bedrijfssectoren/medisch-farmaceutisch/",
+      "name": "Medisch &amp; Farmaceutisch",
+      "slug": "medisch-farmaceutisch",
+      "taxonomy": "beroep_bedrijfssector",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_bedrijfssector/656",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_bedrijfssector"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_bedrijfssector"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_bedrijfssector=656"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 657,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/bedrijfssectoren/metaalbewerking/",
+      "name": "Metaalbewerking",
+      "slug": "metaalbewerking",
+      "taxonomy": "beroep_bedrijfssector",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_bedrijfssector/657",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_bedrijfssector"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_bedrijfssector"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_bedrijfssector=657"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 658,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/bedrijfssectoren/mijnbouw/",
+      "name": "Mijnbouw",
+      "slug": "mijnbouw",
+      "taxonomy": "beroep_bedrijfssector",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_bedrijfssector/658",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_bedrijfssector"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_bedrijfssector"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_bedrijfssector=658"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 659,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/bedrijfssectoren/offshore/",
+      "name": "Offshore",
+      "slug": "offshore",
+      "taxonomy": "beroep_bedrijfssector",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_bedrijfssector/659",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_bedrijfssector"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_bedrijfssector"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_bedrijfssector=659"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 660,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/bedrijfssectoren/oil-gas/",
+      "name": "Oil &amp; Gas",
+      "slug": "oil-gas",
+      "taxonomy": "beroep_bedrijfssector",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_bedrijfssector/660",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_bedrijfssector"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_bedrijfssector"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_bedrijfssector=660"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 661,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/bedrijfssectoren/petrochemie/",
+      "name": "Petrochemie",
+      "slug": "petrochemie",
+      "taxonomy": "beroep_bedrijfssector",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_bedrijfssector/661",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_bedrijfssector"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_bedrijfssector"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_bedrijfssector=661"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 662,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/bedrijfssectoren/procesindustrie/",
+      "name": "Procesindustrie",
+      "slug": "procesindustrie",
+      "taxonomy": "beroep_bedrijfssector",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_bedrijfssector/662",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_bedrijfssector"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_bedrijfssector"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_bedrijfssector=662"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 663,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/bedrijfssectoren/procestechniek/",
+      "name": "Procestechniek",
+      "slug": "procestechniek",
+      "taxonomy": "beroep_bedrijfssector",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_bedrijfssector/663",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_bedrijfssector"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_bedrijfssector"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_bedrijfssector=663"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 664,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/bedrijfssectoren/recycling-technologie/",
+      "name": "Recycling Technologie",
+      "slug": "recycling-technologie",
+      "taxonomy": "beroep_bedrijfssector",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_bedrijfssector/664",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_bedrijfssector"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_bedrijfssector"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_bedrijfssector=664"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 665,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/bedrijfssectoren/renewable-energy/",
+      "name": "Renewable Energy",
+      "slug": "renewable-energy",
+      "taxonomy": "beroep_bedrijfssector",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_bedrijfssector/665",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_bedrijfssector"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_bedrijfssector"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_bedrijfssector=665"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 666,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/bedrijfssectoren/robotics/",
+      "name": "Robotics",
+      "slug": "robotics",
+      "taxonomy": "beroep_bedrijfssector",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_bedrijfssector/666",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_bedrijfssector"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_bedrijfssector"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_bedrijfssector=666"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 667,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/bedrijfssectoren/rotating-equipment/",
+      "name": "Rotating Equipment",
+      "slug": "rotating-equipment",
+      "taxonomy": "beroep_bedrijfssector",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_bedrijfssector/667",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_bedrijfssector"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_bedrijfssector"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_bedrijfssector=667"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 668,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/bedrijfssectoren/semiconductor/",
+      "name": "Semiconductor",
+      "slug": "semiconductor",
+      "taxonomy": "beroep_bedrijfssector",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_bedrijfssector/668",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_bedrijfssector"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_bedrijfssector"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_bedrijfssector=668"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 669,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/bedrijfssectoren/sorteertechniek/",
+      "name": "Sorteertechniek",
+      "slug": "sorteertechniek",
+      "taxonomy": "beroep_bedrijfssector",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_bedrijfssector/669",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_bedrijfssector"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_bedrijfssector"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_bedrijfssector=669"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 670,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/bedrijfssectoren/verpakkingstechniek/",
+      "name": "Verpakkingstechniek",
+      "slug": "verpakkingstechniek",
+      "taxonomy": "beroep_bedrijfssector",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_bedrijfssector/670",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_bedrijfssector"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_bedrijfssector"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_bedrijfssector=670"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 671,
+      "count": 0,
+      "description": "",
+      "link": "https://thefieldservicecompany.nl/beroepengids/bedrijfssectoren/watertechnologie/",
+      "name": "Watertechnologie",
+      "slug": "watertechnologie",
+      "taxonomy": "beroep_bedrijfssector",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_bedrijfssector/671",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_bedrijfssector"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_bedrijfssector"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_bedrijfssector=671"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    }
+  ],
+  "metadata": [
+    {
+      "id": 639,
+      "slug": "aerospace-luchtvaart",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 640,
+      "slug": "agritech",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 641,
+      "slug": "bouwmachines",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 642,
+      "slug": "chemische-industrie",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 643,
+      "slug": "defensie",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 644,
+      "slug": "energie",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 645,
+      "slug": "food-processing",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 646,
+      "slug": "grafische-industrie",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 647,
+      "slug": "heavy-lifting",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 648,
+      "slug": "hightech",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 649,
+      "slug": "hvac-klimaattechniek",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 650,
+      "slug": "industrial-automation",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 651,
+      "slug": "koeltechniek",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 652,
+      "slug": "logistics-intern-transport",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 653,
+      "slug": "machinebouw",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 654,
+      "slug": "maritiem",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 655,
+      "slug": "material-handling",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 656,
+      "slug": "medisch-farmaceutisch",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 657,
+      "slug": "metaalbewerking",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 658,
+      "slug": "mijnbouw",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 659,
+      "slug": "offshore",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 660,
+      "slug": "oil-gas",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 661,
+      "slug": "petrochemie",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 662,
+      "slug": "procesindustrie",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 663,
+      "slug": "procestechniek",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 664,
+      "slug": "recycling-technologie",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 665,
+      "slug": "renewable-energy",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 666,
+      "slug": "robotics",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 667,
+      "slug": "rotating-equipment",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 668,
+      "slug": "semiconductor",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 669,
+      "slug": "sorteertechniek",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 670,
+      "slug": "verpakkingstechniek",
+      "intro": "",
+      "archive_title": ""
+    },
+    {
+      "id": 671,
+      "slug": "watertechnologie",
+      "intro": "",
+      "archive_title": ""
+    }
+  ]
+}
