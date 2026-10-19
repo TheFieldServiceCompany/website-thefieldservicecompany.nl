@@ -124,7 +124,7 @@ def preflight(
 
 def intro_snippet() -> str:
     return r"""
-function tfsc_20261019_study_snapshot() {
+function tfsc_20261019_study_direction_snapshot() {
     if ( ! function_exists( 'pods' ) || ! taxonomy_exists( 'beroep_studierichting' ) ) {
         return new WP_Error( 'dependency_missing', 'Pods of taxonomy ontbreekt.', [ 'status' => 500 ] );
     }
@@ -145,6 +145,7 @@ function tfsc_20261019_study_snapshot() {
             'id' => (int) $term->term_id,
             'slug' => $term->slug,
             'intro' => (string) $pod->field( 'intro_taxonomy' ),
+            'archive_title' => (string) $pod->field( 'pods_archive_title' ),
         ];
     }
     usort( $rows, function( $a, $b ) { return strcmp( $a['slug'], $b['slug'] ); } );
@@ -157,7 +158,7 @@ add_action( 'rest_api_init', function() {
             'methods' => 'GET',
             'permission_callback' => function() { return current_user_can( 'manage_options' ); },
             'callback' => function() {
-                $rows = tfsc_20261019_study_snapshot();
+                $rows = tfsc_20261019_study_direction_snapshot();
                 return is_wp_error( $rows ) ? $rows : rest_ensure_response( $rows );
             },
         ],
@@ -169,7 +170,8 @@ add_action( 'rest_api_init', function() {
                 $items = isset( $params['items'] ) && is_array( $params['items'] )
                     ? $params['items']
                     : [];
-                $current = tfsc_20261019_study_snapshot();
+                $is_rollback = ! empty( $params['rollback'] );
+                $current = tfsc_20261019_study_direction_snapshot();
                 if ( is_wp_error( $current ) ) { return $current; }
                 if ( count( $items ) !== 23 || count( $current ) !== 23 ) {
                     return new WP_Error( 'count_mismatch', 'Verwacht exact 23 intro’s.', [ 'status' => 409 ] );
@@ -180,16 +182,35 @@ add_action( 'rest_api_init', function() {
                 foreach ( $items as $item ) {
                     $slug = isset( $item['slug'] ) ? sanitize_title( $item['slug'] ) : '';
                     $intro = isset( $item['intro'] ) ? trim( wp_kses_post( $item['intro'] ) ) : '';
-                    if ( ! $slug || ! isset( $current_by_slug[ $slug ] ) || ! $intro ) {
-                        return new WP_Error( 'invalid_item', 'Ongeldige intro of slug.', [ 'status' => 409 ] );
+                    $archive_title = isset( $item['archive_title'] )
+                        ? sanitize_text_field( $item['archive_title'] )
+                        : '';
+                    if (
+                        ! $slug
+                        || ! isset( $current_by_slug[ $slug ] )
+                        || ( ! $is_rollback && ( ! $intro || ! $archive_title ) )
+                    ) {
+                        return new WP_Error( 'invalid_item', 'Ongeldige intro, archieftitel of slug.', [ 'status' => 409 ] );
                     }
-                    if ( false === stripos( wp_strip_all_tags( $intro ), 'field service' ) ) {
+                    if ( ! $is_rollback && false === stripos( wp_strip_all_tags( $intro ), 'field service' ) ) {
                         return new WP_Error( 'missing_context', 'Intro mist field service: ' . $slug, [ 'status' => 409 ] );
+                    }
+                    $term_name = html_entity_decode(
+                        get_term_by( 'slug', $slug, 'beroep_studierichting' )->name,
+                        ENT_QUOTES | ENT_HTML5,
+                        'UTF-8'
+                    );
+                    $expected_title = 'Studierichting ' . $term_name . ' | Artikelen';
+                    if ( ! $is_rollback && $archive_title !== $expected_title ) {
+                        return new WP_Error( 'invalid_title', 'Onverwachte archieftitel: ' . $slug, [ 'status' => 409 ] );
                     }
                     if ( isset( $requested[ $slug ] ) ) {
                         return new WP_Error( 'duplicate_slug', 'Dubbele slug: ' . $slug, [ 'status' => 409 ] );
                     }
-                    $requested[ $slug ] = $intro;
+                    $requested[ $slug ] = [
+                        'intro' => $intro,
+                        'archive_title' => $archive_title,
+                    ];
                 }
                 if ( array_keys( $requested ) !== array_keys( $current_by_slug ) ) {
                     ksort( $requested );
@@ -199,20 +220,42 @@ add_action( 'rest_api_init', function() {
                     return new WP_Error( 'slug_mismatch', 'Introsets verschillen.', [ 'status' => 409 ] );
                 }
                 $changed = [];
-                foreach ( $requested as $slug => $intro ) {
+                $changed_intro = 0;
+                $changed_title = 0;
+                foreach ( $requested as $slug => $values ) {
                     $row = $current_by_slug[ $slug ];
-                    if ( $row['intro'] === $intro ) { continue; }
+                    if (
+                        $row['intro'] === $values['intro']
+                        && $row['archive_title'] === $values['archive_title']
+                    ) { continue; }
                     $pod = pods( 'beroep_studierichting', (int) $row['id'] );
-                    if ( false === $pod->save( 'intro_taxonomy', $intro ) ) {
+                    if ( false === $pod->save( [
+                        'intro_taxonomy' => $values['intro'],
+                        'pods_archive_title' => $values['archive_title'],
+                    ] ) ) {
                         foreach ( array_reverse( $changed ) as $rollback ) {
                             $rollback_pod = pods( 'beroep_studierichting', $rollback['id'] );
-                            $rollback_pod->save( 'intro_taxonomy', $rollback['intro'] );
+                            $rollback_pod->save( [
+                                'intro_taxonomy' => $rollback['intro'],
+                                'pods_archive_title' => $rollback['archive_title'],
+                            ] );
                         }
-                        return new WP_Error( 'save_failed', 'Opslaan mislukt; intro’s teruggedraaid.', [ 'status' => 500 ] );
+                        return new WP_Error( 'save_failed', 'Opslaan mislukt; metadata teruggedraaid.', [ 'status' => 500 ] );
                     }
-                    $changed[] = [ 'id' => $row['id'], 'intro' => $row['intro'] ];
+                    if ( $row['intro'] !== $values['intro'] ) { $changed_intro++; }
+                    if ( $row['archive_title'] !== $values['archive_title'] ) { $changed_title++; }
+                    $changed[] = [
+                        'id' => $row['id'],
+                        'intro' => $row['intro'],
+                        'archive_title' => $row['archive_title'],
+                    ];
                 }
-                return rest_ensure_response( [ 'changed' => count( $changed ), 'total' => count( $requested ) ] );
+                return rest_ensure_response( [
+                    'changed' => count( $changed ),
+                    'changed_intro' => $changed_intro,
+                    'changed_title' => $changed_title,
+                    'total' => count( $requested ),
+                ] );
             },
         ],
     ] );
@@ -225,8 +268,8 @@ def install_snippet(client: Client) -> int:
         "POST",
         "/wp-json/code-snippets/v1/snippets",
         {
-            "name": "TFSC TEMP Beroepengids studierichting intro 2026-10-19",
-            "desc": "Tijdelijk beheerders-endpoint voor bestaand intro_taxonomy-veld; na verificatie verwijderd.",
+            "name": "TFSC TEMP Beroepengids studierichting content 2026-10-19",
+            "desc": "Tijdelijk beheerders-endpoint voor bestaande intro- en archieftitelvelden; na verificatie verwijderd.",
             "code": intro_snippet(),
             "tags": ["temporary", "content"],
             "scope": "global",
@@ -293,7 +336,9 @@ def main() -> int:
         "mode": "apply" if args.apply else "audit",
         "taxonomy": TAXONOMY,
         "terms": len(content),
-        "unique_headings": sum(item["headingCount"] for item in content),
+        "paragraphs_per_description": sorted(
+            {item["paragraphCount"] for item in content}
+        ),
         "word_count_min": min(item["wordCount"] for item in content),
         "word_count_max": max(item["wordCount"] for item in content),
         "intro_word_count_min": min(len(item["intro"].split()) for item in content),
@@ -331,7 +376,11 @@ def main() -> int:
             ENDPOINT,
             {
                 "items": [
-                    {"slug": item["slug"], "intro": item["intro"]}
+                    {
+                        "slug": item["slug"],
+                        "intro": item["intro"],
+                        "archive_title": item["archiveTitle"],
+                    }
                     for item in content
                 ]
             },
@@ -351,29 +400,44 @@ def main() -> int:
             for item in content
             if intro_by_slug.get(item["slug"]) != item["intro"]
         ]
-        if description_mismatches or intro_mismatches:
+        title_by_slug = {
+            row["slug"]: row["archive_title"] for row in intros_after
+        }
+        title_mismatches = [
+            item["slug"]
+            for item in content
+            if title_by_slug.get(item["slug"]) != item["archiveTitle"]
+        ]
+        if description_mismatches or intro_mismatches or title_mismatches:
             restore_descriptions(client, terms_before)
             if intros_before is not None:
                 client.request(
                     "POST",
                     ENDPOINT,
                     {
+                        "rollback": True,
                         "items": [
-                            {"slug": row["slug"], "intro": row["intro"]}
+                            {
+                                "slug": row["slug"],
+                                "intro": row["intro"],
+                                "archive_title": row["archive_title"],
+                            }
                             for row in intros_before
                         ]
                     },
                 )
             raise PublishError(
-                f"Eindcontrole mislukt; rollback uitgevoerd. descriptions={description_mismatches}, intro={intro_mismatches}"
+                f"Eindcontrole mislukt; rollback uitgevoerd. descriptions={description_mismatches}, intro={intro_mismatches}, titles={title_mismatches}"
             )
 
         audit.update(
             {
                 "descriptions_changed": descriptions_changed,
-                "intros_changed": intro_result.get("changed"),
+                "intros_changed": intro_result.get("changed_intro"),
+                "archive_titles_changed": intro_result.get("changed_title"),
                 "descriptions_verified": 23,
                 "intros_verified": 23,
+                "archive_titles_verified": 23,
                 "backup": args.backup,
                 "temporary_snippet_removed": True,
             }
@@ -384,6 +448,25 @@ def main() -> int:
                 restore_descriptions(client, terms_before)
             except Exception as rollback_error:
                 print(f"WAARSCHUWING descriptionrollback: {rollback_error}", file=sys.stderr)
+        if intros_before is not None and snippet_id is not None:
+            try:
+                client.request(
+                    "POST",
+                    ENDPOINT,
+                    {
+                        "rollback": True,
+                        "items": [
+                            {
+                                "slug": row["slug"],
+                                "intro": row["intro"],
+                                "archive_title": row["archive_title"],
+                            }
+                            for row in intros_before
+                        ],
+                    },
+                )
+            except Exception as rollback_error:
+                print(f"WAARSCHUWING metadatarollback: {rollback_error}", file=sys.stderr)
         raise
     finally:
         if snippet_id is not None:

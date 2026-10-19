@@ -2,8 +2,8 @@
 
 Status: de 23 vacaturedescriptions staan sinds 18 oktober 2026 bij
 `vac_studierichting` op LIVE. Op 19 oktober 2026 zijn daarnaast alle 23
-descriptions en intro's van `beroep_studierichting` bewust herschreven rond de
-vraag wat iemand met de betreffende studie binnen field service kan doen. De
+descriptions, intro's en archieftitels van `beroep_studierichting` als
+artikelarchief ingericht. De
 vier vacaturetermen van `opleidingsniveau` hebben eveneens gecontroleerde live
 descriptions; `beroep_opleidingsniveau` is daarbij niet gewijzigd.
 
@@ -12,10 +12,10 @@ descriptions; `beroep_opleidingsniveau` is daarbij niet gewijzigd.
 Deze map documenteert de opleidingscontent voor de vacaturetaxonomieën en de
 spiegelende Beroepengids-taxonomieën. Het bestand `studierichtingen.md` bevat
 de nieuwe, lange descriptions die op `vac_studierichting` zijn gepubliceerd.
-`beroep-studierichtingen.md` bevat de afzonderlijke, actuele contentlaag voor
-`beroep_studierichting`. Deze Beroepengids-teksten zijn geen kopie van de
-vacaturedescriptions: zij verbinden iedere opleiding of studie expliciet aan
-mogelijke field service functies, sectoren en loopbaankeuzes.
+`beroep-studierichtingen.md` bevat de afzonderlijke, actuele archiefcontent
+voor `beroep_studierichting`. Deze Beroepengids-teksten zijn geen kopie van de
+vacaturedescriptions: zij introduceren de studie, verwijzen naar toekomstige
+artikelen en helpen functies en vacatures binnen field service vergelijken.
 
 De compacte, herbruikbare schrijf- en publicatieprompt staat in
 `reusable-taxonomy-text-prompt.md`. Gebruik die voor nieuwe taxonomyteksten,
@@ -31,13 +31,14 @@ Pods-structuur en de relatievelden zijn ingericht en getest.
 
 - 4 descriptions voor opleidingsniveaus;
 - 23 descriptions voor vacaturestudierichtingen;
-- 23 descriptions en 23 uitnodigende intro's voor Beroepengids-
-  studierichtingen;
+- 23 descriptions, 23 uitnodigende intro's en 23 archieftitels voor
+  Beroepengids-studierichtingen;
 - gerealiseerde lengte per description: 450–486 woorden exclusief koppen en
   redactionele notities.
 
-De Beroepengids-descriptions van 19 oktober bevatten 261–390 woorden en ieder
-vier unieke vraaggerichte H2-koppen. De intro's bevatten 28–36 woorden.
+De definitieve Beroepengids-descriptions van 19 oktober bevatten 104–123
+woorden, één H2 met de archieftitel en drie alinea's. De intro's bevatten
+19–26 woorden.
 
 ## Publicatie Beroepengids-studierichtingen op 19 oktober 2026
 
@@ -45,14 +46,15 @@ vier unieke vraaggerichte H2-koppen. De intro's bevatten 28–36 woorden.
   termen, slugs, Pods of velden toegevoegd of gewijzigd.
 - Alle 23 bestaande velden `intro_taxonomy` zijn vervangen door een korte,
   uitnodigende intro met een directe inhoudelijke link naar field service.
-- De 92 H2-koppen zijn letterlijk uniek en variëren per studierichting.
-- De teksten behandelen primair wat iemand met de opleiding, studierichting of
-  studieachtergrond binnen field service kan doen. Uitgebreide uitleg over het
-  uitvoeren van technische handelingen is bewust vermeden.
-- Iedere tekst eindigt met een eigen adviesroute en een natuurlijke verwijzing
-  naar The Field Service Company als specialist in field service functies.
+- Alle 23 bestaande velden `pods_archive_title` gebruiken
+  `Studierichting [term] | Artikelen`; dezelfde tekst staat als H2 boven de
+  description.
+- Iedere description introduceert de studierichting, benoemt toekomstige
+  artikelonderwerpen en helpt de lezer functies en vacatures vergelijken.
+- Uitgebreide vragen zijn bewust uit de archive-description gehaald en worden
+  later als zelfstandige artikelen uitgewerkt.
 - Canonieke bron: `beroep-studierichtingen.md`; herstelbestand:
-  `../../audits/exports/beroep-studierichtingen-before-rewrite-2026-10-19.json`.
+  `../../audits/exports/beroep-studierichtingen-before-archive-rewrite-2026-10-19.json`.
 
 ## Publicatievoorwaarden
 
@@ -61,7 +63,7 @@ vier unieke vraaggerichte H2-koppen. De intro's bevatten 28–36 woorden.
 2. De testterm `Opleiding A` niet hergebruiken als definitieve term.
 3. Eerst de taxonomie en slugs vastleggen; daarna teksten importeren.
 4. Per term controleren dat de H1 door de template wordt geleverd en dat de
-   description alleen H2-koppen gebruikt.
+   description begint met dezelfde archieftitel als H2.
 5. Na publicatie de openbare pagina, interne links, canonieke URL, metadata en
    mobiele weergave controleren.
 6. Pas na inhoudelijke koppeling vacatures of beroepsartikelen tonen; lege of

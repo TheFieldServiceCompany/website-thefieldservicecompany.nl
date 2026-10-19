@@ -1,93 +1,96 @@
-# Beroepengids-studierichtingen herschreven — LIVE
+# Beroepengids-studierichtingen als artikelarchief ingericht — LIVE
 
 Datum: 19 oktober 2026
 Taxonomie: `beroep_studierichting`
 Omvang: 23 bestaande termen
 
-## Doel
+## Definitieve structuur
 
-De eerdere descriptions legden bij iedere term grotendeels dezelfde route af:
-wat de technische richting inhoudt, hoe de kennis op locatie wordt gebruikt,
-welke functies aansluiten en waarin iemand zich kan verdiepen. Daardoor
-voelden de teksten als herhaalde algemene opleidings- en vakkennis.
+Iedere studierichtingpagina is een artikelarchief. De description introduceert
+de studie en de relatie met field service, verwijst naar de onderwerpen die in
+latere artikelen worden uitgewerkt en helpt de bezoeker functies en vacatures
+vergelijken. De uitgebreide opleidingsvragen uit de eerdere versie zijn geen
+onderdelen van de archive-description meer; zij kunnen later zelfstandige
+artikelen worden.
 
-De nieuwe content beantwoordt per term de vraag:
+Per term is toegepast:
 
-> Wat kan ik met deze studie binnen field service en welke functie, techniek,
-> sector of werkomgeving past bij mij?
+1. archieftitel `Studierichting [term] | Artikelen`;
+2. een volledig nieuwe, korte intro met field service verbinding;
+3. dezelfde archieftitel als H2 boven de description;
+4. drie unieke compacte archiefalinea's.
 
-Een losse term zoals `Elektrotechniek` wordt niet behandeld alsof vanzelf
-duidelijk is dat de pagina over een studie gaat. De teksten wisselen daarom
-`opleiding`, `studierichting`, `studie` en `achtergrond` natuurlijk af.
+De descriptions bevatten 104–123 woorden en de intro's 19–26 woorden.
 
-## Uitgevoerde wijzigingen
+## Uitgevoerde livewijzigingen
 
-- alle 23 bestaande term-descriptions bewust overschreven;
-- alle 23 bestaande Pods-velden `intro_taxonomy` overschreven;
-- geen termen, namen, slugs, relaties, Pods, velden, archieftitels of
-  taxonomie-instellingen gewijzigd;
-- geen vacature- of Beroepengidsartikelen gewijzigd;
-- geen handmatige links of Elementor-widgets toegevoegd.
+- 23 bestaande term-descriptions herschreven;
+- 23 bestaande velden `intro_taxonomy` vervangen;
+- 23 bestaande velden `pods_archive_title` ingesteld;
+- de eerdere vier uitgebreide H2-vragen per term verwijderd;
+- geen termen, namen, slugs, parents, relaties, Pods, velden, vacatures,
+  Beroepengidsartikelen, handmatige links of template-instellingen gewijzigd.
 
-De 23 intro's bestaan uit twee uitnodigende zinnen van 28–36 woorden. Iedere
-intro benoemt de studie en legt direct de inhoudelijke relatie met field
-service.
+## Bestaande structuur bevestigd
 
-Iedere description bevat vier zelfstandige vragen, maar de koppen zijn niet
-als één sjabloon over alle termen herhaald. De volledige set bevat 92
-letterlijk unieke H2-koppen. De teksten tellen 261–390 woorden en leggen de
-nadruk op:
+De alleen-lezen preflight bevestigde exact 23 overeenkomstige namen en slugs,
+allemaal met parent `0`. De bestaande velden `intro_taxonomy` en
+`pods_archive_title` zijn hergebruikt. Er hoefde geen nieuw veld of nieuwe Pod
+te worden gemaakt.
 
-- mogelijke field service functies na de studie;
-- relevante machines, systemen en bedrijfssectoren;
-- verschillen tussen technische en organisatorische loopbaanrichtingen;
-- producttraining en realistische aanvullende kennis;
-- techniek, verantwoordelijkheid, werkomgeving en reizen als keuzecriteria;
-- een natuurlijke adviesroute naar The Field Service Company.
+## Back-up en veilige uitvoering
 
-## Veilige uitvoering
+De toestand direct vóór de definitieve herschrijving staat in:
 
-Voor de eerste wijziging zijn alle live descriptions en intro's opgeslagen in:
+`audits/exports/beroep-studierichtingen-before-archive-rewrite-2026-10-19.json`
 
-`audits/exports/beroep-studierichtingen-before-rewrite-2026-10-19.json`
+Descriptions zijn via de standaard WordPress REST API gepubliceerd. Intro's
+en archieftitels zijn via een tijdelijk beheerders-only REST-endpoint in de
+bestaande Pods-velden opgeslagen. De publicatieroutine bevat rollback voor
+alle drie waarden. De tijdelijke snippet is na iedere poging gedeactiveerd en
+verwijderd.
 
-Descriptions zijn via de standaard WordPress REST API gepubliceerd. Daarbij is
-per term uitsluitend `description` verstuurd. De intro's zijn via een tijdelijk
-beheerders-only REST-endpoint in het al bestaande Pods-veld `intro_taxonomy`
-opgeslagen. De tijdelijke Code Snippets-snippet is na verificatie gedeactiveerd
-en verwijderd.
+Tijdens de uitvoering werkte de beveiliging tweemaal zoals bedoeld:
 
-De publicatieroutine bevat een rollback voor zowel descriptions als intro's.
-Die rollback was niet nodig.
+- de eerste poging stopte vóór metadata-opslag omdat WordPress de termnaam
+  `ICT & Technische Informatica` intern met een HTML-entiteit aanleverde; alle
+  descriptions zijn automatisch teruggezet en de rollback is exact
+  gecontroleerd;
+- de tweede poging signaleerde na opslag alleen bij de intro van die term een
+  ampersand-encodingverschil en draaide alle waarden terug;
+- daarna is uitsluitend de introformulering aangepast naar `ICT en Technische
+  Informatica`; de officiële archieftitel en H2 behouden exact `&`.
+
+De derde publicatieronde slaagde volledig.
 
 ## Verificatie
 
-Na publicatie zijn alle waarden opnieuw uit LIVE gelezen en exact met de lokale
-bron vergeleken:
+Na de definitieve publicatie zijn alle waarden opnieuw uit LIVE gelezen en
+exact met de lokale bron vergeleken:
 
-- descriptions gewijzigd: 23;
-- descriptions exact geverifieerd: 23 van 23;
-- intro's gewijzigd: 23;
-- intro's exact geverifieerd: 23 van 23;
+- descriptions: 23 van 23 exact;
+- intro's: 23 van 23 exact;
+- archieftitels: 23 van 23 exact;
 - afwijkingen: 0;
 - tijdelijke snippet verwijderd: ja.
 
-Openbare, cache-omzeilende controles zijn uitgevoerd voor:
+Openbare cache-omzeilende controles zijn uitgevoerd voor:
 
 - Autotechniek;
 - Elektrotechniek;
-- Technische Bedrijfskunde.
+- ICT & Technische Informatica;
+- Technische Bedrijfskunde;
+- Werktuigbouwkunde.
 
-Alle drie URL's gaven HTTP 200. De juiste bestaande H1 `Studierichting
-[term]`, de nieuwe intro en unieke nieuwe descriptionkoppen werden gerenderd.
+Alle vijf URL's gaven HTTP 200 en toonden exact de nieuwe H1, dezelfde titel
+als H2, de juiste intro en alle drie archiefalinea's.
 
-## Bronnen en herhaling
+## Bronnen
 
-- canonieke tekstbron:
+- canonieke content:
   `content/education-descriptions/beroep-studierichtingen.md`;
-- bijgewerkte schrijfregels:
+- schrijf- en publicatieregels:
   `content/education-descriptions/reusable-taxonomy-text-prompt.md`;
-- lokale validatie:
-  `scripts/build-beroep-studierichtingen.mjs`;
+- validatie: `scripts/build-beroep-studierichtingen.mjs`;
 - preflight, backup, publicatie, verificatie en rollback:
   `scripts/publish-beroep-studierichtingen.py`.

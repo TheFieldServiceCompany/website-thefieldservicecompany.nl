@@ -22,22 +22,19 @@
 - Volledig log:
   `audits/2026-10-19-beroepengids-functienamen-live.md`.
 
-## 2026-10-19 — Beroepengids-studierichtingen inhoudelijk herschreven
+## 2026-10-19 — Beroepengids-studierichtingen als artikelarchief ingericht
 
-- Alle 23 descriptions van `beroep_studierichting` zijn LIVE herschreven rond
-  de vraag wat iemand met de betreffende studie binnen field service kan doen.
-- Iedere term heeft vier inhoudelijk eigen vraagkoppen; de volledige set bevat
-  92 letterlijk unieke H2-koppen en geen herhaald koppenstramien.
-- Alle 23 bestaande velden `intro_taxonomy` bevatten nu een korte,
-  enthousiaste intro van twee zinnen met een directe link naar field service.
-- De teksten gebruiken `opleiding`, `studierichting`, `studie` en
-  `achtergrond` natuurlijk en behandelen mogelijke functies, systemen,
-  sectoren, loopbaankeuzes en een adviesroute naar The Field Service Company.
-- Alle 46 waarden zijn na publicatie exact via REST geverifieerd. Autotechniek,
-  Elektrotechniek en Technische Bedrijfskunde zijn daarnaast openbaar en
-  cachevrij gecontroleerd; alle pagina's gaven HTTP 200 en toonden de nieuwe
-  intro en description.
-- Er zijn geen termen, slugs, relaties, Pods, velden, archieftitels of
+- Alle 23 descriptions, intro's en archieftitels van
+  `beroep_studierichting` zijn LIVE ingericht als artikelarchief.
+- Iedere description begint met `Studierichting [term] | Artikelen` als H2 en
+  bevat daarna drie compacte alinea's over de studie, toekomstige artikelen en
+  het vergelijken van field service functies en vacatures.
+- De eerdere vier uitgebreide vraagkoppen per term zijn verwijderd en worden
+  later als zelfstandige artikelen uitgewerkt.
+- De descriptions bevatten 104–123 woorden en de intro's 19–26 woorden.
+- Alle 69 waarden zijn exact via REST geverifieerd. Vijf openbare archieven
+  gaven HTTP 200 en toonden de juiste H1, H2, intro en drie alinea's.
+- Er zijn geen termen, slugs, relaties, Pods, velden, vacatures, artikelen of
   template-instellingen gewijzigd.
 - Volledig log:
   `audits/2026-10-19-beroepengids-studierichtingen-herschreven-live.md`.

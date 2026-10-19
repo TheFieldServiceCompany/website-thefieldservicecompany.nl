@@ -29,11 +29,11 @@ De lezer moet enthousiast worden door herkenbare mogelijkheden, machines,
 problemen en resultaten, niet door holle superlatieven. Houd de tekst sterk
 gericht op field service en de specifieke term.
 
-Gebruik vier zelfstandig begrijpelijke H2-vragen. Laat de eerste H2 direct de
-verbinding leggen tussen `[TERM]` en service, field service, machines of de
-relevante sector. Wissel de zinsbouw af met bijvoorbeeld `Waarom`, `Hoe`,
-`Welke`, `Wat maakt`, `Waar liggen` of `Van ... naar ...`. Begin niet
-automatisch met `Wat leer je tijdens de opleiding ...`.
+Gebruik bij uitgebreide taxonomyteksten standaard vier zelfstandig
+begrijpelijke H2-vragen. Laat de eerste H2 direct de verbinding leggen tussen
+`[TERM]` en service, field service, machines of de relevante sector. Volg voor
+de Beroepengids-archieven van studierichtingen en functienamen de afwijkende,
+compacte structuur die hieronder expliciet is vastgelegd.
 
 Gebruik bij onderwijscontent natuurlijke varianten zoals `opleiding [TERM]`,
 `studierichting [TERM]`, `studie [TERM]` en `achtergrond in [TERM]`; zet ze
@@ -42,38 +42,32 @@ woorden. Gebruik functienamen in lopende zinnen met kleine letters.
 
 ### Extra regels voor een Beroepengids-studierichting
 
-Een losse term zoals `Elektrotechniek` zegt niet vanzelf dat de pagina over
-een studie gaat. Maak daarom vanaf de eerste H2 en openingsalinea expliciet dat
-het om een opleiding, studierichting of studieachtergrond gaat. Wissel
-`opleiding`, `studierichting`, `studie` en `achtergrond` natuurlijk af.
+Een Beroepengids-studierichting is een artikelarchief. De description is een
+compacte introductie op dat archief en geen volledig artikel over de studie.
+Uitgebreide vragen over opleiding, functies, salaris, technieken en sectoren
+worden later zelfstandige artikelen.
 
-Schrijf geen algemene opleidingssamenvatting en leg niet uitgebreid uit hoe de
-lezer later een technische handeling bij een klant uitvoert. Beantwoord in
-plaats daarvan de hoofdvraag:
+Gebruik als bestaande Pods-archieftitel exact:
 
-`Wat kan ik met deze studie binnen field service en welke functie, techniek,
-sector of werkomgeving past bij mij?`
+`Studierichting [TERM] | Artikelen`
 
-Leg de nadruk op mogelijke field service functies, passende machines en
-sectoren, verschillen tussen loopbaanrichtingen, benodigde aanvullende
-producttraining en de keuze voor een passende field service baan. Gebruik de
-gekoppelde vacatures als inhoudelijke inspiratie, maar maak van een kenmerk uit
-één vacature nooit een algemene waarheid.
+Plaats dezelfde tekst als één H2 direct boven de drie descriptionalinea's.
+Lever daarnaast een korte, uitnodigende intro die de studierichting direct met
+field service verbindt. Schrijf vervolgens:
 
-Wanneer meerdere studierichtingen tegelijk worden geschreven, mag niet steeds
-dezelfde H2-structuur met alleen een andere term worden herhaald. Maak iedere
-set van vier vragen inhoudelijk en taalkundig eigen aan de studierichting.
-Controleer automatisch dat geen H2 letterlijk dubbel voorkomt.
+1. een grove introductie op de studie en de technische kennis die als basis
+   voor field service kan dienen;
+2. een verwijzing naar de artikelen in het archief en de onderwerpen die daar
+   worden uitgewerkt, zoals functies, technieken, opleidingen, salaris,
+   reizen en doorgroei;
+3. uitleg hoe de artikelen helpen studierichtingen, functies en vacatures te
+   vergelijken en een passende field service loopbaan te kiezen.
 
-Eindig met een natuurlijke adviesroute. Help de lezer eerst zelfstandig
-vergelijken op techniek, functie, sector, verantwoordelijkheid en reizen. Maak
-daarna een bescheiden knipoog naar The Field Service Company als specialist
-die kan adviseren en helpen de mooiste passende field service baan te vinden.
-
-Lever naast de description een korte, enthousiaste intro van twee of drie
-zinnen. De intro moet de studierichting direct verbinden met field service en
-de lezer uitnodigen verder te lezen; gebruik niet één generieke zin waarin
-alleen de termnaam wordt vervangen.
+Maak vanaf de intro duidelijk dat het om een opleiding, studie of
+studierichting gaat. Gebruik relevante vacatures als inspiratie, maar maak van
+een kenmerk uit één vacature nooit een algemene waarheid. Maak iedere intro en
+description inhoudelijk uniek, terwijl de goedgekeurde archiefstructuur voor
+alle studierichtingen gelijk blijft.
 
 ### Extra regels voor een Beroepengids-functienaam
 
@@ -121,11 +115,12 @@ wereld` en `onmisbare schakel`. Maak geen handmatige vacaturelinks wanneer de
 website relaties automatisch vult. De template levert de H1; gebruik in de
 description alleen H2-koppen en alinea's.
 
-Lever voor een Beroepengids-functienaam eerst een concept met archieftitel,
-intro, drie alinea's, woordenaantal, feitencontrole en de exact bedoelde
-WordPress-taxonomie. Lever bij andere uitgebreide taxonomyteksten eerst vier
-H2-koppen en de volledige tekst, tenzij voor die taxonomie een andere
-goedgekeurde structuur is vastgelegd.
+Lever voor een Beroepengids-functienaam of -studierichting eerst een concept
+met archieftitel, intro, de goedgekeurde archiefalinea's, woordenaantal,
+feitencontrole en de exact bedoelde WordPress-taxonomie. Neem bij een
+studierichting ook de identieke archieftitel als H2 op. Lever bij andere
+uitgebreide taxonomyteksten eerst vier H2-koppen en de volledige tekst, tenzij
+voor die taxonomie een andere goedgekeurde structuur is vastgelegd.
 
 Publiceer pas na inhoudelijke goedkeuring.
 
@@ -150,6 +145,8 @@ Publiceer pas na inhoudelijke goedkeuring.
 - Volgt de tekst de goedgekeurde structuur voor deze specifieke taxonomie?
 - Is een Beroepengids-functienaam duidelijk een introductie op artikelen en
   niet zelf een verzameling halve artikelen?
+- Begint een Beroepengids-studierichting met de goedgekeurde archieftitel als
+  H2 en verwijst de tekst naar latere artikelen?
 - Bevat iedere alinea concrete informatie in plaats van algemene claims?
 - Kloppen opleiding, machines, technieken, functies en sectoren inhoudelijk?
 - Is de tekst prettig, actief en motiverend om te lezen?

@@ -21,17 +21,20 @@ const escapeHtml = (value) =>
 
 const sections = markdown.split(/^## /m).slice(1);
 const items = [];
-const allHeadings = [];
 
 for (const section of sections) {
   const [nameLine, ...bodyLines] = section.split(/\r?\n/);
   const name = nameLine.trim();
   const body = bodyLines.join('\n');
   const slug = body.match(/^Slug:\s*`([^`]+)`/m)?.[1];
+  const archiveTitle = body.match(/^Archive title:\s*(.+)$/m)?.[1]?.trim();
   const intro = body.match(/^Intro:\s*(.+)$/m)?.[1]?.trim();
 
-  if (!slug || !intro) {
-    throw new Error(`Slug of intro ontbreekt bij ${name}`);
+  if (!slug || !archiveTitle || !intro) {
+    throw new Error(`Slug, archieftitel of intro ontbreekt bij ${name}`);
+  }
+  if (archiveTitle !== `Studierichting ${name} | Artikelen`) {
+    throw new Error(`Onverwachte archieftitel bij ${name}: ${archiveTitle}`);
   }
   if (!/field service/i.test(intro)) {
     throw new Error(`Intro mist field service bij ${name}`);
@@ -39,6 +42,7 @@ for (const section of sections) {
 
   const content = body
     .replace(/^Slug:.*$/m, '')
+    .replace(/^Archive title:.*$/m, '')
     .replace(/^Intro:.*$/m, '')
     .trim();
   const blocks = [];
@@ -57,7 +61,6 @@ for (const section of sections) {
     } else if (line.startsWith('### ')) {
       flushParagraph();
       const heading = line.slice(4).trim();
-      allHeadings.push({ name, heading });
       blocks.push(`<h2>${escapeHtml(heading)}</h2>`);
     } else {
       paragraph.push(line);
@@ -67,41 +70,57 @@ for (const section of sections) {
 
   const description = blocks.join('\n\n');
   const headingCount = (description.match(/<h2>/g) || []).length;
+  const paragraphCount = (description.match(/<p>/g) || []).length;
   const wordCount = description
     .replace(/<[^>]+>/g, ' ')
     .replace(/\s+/g, ' ')
     .trim()
     .split(' ').length;
 
-  if (headingCount !== 4) {
-    throw new Error(`${name} heeft ${headingCount} H2-koppen; verwacht 4`);
+  if (headingCount !== 1) {
+    throw new Error(`${name} heeft ${headingCount} H2-koppen; verwacht 1`);
   }
-  if (wordCount < 250 || wordCount > 500) {
+  if (!description.startsWith(`<h2>${escapeHtml(archiveTitle)}</h2>`)) {
+    throw new Error(`Description begint niet met de archieftitel bij ${name}`);
+  }
+  if (paragraphCount !== 3) {
+    throw new Error(`${name} heeft ${paragraphCount} alinea's; verwacht 3`);
+  }
+  if (wordCount < 100 || wordCount > 170) {
     throw new Error(`${name} heeft ongewenst woordenaantal: ${wordCount}`);
   }
   if (!/field service/i.test(description)) {
     throw new Error(`Description mist field service bij ${name}`);
   }
 
-  items.push({ name, slug, intro, description, headingCount, wordCount });
+  if (!/artikel/i.test(description)) {
+    throw new Error(`Description verwijst niet naar artikelen bij ${name}`);
+  }
+
+  items.push({
+    name,
+    slug,
+    archiveTitle,
+    intro,
+    description,
+    headingCount,
+    paragraphCount,
+    wordCount,
+  });
 }
 
 if (items.length !== 23) {
   throw new Error(`Verwacht 23 studierichtingen, gevonden ${items.length}`);
 }
 
-const duplicateHeadings = allHeadings.filter(
-  ({ heading }, index) =>
-    allHeadings.findIndex((candidate) => candidate.heading === heading) !== index,
-);
-if (duplicateHeadings.length) {
-  throw new Error(
-    `Dubbele H2-koppen: ${duplicateHeadings.map(({ heading }) => heading).join(' | ')}`,
-  );
-}
-
 if (new Set(items.map(({ slug }) => slug)).size !== items.length) {
   throw new Error('Dubbele slugs in Beroepengids-studierichtingen');
+}
+if (new Set(items.map(({ intro }) => intro)).size !== items.length) {
+  throw new Error('Dubbele intro in Beroepengids-studierichtingen');
+}
+if (new Set(items.map(({ description }) => description)).size !== items.length) {
+  throw new Error('Dubbele description in Beroepengids-studierichtingen');
 }
 
 process.stdout.write(`${JSON.stringify(items)}\n`);

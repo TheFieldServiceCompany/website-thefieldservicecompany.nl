@@ -54,9 +54,9 @@ gewijzigd; open afhankelijkheden worden niet stilzwijgend overgeslagen.
    de overige 95 spiegeltermen
    (Bedrijfssectoren, Functie-inhoud, Kennisgebieden en Werkgebieden) zijn nog
    leeg en blijven onderdeel van de latere inhoudelijke ronde.
-   De 23 Beroepengids-studierichtingen hebben sinds 19 oktober wel nieuwe,
-   afzonderlijke descriptions en uitnodigende intro's. Alle teksten koppelen
-   de studie aan mogelijke field service functies en zijn LIVE geverifieerd.
+   De 23 Beroepengids-studierichtingen hebben sinds 19 oktober descriptions,
+   uitnodigende intro's en archieftitels als artikelarchief. Alle 69 waarden
+   zijn LIVE geverifieerd.
 6. [ ] **Synchronisatieplan ontwerpen en testen.** Het travel-deel is in
    Supabase en de Appsmith-bron uitgevoerd en met rollbacktests gecontroleerd.
    De WordPress-taxonomiestructuur en Search & Filter-objecten zijn additive
