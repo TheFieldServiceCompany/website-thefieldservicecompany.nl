@@ -17,8 +17,11 @@
 - GitHub bevestigde dat `crm-layout-redesign` de actuele Appsmith-werkbranch
   is. `document-preview-backfill` is daarin al gemerged; `Candidates` en
   `Vacancies_Old` zijn vervolgens bewust verwijderd. Travelcommit `6f182a4`
-  staat correct boven op de laatste bestaande commit `e709b22`. Appsmith is
-  nog niet gepulld of gedeployd.
+  staat correct boven op de laatste bestaande commit `e709b22`.
+- De live Appsmith-editor is van de onjuiste branch `main` overgeschakeld naar
+  `crm-layout-redesign`. De actuele `Contacts`-opbouw werd geladen, de
+  pullactie was uitgeschakeld en het commitvenster bevatte geen wijzigingen;
+  de branch liep dus al gelijk met GitHub. Er is niet gedeployd.
 - Volledig uitvoeringslog:
   `audits/2026-10-19-reisduur-weekenden-thuis-live.md`.
 

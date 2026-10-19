@@ -88,15 +88,22 @@ Na de WordPress-uitvoering is de GitHub-branchhistorie van
 - De laatste commit vóór de travelwijziging was `e709b22` (`data: align
   education taxonomies with WordPress`, 18 oktober 2026).
 - De travelwijziging van deze sessie staat daar correct bovenop in `6f182a4`.
-
-In deze stap is geen Appsmith-app gepulld, gedeployd of van branch gewisseld.
+- De live Appsmith-editor stond bij controle ten onrechte op `main` en is
+  overgeschakeld naar `crm-layout-redesign`. Daarna werd de actuele
+  `Contacts`-opbouw geladen.
+- De pullactie was op `crm-layout-redesign` uitgeschakeld. In het
+  commitvenster waren de committekst en commitactie eveneens uitgeschakeld en
+  werd geen wijzigingslijst getoond. Daarmee was er niets te pullen of te
+  committen en liep de branch al gelijk met GitHub.
+- Er is niet gedeployd.
 
 ## Nog niet uitgevoerd
 
 - Geen automatische mapping of wijziging van bestaande vacatures.
 - Geen verwijdering of redirect van legacytermen.
 - Geen plaatsing van de nieuwe Search & Filter-velden in Elementor.
-- Geen wijziging aan de live Appsmith-app; de bronwijziging staat wel op de
-  correcte branch `crm-layout-redesign`.
+- Geen Appsmith-deployment. Alleen de editorbranch is naar de correcte branch
+  `crm-layout-redesign` gezet; de inhoudelijke live test van de nieuwe
+  travelvelden volgt nog.
 - Geen wijziging aan de bestaande kandidaatreisrecords in Supabase.
 

@@ -51,8 +51,10 @@ gewijzigd; open afhankelijkheden worden niet stilzwijgend overgeslagen.
    vacaturekoppeling volgen na validatie. De travelcommit staat correct op de
    actuele Appsmith-werkbranch `crm-layout-redesign`; de historische branch
    `document-preview-backfill` is daarin al gemerged en bevat nog de bewust
-   verwijderde oude pagina's. Een live Appsmith-pull en test blijven open.
-   Daarna volgen de overige keuzes.
+   verwijderde oude pagina's. De live Appsmith-editor staat op
+   `crm-layout-redesign`; pull is niet nodig omdat de pullactie uitgeschakeld
+   was en er geen te committen wijzigingen waren. De inhoudelijke live test
+   van de nieuwe travelvelden blijft open. Daarna volgen de overige keuzes.
 
 ### B. Formulieren, intake en inhaalslag
 
