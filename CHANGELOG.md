@@ -1,5 +1,19 @@
 # Changelog
 
+## 2026-10-19 — Toekomstige overstap van Elementor naar Bricks vastgelegd
+
+- De gebruiker heeft besloten Elementor Atomic Forms niet te gebruiken en
+  uiteindelijk naar Bricks over te stappen.
+- De formulierintake wordt daarom niet aan Atomic Forms gekoppeld. Het vaste
+  contract komt bij de beveiligde Supabase Edge Function te liggen: huidige
+  klassieke Elementor-formulieren en toekomstige Bricks-formulieren leveren
+  hetzelfde canonieke bericht aan.
+- Bricks ondersteunt zelf Webhooks, server-side custom form actions en lokale
+  formulieropslag; AFI noemt Bricks Form eveneens als formulierprovider. De
+  huidige AFI-route kan daardoor waarschijnlijk ook tijdens de migratie worden
+  hergebruikt.
+- Er zijn geen instellingen, formulieren, plugins, data of schema's gewijzigd.
+
 ## 2026-10-19 — LIVE-formulieren en Supabase-koppelopties geïnventariseerd
 
 - De zes actuele Elementor-formulieren op LIVE zijn alleen-lezen uitgelezen:

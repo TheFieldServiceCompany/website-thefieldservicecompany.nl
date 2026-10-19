@@ -139,7 +139,11 @@ gewijzigd; open afhankelijkheden worden niet stilzwijgend overgeslagen.
    `audits/2026-10-19-wordpress-elementor-supabase-koppelopties.md`. AFI heeft
    al een inactieve algemene Webhook, actieve jobqueue, logging en resend en is
    daarom de voorlopige voorkeursconnector; een eigen outboxplugin is alleen
-   nodig als de AFI-proef niet aan de acceptatiecriteria voldoet.
+   nodig als de AFI-proef niet aan de acceptatiecriteria voldoet. Elementor
+   Atomic Forms vallen buiten scope. De ontvangstkant wordt
+   formulierbouwer-onafhankelijk ontworpen, zodat de latere overstap naar
+   Bricks dezelfde Edge Function, mapping, idempotentie en Supabase-tabellen
+   behoudt.
 14. [ ] **WordPress-connector en lokale outbox bouwen.** Werken na succesvolle
    Elementor-opslag, met unieke submission-UUID en zonder geheimen of
    persoonsgegevens in browsercode of gewone logs.

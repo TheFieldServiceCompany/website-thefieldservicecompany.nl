@@ -33,6 +33,30 @@ TFSC-outboxplugin nodig. De eigen ontwikkeling blijft beperkt tot het
 ontvangstcontract, de Edge Function, idempotente verwerking, bestandsroute en
 Appsmith-review.
 
+## Besluit over toekomstige formulierbouwer
+
+De gebruiker gaat Elementor Atomic Forms niet gebruiken en wil uiteindelijk
+van Elementor naar Bricks overstappen. Atomic Forms worden daarom geen
+compatibiliteitsdoel voor de TFSC-koppeling.
+
+De Supabase-ingang wordt formulierbouwer-onafhankelijk ontworpen. Het vaste
+contract begint bij de beveiligde Edge Function en verandert niet bij de
+latere overstap:
+
+- nu: klassieke Elementor-formulieren via AFI Webhook;
+- later: Bricks-formulieren via AFI Webhook, de native Bricks Webhook of een
+  kleine Bricks custom action;
+- in beide gevallen: dezelfde submission-ID's, veldbetekenissen,
+  idempotentieregels, bestandsroute en Supabase-tabellen.
+
+Bricks documenteert een native Webhook met JSON/form-data, aangepaste headers
+en payloadmapping, een officiële server-side custom action en lokale opslag van
+formulierinzendingen. AFI noemt `Bricks Form` daarnaast als beschikbare
+formulierprovider. Daardoor hoeft een eventuele eigen plugin niet de editor of
+velden van Elementor na te bouwen. Als later toch een eigen connector nodig is,
+krijgt deze een dunne Elementor-adapter en een dunne Bricks-adapter rond één
+gedeelde outbox- en afleverlaag.
+
 ## Beoordeelde mogelijkheden
 
 ### 1. Elementor Pro Webhook — bruikbaar als transport, niet als volledige oplossing
@@ -158,6 +182,12 @@ niet als definitieve levering zonder aantoonbare queue en herstelroute.
   https://wp-webhooks.com/integrations/elementor/
 - WP Webhooks functies, logging en asynchrone flows:
   https://wp-webhooks.com/features/
+- Bricks-formulier, Webhook en custom actions:
+  https://academy.bricksbuilder.io/builder/elements/general/form/
+- Bricks server-side custom action:
+  https://academy.bricksbuilder.io/developer/hooks/actions/bricks-form-custom_action/
+- Bricks lokale formulierinzendingen:
+  https://academy.bricksbuilder.io/builder/features/save-form-submissions/
 - Supabase Edge Functions:
   https://supabase.com/docs/guides/functions
 - Supabase beveiligde Edge Functions:
