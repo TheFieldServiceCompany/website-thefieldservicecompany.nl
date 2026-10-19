@@ -1,5 +1,18 @@
 # Changelog
 
+## 2026-10-19 — Centrale TODO en integratieroute
+
+- Een centrale `TODO.md` toegevoegd met de open SEO- en sitemapcontroles uit
+  de vorige werksessie, de eerstvolgende LiteSpeed-/Clarity- en
+  formuliercontroles en de bestaande content- en onderhoudsbacklog.
+- De geplande WordPress–Supabase–CRM-koppeling uitgewerkt in zes veilige fasen:
+  veldmapping, alleen-lezen inventarisatie, duurzame ontvangst/foutopvang,
+  private documentopslag, CRM-synchronisatie en gecontroleerde omschakeling.
+- Alleen-lezen bevestigd dat het bestaande Supabase-model al relaties bevat
+  voor personen, kandidaatprofielen, sollicitaties, bedrijven,
+  contactpersonen, documenten en externe ID's. Er zijn geen database-,
+  WordPress- of CRM-wijzigingen uitgevoerd.
+
 ## 2026-10-19 — Vacaturecombinaties beperkt tot twee taxonomieën
 
 - Snippet 148 begrensd tot exact twee taxonomieën per sitemap-URL en voorzien

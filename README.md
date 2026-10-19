@@ -14,6 +14,7 @@ nieuwe connector end-to-end is getest.
 
 | Map | Bedoeld voor |
 | --- | --- |
+| `TODO.md` | Centrale werklijst en veilige uitvoervolgorde |
 | `snippets/php/` | PHP-snippets |
 | `snippets/javascript/` | JavaScript-snippets |
 | `snippets/css/` | CSS-aanpassingen |
