@@ -1,5 +1,27 @@
 # Changelog
 
+## 2026-10-19 — Beroepengids-functienamen als artikelarchief ingericht
+
+- Alle 32 bestaande descriptions, intro's en archieftitels van
+  `beroep_functienaam` zijn LIVE ingericht als artikelarchief.
+- Iedere description bevat drie compacte alinea's: introductie op de
+  functienaam, verwijzing naar toekomstige artikelen en uitleg hoe de lezer
+  daarmee functies en vacatures kan vergelijken.
+- De eerdere vier H2-vragen per term zijn verwijderd. Die zoekvragen worden
+  later als zelfstandige artikelen uitgewerkt.
+- Alle H1's gebruiken het patroon `Functienaam [term] | Artikelen`; de
+  descriptions bevatten 104–143 woorden en de intro's 21–38 woorden.
+- De teksten zijn gebaseerd op de inhoud en het titelgebruik in actuele
+  vacatures. Overlappende titels en spellingvarianten worden eerlijk
+  uitgelegd en niet als kunstmatig verschillende beroepen gepresenteerd.
+- Alle 96 waarden zijn na publicatie exact via REST geverifieerd. Zes openbare
+  archieven zijn cachevrij gecontroleerd; alle gaven HTTP 200 en toonden de
+  juiste H1, intro en drie archiefalinea's.
+- Er zijn geen termen, slugs, relaties, Pods, velden, vacatures, artikelen of
+  template-instellingen gewijzigd.
+- Volledig log:
+  `audits/2026-10-19-beroepengids-functienamen-live.md`.
+
 ## 2026-10-19 — Beroepengids-studierichtingen inhoudelijk herschreven
 
 - Alle 23 descriptions van `beroep_studierichting` zijn LIVE herschreven rond

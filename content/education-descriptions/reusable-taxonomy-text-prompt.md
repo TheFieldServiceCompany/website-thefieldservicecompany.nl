@@ -75,6 +75,35 @@ zinnen. De intro moet de studierichting direct verbinden met field service en
 de lezer uitnodigen verder te lezen; gebruik niet één generieke zin waarin
 alleen de termnaam wordt vervangen.
 
+### Extra regels voor een Beroepengids-functienaam
+
+Een Beroepengids-functienaam is een artikelarchief. De taxonomy-description is
+een introductie op dat archief en geen volledig beroepsartikel. In afwijking
+van de algemene H2-regel bevat deze description daarom geen losse zoekvragen
+of vier mini-artikelen. Die vragen worden later zelfstandige artikelen.
+
+Gebruik als bestaande Pods-archieftitel exact:
+
+`Functienaam [TERM] | Artikelen`
+
+Lever daarnaast een korte, uitnodigende intro met een directe verbinding naar
+field service. Schrijf vervolgens drie compacte alinea's:
+
+1. een grove introductie op de functienaam en de mogelijke variatie per
+   werkgever, techniek of sector;
+2. een verwijzing naar de artikelen in het archief en de onderwerpen die daar
+   verder worden uitgewerkt, zoals werkzaamheden, opleiding, vaardigheden,
+   salaris, reizen en doorgroei;
+3. uitleg hoe die artikelen de lezer helpen functies en vacatures te
+   vergelijken en een passende field service richting te kiezen.
+
+Lees voor de introductie relevante actuele vacatures. Presenteer kenmerken
+uit één vacature niet als universele waarheid en maak geen kunstmatig
+inhoudelijk onderscheid tussen spellingvarianten zoals `Service Monteur` en
+`Servicemonteur`, of `Site Manager` en `Sitemanager`. Maak iedere intro en
+description inhoudelijk uniek, maar behoud voor alle functienamen dezelfde
+duidelijke archiefstructuur.
+
 Behandel waar relevant:
 
 - de belangrijkste kennis en vaardigheden;
@@ -92,12 +121,11 @@ wereld` en `onmisbare schakel`. Maak geen handmatige vacaturelinks wanneer de
 website relaties automatisch vult. De template levert de H1; gebruik in de
 description alleen H2-koppen en alinea's.
 
-Lever eerst een concept met:
-
-1. vier H2-koppen en de volledige tekst;
-2. het woordenaantal;
-3. een korte feiten- en herhalingscontrole;
-4. de exact bedoelde WordPress-taxonomie.
+Lever voor een Beroepengids-functienaam eerst een concept met archieftitel,
+intro, drie alinea's, woordenaantal, feitencontrole en de exact bedoelde
+WordPress-taxonomie. Lever bij andere uitgebreide taxonomyteksten eerst vier
+H2-koppen en de volledige tekst, tenzij voor die taxonomie een andere
+goedgekeurde structuur is vastgelegd.
 
 Publiceer pas na inhoudelijke goedkeuring.
 
@@ -119,8 +147,9 @@ Publiceer pas na inhoudelijke goedkeuring.
 
 ## Eindcontrole per tekst
 
-- Is de eerste H2 anders opgebouwd dan bij de omliggende teksten?
-- Noemt de kop direct het onderwerp en de relatie met service of field service?
+- Volgt de tekst de goedgekeurde structuur voor deze specifieke taxonomie?
+- Is een Beroepengids-functienaam duidelijk een introductie op artikelen en
+  niet zelf een verzameling halve artikelen?
 - Bevat iedere alinea concrete informatie in plaats van algemene claims?
 - Kloppen opleiding, machines, technieken, functies en sectoren inhoudelijk?
 - Is de tekst prettig, actief en motiverend om te lezen?

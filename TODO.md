@@ -48,8 +48,12 @@ gewijzigd; open afhankelijkheden worden niet stilzwijgend overgeslagen.
    De vijf Beroepengids-spiegels voor Bedrijfssectoren, Functie-inhoud,
    Functienamen, Kennisgebieden en Werkgebieden zijn op 19 oktober LIVE
    gelijkgetrokken met de vacaturetermen: 127 namen/slugs en 127 bestaande
-   relaties zijn gecontroleerd. Hun descriptions zijn bewust nog leeg en
-   blijven onderdeel van de latere inhoudelijke ronde.
+   relaties zijn gecontroleerd. De 32 Functienamen hebben sinds 19 oktober
+   afzonderlijke descriptions, uitnodigende intro's en archieftitels als
+   artikelarchief; alle 96 waarden zijn LIVE geverifieerd. De descriptions van
+   de overige 95 spiegeltermen
+   (Bedrijfssectoren, Functie-inhoud, Kennisgebieden en Werkgebieden) zijn nog
+   leeg en blijven onderdeel van de latere inhoudelijke ronde.
    De 23 Beroepengids-studierichtingen hebben sinds 19 oktober wel nieuwe,
    afzonderlijke descriptions en uitnodigende intro's. Alle teksten koppelen
    de studie aan mogelijke field service functies en zijn LIVE geverifieerd.

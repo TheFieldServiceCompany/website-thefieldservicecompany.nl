@@ -1,0 +1,1768 @@
+{
+  "created_at": "2026-10-19",
+  "taxonomy": "beroep_functienaam",
+  "terms": [
+    {
+      "id": 437,
+      "count": 1,
+      "description": "<h2>Waarom staat het woord field in Field Service Engineer?</h2>\n\n<p>Field maakt duidelijk dat het werk grotendeels plaatsvindt waar de klant de machine of installatie gebruikt. Je werkt dus niet alleen vanuit een werkplaats of kantoor. Afhankelijk van de werkgever bezoek je klanten in Nederland, de Benelux, Europa of wereldwijd.</p>\n\n<p>Op de website zie je field service engineers bij onder meer verpakkingsmachines, filtratiesystemen, maritieme installaties en complexe machinebouw. Het product verandert, maar de verantwoordelijkheid op locatie blijft de verbindende factor.</p>\n\n<h2>Waarvoor wordt een field service engineer ingeschakeld?</h2>\n\n<p>De functie kan installatie, onderhoud, reparatie, troubleshooting, upgrades en inbedrijfstelling combineren. Je beoordeelt wat er aan de hand is, stemt af met de klant en schakelt zo nodig met engineering of technical support.</p>\n\n<p>De ene baan is hoofdzakelijk mechanisch, een andere vraagt elektrotechniek, besturingstechniek of een allround profiel. Daarom bestaat er geen universeel field service engineer-diploma: technische basis, ervaring en producttraining vormen samen jouw inzetbaarheid.</p>\n\n<h2>Hoe verschilt de rol van een Service Engineer of Field Engineer?</h2>\n\n<p>Service engineer wordt vaak voor vrijwel hetzelfde werk gebruikt. Field service engineer benadrukt alleen sterker dat je veel op klantlocaties actief bent. Field engineer kan breder project- of locatiegebonden werk betekenen en hoeft niet altijd een pure aftersalesfunctie te zijn.</p>\n\n<p>Laat je dus niet leiden door één Engels woord. Kijk naar werkzaamheden, machines, reisgebied, zelfstandigheid en de ondersteuning die je onderweg krijgt.</p>\n\n<h2>Is dit de field service baan die jij zoekt?</h2>\n\n<p>De functie past bij technici die afwisseling, verantwoordelijkheid en direct klantcontact waarderen. Bepaal vooraf of je korte servicebezoeken, langere projecten of een combinatie wilt en hoeveel reizen bij jouw leven past.</p>\n\n<p>The Field Service Company is gespecialiseerd in dit vakgebied. Wij helpen je graag vergelijken en zoeken met je mee naar de mooiste field service engineer functie voor jouw achtergrond en ambities.</p>",
+      "link": "https://thefieldservicecompany.nl/beroepengids/functienamen/field-service-engineer/",
+      "name": "Field Service Engineer",
+      "slug": "field-service-engineer",
+      "taxonomy": "beroep_functienaam",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functienaam/437",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functienaam"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_functienaam"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_functienaam=437"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 701,
+      "count": 0,
+      "description": "<h2>Wanneer begint het werk van een Commissioning Engineer?</h2>\n\n<p>Meestal nadat een machine of installatie is opgebouwd en aangesloten. Jij controleert of onderdelen correct samenwerken, voert functionele tests uit en werkt toe naar een veilige, aantoonbare oplevering.</p>\n\n<p>Op de website loopt commissioning uiteen van rotating equipment en energie-installaties tot complete productielijnen. De schaal verschilt, maar het doel blijft: het systeem laten presteren volgens de afgesproken eisen.</p>\n\n<h2>Wat doe je behalve op de startknop drukken?</h2>\n\n<p>Je controleert montage, instellingen, signalen en beveiligingen, analyseert afwijkingen en stemt oplossingen af met installatie, software en engineering. Ook rapportage, acceptatietests en uitleg aan de klant kunnen bij de functie horen.</p>\n\n<p>Bij complexe projecten stuur je mogelijk monteurs of lokale partners aan. De rol combineert dan technische diepgang met planning en communicatie.</p>\n\n<h2>Welke achtergrond past bij commissioning?</h2>\n\n<p>Elektrotechniek, werktuigbouwkunde, mechatronica, automatisering of een sectorspecifieke opleiding kan aansluiten. De machine bepaalt welke discipline het zwaarst weegt.</p>\n\n<p>Commissioning engineer is vaak een volgende stap voor ervaren installation of service engineers. Toch bestaan er ook startersfuncties met intensieve begeleiding en producttraining.</p>\n\n<h2>Is commissioning jouw mooiste projectbaan?</h2>\n\n<p>Bepaal of je houdt van deadlines, nieuwe techniek en projecten die soms langer op locatie duren. Vergelijk reisduur, projectfase, beslissingsruimte en de samenwerking met engineering.</p>\n\n<p>The Field Service Company kent werkgevers die commissioning verschillend inrichten. Wij helpen je graag de functie te vinden waarin jij een installatie met vertrouwen aan de klant kunt overdragen.</p>",
+      "link": "https://thefieldservicecompany.nl/beroepengids/functienamen/commissioning-engineer/",
+      "name": "Commissioning Engineer",
+      "slug": "commissioning-engineer",
+      "taxonomy": "beroep_functienaam",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functienaam/701",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functienaam"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_functienaam"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_functienaam=701"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 702,
+      "count": 0,
+      "description": "<h2>Is een Field Engineer hetzelfde als een Field Service Engineer?</h2>\n\n<p>Soms wel, maar niet altijd. Werkgevers gebruiken field engineer geregeld als korte benaming voor een technische buitendienstfunctie. De titel kan echter ook horen bij installatie, projectbegeleiding, inspectie of technische ondersteuning op een vaste locatie.</p>\n\n<p>Op de website is de term bijvoorbeeld gekoppeld aan een internationale allroundfunctie rond HVAC, koeling en maritieme installaties. Dat laat zien dat je altijd verder moet lezen dan de functienaam.</p>\n\n<h2>Welke verantwoordelijkheid krijg je in het veld?</h2>\n\n<p>Je vertegenwoordigt technische kennis op locatie. Dat kan betekenen dat je een systeem inspecteert, werkzaamheden voorbereidt, storingen onderzoekt, installatiepartners begeleidt of bevindingen terugkoppelt aan engineering.</p>\n\n<p>Hoe hands-on de baan is, verschilt sterk. De ene field engineer werkt zelf met gereedschap en meetmiddelen; een ander bewaakt kwaliteit, planning en technische afstemming binnen een project.</p>\n\n<h2>Bij welke projecten en sectoren kom je deze titel tegen?</h2>\n\n<p>Field engineers werken onder meer in machinebouw, energie, maritiem, infrastructuur, hightech en industriële installaties. Sommige functies zijn regionaal, andere volgen projecten internationaal en vragen langere perioden op locatie.</p>\n\n<p>Een opleiding in werktuigbouwkunde, elektrotechniek, mechatronica of een sectorspecifieke richting kan aansluiten. De gevraagde achtergrond hangt af van het systeem en van jouw rol binnen het project.</p>\n\n<h2>Hoe ontdek je wat er achter een Field Engineer vacature zit?</h2>\n\n<p>Controleer of de nadruk ligt op service, installatie, inspectie of projectcoördinatie. Kijk daarnaast naar techniek, reisduur, zelfstandigheid en de vraag of je uitvoert of vooral begeleidt.</p>\n\n<p>The Field Service Company helpt je graag de titel te vertalen naar het echte werk. Zo vind je een field engineer baan die niet alleen interessant klinkt, maar ook inhoudelijk bij je past.</p>",
+      "link": "https://thefieldservicecompany.nl/beroepengids/functienamen/field-engineer/",
+      "name": "Field Engineer",
+      "slug": "field-engineer",
+      "taxonomy": "beroep_functienaam",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functienaam/702",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functienaam"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_functienaam"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_functienaam=702"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 703,
+      "count": 0,
+      "description": "<h2>Wat voegt Field toe aan Service Coordinator?</h2>\n\n<p>Het benadrukt dat je specifiek een mobiel serviceteam ondersteunt. Je houdt rekening met routes, reistijd, beschikbaarheid, vaardigheden en urgente klantproblemen op verschillende locaties.</p>\n\n<p>Inhoudelijk kan de functie gelijk zijn aan service coördinator. Bij een internationale organisatie wordt vaak simpelweg de Engelse titel gebruikt.</p>\n\n<h2>Hoe houd je grip op een veranderende planning?</h2>\n\n<p>Storingen laten zich niet perfect voorspellen. Je verschuift afspraken, informeert klanten en zorgt dat spoedwerk niet alle geplande maintenance verdringt.</p>\n\n<p>Daarvoor heb je overzicht en technische feeling nodig. Een verkeerde monteur of ontbrekend onderdeel kost extra reistijd en verlengt de stilstand bij de klant.</p>\n\n<h2>Met wie werk je dagelijks samen?</h2>\n\n<p>Met field service engineers, monteurs, klanten, magazijn, parts, technical support en soms internationale vestigingen. Je bent het knooppunt waar operationele informatie samenkomt.</p>\n\n<p>Afhankelijk van de werkgever verzorg je ook offertes, rapportage, KPI&#039;s of de voorbereiding van grotere serviceprojecten.</p>\n\n<p>Bij internationaal georganiseerde teams spelen tijdzones, taal en lokale werkafspraken extra mee. Dan moet je informatie helder overdragen en vooruit plannen zonder de flexibiliteit voor urgente storingen te verliezen.</p>\n\n<h2>Welke coördinatiefunctie past bij jouw tempo?</h2>\n\n<p>Vergelijk teamgrootte, servicegebied, consignatie, klantdruk en de verhouding tussen plannen en technisch meedenken. Kijk ook naar doorgroei richting service management.</p>\n\n<p>The Field Service Company helpt je graag de organisatie achter de vacature te begrijpen. Zo vind je een field service coordinator functie waarin jij het verschil maakt voordat de engineer vertrekt.</p>",
+      "link": "https://thefieldservicecompany.nl/beroepengids/functienamen/field-service-coordinator/",
+      "name": "Field Service Coordinator",
+      "slug": "field-service-coordinator",
+      "taxonomy": "beroep_functienaam",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functienaam/703",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functienaam"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_functienaam"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_functienaam=703"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 704,
+      "count": 0,
+      "description": "<h2>Wat staat er op de agenda van een Field Service Manager?</h2>\n\n<p>Teamcapaciteit, veiligheid, kwaliteit, klanttevredenheid en technische escalaties zijn vaste onderwerpen. Je zorgt dat engineers goed zijn opgeleid, dat processen werken en dat resultaten passen bij servicecontracten en bedrijfsdoelen.</p>\n\n<p>Omdat medewerkers verspreid bij klanten werken, vraagt leidinggeven extra aandacht voor communicatie, coaching en verbondenheid met het team.</p>\n\n<h2>Hoe blijf je dicht bij de buitendienst?</h2>\n\n<p>Je gebruikt servicerapporten, klantfeedback en gesprekken met engineers om te begrijpen wat er werkelijk speelt. Bij grote escalaties kun je zelf klant of locatie bezoeken, maar jouw primaire rol is het team sterker maken.</p>\n\n<p>Technische ervaring helpt je onderscheid maken tussen een incident, een trainingsvraag en een structureel productprobleem.</p>\n\n<h2>Wat is het verschil met Service Manager?</h2>\n\n<p>Field service manager richt zich meestal specifiek op buitendienstteams en hun installed base. Service manager kan breder ook werkplaats, planning, parts, support en commerciële service omvatten.</p>\n\n<p>De titels overlappen sterk. Lees daarom welke afdelingen, regio&#039;s en resultaten onder jouw verantwoordelijkheid vallen.</p>\n\n<h2>Ben jij de leider die een field service team nodig heeft?</h2>\n\n<p>De functie past bij iemand die techniek begrijpt, mensen ontwikkelt en onder druk heldere keuzes maakt. Vergelijk teamgrootte, internationale scope, veranderopgave en jouw mandaat.</p>\n\n<p>The Field Service Company helpt je graag de managementrol achter de vacature te doorgronden. Samen zoeken we de field service manager baan waarin jij technici én klantresultaten vooruitbrengt.</p>",
+      "link": "https://thefieldservicecompany.nl/beroepengids/functienamen/field-service-manager/",
+      "name": "Field Service Manager",
+      "slug": "field-service-manager",
+      "taxonomy": "beroep_functienaam",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functienaam/704",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functienaam"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_functienaam"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_functienaam=704"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 705,
+      "count": 0,
+      "description": "<h2>Wie geeft een Field Service Supervisor leiding?</h2>\n\n<p>Meestal een team field service engineers, technicians of monteurs binnen een regio of technisch specialisme. Je verdeelt werk, ondersteunt bij moeilijke opdrachten en bewaakt dat service volgens veiligheids- en kwaliteitsafspraken wordt uitgevoerd.</p>\n\n<p>Op de website komt de titel terug bij complexe compressorservice, waar de supervisor naast aansturing ook technisch aan reparatie, installatie en inbedrijfstelling bijdraagt.</p>\n\n<h2>Blijf je zelf field service uitvoeren?</h2>\n\n<p>Vaak wel, zeker in een technisch klein of specialistisch team. Je kunt meewerken aan complexe opdrachten en tegelijk collega&#039;s coachen. Bij grotere organisaties verschuift de functie mogelijk richting planning en performance.</p>\n\n<p>Vraag hoeveel procent van je tijd hands-on, begeleidend en administratief is. Dat bepaalt of de rol bij jouw ambities past.</p>\n\n<h2>Welke ervaring heb je nodig voor supervision?</h2>\n\n<p>Diepe product- of sectorervaring helpt, net als aantoonbaar veilig en klantgericht werken. Leidinggeven vraagt daarnaast feedback geven, besluiten nemen en escalaties zorgvuldig communiceren.</p>\n\n<p>Veel supervisors groeien door vanuit senior field service. Een werkgever kan training bieden voor de formele managementkant van de functie.</p>\n\n<h2>Is dit jouw stap van specialist naar leider?</h2>\n\n<p>Vergelijk teamgrootte, regio, technische betrokkenheid en verantwoordelijkheid voor planning of resultaten. Kijk ook naar het vervolg richting service manager of productspecialist.</p>\n\n<p>The Field Service Company helpt je graag bepalen welke leiderschapsrol aansluit op jouw ervaring. Zo vind je een functie waarin je techniek niet verliest, maar ermee een heel team sterker maakt.</p>",
+      "link": "https://thefieldservicecompany.nl/beroepengids/functienamen/field-service-supervisor/",
+      "name": "Field Service Supervisor",
+      "slug": "field-service-supervisor",
+      "taxonomy": "beroep_functienaam",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functienaam/705",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functienaam"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_functienaam"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_functienaam=705"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 706,
+      "count": 0,
+      "description": "<h2>Wat doet een Field Service Technician in de praktijk?</h2>\n\n<p>De titel wordt vooral gebruikt voor hands-on servicewerk op locatie. Je kunt apparatuur installeren, inspecteren, onderhouden, repareren en testen. Welke werkzaamheden de boventoon voeren, hangt af van het product en de serviceorganisatie.</p>\n\n<p>Technician zegt niets definitiefs over opleidingsniveau of complexiteit. Bij de ene werkgever vervang je modules volgens procedures; elders onderzoek je zelfstandig storingen in complete machines.</p>\n\n<h2>Aan welke apparatuur kan een technician werken?</h2>\n\n<p>De mogelijkheden lopen uiteen van industriële machines en logistieke systemen tot medische apparatuur, energie-installaties en hightechproducten. Het werk kan mechanisch, elektrotechnisch of multidisciplinair zijn.</p>\n\n<p>Producttraining is belangrijk, omdat je veilig en efficiënt aan specifieke apparatuur moet kunnen werken. Een technische opleiding of aantoonbare praktijkervaring vormt daarvoor de basis.</p>\n\n<h2>Hoe verhoudt Technician zich tot Monteur en Engineer?</h2>\n\n<p>Field service technician is vaak de Engelstalige variant van fieldservicemonteur of servicetechnicus. Engineer kan meer analyse, commissioning of verantwoordelijkheid suggereren, maar werkgevers gebruiken de termen niet consequent.</p>\n\n<p>Vergelijk dus taken en beslissingsruimte. Bepaal of je vooral uitvoert volgens een serviceplan of ook zelf diagnose, klantadvies en technische escalatie verzorgt.</p>\n\n<h2>Welke buitendienstfunctie past bij jouw praktische talent?</h2>\n\n<p>Let op reistijd, storingsdienst, fysieke werkzaamheden, gereedschap en de begeleiding tijdens je inwerkperiode. Kijk ook naar kansen om door te groeien naar specialist, engineer of coördinator.</p>\n\n<p>The Field Service Company kent technische functies achter Nederlandse én Engelse titels. Wij helpen je graag de field service technician baan te vinden waarin jij praktisch kunt groeien.</p>",
+      "link": "https://thefieldservicecompany.nl/beroepengids/functienamen/field-service-technician/",
+      "name": "Field Service Technician",
+      "slug": "field-service-technician",
+      "taxonomy": "beroep_functienaam",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functienaam/706",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functienaam"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_functienaam"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_functienaam=706"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 707,
+      "count": 0,
+      "description": "<h2>Wanneer noemt een werkgever je Field Service Technicus?</h2>\n\n<p>Technicus benadrukt vaak dat je praktisch werk combineert met technisch inzicht en zelfstandige diagnose. De benaming kan worden gebruikt voor dezelfde werkzaamheden als field service technician, servicemonteur of field service engineer.</p>\n\n<p>Er bestaat geen harde grens tussen die titels. Het product, de verantwoordelijkheid en de gevraagde ervaring bepalen het echte niveau van de functie.</p>\n\n<h2>Welke werkzaamheden horen bij deze buitendienstrol?</h2>\n\n<p>Je kunt machines installeren, onderhoud uitvoeren, storingen analyseren, onderdelen vervangen en een systeem na afloop testen. Ook klantuitleg en een duidelijk servicerapport horen vaak bij het werk.</p>\n\n<p>De techniek kan variëren van mechanica en elektro tot hydrauliek, koeltechniek of besturing. Bij complexe producten werk je samen met remote support of engineering.</p>\n\n<h2>Past een praktische opleiding bij deze functie?</h2>\n\n<p>Mbo-techniek, mechatronica, elektrotechniek, werktuigbouwkunde of een andere praktische richting kan aansluiten. Werkgevers kijken daarnaast naar ervaring, storingsinzicht en bereidheid om hun product te leren.</p>\n\n<p>Je hoeft dus niet op iedere vacature al volledig productspecialist te zijn. Controleer wel welke veiligheidstraining, talenkennis en reisbereidheid nodig zijn.</p>\n\n<h2>Waar vind je de technicusfunctie die bij jou past?</h2>\n\n<p>Vergelijk banen op machines, regio, zelfstandigheid en verhouding tussen onderhoud en storingen. Kijk ook of de werkgever een duidelijk groeipad naar senior technicus, productspecialist of engineer biedt.</p>\n\n<p>The Field Service Company helpt je graag achter de functietitel te kijken. Zo vinden we samen de field service baan waarin jouw technische vakmanschap het beste wordt benut.</p>",
+      "link": "https://thefieldservicecompany.nl/beroepengids/functienamen/field-service-technicus/",
+      "name": "Field Service Technicus",
+      "slug": "field-service-technicus",
+      "taxonomy": "beroep_functienaam",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functienaam/707",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functienaam"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_functienaam"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_functienaam=707"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 708,
+      "count": 0,
+      "description": "<h2>Is een Inbedrijfsteller hetzelfde als een Commissioning Engineer?</h2>\n\n<p>Vaak wel. Inbedrijfsteller is de Nederlandse benaming voor iemand die een machine of installatie test, afstelt en gereedmaakt voor gebruik. Commissioning engineer kan hetzelfde betekenen, al klinkt die titel bij sommige werkgevers internationaler of meer engineeringgericht.</p>\n\n<p>Ga niet uit van een niveauverschil zonder de werkzaamheden te lezen. De complexiteit van het systeem en jouw verantwoordelijkheid zijn bepalend.</p>\n\n<h2>Welke stappen horen bij een goede inbedrijfstelling?</h2>\n\n<p>Je controleert of montage en aansluitingen kloppen, test functies en beveiligingen en zoekt uit waarom een systeem nog niet volgens verwachting presteert. Daarna leg je instellingen en resultaten vast voor de overdracht.</p>\n\n<p>Afhankelijk van de machine werk je met mechanica, elektro, PLC-software, procescondities of een combinatie. Je schakelt veel met installatie, engineering en de klant.</p>\n\n<h2>Werk je in Nederland of op internationale projecten?</h2>\n\n<p>Machinebouwers leveren hun systemen vaak over de grens. Daardoor kan de functie variëren van regionale installaties tot wekenlange commissioning bij een fabriek in het buitenland.</p>\n\n<p>Vraag naar projectduur, testfase in de eigen werkplaats, reistijd en wat er na oplevering gebeurt. Sommige inbedrijfstellers blijven ook betrokken bij service en training.</p>\n\n<h2>Waar vind je de inbedrijfsteller baan die jou uitdaagt?</h2>\n\n<p>Vergelijk machines, technische discipline, programmeerwerk, projectverantwoordelijkheid en reizen. Kijk ook naar begeleiding wanneer je van service of installatie naar commissioning wilt doorgroeien.</p>\n\n<p>The Field Service Company helpt je graag beide functienamen te doorzoeken. Zo vinden we de baan waarin jij nieuwe techniek echt tot leven brengt.</p>",
+      "link": "https://thefieldservicecompany.nl/beroepengids/functienamen/inbedrijfsteller/",
+      "name": "Inbedrijfsteller",
+      "slug": "inbedrijfsteller",
+      "taxonomy": "beroep_functienaam",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functienaam/708",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functienaam"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_functienaam"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_functienaam=708"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 709,
+      "count": 0,
+      "description": "<h2>Waar begint de verantwoordelijkheid van een Installation Engineer?</h2>\n\n<p>De rol start vaak vóór de eerste machineonderdelen arriveren. Je beoordeelt voorbereiding, tekeningen, aansluitingen, hulpmiddelen en planning en zorgt dat installatie op locatie uitvoerbaar is.</p>\n\n<p>Tijdens het project bewaak je technische kwaliteit en los je afwijkingen op. Bij sommige werkgevers werk je zelf volop mee; bij andere stuur je monteurs en lokale partners aan.</p>\n\n<h2>Welke machines worden door installation engineers geplaatst?</h2>\n\n<p>Denk aan productielijnen, verpakkingsmachines, energie-installaties, rotating equipment en logistieke systemen. De techniek kan mechanisch zwaar zijn of juist veel elektro en automatisering bevatten.</p>\n\n<p>Nieuwe machines worden geregeld internationaal geleverd. Goede communicatie, voorbereiding en omgaan met verschillen op de klantlocatie zijn daarom belangrijk.</p>\n\n<h2>Hoe verschilt installatie van commissioning?</h2>\n\n<p>Installatie richt zich primair op correct opbouwen, positioneren en aansluiten. Commissioning bewijst daarna dat het complete systeem functioneert en aan eisen voldoet. In de praktijk kunnen beide fases in één functie samenkomen.</p>\n\n<p>Lees of jij tot mechanische oplevering betrokken bent of ook functionele tests, software en klantacceptatie verzorgt.</p>\n\n<h2>Past internationale machine-installatie bij jou?</h2>\n\n<p>De functie vraagt technisch overzicht, praktisch inzicht en vaak langere projecten op locatie. Vergelijk reisduur, teamgrootte, mate van leidinggeven en de overgang naar commissioning.</p>\n\n<p>The Field Service Company helpt je graag ontdekken welke installatieprojecten bij jouw achtergrond passen. Samen zoeken we een baan waarin jij letterlijk de basis legt voor betrouwbare machines.</p>",
+      "link": "https://thefieldservicecompany.nl/beroepengids/functienamen/installation-engineer/",
+      "name": "Installation Engineer",
+      "slug": "installation-engineer",
+      "taxonomy": "beroep_functienaam",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functienaam/709",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functienaam"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_functienaam"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_functienaam=709"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 710,
+      "count": 0,
+      "description": "<h2>Waarover houdt een Installation Supervisor toezicht?</h2>\n\n<p>Je bewaakt de uitvoering van een installatieproject. Dat omvat planning, kwaliteit, veiligheid en afstemming tussen eigen monteurs, lokale partners en de klant. Je controleert of werkzaamheden volgens tekeningen en afspraken worden uitgevoerd.</p>\n\n<p>Afhankelijk van team en project werk je zelf technisch mee of ligt de nadruk op coördinatie en besluitvorming.</p>\n\n<h2>Hoeveel technische kennis heb je nodig?</h2>\n\n<p>Genoeg om afwijkingen te herkennen, tekeningen te begrijpen en te bepalen wanneer specialistische hulp nodig is. Vaak groei je vanuit installation, service of commissioning naar deze leidinggevende rol.</p>\n\n<p>Je hoeft niet iedere discipline zelf te beheersen, maar moet mechanische, elektrische en organisatorische gevolgen wel kunnen overzien.</p>\n\n<h2>Wat maakt internationale installaties uitdagend?</h2>\n\n<p>Materiaal, mensen en hulpmiddelen moeten op het juiste moment beschikbaar zijn. Taal, cultuur en lokale omstandigheden kunnen het plan beïnvloeden. Tegelijk blijven veiligheid, kwaliteit en deadline overeind.</p>\n\n<p>Daarom zijn voorbereiding en communicatie minstens zo belangrijk als technisch inzicht. Langere verblijven op projectlocatie komen regelmatig voor.</p>\n\n<p>Je bent bovendien het aanspreekpunt wanneer de werkelijkheid afwijkt van de planning. Dan moet je snel bepalen wat het team zelf kan oplossen, welke keuze de klant raakt en wanneer overleg met engineering of projectmanagement nodig is.</p>\n\n<h2>Ben jij klaar om een installatieteam te leiden?</h2>\n\n<p>Vergelijk vacatures op projectomvang, teamgrootte, reisduur en jouw mandaat op locatie. Kijk ook waar jouw verantwoordelijkheid eindigt en commissioning het overneemt.</p>\n\n<p>The Field Service Company helpt je graag de stap naar supervision te beoordelen. Samen vinden we een functie waarin jouw technische ervaring én leiderschap volledig worden benut.</p>",
+      "link": "https://thefieldservicecompany.nl/beroepengids/functienamen/installation-supervisor/",
+      "name": "Installation Supervisor",
+      "slug": "installation-supervisor",
+      "taxonomy": "beroep_functienaam",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functienaam/710",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functienaam"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_functienaam"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_functienaam=710"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 711,
+      "count": 0,
+      "description": "<h2>Wat installeert een Installation Technician?</h2>\n\n<p>Dat kan een losse machine, een complete productielijn of een technisch systeem zijn. Je monteert onderdelen, sluit componenten aan en controleert of de installatie volgens tekeningen en voorschriften is opgebouwd.</p>\n\n<p>De titel is internationaal, maar lijkt inhoudelijk vaak op installatiemonteur. De technische discipline kan mechanisch, elektrisch of mechatronisch zijn.</p>\n\n<h2>Hoe praktisch is deze projectfunctie?</h2>\n\n<p>Meestal zeer praktisch. Je werkt met gereedschap, meetmiddelen en soms hijsmiddelen. Nauwkeurigheid is belangrijk, omdat fouten tijdens installatie later storingen of vertraging bij commissioning veroorzaken.</p>\n\n<p>Je werkt vaak in een team en volgt een planning. Met ervaring kun je meer verantwoordelijkheid krijgen voor deelinstallaties, kwaliteitscontrole of de begeleiding van anderen.</p>\n\n<h2>Blijf je betrokken wanneer de machine gaat draaien?</h2>\n\n<p>Dat verschilt. Sommige technicians leveren de installatie mechanisch op en gaan door naar het volgende project. Andere helpen bij testen, afstellen en commissioning of keren later terug voor service.</p>\n\n<p>Vraag naar deze overgang. Daarmee zie je of de functie vooral montage biedt of ook ruimte om je technisch breder te ontwikkelen.</p>\n\n<h2>Waar staat jouw volgende installatieproject?</h2>\n\n<p>Vergelijk machines, landen, projectduur, fysieke werkzaamheden en interne training. Kijk ook naar doorgroei richting installation engineer, commissioning of field service.</p>\n\n<p>The Field Service Company helpt je graag de projecten achter de vacature te begrijpen. Zo vind je een installation technician baan waarin jouw vakmanschap zichtbaar wordt in een werkende installatie.</p>",
+      "link": "https://thefieldservicecompany.nl/beroepengids/functienamen/installation-technician/",
+      "name": "Installation Technician",
+      "slug": "installation-technician",
+      "taxonomy": "beroep_functienaam",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functienaam/711",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functienaam"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_functienaam"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_functienaam=711"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 712,
+      "count": 0,
+      "description": "<h2>Is internationaal niet vanzelfsprekend bij Field Service Engineer?</h2>\n\n<p>Nee. Field betekent werken op locatie, maar die locatie kan ook gewoon in Nederland liggen. Door internationaal toe te voegen maakt de werkgever duidelijk dat buitenlandse klantbezoeken een structureel onderdeel van de baan zijn.</p>\n\n<p>Hoe vaak en hoe lang je reist, blijft per organisatie verschillend. Laat dat altijd concreet maken voordat je kiest.</p>\n\n<h2>Voor welke opdrachten ga je de grens over?</h2>\n\n<p>Internationale engineers worden ingezet voor installatie, commissioning, complexe storingen, groot onderhoud en training. Vaak gaat het om machines waarvan wereldwijd maar een beperkt aantal specialisten de volledige techniek kent.</p>\n\n<p>Je werkt zelfstandig, maar schakelt met lokale monteurs, klanten en het team thuis. Technische kennis en heldere communicatie zijn daarom even belangrijk.</p>\n\n<h2>Welke machines brengen je de wereld rond?</h2>\n\n<p>Denk aan productielijnen, rotating equipment, energie-installaties, maritieme systemen, hightechmachines en specialistische procesapparatuur. Sommige projecten zijn mechanisch zwaar; andere vragen elektro, PLC-kennis of een breed mechatronisch profiel.</p>\n\n<p>De machine bepaalt vaak de projectduur. Installatie van een complete lijn duurt langer dan een gerichte storing of inspectie.</p>\n\n<h2>Hoe vind je jouw mooiste internationale field service functie?</h2>\n\n<p>Vergelijk techniek, landen, reisfrequentie, maximale tripduur, weekenden thuis en begeleiding. Bespreek ook visa, veiligheid, werktijden en compensatie.</p>\n\n<p>The Field Service Company kent internationale servicewerkgevers en stelt de vragen achter het percentage reizen. Wij helpen je graag de baan te vinden waarin techniek en avontuur in de juiste verhouding staan.</p>",
+      "link": "https://thefieldservicecompany.nl/beroepengids/functienamen/internationaal-field-service-engineer/",
+      "name": "Internationaal Field Service Engineer",
+      "slug": "internationaal-field-service-engineer",
+      "taxonomy": "beroep_functienaam",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functienaam/712",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functienaam"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_functienaam"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_functienaam=712"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 713,
+      "count": 0,
+      "description": "<h2>Wat maakt een Service Engineer internationaal?</h2>\n\n<p>Niet de techniek, maar het werkgebied. Je reist voor installatie, onderhoud, storingen of upgrades naar klanten in Europa of wereldwijd. Sommige bezoeken duren enkele dagen; grotere projecten kunnen weken in beslag nemen.</p>\n\n<p>De term kan zowel een allround servicebaan als een specialistische functie bij één machinefabrikant beschrijven. Product en projecttype bepalen de inhoud.</p>\n\n<h2>Welke extra vaardigheden vraagt werken over de grens?</h2>\n\n<p>Naast techniek zijn Engels, zelfstandigheid en omgaan met andere culturen belangrijk. Je moet kunnen schakelen wanneer onderdelen, hulpmiddelen of lokale kennis anders beschikbaar zijn dan thuis.</p>\n\n<p>Ook duidelijke rapportage en afstemming met planning tellen zwaar. Een klant op afstand moet weten wat is opgelost, wat nog openstaat en welk vervolg nodig is.</p>\n\n<h2>Hoe ziet het reisleven eruit?</h2>\n\n<p>Internationaal kan betekenen: veel korte trips, een paar langere projecten per jaar of vrijwel continu onderweg zijn. Vraag naar maximale reisduur, hotelovernachtingen, weekenden thuis en planning vooraf.</p>\n\n<p>Vergelijk bovendien regio&#039;s en vervoersvormen. Service in Duitsland en België heeft een ander ritme dan wereldwijde commissioning in Azië of Amerika.</p>\n\n<h2>Past een internationale servicebaan bij jouw ambities?</h2>\n\n<p>Kijk niet alleen naar het avontuur, maar ook naar techniek, ondersteuning, vergoedingen en herstel tussen reizen. De mooiste internationale functie is duurzaam vol te houden én inhoudelijk interessant.</p>\n\n<p>The Field Service Company helpt je graag eerlijk vergelijken. Samen zoeken we de internationale service engineer baan die past bij jouw technische én persoonlijke reisprofiel.</p>",
+      "link": "https://thefieldservicecompany.nl/beroepengids/functienamen/internationaal-service-engineer/",
+      "name": "Internationaal Service Engineer",
+      "slug": "internationaal-service-engineer",
+      "taxonomy": "beroep_functienaam",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functienaam/713",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functienaam"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_functienaam"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_functienaam=713"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 714,
+      "count": 0,
+      "description": "<h2>Wat doet een Service Monteur in het buitenland?</h2>\n\n<p>Je kunt machines installeren, reviseren, onderhouden en repareren. Bij grotere projecten werk je samen met collega&#039;s of lokale monteurs; bij kortere servicebezoeken ben je mogelijk zelf het technische aanspreekpunt.</p>\n\n<p>De titel legt vaak meer nadruk op praktisch uitvoeren dan op engineering, maar ook hier verschillen werkgevers. Sommige monteurs verzorgen eveneens diagnose, commissioning en klantinstructie.</p>\n\n<h2>Hoe praktisch en zwaar is het werk?</h2>\n\n<p>Dat hangt af van de machine. Rotating equipment, productielijnen en zware installaties kunnen demontage, hijsmiddelen en lange werkdagen tijdens een onderhoudsstop vragen. Andere producten zijn compacter en vragen meer meten, afstellen of elektrische kennis.</p>\n\n<p>Controleer dus gereedschap, teamgrootte, werkomstandigheden en de ondersteuning die op locatie aanwezig is.</p>\n\n<h2>Hoe lang ben je van huis?</h2>\n\n<p>Internationaal geeft geen antwoord op reisduur. Projecten kunnen van één dag over de grens tot meerdere weken wereldwijd duren. Vraag naar hotels, weekenden, planning en hoeveel invloed je op vertrekdata hebt.</p>\n\n<p>Een functie kan technisch perfect passen en toch niet aansluiten op jouw privéleven. Het reisprofiel hoort daarom bij de inhoudelijke keuze.</p>\n\n<h2>Waar begint jouw internationale monteursloopbaan?</h2>\n\n<p>Vergelijk vacatures op machine, werkzaamheden, landen, projectduur en training. Kijk ook naar doorgroei richting specialist, commissioning engineer of supervisor.</p>\n\n<p>The Field Service Company helpt je graag een internationale service monteur baan te vinden waarin jouw vakmanschap wordt gewaardeerd en het reizen echt bij je past.</p>",
+      "link": "https://thefieldservicecompany.nl/beroepengids/functienamen/internationaal-service-monteur/",
+      "name": "Internationaal Service Monteur",
+      "slug": "internationaal-service-monteur",
+      "taxonomy": "beroep_functienaam",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functienaam/714",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functienaam"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_functienaam"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_functienaam=714"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 715,
+      "count": 0,
+      "description": "<h2>Verandert de functie door Servicemonteur aan elkaar te schrijven?</h2>\n\n<p>Nee. Internationaal servicemonteur en internationaal service monteur zijn spellingvarianten van dezelfde functienaam. Beide beschrijven een monteur die voor servicewerk naar klanten buiten Nederland reist.</p>\n\n<p>De vacature-inhoud blijft leidend. Het ene bedrijf zoekt een mechanisch specialist voor revisies, het andere een allround monteur voor installaties en storingen.</p>\n\n<h2>Welke werkzaamheden neem je mee op reis?</h2>\n\n<p>Onderhoud, reparatie, installatie en upgrades komen veel voor. Afhankelijk van ervaring kun je ook metingen uitvoeren, storingen analyseren, systemen in bedrijf stellen of lokale teams begeleiden.</p>\n\n<p>Producttraining is belangrijk, omdat je ver van de thuisbasis zelfstandig aan de juiste machine moet kunnen werken. Een goede voorbereiding voorkomt dat onderdelen of hulpmiddelen ontbreken.</p>\n\n<h2>Welk internationaal werkritme past bij jou?</h2>\n\n<p>Vraag naar landen, reisfrequentie, duur van projecten en weekenden thuis. Een monteur die maandelijks twee dagen naar België rijdt, heeft een ander leven dan iemand die wekenlang wereldwijd aan onderhoudsstops werkt.</p>\n\n<p>Let ook op werktijden en vrije dagen na een project. Reizen moet niet alleen avontuurlijk klinken, maar praktisch bij je blijven passen.</p>\n\n<h2>Hoe vind je de baan achter beide schrijfwijzen?</h2>\n\n<p>Zoek en vergelijk zowel service monteur als servicemonteur. Beoordeel daarna machine, technische diepgang, reisprofiel en begeleiding in plaats van de spatie.</p>\n\n<p>The Field Service Company helpt je over beide termen heen zoeken. Zo mis je geen mooie internationale field service baan door een verschil dat alleen in de spelling bestaat.</p>",
+      "link": "https://thefieldservicecompany.nl/beroepengids/functienamen/internationaal-servicemonteur/",
+      "name": "Internationaal Servicemonteur",
+      "slug": "internationaal-servicemonteur",
+      "taxonomy": "beroep_functienaam",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functienaam/715",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functienaam"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_functienaam"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_functienaam=715"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 716,
+      "count": 0,
+      "description": "<h2>Wat betekent Maintenance Technician in Nederland?</h2>\n\n<p>Meestal gaat het om een onderhoudstechnicus of onderhoudsmonteur. Je voert inspecties, preventief onderhoud en reparaties uit en helpt ongeplande uitval terug te dringen. De Engelse titel wordt veel gebruikt bij internationale productiebedrijven en machinebouwers.</p>\n\n<p>De werkplek kan één fabriek zijn of juist meerdere klantlocaties. Alleen uit de vacature blijkt of het om interne maintenance of field service gaat.</p>\n\n<h2>Welke onderhoudsstrategie kom je tegen?</h2>\n\n<p>Je kunt werken met vaste schema&#039;s, conditiemetingen of een combinatie. Servicerapporten en storingshistorie helpen bepalen welke componenten aandacht nodig hebben en waar een structurele oorzaak zit.</p>\n\n<p>Sommige functies richten zich op uitvoering. Andere maintenance technicians dragen ook bij aan planning, verbeteringen en terugkoppeling naar reliability of engineering.</p>\n\n<h2>Welke technische basis heb je nodig?</h2>\n\n<p>Dat hangt af van de installatie. Mechatronica, werktuigbouwkunde, elektrotechniek of procestechniek kunnen aansluiten. Bij internationale bedrijven zijn technische documentatie en communicatie vaak Engelstalig.</p>\n\n<p>Controleer daarnaast ploegendienst, consignatie en veiligheidsvereisten. Die aspecten bepalen sterk hoe het werk in jouw week past.</p>\n\n<h2>Zoek je vaste installaties of verschillende klanten?</h2>\n\n<p>Wie graag één machinepark door en door leert kennen, kan kiezen voor interne maintenance. Zoek je meer locaties en producten, kijk dan naar een buitendienst- of field service variant.</p>\n\n<p>The Field Service Company helpt je graag het verschil achter de titel te zien. Samen vinden we de maintenance technician baan waarin jouw technische voorkeur en gewenste werkomgeving kloppen.</p>",
+      "link": "https://thefieldservicecompany.nl/beroepengids/functienamen/maintenance-technician/",
+      "name": "Maintenance Technician",
+      "slug": "maintenance-technician",
+      "taxonomy": "beroep_functienaam",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functienaam/716",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functienaam"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_functienaam"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_functienaam=716"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 717,
+      "count": 0,
+      "description": "<h2>Waar draait het werk van een Onderhoudsmonteur om?</h2>\n\n<p>De kern is machines betrouwbaar en veilig inzetbaar houden. Je inspecteert, smeert, stelt af, vervangt slijtdelen en signaleert afwijkingen voordat een storing productie stillegt.</p>\n\n<p>Onderhoud kan preventief, correctief of conditiegestuurd zijn. De ene functie volgt vaste onderhoudsplannen; in een andere baan gebruik je metingen en ervaring om te bepalen wanneer ingrijpen nodig is.</p>\n\n<h2>Is onderhoud hetzelfde als field service?</h2>\n\n<p>Niet altijd. Een onderhoudsmonteur kan op één productielocatie werken als deel van een technische dienst. In een field service functie bezoek je juist verschillende klanten of installaties namens een fabrikant of dienstverlener.</p>\n\n<p>Beide werelden gebruiken vergelijkbare vaardigheden. Buitendienst vraagt daarnaast meer reizen, klantcommunicatie en voorbereiding van ieder bezoek.</p>\n\n<h2>Aan welke installaties kun je onderhoud uitvoeren?</h2>\n\n<p>Denk aan productiemachines, pompen, compressoren, transportbanen, energie-installaties en procesapparatuur. De technische nadruk kan mechanisch, elektrisch of mechatronisch zijn.</p>\n\n<p>Praktijkervaring en kennis van slijtage, lagering, aandrijvingen en veilig werken zijn waardevol. Training helpt je specifieke inspectiepunten en onderhoudsintervallen van een product leren.</p>\n\n<h2>Wil je van onderhoud naar een bredere servicefunctie?</h2>\n\n<p>Kijk naar vacatures die naast onderhoud ook storingen, revisie, upgrades of klantadvies bevatten. Zo kun je geleidelijk meer verantwoordelijkheid en technische breedte opbouwen.</p>\n\n<p>The Field Service Company denkt graag mee over die stap. Wij helpen je een onderhouds- of field service baan te vinden waarin jouw ervaring met betrouwbare machines verder groeit.</p>",
+      "link": "https://thefieldservicecompany.nl/beroepengids/functienamen/onderhoudsmonteur/",
+      "name": "Onderhoudsmonteur",
+      "slug": "onderhoudsmonteur",
+      "taxonomy": "beroep_functienaam",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functienaam/717",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functienaam"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_functienaam"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_functienaam=717"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 718,
+      "count": 0,
+      "description": "<h2>Wat coördineert een Service Coördinator?</h2>\n\n<p>Je plant werkzaamheden, verdeelt opdrachten en bewaakt dat monteurs met de juiste informatie en onderdelen naar de klant gaan. Ook klantcontact, offertes, parts en terugkoppeling uit servicerapporten kunnen bij de rol horen.</p>\n\n<p>Op de website zie je functies waarin servicecoördinatie wordt gecombineerd met maintenance, werkvoorbereiding en commerciële verantwoordelijkheid. De titel dekt dus meer dan alleen een agenda beheren.</p>\n\n<h2>Hoe technisch moet je zijn?</h2>\n\n<p>Je hoeft niet iedere reparatie zelf uit te voeren, maar moet technische vragen wel kunnen begrijpen en prioriteren. Kennis van machines helpt je inschatten welke monteur, tijd en onderdelen nodig zijn.</p>\n\n<p>Sommige coördinatoren groeien door vanuit de buitendienst. Anderen brengen een achtergrond in planning, techniek of technische bedrijfskunde mee.</p>\n\n<h2>Ben je planner, klantadviseur of teamspeler?</h2>\n\n<p>Meestal alle drie. Je schakelt tussen klantverwachting, beschikbare capaciteit en onverwachte storingen. Rust bewaren en duidelijk communiceren zijn daarom belangrijk.</p>\n\n<p>Vraag in een vacature hoeveel beslissingsruimte je hebt en of je ook mensen aanstuurt, verbeterprojecten uitvoert of servicecontracten beheert.</p>\n\n<p>Ook de hoeveelheid direct klantcontact verschilt: bij het ene bedrijf ligt de nadruk op interne planning, bij het andere ben je dagelijks het vaste aanspreekpunt voor klanten.</p>\n\n<h2>Past de organisatie achter field service bij jou?</h2>\n\n<p>Vergelijk teamgrootte, type klanten, internationale contacten en de balans tussen dagelijkse operatie en structurele verbetering.</p>\n\n<p>The Field Service Company kent ook de functies achter de buitendienst. Wij helpen je graag een service coördinator baan te vinden waarin jouw technische inzicht en organisatietalent samen resultaat opleveren.</p>",
+      "link": "https://thefieldservicecompany.nl/beroepengids/functienamen/service-coordinator/",
+      "name": "Service Coördinator",
+      "slug": "service-coordinator",
+      "taxonomy": "beroep_functienaam",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functienaam/718",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functienaam"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_functienaam"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_functienaam=718"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 719,
+      "count": 0,
+      "description": "<h2>Wat bedoelt een werkgever met Service Engineer?</h2>\n\n<p>Service engineer is een brede functienaam voor technici die machines en installaties installeren, onderhouden, repareren of verbeteren. Op jullie website loopt het werk uiteen van verpakkingsmachines en filtratiesystemen tot zonnestroom en industriële apparatuur. De titel zegt dus niet automatisch welke techniek of hoeveel reizen erbij hoort.</p>\n\n<p>Sommige werkgevers gebruiken service engineer voor een zeer praktische buitendienstfunctie. Bij andere organisaties bevat de rol meer diagnose, commissioning, klantadvies of technische rapportage. De vacaturetekst en het product geven daarom meer duidelijkheid dan de functienaam alleen.</p>\n\n<h2>Aan welke techniek werkt een service engineer?</h2>\n\n<p>Dat kan mechanica, elektrotechniek, koeltechniek, pneumatiek, hydrauliek of lichte PLC-techniek zijn. Bij een machinebouwer werk je mogelijk aan complete productielijnen; bij een specialist juist aan één type compressor, scrubber, zonnepark of meetinstallatie.</p>\n\n<p>Veel functies combineren gepland onderhoud met storingen en upgrades. Je leert het product steeds beter kennen en vertaalt technische bevindingen naar een oplossing waar de klant mee verder kan.</p>\n\n<h2>Wanneer past deze servicefunctie bij jou?</h2>\n\n<p>Je moet techniek graag praktisch onderzoeken en zelfstandig beslissingen durven nemen. Klantcontact hoort erbij, net als voorbereiden, reizen en rapporteren. Een technische opleiding helpt, maar productkennis wordt vaak via training en ervaring opgebouwd.</p>\n\n<p>Vergelijk ook field service engineer en servicemonteur. In de praktijk is er veel overlap. Field benadrukt meestal het werk op locatie, terwijl monteur vaak sterker op het hands-on deel wijst.</p>\n\n<h2>Hoe vind je de Service Engineer vacature die echt past?</h2>\n\n<p>Kijk naar machine, werkzaamheden, regio, reisduur en de verhouding tussen onderhoud, storingen en commissioning. Vraag ook hoeveel ondersteuning je van planning, engineering en collega&#039;s krijgt.</p>\n\n<p>The Field Service Company kent de verschillen achter dezelfde functietitel. Wij helpen je graag de service engineer baan te vinden die past bij jouw techniek, ervaring en manier van werken.</p>",
+      "link": "https://thefieldservicecompany.nl/beroepengids/functienamen/service-engineer/",
+      "name": "Service Engineer",
+      "slug": "service-engineer",
+      "taxonomy": "beroep_functienaam",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functienaam/719",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functienaam"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_functienaam"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_functienaam=719"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 720,
+      "count": 0,
+      "description": "<h2>Waarvoor is een Service Manager eindverantwoordelijk?</h2>\n\n<p>Meestal voor prestaties van een serviceorganisatie: kwaliteit, klanttevredenheid, planning, kosten, veiligheid en ontwikkeling van medewerkers. Afhankelijk van het bedrijf horen ook parts, contracten, garantie en commerciële groei bij de rol.</p>\n\n<p>De manager vertaalt klantbehoeften en technische praktijk naar een team en proces dat betrouwbaar kan leveren.</p>\n\n<h2>Hoe technisch moet service management zijn?</h2>\n\n<p>Je hoeft niet de beste monteur van het team te blijven, maar technische geloofwaardigheid helpt bij keuzes over capaciteit, escalaties en kwaliteit. Veel service managers groeien door vanuit engineering, coördinatie of supervision.</p>\n\n<p>In andere organisaties komt iemand vanuit operations of technische bedrijfskunde, mits de product- en klantcontext goed wordt begrepen.</p>\n\n<h2>Geef je leiding aan binnen- of buitendienst?</h2>\n\n<p>Dat verschilt. Een service manager kan zowel planning, support en werkplaats als field service aansturen. Wanneer de titel field service manager wordt gebruikt, ligt de nadruk doorgaans specifieker op mobiele teams.</p>\n\n<p>Vraag naar omvang, regio&#039;s, KPI&#039;s en jouw invloed op strategie, budget en personeel.</p>\n\n<p>Dat bepaalt hoeveel ruimte je werkelijk krijgt om de organisatie te verbeteren.</p>\n\n<h2>Past deze leidinggevende servicefunctie bij jouw ambitie?</h2>\n\n<p>Vergelijk organisatiegrootte, veranderopdracht, commerciële verantwoordelijkheid en afstand tot de dagelijkse techniek. Bepaal of je vooral mensen wilt ontwikkelen, processen verbeteren of serviceactiviteiten laten groeien.</p>\n\n<p>The Field Service Company kent de dynamiek van technische serviceorganisaties. Wij helpen je graag een service manager rol te vinden waarin jouw leiderschap zichtbaar verschil maakt.</p>",
+      "link": "https://thefieldservicecompany.nl/beroepengids/functienamen/service-manager/",
+      "name": "Service Manager",
+      "slug": "service-manager",
+      "taxonomy": "beroep_functienaam",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functienaam/720",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functienaam"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_functienaam"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_functienaam=720"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 721,
+      "count": 0,
+      "description": "<h2>Is Service Monteur een andere functie dan Servicemonteur?</h2>\n\n<p>In de praktijk niet. Het is vooral een verschil in schrijfwijze. Beide termen worden gebruikt voor technici die service, onderhoud en reparaties uitvoeren. Op de website is Service Monteur bijvoorbeeld gekoppeld aan mechanisch werk aan separatoren en decanters in de procesindustrie.</p>\n\n<p>Het zou misleidend zijn om op basis van de spatie een ander beroep te beschrijven. De echte verschillen zitten in product, werkzaamheden, regio en verantwoordelijkheid.</p>\n\n<h2>Hoe praktisch kan deze servicebaan zijn?</h2>\n\n<p>Sommige functies bestaan grotendeels uit demonteren, reviseren, meten en weer nauwkeurig opbouwen. Andere service monteurs combineren mechanica met elektrotechniek, diagnose, klantadvies en commissioning.</p>\n\n<p>Let op fysieke belasting, hijsmiddelen en werkomstandigheden. Service aan grote industriële machines vraagt iets anders dan lichte apparatuur of gebouwgebonden installaties.</p>\n\n<h2>Welke opleiding en ervaring sluiten aan?</h2>\n\n<p>Werktuigbouwkunde, mechatronica, elektrotechniek, autotechniek of een andere praktische technische richting kan passen. De vacature moet duidelijk maken welke basis echt nodig is en welke productkennis je intern kunt leren.</p>\n\n<p>Kijk ook naar de begeleiding tijdens je inwerkperiode. Een werkgever die tijd neemt voor training kan een overstap naar nieuwe machines mogelijk maken.</p>\n\n<h2>Hoe herken je de Service Monteur baan voor jou?</h2>\n\n<p>Vergelijk de verhouding tussen onderhoud, storingen en revisie. Bekijk ook klanten, reistijd, teamwerk en de mogelijkheid om door te groeien naar specialist of service engineer.</p>\n\n<p>The Field Service Company kent de techniek achter de vacature. Wij helpen je graag de service monteur functie te vinden waarin jij met plezier aan de slag gaat, met of zonder spatie.</p>",
+      "link": "https://thefieldservicecompany.nl/beroepengids/functienamen/service-monteur/",
+      "name": "Service Monteur",
+      "slug": "service-monteur",
+      "taxonomy": "beroep_functienaam",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functienaam/721",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functienaam"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_functienaam"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_functienaam=721"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 722,
+      "count": 0,
+      "description": "<h2>Waar werkt een Service Technician?</h2>\n\n<p>Dat kan op klantlocatie zijn, maar de titel garandeert geen volledige buitendienstfunctie. Sommige service technicians werken ook in een werkplaats, depot of intern serviceteam. Wanneer field of buitendienst wordt toegevoegd, ligt de nadruk meestal duidelijker op reizen naar klanten.</p>\n\n<p>Lees daarom waar de installed base staat en hoeveel procent van je tijd je onderweg bent.</p>\n\n<h2>Wat voor service voer je uit?</h2>\n\n<p>Veel functies bestaan uit inspectie, periodiek onderhoud, reparatie, modulevervanging en functionele tests. Bij complexere apparatuur kunnen ook diagnose, kalibratie, software-updates en klantinstructie onderdeel zijn.</p>\n\n<p>De mate van vrijheid verschilt. Je kunt volgens vaste protocollen werken of juist zelf bepalen welke test en oplossing nodig is.</p>\n\n<h2>Welke achtergrond zoeken werkgevers?</h2>\n\n<p>Een technische mbo-opleiding of vergelijkbare praktijkervaring sluit vaak goed aan. De richting hangt af van het product: mechanica, elektro, elektronica, installatietechniek of mechatronica zijn veelvoorkomende bases.</p>\n\n<p>Producttraining leert je vervolgens de apparatuur, procedures en onderdelen van de werkgever kennen. Bij gereguleerde of risicovolle systemen kunnen aanvullende certificaten vereist zijn.</p>\n\n<h2>Hoe kies je tussen Technician, Monteur en Engineer?</h2>\n\n<p>Laat de Engelse titel niet zwaarder of lichter klinken dan de feitelijke baan. Vergelijk werkzaamheden, technische diepgang, klantverantwoordelijkheid en doorgroei.</p>\n\n<p>The Field Service Company kan deze verschillen samen met jou ontrafelen. Wij helpen je graag een service technician functie te vinden die past bij wat jij kunt en waarin je verder wilt groeien.</p>",
+      "link": "https://thefieldservicecompany.nl/beroepengids/functienamen/service-technician/",
+      "name": "Service Technician",
+      "slug": "service-technician",
+      "taxonomy": "beroep_functienaam",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functienaam/722",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functienaam"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_functienaam"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_functienaam=722"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 723,
+      "count": 0,
+      "description": "<h2>Wat voegt Buitendienst toe aan Service Technician?</h2>\n\n<p>Buitendienst maakt expliciet dat je regelmatig naar klanten en installaties reist. Je werkplek verandert dus met je planning. Soms bezoek je meerdere locaties per dag; bij grotere machines blijf je langer voor onderhoud, reparatie of installatie.</p>\n\n<p>De titel wordt vaak gebruikt als Nederlands-Engelse variant van field service technician. Inhoudelijk kan er nauwelijks verschil zijn.</p>\n\n<h2>Hoe ziet een werkdag onderweg eruit?</h2>\n\n<p>Je bereidt het bezoek voor, controleert onderdelen en gereedschap en stemt op locatie af met de klant. Daarna voer je de technische werkzaamheden en tests uit en leg je vast wat is gedaan.</p>\n\n<p>Zelfstandigheid is belangrijk, maar je staat niet per definitie alleen. Planning, technical support en collega&#039;s kunnen ondersteuning bieden bij complexe storingen of zware werkzaamheden.</p>\n\n<h2>Welke techniek en regio passen bij jou?</h2>\n\n<p>De functie komt voor bij industriële machines, installaties, medische apparatuur, energie en mobiel materieel. Bepaal of jouw achtergrond aansluit op mechanica, elektro, elektronica of een combinatie.</p>\n\n<p>Kijk daarnaast naar het werkgebied. Regionale service biedt een ander ritme dan Benelux- of internationale inzet, ook wanneer de functietitel hetzelfde blijft.</p>\n\n<h2>Is deze buitendienstbaan jouw volgende halte?</h2>\n\n<p>Vergelijk vacatures op reistijd, storingsdienst, zelfstandigheid, fysieke belasting en producttraining. De mooiste baan is de functie waarin techniek en onderweg zijn allebei bij jou passen.</p>\n\n<p>The Field Service Company helpt je graag die combinatie te vinden. Wij kennen werkgevers en servicegebieden en zoeken met je mee naar een buitendienstfunctie waarin jij graag op pad gaat.</p>",
+      "link": "https://thefieldservicecompany.nl/beroepengids/functienamen/service-technician-buitendienst/",
+      "name": "Service Technician Buitendienst",
+      "slug": "service-technician-buitendienst",
+      "taxonomy": "beroep_functienaam",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functienaam/723",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functienaam"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_functienaam"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_functienaam=723"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 724,
+      "count": 0,
+      "description": "<h2>Wat maakt iemand een Servicemonteur?</h2>\n\n<p>Een servicemonteur onderhoudt, inspecteert en repareert technische systemen. Dat klinkt eenvoudig, maar de inhoud loopt sterk uiteen. Op de website vind je servicemonteurs bij zonneparken, verpakkingsmachines, filtratiesystemen en andere industriële installaties.</p>\n\n<p>De overeenkomst is dat je praktisch aan techniek werkt en verantwoordelijkheid neemt voor een betrouwbare oplevering. De machine, sector en verhouding tussen onderhoud en storingen bepalen hoe jouw werkdag eruitziet.</p>\n\n<h2>Is Servicemonteur hetzelfde als Service Monteur?</h2>\n\n<p>Ja, doorgaans is alleen de spelling anders. Ook titels als service technician en field service technician kunnen vrijwel hetzelfde werk beschrijven. Een werkgever kan een eigen voorkeur hebben zonder dat de functie inhoudelijk verandert.</p>\n\n<p>Gebruik de functienaam daarom als startpunt en vergelijk vervolgens taken, techniek en zelfstandigheid. Zo voorkom je dat je een interessante vacature mist door een andere schrijfwijze.</p>\n\n<h2>Welke techniek kun je als monteur tegenkomen?</h2>\n\n<p>Mechanica, elektrotechniek, hydrauliek, pneumatiek, koeling en eenvoudige besturing kunnen allemaal onderdeel zijn. Sommige monteurs zijn allround; anderen worden specialist in één product of technisch domein.</p>\n\n<p>Een praktische technische opleiding sluit vaak aan. Werkervaring, storingsinzicht en producttraining bepalen hoe snel je zelfstandig bij klanten aan de slag kunt.</p>\n\n<h2>Waar staat jouw mooiste Servicemonteur vacature?</h2>\n\n<p>Kijk naar machines, klanten, regio, storingsdienst en doorgroeimogelijkheden. Bepaal ook of je korte bezoeken, groot onderhoud of langdurige projecten het leukst vindt.</p>\n\n<p>The Field Service Company helpt je graag verder kijken dan de titel. Samen zoeken we de servicemonteur baan waarin jouw praktische talent en technische interesse het beste samenkomen.</p>",
+      "link": "https://thefieldservicecompany.nl/beroepengids/functienamen/servicemonteur/",
+      "name": "Servicemonteur",
+      "slug": "servicemonteur",
+      "taxonomy": "beroep_functienaam",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functienaam/724",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functienaam"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_functienaam"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_functienaam=724"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 725,
+      "count": 0,
+      "description": "<h2>Waarom kiezen monteurs voor de buitendienst?</h2>\n\n<p>Geen vaste werkplaats, maar machines op de plek waar ze dagelijks worden gebruikt. Dat geeft afwisseling in klanten, omgevingen en technische vragen. Je bent het zichtbare aanspreekpunt van de werkgever en ziet direct wat jouw werk voor de klant betekent.</p>\n\n<p>Daar staat tegenover dat je bezoeken goed moet voorbereiden en onderweg zelfstandig keuzes maakt. Reizen is een wezenlijk onderdeel van de functie.</p>\n\n<h2>Wat doe je bij de klant?</h2>\n\n<p>Je voert onderhoud, inspecties en reparaties uit en onderzoekt storingen. Bij sommige machines installeer je ook uitbreidingen of geef je uitleg aan operators. Na afloop rapporteer je bevindingen en eventuele vervolgacties.</p>\n\n<p>De techniek kan sterk variëren. Lees daarom of de baan mechanisch, elektrotechnisch, hydraulisch of allround is en hoeveel ondersteuning op afstand beschikbaar is.</p>\n\n<h2>Werk je regionaal of door heel Europa?</h2>\n\n<p>Buitendienst zegt alleen dat je naar klanten gaat, niet hoe ver. Sommige monteurs rijden binnen een vaste regio en slapen iedere nacht thuis. Andere functies bestrijken de Benelux of vragen incidentele internationale reizen.</p>\n\n<p>Controleer reistijd, hotelnachten, weekenden en storingsdienst. Die bepalen minstens zo sterk of een vacature past als de machine zelf.</p>\n\n<h2>Welke mobiele servicebaan past bij jouw leven?</h2>\n\n<p>Vergelijk vacatures op werkgebied, zelfstandigheid, producttraining en het soort klanten dat je bezoekt. Vraag jezelf af hoeveel verandering en vrijheid je prettig vindt.</p>\n\n<p>The Field Service Company helpt je graag de techniek én het reisprofiel naast elkaar te leggen. Zo vinden we een servicemonteur buitendienst functie waarin jij graag onderweg bent.</p>",
+      "link": "https://thefieldservicecompany.nl/beroepengids/functienamen/servicemonteur-buitendienst/",
+      "name": "Servicemonteur Buitendienst",
+      "slug": "servicemonteur-buitendienst",
+      "taxonomy": "beroep_functienaam",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functienaam/725",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functienaam"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_functienaam"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_functienaam=725"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 726,
+      "count": 0,
+      "description": "<h2>Wat managet een Site Manager precies?</h2>\n\n<p>Dat kan de installatie, commissioning, onderhoudsstop of retrofit van een complete technische installatie zijn. Je bewaakt voortgang, resources, veiligheid en communicatie met klant en projectorganisatie.</p>\n\n<p>De inhoud hangt sterk af van projectgrootte. Soms stuur je een compact montageteam aan; elders coördineer je meerdere disciplines en onderaannemers.</p>\n\n<h2>Hoe technisch blijft deze managementfunctie?</h2>\n\n<p>Je hoeft niet ieder detail zelf uit te voeren, maar moet technische risico&#039;s en afhankelijkheden begrijpen. Ervaring in installatie, commissioning of site supervision vormt daarom vaak de basis.</p>\n\n<p>Bij problemen bepaal je welke expertise nodig is en welke gevolgen een oplossing heeft voor planning, kwaliteit en budget.</p>\n\n<h2>Is Site Manager hetzelfde als Sitemanager of Site Supervisor?</h2>\n\n<p>Site Manager en Sitemanager zijn spellingvarianten. Site supervisor wordt vaak gebruikt voor een rol dichter op dagelijkse technische uitvoering, maar in vacatures kunnen de titels door elkaar lopen.</p>\n\n<p>Vergelijk daarom verantwoordelijkheden, rapportagelijn en beslissingsmandaat. De titel alleen vertelt niet hoeveel projectmanagement de baan bevat.</p>\n\n<p>De vacaturetekst en het gesprek geven uiteindelijk de doorslag.</p>\n\n<h2>Welke internationale projectrol past bij jou?</h2>\n\n<p>Kijk naar projectduur, teamomvang, landen, contractverantwoordelijkheid en de balans tussen techniek en management. Langere perioden op locatie zijn bij internationale projecten gebruikelijk.</p>\n\n<p>The Field Service Company helpt je graag verder kijken dan de titel. Samen zoeken we de site manager baan waarin jouw technische ervaring en projectleiderschap volledig tot hun recht komen.</p>",
+      "link": "https://thefieldservicecompany.nl/beroepengids/functienamen/site-manager/",
+      "name": "Site Manager",
+      "slug": "site-manager",
+      "taxonomy": "beroep_functienaam",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functienaam/726",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functienaam"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_functienaam"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_functienaam=726"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 727,
+      "count": 0,
+      "description": "<h2>Waarvoor is een Site Supervisor verantwoordelijk?</h2>\n\n<p>Je stuurt werkzaamheden op een projectlocatie aan en bewaakt planning, kwaliteit en veiligheid. Bij internationale installatie- en commissioningprojecten werk je vaak met eigen collega&#039;s, lokale monteurs en de klant.</p>\n\n<p>Op de website gaat het bijvoorbeeld om grote biogas- en CO2-installaties en compressorservice. De techniek verschilt, maar leidinggeven op locatie vormt de kern.</p>\n\n<h2>Werk je zelf mee of houd je toezicht?</h2>\n\n<p>Dat hangt af van team en project. Sommige supervisors zijn zeer hands-on en springen bij complexe montage of storingen bij. Andere rollen richten zich meer op werkverdeling, rapportage en afstemming.</p>\n\n<p>Een technische achtergrond helpt je kwaliteit beoordelen en snel reageren wanneer de uitvoering afwijkt van het plan.</p>\n\n<h2>Hoe verschilt Supervisor van Site Manager?</h2>\n\n<p>Supervisor ligt vaak dichter op de dagelijkse technische uitvoering. Een site manager kan een bredere verantwoordelijkheid hebben voor budget, klant, contract en volledige projectorganisatie. Werkgevers gebruiken de termen echter niet consequent.</p>\n\n<p>Kijk daarom naar teamgrootte, mandaat en de vraag aan wie je rapporteert.</p>\n\n<h2>Ben jij klaar voor verantwoordelijkheid op locatie?</h2>\n\n<p>De functie past bij ervaren technici die mensen kunnen meenemen, veiligheid bewaken en onder tijdsdruk overzicht houden. Internationale projecten kunnen langere verblijven vragen.</p>\n\n<p>The Field Service Company helpt je graag de rol en projectomvang te beoordelen. Samen zoeken we de site supervisor baan waarin jouw techniek en leiderschap goed in balans zijn.</p>",
+      "link": "https://thefieldservicecompany.nl/beroepengids/functienamen/site-supervisor/",
+      "name": "Site Supervisor",
+      "slug": "site-supervisor",
+      "taxonomy": "beroep_functienaam",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functienaam/727",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functienaam"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_functienaam"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_functienaam=727"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 728,
+      "count": 0,
+      "description": "<h2>Maakt de spelling Sitemanager een ander beroep?</h2>\n\n<p>Nee. Sitemanager en site manager beschrijven doorgaans dezelfde projectfunctie. De schrijfwijze zegt niets over senioriteit, sector of projectomvang.</p>\n\n<p>Het is daarom verstandig op beide termen te zoeken. De inhoud kan lopen van leidinggeven aan installatie tot eindverantwoordelijkheid voor een complete internationale projectlocatie.</p>\n\n<h2>Welke resultaten moet je op locatie bewaken?</h2>\n\n<p>Veiligheid, kwaliteit, planning en een goede overdracht staan centraal. Vaak komen daar budget, materialen, klantafspraken en coördinatie van onderaannemers bij.</p>\n\n<p>Je organiseert de samenwerking en grijpt in wanneer technische of praktische problemen het project bedreigen. Duidelijke rapportage houdt ook de thuisorganisatie op de hoogte.</p>\n\n<h2>Vanuit welke functie kun je doorgroeien?</h2>\n\n<p>Installation supervisor, site supervisor, commissioning engineer of senior field service engineer kunnen logische achtergronden zijn. Belangrijk is dat je techniek begrijpt en eerder verantwoordelijkheid op locatie hebt gedragen.</p>\n\n<p>De stap vraagt bovendien leiderschap, besluitvaardigheid en omgaan met druk en culturele verschillen.</p>\n\n<p>Ervaring met veiligheid, voortgangsrapportage en klantoverleg maakt die overgang doorgaans gemakkelijker. Ook moet je comfortabel zijn met het nemen van beslissingen terwijl niet alle informatie direct beschikbaar is.</p>\n\n<h2>Hoe vind je de passende sitemanager vacature?</h2>\n\n<p>Vergelijk projecttype, duur, landen, teamgrootte en formeel mandaat. Vraag ook hoeveel ondersteuning je krijgt van projectmanagement, engineering en planning.</p>\n\n<p>The Field Service Company zoekt over beide schrijfwijzen heen en helpt je de werkelijke rol te beoordelen. Zo vind je een projectbaan die inhoudelijk bij jouw ervaring past.</p>",
+      "link": "https://thefieldservicecompany.nl/beroepengids/functienamen/sitemanager/",
+      "name": "Sitemanager",
+      "slug": "sitemanager",
+      "taxonomy": "beroep_functienaam",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functienaam/728",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functienaam"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_functienaam"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_functienaam=728"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 729,
+      "count": 0,
+      "description": "<h2>Wat maakt een Service Engineer technical?</h2>\n\n<p>In vrijwel iedere servicefunctie is techniek belangrijk. Met technical wil een werkgever vaak benadrukken dat de rol extra technische diepgang bevat of dat je complexe vragen ondersteunt die niet via standaardservice worden opgelost.</p>\n\n<p>De titel is niet beschermd en wordt verschillend gebruikt. Soms gaat het om een field service engineer met veel productkennis, soms om een engineer die meer vanuit kantoor werkt en collega&#039;s op locatie helpt.</p>\n\n<h2>Werk je zelf aan machines of ondersteun je anderen?</h2>\n\n<p>Beide zijn mogelijk. Je kunt storingen bij klanten analyseren, maar ook servicerapporten beoordelen, technische documentatie maken, remote support geven of escalaties met engineering bespreken.</p>\n\n<p>Daarom is de verhouding tussen reizen en bureauwerk essentieel. Vraag in een vacature wie de eerste diagnose uitvoert, wanneer jij wordt ingeschakeld en of je zelf reparaties en commissioning verzorgt.</p>\n\n<h2>Welke kennis past bij Technical Service Engineering?</h2>\n\n<p>Werkgevers zoeken vaak een stevige basis in elektrotechniek, mechatronica, werktuigbouwkunde, automatisering of een productspecifiek domein. Ervaring met schema&#039;s, foutanalyse en klantcommunicatie is meestal minstens zo belangrijk als de exacte naam van je opleiding.</p>\n\n<p>Deze rol komt voor bij machinebouwers, hightechleveranciers en fabrikanten met een installed base die gespecialiseerde ondersteuning nodig heeft.</p>\n\n<h2>Is dit jouw volgende stap in technische service?</h2>\n\n<p>De functie past wanneer je graag dieper analyseert, kennis deelt en technische problemen tot de kern uitzoekt. Vergelijk hem ook met technical support engineer en field service engineer om te bepalen hoeveel klantbezoek je zoekt.</p>\n\n<p>The Field Service Company kan je helpen om de technische zwaarte en dagelijkse praktijk van vacatures te vergelijken. Samen vinden we de rol waarin jouw productkennis echt waarde krijgt.</p>",
+      "link": "https://thefieldservicecompany.nl/beroepengids/functienamen/technical-service-engineer/",
+      "name": "Technical Service Engineer",
+      "slug": "technical-service-engineer",
+      "taxonomy": "beroep_functienaam",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functienaam/729",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functienaam"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_functienaam"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_functienaam=729"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 730,
+      "count": 0,
+      "description": "<h2>Wie belt een Technical Support Engineer?</h2>\n\n<p>Dat kunnen klanten, dealers of field service engineers zijn. Zij schakelen support in bij complexe storingen, onduidelijke foutmeldingen of vragen over configuratie en toepassing.</p>\n\n<p>Je werkt vaak vanuit kantoor of op afstand, maar sommige functies bevatten ook bezoeken aan klanten. De verhouding tussen remote en field support verschilt per werkgever.</p>\n\n<h2>Hoe los je techniek op zonder altijd naast de machine te staan?</h2>\n\n<p>Je stelt gerichte vragen, analyseert foutcodes, logbestanden, schema&#039;s en meetwaarden en helpt de persoon op locatie veilig een test uitvoeren. Goede documentatie en een helder beeld van de actuele toestand zijn essentieel.</p>\n\n<p>Wanneer remote support niet genoeg is, organiseer je escalatie naar field service, engineering of softwareontwikkeling en zorg je dat zij met de juiste informatie starten.</p>\n\n<h2>Welke achtergrond maakt je sterk in support?</h2>\n\n<p>Een technische opleiding en ervaring met het productdomein helpen. Daarnaast moet je ingewikkelde materie rustig kunnen uitleggen en meerdere vragen kunnen prioriteren.</p>\n\n<p>De rol komt voor in machinebouw, automatisering, hightech, medische techniek en vrijwel iedere sector met complexe apparatuur op klantlocaties.</p>\n\n<h2>Past technische diepgang zonder continu reizen bij jou?</h2>\n\n<p>Vergelijk vacatures op klantcontact, storingsanalyse, programmeerwerk, beschikbaarheidsdiensten en het aantal bezoeken op locatie. Bekijk ook de route naar productspecialist of support lead.</p>\n\n<p>The Field Service Company helpt je graag bepalen welke supportomgeving bij je past. Zo vind je een technical support engineer baan waarin jouw kennis verder reikt dan één servicebezoek.</p>",
+      "link": "https://thefieldservicecompany.nl/beroepengids/functienamen/technical-support-engineer/",
+      "name": "Technical Support Engineer",
+      "slug": "technical-support-engineer",
+      "taxonomy": "beroep_functienaam",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functienaam/730",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functienaam"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_functienaam"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_functienaam=730"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 731,
+      "count": 0,
+      "description": "<h2>Wanneer ben je Specialist en niet alleen Support?</h2>\n\n<p>Specialist suggereert diepgaande kennis van een product of technologie, maar de titel heeft geen vaste definitie. Soms is het een ervaren support engineer; elders richt de functie zich op één discipline, zoals PLC-software, elektronica, procesanalyse of applicatiekennis.</p>\n\n<p>Lees welke escalaties bij jou terechtkomen en hoeveel beslissingsruimte je krijgt.</p>\n\n<h2>Hoe verspreid je specialistische kennis?</h2>\n\n<p>Naast problemen oplossen kun je servicebulletins, instructies en trainingen maken. Je herkent terugkerende fouten en geeft engineering informatie waarmee producten of procedures worden verbeterd.</p>\n\n<p>Daarmee vergroot je niet alleen je eigen effect, maar ook dat van field service engineers en partners die de apparatuur wereldwijd ondersteunen.</p>\n\n<h2>Werk je met klanten, monteurs of ontwikkeling?</h2>\n\n<p>Meestal met alle drie, maar de verdeling verschilt. Sommige specialisten zijn direct bereikbaar voor klanten; anderen werken vooral als tweede- of derdelijnsondersteuning achter het serviceteam.</p>\n\n<p>Vraag naar reizen, remote tools, talen en de samenwerking met R&amp;D. Zo weet je of de functie mensgericht, analytisch of productontwikkelend is.</p>\n\n<h2>Waar wordt jouw technische specialisme het meest waardevol?</h2>\n\n<p>Kies een product en sector die je lang genoeg boeien om echte diepgang op te bouwen. Vergelijk ook opleidingsmogelijkheden en de ruimte om kennis te delen.</p>\n\n<p>The Field Service Company helpt je graag de specialistische inhoud achter een vacature te beoordelen. Samen zoeken we de supportfunctie waarin jouw expertise het verschil maakt.</p>",
+      "link": "https://thefieldservicecompany.nl/beroepengids/functienamen/technical-support-specialist/",
+      "name": "Technical Support Specialist",
+      "slug": "technical-support-specialist",
+      "taxonomy": "beroep_functienaam",
+      "parent": 0,
+      "meta": [],
+      "_links": {
+        "self": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functienaam/731",
+            "targetHints": {
+              "allow": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroep_functienaam"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/taxonomies/beroep_functienaam"
+          }
+        ],
+        "wp:post_type": [
+          {
+            "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/beroepengids?beroep_functienaam=731"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    }
+  ],
+  "intros": [
+    {
+      "id": 701,
+      "slug": "commissioning-engineer",
+      "intro": "Een commissioning engineer brengt nieuwe of gewijzigde installaties gecontroleerd tot leven. Ontdek hoe testen, techniek, projectverantwoordelijkheid en internationaal field service werk samenkomen in deze specialistische functie.",
+      "archive_title": ""
+    },
+    {
+      "id": 702,
+      "slug": "field-engineer",
+      "intro": "Een field engineer werkt op de plek waar techniek, project en praktijk samenkomen. Ontdek waarom deze titel breder kan zijn dan field service alleen en hoe je de juiste functie achter de naam herkent.",
+      "archive_title": ""
+    },
+    {
+      "id": 703,
+      "slug": "field-service-coordinator",
+      "intro": "Een field service coordinator zorgt dat buitendienstmedewerkers op het juiste moment, met de juiste middelen, bij de juiste klant staan. Bekijk hoe deze internationale titel planning en technische service verbindt.",
+      "archive_title": ""
+    },
+    {
+      "id": 437,
+      "slug": "field-service-engineer",
+      "intro": "Als field service engineer breng je technische expertise naar de plek waar een machine werkelijk moet presteren. Bekijk wat de functie inhoudt, hoeveel vrijheid en reizen erbij kunnen horen en welke werkgevers bij jou passen.",
+      "archive_title": ""
+    },
+    {
+      "id": 704,
+      "slug": "field-service-manager",
+      "intro": "Een field service manager geeft richting aan de mensen die dagelijks bij klanten het verschil maken. Ontdek hoe je een mobiel technisch team laat presteren zonder de praktijk uit het oog te verliezen.",
+      "archive_title": ""
+    },
+    {
+      "id": 705,
+      "slug": "field-service-supervisor",
+      "intro": "Een field service supervisor ondersteunt en stuurt engineers en monteurs aan terwijl serviceprojecten bij klanten doorgaan. Bekijk hoe vakkennis en leiderschap samen de kwaliteit van een buitendienstteam bepalen.",
+      "archive_title": ""
+    },
+    {
+      "id": 706,
+      "slug": "field-service-technician",
+      "intro": "Een field service technician houdt machines en apparatuur op klantlocaties in beweging. Ontdek het praktische karakter van deze internationale functietitel en welke techniek, vrijheid en ontwikkeling erbij kunnen horen.",
+      "archive_title": ""
+    },
+    {
+      "id": 707,
+      "slug": "field-service-technicus",
+      "intro": "Als field service technicus combineer je technisch vakmanschap met zelfstandig werk bij klanten. Bekijk hoe deze Nederlandse benaming zich verhoudt tot technician, monteur en engineer en wat dat voor jouw loopbaan betekent.",
+      "archive_title": ""
+    },
+    {
+      "id": 708,
+      "slug": "inbedrijfsteller",
+      "intro": "Als inbedrijfsteller zorg je dat een nieuwe machine niet alleen is opgebouwd, maar ook goed werkend wordt opgeleverd. Bekijk hoe deze field service functie zich verhoudt tot commissioning engineer.",
+      "archive_title": ""
+    },
+    {
+      "id": 709,
+      "slug": "installation-engineer",
+      "intro": "Een installation engineer zorgt dat machines en systemen correct op hun nieuwe locatie worden opgebouwd. Ontdek waar montage overgaat in engineering, coördinatie en internationaal field service werk.",
+      "archive_title": ""
+    },
+    {
+      "id": 710,
+      "slug": "installation-supervisor",
+      "intro": "Een installation supervisor houdt overzicht wanneer mensen, materialen en techniek op locatie samenkomen. Ontdek hoe leidinggeven en technische kennis deze verantwoordelijke field service functie vormgeven.",
+      "archive_title": ""
+    },
+    {
+      "id": 711,
+      "slug": "installation-technician",
+      "intro": "Als installation technician bouw je systemen waar ze gebruikt gaan worden. Bekijk hoe praktisch vakmanschap, nauwkeurige montage en wisselende projectlocaties aansluiten op een loopbaan binnen field service.",
+      "archive_title": ""
+    },
+    {
+      "id": 712,
+      "slug": "internationaal-field-service-engineer",
+      "intro": "Wereldwijd technische problemen oplossen waar machines werkelijk draaien: dat is de kern van veel internationale field service engineer functies. Bekijk welke techniek en manier van reizen bij jouw ambities passen.",
+      "archive_title": ""
+    },
+    {
+      "id": 713,
+      "slug": "internationaal-service-engineer",
+      "intro": "Als internationaal service engineer combineer je technische zelfstandigheid met klanten en installaties over de grens. Ontdek welke projecten, reispatronen en verantwoordelijkheden achter deze avontuurlijke field service functie zitten.",
+      "archive_title": ""
+    },
+    {
+      "id": 714,
+      "slug": "internationaal-service-monteur",
+      "intro": "Een internationaal service monteur werkt met zijn handen én technische inzicht aan machines bij klanten over de grens. Ontdek welke projecten en reisafspraken bepalen of deze field service functie bij jou past.",
+      "archive_title": ""
+    },
+    {
+      "id": 715,
+      "slug": "internationaal-servicemonteur",
+      "intro": "Internationaal servicemonteur is dezelfde field service rol als internationaal service monteur, alleen anders geschreven. Achter beide namen vind je praktisch servicewerk, buitenlandse klanten en machines die jouw vakkennis nodig hebben.",
+      "archive_title": ""
+    },
+    {
+      "id": 716,
+      "slug": "maintenance-technician",
+      "intro": "Maintenance technician is de internationale titel voor technici die installaties door gericht onderhoud beschikbaar houden. Ontdek hoe deze rol verschilt tussen een fabriek, machineleverancier en field service organisatie.",
+      "archive_title": ""
+    },
+    {
+      "id": 717,
+      "slug": "onderhoudsmonteur",
+      "intro": "Een onderhoudsmonteur voorkomt dat slijtage uitgroeit tot kostbare stilstand. Bekijk hoe gepland onderhoud, inspectie en reparaties kunnen leiden naar een sterke loopbaan binnen industrie en field service.",
+      "archive_title": ""
+    },
+    {
+      "id": 718,
+      "slug": "service-coordinator",
+      "intro": "Een service coördinator brengt klanten, monteurs, onderdelen en planning bij elkaar. Ontdek waarom technische feeling en organisatietalent samen bepalen hoe goed een field service afdeling presteert.",
+      "archive_title": ""
+    },
+    {
+      "id": 719,
+      "slug": "service-engineer",
+      "intro": "Een service engineer zorgt dat technische systemen bij klanten betrouwbaar blijven presteren. Ontdek hoe breed deze field service functie kan zijn, welke machines en sectoren erbij passen en waar jouw ideale servicebaan begint.",
+      "archive_title": ""
+    },
+    {
+      "id": 720,
+      "slug": "service-manager",
+      "intro": "Een service manager bouwt aan een organisatie die klanten snel en deskundig helpt. Bekijk hoe mensen, processen, techniek en commercie samenkomen in het leiderschap van field service.",
+      "archive_title": ""
+    },
+    {
+      "id": 721,
+      "slug": "service-monteur",
+      "intro": "Service monteur en servicemonteur betekenen binnen field service meestal hetzelfde, maar achter de schrijfwijze kunnen totaal verschillende machines en werkgevers zitten. Bekijk hoe je de technische inhoud vindt die werkelijk bij jou past.",
+      "archive_title": ""
+    },
+    {
+      "id": 722,
+      "slug": "service-technician",
+      "intro": "Service technician is een internationale titel voor praktisch technisch servicewerk. Ontdek hoe deze rol aansluit op field service en of je bij klanten, in een werkplaats of in beide omgevingen werkt.",
+      "archive_title": ""
+    },
+    {
+      "id": 723,
+      "slug": "service-technician-buitendienst",
+      "intro": "De naam zegt het al: als service technician buitendienst werk je vooral waar de klant jouw technische kennis nodig heeft. Ontdek hoe reizen, zelfstandig field service werk en praktisch klantcontact samenkomen.",
+      "archive_title": ""
+    },
+    {
+      "id": 724,
+      "slug": "servicemonteur",
+      "intro": "Een servicemonteur zorgt met praktisch vakmanschap dat machines en installaties blijven draaien. Ontdek hoeveel technische werelden achter deze bekende field service functie schuilgaan en welke servicebaan bij jou past.",
+      "archive_title": ""
+    },
+    {
+      "id": 725,
+      "slug": "servicemonteur-buitendienst",
+      "intro": "Als servicemonteur buitendienst neem je jouw gereedschap en technische kennis mee naar uiteenlopende klanten. Ontdek of de vrijheid, afwisseling en verantwoordelijkheid van mobiel field service werk bij jou passen.",
+      "archive_title": ""
+    },
+    {
+      "id": 726,
+      "slug": "site-manager",
+      "intro": "Een site manager draagt op locatie verantwoordelijkheid voor het totale verloop van een technisch project. Ontdek waar techniek, budget, planning en leiderschap binnen deze internationale field service functie samenkomen.",
+      "archive_title": ""
+    },
+    {
+      "id": 727,
+      "slug": "site-supervisor",
+      "intro": "Een site supervisor bewaakt mensen, techniek en voortgang op een projectlocatie. Ontdek hoe leidinggeven, veiligheid en praktisch overzicht samenkomen in deze verantwoordelijke field service functie.",
+      "archive_title": ""
+    },
+    {
+      "id": 728,
+      "slug": "sitemanager",
+      "intro": "Sitemanager is dezelfde field service functienaam als site manager, maar dan aaneengeschreven. Ontdek welke verantwoordelijkheden achter de titel zitten en hoe je technische projectleiding op locatie vormgeeft.",
+      "archive_title": ""
+    },
+    {
+      "id": 729,
+      "slug": "technical-service-engineer",
+      "intro": "Een technical service engineer combineert diepgaande productkennis met ondersteuning van klanten en serviceteams. Bekijk waar deze field service functie zich bevindt tussen buitendienst, technische analyse en support.",
+      "archive_title": ""
+    },
+    {
+      "id": 730,
+      "slug": "technical-support-engineer",
+      "intro": "Een technical support engineer helpt klanten en serviceteams verder wanneer standaardoplossingen tekortschieten. Ontdek hoe analyse, productkennis en communicatie samen een cruciale schakel in field service vormen.",
+      "archive_title": ""
+    },
+    {
+      "id": 731,
+      "slug": "technical-support-specialist",
+      "intro": "Een technical support specialist is het inhoudelijke aanspreekpunt voor een product of technisch domein. Bekijk hoe specialistische kennis klanten, field service teams en engineering met elkaar verbindt.",
+      "archive_title": ""
+    }
+  ]
+}
