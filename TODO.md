@@ -30,7 +30,8 @@ blijft open staan, maar wordt niet eerst uitgevoerd.
   pagina niet meer actief wordt gebruikt en niet wordt gekoppeld.
 - [ ] Per formulier een synthetische end-to-endtest uitvoeren en WordPress-
   outbox, Supabase-verwerking, Backblaze indien van toepassing en Appsmith
-  controleren. Pas daarna het volgende formulier oppakken.
+  controleren. Afgerond voor Registratie, Adviesaanvraag en Solliciteren;
+  Vraag en Werkgeverscontact staan nog open.
 - [x] Veldstandaardisatie uitgevoerd in de volgorde Registratie,
   Werkgeverscontact, Adviesaanvraag en Solliciteren. Mailing Registratie blijft
   buiten scope.
@@ -55,15 +56,24 @@ blijft open staan, maar wordt niet eerst uitgevoerd.
   `city`, `mobile`, `cv`, `linkedin_url`, `ambition` en `privacy_consent`.
   Beheermail en Akismet zijn bijgewerkt, uploads zijn beperkt tot PDF/DOC/DOCX
   en de Bridge-mapping staat gecontroleerd op versie `3`.
-- [ ] `verzoek_advies` via de echte openbare browserroute testen. Een ruwe
-  synthetische HTTP-proef eindigde vóór de outbox met een generieke WordPress-
-  500 en heeft geen CRM-record gemaakt.
+- [x] `verzoek_advies` via de echte openbare browserroute getest. De outbox
+  leverde direct af en Supabase verwerkte mappingversie `3` zonder reviewcode.
+  De route maakte een persoon, kandidaatprofiel en adviesactiviteit, maar
+  terecht geen sollicitatie, bedrijf of vacature. Appsmith toont het contact
+  als type `Advies` in **Nieuwe contacten**.
 - [x] `form_solliciteren_20240226` gebruikt nu `last_name`, `mobile`, `cv`,
   `linkedin_url`, `vacancy_number` en `privacy_consent`. Beheermail en Akismet
   zijn bijgewerkt, uploads zijn beperkt tot PDF/DOC/DOCX en de Bridge-mapping
   staat gecontroleerd op versie `3`.
-- [ ] `form_solliciteren_20240226` via de echte openbare browserroute testen,
-  inclusief lookup van een bestaand canoniek vacaturenummer.
+- [x] `form_solliciteren_20240226` via de echte openbare route getest met een
+  synthetische DOCX en bestaand canoniek vacaturenummer `885425`. Supabase
+  verwerkte mappingversie `3` zonder reviewcode, maakte precies één
+  sollicitatie bij de juiste vacature en registreerde de DOCX als `cv` met
+  PDF-preview. Appsmith toont het contact als type `Sollicitatie`.
+- [ ] Terugkerende tijdelijke eerste Backblaze-uploadfout onderzoeken. Zowel
+  Registratie als Solliciteren kreeg eerst `b2_upload_failed`; de bestaande
+  outbox-retry leverde beide keren bij poging twee correct af. Controleer vóór
+  volledige productie-inzet oorzaak, logging en retry/backoff-gedrag.
 - [ ] De huidige vacatureknop-/linkcode pas vereenvoudigen nadat alle
   formulieren zijn afgerond. Tot dat moment blijven `postTitle`, `cn`,
   `vacaturenummer` en `postUrl` bestaan om nog niet gestandaardiseerde
