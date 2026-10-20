@@ -1,6 +1,6 @@
 # Centrale TODO
 
-Laatst bijgewerkt: 19 oktober 2026
+Laatst bijgewerkt: 20 oktober 2026
 
 Dit is de centrale werklijst. Detailbesluiten en testresultaten blijven in de
 bestaande documenten onder `audits/`, `content/` en `functionality/` staan.
@@ -10,6 +10,37 @@ bestaande documenten onder `audits/`, `content/` en `functionality/` staan.
 Op 19 oktober 2026 heeft de gebruiker de werkprioriteit verlegd van travel naar
 de koppeling van de WordPress-formulieren met Supabase en Appsmith. Travel
 blijft open staan, maar wordt niet eerst uitgevoerd.
+
+### Besluit 20 oktober — eerst alle formulieren afronden
+
+- [ ] De zes actuele formulieren één voor één afronden met vaste Engelse
+  technische `field_id`-waarden, ongewijzigde duidelijke Nederlandse labels,
+  bijgewerkte Elementor-e-mailshortcodes en een expliciet gecontroleerde Form
+  Bridge-mapping. Geen veld-ID aanpassen zonder eerst de afhankelijkheden van
+  precies dat formulier te controleren.
+- [ ] Per formulier een synthetische end-to-endtest uitvoeren en WordPress-
+  outbox, Supabase-verwerking, Backblaze indien van toepassing en Appsmith
+  controleren. Pas daarna het volgende formulier oppakken.
+- [ ] Uitvoervolgorde na het vraagformulier: Registratie, Mailing Registratie,
+  Werkgeverscontact, Adviesaanvraag en als laatste Solliciteren.
+- [x] `Vacature - Stel je vraag` heeft canonieke Engelse veld-ID's en een
+  actieve mapping in Form Bridge `0.3.8`. De mapping maakt een kandidaat maar
+  geen bedrijf; alleen `vacancy_number` wordt als vacaturecontext vertrouwd.
+- [ ] `Vacature - Stel je vraag` nog openbaar synthetisch testen zonder én met
+  vacaturecontext.
+- [ ] De huidige vacatureknop-/linkcode pas vereenvoudigen nadat alle
+  formulieren zijn afgerond. Tot dat moment blijven `postTitle`, `cn`,
+  `vacaturenummer` en `postUrl` bestaan om nog niet gestandaardiseerde
+  formulieren en e-mails niet te breken.
+- [ ] Daarna de frontendcode die titel, bedrijf en URL uit de pagina schraapt
+  verwijderen. Op afgescheiden formulierpagina's alleen het canonieke
+  vacaturenummer transporteren, bijvoorbeeld `?vacaturenummer=335`; Supabase
+  leidt titel, bedrijf, dienstverband en canonieke URL vervolgens zelf af.
+  Elementor-e-mails die nu nog een meegestuurde titel gebruiken moeten vóór
+  die opschoning op vacaturenummer of een generiek onderwerp worden gezet.
+
+De actuele connectorcode, veldcontracten en live testresultaten staan in de
+private repository `tfsc-crm-ats`, branch `codex/wordpress-form-bridge`.
 
 1. [x] De actuele configuratie van Registratie, Solliciteren,
    Werkgeverscontact, Mailing, Advies en Vraag op LIVE alleen-lezen uitlezen:
