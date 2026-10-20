@@ -32,9 +32,14 @@ blijft open staan, maar wordt niet eerst uitgevoerd.
   mapping als `Open registratie/inschrijving`, met kandidaat aan en bedrijf uit.
   De vaste legacywaarden `Registratie`, vacaturenummer `1` en `The Field
   Service Company` staan op `Niet versturen`.
-- [ ] `Registratie` nog openbaar synthetisch testen en controleren in
-  WordPress, Supabase en Appsmith; Backblaze ook controleren wanneer de test
-  een synthetisch cv bevat.
+- [x] `Registratie` openbaar synthetisch getest zonder cv. Een eerste proef met
+  een al gebruikt synthetisch mobiel nummer ging terecht naar handmatige
+  controle met `person_email_conflict` en maakte geen canonieke persoon aan.
+  De tweede proef met volledig unieke gegevens werd als `succeeded` verwerkt:
+  één persoon, kandidaatprofiel, primair adres, privacybewijs, voorkeur `Vast
+  dienstverband`, activiteit en open intake-item; geen bedrijf, vacature of
+  sollicitatie. Appsmith toont **Registratie / Verwerkt / Nieuw profiel** en
+  opent het juiste profiel. De aparte PDF- en Word-cv-routes waren al bewezen.
 - [ ] De huidige vacatureknop-/linkcode pas vereenvoudigen nadat alle
   formulieren zijn afgerond. Tot dat moment blijven `postTitle`, `cn`,
   `vacaturenummer` en `postUrl` bestaan om nog niet gestandaardiseerde
