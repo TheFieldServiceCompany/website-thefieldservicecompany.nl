@@ -13,6 +13,15 @@ blijft open staan, maar wordt niet eerst uitgevoerd.
 
 ### Besluiten 20–21 oktober — eerst alle formulieren afronden
 
+- [x] Productiepoort TFSC Form Bridge afgerond. Versie `0.4.1` staat LIVE,
+  waarschuwt zichtbaar wanneer een gekoppelde `field_id` verdwijnt en koppelt
+  een nieuwe ID nooit automatisch. Time-outs, rate limiting, definitieve
+  validatiefouten, ontbrekende mappings, mislukte documentuploads en begrensde
+  retry/backoff zijn synthetisch getest. Een live, teruggedraaide Supabase-test
+  met een niet-bestaand vacaturenummer gaf `vacancy_not_found` en liet nul
+  testregels achter. De vijf koppelingen bleven actief en `connection_ok` is na
+  installatie opnieuw bevestigd. Code en volledig log: private repo
+  `tfsc-crm-ats`, branch `codex/wordpress-form-bridge`, commit `233ac99`.
 - [x] De uploadregressie van Elementor Pro 4.3.2 gericht opgevangen. TFSC
   Custom Functions `0.2.0` bevat niet langer de globale legacyfilters voor
   `cv_upload`; TFSC Form Bridge `0.4.0` handelt uitsluitend actief gemapte cv-
@@ -87,8 +96,9 @@ blijft open staan, maar wordt niet eerst uitgevoerd.
   bedrijf, vacaturenummer en één bijlage.
 - [ ] Terugkerende tijdelijke eerste Backblaze-uploadfout onderzoeken. Zowel
   Registratie als Solliciteren kreeg eerst `b2_upload_failed`; de bestaande
-  outbox-retry leverde beide keren bij poging twee correct af. Controleer vóór
-  volledige productie-inzet oorzaak, logging en retry/backoff-gedrag.
+  outbox-retry leverde beide keren bij poging twee correct af. Retry en
+  begrensde backoff zijn in versie `0.4.1` aantoonbaar getest; de technische
+  oorzaak van de eerste afwijzing en aanvullende productielogging blijven open.
 - [ ] De huidige vacatureknop-/linkcode pas vereenvoudigen nadat alle
   formulieren zijn afgerond. Tot dat moment blijven `postTitle`, `cn`,
   `vacaturenummer` en `postUrl` bestaan om nog niet gestandaardiseerde
@@ -107,26 +117,28 @@ private repository `tfsc-crm-ats`, branch `codex/wordpress-form-bridge`.
    Werkgeverscontact, Mailing, Advies en Vraag op LIVE alleen-lezen uitlezen:
    formulier-ID, veld-ID, type, verplichtheid, toestemming, uploads, limieten
    en alle ingestelde acties. Afgerond op 19 oktober; zie de actuele nulmeting.
-2. [ ] Per formulier vastleggen welk bestaand Supabase-record en welke relaties
+2. [x] Per formulier vastleggen welk bestaand Supabase-record en welke relaties
    moeten ontstaan. Geen nieuwe tabellen ontwerpen voordat deze mapping is
    goedgekeurd.
-3. [ ] Ieder Elementor-veld naast de bestaande Supabase-kolom en de relevante
+3. [x] Ieder Elementor-veld naast de bestaande Supabase-kolom en de relevante
    Appsmith-weergave of -invoer zetten; ontbrekende doelen en twijfelgevallen
    expliciet markeren.
 4. [ ] Deduplicatie, bron-ID, toestemming, eigenaarschap en bewaartermijn per
    formulier laten goedkeuren.
-5. [ ] Daarna pas het technische ontwerp voor lokale Elementor-opslag,
+5. [x] Daarna pas het technische ontwerp voor lokale Elementor-opslag,
    WordPress-outbox, beveiligde server-side aflevering, idempotentie, retries
    en handmatige review definitief maken.
-6. [ ] De koppeling eerst synthetisch en in schaduwmodus naast AFI/EngageBay
+6. [x] De koppeling eerst synthetisch en in schaduwmodus naast AFI/EngageBay
    testen. EngageBay pas per formulier uitschakelen nadat verwerking in
    Supabase en beheer in Appsmith aantoonbaar correct zijn.
 
-Eerste actuele Supabase-controle: het bestaande personen-, kandidaat-,
-sollicitatie-, vacature-, werkgevers- en documentenmodel is aanwezig en de
-gecontroleerde tabellen hebben RLS. Er is nog geen intake-, submission- of
-outboxtabel en het project heeft nog geen Edge Function. Zie
-`audits/2026-10-19-formulier-supabase-appsmith-nulmeting.md`.
+Actuele Supabase-toestand: het bestaande personen-, kandidaat-, sollicitatie-,
+vacature-, werkgevers- en documentenmodel wordt hergebruikt. De intake- en
+werkvoorraadtabellen, idempotente verwerkings-RPC's en beveiligde Edge Function
+`tfsc-form-ingest` staan LIVE; RLS en beperkte rollen zijn actief. Zie de
+historische nulmeting in
+`audits/2026-10-19-formulier-supabase-appsmith-nulmeting.md` en de actuele
+implementatie en testlog in de private repository `tfsc-crm-ats`.
 
 ## Uitvoervolgorde — één punt tegelijk
 
@@ -206,7 +218,7 @@ gewijzigd; open afhankelijkheden worden niet stilzwijgend overgeslagen.
 
 ### B. Formulieren, intake en inhaalslag
 
-7. [ ] **Alleen-lezen nulmeting voor formulieren afronden.** Live
+7. [x] **Alleen-lezen nulmeting voor formulieren afronden.** Live
    WordPress-formulieren, Supabase-schema/constraints/RLS/functions,
    EngageBay-bron, Appsmith-weergave en bestaande importlogica controleren.
 8. [ ] **Exacte grens van de eerdere kandidaatimport vastleggen.** Het laatste
@@ -219,39 +231,36 @@ gewijzigd; open afhankelijkheden worden niet stilzwijgend overgeslagen.
    dagen. Zie `audits/2026-10-19-formulier-supabase-appsmith-nulmeting.md`.
 10. [ ] **Eigenaarschap en privacybesluiten nemen.** Per gegeven het leidende
    systeem, toestemming, bewaartermijn, verwijderroute en logbeleid bepalen.
-11. [ ] **Deduplicatie- en koppelregels goedkeuren.** E-mail, telefoon,
+11. [x] **Deduplicatie- en koppelregels goedkeuren.** E-mail, telefoon,
    LinkedIn en externe ID's normaliseren; ambigue gevallen altijd naar
    handmatige controle sturen.
-12. [ ] **Volledige veldmapping goedkeuren.** Ieder Elementor-veld koppelen aan
+12. [x] **Volledige veldmapping goedkeuren.** Ieder Elementor-veld koppelen aan
    het bestaande Supabase-model dat Appsmith beheert.
-13. [ ] **Technisch ontwerp definitief goedkeuren.** Lokale Elementor-opslag,
+13. [x] **Technisch ontwerp definitief goedkeuren.** Lokale Elementor-opslag,
    WordPress-outbox, beveiligde Edge Function, idempotentie, retries,
-   `dead_letter`/`review` en herstelprocedure vastleggen. De bestaande
-   pluginopties en het voorlopige voorkeursontwerp staan in
-   `audits/2026-10-19-wordpress-elementor-supabase-koppelopties.md`. AFI heeft
-   al een inactieve algemene Webhook, actieve jobqueue, logging en resend en is
-   daarom de voorlopige voorkeursconnector; een eigen outboxplugin is alleen
-   nodig als de AFI-proef niet aan de acceptatiecriteria voldoet. Elementor
-   Atomic Forms vallen buiten scope. De ontvangstkant wordt
-   formulierbouwer-onafhankelijk ontworpen, zodat de latere overstap naar
+   `dead_letter`/`review` en herstelprocedure vastleggen. De eigen TFSC Form
+   Bridge is de actieve connector en vervangt AFI voor de vijf gekoppelde
+   formulieren. Elementor Atomic Forms vallen buiten scope. De ontvangstkant
+   is formulierbouwer-onafhankelijk opgezet, zodat de latere overstap naar
    Bricks dezelfde Edge Function, mapping, idempotentie en Supabase-tabellen
-   behoudt.
-14. [ ] **WordPress-connector en lokale outbox bouwen.** Werken na succesvolle
+   kan behouden.
+14. [x] **WordPress-connector en lokale outbox bouwen.** Werken na succesvolle
    Elementor-opslag, met unieke submission-UUID en zonder geheimen of
    persoonsgegevens in browsercode of gewone logs.
-15. [ ] **Supabase-intake en idempotente verwerking bouwen.** Bestaande
+15. [x] **Supabase-intake en idempotente verwerking bouwen.** Bestaande
     tabellen en relaties hergebruiken; eventuele schemawijzigingen via een
     beoordeelde migratie, minimale rechten en passende RLS uitvoeren.
-16. [ ] **Cv- en documentroute bouwen.** Besluit over private Supabase Storage,
-    MIME-/groottecontrole, documentversies, relaties en herstelbaarheid eerst
-    goedkeuren.
-17. [ ] **Appsmith-weergave en beheer aansluiten.** De nieuwe Supabase-records
+16. [x] **Cv- en documentroute bouwen.** Private Backblaze B2 is gekozen voor
+    de bestanden; Supabase bewaart documentmetadata en relaties. MIME- en
+    groottecontrole, documentversies, private toegang en PDF-preview zijn in
+    de actieve route opgenomen.
+17. [x] **Appsmith-weergave en beheer aansluiten.** De nieuwe Supabase-records
     en foutstatussen in het bestaande CRM tonen en beheren zonder een tweede
     synchronisatielaag of dubbel datamodel.
-18. [ ] **Synthetische end-to-endtests uitvoeren.** Nieuwe, bestaande en
+18. [x] **Synthetische end-to-endtests uitvoeren.** Nieuwe, bestaande en
     ambigue records, duplicaten, verkeerde/te grote bestanden en uitval/herstel
     van Supabase en fouten in Appsmith testen.
-19. [ ] **Schaduwmodus naast AFI/EngageBay draaien.** Uitkomsten vergelijken
+19. [x] **Schaduwmodus naast AFI/EngageBay draaien.** Uitkomsten vergelijken
     zonder de bestaande productieroute of lokale Elementor-inzendingen uit te
     schakelen.
 20. [ ] **Backfill-droogloop maken.** Elementor en EngageBay vanaf de bewezen
@@ -260,7 +269,7 @@ gewijzigd; open afhankelijkheden worden niet stilzwijgend overgeslagen.
 21. [ ] **Goedgekeurde backfill uitvoeren en reconciliëren.** Dezelfde
     idempotente route gebruiken, relaties en aantallen controleren en geen
     persoonsgegevens of exports in GitHub opnemen.
-22. [ ] **Gecontroleerd omschakelen.** AFI per formulier uitschakelen, niet
+22. [x] **Gecontroleerd omschakelen.** AFI per formulier uitschakelen, niet
     alles tegelijk; monitoring, foutoverzicht en herstelhandleiding opleveren.
 
 ### C. SEO, content en websitekwaliteit
@@ -354,134 +363,41 @@ geplaatst. Het robotsbeleid voor lege Beroepengids-archieven staat al vast.
 - [ ] Uploadlimieten en toegestane bestandstypen van registratie en
   sollicitatie documenteren en testen.
 
-## Project: WordPress, Supabase en Appsmith verbinden
+## Projectstatus: WordPress, Supabase en Appsmith verbinden
 
-### Uitgangspunt
+### Afgerond
 
-Een inzending wordt altijd eerst duurzaam in Elementor opgeslagen. Een storing
-bij Supabase, Appsmith of e-mail mag nooit formulierwaarden of een cv laten
-verdwijnen. Persoonsgegevens, cv's, sleutels en echte formulierwaarden komen
-niet in GitHub of gewone foutlogs.
+- [x] De vijf actieve Elementor-formulieren hebben gecontroleerde mappings en
+  vaste Engelse technische veld-ID's. Een gewijzigd veld-ID veroorzaakt een
+  zichtbare waarschuwing en wordt nooit stilzwijgend opnieuw gekoppeld.
+- [x] TFSC Form Bridge verzorgt lokale opslag, een duurzame WordPress-outbox,
+  ondertekende server-side aflevering, idempotentie, retries, begrensde
+  backoff en handmatige review.
+- [x] De Supabase-intake, verwerkingsfuncties, RLS en beperkte rollen staan
+  LIVE en hergebruiken het bestaande CRM-model.
+- [x] Documenten gaan privé naar Backblaze B2; Supabase bewaart metadata en
+  relaties en Appsmith kan het origineel en de PDF-preview openen.
+- [x] Appsmith toont de nieuwe contacten, kandidaten, bedrijven, vacatures,
+  sollicitaties, documenten en verwerkingsstatussen zonder een tweede kopie
+  van het CRM-model.
+- [x] Registratie, advies, vraag, sollicitatie en werkgeverscontact zijn
+  end-to-end getest. De AFI-routes voor deze formulieren zijn uitgeschakeld.
+- [x] TFSC Form Bridge `0.4.1` is LIVE en de productiepoort is groen. De
+  gedetailleerde acceptatiecriteria, herstelroute en testmatrix staan in de
+  private repository `tfsc-crm-ats`.
 
-### Fase 1 — besluiten en veldmapping
+### Nog open
 
-- [x] De doelarchitectuur staat vast: Appsmith is het CRM, Supabase de
-  canonieke database en EngageBay alleen de huidige legacy-bestemming van
-  Advanced Form Integration en een latere migratiebron.
-- [ ] Per formulier vastleggen wat er moet ontstaan:
-  - Registratie: `person` en `candidate_profile`, met toestemming en eventueel
-    document.
-  - Sollicitatie: kandidaat koppelen of aanmaken en precies één `application`
-    aan de juiste vacature koppelen.
-  - Werkgeverscontact: `person`, `company_contact` en `company` koppelen of
-    gecontroleerd aanmaken.
-  - Mailing, advies en vraag: bepalen welke gegevens in Supabase thuishoren en
-    welke alleen als communicatie-inzending bewaard blijven.
-- [ ] Per gegeven bepalen wat leidend is: de oorspronkelijke WordPress-
-  inzending of het canonieke record in Supabase. Dit geldt minimaal voor
-  kandidaten, werkgevers, contacten, sollicitaties, vacatures, documenten,
-  toestemming en communicatievoorkeuren.
-- [ ] Een volledige veldmapping maken van ieder Elementor-veld naar de
-  bestaande Supabase-kolom en de bijbehorende Appsmith-invoer of -weergave.
-- [ ] Regels voor herkennen en samenvoegen vastleggen: genormaliseerd
-  e-mailadres, telefoonnummer, LinkedIn-profiel en bestaande externe ID's.
-  Twijfelgevallen gaan naar handmatige controle en overschrijven nooit
-  stilzwijgend bestaande gegevens.
-- [ ] Bewaartermijnen, verwijderverzoeken en toestemming uitwerken voor
-  WordPress, Supabase/Appsmith en cv-bestanden.
-
-### Fase 2 — bestaande systemen alleen-lezen inventariseren
-
-- [ ] De relevante Supabase-tabellen, constraints, RLS-regels, functies en
-  bestaande importlogica volledig documenteren voordat er iets wordt
-  gewijzigd.
-- [ ] Bestaande EngageBay-ID's als historische externe ID's en de tabel
-  `external_identifiers` gebruiken om dubbele personen, kandidaten, contacten
-  en bedrijven te voorkomen; EngageBay is daarmee geen doelarchitectuur.
-- [ ] Vaststellen hoe Appsmith de nieuwe en bestaande records toont en welke
-  queries of formulieren later moeten worden aangepast.
-- [ ] De actuele WordPress-formulierconfiguratie exporteren als herstelpunt.
-
-De eerste alleen-lezen controle bevestigt dat het Supabase-model al de juiste
-basisrelaties bevat: `persons` → `candidate_profiles` → `applications`,
-`companies` ↔ `company_contacts`, plus `documents`, `document_links` en
-`external_identifiers`. RLS staat aan op de gecontroleerde tabellen. We bouwen
-daarom voort op het bestaande model en maken geen tweede kandidaat- of
-werkgevermodel.
-
-### Fase 3 — veilige ontvangst en foutopvang bouwen
-
-- [ ] Een WordPress-connector maken die na lokale Elementor-opslag een
-  minimaal outboxrecord met unieke submission-UUID aanmaakt.
-- [ ] Geen formuliergegevens of bestanden vanuit browser-JavaScript
-  rechtstreeks naar Supabase sturen.
-- [ ] De WordPress-server laten afleveren bij een beveiligde Supabase Edge
-  Function. Authenticatie, geheimen en een handtekening blijven uitsluitend
-  server-side.
-- [ ] In Supabase een duurzame intake/outbox en auditstatus inrichten met
-  idempotente verwerking op submission-UUID.
-- [ ] Statussen gebruiken: `received`, `pending`, `sending`, `succeeded`,
-  `retry`, `dead_letter` en `review`.
-- [ ] Tijdelijke fouten automatisch opnieuw proberen met oplopende wachttijd;
-  permanente en ambigue gevallen zichtbaar maken voor handmatige controle.
-- [ ] Nieuwe tabellen alleen expliciet aan de Data API blootstellen als dat
-  nodig is, met minimale rechten en RLS. Secret/service-role-sleutels nooit in
-  WordPress-frontendcode of Appsmith-clientcode plaatsen.
-
-### Fase 4 — cv's en andere uploads
-
-- [ ] Beslissen of Supabase Storage de definitieve documentopslag wordt. Er is
-  nu nog geen Storage-bucket ingericht.
-- [ ] Bij gebruik van Storage een private bucket maken, met MIME-/groottecheck,
-  niet-voorspelbare paden, RLS en tijdelijk ondertekende downloadlinks.
-- [ ] `documents`, `document_versions` en `document_links` gebruiken in plaats
-  van een tweede los bestandsmodel.
-- [ ] Een WordPress-upload pas opruimen nadat bestand, metadata en relaties
-  aantoonbaar correct in Supabase staan én de bewaartermijn dit toestaat.
-
-### Fase 5 — Appsmith aansluiten op de Supabase-intake
-
-- [ ] Appsmith de duurzaam verwerkte Supabase-records en hun intake- of
-  foutstatus laten tonen. Er komt geen tweede CRM-kopie naast Supabase.
-- [ ] Externe bron-ID's centraal bewaren in `external_identifiers`.
-- [ ] Kandidaat, werkgever, contactpersoon en sollicitatie met hun onderlinge
-  relaties synchroniseren.
-- [ ] Supabase- of Appsmith-fouten zichtbaar maken en een handmatige
-  herstelactie bieden zonder de oorspronkelijke inzending opnieuw te laten
-  invullen.
-
-### Fase 6 — testen, kandidaten inhalen en gecontroleerd omschakelen
-
-- [ ] Testen met synthetische gegevens: nieuwe, bestaande en ambigue kandidaat;
-  nieuwe en bestaande werkgever/contactpersoon; dubbele verzending; verkeerd
-  bestand; te groot bestand; uitval van Supabase; fout in Appsmith; herstel na
-  uitval.
-- [ ] Controleren dat elke inzending lokaal bewaard blijft en dat herhalen
-  nooit dubbele personen, sollicitaties, contacten of documenten maakt.
-- [ ] Eerst in schaduwmodus naast de bestaande AFI/EngageBay-legacyroute
-  draaien en uitkomsten vergelijken.
-- [ ] Het exacte eindmoment of laatste submission-ID van de eerdere
-  kandidaatimport naar Supabase terugvinden en als controleerbare grens
-  vastleggen; niet gokken op een datum.
-- [ ] Alleen de kandidaatregistraties en sollicitaties ná die grens uit
-  Elementor inventariseren, inclusief de aanwezigheid van een cv, maar zonder
-  persoonsgegevens of bestanden in GitHub te zetten.
-- [ ] Ook de kandidaten en sollicitatiegegevens die ná die grens in EngageBay
-  zijn binnengekomen inventariseren. Elementor en EngageBay zijn beide
-  migratiebronnen; de gecombineerde set wordt vóór import ontdubbeld tegen
-  Supabase en onderling.
-- [ ] Eerst een droge inhaalcontrole maken met aantallen: nieuw, al aanwezig,
-  betrouwbaar te koppelen, ambigu en fout. Matchen gebeurt via genormaliseerd
-  e-mailadres, telefoonnummer, LinkedIn-profiel en bestaande externe ID's.
-- [ ] De goedgekeurde ontbrekende kandidaten, sollicitaties en cv-relaties via
-  exact dezelfde idempotente verwerkingsroute als nieuwe inzendingen naar
-  Supabase sturen en daarna in Appsmith controleren. Iedere broninzending krijgt
-  een vaste submission-UUID, zodat opnieuw uitvoeren geen duplicaten maakt.
-- [ ] Na de inhaalslag aantallen en relaties tussen Elementor, Supabase en de
-  Appsmith-weergave afstemmen en alle ambigue gevallen handmatig beoordelen.
-- [ ] Pas na een geslaagde end-to-endcontrole de oude AFI-route per formulier
-  uitschakelen. Niet alle formulieren tegelijk omschakelen.
-- [ ] Monitoring, foutoverzicht en een korte herstelhandleiding opleveren.
+- [ ] Eigenaarschap, bewaartermijnen, verwijderroute en logbeleid definitief
+  vastleggen zonder deze besluiten alvast technisch af te dwingen.
+- [ ] De exacte grens van de eerdere kandidaatimport bewijzen.
+- [ ] Een privacyveilige backfill-droogloop voor Elementor en EngageBay maken,
+  daarna alleen de expliciet goedgekeurde ontbrekende records importeren en
+  reconciliëren.
+- [ ] De oorzaak van de tijdelijke eerste Backblaze-afwijzing onderzoeken;
+  aflevering via retry werkt en begrensde backoff is getest.
+- [ ] Na afronding van de formulieren de legacy frontendparameters en
+  knopcode vereenvoudigen tot het canonieke vacaturenummer.
 
 ## Overige bestaande backlog
 
@@ -503,10 +419,12 @@ werkgevermodel.
 
 ## Nu bewust niet doen
 
-- Geen bestaande kandidaat-, werkgever- of sollicitatiedata wijzigen.
-- Geen Supabase-schema of Storage-bucket aanmaken voordat de veldmapping en
-  eigenaarschapbesluiten zijn goedgekeurd.
-- Advanced Form Integration nog niet uitschakelen.
+- Geen historische kandidaat-, werkgever- of sollicitatiedata wijzigen buiten
+  een vooraf goedgekeurde, idempotente backfill.
+- Geen bewaartermijnen, verwijderregels of privacykeuzes aannemen voordat die
+  expliciet zijn besloten.
+- Geen historische review- of outboxregels verwijderen zonder controle en
+  expliciet akkoord.
 - Geen Elementor-inzendingen of cv's verwijderen.
 - Geen persoonsgegevens, exports, databaseback-ups of geheimen naar GitHub
   pushen.
