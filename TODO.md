@@ -28,6 +28,13 @@ blijft open staan, maar wordt niet eerst uitgevoerd.
   geen bedrijf; alleen `vacancy_number` wordt als vacaturecontext vertrouwd.
 - [ ] `Vacature - Stel je vraag` nog openbaar synthetisch testen zonder én met
   vacaturecontext.
+- [x] `Registratie` heeft canonieke Engelse kandidaatveld-ID's en een actieve
+  mapping als `Open registratie/inschrijving`, met kandidaat aan en bedrijf uit.
+  De vaste legacywaarden `Registratie`, vacaturenummer `1` en `The Field
+  Service Company` staan op `Niet versturen`.
+- [ ] `Registratie` nog openbaar synthetisch testen en controleren in
+  WordPress, Supabase en Appsmith; Backblaze ook controleren wanneer de test
+  een synthetisch cv bevat.
 - [ ] De huidige vacatureknop-/linkcode pas vereenvoudigen nadat alle
   formulieren zijn afgerond. Tot dat moment blijven `postTitle`, `cn`,
   `vacaturenummer` en `postUrl` bestaan om nog niet gestandaardiseerde
