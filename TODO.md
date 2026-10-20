@@ -18,22 +18,22 @@ blijft open staan, maar wordt niet eerst uitgevoerd.
   `cv_upload`; TFSC Form Bridge `0.3.9` handelt uitsluitend actief gemapte cv-
   en vacaturebijlagevelden af. De code is op PHP 7.4 en 8.3 getest, staat live
   en de beveiligde verbindingstest geeft `connection_ok`.
-- [ ] Eén openbare handmatige regressietest uitvoeren met een echte DOCX op
-  `Registratie` en daarna outbox, Supabase-documentmetadata, Backblaze-object,
-  PDF-preview en Appsmith CV-weergave controleren. De browserautomatisering kon
-  het lokale bestand niet aantoonbaar aan het uploadveld koppelen; daarom is
-  deze productieproef nog niet als geslaagd gemarkeerd.
+- [x] `Registratie` openbaar met een echte DOCX getest. De eerste Backblaze-
+  poging kreeg een tijdelijke afwijzing; de outbox-retry leverde daarna af.
+  Supabase registreerde het originele document als `cv` met PDF-preview en
+  Appsmith toont **Registratie / Verwerkt / Nieuw profiel** met actieve CV-knop.
 
-- [ ] De zes actuele formulieren één voor één afronden met vaste Engelse
-  technische `field_id`-waarden, ongewijzigde duidelijke Nederlandse labels,
-  bijgewerkte Elementor-e-mailshortcodes en een expliciet gecontroleerde Form
-  Bridge-mapping. Geen veld-ID aanpassen zonder eerst de afhankelijkheden van
-  precies dat formulier te controleren.
+- [x] De vijf actieve Bridge-formulieren één voor één afgerond met vaste
+  Engelse technische `field_id`-waarden, ongewijzigde duidelijke Nederlandse
+  labels, bijgewerkte Elementor-e-mail-/Akismet-shortcodes en gecontroleerde
+  Form Bridge-mappings. Mailing Registratie is bewust overgeslagen omdat de
+  pagina niet meer actief wordt gebruikt en niet wordt gekoppeld.
 - [ ] Per formulier een synthetische end-to-endtest uitvoeren en WordPress-
   outbox, Supabase-verwerking, Backblaze indien van toepassing en Appsmith
   controleren. Pas daarna het volgende formulier oppakken.
-- [ ] Uitvoervolgorde na het vraagformulier: Registratie, Mailing Registratie,
-  Werkgeverscontact, Adviesaanvraag en als laatste Solliciteren.
+- [x] Veldstandaardisatie uitgevoerd in de volgorde Registratie,
+  Werkgeverscontact, Adviesaanvraag en Solliciteren. Mailing Registratie blijft
+  buiten scope.
 - [x] `Vacature - Stel je vraag` heeft canonieke Engelse veld-ID's en een
   actieve mapping in Form Bridge `0.3.8`. De mapping maakt een kandidaat maar
   geen bedrijf; alleen `vacancy_number` wordt als vacaturecontext vertrouwd.
@@ -51,6 +51,19 @@ blijft open staan, maar wordt niet eerst uitgevoerd.
   dienstverband`, activiteit en open intake-item; geen bedrijf, vacature of
   sollicitatie. Appsmith toont **Registratie / Verwerkt / Nieuw profiel** en
   opent het juiste profiel. De aparte PDF- en Word-cv-routes waren al bewezen.
+- [x] `verzoek_advies` gebruikt nu `employment_preferences`, `last_name`,
+  `city`, `mobile`, `cv`, `linkedin_url`, `ambition` en `privacy_consent`.
+  Beheermail en Akismet zijn bijgewerkt, uploads zijn beperkt tot PDF/DOC/DOCX
+  en de Bridge-mapping staat gecontroleerd op versie `3`.
+- [ ] `verzoek_advies` via de echte openbare browserroute testen. Een ruwe
+  synthetische HTTP-proef eindigde vóór de outbox met een generieke WordPress-
+  500 en heeft geen CRM-record gemaakt.
+- [x] `form_solliciteren_20240226` gebruikt nu `last_name`, `mobile`, `cv`,
+  `linkedin_url`, `vacancy_number` en `privacy_consent`. Beheermail en Akismet
+  zijn bijgewerkt, uploads zijn beperkt tot PDF/DOC/DOCX en de Bridge-mapping
+  staat gecontroleerd op versie `3`.
+- [ ] `form_solliciteren_20240226` via de echte openbare browserroute testen,
+  inclusief lookup van een bestaand canoniek vacaturenummer.
 - [ ] De huidige vacatureknop-/linkcode pas vereenvoudigen nadat alle
   formulieren zijn afgerond. Tot dat moment blijven `postTitle`, `cn`,
   `vacaturenummer` en `postUrl` bestaan om nog niet gestandaardiseerde
