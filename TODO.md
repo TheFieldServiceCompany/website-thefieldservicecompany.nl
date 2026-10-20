@@ -94,11 +94,18 @@ blijft open staan, maar wordt niet eerst uitgevoerd.
   Draft-vacature `884980`; de DOCX staat privé in Backblaze en is aan de
   vacature gekoppeld. Appsmith toont **Werkgever / Verwerkt**, het juiste
   bedrijf, vacaturenummer en één bijlage.
-- [ ] Terugkerende tijdelijke eerste Backblaze-uploadfout onderzoeken. Zowel
-  Registratie als Solliciteren kreeg eerst `b2_upload_failed`; de bestaande
-  outbox-retry leverde beide keren bij poging twee correct af. Retry en
-  begrensde backoff zijn in versie `0.4.1` aantoonbaar getest; de technische
-  oorzaak van de eerste afwijzing en aanvullende productielogging blijven open.
+- [x] Terugkerende tijdelijke eerste Backblaze-uploadfout onderzocht en
+  herstelroute live bewezen. TFSC Form Bridge `0.4.2` haalt bij een tijdelijke
+  transport-, 408-, 429-, 5xx- of uploadtokenfout direct een verse upload-URL
+  op. Veilige productielogging identificeerde tijdens een openbare
+  Registratie-proef exact `503 service_unavailable`; ook de directe tweede pod
+  was kort niet beschikbaar. De duurzame outbox hield de DOCX vast en leverde
+  na backoff op poging twee volledig af. Supabase bevat het canonieke document,
+  de versie, Backblaze-file-ID, kandidaatrelatie en PDF-preview; Appsmith toont
+  de registratie met actieve CV-knop. De tijdelijke opslagpodfout is daarmee
+  zichtbaar en zonder documentverlies afgevangen. Code en log: private repo
+  `tfsc-crm-ats`, branch `codex/wordpress-form-bridge`, commits `3b7ce8a` en
+  `e25913d`.
 - [ ] De huidige vacatureknop-/linkcode pas vereenvoudigen nadat alle
   formulieren zijn afgerond. Tot dat moment blijven `postTitle`, `cn`,
   `vacaturenummer` en `postUrl` bestaan om nog niet gestandaardiseerde
@@ -382,7 +389,7 @@ geplaatst. Het robotsbeleid voor lege Beroepengids-archieven staat al vast.
   van het CRM-model.
 - [x] Registratie, advies, vraag, sollicitatie en werkgeverscontact zijn
   end-to-end getest. De AFI-routes voor deze formulieren zijn uitgeschakeld.
-- [x] TFSC Form Bridge `0.4.1` is LIVE en de productiepoort is groen. De
+- [x] TFSC Form Bridge `0.4.2` is LIVE en de productiepoort is groen. De
   gedetailleerde acceptatiecriteria, herstelroute en testmatrix staan in de
   private repository `tfsc-crm-ats`.
 
@@ -396,8 +403,10 @@ geplaatst. Het robotsbeleid voor lege Beroepengids-archieven staat al vast.
 - [ ] Een privacyveilige backfill-droogloop voor Elementor en EngageBay maken,
   daarna alleen de expliciet goedgekeurde ontbrekende records importeren en
   reconciliëren.
-- [ ] De oorzaak van de tijdelijke eerste Backblaze-afwijzing onderzoeken;
-  aflevering via retry werkt en begrensde backoff is getest.
+- [x] De tijdelijke eerste Backblaze-afwijzing is als
+  `503 service_unavailable` van de opslagpod geïdentificeerd. Versie `0.4.2`
+  probeert direct een verse upload-URL en gebruikt daarna de begrensde
+  outboxbackoff; de live DOCX-proef leverde op outboxpoging twee af.
 - [ ] Na afronding van de formulieren de legacy frontendparameters en
   knopcode vereenvoudigen tot het canonieke vacaturenummer.
 
