@@ -15,9 +15,11 @@ blijft open staan, maar wordt niet eerst uitgevoerd.
 
 - [x] De uploadregressie van Elementor Pro 4.3.2 gericht opgevangen. TFSC
   Custom Functions `0.2.0` bevat niet langer de globale legacyfilters voor
-  `cv_upload`; TFSC Form Bridge `0.3.9` handelt uitsluitend actief gemapte cv-
-  en vacaturebijlagevelden af. De code is op PHP 7.4 en 8.3 getest, staat live
-  en de beveiligde verbindingstest geeft `connection_ok`.
+  `cv_upload`; TFSC Form Bridge `0.4.0` handelt uitsluitend actief gemapte cv-
+  en vacaturebijlagevelden af en bewaart daarvoor een eigen afgeschermde
+  werkkopie tot Backblaze en Supabase de registratie hebben bevestigd. De code
+  is op PHP 7.4 en 8.3 getest, staat live en de beveiligde verbindingstest geeft
+  `connection_ok`.
 - [x] `Registratie` openbaar met een echte DOCX getest. De eerste Backblaze-
   poging kreeg een tijdelijke afwijzing; de outbox-retry leverde daarna af.
   Supabase registreerde het originele document als `cv` met PDF-preview en
@@ -28,18 +30,22 @@ blijft open staan, maar wordt niet eerst uitgevoerd.
   labels, bijgewerkte Elementor-e-mail-/Akismet-shortcodes en gecontroleerde
   Form Bridge-mappings. Mailing Registratie is bewust overgeslagen omdat de
   pagina niet meer actief wordt gebruikt en niet wordt gekoppeld.
-- [ ] Per formulier een synthetische end-to-endtest uitvoeren en WordPress-
+- [x] Per actief formulier een synthetische end-to-endtest uitvoeren en WordPress-
   outbox, Supabase-verwerking, Backblaze indien van toepassing en Appsmith
-  controleren. Afgerond voor Registratie, Adviesaanvraag en Solliciteren;
-  Vraag en Werkgeverscontact staan nog open.
+  controleren. Afgerond voor Registratie, Adviesaanvraag, Solliciteren, Vraag
+  en Werkgeverscontact. Mailing Registratie blijft bewust buiten scope omdat
+  die pagina niet meer actief wordt gebruikt.
 - [x] Veldstandaardisatie uitgevoerd in de volgorde Registratie,
   Werkgeverscontact, Adviesaanvraag en Solliciteren. Mailing Registratie blijft
   buiten scope.
 - [x] `Vacature - Stel je vraag` heeft canonieke Engelse veld-ID's en een
   actieve mapping in Form Bridge `0.3.8`. De mapping maakt een kandidaat maar
   geen bedrijf; alleen `vacancy_number` wordt als vacaturecontext vertrouwd.
-- [ ] `Vacature - Stel je vraag` nog openbaar synthetisch testen zonder én met
-  vacaturecontext.
+- [x] `Vacature - Stel je vraag` openbaar synthetisch getest zonder én met
+  vacaturecontext. Beide outbox-items leverden in één poging af en Supabase
+  verwerkte ze zonder reviewcode. Alleen de vacaturevraag koppelde aan
+  vacaturenummer `885425`; er ontstond geen sollicitatie. Appsmith toont beide
+  als type `Vraag`.
 - [x] `Registratie` heeft canonieke Engelse kandidaatveld-ID's en een actieve
   mapping als `Open registratie/inschrijving`, met kandidaat aan en bedrijf uit.
   De vaste legacywaarden `Registratie`, vacaturenummer `1` en `The Field
@@ -70,6 +76,15 @@ blijft open staan, maar wordt niet eerst uitgevoerd.
   verwerkte mappingversie `3` zonder reviewcode, maakte precies één
   sollicitatie bij de juiste vacature en registreerde de DOCX als `cv` met
   PDF-preview. Appsmith toont het contact als type `Sollicitatie`.
+- [x] `Vacature - Contactverzoek (Werkgever)` openbaar getest met een echte
+  synthetische DOCX. De eerste proef van vóór de fix maakte de CRM-records maar
+  ging voor het document naar review met `document_path_missing`. Versie
+  `0.4.0` bewaart daarom een afzonderlijke afgeschermde werkkopie voor de
+  asynchrone aflevering. De herhaalproef leverde in één poging af: Supabase
+  maakte zonder reviewcode persoon, bedrijf, bedrijfscontact, activiteit en
+  Draft-vacature `884980`; de DOCX staat privé in Backblaze en is aan de
+  vacature gekoppeld. Appsmith toont **Werkgever / Verwerkt**, het juiste
+  bedrijf, vacaturenummer en één bijlage.
 - [ ] Terugkerende tijdelijke eerste Backblaze-uploadfout onderzoeken. Zowel
   Registratie als Solliciteren kreeg eerst `b2_upload_failed`; de bestaande
   outbox-retry leverde beide keren bij poging twee correct af. Controleer vóór
