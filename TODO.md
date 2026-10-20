@@ -388,6 +388,8 @@ geplaatst. Het robotsbeleid voor lege Beroepengids-archieven staat al vast.
 
 ### Nog open
 
+- [ ] Het abonnement/de licentie van Advanced Form Integration (AFI) opzeggen;
+  de vijf vervangen formulierkoppelingen zijn technisch al uitgeschakeld.
 - [ ] Eigenaarschap, bewaartermijnen, verwijderroute en logbeleid definitief
   vastleggen zonder deze besluiten alvast technisch af te dwingen.
 - [ ] De exacte grens van de eerdere kandidaatimport bewijzen.
