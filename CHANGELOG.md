@@ -1,5 +1,22 @@
 # Changelog
 
+## 2026-10-21 — Legacy Elementor-uploadcode uit TFSC Custom Functions verwijderd
+
+- TFSC Custom Functions is van `0.1` naar `0.2.0` gebracht en live
+  geïnstalleerd.
+- Alleen de verouderde globale `wp_unique_filename`-filter en de oude
+  Elementor-e-mailbijlageklasse zijn verwijderd. Deze code stond vast op het
+  vervallen veld-ID `cv_upload` en greep daardoor ook in bij andere
+  Elementor-formulieren.
+- Alle overige functies en styles in TFSC Custom Functions zijn ongewijzigd
+  gebleven. Uploads en e-mailbijlagen blijven onder beheer van Elementor Pro;
+  expliciet naar het CRM gemapte cv's en vacaturebijlagen worden gericht door
+  TFSC Form Bridge `0.3.9` afgehandeld.
+- De aangepaste functiesplugin slaagt voor PHP 8.3-syntaxcontrole en de live
+  pluginlijst bevestigt versie `0.2.0` zonder fatale fout.
+- Er zijn geen formulieren, mappings, Pods, taxonomieën, Supabase-schema's of
+  Appsmith-pagina's gewijzigd.
+
 ## 2026-10-19 — Toekomstige overstap van Elementor naar Bricks vastgelegd
 
 - De gebruiker heeft besloten Elementor Atomic Forms niet te gebruiken en

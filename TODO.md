@@ -1,6 +1,6 @@
 # Centrale TODO
 
-Laatst bijgewerkt: 20 oktober 2026
+Laatst bijgewerkt: 21 oktober 2026
 
 Dit is de centrale werklijst. Detailbesluiten en testresultaten blijven in de
 bestaande documenten onder `audits/`, `content/` en `functionality/` staan.
@@ -11,7 +11,18 @@ Op 19 oktober 2026 heeft de gebruiker de werkprioriteit verlegd van travel naar
 de koppeling van de WordPress-formulieren met Supabase en Appsmith. Travel
 blijft open staan, maar wordt niet eerst uitgevoerd.
 
-### Besluit 20 oktober — eerst alle formulieren afronden
+### Besluiten 20–21 oktober — eerst alle formulieren afronden
+
+- [x] De uploadregressie van Elementor Pro 4.3.2 gericht opgevangen. TFSC
+  Custom Functions `0.2.0` bevat niet langer de globale legacyfilters voor
+  `cv_upload`; TFSC Form Bridge `0.3.9` handelt uitsluitend actief gemapte cv-
+  en vacaturebijlagevelden af. De code is op PHP 7.4 en 8.3 getest, staat live
+  en de beveiligde verbindingstest geeft `connection_ok`.
+- [ ] Eén openbare handmatige regressietest uitvoeren met een echte DOCX op
+  `Registratie` en daarna outbox, Supabase-documentmetadata, Backblaze-object,
+  PDF-preview en Appsmith CV-weergave controleren. De browserautomatisering kon
+  het lokale bestand niet aantoonbaar aan het uploadveld koppelen; daarom is
+  deze productieproef nog niet als geslaagd gemarkeerd.
 
 - [ ] De zes actuele formulieren één voor één afronden met vaste Engelse
   technische `field_id`-waarden, ongewijzigde duidelijke Nederlandse labels,
