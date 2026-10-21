@@ -106,16 +106,15 @@ blijft open staan, maar wordt niet eerst uitgevoerd.
   zichtbaar en zonder documentverlies afgevangen. Code en log: private repo
   `tfsc-crm-ats`, branch `codex/wordpress-form-bridge`, commits `3b7ce8a` en
   `e25913d`.
-- [ ] De huidige vacatureknop-/linkcode pas vereenvoudigen nadat alle
-  formulieren zijn afgerond. Tot dat moment blijven `postTitle`, `cn`,
-  `vacaturenummer` en `postUrl` bestaan om nog niet gestandaardiseerde
-  formulieren en e-mails niet te breken.
-- [ ] Daarna de frontendcode die titel, bedrijf en URL uit de pagina schraapt
-  verwijderen. Op afgescheiden formulierpagina's alleen het canonieke
-  vacaturenummer transporteren, bijvoorbeeld `?vacaturenummer=335`; Supabase
-  leidt titel, bedrijf, dienstverband en canonieke URL vervolgens zelf af.
-  Elementor-e-mails die nu nog een meegestuurde titel gebruiken moeten vóór
-  die opschoning op vacaturenummer of een generiek onderwerp worden gezet.
+- [x] De adviesknop-/linkcode is op 21 oktober 2026 vereenvoudigd. De knop
+  transporteert alleen nog het canonieke vacaturenummer als
+  `?vacaturenummer=<nummer>`; op algemene archiefpagina's zonder één vacature
+  opent het adviesformulier zonder vacatureparameter.
+- [x] `verzoek_advies` gebruikt alleen nog het verborgen veld
+  `vacancy_number`. `postTitle`, `postUrl`, `vacaturenaam` en `bedrijfsnaam`
+  zijn uit het formulier verwijderd. Het e-mailonderwerp en de Akismet-mapping
+  verwijzen niet meer naar die legacyvelden. De Bridge-mapping staat op versie
+  `4` en koppelt `vacancy_number` aan `Vacature - vacaturenummer`.
 
 De actuele connectorcode, veldcontracten en live testresultaten staan in de
 private repository `tfsc-crm-ats`, branch `codex/wordpress-form-bridge`.
@@ -407,8 +406,16 @@ geplaatst. Het robotsbeleid voor lege Beroepengids-archieven staat al vast.
   `503 service_unavailable` van de opslagpod geïdentificeerd. Versie `0.4.2`
   probeert direct een verse upload-URL en gebruikt daarna de begrensde
   outboxbackoff; de live DOCX-proef leverde op outboxpoging twee af.
-- [ ] Na afronding van de formulieren de legacy frontendparameters en
-  knopcode vereenvoudigen tot het canonieke vacaturenummer.
+- [x] De legacy frontendparameters en knopcode zijn op 21 oktober 2026
+  vereenvoudigd tot het canonieke vacaturenummer. De algemene archiefroute
+  zonder vacaturecontext is gecontroleerd. Een openbare inzending met
+  WordPress-vacaturenummer `359` bewees de correcte overdracht en ging verwacht
+  naar `optional_vacancy_not_found`, omdat deze vacature nog niet in Supabase
+  staat; er ontstonden geen CRM-records. De herhaalproef met bestaande
+  Supabase-vacature `885425` verwerkte mappingversie `4` zonder reviewcode,
+  koppelde de adviesactiviteit aan de vacature en maakte geen sollicitatie.
+  Appsmith **Nieuwe contacten** toont deze inzending als `Advies`, `Verwerkt`
+  en `Nieuw profiel`, inclusief vacaturenummer en vacaturetitel.
 
 ## Overige bestaande backlog
 

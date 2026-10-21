@@ -467,15 +467,22 @@ endpoint geheel worden verwijderd.
 
 ### Adviesknop
 
-Zoekt op een vacaturepagina het vacaturenummer, de bedrijfsnaam,
-contractvorm, paginatitel en URL in de gerenderde Elementor-HTML. Bij een klik
-op `.button-advies` worden deze waarden als queryparameters aan het
-adviesformulier meegegeven.
+Zoekt uitsluitend naar het zichtbare `Vacaturenummer:` in de gerenderde
+Elementor-HTML. Bij een klik op `.button-advies` opent de code het
+adviesformulier op het huidige domein en geeft zij, wanneer aanwezig, alleen
+`?vacaturenummer=<nummer>` mee. Op algemene archiefpagina's zonder één concrete
+vacature opent hetzelfde formulier bewust zonder vacatureparameter.
 
-De geëxporteerde code bevatte een hardcoded URL naar de dev-site en ongecodeerde
-queryparameterwaarden. In de repository gebruikt de knop nu het huidige domein
-via `window.location.origin` en `URLSearchParams`. Uitrol en een volledige
-formulierproef moeten nog plaatsvinden.
+Bedrijfsnaam, contractvorm, paginatitel en pagina-URL worden niet meer uit de
+pagina geschraapt of als queryparameter meegestuurd. Supabase leidt de
+vacaturecontext af uit het canonieke vacaturenummer. De vereenvoudigde code is
+op 21 oktober 2026 LIVE gezet. De algemene adviesroute is gecontroleerd. Een
+openbare proef met WordPress-vacaturenummer `359` bewees dat het nummer correct
+in mappingversie `4` aankomt; Supabase zette de inzending terecht op
+`optional_vacancy_not_found` omdat deze vacature nog niet is gemigreerd. De
+herhaalproef met bestaande Supabase-vacature `885425` slaagde zonder
+reviewcode en koppelde de adviesactiviteit aan de juiste vacature zonder een
+sollicitatie aan te maken.
 
 ### Tracking
 

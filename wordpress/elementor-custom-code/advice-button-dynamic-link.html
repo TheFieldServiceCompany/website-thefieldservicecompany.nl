@@ -1,69 +1,34 @@
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    var buttonsAdvies = document.querySelectorAll('.button-advies');
+document.addEventListener('DOMContentLoaded', function () {
+    var buttons = document.querySelectorAll('.button-advies');
 
-    function constructUrl(button) {
-        // Verkrijg de waarde van het dynamische veld "Vacaturenummer" uit de HTML-structuur
-        var vacaturenummer = '';
-        var elements = document.querySelectorAll('.elementor-icon-list-text');
-        elements.forEach(function(element) {
-            var text = element.innerText.trim();
-            if (text.startsWith('Vacaturenummer:')) {
-                vacaturenummer = text.replace('Vacaturenummer:', '').trim();
+    function getVacancyNumber() {
+        var vacancyNumber = '';
+
+        document.querySelectorAll('.elementor-icon-list-text').forEach(function (element) {
+            var text = element.textContent.trim();
+
+            if (text.indexOf('Vacaturenummer:') === 0) {
+                vacancyNumber = text.replace('Vacaturenummer:', '').trim();
             }
         });
 
-        // Verkrijg de bedrijfsnaam uit het verborgen icoonlijstelement
-        var bedrijfsnaam = '';
-        var hiddenList = document.getElementById('pods_list_hidden');
-        if (hiddenList) {
-            var hiddenListItem = hiddenList.querySelector('.elementor-icon-list-text');
-            if (hiddenListItem) {
-                bedrijfsnaam = hiddenListItem.innerText.trim();
+        return vacancyNumber;
+    }
+
+    buttons.forEach(function (button) {
+        button.addEventListener('click', function (event) {
+            event.preventDefault();
+
+            var url = new URL('/formulier-advies/', window.location.origin);
+            var vacancyNumber = getVacancyNumber();
+
+            if (vacancyNumber) {
+                url.searchParams.set('vacaturenummer', vacancyNumber);
             }
-        }
 
-        // Verkrijg de contractvorm en bijbehorende variabele
-        var contractvorm = '';
-        var contractvormElements = document.querySelectorAll('.elementor-icon-list-item');
-        contractvormElements.forEach(function(element) {
-            var text = element.innerText.trim();
-            if (text.startsWith('Contractvorm:')) {
-                contractvorm = text.replace('Contractvorm:', '').trim();
-            }
+            window.location.href = url.toString();
         });
-
-        // Verkrijg de titel van de post
-        var postTitle = document.title.trim();
-
-        // Verkrijg de URL van de post
-        var postUrl = window.location.href;
-
-        // Gebruik altijd het huidige domein en encodeer alle waarden veilig.
-        var url = new URL('/formulier-advies/', window.location.origin);
-        url.searchParams.set('vacaturenummer', vacaturenummer);
-        url.searchParams.set('contractvorm', contractvorm);
-        url.searchParams.set('postTitle', postTitle);
-        url.searchParams.set('postUrl', postUrl);
-        url.searchParams.set('cn', bedrijfsnaam);
-
-        return url.toString();
-    }
-
-    function navigateToPage(url) {
-        window.location.href = url;
-    }
-
-    function addClickListener(buttons) {
-        buttons.forEach(function(button) {
-            button.addEventListener('click', function(event) {
-                event.preventDefault();
-                var url = constructUrl(button);
-                navigateToPage(url);
-            });
-        });
-    }
-
-    addClickListener(buttonsAdvies);
+    });
 });
 </script>
