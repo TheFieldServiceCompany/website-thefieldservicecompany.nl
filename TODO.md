@@ -23,6 +23,15 @@ blijft open staan, maar wordt niet eerst uitgevoerd.
   synthetisch getest zonder kandidaat of outboxitem aan te maken. Code:
   `tfsc-crm-ats`, `codex/wordpress-form-bridge`, commits `9f5e361` en `730f428`.
 
+- [ ] De nieuwe Form Bridge-diagnostiek morgen of overmorgen opnieuw uitlezen
+  nadat er voldoende echte formulierverkeer is geweest. Microsoft Clarity in
+  dezelfde periode gebruiken om de openbare gebruikersroute, browser,
+  formulierinteractie en eventuele JavaScript-/klikfouten te vergelijken met
+  het serverlog. Clarity is aanvullend en vervangt het Bridge-log niet.
+- [ ] De recent per e-mail ontvangen cv's gecontroleerd aan de juiste bestaande
+  of nieuwe kandidaten toevoegen. Per cv kandidaatidentiteit, documenttype,
+  Backblaze-opslag, PDF-preview en zichtbaarheid in Appsmith controleren.
+
 - [x] Productiepoort TFSC Form Bridge afgerond. Versie `0.4.1` staat LIVE,
   waarschuwt zichtbaar wanneer een gekoppelde `field_id` verdwijnt en koppelt
   een nieuwe ID nooit automatisch. Time-outs, rate limiting, definitieve
@@ -404,8 +413,9 @@ geplaatst. Het robotsbeleid voor lege Beroepengids-archieven staat al vast.
 
 ### Nog open
 
-- [ ] Het abonnement/de licentie van Advanced Form Integration (AFI) opzeggen;
-  de vijf vervangen formulierkoppelingen zijn technisch al uitgeschakeld.
+- [x] Het abonnement/de licentie van Advanced Form Integration (AFI) is op
+  21 oktober 2026 opgezegd; de vijf vervangen formulierkoppelingen waren
+  technisch al uitgeschakeld.
 - [ ] Eigenaarschap, bewaartermijnen, verwijderroute en logbeleid definitief
   vastleggen zonder deze besluiten alvast technisch af te dwingen.
 - [ ] De exacte grens van de eerdere kandidaatimport bewijzen.
@@ -429,12 +439,16 @@ geplaatst. Het robotsbeleid voor lege Beroepengids-archieven staat al vast.
 
 ## Overige bestaande backlog
 
-- [ ] Appsmith-branches gecontroleerd opschonen. `crm-layout-redesign` is de
-  actuele werkbranch en `main` blijft behouden. Negen branches zijn volledig
-  in de actuele lijn opgenomen; vier afgesplitste branches hebben elk één
-  unieke commit en moeten eerst inhoudelijk worden beoordeeld. Geen remote
-  branch verwijderen zonder expliciet akkoord. Zie
-  `audits/2026-10-19-appsmith-branch-inventory.md`.
+- [x] Alle aantoonbaar volledig in Appsmith `main` opgenomen remote branches
+  op 21 oktober 2026 verwijderd. `main` blijft de actieve branch.
+- [ ] De twee nog niet gemergede Appsmith-branches
+  `codex/new-contacts-company-link` en
+  `codex/website-inbox-sync-20261021` inhoudelijk beoordelen. Ze bevatten nog
+  elk één unieke commit en zijn daarom bewust niet verwijderd.
+- [ ] De live WordPress-vacatures vanaf 22 oktober gecontroleerd in Supabase en
+  Appsmith opnemen. Per vacature het canonieke vacaturenummer gebruiken en de
+  gekoppelde taxonomieën/keuzelijsten expliciet bepalen; geen waarde bij twijfel
+  automatisch invullen.
 - [ ] Na Reisprofielen de resterende WordPress-, Supabase- en Appsmith-
   taxonomieën en keuzelijsten volgens dezelfde canonieke mapping afwerken.
 - [ ] Blogartikelen één voor één actualiseren, naar Beroepengids of Kennisbank
