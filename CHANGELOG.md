@@ -1,5 +1,33 @@
 # Changelog
 
+## 2026-10-21 — Volledige formulierdiagnostiek live in TFSC Form Bridge 0.5.1
+
+- TFSC Form Bridge `0.5.1` is live geïnstalleerd. De aparte tab
+  **Gereedschap > TFSC Form Bridge > Diagnostics** registreert voor elk actief
+  gekoppeld Elementor-formulier request-ID, formulierwaarden, IP/proxyketen,
+  volledige browser/clientcontext, formulierpagina, vorige pagina,
+  browsersessienavigatie, uploadmetadata, ruwe response, serveromgeving,
+  doorlooptijd en eventuele fatale PHP-foutdetails.
+- Bestandsdiagnostiek bevat veld-ID, bestandsnaam, extensie, browser-MIME,
+  server-gedetecteerde MIME, tijdelijk PHP-pad, grootte en PHP-uploadfoutcode.
+  Het document zelf wordt niet in de diagnostiektabel gekopieerd.
+- Succesvolle inzendingen zijn via hetzelfde request-ID te correleren met
+  submission-UUID, lokale outbox-ID en outboxstatus. Daardoor is de route van
+  browser naar WordPress-outbox en Supabase terug te volgen.
+- Authenticatiecookies, wachtwoorden, WordPress-nonces, CAPTCHA-tokens,
+  API-sleutels en secrets worden niet gelogd. De ingestelde bewaartermijn van
+  180 dagen en de functie **Log volledig leegmaken** blijven actief.
+- Een live synthetische fouttest met een PDF bewees IP, pagina/referrer,
+  navigatieroute, formulierwaarden, bestandsnaam/extensie/MIME/tmp-pad/bytes,
+  responsebody en alle versies. De test vond bovendien exact een fatale fout
+  in Elementor Pro `4.3.2`: `count(NULL)` in
+  `modules/forms/fields/upload.php:446`. Versie `0.5.1` legt ook de volledige
+  stacktrace van zo'n shutdownfout vast.
+- De testaanvragen maakten geen kandidaat, submission-UUID of outboxitem aan.
+  De plugin slaagt voor alle PHP- en JavaScript-syntaxcontroles en 113 lokale
+  assertions. Bron en documentatie staan in private repo `tfsc-crm-ats`, branch
+  `codex/wordpress-form-bridge`, commits `9f5e361` en `730f428`.
+
 ## 2026-10-21 — Legacy Elementor-uploadcode uit TFSC Custom Functions verwijderd
 
 - TFSC Custom Functions is van `0.1` naar `0.2.0` gebracht en live

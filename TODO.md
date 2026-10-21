@@ -13,6 +13,16 @@ blijft open staan, maar wordt niet eerst uitgevoerd.
 
 ### Besluiten 20–21 oktober — eerst alle formulieren afronden
 
+- [x] Volledige foutdiagnostiek live gezet in TFSC Form Bridge `0.5.1`.
+  Fouten vóór Elementor Submission of de CRM-outbox zijn in de plugin terug te
+  vinden met formulierwaarden, IP/proxyketen, browser/clientcontext,
+  pagina/referrer/navigatie, uploaddetails, response, serverversies,
+  doorlooptijd en fatale PHP-stacktrace. Request-ID, submission-UUID en
+  outbox-ID correleren dezelfde poging door de keten. Bewaartermijn staat op
+  180 dagen; handmatig volledig leegmaken blijft beschikbaar. Live
+  synthetisch getest zonder kandidaat of outboxitem aan te maken. Code:
+  `tfsc-crm-ats`, `codex/wordpress-form-bridge`, commits `9f5e361` en `730f428`.
+
 - [x] Productiepoort TFSC Form Bridge afgerond. Versie `0.4.1` staat LIVE,
   waarschuwt zichtbaar wanneer een gekoppelde `field_id` verdwijnt en koppelt
   een nieuwe ID nooit automatisch. Time-outs, rate limiting, definitieve
