@@ -1,5 +1,24 @@
 # Changelog
 
+## 2026-10-22 — Veilige response-only verwijdering in Website inbox
+
+- De Appsmith-actie heet nu `Delete responses` en opent vóór iedere
+  verwijdering een modal met de geselecteerde reacties, het aantal bijlagen en
+  de exacte verwijder- en behoudscope. De gebruiker kan annuleren of de hele
+  getoonde selectie bevestigen; er is geen onduidelijke veldselectie.
+- Nieuwe beperkte Supabase-functies maken eerst een server-side preview en
+  controleren vlak voor verwijderen opnieuw de inboxversie en document-ID's.
+  Alleen `web_form_submissions`, het bijbehorende inbox-work-item met historie
+  en niet-gedeelde bijlagen worden verwijderd.
+- Personen, kandidaten, contactgegevens, bedrijven, vacatures, sollicitaties,
+  activiteiten, andere CRM-data en gedeelde bijlagen worden door deze actie
+  nooit verwijderd. Daarmee werkt dezelfde route veilig voor losse, volledig
+  gekoppelde en gedeeltelijk gekoppelde reacties, ook met multiselect.
+- De databasefuncties zijn live toegepast en met twee gekoppelde reacties in
+  een teruggedraaide transactie getest. De live preview bevestigt voor beide
+  testselecties een veilige scope; er is geen echte reactie verwijderd.
+- Bron: `tfsc-crm-ats` commit `66221ba` en Appsmith `main` commit `5c7ce6c`.
+
 ## 2026-10-21 — Volledige formulierdiagnostiek live in TFSC Form Bridge 0.5.1
 
 - TFSC Form Bridge `0.5.1` is live geïnstalleerd. De aparte tab

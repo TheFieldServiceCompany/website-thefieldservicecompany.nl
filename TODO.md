@@ -405,15 +405,20 @@ geplaatst. Het robotsbeleid voor lege Beroepengids-archieven staat al vast.
 - [x] Appsmith toont de nieuwe contacten, kandidaten, bedrijven, vacatures,
   sollicitaties, documenten en verwerkingsstatussen zonder een tweede kopie
   van het CRM-model.
-- [x] Appsmith **Website inbox** kan volledig niet-gekoppelde website-reacties
-  nu rechtstreeks permanent verwijderen, zonder eerst een kandidaatprofiel te
-  maken. De databasefunctie weigert dit zodra de inzending een persoon,
-  kandidaat, bedrijf, bedrijfscontact, sollicitatie, activiteit of beheerd
-  document raakt. Volledig gekoppelde kandidaten blijven via de bestaande
-  harde kandidaatverwijdering lopen; gedeeltelijk gekoppelde gegevens blijven
-  bewust geblokkeerd. De live controle is alleen binnen een teruggedraaide
-  transactie uitgevoerd: er zijn geen records verwijderd. Code: `tfsc-crm-ats`
-  commit `a617418`; Appsmith `main` commit `ad57014`.
+- [x] Appsmith **Website inbox** heeft één veilige verwijderroute voor zowel
+  losse als gekoppelde website-reacties. `Delete responses` opent eerst een
+  modal met alle geselecteerde reacties, het aantal bijlagen en een expliciete
+  opsomming van wat wordt verwijderd en behouden. Alleen de binnengekomen
+  inzending, inboxstatus/-historie en uitsluitend niet-gedeelde bijlagen worden
+  verwijderd. Personen, kandidaten, contactgegevens, bedrijven, vacatures,
+  sollicitaties, activiteiten, overige CRM-data en gedeelde bijlagen blijven
+  altijd behouden. Multiselect wordt per reactie gecontroleerd; een gewijzigde
+  versie of documentscope blokkeert verwijderen tot de nieuwe opsomming
+  opnieuw is bevestigd. De databasefuncties zijn live toegepast en met twee
+  verschillende gekoppelde reacties in een teruggedraaide transactie getest;
+  daarbij bleven kandidaat-, persoon-, bedrijfs- en activiteitsrecords bestaan.
+  Er zijn geen live reacties verwijderd. Code: `tfsc-crm-ats` commit `66221ba`;
+  Appsmith `main` commit `5c7ce6c`.
 - [x] Registratie, advies, vraag, sollicitatie en werkgeverscontact zijn
   end-to-end getest. De AFI-routes voor deze formulieren zijn uitgeschakeld.
 - [x] TFSC Form Bridge `0.4.2` is LIVE en de productiepoort is groen. De
