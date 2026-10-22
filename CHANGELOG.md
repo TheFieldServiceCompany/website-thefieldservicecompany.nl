@@ -24,6 +24,12 @@
   leeg. Er is tijdens deze controle niets verwijderd.
 - Bron: `tfsc-crm-ats` commit `66221ba`; Appsmith `main` commits `5c7ce6c`,
   `cea5d55`, `c6bec7e` en `9d011fc`.
+- De contextuele terugnavigatie van **Website inbox** is hersteld volgens het
+  bestaande Appsmith-`nav_stack`-patroon. `Open profile` voegt nu de inbox als
+  herkomst toe; `Back` op Contact Detail keert daardoor terug naar Website
+  inbox in plaats van standaard naar Contacts. De editor en de gedeployde
+  productieversie zijn heen en terug getest met behoud van de 14 inboxregels;
+  de Appsmith-linter bleef leeg. Bron: Appsmith `main` commit `414b33a`.
 
 ## 2026-10-21 — Volledige formulierdiagnostiek live in TFSC Form Bridge 0.5.1
 

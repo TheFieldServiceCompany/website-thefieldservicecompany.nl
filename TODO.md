@@ -13,6 +13,11 @@ blijft open staan, maar wordt niet eerst uitgevoerd.
 
 ### Besluiten 20–21 oktober — eerst alle formulieren afronden
 
+- [x] Contextuele navigatie **Website inbox → Open profile → Back →
+  Website inbox** ingericht volgens het bestaande `nav_stack`-patroon en live
+  getest. Zonder herkenbare herkomst blijft Contact Detail terugvallen op
+  Contacts. Appsmith `main` commit `414b33a`.
+
 - [x] Volledige foutdiagnostiek live gezet in TFSC Form Bridge `0.5.1`.
   Fouten vóór Elementor Submission of de CRM-outbox zijn in de plugin terug te
   vinden met formulierwaarden, IP/proxyketen, browser/clientcontext,
