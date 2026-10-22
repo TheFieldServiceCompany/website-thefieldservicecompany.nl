@@ -17,7 +17,13 @@
 - De databasefuncties zijn live toegepast en met twee gekoppelde reacties in
   een teruggedraaide transactie getest. De live preview bevestigt voor beide
   testselecties een veilige scope; er is geen echte reactie verwijderd.
-- Bron: `tfsc-crm-ats` commit `66221ba` en Appsmith `main` commit `5c7ce6c`.
+- De definitieve Appsmith-multiselect is daarna LIVE gecontroleerd met twee
+  testreacties en twee bijlagen. De modal noemde beide reacties afzonderlijk,
+  somde de verwijder- en behoudscope correct op en kon veilig worden
+  geannuleerd. De tabel bleef op 14 records staan en de Appsmith-linter bleef
+  leeg. Er is tijdens deze controle niets verwijderd.
+- Bron: `tfsc-crm-ats` commit `66221ba`; Appsmith `main` commits `5c7ce6c`,
+  `cea5d55`, `c6bec7e` en `9d011fc`.
 
 ## 2026-10-21 — Volledige formulierdiagnostiek live in TFSC Form Bridge 0.5.1
 

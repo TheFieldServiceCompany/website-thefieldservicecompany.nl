@@ -417,8 +417,12 @@ geplaatst. Het robotsbeleid voor lege Beroepengids-archieven staat al vast.
   opnieuw is bevestigd. De databasefuncties zijn live toegepast en met twee
   verschillende gekoppelde reacties in een teruggedraaide transactie getest;
   daarbij bleven kandidaat-, persoon-, bedrijfs- en activiteitsrecords bestaan.
-  Er zijn geen live reacties verwijderd. Code: `tfsc-crm-ats` commit `66221ba`;
-  Appsmith `main` commit `5c7ce6c`.
+  De LIVE Appsmith-multiselect-preview is vervolgens met twee testreacties en
+  twee bijlagen gecontroleerd: beide reacties en de volledige verwijder- en
+  behoudscope stonden correct in de modal, annuleren liet alle 14 records
+  staan en de linter bleef leeg. Er zijn geen live reacties verwijderd. Code:
+  `tfsc-crm-ats` commit `66221ba`; Appsmith `main` commits `5c7ce6c`,
+  `cea5d55`, `c6bec7e` en `9d011fc`.
 - [x] Registratie, advies, vraag, sollicitatie en werkgeverscontact zijn
   end-to-end getest. De AFI-routes voor deze formulieren zijn uitgeschakeld.
 - [x] TFSC Form Bridge `0.4.2` is LIVE en de productiepoort is groen. De
