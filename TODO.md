@@ -1,6 +1,6 @@
 # Centrale TODO
 
-Laatst bijgewerkt: 21 oktober 2026
+Laatst bijgewerkt: 22 oktober 2026
 
 Dit is de centrale werklijst. Detailbesluiten en testresultaten blijven in de
 bestaande documenten onder `audits/`, `content/` en `functionality/` staan.
@@ -405,6 +405,15 @@ geplaatst. Het robotsbeleid voor lege Beroepengids-archieven staat al vast.
 - [x] Appsmith toont de nieuwe contacten, kandidaten, bedrijven, vacatures,
   sollicitaties, documenten en verwerkingsstatussen zonder een tweede kopie
   van het CRM-model.
+- [x] Appsmith **Website inbox** kan volledig niet-gekoppelde website-reacties
+  nu rechtstreeks permanent verwijderen, zonder eerst een kandidaatprofiel te
+  maken. De databasefunctie weigert dit zodra de inzending een persoon,
+  kandidaat, bedrijf, bedrijfscontact, sollicitatie, activiteit of beheerd
+  document raakt. Volledig gekoppelde kandidaten blijven via de bestaande
+  harde kandidaatverwijdering lopen; gedeeltelijk gekoppelde gegevens blijven
+  bewust geblokkeerd. De live controle is alleen binnen een teruggedraaide
+  transactie uitgevoerd: er zijn geen records verwijderd. Code: `tfsc-crm-ats`
+  commit `a617418`; Appsmith `main` commit `ad57014`.
 - [x] Registratie, advies, vraag, sollicitatie en werkgeverscontact zijn
   end-to-end getest. De AFI-routes voor deze formulieren zijn uitgeschakeld.
 - [x] TFSC Form Bridge `0.4.2` is LIVE en de productiepoort is groen. De
@@ -413,6 +422,12 @@ geplaatst. Het robotsbeleid voor lege Beroepengids-archieven staat al vast.
 
 ### Nog open
 
+- [ ] Onderzoeken waarom de website-reacties van de ochtend van 21 oktober niet
+  tijdig zijn opgemerkt. De Form Bridge-outbox toont meerdere regels met status
+  `review` naast afgeleverde regels. Per inzending WordPress-diagnostiek,
+  outboxstatus, Supabase-intake en zichtbaarheid/notificatie in Appsmith
+  **Website inbox** correleren. Niets verwijderen of opnieuw afleveren voordat
+  de afzonderlijke inzendingen zijn geïdentificeerd.
 - [x] Het abonnement/de licentie van Advanced Form Integration (AFI) is op
   21 oktober 2026 opgezegd; de vijf vervangen formulierkoppelingen waren
   technisch al uitgeschakeld.
