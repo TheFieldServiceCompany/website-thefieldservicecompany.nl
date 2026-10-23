@@ -22,6 +22,7 @@ uitgerold; gedateerde exports staan apart onder `wordpress/exports/code-snippets
 | Code Snippet 193 | Actief | SEO, robots, canonical, metadata en indexeringsbesluit voor combo- en filter-URL's | Snippet 186 en Rank Math |
 | Code Snippet 204 | Actief, versie 3.1 | Elementor-postqueries filteren via Pods-relaties zonder bestaande Elementor-filters te overschrijven | Pods, Elementor Query ID `relationship_posts` en taxonomieën van de gekozen Source |
 | Code Snippet 209 | Actief, versie 1.2 | Unieke Rank Math-title en description voor de twee hoofdarchieven en de zeven virtuele Beroepengids-basearchieven | Rank Math en queryvar `tfsc_taxonomy_archive` |
+| Nieuwe snippet, ID nog niet toegewezen | Repository-only | Laat single vacatures zonder handmatige SEO-description de centrale Rank Math-description gebruiken, ook wanneer een WordPress-excerpt bestaat | Rank Math en posttype `vacature` |
 | Code Snippet 215 | Actief, versie 1.2 | Beroepengids-basearchieven en de twee native opleidingstaxonomysitemaps aan de Rank Math-sitemapindex toevoegen | Rank Math Sitemap API |
 | `snip-tfsc` | Actief | Google Jobs/SNIP-locatieobjecten maken vanuit WordPress-locatietermen | SNIP Pro, taxonomie `locatie` en termmeta |
 | `tfsc-custom-functions` | Actief | Globale frontendaanpassingen, uploads als e-mailbijlage, styles en shortcodes | Elementor Pro, Rank Math en lokale assets |
@@ -29,6 +30,27 @@ uitgerold; gedateerde exports staan apart onder `wordpress/exports/code-snippets
 | Elementor Custom Code | Actief volgens export | Adviesknop, Clarity en EngageBay-tracking | Elementor DOM en externe trackingdiensten |
 
 ## Code Snippets
+
+### Nog niet toegewezen — centrale Rank Math-description voor vacatures
+
+`wordpress/snippets/php/tfsc-rank-math-central-vacature-description.php`
+corrigeert de description-prioriteit uitsluitend voor individuele vacatures.
+Rank Math 1.0.280 gebruikt intern eerst een handmatige SEO-description, daarna
+het opgeslagen WordPress-excerpt en pas daarna de centrale template uit
+**Titles & Meta**. Daardoor kon een vacature zonder handmatige SEO-description
+toch de centrale vacaturetemplate overslaan.
+
+De filter respecteert een werkelijk handmatig ingevulde Rank Math-description.
+Als die ontbreekt, leest hij de actuele centrale instelling
+`titles.pt_vacature_description` en laat hij Rank Math de variabelen vervangen.
+Er staat geen vacaturetekst hardcoded in de snippet.
+
+Op 23 oktober 2026 is gecontroleerd dat dit gedrag nog aanwezig is in de
+actuele Rank Math Free-versie 1.0.280 en op de `master`-branch. De snippet is
+in de repository vastgelegd, maar heeft nog geen WordPress Code Snippets-ID en
+is nog niet naar LIVE uitgerold. Na uitrol moeten minimaal de HTML
+`meta[name="description"]`, Open Graph/Twitter-fallbacks en LiteSpeed-cache
+worden gecontroleerd op een vacature met en zonder handmatige SEO-description.
 
 ### 100 — WordPress-linkzoeker voor taxonomietermen
 
