@@ -22,7 +22,6 @@ naar WordPress uitgerold.
 | Code Snippet 204 | Actief, versie 3.1 | Elementor-postqueries filteren via Pods-relaties zonder bestaande Elementor-filters te overschrijven | Pods, Elementor Query ID `relationship_posts` en taxonomieën van de gekozen Source |
 | Code Snippet 209 | Actief, versie 1.2 | Unieke Rank Math-title en description voor de twee hoofdarchieven en de zeven virtuele Beroepengids-basearchieven | Rank Math en queryvar `tfsc_taxonomy_archive` |
 | Code Snippet 215 | Actief, versie 1.2 | Beroepengids-basearchieven en de twee native opleidingstaxonomysitemaps aan de Rank Math-sitemapindex toevoegen | Rank Math Sitemap API |
-| Code Snippet 234 | Alleen repository; nog niet uitgerold | Unieke Rank Math-description voor single vacatures met handmatige override, excerpt en veilige fallback | Rank Math, CPT `vacature` en taxonomie `locatie` |
 | `snip-tfsc` | Actief | Google Jobs/SNIP-locatieobjecten maken vanuit WordPress-locatietermen | SNIP Pro, taxonomie `locatie` en termmeta |
 | `tfsc-custom-functions` | Actief | Globale frontendaanpassingen, uploads als e-mailbijlage, styles en shortcodes | Elementor Pro, Rank Math en lokale assets |
 | `tfsc-schema-read-endpoint` | Actief | Alleen-lezen inventaris van posttypes, taxonomieën, termen en Pods | REST-authenticatie en Pods |
@@ -188,20 +187,6 @@ De twee sitemap-URL's staan in de index. De directe XML-generatie van de
 term-URL's wacht nog op de definitieve Rank Math-instelling **lege termen
 opnemen** voor beide taxonomieën; dit is als open controlepunt vastgelegd en
 wordt niet als afgerond gemeld.
-
-### 234 — Rank Math-description voor single vacatures
-
-`snippets/php/234-rank-math-single-vacancy-description.php` is een strikt
-afgebakende fallback voor publieke single berichten van het CPT `vacature`.
-Een handmatig ingevulde Rank Math-description blijft leidend. Zonder handmatige
-waarde gebruikt de snippet de WordPress-samenvatting/excerpt; alleen wanneer ook
-die ontbreekt, wordt een compacte tekst opgebouwd uit de vacaturetitel en de
-meest specifieke gekoppelde locatieterm.
-
-Dezelfde description wordt gebruikt voor Open Graph en Twitter/X. De snippet
-wijzigt geen SEO-title, canonical, robots, schema, vacaturearchieven of zichtbare
-Elementor-inhoud. Het bestand staat uitsluitend in de repository en is nog niet
-naar LIVE uitgerold of daar functioneel getest.
 
 ### 148, 186 en 193 — vacature-comboarchieven en sitemap
 
