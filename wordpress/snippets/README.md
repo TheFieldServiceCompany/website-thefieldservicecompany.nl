@@ -20,6 +20,8 @@ uitgerold; gedateerde exports staan apart onder `wordpress/exports/code-snippets
 | Code Snippet 148 | Actief | Custom Rank Math-sitemaps voor indexeerbare vacaturecombinaties | Snippets 186 en 193, Rank Math |
 | Code Snippet 186 | Actief | Virtuele vacature-comboarchieven, rewrites, queries, paginering en Search & Filter-synchronisatie | WordPress, Elementor Pro en Search & Filter Query 1 |
 | Code Snippet 193 | Actief | SEO, robots, canonical, metadata en indexeringsbesluit voor combo- en filter-URL's | Snippet 186 en Rank Math |
+| Code Snippet 202 | LIVE actief in oudere versie; CPT-correctie repository-only | Centrale Pods-velden voor CPT- en taxonomy-base-archieven | Pods Settings Pod en actuele archivecontext |
+| Code Snippet 203 | LIVE actief, versie 6.0; opvolger 6.1 repository-only | Generieke dynamische tekst en Pods-velden, ook per Elementor-loopitem | Pods, WordPress-loopcontext en Elementor |
 | Code Snippet 204 | Actief, versie 3.1 | Elementor-postqueries filteren via Pods-relaties zonder bestaande Elementor-filters te overschrijven | Pods, Elementor Query ID `relationship_posts` en taxonomieën van de gekozen Source |
 | Code Snippet 209 | Actief, versie 1.2 | Unieke Rank Math-title en description voor de twee hoofdarchieven en de zeven virtuele Beroepengids-basearchieven | Rank Math en queryvar `tfsc_taxonomy_archive` |
 | Nieuwe snippet, ID nog niet toegewezen | Repository-only | Laat single vacatures zonder handmatige SEO-description de centrale Rank Math-description gebruiken, ook wanneer een WordPress-excerpt bestaat | Rank Math en posttype `vacature` |
@@ -51,6 +53,42 @@ in de repository vastgelegd, maar heeft nog geen WordPress Code Snippets-ID en
 is nog niet naar LIVE uitgerold. Na uitrol moeten minimaal de HTML
 `meta[name="description"]`, Open Graph/Twitter-fallbacks en LiteSpeed-cache
 worden gecontroleerd op een vacature met en zonder handmatige SEO-description.
+
+### 202 en 203 — generieke Kennisbank- en Beroepengidsvelden
+
+Op 23 oktober 2026 is vastgesteld dat `/kennisbank/` en
+`/beroepengids/artikelen/` dezelfde Elementor Loop Item-template 26275
+gebruiken. De samenvatting zit in widget `22b4fdc2`. Het Pods-veld
+`introduction` bestaat voor beide CPT's. Bij Kennisbankartikel 27737 is het
+veld gevuld, maar de tekst werd in de loop niet uitgevoerd. Kennisbankartikel
+27766 heeft daadwerkelijk een lege `introduction`; die kaart hoort daarom
+zonder samenvatting te blijven totdat het veld redactioneel is ingevuld.
+
+In de actieve export van snippet 203 versie 6.0 vroeg
+`tfsc_text_context_post_id()` eerst de gedeelde helper uit snippet 189 op.
+Die helper bewaart zijn eerste gevonden post-ID statisch. In een Elementor-loop
+kan daardoor de eerste kaart als context voor alle volgende kaarten worden
+hergebruikt. Versie 6.1 in
+`wordpress/snippets/php/203-shortcode-dynamic-text-v6-1.php` gebruikt daarom
+eerst `get_the_ID()` van het huidige loopitem. Alleen wanneer de huidige post
+een Elementor-template is, worden de bestaande Theme Builder-previewhelpers
+als fallback gebruikt. De shortcode `[tfsc_pods field="introduction"]` blijft
+daarmee generiek en leest per kaart zowel `beroepengids` als
+`kennisbankartikel` uit, zonder een CPT hard te coderen.
+
+Daarnaast gebruikte de centrale mapping in snippet 202 ten onrechte de CPT-key
+`kennisbankartikelen`. De werkelijk geregistreerde CPT heet
+`kennisbankartikel`. De beheerde repositoryversie gebruikt nu de juiste
+enkelvoudige key, zodat ook Kennisbank-hoofd- en subarchieven de centrale
+archivecontext `kennisbankartikel` kunnen bepalen.
+
+Deze twee correcties staan alleen in GitHub en zijn nog niet naar LIVE
+uitgerold. Voor uitrol moet in Elementor worden bevestigd dat widget
+`22b4fdc2` de generieke shortcode gebruikt. Als de widget rechtstreeks een
+Pods Dynamic Tag bevat die aan posttype `beroepengids` is gebonden, moet alleen
+die widget worden omgezet naar `[tfsc_pods field="introduction"]`. Daarna moet
+worden getest met minimaal één gevulde en één lege introduction in beide CPT's
+en op een Kennisbank-subarchief.
 
 ### 100 — WordPress-linkzoeker voor taxonomietermen
 
