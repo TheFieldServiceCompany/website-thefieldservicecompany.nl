@@ -42,7 +42,7 @@
  * Voor kennisbank:
  *
  * WordPress CPT:
- * kennisbankartikelen
+ * kennisbankartikel
  *
  * Archive context:
  * kennisbankartikel
@@ -251,13 +251,13 @@ function tfsc_archive_settings_config() {
          * Kennisbank.
          *
          * CPT:
-         * kennisbankartikelen
+         * kennisbankartikel
          *
          * Archive context:
          * kennisbankartikel
          */
 
-        'kennisbankartikelen' => [
+        'kennisbankartikel' => [
             'context' => 'kennisbankartikel',
         ],
 
