@@ -20,8 +20,8 @@ uitgerold; gedateerde exports staan apart onder `wordpress/exports/code-snippets
 | Code Snippet 148 | Actief | Custom Rank Math-sitemaps voor indexeerbare vacaturecombinaties | Snippets 186 en 193, Rank Math |
 | Code Snippet 186 | Actief | Virtuele vacature-comboarchieven, rewrites, queries, paginering en Search & Filter-synchronisatie | WordPress, Elementor Pro en Search & Filter Query 1 |
 | Code Snippet 193 | Actief | SEO, robots, canonical, metadata en indexeringsbesluit voor combo- en filter-URL's | Snippet 186 en Rank Math |
-| Code Snippet 202 | LIVE actief in oudere versie; CPT-correctie repository-only | Centrale Pods-velden voor CPT- en taxonomy-base-archieven | Pods Settings Pod en actuele archivecontext |
-| Code Snippet 203 | LIVE actief, versie 6.0; opvolger 6.1 repository-only | Generieke dynamische tekst en Pods-velden, ook per Elementor-loopitem | Pods, WordPress-loopcontext en Elementor |
+| Code Snippet 202 | LIVE actief, versie 6.3 met CPT-correctie | Centrale Pods-velden voor CPT- en taxonomy-base-archieven | Pods Settings Pod en actuele archivecontext |
+| Code Snippet 203 | LIVE actief, versie 6.1 | Generieke dynamische tekst en Pods-velden, ook per Elementor-loopitem | Pods, WordPress-loopcontext en Elementor |
 | Code Snippet 204 | Actief, versie 3.1 | Elementor-postqueries filteren via Pods-relaties zonder bestaande Elementor-filters te overschrijven | Pods, Elementor Query ID `relationship_posts` en taxonomieën van de gekozen Source |
 | Code Snippet 209 | Actief, versie 1.2 | Unieke Rank Math-title en description voor de twee hoofdarchieven en de zeven virtuele Beroepengids-basearchieven | Rank Math en queryvar `tfsc_taxonomy_archive` |
 | Nieuwe snippet, ID nog niet toegewezen | Repository-only | Laat single vacatures zonder handmatige SEO-description de centrale Rank Math-description gebruiken, ook wanneer een WordPress-excerpt bestaat | Rank Math en posttype `vacature` |
@@ -82,13 +82,22 @@ Daarnaast gebruikte de centrale mapping in snippet 202 ten onrechte de CPT-key
 enkelvoudige key, zodat ook Kennisbank-hoofd- en subarchieven de centrale
 archivecontext `kennisbankartikel` kunnen bepalen.
 
-Deze twee correcties staan alleen in GitHub en zijn nog niet naar LIVE
-uitgerold. Voor uitrol moet in Elementor worden bevestigd dat widget
-`22b4fdc2` de generieke shortcode gebruikt. Als de widget rechtstreeks een
-Pods Dynamic Tag bevat die aan posttype `beroepengids` is gebonden, moet alleen
-die widget worden omgezet naar `[tfsc_pods field="introduction"]`. Daarna moet
-worden getest met minimaal één gevulde en één lege introduction in beide CPT's
-en op een Kennisbank-subarchief.
+Beide correcties zijn op 23 oktober 2026 naar LIVE uitgerold. Snippet 202 is
+actief als versie 6.3 met de enkelvoudige CPT-key en snippet 203 is actief als
+versie 6.1 met loopitemcontext vóór de gecachete fallback. De publieke HTML van
+`/kennisbank/` toont sindsdien de gevulde introduction van artikel 27737;
+artikel 27766 blijft terecht leeg. `/beroepengids/artikelen/` blijft per kaart
+de eigen introduction tonen.
+
+In Elementor Loop Item-template 26275 is op dezelfde datum Custom CSS op het
+hoofdelement `14197fb9` gepubliceerd. Op desktop krijgen kaarten en hun
+inhoudsgebied gelijke hoogte, titels maximaal drie regels, introductions
+maximaal vier regels en blijven de knoppen onderaan uitgelijnd. Onder 768 px
+worden de clamps en minimumhoogtes uitgeschakeld zodat mobiel de natuurlijke
+teksthoogte gebruikt. LIVE is gecontroleerd met een gevulde en lege
+Kennisbank-introduction en vier Beroepengidskaarten; de kaart- en knophoogtes
+waren gelijk. Daarna is uitsluitend de gegenereerde LiteSpeed-paginacache
+geleegd en is de publieke, opnieuw opgebouwde cache anoniem gecontroleerd.
 
 ### 100 — WordPress-linkzoeker voor taxonomietermen
 
