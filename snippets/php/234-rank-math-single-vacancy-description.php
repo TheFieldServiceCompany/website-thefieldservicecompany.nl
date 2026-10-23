@@ -93,12 +93,16 @@ function tfsc_single_vacancy_description( $current = '' ) {
     /**
      * Redactionele Rank Math-invoer heeft altijd voorrang op automatisering.
      */
-    $manual = tfsc_single_vacancy_clean_description(
-        get_post_meta( $post_id, 'rank_math_description', true )
+    $manual = trim(
+        (string) get_post_meta( $post_id, 'rank_math_description', true )
     );
 
     if ( '' !== $manual ) {
-        return $manual;
+        /**
+         * Gebruik de al door Rank Math verwerkte waarde, zodat variabelen als
+         * %title% en %customfield(...)% blijven werken.
+         */
+        return $current;
     }
 
     /**
