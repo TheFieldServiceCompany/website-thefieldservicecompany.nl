@@ -202,13 +202,32 @@ vacatures bleven staan.
 
 ### 9 — ALT en title voor uitgelichte afbeelding
 
-Alleen op een enkel bericht wordt gecontroleerd of de geladen afbeelding de
-uitgelichte afbeelding is. In dat geval worden het ALT- en HTML-title-attribuut
-vervangen door de titel van het huidige bericht.
+Versie 2.0 staat sinds 26 oktober 2026 live in Code Snippets ID 9, actief
+met locatie `Overal uitvoeren`. De bron staat in
+`php/9-featured-image-alt-title.php`.
 
-Dit is een generieke fallback. Bij een latere toegankelijkheidscontrole moet
-worden besloten of een redactionele ALT-tekst voor sommige afbeeldingen beter
-is dan automatisch de berichttitel.
+Op afzonderlijke berichten, pagina's en custom post types worden uitsluitend
+bij de featured image van het huidige bericht de ALT en HTML-title vervangen
+door de berichttitel. Er is geen selectie op taxonomie of posttype;
+archiefpagina's en andere afbeeldingen worden overgeslagen. De mediabibliotheek
+wordt niet bijgewerkt.
+
+De WordPress-filter `wp_get_attachment_image_attributes` blijft de basis.
+Daarnaast verwerkt `elementor/image_size/get_attachment_image_html` de
+afbeeldingsuitvoer van Elementor, ook bij resolutie `Custom`. Elementor
+omzeilt bij Custom de normale WordPress-afbeeldingsfunctie. Beide routes
+controleren het attachment-ID van de huidige featured image. De Elementor-route
+gebruikt de WordPress HTML API (WordPress 6.2+) om alleen de attributen op het
+afbeeldingselement te wijzigen en bestaande bronnen en lay-out te behouden.
+Titels worden eenmaal naar gewone tekst gedecodeerd voordat de HTML API de
+attributen veilig encodeert.
+
+Validatie: PHP-syntaxcontrole en 31 regressiecontroles met de echte WordPress
+HTML API en de officiële Elementor-afbeeldingsrenderer, inclusief Full,
+Custom, andere afbeeldingen, archiefcontext, lege waarden en speciale tekens.
+Live gecontroleerd op de Duikboten-vacature en het AI-kennisbankartikel;
+beide gebruiken de huidige berichttitel. De vacaturetemplate bleef op Full;
+Custom is lokaal via de daadwerkelijke Elementor-renderer getest.
 
 ### 99 — Rank Math-breadcrumbs voor combinatiearchieven
 
