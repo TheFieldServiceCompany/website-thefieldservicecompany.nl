@@ -1,0 +1,363 @@
+{
+  "audit_date": "2026-10-25",
+  "site": "https://thefieldservicecompany.nl",
+  "scope": "Public website HTTP responses and browser observations; no form submission. No private analytics or customer data.",
+  "repository_baseline": "8d4f8f499cbb18e0b2c8cb76e43b97248f27e94f",
+  "pages": [
+    {
+      "url": "https://thefieldservicecompany.nl/",
+      "html_sha256": "f74aa9d2e20d8a427e37b250e18b2de5f521bd7b0cdb3a5cd032a6a8a5a77d01",
+      "html_bytes": 198794,
+      "title": "The Field Service Company: Field Service Engineer Vacatures",
+      "meta_descriptions": [
+        "The Field Service Company biedt de mooiste field service engineer vacatures. Vindt jouw droombaan als field service engineer!"
+      ],
+      "robots": [
+        "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      ],
+      "canonicals": [
+        "https://thefieldservicecompany.nl/"
+      ],
+      "h1": [
+        "Field service engineer vacatures"
+      ],
+      "script_src_elements_including_data_urls": 27,
+      "stylesheet_links": 24,
+      "http_status_lines": [
+        "HTTP/2 200 "
+      ],
+      "response_date": [
+        "Sun, 25 Oct 2026 19:57:13 GMT"
+      ]
+    },
+    {
+      "url": "https://thefieldservicecompany.nl/vacature/field-service-engineer-hvac-koeltechniek-internationaal-allround/",
+      "html_sha256": "e6fe716f809e904fd52ac052d14ed811c817929bdf74166ebe7ada6676c302f2",
+      "html_bytes": 277931,
+      "title": "Field Service Engineer HVAC Koeltechniek | Internationaal Allround ~ TheFieldServiceCompany",
+      "meta_descriptions": [
+        "Field Service Engineer HVAC Koeltechniek | Internationaal Allround • 2026 • Durf jij verantwoordelijkheid te dragen voor installaties waarvan de bemanning van onderzeeboten en marineschepen afhankelijk is?",
+        "Durf jij verantwoordelijkheid te dragen voor installaties waarvan de bemanning van onderzeeboten en marineschepen afhankelijk is?"
+      ],
+      "robots": [
+        "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      ],
+      "canonicals": [
+        "https://thefieldservicecompany.nl/vacature/field-service-engineer-hvac-koeltechniek-internationaal-allround/"
+      ],
+      "h1": [
+        "Field Service Engineer HVAC Koeltechniek | Internationaal Allround"
+      ],
+      "script_src_elements_including_data_urls": 30,
+      "stylesheet_links": 25,
+      "http_status_lines": [
+        "HTTP/2 200 "
+      ],
+      "response_date": [
+        "Sun, 25 Oct 2026 19:57:12 GMT"
+      ],
+      "job": {
+        "identifier": "358",
+        "datePosted": "2026-07-28",
+        "title": "Field Service Engineer HVAC Koeltechniek | Internationaal Allround",
+        "employmentType": "FULL_TIME",
+        "baseSalary": {
+          "value": {
+            "minValue": "3500.00",
+            "maxValue": "5300.00",
+            "unitText": "MONTH",
+            "@context": "http://schema.org",
+            "@type": "QuantitativeValue"
+          },
+          "@context": "http://schema.org",
+          "@type": "MonetaryAmount"
+        },
+        "hiringOrganization": {
+          "logo": "https://thefieldservicecompany.nl/wp-content/uploads/company-id/logo-thefieldservicecompany-tfsc-800x800.png",
+          "name": "The Field Service Company",
+          "address": {
+            "addressLocality": "Rotterdam",
+            "streetAddress": "Willemskade 13",
+            "addressCountry": "NL",
+            "postalCode": "3016DK",
+            "addressRegion": "NL-ZH",
+            "@context": "http://schema.org",
+            "@type": "PostalAddress"
+          },
+          "@context": "http://schema.org",
+          "@type": "Organization"
+        },
+        "experienceRequirements": {
+          "monthsOfExperience": "12",
+          "@context": "http://schema.org",
+          "@type": "OccupationalExperienceRequirements"
+        },
+        "job_location_count": 46
+      }
+    },
+    {
+      "url": "https://thefieldservicecompany.nl/vacature/service-monteur-mechanisch-benelux-separatoren-decanters/",
+      "html_sha256": "8eccd5468fdc7dc3005f38f4788962db7bb7eefa91d05fddbb469727176ab7a8",
+      "html_bytes": 254416,
+      "title": "Service Monteur Mechanisch Benelux | Separatoren & Decanters ~ TheFieldServiceCompany",
+      "meta_descriptions": [
+        "Hou jij van sleutelen aan machines waar echte uitdaging in zit, voor een bedrijf wat geeft om hun mensen en collega’s die altijd voor je klaar staan?",
+        "Hou jij van sleutelen aan machines waar echte uitdaging in zit, voor een bedrijf wat geeft om hun mensen en collega’s die altijd voor je klaar staan?"
+      ],
+      "robots": [
+        "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      ],
+      "canonicals": [
+        "https://thefieldservicecompany.nl/vacature/service-monteur-mechanisch-benelux-separatoren-decanters/"
+      ],
+      "h1": [
+        "Service Monteur Mechanisch Benelux | Separatoren & Decanters"
+      ],
+      "script_src_elements_including_data_urls": 30,
+      "stylesheet_links": 25,
+      "http_status_lines": [
+        "HTTP/2 200 "
+      ],
+      "response_date": [
+        "Sun, 25 Oct 2026 19:57:12 GMT"
+      ],
+      "job": {
+        "identifier": "359",
+        "datePosted": "2026-09-28",
+        "title": "Service Monteur Mechanisch Benelux | Separatoren &amp; Decanters",
+        "employmentType": "FULL_TIME",
+        "baseSalary": {
+          "value": {
+            "minValue": "3000.00",
+            "maxValue": "4100.00",
+            "unitText": "MONTH",
+            "@context": "http://schema.org",
+            "@type": "QuantitativeValue"
+          },
+          "@context": "http://schema.org",
+          "@type": "MonetaryAmount"
+        },
+        "hiringOrganization": {
+          "logo": "https://thefieldservicecompany.nl/wp-content/uploads/company-id/logo-thefieldservicecompany-tfsc-800x800.png",
+          "name": "The Field Service Company",
+          "address": {
+            "addressLocality": "Rotterdam",
+            "streetAddress": "Willemskade 13",
+            "addressCountry": "NL",
+            "postalCode": "3016DK",
+            "addressRegion": "NL-ZH",
+            "@context": "http://schema.org",
+            "@type": "PostalAddress"
+          },
+          "@context": "http://schema.org",
+          "@type": "Organization"
+        },
+        "experienceRequirements": {
+          "monthsOfExperience": "12",
+          "@context": "http://schema.org",
+          "@type": "OccupationalExperienceRequirements"
+        },
+        "job_location_count": 30
+      }
+    },
+    {
+      "url": "https://thefieldservicecompany.nl/vacatures/?_functienaam=field-service-engineer&~1",
+      "html_sha256": "977342413aec16db0e42dcd67efe99fd519ccfc4d8c420cf2d5939534a353300",
+      "html_bytes": 319702,
+      "title": "Vacatures ~ TheFieldServiceCompany",
+      "meta_descriptions": [
+        "Vacatures Archive • The Field Service Company"
+      ],
+      "robots": [
+        "follow, noindex"
+      ],
+      "canonicals": [],
+      "h1": [
+        "Vacatures"
+      ],
+      "script_src_elements_including_data_urls": 36,
+      "stylesheet_links": 26,
+      "http_status_lines": [
+        "HTTP/2 200 "
+      ],
+      "response_date": [
+        "Sun, 25 Oct 2026 19:57:13 GMT"
+      ]
+    },
+    {
+      "url": "https://thefieldservicecompany.nl/vacatures/functienaam/field-service-engineer/kennisgebied/elektrotechniek/",
+      "html_sha256": "825d01411ec3d83e649f7a2f7921f5134fa4460d9a50c853a74a757b4b645246",
+      "html_bytes": 334649,
+      "title": "Field Service Engineer vacatures Elektrotechniek",
+      "meta_descriptions": [
+        "Field Service Engineer vacatures Elektrotechniek bij The Field Service Company."
+      ],
+      "robots": [
+        "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      ],
+      "canonicals": [
+        "https://thefieldservicecompany.nl/vacatures/functienaam/field-service-engineer/kennisgebied/elektrotechniek/"
+      ],
+      "h1": [
+        "Field Service Engineer vacatures Elektrotechniek"
+      ],
+      "script_src_elements_including_data_urls": 38,
+      "stylesheet_links": 26,
+      "http_status_lines": [
+        "HTTP/2 200 "
+      ],
+      "response_date": [
+        "Sun, 25 Oct 2026 19:58:10 GMT"
+      ]
+    },
+    {
+      "url": "https://thefieldservicecompany.nl/vacatures/locatie/nederland/zuid-holland/rotterdam/",
+      "html_sha256": "38d10848ff5b745260a29ea152de3aa15d2823c74b4e9907ee2453a385844f51",
+      "html_bytes": 333877,
+      "title": "Field Service vacatures Rotterdam",
+      "meta_descriptions": [
+        "Field Service vacatures Rotterdam bij The Field Service Company."
+      ],
+      "robots": [
+        "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      ],
+      "canonicals": [
+        "https://thefieldservicecompany.nl/vacatures/locatie/nederland/zuid-holland/rotterdam/"
+      ],
+      "h1": [
+        "Field service vacatures in Rotterdam: innovatieve machinebouw tussen de hijskranen en de zware havenmechanica"
+      ],
+      "script_src_elements_including_data_urls": 38,
+      "stylesheet_links": 26,
+      "http_status_lines": [
+        "HTTP/2 200 "
+      ],
+      "response_date": [
+        "Sun, 25 Oct 2026 19:58:11 GMT"
+      ],
+      "first_page_vacancy_titles": [
+        "Field Service Engineer HVAC Koeltechniek | Internationaal Allround",
+        "Field Service Engineer Duikboten | Internationaal Allround",
+        "Service Monteur Mechanisch Benelux | Separatoren & Decanters",
+        "Site Supervisor Internationaal Green Energy Biogas CO2",
+        "Service Monteur Zonnepanelen Inspectie B2B",
+        "Field Service Engineer Benelux",
+        "Field Service Engineer Australië",
+        "Field Service Engineer Verpakkingsmachines",
+        "Service Engineer Mechanisch Elektrisch"
+      ]
+    },
+    {
+      "url": "https://thefieldservicecompany.nl/bedrijfssector/maritiem/",
+      "html_sha256": "2defad71c9c20fafc7be5f1821e60399862cef7ea92a80f1ee958aa2701a71ca",
+      "html_bytes": 332325,
+      "title": "Field Service Vacatures in Maritiem ~ TheFieldServiceCompany",
+      "meta_descriptions": [
+        "Field Service Vacatures in Maritiem ~ Vast in dienst bij prachtige werkgevers • Bedrijfssector Maritiem • Service • Commissioning • Onderhoud • Repair"
+      ],
+      "robots": [
+        "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      ],
+      "canonicals": [
+        "https://thefieldservicecompany.nl/vacatures/functienaam/field-service-engineer/bedrijfssector/maritiem/"
+      ],
+      "h1": [
+        "Field service vacatures in de maritieme sector: techniek die meevaart met het schip"
+      ],
+      "script_src_elements_including_data_urls": 38,
+      "stylesheet_links": 26,
+      "http_status_lines": [
+        "HTTP/2 200 "
+      ],
+      "response_date": [
+        "Sun, 25 Oct 2026 19:58:10 GMT"
+      ],
+      "first_page_vacancy_titles": [
+        "Field Service Engineer HVAC Koeltechniek | Internationaal Allround",
+        "Field Service Engineer Duikboten | Internationaal Allround",
+        "Service Engineer Aandrijftechniek Elektrotechniek",
+        "Field Service Engineer",
+        "Inbedrijfsteller Offshore Kranen",
+        "Service Engineer Elektrotechniek",
+        "Service Engineer Offshore Kranen Internationaal",
+        "Service Engineer Maritiem Offshore Internationaal",
+        "Commissioning Engineer Offshore"
+      ]
+    },
+    {
+      "url": "https://thefieldservicecompany.nl/vacatures/functienaam/field-service-engineer/bedrijfssector/maritiem/",
+      "html_sha256": "87f1671cc91a548e461dea4a623580516c7b316264ab7539c75c5affee45587d",
+      "html_bytes": 311742,
+      "title": "Field Service Engineer vacatures Maritiem",
+      "meta_descriptions": [
+        "Field Service Engineer vacatures Maritiem bij The Field Service Company."
+      ],
+      "robots": [
+        "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+      ],
+      "canonicals": [
+        "https://thefieldservicecompany.nl/vacatures/functienaam/field-service-engineer/bedrijfssector/maritiem/"
+      ],
+      "h1": [
+        "Field Service Engineer vacatures Maritiem"
+      ],
+      "script_src_elements_including_data_urls": 38,
+      "stylesheet_links": 26,
+      "first_page_vacancy_titles": [
+        "Field Service Engineer HVAC Koeltechniek | Internationaal Allround",
+        "Field Service Engineer Duikboten | Internationaal Allround",
+        "Service Engineer Aandrijftechniek Elektrotechniek",
+        "Field Service Engineer",
+        "Internationaal Service Engineer Offshore Maritiem"
+      ]
+    }
+  ],
+  "sitemaps": [
+    {
+      "url": "https://thefieldservicecompany.nl/combo-vacatures-sitemap1.xml",
+      "page_url_count_excluding_image_locations": 501
+    },
+    {
+      "url": "https://thefieldservicecompany.nl/combo-vacatures-sitemap2.xml",
+      "page_url_count_excluding_image_locations": 433
+    },
+    {
+      "url": "https://thefieldservicecompany.nl/page-sitemap.xml",
+      "page_url_count_excluding_image_locations": 20
+    },
+    {
+      "url": "https://thefieldservicecompany.nl/vacature-sitemap.xml",
+      "page_url_count_excluding_image_locations": 64
+    }
+  ],
+  "combo_unique_url_count": 934,
+  "combo_urls_with_exactly_two_taxonomies": 934,
+  "browser_observations": {
+    "application_flow": {
+      "vacancy_358_and_359": "Visible labels were Vacature: 358 / Vacature: 359. Clicking the application CTA produced empty vacaturenummer and contractvorm URL parameters.",
+      "first_form_hidden_vacancy_number": "empty",
+      "vacancy_359_title_parameter": "Unescaped ampersand in Separatoren & Decanters.",
+      "submission_tested": false
+    },
+    "source_code_observation": "Public embedded application JavaScript searches for the literal prefix Vacaturenummer: and constructs URLs by string concatenation. Advice JavaScript also searches for Vacaturenummer:.",
+    "primary_homepage_cta": {
+      "text": "Maak vrijblijvend kennis",
+      "foreground": "rgb(255, 255, 255)",
+      "background": "rgb(232, 117, 0)",
+      "font_size_px": 16,
+      "font_weight": 700,
+      "contrast_ratio": 3.010460532434106
+    },
+    "filter_interaction": "Selecting Field Service Engineer returned results and an active-filter chip. Browser head retained initial base robots/canonical after AJAX; direct HTTP response is recorded separately.",
+    "employer_popup": "Opened successfully; no submission made.",
+    "review_score": "Current browser-rendered sample vacancies showed 4.9; older crawler extract 4.6 was not treated as a current defect."
+  },
+  "not_measured": [
+    "Core Web Vitals field data",
+    "Complete mobile device testing",
+    "Complete WCAG conformance",
+    "Server log bot classification",
+    "Form delivery and CRM linking after submission",
+    "Google selected canonical"
+  ]
+}
