@@ -1,0 +1,14 @@
+/* TFSC Custom Functions — goedgekeurde wijziging 2026-10-30.
+ * Voeg font-size:19px toe aan het BESTAANDE blok in
+ * tfsc-custom-stylesheet.css voor onderstaande selectors.
+ * Dit bestand documenteert de gerichte wijziging; geen aparte snippet nodig.
+ * Behoud de globale .elementor-button-regel (16px, font-weight:700).
+ * Alleen knoppen met button-orange-white-3d worden groter.
+ * Live status: nog NIET geplaatst; website-DNS niet bereikbaar vanuit Codex.
+ * Na plaatsing: CSS-cache purgen en lange teksten op mobiel controleren.
+ * Terugdraaien: verwijder font-size:19px uit het bestaande oranje blok.
+ */
+.button-orange-white-3d a,
+.button-orange-white-3d a:visited {
+    font-size: 19px;
+}
