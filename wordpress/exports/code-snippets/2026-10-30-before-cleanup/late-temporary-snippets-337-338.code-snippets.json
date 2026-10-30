@@ -1,0 +1,64 @@
+{
+  "generator": "Code Snippets",
+  "date_created": "2026-10-30",
+  "snippets": [
+    {
+      "id": 337,
+      "name": "TFSC temporary taxonomy image inspection",
+      "desc": "",
+      "code": "add_action('rest_api_init', function () {\n    register_rest_route('tfsc-priority-check/v1', '/term', [\n        'methods'=>'GET',\n        'permission_callback'=>function () { return current_user_can('manage_options'); },\n        'callback'=>function () {\n            $term=get_term(701,'beroep_functienaam');\n            if (is_wp_error($term)) { return $term; }\n            $raw=get_term_meta(701,'archive_featured_image',true);\n            $pod=function_exists('pods')?pods('beroep_functienaam',701):null;\n            $value=$pod?$pod->field('archive_featured_image'):null;\n            $summarize=function ($value) {\n                if (is_scalar($value) || null===$value) { return $value; }\n                if (is_array($value)) {\n                    return ['keys'=>array_keys($value),'ID'=>$value['ID']??null,'id'=>$value['id']??null,\n                        'first_ID'=>is_array($value[0]??null)?($value[0]['ID']??$value[0]['id']??null):($value[0]??null)];\n                }\n                return ['type'=>gettype($value)];\n            };\n            return rest_ensure_response(['term_id'=>701,'taxonomy'=>$term->taxonomy,'raw'=>$summarize($raw),'pods'=>$summarize($value)]);\n        },\n    ]);\n});",
+      "tags": [],
+      "scope": "global",
+      "condition_id": 0,
+      "active": false,
+      "trashed": true,
+      "locked": false,
+      "priority": 10,
+      "network": false,
+      "shared_network": false,
+      "modified": "2026-10-30T19:25:58+00:00",
+      "last_active": "1793388358",
+      "code_error": null,
+      "code_error_trace": null,
+      "created_by": {
+        "id": 18,
+        "display_name": "codex-rest-audit",
+        "avatar_url": "https://secure.gravatar.com/avatar/e51ee25a64a1c1fab7af4226900a7f9846aca59d4540e1186b03cea3ff20ef3e?s=32&d=mm&r=g"
+      },
+      "updated_by": {
+        "id": 18,
+        "display_name": "codex-rest-audit",
+        "avatar_url": "https://secure.gravatar.com/avatar/e51ee25a64a1c1fab7af4226900a7f9846aca59d4540e1186b03cea3ff20ef3e?s=32&d=mm&r=g"
+      }
+    },
+    {
+      "id": 338,
+      "name": "TFSC temporary taxonomy banner cache refresh",
+      "desc": "",
+      "code": "add_action('rest_api_init', function () {\n    register_rest_route('tfsc-priority-check/v1', '/purge', [\n        'methods'=>'POST',\n        'permission_callback'=>function () { return current_user_can('manage_options'); },\n        'callback'=>function () {\n            $terms=get_terms(['hide_empty'=>false,'meta_key'=>'archive_featured_image','number'=>250]);\n            if (is_wp_error($terms)) { return $terms; }\n            $urls=[];\n            foreach ($terms as $term) {\n                $value=get_term_meta($term->term_id,'archive_featured_image',true);\n                if (empty($value)) { continue; }\n                $url=get_term_link($term);\n                if (is_wp_error($url)) { continue; }\n                do_action('litespeed_purge_url',$url); $urls[]=$url;\n            }\n            return rest_ensure_response(['purged_archive_urls'=>$urls]);\n        },\n    ]);\n});",
+      "tags": [],
+      "scope": "global",
+      "condition_id": 0,
+      "active": false,
+      "trashed": true,
+      "locked": false,
+      "priority": 10,
+      "network": false,
+      "shared_network": false,
+      "modified": "2026-10-30T19:28:49+00:00",
+      "last_active": "1793388529",
+      "code_error": null,
+      "code_error_trace": null,
+      "created_by": {
+        "id": 18,
+        "display_name": "codex-rest-audit",
+        "avatar_url": "https://secure.gravatar.com/avatar/e51ee25a64a1c1fab7af4226900a7f9846aca59d4540e1186b03cea3ff20ef3e?s=32&d=mm&r=g"
+      },
+      "updated_by": {
+        "id": 18,
+        "display_name": "codex-rest-audit",
+        "avatar_url": "https://secure.gravatar.com/avatar/e51ee25a64a1c1fab7af4226900a7f9846aca59d4540e1186b03cea3ff20ef3e?s=32&d=mm&r=g"
+      }
+    }
+  ]
+}
