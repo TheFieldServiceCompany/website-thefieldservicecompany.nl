@@ -49,3 +49,22 @@ Remaining verification: purge the site's generated HTML cache, then rerun the or
 The user's homepage-only rescan still reported missing ALT. The supplied logged-in HTML includes administrative toolbar images with empty ALT; those are not served to anonymous crawlers. The public homepage separately had two other media sources with empty ALT: attachment 18679 (`service-monteur-08.webp`) and attachment 19559 (Google logo, repeated nine times in review cards). The earlier four-page verification did not cover the homepage.
 
 Updated attachment 18679 through WordPress REST to `Service monteur werkt aan de elektrische aansluiting van een industriële motor`, after visually inspecting the image. Updated attachment 19559 to `Google`. No snippet code changed. A fresh anonymous homepage response with the test marker contains 13 IMG elements and no empty or missing ALT attributes, including all nine Google logos. Existing cached homepage responses can still require page-cache invalidation; Bing's previous scan remains historical until rescanned.
+
+## Full priority-list verification with LiteSpeed NOCACHE
+
+Fetched all 137 URLs from the original 30 October priority scan list, sequentially with a one-second pause between requests. Every request included `tfsc_test=codex&LSCWP_CTRL=NOCACHE`. All 137 returned HTTP 200 and `x-litespeed-cache-control: no-cache`. The homepage was separately tested with `LSCWP_CTRL=before_optm`, also returning no-cache and no empty ALT values. These checks do not purge the normal public cache or change Bing's historical results.
+
+131 pages have no empty or missing image ALT values. Six pages still contain 13 empty ALT attributes (all attributes present, none absent):
+
+| Page | Attachment IDs with empty ALT |
+| --- | --- |
+| /contact/ | 25907 |
+| /over-ons/timeline/ | 27376, 11370, 11371, 11372, 27381, 27390, 27397, 27396 |
+| /over-ons/wat-wij-doen/ | 25573 |
+| /vacature/field-service-engineer-benelux/ | 22781 |
+| /vacature/field-service-engineer-duikboten-internationaal-allround/ | 23253 |
+| /vacature/internationaal-commissioning-engineer-renewable-energy/ | 18620 |
+
+These are remaining findings, not applied fixes. Content-embedded IMG attributes may need editing in their stored content; updating media ALT alone does not necessarily update such saved HTML. Empty ALT can be intentional for decorative images, so inspect each image's purpose before changing it. No WordPress content or configuration changed during this audit.
+
+LiteSpeed parameter documentation: https://docs.litespeedtech.com/lscache/lscwp/admin/#admin-ip-commands. NOCACHE requires Admin IP permission; acceptance here was checked using the actual response headers, not assumed from the query string alone.
