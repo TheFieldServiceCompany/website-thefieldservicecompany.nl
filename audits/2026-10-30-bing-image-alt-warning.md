@@ -68,3 +68,11 @@ Fetched all 137 URLs from the original 30 October priority scan list, sequential
 These are remaining findings, not applied fixes. Content-embedded IMG attributes may need editing in their stored content; updating media ALT alone does not necessarily update such saved HTML. Empty ALT can be intentional for decorative images, so inspect each image's purpose before changing it. No WordPress content or configuration changed during this audit.
 
 LiteSpeed parameter documentation: https://docs.litespeedtech.com/lscache/lscwp/admin/#admin-ip-commands. NOCACHE requires Admin IP permission; acceptance here was checked using the actual response headers, not assumed from the query string alone.
+
+## Remaining ALT repairs applied and verified
+
+Updated 12 previously empty media ALT values after visual inspection (the existing nonempty ALT on attachment 22781 was preserved). The three vacancy IMG tags also had empty ALT saved directly in post content; these three attributes were replaced without changing titles or slugs. Elementor pages picked up the corrected media ALT values without changing their layouts or metadata.
+
+All six affected URLs were fetched again using the test marker and LiteSpeed NOCACHE: zero empty or missing image ALTs remain in those responses. No global purge was performed. Normal cached responses and Bing's historical scan may still need refreshing.
+
+The exact ALT mappings are descriptive of the viewed images; timeline images describe the tractor, dragrace, IVA group, industrial visit, internet café and office photos rather than using unrelated vacancy keywords.
