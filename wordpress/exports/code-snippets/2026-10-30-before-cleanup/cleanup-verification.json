@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-30",
+  "before_total": 317,
+  "after_total": 31,
+  "new_snippets_outside_initial_backup": [],
+  "active_preserved": 31,
+  "concurrent_active_changes": [
+    {
+      "id": 332,
+      "changed_fields": [
+        "code",
+        "name"
+      ]
+    }
+  ],
+  "inactive_remaining": 0,
+  "processed_inactive": 286,
+  "results": {
+    "already_absent": 1,
+    "deleted": 285
+  },
+  "active_fields_verified": [
+    "code",
+    "name",
+    "active",
+    "scope",
+    "priority",
+    "condition_id",
+    "tags",
+    "locked",
+    "network",
+    "shared_network"
+  ],
+  "backup_sha256": "1cc861f7714899273c77bb00bea19196d05cf137c84e144cc219f8050524bdb7",
+  "additional_temporary_snippets_deleted": [
+    337,
+    338
+  ],
+  "additional_backup_sha256": "f3e91e8333d3ea8cad57515fa28ca70f479529513a9d86dfeaa1797d0056a75f",
+  "additional_backup_verified_byte_for_byte": true,
+  "concurrent_active_changes_note": "Snippet 332 was modified by other concurrent website work; this cleanup did not modify active snippets."
+}
