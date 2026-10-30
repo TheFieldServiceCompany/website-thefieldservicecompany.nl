@@ -43,3 +43,9 @@ On 30 October 2026, WordPress media attachment 11115 was updated through REST: `
 All four pages were rechecked. Fresh HTML responses using `tfsc_test=codex&tfsc_alt_check=20261030-logo-v1` contain the corrected logo ALT and no empty or missing image ALTs. Previously cached responses using the original test URL still contain the old empty ALT. Therefore the metadata and fresh header rendering are fixed, but existing page-cache entries still require invalidation. The registered WordPress REST routes expose no LiteSpeed page-cache purge operation; no plugin code or cache configuration was changed to work around that limit.
 
 Remaining verification: purge the site's generated HTML cache, then rerun the original URL checks. Existing Bing scan results will remain historical until rescanned.
+
+## Homepage follow-up after user rescan
+
+The user's homepage-only rescan still reported missing ALT. The supplied logged-in HTML includes administrative toolbar images with empty ALT; those are not served to anonymous crawlers. The public homepage separately had two other media sources with empty ALT: attachment 18679 (`service-monteur-08.webp`) and attachment 19559 (Google logo, repeated nine times in review cards). The earlier four-page verification did not cover the homepage.
+
+Updated attachment 18679 through WordPress REST to `Service monteur werkt aan de elektrische aansluiting van een industriële motor`, after visually inspecting the image. Updated attachment 19559 to `Google`. No snippet code changed. A fresh anonymous homepage response with the test marker contains 13 IMG elements and no empty or missing ALT attributes, including all nine Google logos. Existing cached homepage responses can still require page-cache invalidation; Bing's previous scan remains historical until rescanned.
