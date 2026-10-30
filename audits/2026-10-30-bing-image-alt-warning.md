@@ -35,3 +35,11 @@ Set the logo's media ALT to `The Field Service Company – naar de homepage`; co
 Snippet 9 intentionally handles only the current singular post's featured image. It should not apply post titles to the global logo or every unrelated image.
 
 This diagnosis proves the cause on the four checked pages, not on every URL in the full scan. No production content, media attributes, templates or caches were changed.
+
+## Applied correction
+
+On 30 October 2026, WordPress media attachment 11115 was updated through REST: `alt_text` is now `The Field Service Company – naar de homepage`.
+
+All four pages were rechecked. Fresh HTML responses using `tfsc_test=codex&tfsc_alt_check=20261030-logo-v1` contain the corrected logo ALT and no empty or missing image ALTs. Previously cached responses using the original test URL still contain the old empty ALT. Therefore the metadata and fresh header rendering are fixed, but existing page-cache entries still require invalidation. The registered WordPress REST routes expose no LiteSpeed page-cache purge operation; no plugin code or cache configuration was changed to work around that limit.
+
+Remaining verification: purge the site's generated HTML cache, then rerun the original URL checks. Existing Bing scan results will remain historical until rescanned.
