@@ -1,0 +1,48 @@
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+    const sticky = document.querySelector('.scroll-sticky-wrapper');
+    const trigger = document.querySelector('.sticky-trigger');
+
+    if (!sticky || !trigger) return;
+
+    let visible = false;
+
+    function checkSticky() {
+
+        const rect = trigger.getBoundingClientRect();
+        const shouldShow = rect.bottom <= 0;
+
+        console.log({
+            top: rect.top,
+            bottom: rect.bottom,
+            shouldShow: shouldShow,
+            visible: visible
+        });
+
+        if (shouldShow && !visible) {
+
+            sticky.classList.add('is-visible');
+            visible = true;
+
+            requestAnimationFrame(function () {
+                requestAnimationFrame(function () {
+                    window.dispatchEvent(new Event('resize'));
+                });
+            });
+
+        } else if (!shouldShow && visible) {
+
+            sticky.classList.remove('is-visible');
+            visible = false;
+        }
+    }
+
+    window.addEventListener('scroll', checkSticky, { passive: true });
+    window.addEventListener('resize', checkSticky);
+    window.addEventListener('orientationchange', checkSticky);
+
+    checkSticky();
+
+});
+</script>

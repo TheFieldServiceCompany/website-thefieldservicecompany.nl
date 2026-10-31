@@ -1,0 +1,74 @@
+<style>
+/* TFSC: keep the vacancy panel visible and in flow while editing this template. */
+body.elementor-editor-active .elementor-26022 .scroll-sticky-wrapper,
+.elementor-26022.elementor-edit-mode .scroll-sticky-wrapper {
+    position: relative;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transition: none;
+    z-index: auto;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+    const sticky = document.querySelector('.scroll-sticky-wrapper');
+    const trigger = document.querySelector('.sticky-trigger');
+
+    // Keep this panel editable in Elementor; visitors retain the scroll behavior.
+    const isElementorEditor =
+        document.body.classList.contains('elementor-editor-active') ||
+        !!document.querySelector('.elementor-26022.elementor-edit-mode') ||
+        (window.elementorFrontend &&
+            typeof window.elementorFrontend.isEditMode === 'function' &&
+            window.elementorFrontend.isEditMode());
+
+    if (isElementorEditor) {
+        if (sticky) sticky.classList.add('is-visible');
+        return;
+    }
+
+    if (!sticky || !trigger) return;
+
+    let visible = false;
+
+    function checkSticky() {
+
+        const rect = trigger.getBoundingClientRect();
+        const shouldShow = rect.bottom <= 0;
+
+        console.log({
+            top: rect.top,
+            bottom: rect.bottom,
+            shouldShow: shouldShow,
+            visible: visible
+        });
+
+        if (shouldShow && !visible) {
+
+            sticky.classList.add('is-visible');
+            visible = true;
+
+            requestAnimationFrame(function () {
+                requestAnimationFrame(function () {
+                    window.dispatchEvent(new Event('resize'));
+                });
+            });
+
+        } else if (!shouldShow && visible) {
+
+            sticky.classList.remove('is-visible');
+            visible = false;
+        }
+    }
+
+    window.addEventListener('scroll', checkSticky, { passive: true });
+    window.addEventListener('resize', checkSticky);
+    window.addEventListener('orientationchange', checkSticky);
+
+    checkSticky();
+
+});
+</script>

@@ -1,8 +1,8 @@
 # Onderzoek vacaturetemplate: zichtbaarheid in Elementor en formuliercontext
 
 Datum: 31 oktober 2026.
-Status: bridgebron en aangeleverd adviesscript onderzocht; actuele scrollcode en editor nog niet geverifieerd.
-Uitvoering: uitsluitend lezen en deze onderzoeksnotitie opslaan. Geen websitewijzigingen, formulierinzendingen of deployments uitgevoerd.
+Status: LIVE-template en bridgeversie gecontroleerd; editoruitzondering via REST opgeslagen. Visuele GUI-controle staat nog open.
+Eerste fase: alleen lezen en deze notitie opslaan. Vervolgfase na expliciete toestemming: alleen de editoruitzondering in de vacaturetemplate aangepast. Geen formulierinzendingen of formulier-/pluginwijzigingen.
 
 ## Opdracht en toestemming
 
@@ -224,3 +224,114 @@ actuele scrollcode en CSS moeten als bron worden aangeleverd, voordat de
 geautoriseerde zichtbaarheidspatch gericht kan worden uitgevoerd en geverifieerd.
 
 Geen website-, template- of pluginwijziging uitgevoerd. Alleen dit onderzoekslog is bijgewerkt.
+
+
+## Toegang hersteld en geautoriseerde editorreparatie uitgevoerd
+
+### Correctie op de eerdere REST-conclusie
+
+De eerdere gevolgtrekking dat deze chat niet via REST verder kon was te stellig.
+Het ontbreken van een ingebouwde WordPress-tool sluit een bestaande,
+geautoriseerde lokale REST-route niet uit. De eigenaar wees terecht op
+**article write #2 | work**. De lokale publicatiescripts van die chat tonen
+rechtstreekse REST-toegang met een bestaand authenticatiebestand en een vaste
+serverroute voor het productiedomein. Diezelfde route is in deze chat met een
+uitsluitend lezende `users/me`-controle geverifieerd: HTTP 200, met de benodigde
+bewerkrechten. Er zijn geen nieuwe credentials aangemaakt of gepubliceerd.
+Een eerste verzoek via de gewone domeinroute gaf een HTML-403 van LiteSpeed;
+de bestaande artikelpublicatieroute werkt wel. Dit onderscheid is geen
+ontbrekende WordPress-MCP-koppeling.
+
+De oorspronkelijke browserblokkade betrof de ontwikkelomgeving. Er is niet via
+een andere browser of directe netwerkroute op die geblokkeerde ontwikkelorigin
+ingelogd. De nu gebruikte verbinding is de al bestaande API-route voor de
+productiewebsite, op uitdrukkelijk verzoek van de eigenaar.
+
+### Browserinstellingen
+
+De lokale browserconfiguratie heeft standaard `access = deny`; alleen Appsmith
+had een website-uitzondering. Dit ondersteunt het vermoeden van de eigenaar
+dat eerdere toegangsbeperkingen de GUI blokkeren. Native-appbesturing staat ook
+standaard uit, maar is voor de ingebouwde browser niet nodig.
+
+Voor de visuele WordPress-controle is een gerichte browseruitzondering voor
+`https://thefieldservicecompany.nl` nodig. Voor toekomstig werk op DEV komt daar
+`https://dev.thefieldservicecompany.nl` bij. Uploads, downloads, volledige CDP-
+toegang en toegang tot andere websites hoeven hiervoor niet algemeen open.
+Bij een aanvullende beheerde denial moet de toepasselijke beheerde regel worden
+aangepast door de beheerder. Geen veiligheidsinstelling is in deze opdracht gewijzigd.
+
+Bronnen voor de uitleg:
+- https://learn.chatgpt.com/docs/browser
+- https://learn.chatgpt.com/docs/agent-approvals-security
+- https://learn.chatgpt.com/docs/enterprise/managed-configuration
+
+### Werkelijke LIVE-bronnen
+
+- WordPress REST geeft de Elementor-documentmeta inclusief `_elementor_data`
+  en `_elementor_page_settings` terug voor bevoegde toegang.
+- Actieve vacaturetemplate: `26022`, **single | vacature**,
+  conditie `include/singular/vacature`.
+- Scrollpaneel: container `044c4a6`, class `.scroll-sticky-wrapper`.
+- Scrollcode en basis-CSS: HTML-widget `2c4849c`.
+- Formulieroverdracht: HTML-widget `62cd538`; geeft daadwerkelijk
+  `vacaturenummer`, `contractvorm`, `postTitle`, `postUrl` en `cn` door aan
+  solliciteren en vraag stellen. Deze code is niet veranderd.
+- Globaal adviesscript: Elementor Custom Code `21893`, gepubliceerd,
+  body-start, prioriteit 1. Code komt overeen met het screenshot: alleen
+  `vacaturenummer`. Niet veranderd.
+- De pluginlijst bevestigt **TFSC Form Bridge 0.5.4, actief**. Daarmee is de
+  onderzochte bronversie nu ook aan de actieve versie gekoppeld. De actuele
+  opgeslagen veldmappings zijn hiermee niet opnieuw uitgelezen.
+- De Elementor-MCP is bereikbaar via de bestaande WordPress-authenticatie.
+  Initialisatie en `tools/list` slagen. De beschikbare bewerkingstools ondersteunen
+  deze V3 HTML-widget niet; daarom is de ondersteunde WordPress-documentmeta
+  via REST gebruikt. Geen MCP- of OAuth-credentials aangemaakt of uitgebreid.
+
+### Oorzaak en uitgevoerde wijziging
+
+De bestaande basis-CSS zet het paneel op `position: absolute`, `opacity: 0`,
+`visibility: hidden` en `pointer-events: none`. Pas met `.is-visible` wordt
+het paneel `position: sticky` en zichtbaar. De scrollcode bepaalde dit ook in
+het editorcanvas; CSS bevatte geen bewerkmodusuitzondering.
+
+Alleen `settings.html` van widget `2c4849c` is aangepast:
+
+1. Een inline stijl die uitsluitend onder Elementors editormarkeringen werkt
+   maakt het paneel zichtbaar en aanklikbaar, in normale documentflow met
+   `position: relative` en `z-index: auto`. De bestaande breedtes, marges,
+   gridinstellingen en padding zijn niet gewijzigd.
+2. Een vroege JavaScript-uitzondering herkent de editor via bodyclass,
+   documentmarker of `elementorFrontend.isEditMode()`, toont het paneel en
+   registreert daar geen scroll-/resizehandlers.
+
+De inline stijl blijft ook werken als Elementor de widget opnieuw rendert of
+het bestaande DOMContentLoaded-script niet opnieuw afvuurt. Voor bezoekers
+zijn de oorspronkelijke JavaScript-logica en bestaande Custom CSS behouden.
+
+Vóór opslaan zijn wijzigingsdatum en volledige meta opnieuw gelezen en met
+de voorbereidingskopie vergeleken. Er waren geen tussenliggende veranderingen.
+Vervolgens is uitsluitend `_elementor_data` van dit document geschreven.
+De teruggelezen JSON komt exact overeen met de beoogde wijziging. Status,
+auteur, titel, slug, datum en alle overige meta zijn gelijk gebleven.
+
+### Verificatie en grenzen
+
+- Tien geïsoleerde JavaScript-scenario’s geslaagd: drie editorherkenningspaden,
+  ontbrekende elementen en vergelijking met het oorspronkelijke bezoekersgedrag
+  vóór/op/na de scrolldrempel, bij resize en orientationchange.
+- Zes CSS-cascadecontroles geslaagd: frontend verborgen/zichtbaar identiek;
+  beide editor-markeringen met en zonder `.is-visible` zichtbaar en in flow.
+- REST-readback en controle op ongerelateerde wijzigingen geslaagd.
+- Openbare voorbeeldvacature HTTP 200. De pagina gebruikt LiteSpeed-geoptimaliseerde
+  externe assets. Alleen een bronverzoek is geen visuele scroll-/editorcontrole.
+- Visuele controle op desktop/mobiel en in Elementor blijft open totdat
+  browsertoegang beschikbaar is. Er is geen globale cache gewist.
+
+Beheerde bronbestanden en rollback-HTML staan nu onder
+`wordpress/elementor/templates/26022-single-vacature/` en
+`wordpress/exports/elementor/2026-10-31/`.
+
+Toestemming: de eigenaar gaf expliciet opdracht de zichtbaarheid en
+uitzonderingsmodus op te lossen. Het verwijderen/vervangen van formuliercode,
+wijzigen van de bridge en verruimen van browserrechten zijn niet uitgevoerd.
