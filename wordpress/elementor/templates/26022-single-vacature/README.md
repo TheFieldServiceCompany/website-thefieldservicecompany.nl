@@ -21,8 +21,10 @@ editoruitzondering toegevoegd. Bestaande logregels zijn niet aangepast.
 Controles: tien geïsoleerde JavaScript-scenario’s en zes CSS-cascadecontroles
 geslaagd; slechts één `settings.html` gewijzigd; andere templategegevens en
 formuliercode behouden. REST-readback komt exact overeen. De openbare voorbeeld-
-vacature geeft HTTP 200. Dit is geen visuele Elementor- of scroltest; die staat
-nog open wegens geblokkeerde GUI-toegang.
+vacature geeft HTTP 200. De aanvullende GUI-controle is inmiddels geslaagd: het paneel is zichtbaar
+en selecteerbaar in de desktop- en mobiele Elementor-editor; op de desktop-
+vacaturepagina verschijnt het na scrollen en verdwijnt het weer bovenaan.
+Er is geen afzonderlijke mobiele bezoekersproef uitgevoerd.
 
 Herstelbron: `wordpress/exports/elementor/2026-10-31/26022-2c4849c-scroll-sticky-before.html`.
 Herstel alleen de HTML van widget `2c4849c`, met een actuele read vóór schrijven.

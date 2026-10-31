@@ -1,7 +1,7 @@
 # Onderzoek vacaturetemplate: zichtbaarheid in Elementor en formuliercontext
 
 Datum: 31 oktober 2026.
-Status: LIVE-template en bridgeversie gecontroleerd; editoruitzondering via REST opgeslagen. Visuele GUI-controle staat nog open.
+Status: browsertoegang werkt; editoruitzondering in desktop- en mobiele editor geverifieerd. Scrollwerking op de desktop-vacaturepagina gecontroleerd.
 Eerste fase: alleen lezen en deze notitie opslaan. Vervolgfase na expliciete toestemming: alleen de editoruitzondering in de vacaturetemplate aangepast. Geen formulierinzendingen of formulier-/pluginwijzigingen.
 
 ## Opdracht en toestemming
@@ -370,3 +370,41 @@ cloud- of legacybeheerregels kunnen na deze stap nog beperkingen opleggen.
 Status: wachten op de lokale beheerdersstap en het opnieuw starten van de app;
 de visuele Elementor-eindcontrole blijft open. De eerder opgeslagen websitefix
 is in deze browserrechtenstap niet verder gewijzigd.
+
+
+## GUI-toegang en visuele eindcontrole geslaagd
+
+Na de herstelstap aan gebruikerszijde is het WordPress-dashboard daadwerkelijk
+via de ingebouwde browser geopend, in een bestaande ingelogde sessie. Daarna
+is **single | vacature** (document 26022) in Elementor geopend.
+Dit bewijst werkende browsertoegang tot de productiesite; de ontwikkelsite en
+het ontgrendeld zijn van alle instellingen zijn hiermee niet afzonderlijk getest.
+
+Uitgevoerde eindcontrole:
+
+- Desktop-editor: het bedoelde paneel is zichtbaar met opacity 1,
+  visibility visible, pointer-events auto en position relative.
+- De koptekst binnen het paneel is aangeklikt: Elementor opent daadwerkelijk
+  **Koptekst bewerken** met de inhoudsinstellingen. Niets aan de inhoud aangepast.
+- Mobiele editor: dezelfde koptekst selecteerbaar; het paneel blijft zichtbaar
+  en aanklikbaar, met position relative en een gemeten breedte van 325 px.
+- Editor teruggezet naar desktop. De knop Publiceren bleef uitgeschakeld;
+  tijdens deze controle zijn geen aanvullende templatewijzigingen opgeslagen.
+- Desktop-vacaturepagina: bovenaan is het paneel verborgen (opacity 0,
+  visibility hidden, position absolute). Na PageDown wordt `.is-visible`
+  toegevoegd; na de overgang is opacity 1, visibility visible, position sticky.
+- Terug naar boven met Control+Home: `.is-visible` verdwijnt en visibility
+  wordt weer hidden. De bestaande scrollwerking is dus ook in de browser bevestigd.
+- Schermafbeeldingen van de bewerkbare desktop-editor, mobiele editor en
+  bezoekersweergave na scrollen zijn als lokale opleverbestanden opgeslagen.
+
+Dit sluit de controle van de gemelde editorzichtbaarheid af. Een afzonderlijke
+mobiele bezoekersproef is niet uitgevoerd. De formulier- en adviescode zijn
+bij deze eindcontrole niet aangepast en er zijn geen formulieren verzonden.
+
+Aanvullende waarneming voor het nog te besluiten formulierwerk: de zichtbare
+vacaturegegevens op de voorbeeldpagina gebruiken nu `Vacature: 358` en `Contract:`.
+De eerder uitgelezen overdrachtscode zoekt letterlijk naar `Vacaturenummer:` en
+`Contractvorm:`. Dat is een concrete afhankelijkheid van weergavetekst die vóór
+verdere opschoning via een klik en het doelveld moet worden gecontroleerd.
+De huidige waarneming bewijst op zichzelf nog geen complete formulierinzending.
