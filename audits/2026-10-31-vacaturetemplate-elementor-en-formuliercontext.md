@@ -1,7 +1,7 @@
 # Onderzoek vacaturetemplate: zichtbaarheid in Elementor en formuliercontext
 
 Datum: 31 oktober 2026.
-Status: gedeeltelijk onderzocht; actuele templatecode en editor nog niet geverifieerd.
+Status: bridgebron en aangeleverd adviesscript onderzocht; actuele scrollcode en editor nog niet geverifieerd.
 Uitvoering: uitsluitend lezen en deze onderzoeksnotitie opslaan. Geen websitewijzigingen, formulierinzendingen of deployments uitgevoerd.
 
 ## Opdracht en toestemming
@@ -99,3 +99,128 @@ Een echte inzending of wijziging aan live systemen valt niet onder deze onderzoe
 
 Geen scripts verwijderd of aangepast. Geen template opgeslagen. Geen cache geleegd.
 Geen formuliertest verstuurd. Alleen deze notitie is toegevoegd.
+
+
+## Vervolgonderzoek: adviesknoppen en noodzakelijke gegevens
+
+De eigenaar heeft een screenshot aangeleverd van “Script Advies Buttons VarLink Build”.
+De getoonde code zoekt op `.elementor-icon-list-text` naar tekst die begint met
+`Vacaturenummer:`, bouwt een URL naar `/formulier-advies/` op het huidige domein
+en voegt uitsluitend `vacaturenummer` toe wanneer het nummer is gevonden.
+Dit screenshot bevat geen scrollscript.
+
+Deze adviescode verstuurt geen bedrijfsnaam, titel, dienstverband of vacaturelink.
+Hij stuurt ook geen sollicitatie naar de bridge: hij navigeert naar het formulier.
+De bridge verwerkt de formulierinzending pas daarna. Op een pagina met meerdere
+gevonden vacaturenummers overschrijft de lus de waarde telkens; de laatste
+gevonden waarde wint. De juiste vacaturecontext per knop moet dus expliciet
+worden gecontroleerd wanneer de code ook op vacatureoverzichten wordt gebruikt.
+
+### Exacte verantwoordelijkheid per stap
+
+| Stap | Noodzakelijk voor de bedoelde vacaturecontext |
+| --- | --- |
+| Vacaturepagina naar sollicitatieformulier | Het canonieke vacaturenummer |
+| Vacaturepagina naar adviesformulier | Het vacaturenummer als het advies bij die vacature hoort |
+| Algemene adviesknop | Geen vacaturenummer; een algemene adviesaanvraag blijft mogelijk |
+| Formulier naar bridge | Ingevulde contact-/kandidaatgegevens, privacyakkoord en toepasselijke vacaturecontext |
+| Bridge naar ontvanger | Versiegebonden bericht met formulieridentiteit, inzendings-UUID, mapping en gekoppelde waarden; dit maakt de plugin zelf |
+
+Voor solliciteren gebruikt de gedocumenteerde mapping `vacaturenummer -> vacancy.number`.
+Advies gebruikt `vacancy_number -> vacancy.number`, gevuld vanuit de URL-parameter
+`vacaturenummer`. Dit verschil tussen veld-ID en URL-parameter is geen fout.
+
+De overige gedocumenteerde sollicitatievelden zijn voornaam, achternaam,
+woonplaats, mobiel, e-mail, cv, LinkedIn en privacyakkoord. Dat zijn gegevens van
+de kandidaat; de vacatureknop hoeft ze niet vanaf de vacaturepagina mee te nemen.
+Advies bevat daarnaast dienstverbandvoorkeuren en wensen/ambitie.
+“Benodigd voor de bridge” betekent niet dat ieder van deze profielvelden technisch
+verplicht is. De onderzochte verwerkingsfunctie controleert privacyakkoord,
+minstens één naamdeel en minstens één bruikbaar identiteitssignaal
+(e-mail, telefoon/mobiel of LinkedIn). De actuele Elementor-formulieren kunnen
+strengere verplichte velden hebben. Cv, woonplaats, voorkeuren en ambitie zijn
+profielinhoud, geen vervanging voor vacature-identiteit.
+
+Voor het aanmaken van een correcte sollicitatie zijn kandidaat-aanmaak en een
+bestaande, niet-gearchiveerde vacature nodig. Bij een ontbrekend/onbekend nummer
+ontstaat geen correcte vacaturekoppeling. De latere migratie
+`20261026123000_web_form_nonblocking_review.sql` behandelt sommige
+vacatureproblemen als niet-blokkerende review; daarom betekent een ontvangen
+bericht of aangemaakt kandidaatprofiel nog niet dat er een juiste sollicitatie is.
+Voor advies is een nummer optioneel; een meegegeven onbekend nummer leidt tot een reviewcode.
+
+### Concrete bevinding: “Niet versturen” sluit ruwe velden niet uit
+
+Onderzocht: TFSC Form Bridge 0.5.4, commit
+`76280c3608edc4fb84d44086ef9b7f2cc54ebc65`.
+Dit is een broncodecontrole, geen bevestiging van de geïnstalleerde liveversie.
+
+1. `MappingRepository.php` slaat een keuze `not_sent` niet op in de veldmapping.
+2. `SubmissionNormalizer.php:34-38` voegt de waarde van ieder aangeleverd veld
+   eerst toe aan `raw_fields`, vóór de controle op een CRM-doel vanaf regel 48.
+3. `raw_fields` komt onder `fields` in de volledige inzendingsenvelop.
+   `OutboxRepository.php` slaat deze envelop lokaal op.
+4. `DeliveryWorker.php` geeft de envelop via `EnvelopeSanitizer::for_receiver()`
+   aan de ondertekende aflevering.
+5. `EnvelopeSanitizer.php:9-32` verwijdert bestandsreferenties en uploadwaarden,
+   maar verwijdert geen overige ongemapte veldwaarden.
+
+Gevolg: “Niet versturen” betekent hier feitelijk “niet mappen naar een CRM-doel”,
+niet “deze waarde verlaat WordPress niet”. Overbodige verborgen tekstvelden kunnen
+dus nog onder `fields` worden meegestuurd, zelfs zonder canonieke verwerking.
+Dit is een concrete bronbevinding en moet bij echte databeperking worden meegenomen.
+Er is geen liveverkeer onderschept en geen werkelijk datavolume gemeten.
+
+Daarnaast verzamelt de bridge zelf bronmetadata, waaronder pagina-URL, referrer,
+IP, browseridentificatie en beschikbare campagneparameters. Browserdiagnostiek
+heeft nog een afzonderlijke route. Het vervangen van een knopscript verandert
+deze pluginfunctionaliteit niet. Overbodige vacaturevelden, bronregistratie en
+diagnostiek hebben verschillende doelen en moeten bewust worden beoordeeld.
+Een lokale uitvoeringsproef is niet gestart omdat PHP in deze werkomgeving ontbreekt;
+de bevinding berust op het gevolgde codepad.
+
+### Alternatief voor het losse JavaScript
+
+Voorkeur: bouw de knoplink tijdens het renderen uit het opgeslagen vacatureveld,
+bijvoorbeeld `/formulier-advies/?vacaturenummer=<canoniek-nummer>`.
+Het verborgen formulierveld leest vervolgens de GET-parameter via Elementors
+Request Parameter. Zo blijft de bridge-aflevering ongewijzigd en vervalt het
+uitlezen van zichtbare tekst.
+
+Elementor ondersteunt dynamische tags, custom fields en Request Parameter.
+De officiële documentatie vermeldt wel dat niet iedere tag in ieder veld beschikbaar
+is. Daarom moet op de bestaande knop worden gecontroleerd of het vacatureveld
+rechtstreeks in de link kan worden gebruikt. Als dat niet kan, is een kleine
+gedeelde PHP-shortcode of Elementor dynamic tag voor de volledige knop-URL een
+alternatief, eventueel centraal beheerd in de bridge-plugin. Dat vereist een
+afzonderlijke implementatiekeuze; het is geen bestaande functie van de onderzochte bridge.
+
+Bij een formulier op de vacaturepagina zelf kan een dynamisch verborgen veld
+rechtstreeks het vacatureveld gebruiken. Bij het huidige aparte formulier moet
+de context de overgang tussen pagina’s blijven maken. De bridge kan de vacature
+niet betrouwbaar raden uit alleen titel, referrer of de formulierpagina.
+Een algemene adviesknop houdt een gewone advieslink zonder verzonnen nummer.
+
+Bronnen:
+- [Elementor dynamic tags](https://elementor.com/help/dynamic-tags-pro-2/)
+- [Elementor Request Parameter](https://elementor.com/help/dynamic-request-parameter-pro/)
+- De hierboven vastgelegde bridgebron en mappingdocumentatie.
+
+### Bijgestelde toestemming en toegang
+
+De eigenaar heeft inmiddels expliciet toestemming gegeven de editorzichtbaarheid
+en uitzondering te herstellen, met behoud van de bestaande werking.
+Die toestemming omvat niet automatisch het verwijderen of wijzigen van
+formulier-/adviescode of de dataverwerking van de bridge.
+
+De eigenaar wijst op bestaande GUI-, Elementor-MCP- en WordPress-REST-toegang.
+De beschikbare tools zijn opnieuw op WordPress/Elementor gecontroleerd en Plugin
+Management is geraadpleegd. Deze chat biedt geen WordPress-/Elementor-MCP-tool;
+de pluginzoekopdracht leverde alleen een niet-geïnstalleerde WordPress.com-koppeling
+op. Dat is geen bevestiging van toegang tot de bestaande zelfbeheerde website.
+De browserblokkade is niet omzeild met rechtstreekse netwerkverzoeken.
+De bestaande Elementor-MCP moet beschikbaar worden gemaakt in deze chat, of de
+actuele scrollcode en CSS moeten als bron worden aangeleverd, voordat de
+geautoriseerde zichtbaarheidspatch gericht kan worden uitgevoerd en geverifieerd.
+
+Geen website-, template- of pluginwijziging uitgevoerd. Alleen dit onderzoekslog is bijgewerkt.
