@@ -335,3 +335,38 @@ Beheerde bronbestanden en rollback-HTML staan nu onder
 Toestemming: de eigenaar gaf expliciet opdracht de zichtbaarheid en
 uitzonderingsmodus op te lossen. Het verwijderen/vervangen van formuliercode,
 wijzigen van de bridge en verruimen van browserrechten zijn niet uitgevoerd.
+
+
+## Browserrechten: gerichte persoonlijke uitzonderingen toegevoegd
+
+Op afzonderlijke opdracht van de eigenaar zijn browseruitzonderingen voor het
+productiedomein en de ontwikkelomgeving toegevoegd aan de persoonlijke
+Codex-configuratie. Alleen toegang is toegestaan; uploads, downloads en volledige
+CDP-toegang blijven op beide origins geblokkeerd. Alle overige waarden zijn
+behouden en de persoonlijke configuratie is vooraf geback-upt en teruggelezen.
+
+De daarna uitgevoerde browserproef voor de productie-WordPress-admin wordt nog
+steeds geweigerd door de beheerde originpolicy. Deze wijziging is dus nog geen
+werkende GUI-toegang. Er is geen alternatieve browserroute geprobeerd.
+
+Een back-up van vóór de privacywijziging bevat geen browserbeperkingen; de
+huidige persoonlijke configuratie bevat die wel. Eerdere lokale herstelscripts
+verwijzen naar een systeembeleid met het actieve beheerde profiel. Dit onderbouwt
+een lokale beheerconfiguratie als verklaring voor “Managed by your organization”.
+De actuele inhoud van het systeembestand is in deze chat niet uitgelezen: dat
+valt buiten de toegestane mappen.
+
+Er is een afzonderlijke, lokale beheerderherstelstap voorbereid voor uitvoering
+door de eigenaar. Zij verplaatst uitsluitend eventuele lokale beheerde
+browserregels naar de persoonlijke instellingen en voegt de twee bedoelde
+originuitzonderingen toe. Daardoor kunnen de browserregels weer door de eigenaar
+worden bewerkt, met behoud van de bestaande beperkingen als persoonlijke regels.
+Onbekende conflicten stoppen de uitvoering; systeem- en persoonlijke configuratie
+krijgen eerst een back-up. Overige systeemeisen en bestands-/netwerkrechten worden
+niet gewijzigd. De herstelstap is met synthetische configuraties en proefbestanden
+gecontroleerd, maar niet op het systeembestand uitgevoerd. Eventuele aanvullende
+cloud- of legacybeheerregels kunnen na deze stap nog beperkingen opleggen.
+
+Status: wachten op de lokale beheerdersstap en het opnieuw starten van de app;
+de visuele Elementor-eindcontrole blijft open. De eerder opgeslagen websitefix
+is in deze browserrechtenstap niet verder gewijzigd.
