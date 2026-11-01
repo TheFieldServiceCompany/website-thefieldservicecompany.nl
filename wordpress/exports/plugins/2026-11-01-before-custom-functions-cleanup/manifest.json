@@ -1,0 +1,21 @@
+{
+  "plugin": "tfsc-custom-functions",
+  "captured_utc": "2026-11-01T08:11:43+00:00",
+  "files": [
+    {
+      "path": "tfsc-custom-functions.php",
+      "size": 3854,
+      "sha256": "d50a195c121324f1d04cbfdfe11840e267c56347d7a6d7b56fd1d10ccfa5a931"
+    },
+    {
+      "path": "tfsc-custom-stylesheet.css",
+      "size": 18544,
+      "sha256": "a4580832cba685461520ec41916b9d28dc69b711b59c351626cdf21abb4ebae1"
+    },
+    {
+      "path": "custom-stylesheet-wp-admin.css",
+      "size": 626,
+      "sha256": "b5965cbfd22a43f0f2caa1dc1405d1494c10f75524a97fd11f0823d38d3e6d5c"
+    }
+  ]
+}
