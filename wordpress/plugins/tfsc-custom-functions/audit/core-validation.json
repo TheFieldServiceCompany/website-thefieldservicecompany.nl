@@ -1,0 +1,21 @@
+{
+  "passed": 13,
+  "php": "8.3.33",
+  "checks": [
+    "Real WordPress filter disables remote Elementor fonts",
+    "Real WordPress hook registry preserves enqueue priority",
+    "Both shortcodes registered in real WordPress registry",
+    "Real filter keeps ordinary title unchanged",
+    "Search query cannot insert script markup",
+    "Search query entities are not double-escaped",
+    "Accented Dutch words are counted as whole words",
+    "Real WordPress tag stripping excludes script and style contents",
+    "Real WordPress shortcode attributes excluded from reading time",
+    "HTML non-breaking spaces decoded before counting",
+    "Reading-time callback invoked by real shortcode parser",
+    "URL callback invoked by real shortcode parser",
+    "Missing post handled through real shortcode parser"
+  ],
+  "wordpressCoreVersion": "6.8.3",
+  "scope": "Real WordPress hook/shortcode/formatting/kses implementations. Site configuration, query, post lookup and URL helpers use fixtures; no full database or Elementor runtime."
+}

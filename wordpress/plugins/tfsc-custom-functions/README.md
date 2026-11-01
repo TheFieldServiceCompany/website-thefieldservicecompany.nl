@@ -50,3 +50,5 @@ Dit zijn statische HTML-kopieën met scripts en iframes verwijderd en formulierv
 Zie [het auditrapport](audit/bevindingen.md) voor de functiebeoordeling, gebruiksinventaris en resterende aandachtspunten.
 
 De PHP-controles zijn herhaalbaar met `npm install` en `npm test` in `audit/` (Node.js vereist). Dit testscript en de ontwikkeldependencies zitten niet in het installatiepakket.
+
+Een [verdiepende PHP-controle](audit/php-verdieping.md) omvat daarnaast 13 geslaagde controles met echte WordPress-hulpfuncties. Uitvoering: `node verify-core.mjs /pad/naar/wordpress` vanuit `audit/`. Zie het rapport voor de afbakening van deze test.

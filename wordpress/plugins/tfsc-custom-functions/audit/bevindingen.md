@@ -37,6 +37,8 @@ De gecombineerde vacature-sitemaps bevatten ruim duizend URL's. Die zijn bemonst
 
 ## Beoordeling van de PHP-functies
 
+De [verdiepende controle](php-verdieping.md) beoordeelt ook de oude callbacknamen, indirecte shortcodeverwijzingen en het werkelijke WordPress-gedrag. Er zijn 13 aanvullende controles met WordPress-hulpfuncties geslaagd; een volledige Elementor-runtimecontrole blijft afzonderlijk nodig.
+
 | Onderdeel in oude plugin | Nodig / besluit | Onderbouwing |
 | --- | --- | --- |
 | Recente-reacties-widgetstijl uitschakelen | Verwijderd uit kandidaat | Geen recent-comments-widget in onderzochte output aangetroffen; legacy-optimalisatie. WordPress kan een eventuele toekomstige widget weer normaal stylen. |
