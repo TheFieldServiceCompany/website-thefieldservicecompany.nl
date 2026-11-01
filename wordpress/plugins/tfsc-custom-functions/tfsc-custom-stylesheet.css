@@ -737,6 +737,13 @@ Staat bij page custom css*/
     }
 }
 
+/* Wide article tables scroll within their figure instead of widening the page. */
+.elementor-widget-theme-post-content figure.wp-block-table,
+.elementor-widget-text-editor figure.wp-block-table {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
 /* Inputs remain accessible while the visible checkbox receives the focus ring. */
 .elementor-form input[type="checkbox"]:focus-visible + label::before {
     outline: 3px solid #00355B;

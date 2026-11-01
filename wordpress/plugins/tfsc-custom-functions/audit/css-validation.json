@@ -1,5 +1,5 @@
 {
-  "passed": 40,
+  "passed": 41,
   "checks": [
     "Stylesheet structure parses without errors",
     "Declaration lists parse without errors",
@@ -40,7 +40,8 @@
     "Duplicate hidden-field rule removed",
     "Empty label rule removed",
     "Dynamic popup styling retained",
-    "Dynamically inserted Show More button styling retained"
+    "Dynamically inserted Show More button styling retained",
+    "Wide article tables have a scoped scroll container"
   ],
   "unchanged_rule_occurrences": 118,
   "archived_rules": 19,
@@ -55,6 +56,6 @@
     ]
   ],
   "old_bytes": 18544,
-  "new_bytes": 16543,
-  "limitations": "Static CSS/source checks; no visual before/after rendering or complete WordPress runtime test."
+  "new_bytes": 16786,
+  "limitations": "Static CSS/source checks. Browser checks are recorded separately in browser-validation.json; no complete WordPress runtime test."
 }

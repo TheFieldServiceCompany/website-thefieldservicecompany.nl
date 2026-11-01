@@ -1,0 +1,148 @@
+{
+  "scope": "Static HTML snapshots; JavaScript and iframes removed and submissions disabled. Not a full WordPress/Elementor runtime test. Lazy images are placeholders.",
+  "viewports": [
+    {
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "page_pairs": [
+    {
+      "page": "form",
+      "width": 390,
+      "height": 844,
+      "same_node_count": true,
+      "overflow_before": false,
+      "overflow_after": false,
+      "unexpected_measured_style_changes": []
+    },
+    {
+      "page": "vacature",
+      "width": 390,
+      "height": 844,
+      "same_node_count": true,
+      "overflow_before": false,
+      "overflow_after": false,
+      "unexpected_measured_style_changes": []
+    },
+    {
+      "page": "home",
+      "width": 390,
+      "height": 844,
+      "same_node_count": true,
+      "overflow_before": false,
+      "overflow_after": false,
+      "unexpected_measured_style_changes": []
+    },
+    {
+      "page": "blog",
+      "width": 390,
+      "height": 844,
+      "same_node_count": true,
+      "overflow_before": true,
+      "overflow_after": false,
+      "unexpected_measured_style_changes": []
+    },
+    {
+      "page": "archive",
+      "width": 390,
+      "height": 844,
+      "same_node_count": true,
+      "overflow_before": false,
+      "overflow_after": false,
+      "unexpected_measured_style_changes": []
+    },
+    {
+      "page": "kennisbank",
+      "width": 390,
+      "height": 844,
+      "same_node_count": true,
+      "overflow_before": true,
+      "overflow_after": false,
+      "unexpected_measured_style_changes": []
+    },
+    {
+      "page": "form",
+      "width": 1280,
+      "height": 720,
+      "same_node_count": true,
+      "overflow_before": false,
+      "overflow_after": false,
+      "unexpected_measured_style_changes": []
+    },
+    {
+      "page": "vacature",
+      "width": 1280,
+      "height": 720,
+      "same_node_count": true,
+      "overflow_before": false,
+      "overflow_after": false,
+      "unexpected_measured_style_changes": []
+    },
+    {
+      "page": "home",
+      "width": 1280,
+      "height": 720,
+      "same_node_count": true,
+      "overflow_before": false,
+      "overflow_after": false,
+      "unexpected_measured_style_changes": []
+    },
+    {
+      "page": "blog",
+      "width": 1280,
+      "height": 720,
+      "same_node_count": true,
+      "overflow_before": false,
+      "overflow_after": false,
+      "unexpected_measured_style_changes": []
+    },
+    {
+      "page": "archive",
+      "width": 1280,
+      "height": 720,
+      "same_node_count": true,
+      "overflow_before": false,
+      "overflow_after": false,
+      "unexpected_measured_style_changes": []
+    },
+    {
+      "page": "kennisbank",
+      "width": 1280,
+      "height": 720,
+      "same_node_count": true,
+      "overflow_before": false,
+      "overflow_after": false,
+      "unexpected_measured_style_changes": []
+    }
+  ],
+  "interactions": {
+    "list_before": [
+      {
+        "display": "flex",
+        "text": "Basissalaris\nafhankelijk van jouw kennis en werkervaring"
+      }
+    ],
+    "list_after": [
+      {
+        "display": "block",
+        "text": "Basissalaris afhankelijk van jouw kennis en werkervaring"
+      }
+    ],
+    "checkboxFocus": {
+      "focusVisible": true,
+      "id": "form-field-employment_preferences-1",
+      "outline": "rgb(0, 4, 6) solid 3px"
+    },
+    "checkboxToggle": {
+      "checked": true,
+      "checkmark": "block"
+    }
+  },
+  "passed": true,
+  "remaining": "Native WordPress block-style enqueueing and dynamic Elementor menus/popups/filters must still be checked in a complete WordPress environment."
+}

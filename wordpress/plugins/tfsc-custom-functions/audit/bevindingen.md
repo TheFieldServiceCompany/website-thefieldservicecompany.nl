@@ -27,6 +27,7 @@ De gecombineerde vacature-sitemaps bevatten ruim duizend URL's. Die zijn bemonst
 | Dubbele slash in CSS-pad | De live ongeoptimaliseerde URL bevat `tfsc-custom-functions//tfsc-custom-stylesheet.css`. | Padconstructie gecorrigeerd. |
 | Focus van links verborgen | `a:focus,.submit:focus { outline: 0 !important }`. Op het adviesformulier kreeg de privacy-link toetsenbordfocus maar bleef de gemeten outline `none 0px`. | Globale onderdrukking vervangen door `:focus-visible`. |
 | Focus van checkboxen niet zichtbaar op het vakje | De echte checkbox is tot 1 px verkleind en geclipt. Het zichtbare labelvakje heeft geen focusring. | Focusring op `label::before`. |
+| Brede tabellen rekken mobiele artikelen uit | Op een scherm van 390 px wordt de Kennisbankkopie 549 px breed. Het tabelkader heeft `overflow:visible`. | Het kader krijgt `overflow-x:auto`; beide geteste artikelen blijven nu binnen het scherm. |
 | Link en zinsrest vormen losse kolommen in opsomming | Op de vacature Service Monteur Rotating Equipment Internationaal heeft het item met de link Basissalaris `display:flex` en `gap:14px`; de browsertekst toont een scheiding tussen de link en de rest. | Normale blokopmaak met een absoluut gepositioneerd vierkant opsommingsteken. |
 | Eén identiek stijlblok dubbel | `.elementor-form .elementor-field-type-hidden` op originele regels 688 en 717. | De laatste regel behouden. |
 | Eén leeg stijlblok | `.tfsc-query-show-more__label` op originele regel 459. | Verwijderd, zonder de gegenereerde labelklasse zelf weg te halen. |
@@ -65,16 +66,26 @@ Niet verwijderd: generieke H1–H6-regels, popupstijlen, checkboxstaten, de dyna
 - SHA-256 van alle drie de live back-upbestanden gecontroleerd.
 - Alle acht gecontroleerde font-/icoonassets bestaan en geven HTTP 200.
 - 18 functionele controles op PHP 8.3.33 met WordPress-stubs: versie na opslaan, ontbrekende CSS, naam/volgorde stylesheet, zoektekst-escaping, geen post, woorden met accenten, leestijd, oude shortcode-namen en fontinstellingen.
-- 40 CSS-/bronnencontroles: structuur/declaraties, geen aangetroffen bronverwijzingen voor gearchiveerde selectors, exact 19 gearchiveerde regels, behoud van andere declaraties, correcte focusregels, minder-beweginginstelling, dynamische Elementor-stijlen behouden.
+- 41 CSS-/bronnencontroles: structuur/declaraties, geen aangetroffen bronverwijzingen voor gearchiveerde selectors, exact 19 gearchiveerde regels, behoud van andere declaraties, correcte focusregels, minder-beweginginstelling, dynamische Elementor-stijlen behouden.
 - Live browser: homepage, adviesformulier, toetsenbordfocus, vacature met inline link en een via JavaScript ingevoegde Meer-knop gecontroleerd.
 
-Beperkingen: lokale browserweergave op `127.0.0.1` werd door beheerd browserbeleid geblokkeerd. De aangevraagde viewport van 390 × 844 werd niet toegepast; de gemeten viewport bleef 1280 × 720. Daarom zijn mobiele weergave en volledige visuele voor/na-vergelijking niet afgevinkt. De nieuwe plugin is niet live of binnen een volledige WordPress-testomgeving geladen. Statische controles vervangen die controle niet. Formulieren zijn niet verstuurd.
+### Visuele vervolgcontrole na aangepaste browsertoestemming
+
+De lokale browsertoegang en mobiele scherminstelling werken nu. Zes paginatypen zijn met oude en nieuwe CSS vergeleken op desktop (1280 × 720) en mobiel (390 × 844): homepage, adviesformulier, vacature, blogartikel, vacaturearchief en Kennisbankartikel. Dit zijn 12 voor/na-paren en 24 paginaladingen. De inhoud en aantallen gemeten elementen blijven gelijk. De gemeten stijlen verschillen uitsluitend bij de bedoelde lijstaanpassingen.
+
+Geen nieuwe kopie heeft horizontale pagina-overloop. De blog- en Kennisbankkopieën hadden die op mobiel wel met de oude CSS. Brede tabellen schuiven nu binnen hun eigen kader. De browser bevestigt ook dat de tekst 'Basissalaris afhankelijk van jouw kennis en werkervaring' één doorlopende zin is geworden. De formuliercheckbox heeft een zichtbare focusrand en is met de spatiebalk aangevinkt; het zichtbare vinkje verscheen. Geen formulier is verstuurd.
+
+Dit zijn statische HTML-kopieën met scripts en iframes verwijderd en formulierverzending uitgeschakeld. Afbeeldingen die via lazy loading verschijnen zijn placeholders. Dynamische filters, menu's en popups zijn hiermee niet volledig getest. De nieuwe PHP-plugin is nog niet binnen een volledige WordPress-/Elementoromgeving geladen. Vooral het hervatten van native WordPress-blokstijlen vereist nog die controle. De meetresultaten staan in `browser-validation.json`.
+
+![Mobiele tabel](screenshots/mobiele-tabel.png)
+
+![Checkbox met focus](screenshots/formulier-focus.png)
 
 ## Nog beoordelen vóór live plaatsing
 
 1. Native blokstijlen: tabellen, afbeeldingen, groepen en afscheidingslijnen kunnen er anders uitzien nadat de globale blokkade verdwijnt.
-2. Opsommingen met links, nadruk en geneste lijsten op desktop en mobiel.
-3. Focusringen op lichte en donkere achtergronden; privacycheckbox, menu, knoppen en links met toetsenbord bedienen.
+2. De statisch gecontroleerde lijsten en tabellen ook in de werkende WordPress-/Elementoromgeving bekijken, inclusief geneste lijsten.
+3. Focusringen op lichte en donkere achtergronden en dynamische menu’s in de volledige omgeving controleren. De statische checkboxbediening is geslaagd.
 4. Mobiele header, archieffilters, popups/offcanvas, Meer-knoppen en formulieren.
 5. Cache vernieuwen bij plaatsing: CSS-versienummer alleen kan eerder opgeslagen HTML in LiteSpeed/CDN niet herschrijven.
 
