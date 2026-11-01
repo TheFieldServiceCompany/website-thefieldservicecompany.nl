@@ -22,7 +22,7 @@ uitgerold; gedateerde exports staan apart onder `wordpress/exports/code-snippets
 | Code Snippet 193 | Actief | SEO, robots, canonical, metadata en indexeringsbesluit voor combo- en filter-URL's | Snippet 186 en Rank Math |
 | Code Snippet 202 | LIVE actief, versie 6.3 met CPT-correctie | Centrale Pods-velden voor CPT- en taxonomy-base-archieven | Pods Settings Pod en actuele archivecontext |
 | Code Snippet 203 | LIVE actief, versie 6.1 | Generieke dynamische tekst en Pods-velden, ook per Elementor-loopitem | Pods, WordPress-loopcontext en Elementor |
-| Code Snippet 204 | Actief, versie 3.3 | Elementor-postqueries filteren via Pods-relaties zonder bestaande Elementor-filters te overschrijven | Pods, Elementor Query ID `relationship_posts` en taxonomieën van de gekozen Source |
+| Code Snippet 204 | Actief, versie 3.5 | Elementor-postqueries filteren via Pods-relaties zonder bestaande Elementor-filters te overschrijven | Pods, Elementor Query ID `relationship_posts` en taxonomieën van de gekozen Source |
 | Code Snippet 209 | Actief, versie 1.2 | Unieke Rank Math-title en description voor de twee hoofdarchieven en de zeven virtuele Beroepengids-basearchieven | Rank Math en queryvar `tfsc_taxonomy_archive` |
 | Nieuwe snippet, ID nog niet toegewezen | Repository-only | Laat single vacatures zonder handmatige SEO-description de centrale Rank Math-description gebruiken, ook wanneer een WordPress-excerpt bestaat | Rank Math en posttype `vacature` |
 | Code Snippet 215 | Actief, versie 1.2 | Beroepengids-basearchieven en de twee native opleidingstaxonomysitemaps aan de Rank Math-sitemapindex toevoegen | Rank Math Sitemap API |
@@ -225,6 +225,14 @@ hoog paginanummer; een querymarkering voorkomt herhaalde Elementor-aanroepen.
 
 Bron: [snippet 204](php/204-related-posts-pods-relationships.php).
 Controle en herstel: [audit 1 november 2026](../../audits/2026-11-01-relationship-posts-fallback.md).
+
+Versie 3.5 (2 november 2026) gebruikt uitsluitend de ingestelde Pods-
+relaties, zonder vaste groepen of termkoppelingen. Bij nul resultaten van
+de volledige combinatie vervallen groepen zonder aanbod. Resterende groepen
+blijven waar mogelijk AND; ontbreekt hun doorsnede, dan OR. Geen bruikbare
+relatie geeft de oorspronkelijke algemene vacatureselectie. Nieuwe
+relationship_*-taxonomievelden worden dynamisch meegenomen.
+Zie [regels, controles en herstel](../../audits/2026-11-02-generic-pods-vacancy-relations.md).
 
 ### 9 — ALT en title voor uitgelichte afbeelding
 

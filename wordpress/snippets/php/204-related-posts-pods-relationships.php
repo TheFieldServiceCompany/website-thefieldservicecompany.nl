@@ -1,5 +1,8 @@
 <?php
 /**
+ * v3.5: generieke terugval uitsluitend vanuit de ingestelde Pods-relaties.
+ * Eerst volledige AND-combinatie, daarna bruikbare relaties, dan alle vacatures.
+ * Geen vaste functienamen, termslugs of koppelingen buiten Pods.
  * v3.3: vacatureblokken vallen bij nul matches terug op de oorspronkelijke Elementor-selectie.
  * Ontbrekende Pods-relaties gebruiken dezelfde terugval; andere Sources blijven ongewijzigd.
  * v3.2: termarchief-vacatures delen de actieve terugval met de vacatureknop.
@@ -292,23 +295,61 @@ function tfsc_relposts_v3_taxonomy_matches_source(
  * Controleer de eerste pagina: een te hoog paginanummer is geen nul-match.
  * Alle oorspronkelijke Elementor-voorwaarden blijven in beide gevallen staan.
  */
-function tfsc_relposts_v3_set_relationship_query( $query, $tax_query, $vacancy_source ) {
-    if ( $vacancy_source ) {
-        $args = $query->query_vars;
-        $args['tax_query'] = $tax_query;
-        $args['posts_per_page'] = 1;
-        $args['paged'] = 1;
-        $args['page'] = 1;
-        $args['offset'] = 0;
-        $args['fields'] = 'ids';
-        $args['no_found_rows'] = true;
-        $args['_tfsc_relposts_probe'] = true;
-        $probe = new WP_Query( $args );
-        if ( ! $probe->have_posts() ) {
-            return;
+function tfsc_relposts_v3_has_matches( $query, $tax_query ) {
+    $args = $query->query_vars;
+    $args['tax_query'] = $tax_query;
+    $args['posts_per_page'] = 1;
+    $args['paged'] = 1;
+    $args['page'] = 1;
+    $args['offset'] = 0;
+    $args['fields'] = 'ids';
+    $args['no_found_rows'] = true;
+    $args['_tfsc_relposts_probe'] = true;
+    $probe = new WP_Query( $args );
+    return $probe->have_posts();
+}
+
+function tfsc_relposts_v3_combine_queries( $existing, $relationships ) {
+    return is_array( $existing ) && ! empty( $existing )
+        ? [ 'relation' => 'AND', $existing, $relationships ]
+        : $relationships;
+}
+
+function tfsc_relposts_v3_apply_relationships( $query, $relationships, $vacancy_source ) {
+    $existing = $query->get( 'tax_query' );
+    $combined = tfsc_relposts_v3_combine_queries( $existing, $relationships );
+    if ( ! $vacancy_source || tfsc_relposts_v3_has_matches( $query, $combined ) ) {
+        $query->set( 'tax_query', $combined );
+        return;
+    }
+
+    // Elke kandidaat blijft onder de oorspronkelijke Elementor-voorwaarden vallen,
+    // waaronder de uitsluiting van ingevulde vacatures. Geen term krijgt voorrang.
+    $usable = [ 'relation' => 'AND' ];
+    foreach ( $relationships as $key => $clause ) {
+        if ( 'relation' === $key ) { continue; }
+        if ( tfsc_relposts_v3_has_matches(
+            $query, tfsc_relposts_v3_combine_queries( $existing, [ $clause ] )
+        ) ) {
+            $usable[] = $clause;
         }
     }
-    $query->set( 'tax_query', $tax_query );
+    if ( count( $usable ) === 1 ) {
+        // Geen ingestelde relatie levert beschikbare vacatures: oorspronkelijke aanbod.
+        return;
+    }
+    $usable_query = tfsc_relposts_v3_combine_queries( $existing, $usable );
+    if ( count( $usable ) === 2 ||
+         ( count( $usable ) < count( $relationships ) &&
+           tfsc_relposts_v3_has_matches( $query, $usable_query ) ) ) {
+        $query->set( 'tax_query', $usable_query );
+        return;
+    }
+
+    // De afzonderlijke relaties hebben aanbod, maar geen gezamenlijke doorsnede.
+    // Toon dan vacatures die bij minstens één ingestelde relatie passen.
+    $usable['relation'] = 'OR';
+    $query->set( 'tax_query', tfsc_relposts_v3_combine_queries( $existing, $usable ) );
 }
 
 add_action(
@@ -501,32 +542,9 @@ add_action(
             ];
         }
 
-        /*
-         * Elementor kan al tax_query-voorwaarden bevatten, bijvoorbeeld
-         * vac_status = Ingevuld uitsluiten. Die mogen niet worden vervangen.
-         * De relationshipvoorwaarden worden daarom als extra AND-groep
-         * naast de bestaande Elementor-query geplaatst.
-         */
-        $existing_tax_query = $query->get( 'tax_query' );
+        // Volg uitsluitend de hierboven uitgelezen en genormaliseerde Pods-relaties.
+        tfsc_relposts_v3_apply_relationships( $query, $relationship_query, $vacancy_source );
 
-        if (
-            is_array( $existing_tax_query ) &&
-            ! empty( $existing_tax_query )
-        ) {
-            $combined_tax_query = [
-                'relation' => 'AND',
-                $existing_tax_query,
-                $relationship_query,
-            ];
-        } else {
-            $combined_tax_query = $relationship_query;
-        }
-
-        tfsc_relposts_v3_set_relationship_query(
-            $query,
-            $combined_tax_query,
-            $vacancy_source
-        );
     },
     20,
     1

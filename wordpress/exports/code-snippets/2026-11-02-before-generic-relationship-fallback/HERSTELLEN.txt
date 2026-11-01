@@ -1,0 +1,4 @@
+Voor herstel van de vacaturequery: zet alleen code en naam van snippet 204 terug uit 204.json; behoud de actieve status.
+Voor herstel van de artikelindeling: gebruik alleen de twee velden beroep_functienaam en relationship_functienaam uit 27838-classification.json op Beroepengidsartikel 27838.
+Controleer eerst op latere wijzigingen en ververs daarna de paginacache.
+De oude artikelindeling bevat de onbedoelde Service Monteur-relatie; zet deze niet zonder inhoudelijke reden terug.
