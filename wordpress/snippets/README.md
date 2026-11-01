@@ -22,7 +22,7 @@ uitgerold; gedateerde exports staan apart onder `wordpress/exports/code-snippets
 | Code Snippet 193 | Actief | SEO, robots, canonical, metadata en indexeringsbesluit voor combo- en filter-URL's | Snippet 186 en Rank Math |
 | Code Snippet 202 | LIVE actief, versie 6.3 met CPT-correctie | Centrale Pods-velden voor CPT- en taxonomy-base-archieven | Pods Settings Pod en actuele archivecontext |
 | Code Snippet 203 | LIVE actief, versie 6.1 | Generieke dynamische tekst en Pods-velden, ook per Elementor-loopitem | Pods, WordPress-loopcontext en Elementor |
-| Code Snippet 204 | Actief, versie 3.1 | Elementor-postqueries filteren via Pods-relaties zonder bestaande Elementor-filters te overschrijven | Pods, Elementor Query ID `relationship_posts` en taxonomieën van de gekozen Source |
+| Code Snippet 204 | Actief, versie 3.3 | Elementor-postqueries filteren via Pods-relaties zonder bestaande Elementor-filters te overschrijven | Pods, Elementor Query ID `relationship_posts` en taxonomieën van de gekozen Source |
 | Code Snippet 209 | Actief, versie 1.2 | Unieke Rank Math-title en description voor de twee hoofdarchieven en de zeven virtuele Beroepengids-basearchieven | Rank Math en queryvar `tfsc_taxonomy_archive` |
 | Nieuwe snippet, ID nog niet toegewezen | Repository-only | Laat single vacatures zonder handmatige SEO-description de centrale Rank Math-description gebruiken, ook wanneer een WordPress-excerpt bestaat | Rank Math en posttype `vacature` |
 | Code Snippet 215 | Actief, versie 1.2 | Beroepengids-basearchieven en de twee native opleidingstaxonomysitemaps aan de Rank Math-sitemapindex toevoegen | Rank Math Sitemap API |
@@ -199,6 +199,18 @@ De actieve LIVE-snippet is 204. Snippet 240 is de inactieve herstelkopie van
 versie 3.0. De correctie is functioneel getest op de archieven Maritieme
 techniek en MBO: de ingevulde testvacature verdween en gekoppelde open
 vacatures bleven staan.
+
+Versie 3.3 (1 november 2026) voegt voor uitsluitend Source `vacature` een
+terugval toe op de oorspronkelijke Elementor-selectie als de volledige
+relatiecombinatie nul resultaten oplevert. Ontbrekende Pods/relatievelden of
+bruikbare relaties geven dezelfde terugval. Bestaande statusuitsluitingen,
+meta-/taxonomiefilters, sortering en paginering worden behouden. Andere
+Sources en de bestaande termarchiefselectie uit live versie 3.2 blijven intact.
+Een beperkte bestaanscontrole op pagina 1 voorkomt terugval bij alleen een te
+hoog paginanummer; een querymarkering voorkomt herhaalde Elementor-aanroepen.
+
+Bron: [snippet 204](php/204-related-posts-pods-relationships.php).
+Controle en herstel: [audit 1 november 2026](../../audits/2026-11-01-relationship-posts-fallback.md).
 
 ### 9 — ALT en title voor uitgelichte afbeelding
 
