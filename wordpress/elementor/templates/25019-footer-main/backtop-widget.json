@@ -13,17 +13,17 @@
       "url": "#",
       "is_external": "",
       "nofollow": "",
-      "custom_attributes": "aria-label|Terug naar boven"
+      "custom_attributes": "aria-label|Terug naar boven,title|Naar boven"
     },
     "primary_color": "#FFF",
     "size": {
       "unit": "px",
-      "size": 30,
+      "size": 22,
       "sizes": []
     },
     "size_mobile": {
       "unit": "px",
-      "size": 20,
+      "size": 22,
       "sizes": []
     },
     "_padding": {
@@ -45,12 +45,12 @@
     "_element_width": "initial",
     "_element_custom_width": {
       "unit": "px",
-      "size": 60,
+      "size": 48,
       "sizes": []
     },
     "_element_custom_width_mobile": {
       "unit": "px",
-      "size": 44,
+      "size": 48,
       "sizes": []
     },
     "_position": "fixed",
@@ -83,9 +83,9 @@
     },
     "_z_index": 1600,
     "_background_background": "classic",
-    "_background_color": "#00355B8C",
+    "_background_color": "#00355B",
     "__globals__": {
-      "_background_color": "",
+      "_background_color": "globals/colors?id=primary",
       "primary_color": "",
       "_border_color": "globals/colors?id=3df8c800"
     },
@@ -98,7 +98,15 @@
       "left": "1",
       "isLinked": true
     },
-    "_css_classes": "tfsc-back-to-top"
+    "_css_classes": "tfsc-back-to-top",
+    "_border_radius": {
+      "unit": "px",
+      "top": "8",
+      "right": "8",
+      "bottom": "8",
+      "left": "8",
+      "isLinked": true
+    }
   },
   "elements": [],
   "widgetType": "icon"

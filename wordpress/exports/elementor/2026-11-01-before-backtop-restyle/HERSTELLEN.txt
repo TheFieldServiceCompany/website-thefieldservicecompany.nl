@@ -1,0 +1,4 @@
+Herstel alleen de oorspronkelijke settings van iconwidget 530b4f2e
+en HTML-inhoud van widget 74f5021 uit 25019.json na controle op latere wijzigingen.
+De centrale plaatsing in de footer en het scrollgedrag blijven bestaan.
+Wis daarna Elementor- en LiteSpeed-cache.

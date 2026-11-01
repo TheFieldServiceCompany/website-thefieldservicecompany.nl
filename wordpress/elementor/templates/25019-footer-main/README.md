@@ -23,8 +23,10 @@ Routes die beginnen met formulier-, formulier/, bedankt-, bedankpagina- of
 thank-you- (ook hun basisroute) zijn uitgesloten. Tijdens geopende Elementor-
 popups, off-canvasmenu's en native dialogs wordt de knop verborgen.
 
-Vormgeving behouden: dezelfde pijl, rgba(0,53,91,0.55) en witte 1px rand.
-Desktop 60x60 px, mobiel 44x44 px. Rechtsonder: normaal 24 px van onderkant;
+Huidige vormgeving na restyling op 1 november 2026: dekkende primaire
+huisstijlkleur (fallback #00355B), dezelfde witte pijl op 22 px, witte
+1px rand, hoeken van 8 px en subtiele schaduw. Klikvlak op alle schermen
+48x48 px. Native hovertekst Naar boven; aria-label Terug naar boven. Rechtsonder: normaal 24 px van onderkant;
 op mobiele vacatures gemeten hoogte van de vaste sollicitatiebalk plus 16 px.
 
 Verschijnt met fade-in van 180 ms; bij prefers-reduced-motion geen animatie.
