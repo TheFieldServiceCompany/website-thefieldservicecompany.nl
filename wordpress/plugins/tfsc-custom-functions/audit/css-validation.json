@@ -1,0 +1,60 @@
+{
+  "passed": 40,
+  "checks": [
+    "Stylesheet structure parses without errors",
+    "Declaration lists parse without errors",
+    "Stylesheet structure parses without errors",
+    "Declaration lists parse without errors",
+    "Removed selector has no inspected usage: .bkgr-white",
+    "Removed selector has no inspected usage: .bkgr-black",
+    "Removed selector has no inspected usage: .link-underline a",
+    "Removed selector has no inspected usage: .button-trans-black a",
+    "Removed selector has no inspected usage: .button-trans-black a:visited",
+    "Removed selector has no inspected usage: .button-trans-black a:hover",
+    "Removed selector has no inspected usage: .button-black-trans a",
+    "Removed selector has no inspected usage: .button-black-trans a:visited",
+    "Removed selector has no inspected usage: .button-black-trans a:hover",
+    "Removed selector has no inspected usage: .button-white-blue a",
+    "Removed selector has no inspected usage: .button-white-blue a:visited",
+    "Removed selector has no inspected usage: .button-white-blue a:hover",
+    "Removed selector has no inspected usage: .button-green-white-3d a",
+    "Removed selector has no inspected usage: .button-green-white-3d a:visited",
+    "Removed selector has no inspected usage: .button-green-white-3d a:hover",
+    "Removed selector has no inspected usage: .button-trans-orange a",
+    "Removed selector has no inspected usage: .button-trans-orange a:visited",
+    "Removed selector has no inspected usage: .button-trans-orange a:hover",
+    "Removed selector has no inspected usage: #testimonial-home .swiper-slide",
+    "Only the intentional list-layout rules change: .elementor-widget-theme-post-content ul li, .elementor-widget-text-editor ul li",
+    "Only the intentional list-layout rules change: .elementor-widget-theme-post-content ul li::before, .elementor-widget-text-editor ul li::before",
+    "Removed selector has no inspected usage: #blog-subnav a",
+    "Removed selector has no inspected usage: #blog-subnav a.elementor-item.elementor-item-active",
+    "Removed selector has no inspected usage: #blog-subnav a:hover",
+    "Removed selector has no inspected usage: .elementor-element-52ef2827",
+    "Removed selector has no inspected usage: .elementor-element-70547f4f",
+    "Removed selector has no inspected usage: .align-icon-list .elementor-icon-list-item a",
+    "Exactly 19 unused custom rules archived",
+    "Only two existing list rules have changed declarations",
+    "Global focus-outline suppression removed",
+    "Visible checkbox focus indicator added",
+    "Reduced-motion preference supported",
+    "Duplicate hidden-field rule removed",
+    "Empty label rule removed",
+    "Dynamic popup styling retained",
+    "Dynamically inserted Show More button styling retained"
+  ],
+  "unchanged_rule_occurrences": 118,
+  "archived_rules": 19,
+  "intentional_changed_rules": [
+    [
+      ".elementor-widget-theme-post-content ul li",
+      ".elementor-widget-text-editor ul li"
+    ],
+    [
+      ".elementor-widget-theme-post-content ul li::before",
+      ".elementor-widget-text-editor ul li::before"
+    ]
+  ],
+  "old_bytes": 18544,
+  "new_bytes": 16543,
+  "limitations": "Static CSS/source checks; no visual before/after rendering or complete WordPress runtime test."
+}

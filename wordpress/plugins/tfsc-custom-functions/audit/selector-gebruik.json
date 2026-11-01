@@ -1,0 +1,2225 @@
+{
+  "page_count": 171,
+  "successful_pages": 171,
+  "api_counts": {
+    "pages": 28,
+    "elementor_library": 96,
+    "beroepengids": 58,
+    "blog": 4,
+    "kennisbankartikel": 76,
+    "vacature": 63,
+    "vacature_ingevuld": 68
+  },
+  "original_rule_count": 141,
+  "selector_count": 218,
+  "method": "Static HTML matches include potential state/pseudo-element targets; source references alone are not proof of active use.",
+  "selectors": [
+    {
+      "selector": "html",
+      "original_line": 54,
+      "media": "all",
+      "matched_pages": 171,
+      "examples": [
+        "https://thefieldservicecompany.nl/",
+        "https://thefieldservicecompany.nl/beroepengids/",
+        "https://thefieldservicecompany.nl/disclaimer/"
+      ],
+      "potential_source_references": 0
+    },
+    {
+      "selector": "body",
+      "original_line": 54,
+      "media": "all",
+      "matched_pages": 171,
+      "examples": [
+        "https://thefieldservicecompany.nl/",
+        "https://thefieldservicecompany.nl/beroepengids/",
+        "https://thefieldservicecompany.nl/disclaimer/"
+      ],
+      "potential_source_references": 0
+    },
+    {
+      "selector": "body",
+      "original_line": 64,
+      "media": "all",
+      "matched_pages": 171,
+      "examples": [
+        "https://thefieldservicecompany.nl/",
+        "https://thefieldservicecompany.nl/beroepengids/",
+        "https://thefieldservicecompany.nl/disclaimer/"
+      ],
+      "potential_source_references": 0
+    },
+    {
+      "selector": ".header_image-absolute",
+      "original_line": 71,
+      "media": "all",
+      "matched_pages": 17,
+      "examples": [
+        "https://thefieldservicecompany.nl/beroepengids/",
+        "https://thefieldservicecompany.nl/beroepengids/bedrijfssectoren/",
+        "https://thefieldservicecompany.nl/beroepengids/functie-inhoud/"
+      ],
+      "potential_source_references": 6
+    },
+    {
+      "selector": ".header_image-absolute img",
+      "original_line": 71,
+      "media": "all",
+      "matched_pages": 17,
+      "examples": [
+        "https://thefieldservicecompany.nl/beroepengids/",
+        "https://thefieldservicecompany.nl/beroepengids/bedrijfssectoren/",
+        "https://thefieldservicecompany.nl/beroepengids/functie-inhoud/"
+      ],
+      "potential_source_references": 6
+    },
+    {
+      "selector": "h1",
+      "original_line": 82,
+      "media": "all",
+      "matched_pages": 160,
+      "examples": [
+        "https://thefieldservicecompany.nl/",
+        "https://thefieldservicecompany.nl/beroepengids/",
+        "https://thefieldservicecompany.nl/disclaimer/"
+      ],
+      "potential_source_references": 0
+    },
+    {
+      "selector": "h2",
+      "original_line": 82,
+      "media": "all",
+      "matched_pages": 171,
+      "examples": [
+        "https://thefieldservicecompany.nl/",
+        "https://thefieldservicecompany.nl/beroepengids/",
+        "https://thefieldservicecompany.nl/disclaimer/"
+      ],
+      "potential_source_references": 0
+    },
+    {
+      "selector": "h3",
+      "original_line": 82,
+      "media": "all",
+      "matched_pages": 61,
+      "examples": [
+        "https://thefieldservicecompany.nl/",
+        "https://thefieldservicecompany.nl/beroepengids/",
+        "https://thefieldservicecompany.nl/zzp-freelance-opdrachten-in-de-techniek/"
+      ],
+      "potential_source_references": 0
+    },
+    {
+      "selector": "h4",
+      "original_line": 82,
+      "media": "all",
+      "matched_pages": 4,
+      "examples": [
+        "https://thefieldservicecompany.nl/disclaimer/",
+        "https://thefieldservicecompany.nl/ingevulde-vacatures/",
+        "https://thefieldservicecompany.nl/over-ons/"
+      ],
+      "potential_source_references": 0
+    },
+    {
+      "selector": "h5",
+      "original_line": 82,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 0
+    },
+    {
+      "selector": "h6",
+      "original_line": 82,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 0
+    },
+    {
+      "selector": ".elementor-heading-title",
+      "original_line": 82,
+      "media": "all",
+      "matched_pages": 171,
+      "examples": [
+        "https://thefieldservicecompany.nl/",
+        "https://thefieldservicecompany.nl/beroepengids/",
+        "https://thefieldservicecompany.nl/disclaimer/"
+      ],
+      "potential_source_references": 25
+    },
+    {
+      "selector": ".elementor-button",
+      "original_line": 82,
+      "media": "all",
+      "matched_pages": 171,
+      "examples": [
+        "https://thefieldservicecompany.nl/",
+        "https://thefieldservicecompany.nl/beroepengids/",
+        "https://thefieldservicecompany.nl/disclaimer/"
+      ],
+      "potential_source_references": 20
+    },
+    {
+      "selector": "h1.elementor-heading-title",
+      "original_line": 94,
+      "media": "all",
+      "matched_pages": 150,
+      "examples": [
+        "https://thefieldservicecompany.nl/",
+        "https://thefieldservicecompany.nl/beroepengids/",
+        "https://thefieldservicecompany.nl/disclaimer/"
+      ],
+      "potential_source_references": 25
+    },
+    {
+      "selector": ".elementor-shortcode h1",
+      "original_line": 94,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 0
+    },
+    {
+      "selector": "h2.elementor-heading-title",
+      "original_line": 100,
+      "media": "all",
+      "matched_pages": 171,
+      "examples": [
+        "https://thefieldservicecompany.nl/",
+        "https://thefieldservicecompany.nl/beroepengids/",
+        "https://thefieldservicecompany.nl/disclaimer/"
+      ],
+      "potential_source_references": 25
+    },
+    {
+      "selector": ".elementor-shortcode h2",
+      "original_line": 100,
+      "media": "all",
+      "matched_pages": 98,
+      "examples": [
+        "https://thefieldservicecompany.nl/beroepengids/bedrijfssectoren/",
+        "https://thefieldservicecompany.nl/beroepengids/functie-inhoud/",
+        "https://thefieldservicecompany.nl/beroepengids/functienamen/"
+      ],
+      "potential_source_references": 0
+    },
+    {
+      "selector": "h3.elementor-heading-title",
+      "original_line": 105,
+      "media": "all",
+      "matched_pages": 51,
+      "examples": [
+        "https://thefieldservicecompany.nl/",
+        "https://thefieldservicecompany.nl/beroepengids/",
+        "https://thefieldservicecompany.nl/zzp-freelance-opdrachten-in-de-techniek/"
+      ],
+      "potential_source_references": 25
+    },
+    {
+      "selector": ".elementor-shortcode h3",
+      "original_line": 105,
+      "media": "all",
+      "matched_pages": 6,
+      "examples": [
+        "https://thefieldservicecompany.nl/kennisgebied/elektrotechniek/",
+        "https://thefieldservicecompany.nl/kennisgebied/mechanisch/",
+        "https://thefieldservicecompany.nl/kennisgebied/koeltechniek/"
+      ],
+      "potential_source_references": 0
+    },
+    {
+      "selector": "h4.elementor-heading-title",
+      "original_line": 110,
+      "media": "all",
+      "matched_pages": 1,
+      "examples": [
+        "https://thefieldservicecompany.nl/voor-werkgevers/"
+      ],
+      "potential_source_references": 25
+    },
+    {
+      "selector": ".elementor-shortcode h4",
+      "original_line": 110,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 0
+    },
+    {
+      "selector": "h5.elementor-heading-title",
+      "original_line": 115,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 25
+    },
+    {
+      "selector": ".elementor-shortcode h5",
+      "original_line": 115,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 0
+    },
+    {
+      "selector": "h6.elementor-heading-title",
+      "original_line": 120,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 25
+    },
+    {
+      "selector": ".elementor-shortcode h6",
+      "original_line": 120,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 0
+    },
+    {
+      "selector": ".elementor-widget-theme-post-content h2",
+      "original_line": 124,
+      "media": "all",
+      "matched_pages": 19,
+      "examples": [
+        "https://thefieldservicecompany.nl/beroepengids/artikel/wat-doet-een-field-service-engineer-in-de-industriele-machinebouw/",
+        "https://thefieldservicecompany.nl/beroepengids/artikel/wat-is-een-internationaal-field-service-engineer/",
+        "https://thefieldservicecompany.nl/beroepengids/artikel/wat-is-een-servicetechnicus/"
+      ],
+      "potential_source_references": 2
+    },
+    {
+      "selector": ".elementor-widget-theme-post-content h3",
+      "original_line": 130,
+      "media": "all",
+      "matched_pages": 6,
+      "examples": [
+        "https://thefieldservicecompany.nl/beroepengids/artikel/de-werkervaringen-van-4-field-service-engineers-loop-met-ze-mee/",
+        "https://thefieldservicecompany.nl/vacature/commissioning-engineer-offshore/",
+        "https://thefieldservicecompany.nl/vacature/field-service-engineer-compressoren-benelux-duitsland/"
+      ],
+      "potential_source_references": 2
+    },
+    {
+      "selector": ".elementor-widget-theme-post-content h4",
+      "original_line": 136,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 2
+    },
+    {
+      "selector": ".elementor-widget-theme-post-content h5",
+      "original_line": 142,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 2
+    },
+    {
+      "selector": ".elementor-widget-theme-post-content h6",
+      "original_line": 148,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 2
+    },
+    {
+      "selector": "h1.elementor-heading-title a:hover",
+      "original_line": 155,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 25
+    },
+    {
+      "selector": "h2.elementor-heading-title a:hover",
+      "original_line": 155,
+      "media": "all",
+      "matched_pages": 80,
+      "examples": [
+        "https://thefieldservicecompany.nl/",
+        "https://thefieldservicecompany.nl/zzp-freelance-opdrachten-in-de-techniek/",
+        "https://thefieldservicecompany.nl/ingevulde-vacatures/"
+      ],
+      "potential_source_references": 25
+    },
+    {
+      "selector": "h3.elementor-heading-title a:hover",
+      "original_line": 155,
+      "media": "all",
+      "matched_pages": 2,
+      "examples": [
+        "https://thefieldservicecompany.nl/",
+        "https://thefieldservicecompany.nl/zzp-freelance-opdrachten-in-de-techniek/"
+      ],
+      "potential_source_references": 25
+    },
+    {
+      "selector": "h4.elementor-heading-title a:hover",
+      "original_line": 155,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 25
+    },
+    {
+      "selector": "h5.elementor-heading-title a:hover",
+      "original_line": 155,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 25
+    },
+    {
+      "selector": "h6.elementor-heading-title a:hover",
+      "original_line": 155,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 25
+    },
+    {
+      "selector": "a",
+      "original_line": 163,
+      "media": "all",
+      "matched_pages": 171,
+      "examples": [
+        "https://thefieldservicecompany.nl/",
+        "https://thefieldservicecompany.nl/beroepengids/",
+        "https://thefieldservicecompany.nl/disclaimer/"
+      ],
+      "potential_source_references": 0
+    },
+    {
+      "selector": ".elementor-widget-theme-post-content a",
+      "original_line": 166,
+      "media": "all",
+      "matched_pages": 18,
+      "examples": [
+        "https://thefieldservicecompany.nl/beroepengids/artikel/wat-doet-een-field-service-engineer-in-de-industriele-machinebouw/",
+        "https://thefieldservicecompany.nl/beroepengids/artikel/wat-is-een-internationaal-field-service-engineer/",
+        "https://thefieldservicecompany.nl/beroepengids/artikel/wat-is-een-servicetechnicus/"
+      ],
+      "potential_source_references": 2
+    },
+    {
+      "selector": "a:hover",
+      "original_line": 170,
+      "media": "all",
+      "matched_pages": 171,
+      "examples": [
+        "https://thefieldservicecompany.nl/",
+        "https://thefieldservicecompany.nl/beroepengids/",
+        "https://thefieldservicecompany.nl/disclaimer/"
+      ],
+      "potential_source_references": 0
+    },
+    {
+      "selector": "a:focus",
+      "original_line": 174,
+      "media": "all",
+      "matched_pages": 171,
+      "examples": [
+        "https://thefieldservicecompany.nl/",
+        "https://thefieldservicecompany.nl/beroepengids/",
+        "https://thefieldservicecompany.nl/disclaimer/"
+      ],
+      "potential_source_references": 0
+    },
+    {
+      "selector": ".submit:focus",
+      "original_line": 174,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 4
+    },
+    {
+      "selector": ".elementor-widget-text-editor a",
+      "original_line": 177,
+      "media": "all",
+      "matched_pages": 6,
+      "examples": [
+        "https://thefieldservicecompany.nl/beroepengids/",
+        "https://thefieldservicecompany.nl/imprint-legal-notice/",
+        "https://thefieldservicecompany.nl/privacy-statement/"
+      ],
+      "potential_source_references": 21
+    },
+    {
+      "selector": ".elementor-icon-list-items a",
+      "original_line": 181,
+      "media": "all",
+      "matched_pages": 160,
+      "examples": [
+        "https://thefieldservicecompany.nl/",
+        "https://thefieldservicecompany.nl/beroepengids/",
+        "https://thefieldservicecompany.nl/disclaimer/"
+      ],
+      "potential_source_references": 5
+    },
+    {
+      "selector": "b",
+      "original_line": 185,
+      "media": "all",
+      "matched_pages": 16,
+      "examples": [
+        "https://thefieldservicecompany.nl/maintenance-page/",
+        "https://thefieldservicecompany.nl/voor-werkgevers/",
+        "https://thefieldservicecompany.nl/beroepengids/artikel/wat-doet-een-field-service-engineer-in-de-industriele-machinebouw/"
+      ],
+      "potential_source_references": 0
+    },
+    {
+      "selector": "strong",
+      "original_line": 185,
+      "media": "all",
+      "matched_pages": 7,
+      "examples": [
+        "https://thefieldservicecompany.nl/imprint-legal-notice/",
+        "https://thefieldservicecompany.nl/algemene-voorwaarden/",
+        "https://thefieldservicecompany.nl/privacy-statement/"
+      ],
+      "potential_source_references": 0
+    },
+    {
+      "selector": ".bold",
+      "original_line": 185,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 21
+    },
+    {
+      "selector": ".class-link-bold",
+      "original_line": 189,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 1
+    },
+    {
+      "selector": ".class-link-bold:hover",
+      "original_line": 193,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 1
+    },
+    {
+      "selector": ".rank-math-breadcrumb",
+      "original_line": 196,
+      "media": "all",
+      "matched_pages": 138,
+      "examples": [
+        "https://thefieldservicecompany.nl/beroepengids/",
+        "https://thefieldservicecompany.nl/voor-werkgevers/",
+        "https://thefieldservicecompany.nl/beroepengids/bedrijfssectoren/"
+      ],
+      "potential_source_references": 1
+    },
+    {
+      "selector": ".rank-math-breadcrumb p",
+      "original_line": 199,
+      "media": "all",
+      "matched_pages": 138,
+      "examples": [
+        "https://thefieldservicecompany.nl/beroepengids/",
+        "https://thefieldservicecompany.nl/voor-werkgevers/",
+        "https://thefieldservicecompany.nl/beroepengids/bedrijfssectoren/"
+      ],
+      "potential_source_references": 1
+    },
+    {
+      "selector": ".rank-math-breadcrumb a",
+      "original_line": 202,
+      "media": "all",
+      "matched_pages": 138,
+      "examples": [
+        "https://thefieldservicecompany.nl/beroepengids/",
+        "https://thefieldservicecompany.nl/voor-werkgevers/",
+        "https://thefieldservicecompany.nl/beroepengids/bedrijfssectoren/"
+      ],
+      "potential_source_references": 1
+    },
+    {
+      "selector": ".elementor-widget .elementor-icon-list-item",
+      "original_line": 207,
+      "media": "all",
+      "matched_pages": 160,
+      "examples": [
+        "https://thefieldservicecompany.nl/",
+        "https://thefieldservicecompany.nl/beroepengids/",
+        "https://thefieldservicecompany.nl/disclaimer/"
+      ],
+      "potential_source_references": 5
+    },
+    {
+      "selector": ".elementor-icon-list-icon",
+      "original_line": 210,
+      "media": "all",
+      "matched_pages": 160,
+      "examples": [
+        "https://thefieldservicecompany.nl/",
+        "https://thefieldservicecompany.nl/beroepengids/",
+        "https://thefieldservicecompany.nl/disclaimer/"
+      ],
+      "potential_source_references": 4
+    },
+    {
+      "selector": ".text-wit",
+      "original_line": 215,
+      "media": "all",
+      "matched_pages": 159,
+      "examples": [
+        "https://thefieldservicecompany.nl/",
+        "https://thefieldservicecompany.nl/beroepengids/",
+        "https://thefieldservicecompany.nl/disclaimer/"
+      ],
+      "potential_source_references": 19
+    },
+    {
+      "selector": ".text-wit H1",
+      "original_line": 215,
+      "media": "all",
+      "matched_pages": 14,
+      "examples": [
+        "https://thefieldservicecompany.nl/",
+        "https://thefieldservicecompany.nl/zzp-freelance-opdrachten-in-de-techniek/",
+        "https://thefieldservicecompany.nl/field-service-vacatures-op-woonplaats/"
+      ],
+      "potential_source_references": 19
+    },
+    {
+      "selector": ".text-wit H2",
+      "original_line": 215,
+      "media": "all",
+      "matched_pages": 4,
+      "examples": [
+        "https://thefieldservicecompany.nl/",
+        "https://thefieldservicecompany.nl/zzp-freelance-opdrachten-in-de-techniek/",
+        "https://thefieldservicecompany.nl/over-ons/timeline/"
+      ],
+      "potential_source_references": 19
+    },
+    {
+      "selector": ".text-wit H3",
+      "original_line": 215,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 19
+    },
+    {
+      "selector": ".text-wit H4",
+      "original_line": 215,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 19
+    },
+    {
+      "selector": ".text-wit H5",
+      "original_line": 215,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 19
+    },
+    {
+      "selector": ".text-wit H6",
+      "original_line": 215,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 19
+    },
+    {
+      "selector": ".text-blauw",
+      "original_line": 223,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 1
+    },
+    {
+      "selector": ".text-blauw H1",
+      "original_line": 223,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 1
+    },
+    {
+      "selector": ".text-blauw H2",
+      "original_line": 223,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 1
+    },
+    {
+      "selector": ".text-blauw H3",
+      "original_line": 223,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 1
+    },
+    {
+      "selector": ".text-blauw H4",
+      "original_line": 223,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 1
+    },
+    {
+      "selector": ".text-blauw H5",
+      "original_line": 223,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 1
+    },
+    {
+      "selector": ".text-blauw H6",
+      "original_line": 223,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 1
+    },
+    {
+      "selector": ".text-center",
+      "original_line": 231,
+      "media": "all",
+      "matched_pages": 2,
+      "examples": [
+        "https://thefieldservicecompany.nl/maintenance-page/",
+        "https://thefieldservicecompany.nl/over-ons/"
+      ],
+      "potential_source_references": 4
+    },
+    {
+      "selector": ".bkgr-white",
+      "original_line": 233,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 0
+    },
+    {
+      "selector": ".bkgr-black",
+      "original_line": 234,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 0
+    },
+    {
+      "selector": ".uppercase",
+      "original_line": 235,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 20
+    },
+    {
+      "selector": ".elementor-field-textual",
+      "original_line": 236,
+      "media": "all",
+      "matched_pages": 6,
+      "examples": [
+        "https://thefieldservicecompany.nl/formulier-vraag/",
+        "https://thefieldservicecompany.nl/formulier-solliciteren/",
+        "https://thefieldservicecompany.nl/formulier-registreren/"
+      ],
+      "potential_source_references": 4
+    },
+    {
+      "selector": ".link-underline a",
+      "original_line": 237,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 0
+    },
+    {
+      "selector": ".elementor-button",
+      "original_line": 240,
+      "media": "all",
+      "matched_pages": 171,
+      "examples": [
+        "https://thefieldservicecompany.nl/",
+        "https://thefieldservicecompany.nl/beroepengids/",
+        "https://thefieldservicecompany.nl/disclaimer/"
+      ],
+      "potential_source_references": 20
+    },
+    {
+      "selector": ".button-black-white a",
+      "original_line": 248,
+      "media": "all",
+      "matched_pages": 9,
+      "examples": [
+        "https://thefieldservicecompany.nl/bedankt-voor-jouw-registratie-voor-de-freelance-pool/",
+        "https://thefieldservicecompany.nl/bedankt-voor-uw-contactverzoek/",
+        "https://thefieldservicecompany.nl/bedankt-voor-jouw-contactverzoek/"
+      ],
+      "potential_source_references": 18
+    },
+    {
+      "selector": ".button-black-white a:visited",
+      "original_line": 248,
+      "media": "all",
+      "matched_pages": 9,
+      "examples": [
+        "https://thefieldservicecompany.nl/bedankt-voor-jouw-registratie-voor-de-freelance-pool/",
+        "https://thefieldservicecompany.nl/bedankt-voor-uw-contactverzoek/",
+        "https://thefieldservicecompany.nl/bedankt-voor-jouw-contactverzoek/"
+      ],
+      "potential_source_references": 18
+    },
+    {
+      "selector": ".button-black-white a:hover",
+      "original_line": 254,
+      "media": "all",
+      "matched_pages": 9,
+      "examples": [
+        "https://thefieldservicecompany.nl/bedankt-voor-jouw-registratie-voor-de-freelance-pool/",
+        "https://thefieldservicecompany.nl/bedankt-voor-uw-contactverzoek/",
+        "https://thefieldservicecompany.nl/bedankt-voor-jouw-contactverzoek/"
+      ],
+      "potential_source_references": 18
+    },
+    {
+      "selector": ".button-trans-black a",
+      "original_line": 258,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 0
+    },
+    {
+      "selector": ".button-trans-black a:visited",
+      "original_line": 258,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 0
+    },
+    {
+      "selector": ".button-trans-black a:hover",
+      "original_line": 264,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 0
+    },
+    {
+      "selector": ".button-black-trans a",
+      "original_line": 268,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 0
+    },
+    {
+      "selector": ".button-black-trans a:visited",
+      "original_line": 268,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 0
+    },
+    {
+      "selector": ".button-black-trans a:hover",
+      "original_line": 274,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 0
+    },
+    {
+      "selector": ".button-dblue-white a",
+      "original_line": 278,
+      "media": "all",
+      "matched_pages": 139,
+      "examples": [
+        "https://thefieldservicecompany.nl/",
+        "https://thefieldservicecompany.nl/zzp-freelance-opdrachten-in-de-techniek/",
+        "https://thefieldservicecompany.nl/over-ons/"
+      ],
+      "potential_source_references": 15
+    },
+    {
+      "selector": ".button-dblue-white a:visited",
+      "original_line": 278,
+      "media": "all",
+      "matched_pages": 139,
+      "examples": [
+        "https://thefieldservicecompany.nl/",
+        "https://thefieldservicecompany.nl/zzp-freelance-opdrachten-in-de-techniek/",
+        "https://thefieldservicecompany.nl/over-ons/"
+      ],
+      "potential_source_references": 15
+    },
+    {
+      "selector": ".button-dblue-white a:hover",
+      "original_line": 284,
+      "media": "all",
+      "matched_pages": 139,
+      "examples": [
+        "https://thefieldservicecompany.nl/",
+        "https://thefieldservicecompany.nl/zzp-freelance-opdrachten-in-de-techniek/",
+        "https://thefieldservicecompany.nl/over-ons/"
+      ],
+      "potential_source_references": 15
+    },
+    {
+      "selector": ".button-trans-dblue a",
+      "original_line": 288,
+      "media": "all",
+      "matched_pages": 8,
+      "examples": [
+        "https://thefieldservicecompany.nl/",
+        "https://thefieldservicecompany.nl/zzp-freelance-opdrachten-in-de-techniek/",
+        "https://thefieldservicecompany.nl/contact/"
+      ],
+      "potential_source_references": 5
+    },
+    {
+      "selector": ".button-trans-dblue a:visited",
+      "original_line": 288,
+      "media": "all",
+      "matched_pages": 8,
+      "examples": [
+        "https://thefieldservicecompany.nl/",
+        "https://thefieldservicecompany.nl/zzp-freelance-opdrachten-in-de-techniek/",
+        "https://thefieldservicecompany.nl/contact/"
+      ],
+      "potential_source_references": 5
+    },
+    {
+      "selector": ".button-trans-dblue a:hover",
+      "original_line": 294,
+      "media": "all",
+      "matched_pages": 8,
+      "examples": [
+        "https://thefieldservicecompany.nl/",
+        "https://thefieldservicecompany.nl/zzp-freelance-opdrachten-in-de-techniek/",
+        "https://thefieldservicecompany.nl/contact/"
+      ],
+      "potential_source_references": 5
+    },
+    {
+      "selector": ".button-white-dblue a",
+      "original_line": 298,
+      "media": "all",
+      "matched_pages": 1,
+      "examples": [
+        "https://thefieldservicecompany.nl/field-service-vacatures-op-woonplaats/"
+      ],
+      "potential_source_references": 2
+    },
+    {
+      "selector": ".button-white-dblue a:visited",
+      "original_line": 298,
+      "media": "all",
+      "matched_pages": 1,
+      "examples": [
+        "https://thefieldservicecompany.nl/field-service-vacatures-op-woonplaats/"
+      ],
+      "potential_source_references": 2
+    },
+    {
+      "selector": ".button-white-dblue a:hover",
+      "original_line": 304,
+      "media": "all",
+      "matched_pages": 1,
+      "examples": [
+        "https://thefieldservicecompany.nl/field-service-vacatures-op-woonplaats/"
+      ],
+      "potential_source_references": 2
+    },
+    {
+      "selector": ".button-dblue-trans a",
+      "original_line": 308,
+      "media": "all",
+      "matched_pages": 79,
+      "examples": [
+        "https://thefieldservicecompany.nl/",
+        "https://thefieldservicecompany.nl/zzp-freelance-opdrachten-in-de-techniek/",
+        "https://thefieldservicecompany.nl/vacatures/"
+      ],
+      "potential_source_references": 4
+    },
+    {
+      "selector": ".button-dblue-trans a:visited",
+      "original_line": 308,
+      "media": "all",
+      "matched_pages": 79,
+      "examples": [
+        "https://thefieldservicecompany.nl/",
+        "https://thefieldservicecompany.nl/zzp-freelance-opdrachten-in-de-techniek/",
+        "https://thefieldservicecompany.nl/vacatures/"
+      ],
+      "potential_source_references": 4
+    },
+    {
+      "selector": ".button-dblue-trans a:hover",
+      "original_line": 314,
+      "media": "all",
+      "matched_pages": 79,
+      "examples": [
+        "https://thefieldservicecompany.nl/",
+        "https://thefieldservicecompany.nl/zzp-freelance-opdrachten-in-de-techniek/",
+        "https://thefieldservicecompany.nl/vacatures/"
+      ],
+      "potential_source_references": 4
+    },
+    {
+      "selector": ".button-blue-white a",
+      "original_line": 318,
+      "media": "all",
+      "matched_pages": 5,
+      "examples": [
+        "https://thefieldservicecompany.nl/bedankt-voor-jouw-registratie-voor-de-freelance-pool/",
+        "https://thefieldservicecompany.nl/bedankt-voor-jouw-contactverzoek/",
+        "https://thefieldservicecompany.nl/bedankt-voor-jouw-vraag/"
+      ],
+      "potential_source_references": 19
+    },
+    {
+      "selector": ".button-blue-white a:visited",
+      "original_line": 318,
+      "media": "all",
+      "matched_pages": 5,
+      "examples": [
+        "https://thefieldservicecompany.nl/bedankt-voor-jouw-registratie-voor-de-freelance-pool/",
+        "https://thefieldservicecompany.nl/bedankt-voor-jouw-contactverzoek/",
+        "https://thefieldservicecompany.nl/bedankt-voor-jouw-vraag/"
+      ],
+      "potential_source_references": 19
+    },
+    {
+      "selector": ".button-blue-white a:hover",
+      "original_line": 324,
+      "media": "all",
+      "matched_pages": 5,
+      "examples": [
+        "https://thefieldservicecompany.nl/bedankt-voor-jouw-registratie-voor-de-freelance-pool/",
+        "https://thefieldservicecompany.nl/bedankt-voor-jouw-contactverzoek/",
+        "https://thefieldservicecompany.nl/bedankt-voor-jouw-vraag/"
+      ],
+      "potential_source_references": 19
+    },
+    {
+      "selector": ".button-white-blue a",
+      "original_line": 328,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 0
+    },
+    {
+      "selector": ".button-white-blue a:visited",
+      "original_line": 328,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 0
+    },
+    {
+      "selector": ".button-white-blue a:hover",
+      "original_line": 334,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 0
+    },
+    {
+      "selector": ".button-blue-white-3d a",
+      "original_line": 338,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 3
+    },
+    {
+      "selector": ".button-blue-white-3d a:visited",
+      "original_line": 338,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 3
+    },
+    {
+      "selector": ".button-blue-white-3d a:hover",
+      "original_line": 346,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 3
+    },
+    {
+      "selector": ".button-orange-white-3d a",
+      "original_line": 350,
+      "media": "all",
+      "matched_pages": 160,
+      "examples": [
+        "https://thefieldservicecompany.nl/",
+        "https://thefieldservicecompany.nl/beroepengids/",
+        "https://thefieldservicecompany.nl/disclaimer/"
+      ],
+      "potential_source_references": 26
+    },
+    {
+      "selector": ".button-orange-white-3d a:visited",
+      "original_line": 350,
+      "media": "all",
+      "matched_pages": 160,
+      "examples": [
+        "https://thefieldservicecompany.nl/",
+        "https://thefieldservicecompany.nl/beroepengids/",
+        "https://thefieldservicecompany.nl/disclaimer/"
+      ],
+      "potential_source_references": 26
+    },
+    {
+      "selector": ".button-orange-white-3d a:hover",
+      "original_line": 360,
+      "media": "all",
+      "matched_pages": 160,
+      "examples": [
+        "https://thefieldservicecompany.nl/",
+        "https://thefieldservicecompany.nl/beroepengids/",
+        "https://thefieldservicecompany.nl/disclaimer/"
+      ],
+      "potential_source_references": 26
+    },
+    {
+      "selector": ".button-green-white-3d a",
+      "original_line": 364,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 0
+    },
+    {
+      "selector": ".button-green-white-3d a:visited",
+      "original_line": 364,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 0
+    },
+    {
+      "selector": ".button-green-white-3d a:hover",
+      "original_line": 372,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 0
+    },
+    {
+      "selector": ".button-green-white a",
+      "original_line": 377,
+      "media": "all",
+      "matched_pages": 1,
+      "examples": [
+        "https://thefieldservicecompany.nl/?taxonomy=dienstverband&term=freelance-zzp"
+      ],
+      "potential_source_references": 3
+    },
+    {
+      "selector": ".button-green-white a:visited",
+      "original_line": 377,
+      "media": "all",
+      "matched_pages": 1,
+      "examples": [
+        "https://thefieldservicecompany.nl/?taxonomy=dienstverband&term=freelance-zzp"
+      ],
+      "potential_source_references": 3
+    },
+    {
+      "selector": ".button-green-white a:hover",
+      "original_line": 385,
+      "media": "all",
+      "matched_pages": 1,
+      "examples": [
+        "https://thefieldservicecompany.nl/?taxonomy=dienstverband&term=freelance-zzp"
+      ],
+      "potential_source_references": 3
+    },
+    {
+      "selector": ".button-trans-green a",
+      "original_line": 389,
+      "media": "all",
+      "matched_pages": 1,
+      "examples": [
+        "https://thefieldservicecompany.nl/contact/"
+      ],
+      "potential_source_references": 2
+    },
+    {
+      "selector": ".button-trans-green a:visited",
+      "original_line": 389,
+      "media": "all",
+      "matched_pages": 1,
+      "examples": [
+        "https://thefieldservicecompany.nl/contact/"
+      ],
+      "potential_source_references": 2
+    },
+    {
+      "selector": ".button-trans-green a:hover",
+      "original_line": 397,
+      "media": "all",
+      "matched_pages": 1,
+      "examples": [
+        "https://thefieldservicecompany.nl/contact/"
+      ],
+      "potential_source_references": 2
+    },
+    {
+      "selector": ".button-orange-white a",
+      "original_line": 401,
+      "media": "all",
+      "matched_pages": 1,
+      "examples": [
+        "https://thefieldservicecompany.nl/ingevulde-vacatures/"
+      ],
+      "potential_source_references": 6
+    },
+    {
+      "selector": ".button-orange-white a:visited",
+      "original_line": 401,
+      "media": "all",
+      "matched_pages": 1,
+      "examples": [
+        "https://thefieldservicecompany.nl/ingevulde-vacatures/"
+      ],
+      "potential_source_references": 6
+    },
+    {
+      "selector": ".button-orange-white a:hover",
+      "original_line": 407,
+      "media": "all",
+      "matched_pages": 1,
+      "examples": [
+        "https://thefieldservicecompany.nl/ingevulde-vacatures/"
+      ],
+      "potential_source_references": 6
+    },
+    {
+      "selector": ".button-trans-orange a",
+      "original_line": 411,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 0
+    },
+    {
+      "selector": ".button-trans-orange a:visited",
+      "original_line": 411,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 0
+    },
+    {
+      "selector": ".button-trans-orange a:hover",
+      "original_line": 417,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 0
+    },
+    {
+      "selector": ".button-trans-white a",
+      "original_line": 421,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 1
+    },
+    {
+      "selector": ".button-trans-white a:visited",
+      "original_line": 421,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 1
+    },
+    {
+      "selector": ".button-trans-white a:hover",
+      "original_line": 427,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 1
+    },
+    {
+      "selector": ".button-white-black a",
+      "original_line": 431,
+      "media": "all",
+      "matched_pages": 3,
+      "examples": [
+        "https://thefieldservicecompany.nl/",
+        "https://thefieldservicecompany.nl/zzp-freelance-opdrachten-in-de-techniek/",
+        "https://thefieldservicecompany.nl/over-jou/"
+      ],
+      "potential_source_references": 3
+    },
+    {
+      "selector": ".button-white-black a:visited",
+      "original_line": 431,
+      "media": "all",
+      "matched_pages": 3,
+      "examples": [
+        "https://thefieldservicecompany.nl/",
+        "https://thefieldservicecompany.nl/zzp-freelance-opdrachten-in-de-techniek/",
+        "https://thefieldservicecompany.nl/over-jou/"
+      ],
+      "potential_source_references": 3
+    },
+    {
+      "selector": ".button-white-black a:hover",
+      "original_line": 437,
+      "media": "all",
+      "matched_pages": 3,
+      "examples": [
+        "https://thefieldservicecompany.nl/",
+        "https://thefieldservicecompany.nl/zzp-freelance-opdrachten-in-de-techniek/",
+        "https://thefieldservicecompany.nl/over-jou/"
+      ],
+      "potential_source_references": 3
+    },
+    {
+      "selector": ".tfsc_query_show-more .tfsc-query-show-more__wrapper",
+      "original_line": 442,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 0
+    },
+    {
+      "selector": ".tfsc-query-show-more__button",
+      "original_line": 445,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 2
+    },
+    {
+      "selector": ".tfsc-query-show-more__button:visited",
+      "original_line": 445,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 2
+    },
+    {
+      "selector": ".tfsc-query-show-more__button:focus",
+      "original_line": 445,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 2
+    },
+    {
+      "selector": ".tfsc-query-show-more__label",
+      "original_line": 459,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 2
+    },
+    {
+      "selector": ".tfsc-query-show-more__button:hover",
+      "original_line": 461,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 2
+    },
+    {
+      "selector": ".tfsc-query-show-more__button:active",
+      "original_line": 461,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 2
+    },
+    {
+      "selector": ".tfsc-query-show-more__icon",
+      "original_line": 466,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 2
+    },
+    {
+      "selector": ".tfsc-post-terms",
+      "original_line": 472,
+      "media": "all",
+      "matched_pages": 5,
+      "examples": [
+        "https://thefieldservicecompany.nl/beroepengids/artikel/wat-doet-een-field-service-engineer-in-de-industriele-machinebouw/",
+        "https://thefieldservicecompany.nl/beroepengids/artikel/wat-is-een-internationaal-field-service-engineer/",
+        "https://thefieldservicecompany.nl/beroepengids/artikel/wat-is-een-servicetechnicus/"
+      ],
+      "potential_source_references": 0
+    },
+    {
+      "selector": ".tfsc-post-terms__item",
+      "original_line": 478,
+      "media": "all",
+      "matched_pages": 5,
+      "examples": [
+        "https://thefieldservicecompany.nl/beroepengids/artikel/wat-doet-een-field-service-engineer-in-de-industriele-machinebouw/",
+        "https://thefieldservicecompany.nl/beroepengids/artikel/wat-is-een-internationaal-field-service-engineer/",
+        "https://thefieldservicecompany.nl/beroepengids/artikel/wat-is-een-servicetechnicus/"
+      ],
+      "potential_source_references": 0
+    },
+    {
+      "selector": ".tfsc-post-terms__item:visited",
+      "original_line": 478,
+      "media": "all",
+      "matched_pages": 5,
+      "examples": [
+        "https://thefieldservicecompany.nl/beroepengids/artikel/wat-doet-een-field-service-engineer-in-de-industriele-machinebouw/",
+        "https://thefieldservicecompany.nl/beroepengids/artikel/wat-is-een-internationaal-field-service-engineer/",
+        "https://thefieldservicecompany.nl/beroepengids/artikel/wat-is-een-servicetechnicus/"
+      ],
+      "potential_source_references": 0
+    },
+    {
+      "selector": ".tfsc-post-terms__item:active",
+      "original_line": 478,
+      "media": "all",
+      "matched_pages": 5,
+      "examples": [
+        "https://thefieldservicecompany.nl/beroepengids/artikel/wat-doet-een-field-service-engineer-in-de-industriele-machinebouw/",
+        "https://thefieldservicecompany.nl/beroepengids/artikel/wat-is-een-internationaal-field-service-engineer/",
+        "https://thefieldservicecompany.nl/beroepengids/artikel/wat-is-een-servicetechnicus/"
+      ],
+      "potential_source_references": 0
+    },
+    {
+      "selector": ".tfsc-post-terms__item:hover",
+      "original_line": 493,
+      "media": "all",
+      "matched_pages": 5,
+      "examples": [
+        "https://thefieldservicecompany.nl/beroepengids/artikel/wat-doet-een-field-service-engineer-in-de-industriele-machinebouw/",
+        "https://thefieldservicecompany.nl/beroepengids/artikel/wat-is-een-internationaal-field-service-engineer/",
+        "https://thefieldservicecompany.nl/beroepengids/artikel/wat-is-een-servicetechnicus/"
+      ],
+      "potential_source_references": 0
+    },
+    {
+      "selector": ".tfsc-scroll-target",
+      "original_line": 504,
+      "media": "all",
+      "matched_pages": 83,
+      "examples": [
+        "https://thefieldservicecompany.nl/beroepengids/artikelen/",
+        "https://thefieldservicecompany.nl/blog/",
+        "https://thefieldservicecompany.nl/kennisbank/"
+      ],
+      "potential_source_references": 4
+    },
+    {
+      "selector": ".tfsc-scroll-target",
+      "original_line": 509,
+      "media": "(max-width: 767px)",
+      "matched_pages": 83,
+      "examples": [
+        "https://thefieldservicecompany.nl/beroepengids/artikelen/",
+        "https://thefieldservicecompany.nl/blog/",
+        "https://thefieldservicecompany.nl/kennisbank/"
+      ],
+      "potential_source_references": 4
+    },
+    {
+      "selector": ".archive.tax-functienaam .tax-display-none-before",
+      "original_line": 517,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 1
+    },
+    {
+      "selector": ".archive.tax-werkgebied .tax-display-none-after",
+      "original_line": 517,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 0
+    },
+    {
+      "selector": ".vac-places .elementor-icon-list-item a",
+      "original_line": 524,
+      "media": "all",
+      "matched_pages": 3,
+      "examples": [
+        "https://thefieldservicecompany.nl/",
+        "https://thefieldservicecompany.nl/zzp-freelance-opdrachten-in-de-techniek/",
+        "https://thefieldservicecompany.nl/field-service-vacatures-op-woonplaats/"
+      ],
+      "potential_source_references": 1
+    },
+    {
+      "selector": ".vac-places .elementor-icon-list-item a:hover",
+      "original_line": 533,
+      "media": "all",
+      "matched_pages": 3,
+      "examples": [
+        "https://thefieldservicecompany.nl/",
+        "https://thefieldservicecompany.nl/zzp-freelance-opdrachten-in-de-techniek/",
+        "https://thefieldservicecompany.nl/field-service-vacatures-op-woonplaats/"
+      ],
+      "potential_source_references": 1
+    },
+    {
+      "selector": "#testimonial-home .swiper-slide",
+      "original_line": 540,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 0
+    },
+    {
+      "selector": ".tfsc-breadcrumb-scroll",
+      "original_line": 548,
+      "media": "all",
+      "matched_pages": 133,
+      "examples": [
+        "https://thefieldservicecompany.nl/beroepengids/bedrijfssectoren/",
+        "https://thefieldservicecompany.nl/beroepengids/functie-inhoud/",
+        "https://thefieldservicecompany.nl/beroepengids/functienamen/"
+      ],
+      "potential_source_references": 9
+    },
+    {
+      "selector": ".elementor-widget-theme-post-content figure",
+      "original_line": 553,
+      "media": "all",
+      "matched_pages": 14,
+      "examples": [
+        "https://thefieldservicecompany.nl/beroepengids/artikel/wat-doet-een-field-service-engineer-in-de-industriele-machinebouw/",
+        "https://thefieldservicecompany.nl/beroepengids/artikel/wat-is-een-internationaal-field-service-engineer/",
+        "https://thefieldservicecompany.nl/beroepengids/artikel/wat-is-een-servicetechnicus/"
+      ],
+      "potential_source_references": 2
+    },
+    {
+      "selector": ".elementor-widget-theme-post-content ol",
+      "original_line": 557,
+      "media": "all",
+      "matched_pages": 2,
+      "examples": [
+        "https://thefieldservicecompany.nl/blog/wat-is-het-beste-recruitmentbureau-voor-field-service-vacatures/",
+        "https://thefieldservicecompany.nl/kennisbank/wat-is-een-ai-agent/"
+      ],
+      "potential_source_references": 2
+    },
+    {
+      "selector": ".elementor-widget-theme-post-content ul",
+      "original_line": 560,
+      "media": "all",
+      "matched_pages": 8,
+      "examples": [
+        "https://thefieldservicecompany.nl/blog/waarom-ai-de-field-service-engineer-niet-vervangt-maar-zijn-werk-wel-verandert/",
+        "https://thefieldservicecompany.nl/blog/wat-is-het-beste-recruitmentbureau-voor-field-service-vacatures/",
+        "https://thefieldservicecompany.nl/kennisbank/wat-is-een-ai-agent/"
+      ],
+      "potential_source_references": 2
+    },
+    {
+      "selector": ".elementor-widget-text-editor ul",
+      "original_line": 560,
+      "media": "all",
+      "matched_pages": 6,
+      "examples": [
+        "https://thefieldservicecompany.nl/privacy-statement/",
+        "https://thefieldservicecompany.nl/beroepengids/bedrijfssectoren/",
+        "https://thefieldservicecompany.nl/beroepengids/functie-inhoud/"
+      ],
+      "potential_source_references": 21
+    },
+    {
+      "selector": ".elementor-widget-theme-post-content ul li",
+      "original_line": 565,
+      "media": "all",
+      "matched_pages": 8,
+      "examples": [
+        "https://thefieldservicecompany.nl/blog/waarom-ai-de-field-service-engineer-niet-vervangt-maar-zijn-werk-wel-verandert/",
+        "https://thefieldservicecompany.nl/blog/wat-is-het-beste-recruitmentbureau-voor-field-service-vacatures/",
+        "https://thefieldservicecompany.nl/kennisbank/wat-is-een-ai-agent/"
+      ],
+      "potential_source_references": 2
+    },
+    {
+      "selector": ".elementor-widget-text-editor ul li",
+      "original_line": 565,
+      "media": "all",
+      "matched_pages": 6,
+      "examples": [
+        "https://thefieldservicecompany.nl/privacy-statement/",
+        "https://thefieldservicecompany.nl/beroepengids/bedrijfssectoren/",
+        "https://thefieldservicecompany.nl/beroepengids/functie-inhoud/"
+      ],
+      "potential_source_references": 21
+    },
+    {
+      "selector": ".elementor-widget-theme-post-content ul li::before",
+      "original_line": 574,
+      "media": "all",
+      "matched_pages": 8,
+      "examples": [
+        "https://thefieldservicecompany.nl/blog/waarom-ai-de-field-service-engineer-niet-vervangt-maar-zijn-werk-wel-verandert/",
+        "https://thefieldservicecompany.nl/blog/wat-is-het-beste-recruitmentbureau-voor-field-service-vacatures/",
+        "https://thefieldservicecompany.nl/kennisbank/wat-is-een-ai-agent/"
+      ],
+      "potential_source_references": 2
+    },
+    {
+      "selector": ".elementor-widget-text-editor ul li::before",
+      "original_line": 574,
+      "media": "all",
+      "matched_pages": 6,
+      "examples": [
+        "https://thefieldservicecompany.nl/privacy-statement/",
+        "https://thefieldservicecompany.nl/beroepengids/bedrijfssectoren/",
+        "https://thefieldservicecompany.nl/beroepengids/functie-inhoud/"
+      ],
+      "potential_source_references": 21
+    },
+    {
+      "selector": ".single-vacature .elementor-toc__list-item",
+      "original_line": 586,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 0
+    },
+    {
+      "selector": ".single-blog .elementor-toc__list-item",
+      "original_line": 586,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 0
+    },
+    {
+      "selector": ".single-vacature .elementor-toc__list-item-text-wrapper:before",
+      "original_line": 589,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 0
+    },
+    {
+      "selector": ".single-blog .elementor-toc__list-item-text-wrapper:before",
+      "original_line": 589,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 0
+    },
+    {
+      "selector": ".blog-tekst .elementor-menu-anchor",
+      "original_line": 592,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 0
+    },
+    {
+      "selector": ".vacature-tekst .elementor-menu-anchor",
+      "original_line": 592,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 0
+    },
+    {
+      "selector": "#scroll-top",
+      "original_line": 599,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 3
+    },
+    {
+      "selector": "#blog-subnav a",
+      "original_line": 606,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 0
+    },
+    {
+      "selector": "#blog-subnav a.elementor-item.elementor-item-active",
+      "original_line": 612,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 0
+    },
+    {
+      "selector": "#blog-subnav a:hover",
+      "original_line": 615,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 0
+    },
+    {
+      "selector": ".blog-tekst .wp-block-separator",
+      "original_line": 618,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 0
+    },
+    {
+      "selector": ".vacature-tekst .wp-block-separator",
+      "original_line": 618,
+      "media": "all",
+      "matched_pages": 1,
+      "examples": [
+        "https://thefieldservicecompany.nl/vacature/service-engineer-koeltechniek-vacature/"
+      ],
+      "potential_source_references": 0
+    },
+    {
+      "selector": ".rank-math-list-item",
+      "original_line": 626,
+      "media": "all",
+      "matched_pages": 1,
+      "examples": [
+        "https://thefieldservicecompany.nl/vacature/service-engineer-koeltechniek-vacature/"
+      ],
+      "potential_source_references": 16
+    },
+    {
+      "selector": ".elementor-pagination",
+      "original_line": 633,
+      "media": "all",
+      "matched_pages": 31,
+      "examples": [
+        "https://thefieldservicecompany.nl/ingevulde-vacatures/",
+        "https://thefieldservicecompany.nl/beroepengids/functienamen/",
+        "https://thefieldservicecompany.nl/beroepengids/artikelen/"
+      ],
+      "potential_source_references": 7
+    },
+    {
+      "selector": ".elementor-pagination .page-numbers",
+      "original_line": 639,
+      "media": "all",
+      "matched_pages": 31,
+      "examples": [
+        "https://thefieldservicecompany.nl/ingevulde-vacatures/",
+        "https://thefieldservicecompany.nl/beroepengids/functienamen/",
+        "https://thefieldservicecompany.nl/beroepengids/artikelen/"
+      ],
+      "potential_source_references": 2
+    },
+    {
+      "selector": ".elementor-pagination .page-numbers.current",
+      "original_line": 646,
+      "media": "all",
+      "matched_pages": 31,
+      "examples": [
+        "https://thefieldservicecompany.nl/ingevulde-vacatures/",
+        "https://thefieldservicecompany.nl/beroepengids/functienamen/",
+        "https://thefieldservicecompany.nl/beroepengids/artikelen/"
+      ],
+      "potential_source_references": 1
+    },
+    {
+      "selector": ".elementor-pagination .page-numbers:hover",
+      "original_line": 651,
+      "media": "all",
+      "matched_pages": 31,
+      "examples": [
+        "https://thefieldservicecompany.nl/ingevulde-vacatures/",
+        "https://thefieldservicecompany.nl/beroepengids/functienamen/",
+        "https://thefieldservicecompany.nl/beroepengids/artikelen/"
+      ],
+      "potential_source_references": 2
+    },
+    {
+      "selector": ".elementor-field-textual.elementor-size-sm",
+      "original_line": 659,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 0
+    },
+    {
+      "selector": ".elementor-field-label",
+      "original_line": 661,
+      "media": "all",
+      "matched_pages": 6,
+      "examples": [
+        "https://thefieldservicecompany.nl/formulier-vraag/",
+        "https://thefieldservicecompany.nl/formulier-solliciteren/",
+        "https://thefieldservicecompany.nl/formulier-registreren/"
+      ],
+      "potential_source_references": 4
+    },
+    {
+      "selector": ".elementor-form-font-regular",
+      "original_line": 664,
+      "media": "all",
+      "matched_pages": 1,
+      "examples": [
+        "https://thefieldservicecompany.nl/ingevulde-vacatures/"
+      ],
+      "potential_source_references": 3
+    },
+    {
+      "selector": ".elementor-form .elementor-field-type-hidden",
+      "original_line": 688,
+      "media": "all",
+      "matched_pages": 5,
+      "examples": [
+        "https://thefieldservicecompany.nl/formulier-vraag/",
+        "https://thefieldservicecompany.nl/formulier-solliciteren/",
+        "https://thefieldservicecompany.nl/formulier-registreren/"
+      ],
+      "potential_source_references": 4
+    },
+    {
+      "selector": ".elementor-popup-modal .dialog-message",
+      "original_line": 691,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 0
+    },
+    {
+      "selector": ".elementor-element-52ef2827",
+      "original_line": 695,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 0
+    },
+    {
+      "selector": ".elementor-element-70547f4f",
+      "original_line": 695,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 0
+    },
+    {
+      "selector": ".form-link-bold",
+      "original_line": 698,
+      "media": "all",
+      "matched_pages": 4,
+      "examples": [
+        "https://thefieldservicecompany.nl/formulier-vraag/",
+        "https://thefieldservicecompany.nl/formulier-registreren/",
+        "https://thefieldservicecompany.nl/ingevulde-vacatures/"
+      ],
+      "potential_source_references": 8
+    },
+    {
+      "selector": ".elementor-popup-modal .dialog-close-button i",
+      "original_line": 702,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 0
+    },
+    {
+      "selector": ".align-icon-list .elementor-icon-list-item a",
+      "original_line": 708,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 0
+    },
+    {
+      "selector": ".elementor-icon-list-items .elementor-icon-list-item .elementor-icon-list-text a",
+      "original_line": 709,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 5
+    },
+    {
+      "selector": ".elementor-icon-list-items .elementor-icon-list-item .elementor-icon-list-text span",
+      "original_line": 709,
+      "media": "all",
+      "matched_pages": 5,
+      "examples": [
+        "https://thefieldservicecompany.nl/vacature/commissioning-engineer-offshore/",
+        "https://thefieldservicecompany.nl/vacature/field-service-engineer-compressoren-benelux-duitsland/",
+        "https://thefieldservicecompany.nl/vacature/service-monteur-rotating-equipment-internationaal/"
+      ],
+      "potential_source_references": 5
+    },
+    {
+      "selector": ".grecaptcha-badge",
+      "original_line": 713,
+      "media": "all",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 0
+    },
+    {
+      "selector": ".elementor-form .elementor-field-type-hidden",
+      "original_line": 717,
+      "media": "all",
+      "matched_pages": 5,
+      "examples": [
+        "https://thefieldservicecompany.nl/formulier-vraag/",
+        "https://thefieldservicecompany.nl/formulier-solliciteren/",
+        "https://thefieldservicecompany.nl/formulier-registreren/"
+      ],
+      "potential_source_references": 4
+    },
+    {
+      "selector": ".elementor-form input[type=\"checkbox\"]",
+      "original_line": 720,
+      "media": "all",
+      "matched_pages": 6,
+      "examples": [
+        "https://thefieldservicecompany.nl/formulier-vraag/",
+        "https://thefieldservicecompany.nl/formulier-solliciteren/",
+        "https://thefieldservicecompany.nl/formulier-registreren/"
+      ],
+      "potential_source_references": 4
+    },
+    {
+      "selector": ".elementor-form input[type=checkbox]+label",
+      "original_line": 730,
+      "media": "all",
+      "matched_pages": 6,
+      "examples": [
+        "https://thefieldservicecompany.nl/formulier-vraag/",
+        "https://thefieldservicecompany.nl/formulier-solliciteren/",
+        "https://thefieldservicecompany.nl/formulier-registreren/"
+      ],
+      "potential_source_references": 4
+    },
+    {
+      "selector": ".elementor-form input[type=checkbox]+label:before",
+      "original_line": 734,
+      "media": "all",
+      "matched_pages": 6,
+      "examples": [
+        "https://thefieldservicecompany.nl/formulier-vraag/",
+        "https://thefieldservicecompany.nl/formulier-solliciteren/",
+        "https://thefieldservicecompany.nl/formulier-registreren/"
+      ],
+      "potential_source_references": 4
+    },
+    {
+      "selector": ".elementor-form input[type=checkbox]+label:after",
+      "original_line": 747,
+      "media": "all",
+      "matched_pages": 6,
+      "examples": [
+        "https://thefieldservicecompany.nl/formulier-vraag/",
+        "https://thefieldservicecompany.nl/formulier-solliciteren/",
+        "https://thefieldservicecompany.nl/formulier-registreren/"
+      ],
+      "potential_source_references": 4
+    },
+    {
+      "selector": ".elementor-form input[type=checkbox]:hover +label:before",
+      "original_line": 760,
+      "media": "all",
+      "matched_pages": 6,
+      "examples": [
+        "https://thefieldservicecompany.nl/formulier-vraag/",
+        "https://thefieldservicecompany.nl/formulier-solliciteren/",
+        "https://thefieldservicecompany.nl/formulier-registreren/"
+      ],
+      "potential_source_references": 4
+    },
+    {
+      "selector": ".elementor-form input[type=checkbox]:checked +label:before",
+      "original_line": 763,
+      "media": "all",
+      "matched_pages": 6,
+      "examples": [
+        "https://thefieldservicecompany.nl/formulier-vraag/",
+        "https://thefieldservicecompany.nl/formulier-solliciteren/",
+        "https://thefieldservicecompany.nl/formulier-registreren/"
+      ],
+      "potential_source_references": 4
+    },
+    {
+      "selector": ".elementor-form input[type=checkbox]:checked +label:after",
+      "original_line": 767,
+      "media": "all",
+      "matched_pages": 6,
+      "examples": [
+        "https://thefieldservicecompany.nl/formulier-vraag/",
+        "https://thefieldservicecompany.nl/formulier-solliciteren/",
+        "https://thefieldservicecompany.nl/formulier-registreren/"
+      ],
+      "potential_source_references": 4
+    },
+    {
+      "selector": ".elementor-location-footer",
+      "original_line": 780,
+      "media": "all",
+      "matched_pages": 159,
+      "examples": [
+        "https://thefieldservicecompany.nl/",
+        "https://thefieldservicecompany.nl/beroepengids/",
+        "https://thefieldservicecompany.nl/disclaimer/"
+      ],
+      "potential_source_references": 0
+    },
+    {
+      "selector": "div#section-footer",
+      "original_line": 783,
+      "media": "all",
+      "matched_pages": 159,
+      "examples": [
+        "https://thefieldservicecompany.nl/",
+        "https://thefieldservicecompany.nl/beroepengids/",
+        "https://thefieldservicecompany.nl/disclaimer/"
+      ],
+      "potential_source_references": 2
+    },
+    {
+      "selector": ".loop-vacature .elementor-heading-title:hover",
+      "original_line": 804,
+      "media": "all",
+      "matched_pages": 80,
+      "examples": [
+        "https://thefieldservicecompany.nl/vacatures/",
+        "https://thefieldservicecompany.nl/bedrijfssector/verpakkingstechniek/",
+        "https://thefieldservicecompany.nl/bedrijfssector/energie/"
+      ],
+      "potential_source_references": 4
+    },
+    {
+      "selector": "H1.elementor-heading-title",
+      "original_line": 810,
+      "media": "only screen and (max-width: 1024px)",
+      "matched_pages": 150,
+      "examples": [
+        "https://thefieldservicecompany.nl/",
+        "https://thefieldservicecompany.nl/beroepengids/",
+        "https://thefieldservicecompany.nl/disclaimer/"
+      ],
+      "potential_source_references": 25
+    },
+    {
+      "selector": ".elementor-shortcode H1",
+      "original_line": 810,
+      "media": "only screen and (max-width: 1024px)",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 0
+    },
+    {
+      "selector": "H2.elementor-heading-title",
+      "original_line": 811,
+      "media": "only screen and (max-width: 1024px)",
+      "matched_pages": 171,
+      "examples": [
+        "https://thefieldservicecompany.nl/",
+        "https://thefieldservicecompany.nl/beroepengids/",
+        "https://thefieldservicecompany.nl/disclaimer/"
+      ],
+      "potential_source_references": 25
+    },
+    {
+      "selector": ".elementor-shortcode H2",
+      "original_line": 811,
+      "media": "only screen and (max-width: 1024px)",
+      "matched_pages": 98,
+      "examples": [
+        "https://thefieldservicecompany.nl/beroepengids/bedrijfssectoren/",
+        "https://thefieldservicecompany.nl/beroepengids/functie-inhoud/",
+        "https://thefieldservicecompany.nl/beroepengids/functienamen/"
+      ],
+      "potential_source_references": 0
+    },
+    {
+      "selector": "H3.elementor-heading-title",
+      "original_line": 812,
+      "media": "only screen and (max-width: 1024px)",
+      "matched_pages": 51,
+      "examples": [
+        "https://thefieldservicecompany.nl/",
+        "https://thefieldservicecompany.nl/beroepengids/",
+        "https://thefieldservicecompany.nl/zzp-freelance-opdrachten-in-de-techniek/"
+      ],
+      "potential_source_references": 25
+    },
+    {
+      "selector": ".elementor-shortcode H3",
+      "original_line": 812,
+      "media": "only screen and (max-width: 1024px)",
+      "matched_pages": 6,
+      "examples": [
+        "https://thefieldservicecompany.nl/kennisgebied/elektrotechniek/",
+        "https://thefieldservicecompany.nl/kennisgebied/mechanisch/",
+        "https://thefieldservicecompany.nl/kennisgebied/koeltechniek/"
+      ],
+      "potential_source_references": 0
+    },
+    {
+      "selector": "H4.elementor-heading-title",
+      "original_line": 813,
+      "media": "only screen and (max-width: 1024px)",
+      "matched_pages": 1,
+      "examples": [
+        "https://thefieldservicecompany.nl/voor-werkgevers/"
+      ],
+      "potential_source_references": 25
+    },
+    {
+      "selector": ".elementor-shortcode H4",
+      "original_line": 813,
+      "media": "only screen and (max-width: 1024px)",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 0
+    },
+    {
+      "selector": "H5.elementor-heading-title",
+      "original_line": 814,
+      "media": "only screen and (max-width: 1024px)",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 25
+    },
+    {
+      "selector": ".elementor-shortcode H5",
+      "original_line": 814,
+      "media": "only screen and (max-width: 1024px)",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 0
+    },
+    {
+      "selector": "H6.elementor-heading-title",
+      "original_line": 815,
+      "media": "only screen and (max-width: 1024px)",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 25
+    },
+    {
+      "selector": ".elementor-shortcode H6",
+      "original_line": 815,
+      "media": "only screen and (max-width: 1024px)",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 0
+    },
+    {
+      "selector": ".hide-mobile",
+      "original_line": 817,
+      "media": "only screen and (max-width: 1024px)",
+      "matched_pages": 5,
+      "examples": [
+        "https://thefieldservicecompany.nl/vacature/commissioning-engineer-offshore/",
+        "https://thefieldservicecompany.nl/vacature/field-service-engineer-compressoren-benelux-duitsland/",
+        "https://thefieldservicecompany.nl/vacature/service-monteur-rotating-equipment-internationaal/"
+      ],
+      "potential_source_references": 1
+    },
+    {
+      "selector": ".elementor-popup-modal",
+      "original_line": 820,
+      "media": "only screen and (max-width: 1024px)",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 0
+    },
+    {
+      "selector": ".elementor-popup-modal .dialog-widget-content",
+      "original_line": 828,
+      "media": "only screen and (max-width: 1024px)",
+      "matched_pages": 0,
+      "examples": [],
+      "potential_source_references": 0
+    },
+    {
+      "selector": "body",
+      "original_line": 837,
+      "media": "only screen and (max-width: 768px)",
+      "matched_pages": 171,
+      "examples": [
+        "https://thefieldservicecompany.nl/",
+        "https://thefieldservicecompany.nl/beroepengids/",
+        "https://thefieldservicecompany.nl/disclaimer/"
+      ],
+      "potential_source_references": 0
+    },
+    {
+      "selector": "p",
+      "original_line": 837,
+      "media": "only screen and (max-width: 768px)",
+      "matched_pages": 161,
+      "examples": [
+        "https://thefieldservicecompany.nl/",
+        "https://thefieldservicecompany.nl/beroepengids/",
+        "https://thefieldservicecompany.nl/disclaimer/"
+      ],
+      "potential_source_references": 0
+    },
+    {
+      "selector": "ul li",
+      "original_line": 837,
+      "media": "only screen and (max-width: 768px)",
+      "matched_pages": 160,
+      "examples": [
+        "https://thefieldservicecompany.nl/",
+        "https://thefieldservicecompany.nl/beroepengids/",
+        "https://thefieldservicecompany.nl/disclaimer/"
+      ],
+      "potential_source_references": 0
+    },
+    {
+      "selector": "nav.rank-math-breadcrumb p",
+      "original_line": 840,
+      "media": "only screen and (max-width: 768px)",
+      "matched_pages": 138,
+      "examples": [
+        "https://thefieldservicecompany.nl/beroepengids/",
+        "https://thefieldservicecompany.nl/voor-werkgevers/",
+        "https://thefieldservicecompany.nl/beroepengids/bedrijfssectoren/"
+      ],
+      "potential_source_references": 1
+    },
+    {
+      "selector": "nav.rank-math-breadcrumb p a",
+      "original_line": 840,
+      "media": "only screen and (max-width: 768px)",
+      "matched_pages": 138,
+      "examples": [
+        "https://thefieldservicecompany.nl/beroepengids/",
+        "https://thefieldservicecompany.nl/voor-werkgevers/",
+        "https://thefieldservicecompany.nl/beroepengids/bedrijfssectoren/"
+      ],
+      "potential_source_references": 1
+    }
+  ]
+}

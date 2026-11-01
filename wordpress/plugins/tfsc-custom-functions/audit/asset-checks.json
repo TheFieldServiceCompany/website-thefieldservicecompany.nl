@@ -1,0 +1,50 @@
+[
+  {
+    "path": "/wp-content/uploads/barlow-semi-condensed-v16-latin-600.woff2",
+    "status": 200,
+    "bytes": 22984,
+    "type": "font/woff2"
+  },
+  {
+    "path": "/wp-content/uploads/barlow-semi-condensed-v16-latin-700.woff2",
+    "status": 200,
+    "bytes": 23244,
+    "type": "font/woff2"
+  },
+  {
+    "path": "/wp-content/uploads/inter-tight-v9-latin-regular.woff2",
+    "status": 200,
+    "bytes": 22016,
+    "type": "font/woff2"
+  },
+  {
+    "path": "/wp-content/uploads/inter-tight-v9-latin-700.woff2",
+    "status": 200,
+    "bytes": 22748,
+    "type": "font/woff2"
+  },
+  {
+    "path": "/wp-content/uploads/space-grotesk-v22-latin-700.woff2",
+    "status": 200,
+    "bytes": 12840,
+    "type": "font/woff2"
+  },
+  {
+    "path": "/wp-content/uploads/menu-close.svg",
+    "status": 200,
+    "bytes": 767,
+    "type": "image/svg+xml"
+  },
+  {
+    "path": "/wp-content/uploads/custom-font-types/inter-v12-latin-regular.woff2",
+    "status": 200,
+    "bytes": 16708,
+    "type": "font/woff2"
+  },
+  {
+    "path": "/wp-content/uploads/custom-font-types/inter-v12-latin-700.woff2",
+    "status": 200,
+    "bytes": 17784,
+    "type": "font/woff2"
+  }
+]

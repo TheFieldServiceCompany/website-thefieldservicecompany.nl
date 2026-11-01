@@ -1,0 +1,96 @@
+/* Not found in this audit; preserved for recovery. Not loaded by the new plugin. */
+
+.bkgr-white{background:#FFF}
+
+.bkgr-black{background:#000}
+
+.link-underline a{text-decoration:underline}
+
+.button-trans-black a,
+.button-trans-black a:visited{
+    background-color:transparent;
+    border:1px solid #000;
+    color:#000
+}
+
+.button-trans-black a:hover{
+    background-color:#000;
+    color:#FFF;
+}
+
+.button-black-trans a,
+.button-black-trans a:visited{
+    background-color:#000;
+    border:1px solid #000;
+    color:#FFF
+}
+
+.button-black-trans a:hover{
+    background-color:transparent;
+    color:#000;
+}
+
+.button-white-blue a,
+.button-white-blue a:visited{
+    background-color:transparent;
+    border:1px solid #00A1FF;
+    color:#00A1FF
+}
+
+.button-white-blue a:hover{
+    background-color:#00A1FF;
+    color:#FFF
+}
+
+.button-green-white-3d a,
+.button-green-white-3d a:visited{
+    background-color:#00B900;
+    border-width: 1px 1px 3px 1px;
+    border-color: #008A00;
+    border-style:solid;
+    color: #FFF
+}
+
+.button-green-white-3d a:hover{
+    background-color:#FFF;
+    color:#008A00;
+    border-color:#00B900;
+}
+
+.button-trans-orange a,
+.button-trans-orange a:visited{
+    background-color:transparent;
+    border:1px solid #E87500;
+    color:#E87500
+}
+
+.button-trans-orange a:hover{
+    background-color: #E87500;
+    color:#FFF
+}
+
+#testimonial-home .swiper-slide{
+    background-color:#f2f2f2;
+    padding:20px;
+}
+
+#blog-subnav a{
+    margin:0 6px 6px 0;
+    background-color: #000;
+    font-weight: 700;
+    border:1px solid #000
+}
+
+#blog-subnav a.elementor-item.elementor-item-active {
+    color:#E87500
+}
+
+#blog-subnav a:hover{
+    background-color:#fff
+}
+
+.elementor-element-52ef2827,.elementor-element-70547f4f{
+    font-size:15px
+}
+
+.align-icon-list .elementor-icon-list-item a{display:inline !important}

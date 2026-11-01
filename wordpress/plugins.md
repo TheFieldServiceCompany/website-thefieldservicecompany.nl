@@ -2,6 +2,15 @@
 
 Wordt ingevuld tijdens de inventarisatie van de huidige website.
 
+## TFSC Custom Functions
+
+- Broncode kandidaat 0.3.0: [plugins/tfsc-custom-functions](plugins/tfsc-custom-functions/).
+- [Audit en functiebeoordeling](plugins/tfsc-custom-functions/audit/bevindingen.md).
+- [Exacte live back-up 0.2.0 van 1 november 2026](exports/plugins/2026-11-01-before-custom-functions-cleanup/).
+- [Installatiepakket kandidaat 0.3.0](plugins/dist/tfsc-custom-functions-0.3.0-kandidaat.zip).
+- Doel: globale frontend-CSS met automatische URL-versie, lokale fonts, zoekresultatentitel en bestaande shortcodes.
+- Status: bron- en PHP-controles geslaagd; kandidaat staat in GitHub en is nog niet live geïnstalleerd. Volledige WordPress- en mobiele visuele controle staan nog open.
+
 ## TFSC Mediafilters
 
 - Broncode: [plugins/tfsc-media-filters](plugins/tfsc-media-filters/).
