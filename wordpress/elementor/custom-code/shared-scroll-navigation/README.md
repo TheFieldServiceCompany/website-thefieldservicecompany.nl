@@ -1,6 +1,8 @@
 # Gedeelde scrollheader en vacaturepaneel
 
-LIVE sinds 1 november 2026, versie 1.0.0. Uitvoering via Code Snippets **359**,
+**Status: INACTIEF, op 1 november 2026 op gebruikersverzoek teruggedraaid.**
+De oorspronkelijke sticky header is hersteld. Geen Anchor Offset toegevoegd.
+Onderstaande beschrijving betreft de bewaarde proefversie 1.0.0. Uitvoering via Code Snippets **359**,
 scope **front-end**; CSS via wp_head prioriteit 90, JavaScript via wp_footer
 prioriteit 90. Geen Elementor Custom Code-post; deze map bevat de beheerde
 frontendbronnen. Het uitvoerbare pakket staat in

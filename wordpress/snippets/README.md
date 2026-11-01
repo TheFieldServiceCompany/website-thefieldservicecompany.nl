@@ -26,7 +26,7 @@ uitgerold; gedateerde exports staan apart onder `wordpress/exports/code-snippets
 | Code Snippet 209 | Actief, versie 1.2 | Unieke Rank Math-title en description voor de twee hoofdarchieven en de zeven virtuele Beroepengids-basearchieven | Rank Math en queryvar `tfsc_taxonomy_archive` |
 | Nieuwe snippet, ID nog niet toegewezen | Repository-only | Laat single vacatures zonder handmatige SEO-description de centrale Rank Math-description gebruiken, ook wanneer een WordPress-excerpt bestaat | Rank Math en posttype `vacature` |
 | Code Snippet 215 | Actief, versie 1.2 | Beroepengids-basearchieven en de twee native opleidingstaxonomysitemaps aan de Rank Math-sitemapindex toevoegen | Rank Math Sitemap API |
-| Code Snippet 359 | LIVE actief, versie 1.0.0 | Gedeelde header verbergen/tonen volgens scrollrichting; vacaturepaneel en ankers laten volgen | Header 17275, vacaturetemplate 26022 en Elementor sticky |
+| Code Snippet 359 | Inactief, teruggedraaid op 1 november 2026 | Gedeelde header verbergen/tonen volgens scrollrichting; vacaturepaneel en ankers laten volgen | Header 17275, vacaturetemplate 26022 en Elementor sticky |
 | `snip-tfsc` | Actief | Google Jobs/SNIP-locatieobjecten maken vanuit WordPress-locatietermen | SNIP Pro, taxonomie `locatie` en termmeta |
 | `tfsc-custom-functions` | Actief | Globale frontendaanpassingen, uploads als e-mailbijlage, styles en shortcodes | Elementor Pro, Rank Math en lokale assets |
 | `tfsc-schema-read-endpoint` | Actief | Alleen-lezen inventaris van posttypes, taxonomieën, termen en Pods | REST-authenticatie en Pods |
@@ -183,7 +183,9 @@ snippet 223 is de inactieve herstelkopie.
 
 ### 359 — Gedeelde scrollheader en vacaturepaneel
 
-Actief op LIVE sinds 1 november 2026, versie 1.0.0, scope front-end.
+**Inactief: op gebruikersverzoek op 1 november 2026 teruggedraaid.**
+De oorspronkelijke sticky header en vacature-offsets zijn weer actief.
+De hieronder beschreven versie 1.0.0 is bewaard als historische bron, scope front-end.
 De header verdwijnt omlaag en verschijnt omhoog. Het vacaturepaneel volgt
 zijn gemeten zichtbare hoogte, inclusief beheerbalk. Elementor-templates
 blijven ongewijzigd. Inhoudslinks en toetsenbordbediening zijn meegenomen.

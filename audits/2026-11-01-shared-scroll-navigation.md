@@ -1,4 +1,16 @@
-# Gedeelde scrollheader — livegang 1 november 2026
+# Gedeelde scrollheader — proef en terugdraaiing 1 november 2026
+
+## Actuele status: teruggedraaid
+
+Gebruiker wilde de oude situatie eerst volledig herstellen en daarna een
+header die meescrollt met een Naar boven-knop onderzoeken. Snippet 359 is
+gedeactiveerd, de LiteSpeed-paginacache is ververst en de controller staat
+niet meer in de openbare HTML. Header 17275 en vacaturetemplate 26022 zijn
+via REST vergeleken: meta en modified exact gelijk aan de oorspronkelijke
+herstelkopieën. Geen Anchor Offset of andere nieuwe instellingen toegevoegd.
+Browsercontrole desktop: zowel omlaag als omhoog blijft de headeronderrand
+op 102 px en het vacaturepaneel op 102 px (inclusief beheerbalk van 32 px).
+De nieuwe documentclass ontbreekt. Hieronder staat het historische proefverslag.
 
 Opdracht: header verdwijnt bij omlaag scrollen, verschijnt bij omhoog scrollen;
 het vaste vacaturepaneel volgt. Gebruiker vroeg uitdrukkelijk om een back-up.

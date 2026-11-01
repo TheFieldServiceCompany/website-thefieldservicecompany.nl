@@ -40,3 +40,10 @@ header. Dit template, de inline HTML-widget en de oorspronkelijke offsets
 70/60/50 zijn daarvoor niet aangepast. Bij deactivatie van snippet 359 werkt
 de oorspronkelijke stickypositie weer. Zie
 `audits/2026-11-01-shared-scroll-navigation.md`.
+
+### Teruggedraaid op 1 november 2026
+
+Snippet 359 is op gebruikersverzoek gedeactiveerd en de paginacache is
+ververst. De oorspronkelijke vaste sticky header en paneel-offsets zijn
+weer actief. Header- en vacaturetemplate zijn gelijk aan de herstelkopieën.
+Een niet-sticky header met Naar boven-knop wordt pas later onderzocht.
