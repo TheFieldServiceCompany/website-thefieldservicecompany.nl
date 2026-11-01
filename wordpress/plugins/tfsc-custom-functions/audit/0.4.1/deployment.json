@@ -1,0 +1,10 @@
+{
+  "updated": true,
+  "kit": 9367,
+  "file_hashes": {
+    "tfsc-custom-functions.php": "f6bdf13051d31963552e434f7ebe6a0df6a8f780965086cde8be4a04ed2cb331",
+    "tfsc-custom-stylesheet.css": "31576cb248a4842fd6016e5a74c6a4b4912f2dc2e2ef1c8c9900b7cd451446d0"
+  },
+  "settings_sha256": "59fecd15e4386ebfe7a83eb1da025aebfb7b7f081ee7d96ed5b35959f207b75a",
+  "kit_settings_changed": false
+}

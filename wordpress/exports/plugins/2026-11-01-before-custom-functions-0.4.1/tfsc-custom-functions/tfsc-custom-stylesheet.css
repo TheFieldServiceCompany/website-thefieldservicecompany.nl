@@ -1,0 +1,729 @@
+/* TFSC frontend styles — 0.4.0. Legacy rules are archived separately. */
+
+@font-face {
+    font-display: swap;
+    font-family: "Barlow Semi Condensed";
+    font-style: normal;
+    font-weight: 600;
+    src: url("/wp-content/uploads/barlow-semi-condensed-v16-latin-600.woff2") format("woff2");
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Barlow Semi Condensed";
+    font-style: normal;
+    font-weight: 700;
+    src: url("/wp-content/uploads/barlow-semi-condensed-v16-latin-700.woff2") format("woff2");
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Inter Tight";
+    font-style: normal;
+    font-weight: 400;
+    src: url("/wp-content/uploads/inter-tight-v9-latin-regular.woff2") format("woff2");
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Inter Tight";
+    font-style: normal;
+    font-weight: 700;
+    src: url("/wp-content/uploads/inter-tight-v9-latin-700.woff2") format("woff2");
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Space Grotesk";
+    font-style: normal;
+    font-weight: 700;
+    src: url("/wp-content/uploads/space-grotesk-v22-latin-700.woff2") format("woff2");
+}
+
+html,
+body {
+    height:100%;
+    margin: 0;
+    font-family:"Inter Tight",sans-serif;
+    font-weight:400;
+    font-size:18px;
+    line-height:30px;
+    color:var(--e-global-color-text, #000)
+}
+body{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column
+}
+
+.header_image-absolute,
+.header_image-absolute img {
+    inset: 0;
+    object-fit: cover;
+    object-position: top center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -100;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.elementor-heading-title,
+.elementor-button{
+    font-family: "Barlow Semi Condensed", sans-serif;
+    color: var(--e-global-color-primary, #00355B);
+    font-weight:600;
+}
+.elementor-widget-theme-post-content h2{
+    margin:30px 0 8px 0;
+    font-size:26px;
+    text-transform:none
+}
+
+.elementor-widget-theme-post-content h3{
+    margin:24px 0 8px 0;
+    font-size:22px;
+    text-transform: none
+}
+
+.elementor-widget-theme-post-content h4{
+    margin:20px 0 8px 0;
+    font-size:18px;
+    text-transform: none
+}
+
+.elementor-widget-theme-post-content h5{
+    margin:20px 0 8px 0;
+    font-size:18px;
+    text-transform: none
+}
+
+.elementor-widget-theme-post-content h6{
+    margin:20px 0 8px 0;
+    font-size:18px;
+    text-transform: none
+}
+
+h1.elementor-heading-title a:hover,
+h2.elementor-heading-title a:hover,
+h3.elementor-heading-title a:hover,
+h4.elementor-heading-title a:hover,
+h5.elementor-heading-title a:hover,
+h6.elementor-heading-title a:hover {
+    color: var(--e-global-color-accent, #00A1FF);
+}
+a{
+    color:var(--e-global-color-text, #000)
+}
+.elementor-widget-theme-post-content a{
+    color:var(--e-global-color-primary, #00355B);
+    text-decoration:underline;
+    }
+a:hover{
+    color:#888
+}
+/* voorkomen van rare randen om links en buttons */
+/* Keep keyboard focus visible; do not remove outlines globally. */
+a:focus-visible,
+.submit:focus-visible,
+button:focus-visible,
+input[type="submit"]:focus-visible {
+    outline: 3px solid var(--e-global-color-primary, #00355B);
+    outline-offset: 3px;
+}
+.text-wit a:focus-visible,
+.text-wit button:focus-visible {
+    outline-color: var(--e-global-color-3df8c800, #FFF);
+}
+
+.elementor-widget-text-editor a{
+    text-decoration:underline;
+    font-weight:600
+}
+.elementor-icon-list-items a{
+    text-decoration:underline;
+}
+
+b, strong, .bold{
+    font-weight:700;
+    color:var(--e-global-color-text, #000)
+}
+.class-link-bold{
+    text-decoration:underline;
+    cursor:pointer
+}
+.class-link-bold:hover{color:#999}
+
+/* breadcrumb */
+.rank-math-breadcrumb{
+    font-size:0.85em
+}
+.rank-math-breadcrumb p{
+        margin-bottom:0;
+}
+.rank-math-breadcrumb a{
+    font-weight:600;
+    text-decoration: underline;
+}
+/* Icons Styling*/
+.elementor-widget .elementor-icon-list-item{
+    align-items:flex-start !important
+}
+.elementor-icon-list-icon{
+    margin-top:8px
+}
+
+.text-wit,
+.text-wit H1,
+.text-wit H2,
+.text-wit H3,
+.text-wit H4,
+.text-wit H5,
+.text-wit H6{color:var(--e-global-color-3df8c800, #FFF)}
+
+.text-blauw,
+.text-blauw H1,
+.text-blauw H2,
+.text-blauw H3,
+.text-blauw H4,
+.text-blauw H5,
+.text-blauw H6{color:var(--e-global-color-accent, #00A1FF)}
+
+.text-center{text-align:center}
+
+.uppercase{text-transform: uppercase}
+.elementor-field-textual{border-radius:0 !important}
+
+/*BUTTONS*/
+.elementor-button{
+    font-weight:700;
+    text-transform:uppercase;
+    font-size:16px;
+    border-radius:0 !important;
+}
+/**Button Classes**/
+
+.button-black-white a,
+.button-black-white a:visited{
+    background-color:var(--e-global-color-641714f6, #111);
+    border:1px solid var(--e-global-color-641714f6, #111);
+    color:var(--e-global-color-3df8c800, #FFF)
+}
+.button-black-white a:hover{
+    background-color:white;
+    color:var(--e-global-color-641714f6, #111);
+}
+
+.button-dblue-white a,
+.button-dblue-white a:visited{
+    background-color:var(--e-global-color-primary, #00355B);
+    border:1px solid var(--e-global-color-primary, #00355B);
+    color:var(--e-global-color-3df8c800, #FFF)
+}
+.button-dblue-white a:hover{
+    background-color:var(--e-global-color-3df8c800, #FFF);
+    color:var(--e-global-color-primary, #00355B)
+}
+.button-trans-dblue a,
+.button-trans-dblue a:visited{
+    background-color:transparent;
+    border:1px solid var(--e-global-color-primary, #00355B);
+    color:var(--e-global-color-primary, #00355B)
+}
+.button-trans-dblue a:hover{
+    background-color:var(--e-global-color-primary, #00355B);
+    color:var(--e-global-color-3df8c800, #FFF);
+}
+.button-white-dblue a,
+.button-white-dblue a:visited{
+    background-color:var(--e-global-color-3df8c800, #fff);
+    color:var(--e-global-color-primary, #00355B);
+    border:1px solid var(--e-global-color-3df8c800, #FFF)
+}
+.button-white-dblue a:hover{
+    background-color:var(--e-global-color-primary, #00355B);
+    color:var(--e-global-color-3df8c800, #FFF)
+}
+.button-dblue-trans a,
+.button-dblue-trans a:visited{
+    background-color: var(--e-global-color-primary, #00355B);
+    color:var(--e-global-color-3df8c800, #FFF);
+    border:1px solid var(--e-global-color-primary, #00355B)
+}
+.button-dblue-trans a:hover{
+    background-color: transparent;
+    color:var(--e-global-color-primary, #00355B)
+}
+.button-blue-white a,
+.button-blue-white a:visited{
+    background-color:var(--e-global-color-accent, #00A1FF);
+    border:1px solid var(--e-global-color-accent, #00A1FF);
+    color:var(--e-global-color-3df8c800, #FFF)
+}
+.button-blue-white a:hover{
+    background-color:var(--e-global-color-3df8c800, #FFF);
+    color:var(--e-global-color-accent, #00A1FF);
+}
+
+.button-blue-white-3d a,
+.button-blue-white-3d a:visited{
+    background-color:var(--e-global-color-accent, #00A1FF);
+    border-width: 1px 1px 3px 1px;
+    border-color: #1386C9;
+    border-style:solid;
+    color: var(--e-global-color-3df8c800, #FFF)
+}
+.button-blue-white-3d a:hover{
+    background-color:var(--e-global-color-3df8c800, #FFF);
+    color:#0077B6;
+}
+.button-orange-white-3d a,
+.button-orange-white-3d a:visited{
+    font-size:18px;
+    padding:16px 30px;
+    background-color:var(--e-global-color-7b119a4e, #E87500);
+    border-width: 1px 1px 3px 1px;
+    border-color: var(--e-global-color-6b55b03c, #8F3D00);
+    border-style:solid;
+    color: var(--e-global-color-3df8c800, #FFF)
+}
+.button-orange-white-3d a:hover{
+    background-color:var(--e-global-color-3df8c800, #FFF);
+    color:var(--e-global-color-6b55b03c, #8F3D00);
+}
+
+.button-green-white a,
+.button-green-white a:visited{
+    background-color:var(--e-global-color-893afbb, #00B900);
+    border-width: 1px 1px 1px 1px;
+    border-color: var(--e-global-color-893afbb, #00B900);
+    border-style:solid;
+    color:var(--e-global-color-3df8c800, #FFF)
+}
+.button-green-white a:hover{
+    background-color:var(--e-global-color-3df8c800, #FFF);
+    color:var(--e-global-color-893afbb, #00B900)
+}
+.button-trans-green a,
+.button-trans-green a:visited{
+    background-color:transparent;
+    border-width: 1px 1px 1px 1px;
+    border-color: var(--e-global-color-893afbb, #00B900);
+    border-style:solid;
+    color:var(--e-global-color-893afbb, #00B900)
+}
+.button-trans-green a:hover{
+    background-color:var(--e-global-color-893afbb, #00B900);
+    color:var(--e-global-color-3df8c800, #FFF)
+}
+.button-orange-white a,
+.button-orange-white a:visited{
+    background-color:#FF7C00;
+    border:1px solid #FF7C00;
+    color:var(--e-global-color-3df8c800, #FFF);
+}
+.button-orange-white a:hover{
+    background-color:var(--e-global-color-3df8c800, #FFF);
+    color:#FF7C00
+}
+
+.button-trans-white a,
+.button-trans-white a:visited{
+    background-color:transparent;
+    border:1px solid var(--e-global-color-3df8c800, #FFF);
+    color:var(--e-global-color-3df8c800, #FFF)
+}
+.button-trans-white a:hover{
+    background-color:var(--e-global-color-3df8c800, #FFF);
+    color:var(--e-global-color-641714f6, #111);
+}
+.button-white-black a,
+.button-white-black a:visited{
+    background-color:var(--e-global-color-3df8c800, #FFF);
+    border:1px solid var(--e-global-color-3df8c800, #FFF);
+    color:var(--e-global-color-641714f6, #111)
+}
+.button-white-black a:hover{
+    background-color: var(--e-global-color-641714f6, #111);
+    color:var(--e-global-color-3df8c800, #FFF)
+}
+
+.tfsc_query_show-more .tfsc-query-show-more__wrapper{
+    margin:0 0 0 10px
+}
+.tfsc-query-show-more__button,
+.tfsc-query-show-more__button:visited,
+.tfsc-query-show-more__button:focus{
+    background-color:transparent;
+    border-radius:0;
+    border:none;
+    font-weight:700;
+    text-decoration:underline;
+    color:var(--e-global-color-primary, #00355B);
+    display: inline-flex;
+    align-items: center;
+    padding:0;
+    gap: 20px !important;
+}
+
+.tfsc-query-show-more__button:hover,
+.tfsc-query-show-more__button:active{
+    background-color:transparent;
+    color:var(--e-global-color-accent, #00A1FF)
+}
+.tfsc-query-show-more__icon {
+    line-height: 1;
+    font-size: 16px;
+}
+
+/* Post term buttons */
+.tfsc-post-terms {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+ }
+
+.tfsc-post-terms__item,
+.tfsc-post-terms__item:visited,
+.tfsc-post-terms__item:active{
+    display: inline-flex;
+    align-items: center;
+    font-weight:700;
+    font-size:13px;
+    padding: 0px 10px;
+    background-color:var(--e-global-color-primary, #00355B);
+    border: 1px solid var(--e-global-color-primary, #00355B);
+    color:var(--e-global-color-3df8c800, #FFF);
+    text-transform:uppercase;
+    border-radius: 0;
+    text-decoration: none;
+}
+.tfsc-post-terms__item:hover{
+    background-color:transparent;
+    color:var(--e-global-color-primary, #00355B);
+}
+/** Beroepengids */
+
+.tfsc-scroll-target {
+    scroll-margin-top: 100px;
+}
+
+@media (max-width: 767px) {
+    .tfsc-scroll-target {
+        scroll-margin-top: 80px;
+    }
+}
+
+/*Archive*/
+
+/*selectie title description*/
+.archive.tax-functienaam .tax-display-none-before,
+.archive.tax-werkgebied .tax-display-none-after{
+    display:none
+}
+
+/*Vacature Locaties*/
+
+.vac-places .elementor-icon-list-item a{
+    padding: 0px 10px;
+    margin:0 0 6px 0;
+    background-color:var(--e-global-color-primary, #00355B);
+    border: 1px solid var(--e-global-color-primary, #00355B);
+    color:var(--e-global-color-3df8c800, #fff);
+    font-size:15px;
+    font-weight:bold;
+}
+.vac-places .elementor-icon-list-item a:hover{
+    background-color: var(--e-global-color-3df8c800, #fff);
+    color:var(--e-global-color-primary, #00355B);
+}
+
+/*Reviews*/
+
+/** breadcrumb**/
+/* overflow mogelijk maken op mobile */
+.tfsc-breadcrumb-scroll{
+    white-space: nowrap
+}
+
+/*Templates Vacature, Blog, etc*/
+.elementor-widget-theme-post-content figure {
+    margin:1em 0 1em 0
+}
+
+.elementor-widget-theme-post-content ol{
+    padding-left:30px
+}
+.elementor-widget-theme-post-content ul,
+.elementor-widget-text-editor ul{
+    margin-bottom:20px;
+    padding-left:0
+}
+.elementor-widget-theme-post-content ul li,
+.elementor-widget-text-editor ul li {
+    margin-left: 6px;
+    list-style: none;
+    /* Keep links and emphasis in the same inline sentence. */
+    display: block;
+    position: relative;
+    padding-inline-start: 22px;
+}
+
+.elementor-widget-theme-post-content ul li::before,
+.elementor-widget-text-editor ul li::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background: var(--e-global-color-secondary, #035D92);
+    position: absolute;
+    inset-inline-start: 0;
+    top: 0.7em;
+}
+
+/*blog styling*/
+.single-vacature .elementor-toc__list-item,
+.single-blog .elementor-toc__list-item{margin-bottom:20px}
+
+.single-vacature .elementor-toc__list-item-text-wrapper:before,
+.single-blog .elementor-toc__list-item-text-wrapper:before{display:none}
+
+.blog-tekst .elementor-menu-anchor,
+.vacature-tekst .elementor-menu-anchor {
+    display: block;
+    position: relative;
+    top: -90px
+}
+/*voor upward scroll arrow button -> lege container met 0 padding maken bovenkant pagina en id #scroll-top geven*/
+#scroll-top{
+    display: block;
+    position: relative;
+    top: -90px
+}
+
+.blog-tekst .wp-block-separator,
+.vacature-tekst .wp-block-separator{
+    margin:40px 0px;
+    padding: 0 0 0 0;
+    border: 1px solid var(--e-global-color-accent, #00A1FF);
+}
+
+/*FAQ styling*/
+.rank-math-list-item{
+    margin:20px 0;
+    padding:10px 20px 20px 20px;
+    background:var(--e-global-color-71835498, #F2F2F2)
+}
+
+/* post archive pagination*/
+.elementor-pagination{
+    margin:10px 0;
+    padding:20px 0;
+    background:transparent;
+    border:1px solid  var(--e-global-color-3a5c802f, #D5D5D5);
+}
+.elementor-pagination .page-numbers{
+    margin:0 5px 0 5px;
+    padding:4px 10px;
+    border-radius:0;
+    font-weight:600;
+    font-size:0.9em
+}
+.elementor-pagination .page-numbers.current{
+    background-color:transparent;
+    border:1px solid var(--e-global-color-text, #000);
+    color:var(--e-global-color-text, #000);
+}
+.elementor-pagination .page-numbers:hover{
+    background-color:transparent;
+    border:1px solid var(--e-global-color-7b119a4e, #E87500);
+    color:var(--e-global-color-7b119a4e, #E87500);
+}
+
+/***** Forms *****/
+
+.elementor-field-textual.elementor-size-sm{
+    border-color:#d9d9d9}
+.elementor-field-label{
+      font-weight:700
+}
+.elementor-form-font-regular{
+    font-weight:400
+}
+
+/* popup zero margin hidden fields (heb deze code in de vacature-template gezet want hij pakt hem niet vanuit de css-sheet
+Staat bij page custom css*/
+
+/* form checkbox privacy statement */
+.elementor-popup-modal .dialog-message{
+    font-size:18px;
+    color:var(--e-global-color-641714f6, #111)
+}
+
+.form-link-bold{
+    font-weight:700;
+    text-decoration:underline !important
+}
+.elementor-popup-modal .dialog-close-button i{
+    content: url(/wp-content/uploads/menu-close.svg);
+    max-width:15px;
+}
+
+/*Elementor counter break icon list icm Elementor setting: improved css*/
+
+.elementor-icon-list-items .elementor-icon-list-item .elementor-icon-list-text a,
+.elementor-icon-list-items .elementor-icon-list-item .elementor-icon-list-text span{display:inline}
+
+/*Form Recaptcha*/
+  .grecaptcha-badge {visibility: hidden}
+
+/* popup zero margin hidden fields*/
+.elementor-form .elementor-field-type-hidden {margin:0 0 0 0 !important}
+
+/* For Checkbox Privacy on Forms*/
+.elementor-form input[type="checkbox"]{
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+.elementor-form input[type=checkbox]+label{
+    margin-right: 1em;
+    position: relative;
+}
+.elementor-form input[type=checkbox]+label:before{
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-right: 0.5em;
+    vertical-align: -3px;
+    border: 1px solid #BDBDBD;
+    padding: 0.12em;
+    background-color: transparent;
+    background-clip: content-box;
+    transition: all 0.2s ease;
+}
+.elementor-form input[type=checkbox]+label:after{
+    border-right: 2px solid var(--e-global-color-3df8c800, #fff);
+    border-top: 2px solid var(--e-global-color-3df8c800, #fff);
+    content: "";
+    height: 11px;
+    left: 2px;
+    position: absolute;
+    top: 11px;
+    transform: scaleX(-1) rotate(135deg);
+    transform-origin: left top;
+    width: 6px;
+    display: none;
+}
+.elementor-form input[type=checkbox]:hover +label:before{
+    border-color: var(--e-global-color-accent, #00a1ff);
+}
+.elementor-form input[type=checkbox]:checked +label:before{
+    border-color: var(--e-global-color-accent, #00a1ff);
+    background: var(--e-global-color-accent, #00a1ff);
+}
+.elementor-form input[type=checkbox]:checked +label:after{
+     -moz-animation: check 0.8s ease 0s running;
+    -webkit-animation: check 0.8s ease 0s running;
+    animation: check 0.8s ease 0s running;
+    display: block;
+    width: 6px;
+    height: 11px;
+    border-color: var(--e-global-color-3df8c800, #fff);
+}
+
+/*** FOOTER ***/
+ /* stretch footer tot einde als* pagina kort is*/
+ .elementor-location-footer{
+     flex-grow:1
+ }
+ div#section-footer{height:100%}
+/**** END FOOTER ***/
+
+@keyframes check {
+   0% {
+   height: 0;
+   width: 0;
+  }
+   25% {
+   height: 0;
+   width: 6px;
+  }
+   50% {
+   height: 11px;
+   width: 6px;
+  }
+}
+
+/*Vacatures & Archives*/
+.loop-vacature .elementor-heading-title:hover{
+    color:var(--e-global-color-accent, #00A1FF)
+}
+
+@media only screen and (max-width: 1024px) {
+
+    .hide-mobile{
+        display:none !important
+    }
+    .elementor-popup-modal {
+        padding-top: 70px !important;
+        padding-bottom: 20px !important;
+        box-sizing: border-box !important;
+        align-items: flex-start !important;
+        overflow-y: auto !important;
+    }
+
+    .elementor-popup-modal .dialog-widget-content {
+        margin: 0 auto 20px !important;
+        max-height: none !important;
+        overflow: visible !important;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+    body,p,ul li{
+        font-size:17px;
+        line-height:28px}
+    nav.rank-math-breadcrumb p,
+    nav.rank-math-breadcrumb p a{
+        font-size:15px;
+    }
+}
+
+/* Wide article tables scroll within their figure instead of widening the page. */
+.elementor-widget-theme-post-content figure.wp-block-table,
+.elementor-widget-text-editor figure.wp-block-table {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+/* Inputs remain accessible while the visible checkbox receives the focus ring. */
+.elementor-form input[type="checkbox"]:focus-visible + label::before {
+    outline: 3px solid var(--e-global-color-primary, #00355B);
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .elementor-form input[type="checkbox"] + label::before {
+        transition: none;
+    }
+    .elementor-form input[type="checkbox"]:checked + label::after {
+        animation: none;
+        -webkit-animation: none;
+        -moz-animation: none;
+    }
+}
+
+/* Search-result emphasis follows Elementor’s accent color. */
+.tfsc-search-query { color: var(--e-global-color-accent, #00A1FF); }

@@ -1,0 +1,292 @@
+{
+  "additional_css_post": null,
+  "additional_css_bytes": 0,
+  "files": [
+    {
+      "root": "active-theme",
+      "file": "assets/css/reset.css",
+      "sha256": "72eaeaf7ea81956ddf733ceac890269ab63e0aec77558bfaf045a5facd0bb6d4",
+      "conditions": [
+        {
+          "line": 1,
+          "condition": "@media print"
+        }
+      ]
+    },
+    {
+      "root": "active-theme",
+      "file": "assets/css/reset-rtl.css",
+      "sha256": "72eaeaf7ea81956ddf733ceac890269ab63e0aec77558bfaf045a5facd0bb6d4",
+      "conditions": [
+        {
+          "line": 1,
+          "condition": "@media print"
+        }
+      ]
+    },
+    {
+      "root": "active-theme",
+      "file": "assets/js/hello-elementor-settings.js",
+      "sha256": "d32e45ef4d01f4a23131accb28cef911c0e2f76625a1864a284a70e0ee09ff52",
+      "conditions": [
+        {
+          "line": 1,
+          "condition": "@media print\":"
+        },
+        {
+          "line": 1,
+          "condition": "@media (min-width:$"
+        },
+        {
+          "line": 1,
+          "condition": "@media (max-width:$"
+        },
+        {
+          "line": 1,
+          "condition": "@media (min-width:$"
+        },
+        {
+          "line": 1,
+          "condition": "@media not all and\")"
+        },
+        {
+          "line": 1,
+          "condition": "@media (min-width:$"
+        },
+        {
+          "line": 1,
+          "condition": "@media (orientation: landscape)\":"
+        },
+        {
+          "line": 74,
+          "condition": "@media print\":"
+        },
+        {
+          "line": 74,
+          "condition": "@media print\":"
+        },
+        {
+          "line": 74,
+          "condition": "@media (hover: none)\":"
+        },
+        {
+          "line": 74,
+          "condition": "@media (hover: none)\":"
+        },
+        {
+          "line": 74,
+          "condition": "@media (hover: none)\":"
+        },
+        {
+          "line": 74,
+          "condition": "@media (hover: none)\":"
+        },
+        {
+          "line": 74,
+          "condition": "@media print\":"
+        },
+        {
+          "line": 74,
+          "condition": "@media print\":"
+        },
+        {
+          "line": 74,
+          "condition": "@media print\":"
+        },
+        {
+          "line": 74,
+          "condition": "@media print\":"
+        }
+      ]
+    },
+    {
+      "root": "active-theme",
+      "file": "assets/js/hello-elementor-topbar.js",
+      "sha256": "143827ff65694bd252aaeb00c5d576715de4c1682b6fe218b4bc1e0c4ec2168b",
+      "conditions": [
+        {
+          "line": 1,
+          "condition": "@media print\":"
+        },
+        {
+          "line": 1,
+          "condition": "@media (orientation: landscape)\":"
+        },
+        {
+          "line": 1,
+          "condition": "@media (min-width:$"
+        },
+        {
+          "line": 1,
+          "condition": "@media (max-width:$"
+        },
+        {
+          "line": 1,
+          "condition": "@media (min-width:$"
+        },
+        {
+          "line": 1,
+          "condition": "@media not all and\")"
+        },
+        {
+          "line": 1,
+          "condition": "@media (min-width:$"
+        },
+        {
+          "line": 1,
+          "condition": "@media print\":"
+        },
+        {
+          "line": 74,
+          "condition": "@media print\":"
+        },
+        {
+          "line": 74,
+          "condition": "@media (hover: none)\":"
+        },
+        {
+          "line": 74,
+          "condition": "@media (hover: none)\":"
+        },
+        {
+          "line": 74,
+          "condition": "@media (hover: none)\":"
+        },
+        {
+          "line": 74,
+          "condition": "@media (hover: none)\":"
+        },
+        {
+          "line": 74,
+          "condition": "@media (hover: none)\":"
+        }
+      ]
+    },
+    {
+      "root": "active-theme",
+      "file": "assets/js/hello-conversion-banner.js",
+      "sha256": "19842c319965343f4d72c5d3ddb3be60b865bd0c077baf2a532a84ef31742f8d",
+      "conditions": [
+        {
+          "line": 1,
+          "condition": "@media print\":"
+        },
+        {
+          "line": 1,
+          "condition": "@media (min-width:$"
+        },
+        {
+          "line": 1,
+          "condition": "@media (max-width:$"
+        },
+        {
+          "line": 1,
+          "condition": "@media (min-width:$"
+        },
+        {
+          "line": 1,
+          "condition": "@media not all and\")"
+        },
+        {
+          "line": 1,
+          "condition": "@media (min-width:$"
+        },
+        {
+          "line": 1,
+          "condition": "@media (orientation: landscape)\":"
+        },
+        {
+          "line": 74,
+          "condition": "@media print\":"
+        },
+        {
+          "line": 74,
+          "condition": "@media (hover: none)\":"
+        },
+        {
+          "line": 74,
+          "condition": "@media (hover: none)\":"
+        },
+        {
+          "line": 74,
+          "condition": "@media (hover: none)\":"
+        },
+        {
+          "line": 74,
+          "condition": "@media (hover: none)\":"
+        },
+        {
+          "line": 74,
+          "condition": "@media (hover: none)\":"
+        }
+      ]
+    },
+    {
+      "root": "tfsc-cache-warmer",
+      "file": "includes/class-admin.php",
+      "sha256": "206ca3ddb2cb8fe96de0ace4c0804bc1de1bac67923740bafe8a4c63f4c37193",
+      "conditions": [
+        {
+          "line": 826,
+          "condition": "@media (max-width:782px)"
+        }
+      ]
+    },
+    {
+      "root": "tfsc-custom-functions",
+      "file": "tfsc-custom-stylesheet.css",
+      "sha256": "a5fd0eeaa2ad8aca7f71ce6f03776ee816237a5faa174a6c12488cdd073fe545",
+      "conditions": [
+        {
+          "line": 416,
+          "condition": "@media (max-width: 767px)"
+        },
+        {
+          "line": 673,
+          "condition": "@media only screen and (max-width: 1024px)"
+        },
+        {
+          "line": 694,
+          "condition": "@media only screen and (max-width: 768px)"
+        },
+        {
+          "line": 717,
+          "condition": "@media (prefers-reduced-motion: reduce)"
+        }
+      ]
+    },
+    {
+      "root": "tfsc-form-bridge",
+      "file": "src/AdminPage.php",
+      "sha256": "aa67e1c518825e8f459272e6f70e822698749bc276b3abc067564c4a4a6fa8da",
+      "conditions": [
+        {
+          "line": 185,
+          "condition": "@media (max-width: 782px)"
+        }
+      ]
+    },
+    {
+      "root": "tfsc-media-filters",
+      "file": "assets/media-filters.css",
+      "sha256": "619c7497243533e94a81b1edf0327350e8cf8f41814ca0f7d5468ac01020ad2f",
+      "conditions": [
+        {
+          "line": 23,
+          "condition": "@media (max-width: 600px)"
+        }
+      ]
+    },
+    {
+      "root": "tfsc-structured-data",
+      "file": "assets/admin.css",
+      "sha256": "90dc288aac5f5d34af4e4895477fa244de72f991d2be82271eb0fafe46cdb4ec",
+      "conditions": [
+        {
+          "line": 43,
+          "condition": "@media (max-width: 900px)"
+        }
+      ]
+    }
+  ]
+}

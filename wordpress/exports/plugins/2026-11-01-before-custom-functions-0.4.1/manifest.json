@@ -1,0 +1,10 @@
+{
+  "before_version": "0.4.0",
+  "settings_sha256": "59fecd15e4386ebfe7a83eb1da025aebfb7b7f081ee7d96ed5b35959f207b75a",
+  "files": {
+    "tfsc-custom-functions.php": "1d6a863b2c702f3bab75d2e12c0c589b40ab99a2ee3a22eda6094c7f5adaa78b",
+    "tfsc-custom-stylesheet.css": "a5fd0eeaa2ad8aca7f71ce6f03776ee816237a5faa174a6c12488cdd073fe545",
+    "custom-stylesheet-wp-admin.css": "b5965cbfd22a43f0f2caa1dc1405d1494c10f75524a97fd11f0823d38d3e6d5c"
+  },
+  "kit_unchanged_by_update": true
+}

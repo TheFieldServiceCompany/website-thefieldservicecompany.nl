@@ -2,7 +2,7 @@
 /**
  * Plugin Name: TFSC Custom Functions Plugin
  * Description: TFSC frontend styles, local fonts, search titles and compatibility shortcodes.
- * Version: 0.4.0
+ * Version: 0.4.1
  * Author: The Field Service Company
  */
 
@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-define( 'TFSC_CUSTOM_FUNCTIONS_VERSION', '0.4.0' );
+define( 'TFSC_CUSTOM_FUNCTIONS_VERSION', '0.4.1' );
 
 // Fonts are hosted locally; Elementor must not request Google Fonts remotely.
 add_filter( 'elementor/frontend/print_google_fonts', '__return_false' );

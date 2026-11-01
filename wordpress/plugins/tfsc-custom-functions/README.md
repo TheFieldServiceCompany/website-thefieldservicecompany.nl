@@ -1,6 +1,8 @@
-# TFSC Custom Functions 0.4.0
+# TFSC Custom Functions 0.4.1
 
-**Actief op de live website sinds 1 november 2026.** PHP, CSS en de bijbehorende Elementor-kitinstellingen zijn geplaatst en teruggelezen.
+**Versie 0.4.1 is actief op de live website sinds 1 november 2026.** PHP en CSS zijn geplaatst en teruggelezen; de Elementor-kitinstellingen uit 0.4.0 zijn ongewijzigd.
+
+0.4.1 trekt de mobiele grens gelijk met Elementor: maximaal 767 px. De tabletgrens blijft 1024 px. `.hide-mobile` en popup-/hoogteregels zijn ongewijzigd. Zie [de mediaquery-audit](audit/mediaqueries-0.4.1.md).
 
 ## Waar beheer je wat?
 
@@ -37,6 +39,7 @@ Zie [beheer en livegang 0.4.0](audit/beheer-en-livegang-0.4.0.md). De eerdere au
 - [Originele back-up 0.2.0](../../exports/plugins/2026-11-01-before-custom-functions-cleanup/).
 - [Verse back-up inclusief Elementor-instellingen vóór 0.4.0](../../exports/plugins/2026-11-01-before-custom-functions-0.4.0/).
 - [Kitpatch en live bewijs](audit/0.4.0/).
+- [Back-up van 0.4.0 vóór de mediaquerycorrectie](../../exports/plugins/2026-11-01-before-custom-functions-0.4.1/) en [controlebewijs 0.4.1](audit/0.4.1/).
 
 0.4.0 hoort bij de gesynchroniseerde Elementor-kit 9367. De kitpatch in het installatiepakket wordt niet automatisch uitgevoerd bij een plugin-upload. Voor exact herstel moeten zowel pluginbestanden als de bijbehorende kitinstellingen worden teruggezet, rekening houdend met latere wijzigingen. Genereer daarna de kit-CSS opnieuw en vernieuw de caches.
 

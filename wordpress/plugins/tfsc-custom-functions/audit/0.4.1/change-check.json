@@ -1,0 +1,14 @@
+{
+  "css_changes": "One media condition: max-width 768px -> 767px",
+  "hide_mobile_unchanged": true,
+  "popup_height_and_spacing_unchanged": true,
+  "php_changes": "Version metadata only: 0.4.0 -> 0.4.1",
+  "old_css_sha256": "a5fd0eeaa2ad8aca7f71ce6f03776ee816237a5faa174a6c12488cdd073fe545",
+  "new_css_sha256": "31576cb248a4842fd6016e5a74c6a4b4912f2dc2e2ef1c8c9900b7cd451446d0",
+  "live_status": 200,
+  "live_version": "0.4.1",
+  "live_active": true,
+  "live_css_matches": true,
+  "css_structure_errors": 0,
+  "kit_unchanged": true
+}

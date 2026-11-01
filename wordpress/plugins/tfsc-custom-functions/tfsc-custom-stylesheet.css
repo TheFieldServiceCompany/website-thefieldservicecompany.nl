@@ -691,7 +691,7 @@ Staat bij page custom css*/
 
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
     body,p,ul li{
         font-size:17px;
         line-height:28px}

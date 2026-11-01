@@ -1,0 +1,162 @@
+[
+  {
+    "source": "pages/18864",
+    "status": "publish",
+    "field": "/meta/_elementor_data#json/0/elements/2/elements/1/elements/0/settings/custom_css",
+    "line": 37,
+    "kind": "css",
+    "condition": "@media (max-width: 767px)"
+  },
+  {
+    "source": "elementor_library/28197",
+    "status": "publish",
+    "field": "/meta/_elementor_data#json/1/elements/0/elements/3/elements/1/settings/html",
+    "line": 17,
+    "kind": "js-width",
+    "condition": "innerWidth < 768"
+  },
+  {
+    "source": "elementor_library/28197",
+    "status": "publish",
+    "field": "/meta/_elementor_data#json/1/elements/0/elements/3/elements/1/settings/html",
+    "line": 51,
+    "kind": "js-width",
+    "condition": "innerWidth < 768"
+  },
+  {
+    "source": "elementor_library/27956",
+    "status": "publish",
+    "field": "/meta/_elementor_data#json/1/elements/1/elements/0/elements/1/settings/html",
+    "line": 17,
+    "kind": "js-width",
+    "condition": "innerWidth < 768"
+  },
+  {
+    "source": "elementor_library/27956",
+    "status": "publish",
+    "field": "/meta/_elementor_data#json/1/elements/1/elements/0/elements/1/settings/html",
+    "line": 51,
+    "kind": "js-width",
+    "condition": "innerWidth < 768"
+  },
+  {
+    "source": "elementor_library/27216",
+    "status": "publish",
+    "field": "/meta/_elementor_data#json/1/elements/1/elements/0/elements/1/settings/html",
+    "line": 17,
+    "kind": "js-width",
+    "condition": "innerWidth < 768"
+  },
+  {
+    "source": "elementor_library/27216",
+    "status": "publish",
+    "field": "/meta/_elementor_data#json/1/elements/1/elements/0/elements/1/settings/html",
+    "line": 51,
+    "kind": "js-width",
+    "condition": "innerWidth < 768"
+  },
+  {
+    "source": "elementor_library/26275",
+    "status": "publish",
+    "field": "/meta/_elementor_data#json/0/settings/custom_css",
+    "line": 33,
+    "kind": "css",
+    "condition": "@media (max-width: 767px)"
+  },
+  {
+    "source": "elementor_library/26022",
+    "status": "publish",
+    "field": "/meta/_elementor_data#json/1/elements/0/elements/2/elements/0/elements/1/elements/0/elements/0/settings/custom_css",
+    "line": 4,
+    "kind": "css",
+    "condition": "@media (max-width: 767px)"
+  },
+  {
+    "source": "elementor_library/25495",
+    "status": "publish",
+    "field": "/meta/_elementor_data#json/0/elements/1/elements/0/settings/custom_css",
+    "line": 17,
+    "kind": "css",
+    "condition": "@media (max-width: 1024px)"
+  },
+  {
+    "source": "elementor_library/25495",
+    "status": "publish",
+    "field": "/meta/_elementor_data#json/0/elements/1/elements/0/settings/custom_css",
+    "line": 26,
+    "kind": "css",
+    "condition": "@media (max-width: 767px)"
+  },
+  {
+    "source": "elementor_library/25495",
+    "status": "publish",
+    "field": "/meta/_elementor_data#json/1/elements/0/elements/1/elements/0/settings/custom_css",
+    "line": 14,
+    "kind": "css",
+    "condition": "@media (max-width: 1024px)"
+  },
+  {
+    "source": "elementor_library/25495",
+    "status": "publish",
+    "field": "/meta/_elementor_data#json/1/elements/0/elements/1/elements/0/settings/custom_css",
+    "line": 56,
+    "kind": "css",
+    "condition": "@media (prefers-reduced-motion: reduce)"
+  },
+  {
+    "source": "elementor_library/25495",
+    "status": "publish",
+    "field": "/meta/_elementor_data#json/1/elements/0/elements/2/settings/custom_css",
+    "line": 70,
+    "kind": "css",
+    "condition": "@media (max-width: 1024px)"
+  },
+  {
+    "source": "elementor_library/25495",
+    "status": "publish",
+    "field": "/meta/_elementor_data#json/1/elements/0/elements/2/elements/0/elements/0/elements/3/settings/html",
+    "line": 44,
+    "kind": "js",
+    "condition": "matchMedia(\n                '(max-width: 767px)'\n            )"
+  },
+  {
+    "source": "elementor_library/25495",
+    "status": "publish",
+    "field": "/meta/_elementor_data#json/1/elements/0/elements/2/elements/0/elements/0/elements/3/settings/html",
+    "line": 53,
+    "kind": "js",
+    "condition": "matchMedia(\n                '(max-width: 1024px)'\n            )"
+  },
+  {
+    "source": "elementor_library/24908",
+    "status": "publish",
+    "field": "/meta/_elementor_data#json/1/elements/0/elements/2/elements/1/settings/html",
+    "line": 17,
+    "kind": "js-width",
+    "condition": "innerWidth < 768"
+  },
+  {
+    "source": "elementor_library/24908",
+    "status": "publish",
+    "field": "/meta/_elementor_data#json/1/elements/0/elements/2/elements/1/settings/html",
+    "line": 51,
+    "kind": "js-width",
+    "condition": "innerWidth < 768"
+  },
+  {
+    "source": "elementor_library/24876",
+    "status": "publish",
+    "field": "/meta/_elementor_data#json/1/elements/0/elements/2/elements/1/settings/html",
+    "line": 17,
+    "kind": "js-width",
+    "condition": "innerWidth < 768"
+  },
+  {
+    "source": "elementor_library/24876",
+    "status": "publish",
+    "field": "/meta/_elementor_data#json/1/elements/0/elements/2/elements/1/settings/html",
+    "line": 51,
+    "kind": "js-width",
+    "condition": "innerWidth < 768"
+  }
+]
