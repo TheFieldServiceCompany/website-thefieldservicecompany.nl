@@ -32,3 +32,11 @@ Een volledige eerdere templatekopie terugzetten kan latere bewerkingen overschri
 
 Zie `audits/2026-10-31-vacaturetemplate-elementor-en-formuliercontext.md` voor
 opdracht, toestemming, API-toegang, bevindingen en resterende controle.
+
+## Gedeelde scrollheader sinds 1 november 2026
+
+Snippet 359 laat het binnenpaneel 9d55293 dynamisch aansluiten op de zichtbare
+header. Dit template, de inline HTML-widget en de oorspronkelijke offsets
+70/60/50 zijn daarvoor niet aangepast. Bij deactivatie van snippet 359 werkt
+de oorspronkelijke stickypositie weer. Zie
+`audits/2026-11-01-shared-scroll-navigation.md`.

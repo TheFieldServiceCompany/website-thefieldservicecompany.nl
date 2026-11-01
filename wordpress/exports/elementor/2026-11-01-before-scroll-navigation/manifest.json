@@ -1,0 +1,13 @@
+{
+  "date": "2026-11-01",
+  "site": "https://thefieldservicecompany.nl",
+  "templates": [
+    17275,
+    26022
+  ],
+  "approach": "Add one reversible frontend controller; leave template data and plugin files intact",
+  "previous_controller_matches": [],
+  "controller_id": 359,
+  "controller_sha256": "f999080e2f8ec8fcdcb137d2bbf58577a7cdbf2ae04e7ec3827b1ac14d984b5b",
+  "rollback": "Deactivate snippet 359 and purge LiteSpeed page cache. No template restoration needed."
+}

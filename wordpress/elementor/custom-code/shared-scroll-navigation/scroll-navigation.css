@@ -1,0 +1,26 @@
+/* Activate only after the controller found the shared header and excluded the editor. */
+html.tfsc-scroll-navigation .elementor-17275 [data-id="5b8468be"] {
+    transition: translate 200ms ease;
+    will-change: translate;
+}
+html.tfsc-scroll-header-hidden .elementor-17275 [data-id="5b8468be"] {
+    translate: 0 calc(-100% - 8px);
+    pointer-events: none;
+}
+html.tfsc-scroll-navigation .elementor-26022 [data-id="9d55293"].elementor-sticky--active {
+    top: var(--tfsc-navigation-top) !important;
+    transition: top 200ms ease;
+}
+html.tfsc-scroll-navigation .elementor-menu-anchor,
+html.tfsc-scroll-navigation [id^="elementor-toc__heading-anchor-"],
+html.tfsc-scroll-navigation .toc :is(h2, h3, h4)[id],
+html.tfsc-scroll-navigation .elementor-widget-heading[id],
+html.tfsc-scroll-navigation #scroll-top {
+    scroll-margin-top: var(--tfsc-anchor-top) !important;
+}
+@media (prefers-reduced-motion: reduce) {
+    html.tfsc-scroll-navigation .elementor-17275 [data-id="5b8468be"],
+    html.tfsc-scroll-navigation .elementor-26022 [data-id="9d55293"].elementor-sticky--active {
+        transition: none;
+    }
+}

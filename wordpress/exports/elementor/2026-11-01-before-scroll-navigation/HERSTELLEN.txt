@@ -1,0 +1,31 @@
+HERSTELLEN NAAR DE OORSPRONKELIJKE STICKY HEADER
+
+Website: https://thefieldservicecompany.nl
+Datum: 1 november 2026
+Nieuwe regeling: Code Snippets ID 359,
+TFSC gezamenlijke scrollheader en vacaturepaneel [v1.0.0].
+
+Normaal herstel:
+1. Open WordPress > Snippets en deactiveer uitsluitend snippet 359.
+2. Wis de LiteSpeed-paginacache.
+3. Herlaad de pagina. De header blijft weer permanent zichtbaar en het
+   vacaturepaneel gebruikt zijn oorspronkelijke afstanden: 70/60/50 px.
+
+REST-alternatief voor stap 1:
+PUT /wp-json/code-snippets/v1/snippets/359
+Body: {"active":false}
+Gebruik de bestaande geautoriseerde WordPress-verbinding.
+Er staan geen inloggegevens in deze back-up.
+
+De header en het vacaturetemplate zijn bij deze wijziging NIET bewerkt.
+Voor normaal herstel hoeft u dus geen template terug te zetten.
+
+Extra herstelkopieën:
+17275.json = oorspronkelijke header_main
+26022.json = oorspronkelijk single | vacature
+manifest.json = bronhash, snippet-ID en wijzigingsomschrijving
+359-scroll-navigation.php = toegevoegde regeling
+
+Gebruik de templatekopieën alleen als een template later apart beschadigd
+raakt. Controleer dan eerst op nieuwere wijzigingen: het volledig terugzetten
+van een oudere templatekopie kan tussentijdse aanpassingen overschrijven.
