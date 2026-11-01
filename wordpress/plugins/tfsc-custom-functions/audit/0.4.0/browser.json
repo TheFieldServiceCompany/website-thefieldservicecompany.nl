@@ -1,0 +1,56 @@
+[
+  {
+    "bodyFont": "\"Inter Tight\", sans-serif",
+    "bodySize": "18px",
+    "focus": "form-field-employment_preferences-1",
+    "focusRing": "rgb(0, 11, 20) solid 3px",
+    "heading": "\"Barlow Semi Condensed\", sans-serif",
+    "oldPreloads": [],
+    "page": "https://thefieldservicecompany.nl/formulier-advies/",
+    "width": 1280
+  },
+  {
+    "bodySize": "17px",
+    "headingSize": "30px",
+    "nativeBlockStyles": [
+      "wp-block-library-css"
+    ],
+    "page": "https://thefieldservicecompany.nl/kennisbank/wat-is-een-ai-agent/",
+    "scroll": 375,
+    "tables": [
+      {
+        "overflow": "auto",
+        "w": 355
+      },
+      {
+        "overflow": "auto",
+        "w": 355
+      },
+      {
+        "overflow": "auto",
+        "w": 355
+      },
+      {
+        "overflow": "auto",
+        "w": 355
+      }
+    ],
+    "width": 390
+  },
+  {
+    "offCanvasOpens": true
+  },
+  {
+    "more": [
+      {
+        "expanded": "false",
+        "text": "Meer"
+      }
+    ],
+    "page": "https://thefieldservicecompany.nl/vacature/service-monteur-rotating-equipment-internationaal/"
+  },
+  {
+    "moreVisibleBefore": 52,
+    "moreVisibleAfter": 54
+  }
+]

@@ -57,5 +57,7 @@
   ],
   "old_bytes": 18544,
   "new_bytes": 16786,
-  "limitations": "Static CSS/source checks. Browser checks are recorded separately in browser-validation.json; no complete WordPress runtime test."
+  "limitations": "Static CSS/source checks. Browser checks are recorded separately in browser-validation.json; no complete WordPress runtime test.",
+  "source_version": "0.3.0",
+  "status": "Historical candidate validation; current live 0.4.0 evidence is in audit/0.4.0/."
 }

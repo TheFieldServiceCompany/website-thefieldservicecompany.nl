@@ -1,0 +1,50 @@
+[
+  {
+    "path": "/",
+    "status": 200,
+    "bytes": 197032,
+    "file": "8a5edab28263.html",
+    "fatal_error": false,
+    "css_link": "<link data-optimized=\"1\" rel='stylesheet' id='theme-override-css' href='https://thefieldservicecompany.nl/wp-content/litespeed/css/c4fa4c7d9679859806f5fd0675580783.css?ver=9ddb7' media='all' />"
+  },
+  {
+    "path": "/formulier-advies/",
+    "status": 200,
+    "bytes": 58592,
+    "file": "059a70bec77c.html",
+    "fatal_error": false,
+    "css_link": "<link data-optimized=\"1\" rel='stylesheet' id='theme-override-css' href='https://thefieldservicecompany.nl/wp-content/litespeed/css/c4fa4c7d9679859806f5fd0675580783.css?ver=9ddb7' media='all' />"
+  },
+  {
+    "path": "/vacatures/",
+    "status": 200,
+    "bytes": 316311,
+    "file": "244a2ced04a8.html",
+    "fatal_error": false,
+    "css_link": "<link data-optimized=\"1\" rel='stylesheet' id='theme-override-css' href='https://thefieldservicecompany.nl/wp-content/litespeed/css/c4fa4c7d9679859806f5fd0675580783.css?ver=9ddb7' media='all' />"
+  },
+  {
+    "path": "/vacature/service-monteur-rotating-equipment-internationaal/",
+    "status": 200,
+    "bytes": 236485,
+    "file": "0505f07c329a.html",
+    "fatal_error": false,
+    "css_link": "<link data-optimized=\"1\" rel='stylesheet' id='theme-override-css' href='https://thefieldservicecompany.nl/wp-content/litespeed/css/c4fa4c7d9679859806f5fd0675580783.css?ver=9ddb7' media='all' />"
+  },
+  {
+    "path": "/blog/waarom-ai-de-field-service-engineer-niet-vervangt-maar-zijn-werk-wel-verandert/",
+    "status": 200,
+    "bytes": 147440,
+    "file": "86911e97849e.html",
+    "fatal_error": false,
+    "css_link": "<link data-optimized=\"1\" rel='stylesheet' id='theme-override-css' href='https://thefieldservicecompany.nl/wp-content/litespeed/css/c4fa4c7d9679859806f5fd0675580783.css?ver=9ddb7' media='all' />"
+  },
+  {
+    "path": "/kennisbank/wat-is-een-ai-agent/",
+    "status": 200,
+    "bytes": 187558,
+    "file": "ea22a575ad85.html",
+    "fatal_error": false,
+    "css_link": "<link data-optimized=\"1\" rel='stylesheet' id='theme-override-css' href='https://thefieldservicecompany.nl/wp-content/litespeed/css/c4fa4c7d9679859806f5fd0675580783.css?ver=9ddb7' media='all' />"
+  }
+]

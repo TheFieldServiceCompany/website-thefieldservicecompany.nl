@@ -1,4 +1,4 @@
-/* TFSC frontend styles — 0.3.0. Legacy rules are archived separately. */
+/* TFSC frontend styles — 0.4.0. Legacy rules are archived separately. */
 
 @font-face {
     font-display: swap;
@@ -48,7 +48,7 @@ body {
     font-weight:400;
     font-size:18px;
     line-height:30px;
-    color:#000
+    color:var(--e-global-color-text, #000)
 }
 body{
     min-height:100vh;
@@ -76,38 +76,8 @@ h6,
 .elementor-heading-title,
 .elementor-button{
     font-family: "Barlow Semi Condensed", sans-serif;
-    color: #00355B;
+    color: var(--e-global-color-primary, #00355B);
     font-weight:600;
-}
-h1.elementor-heading-title,
-.elementor-shortcode h1{
-    font-size:40px;
-    text-transform:uppercase;
-    font-weight:700
-}
-h2.elementor-heading-title,
-.elementor-shortcode h2 {
-    font-size: 24px;
-}
-
-h3.elementor-heading-title,
-.elementor-shortcode h3 {
-    font-size: 20px;
-}
-
-h4.elementor-heading-title,
-.elementor-shortcode h4 {
-    font-size: 18px;
-}
-
-h5.elementor-heading-title,
-.elementor-shortcode h5 {
-    font-size: 18px;
-}
-
-h6.elementor-heading-title,
-.elementor-shortcode h6 {
-    font-size: 18px;
 }
 .elementor-widget-theme-post-content h2{
     margin:30px 0 8px 0;
@@ -145,13 +115,13 @@ h3.elementor-heading-title a:hover,
 h4.elementor-heading-title a:hover,
 h5.elementor-heading-title a:hover,
 h6.elementor-heading-title a:hover {
-    color: #00A1FF;
+    color: var(--e-global-color-accent, #00A1FF);
 }
 a{
-    color:#000
+    color:var(--e-global-color-text, #000)
 }
 .elementor-widget-theme-post-content a{
-    color:#00355B;
+    color:var(--e-global-color-primary, #00355B);
     text-decoration:underline;
     }
 a:hover{
@@ -163,12 +133,12 @@ a:focus-visible,
 .submit:focus-visible,
 button:focus-visible,
 input[type="submit"]:focus-visible {
-    outline: 3px solid #00355B;
+    outline: 3px solid var(--e-global-color-primary, #00355B);
     outline-offset: 3px;
 }
 .text-wit a:focus-visible,
 .text-wit button:focus-visible {
-    outline-color: #FFF;
+    outline-color: var(--e-global-color-3df8c800, #FFF);
 }
 
 .elementor-widget-text-editor a{
@@ -181,7 +151,7 @@ input[type="submit"]:focus-visible {
 
 b, strong, .bold{
     font-weight:700;
-    color:#000
+    color:var(--e-global-color-text, #000)
 }
 .class-link-bold{
     text-decoration:underline;
@@ -214,7 +184,7 @@ b, strong, .bold{
 .text-wit H3,
 .text-wit H4,
 .text-wit H5,
-.text-wit H6{color:#FFF}
+.text-wit H6{color:var(--e-global-color-3df8c800, #FFF)}
 
 .text-blauw,
 .text-blauw H1,
@@ -222,7 +192,7 @@ b, strong, .bold{
 .text-blauw H3,
 .text-blauw H4,
 .text-blauw H5,
-.text-blauw H6{color:#00A1FF}
+.text-blauw H6{color:var(--e-global-color-accent, #00A1FF)}
 
 .text-center{text-align:center}
 
@@ -240,147 +210,147 @@ b, strong, .bold{
 
 .button-black-white a,
 .button-black-white a:visited{
-    background-color:#111;
-    border:1px solid #111;
-    color:#FFF
+    background-color:var(--e-global-color-641714f6, #111);
+    border:1px solid var(--e-global-color-641714f6, #111);
+    color:var(--e-global-color-3df8c800, #FFF)
 }
 .button-black-white a:hover{
     background-color:white;
-    color:#111;
+    color:var(--e-global-color-641714f6, #111);
 }
 
 .button-dblue-white a,
 .button-dblue-white a:visited{
-    background-color:#00355B;
-    border:1px solid #00355B;
-    color:#FFF
+    background-color:var(--e-global-color-primary, #00355B);
+    border:1px solid var(--e-global-color-primary, #00355B);
+    color:var(--e-global-color-3df8c800, #FFF)
 }
 .button-dblue-white a:hover{
-    background-color:#FFF;
-    color:#00355B
+    background-color:var(--e-global-color-3df8c800, #FFF);
+    color:var(--e-global-color-primary, #00355B)
 }
 .button-trans-dblue a,
 .button-trans-dblue a:visited{
     background-color:transparent;
-    border:1px solid #00355B;
-    color:#00355B
+    border:1px solid var(--e-global-color-primary, #00355B);
+    color:var(--e-global-color-primary, #00355B)
 }
 .button-trans-dblue a:hover{
-    background-color:#00355B;
-    color:#FFF;
+    background-color:var(--e-global-color-primary, #00355B);
+    color:var(--e-global-color-3df8c800, #FFF);
 }
 .button-white-dblue a,
 .button-white-dblue a:visited{
-    background-color:#fff;
-    color:#00355B;
-    border:1px solid #FFF
+    background-color:var(--e-global-color-3df8c800, #fff);
+    color:var(--e-global-color-primary, #00355B);
+    border:1px solid var(--e-global-color-3df8c800, #FFF)
 }
 .button-white-dblue a:hover{
-    background-color:#00355B;
-    color:#FFF
+    background-color:var(--e-global-color-primary, #00355B);
+    color:var(--e-global-color-3df8c800, #FFF)
 }
 .button-dblue-trans a,
 .button-dblue-trans a:visited{
-    background-color: #00355B;
-    color:#FFF;
-    border:1px solid #00355B
+    background-color: var(--e-global-color-primary, #00355B);
+    color:var(--e-global-color-3df8c800, #FFF);
+    border:1px solid var(--e-global-color-primary, #00355B)
 }
 .button-dblue-trans a:hover{
     background-color: transparent;
-    color:#00355B
+    color:var(--e-global-color-primary, #00355B)
 }
 .button-blue-white a,
 .button-blue-white a:visited{
-    background-color:#00A1FF;
-    border:1px solid #00A1FF;
-    color:#FFF
+    background-color:var(--e-global-color-accent, #00A1FF);
+    border:1px solid var(--e-global-color-accent, #00A1FF);
+    color:var(--e-global-color-3df8c800, #FFF)
 }
 .button-blue-white a:hover{
-    background-color:#FFF;
-    color:#00A1FF;
+    background-color:var(--e-global-color-3df8c800, #FFF);
+    color:var(--e-global-color-accent, #00A1FF);
 }
 
 .button-blue-white-3d a,
 .button-blue-white-3d a:visited{
-    background-color:#00A1FF;
+    background-color:var(--e-global-color-accent, #00A1FF);
     border-width: 1px 1px 3px 1px;
     border-color: #1386C9;
     border-style:solid;
-    color: #FFF
+    color: var(--e-global-color-3df8c800, #FFF)
 }
 .button-blue-white-3d a:hover{
-    background-color:#FFF;
+    background-color:var(--e-global-color-3df8c800, #FFF);
     color:#0077B6;
 }
 .button-orange-white-3d a,
 .button-orange-white-3d a:visited{
     font-size:18px;
     padding:16px 30px;
-    background-color:#E87500;
+    background-color:var(--e-global-color-7b119a4e, #E87500);
     border-width: 1px 1px 3px 1px;
-    border-color: #8F3D00;
+    border-color: var(--e-global-color-6b55b03c, #8F3D00);
     border-style:solid;
-    color: #FFF
+    color: var(--e-global-color-3df8c800, #FFF)
 }
 .button-orange-white-3d a:hover{
-    background-color:#FFF;
-    color:#8F3D00;
+    background-color:var(--e-global-color-3df8c800, #FFF);
+    color:var(--e-global-color-6b55b03c, #8F3D00);
 }
 
 .button-green-white a,
 .button-green-white a:visited{
-    background-color:#00B900;
+    background-color:var(--e-global-color-893afbb, #00B900);
     border-width: 1px 1px 1px 1px;
-    border-color: #00B900;
+    border-color: var(--e-global-color-893afbb, #00B900);
     border-style:solid;
-    color:#FFF
+    color:var(--e-global-color-3df8c800, #FFF)
 }
 .button-green-white a:hover{
-    background-color:#FFF;
-    color:#00B900
+    background-color:var(--e-global-color-3df8c800, #FFF);
+    color:var(--e-global-color-893afbb, #00B900)
 }
 .button-trans-green a,
 .button-trans-green a:visited{
     background-color:transparent;
     border-width: 1px 1px 1px 1px;
-    border-color: #00B900;
+    border-color: var(--e-global-color-893afbb, #00B900);
     border-style:solid;
-    color:#00B900
+    color:var(--e-global-color-893afbb, #00B900)
 }
 .button-trans-green a:hover{
-    background-color:#00B900;
-    color:#FFF
+    background-color:var(--e-global-color-893afbb, #00B900);
+    color:var(--e-global-color-3df8c800, #FFF)
 }
 .button-orange-white a,
 .button-orange-white a:visited{
     background-color:#FF7C00;
     border:1px solid #FF7C00;
-    color:#FFF;
+    color:var(--e-global-color-3df8c800, #FFF);
 }
 .button-orange-white a:hover{
-    background-color:#FFF;
+    background-color:var(--e-global-color-3df8c800, #FFF);
     color:#FF7C00
 }
 
 .button-trans-white a,
 .button-trans-white a:visited{
     background-color:transparent;
-    border:1px solid #FFF;
-    color:#FFF
+    border:1px solid var(--e-global-color-3df8c800, #FFF);
+    color:var(--e-global-color-3df8c800, #FFF)
 }
 .button-trans-white a:hover{
-    background-color:#FFF;
-    color:#111;
+    background-color:var(--e-global-color-3df8c800, #FFF);
+    color:var(--e-global-color-641714f6, #111);
 }
 .button-white-black a,
 .button-white-black a:visited{
-    background-color:#FFF;
-    border:1px solid #FFF;
-    color:#111
+    background-color:var(--e-global-color-3df8c800, #FFF);
+    border:1px solid var(--e-global-color-3df8c800, #FFF);
+    color:var(--e-global-color-641714f6, #111)
 }
 .button-white-black a:hover{
-    background-color: #111;
-    color:#FFF
+    background-color: var(--e-global-color-641714f6, #111);
+    color:var(--e-global-color-3df8c800, #FFF)
 }
 
 .tfsc_query_show-more .tfsc-query-show-more__wrapper{
@@ -394,7 +364,7 @@ b, strong, .bold{
     border:none;
     font-weight:700;
     text-decoration:underline;
-    color:#00355B;
+    color:var(--e-global-color-primary, #00355B);
     display: inline-flex;
     align-items: center;
     padding:0;
@@ -404,7 +374,7 @@ b, strong, .bold{
 .tfsc-query-show-more__button:hover,
 .tfsc-query-show-more__button:active{
     background-color:transparent;
-    color:#00A1FF
+    color:var(--e-global-color-accent, #00A1FF)
 }
 .tfsc-query-show-more__icon {
     line-height: 1;
@@ -426,16 +396,16 @@ b, strong, .bold{
     font-weight:700;
     font-size:13px;
     padding: 0px 10px;
-    background-color:#00355B;
-    border: 1px solid #00355B;
-    color:#FFF;
+    background-color:var(--e-global-color-primary, #00355B);
+    border: 1px solid var(--e-global-color-primary, #00355B);
+    color:var(--e-global-color-3df8c800, #FFF);
     text-transform:uppercase;
     border-radius: 0;
     text-decoration: none;
 }
 .tfsc-post-terms__item:hover{
     background-color:transparent;
-    color:#00355B;
+    color:var(--e-global-color-primary, #00355B);
 }
 /** Beroepengids */
 
@@ -462,15 +432,15 @@ b, strong, .bold{
 .vac-places .elementor-icon-list-item a{
     padding: 0px 10px;
     margin:0 0 6px 0;
-    background-color:#00355B;
-    border: 1px solid #00355B;
-    color:#fff;
+    background-color:var(--e-global-color-primary, #00355B);
+    border: 1px solid var(--e-global-color-primary, #00355B);
+    color:var(--e-global-color-3df8c800, #fff);
     font-size:15px;
     font-weight:bold;
 }
 .vac-places .elementor-icon-list-item a:hover{
-    background-color: #fff;
-    color:#00355B;
+    background-color: var(--e-global-color-3df8c800, #fff);
+    color:var(--e-global-color-primary, #00355B);
 }
 
 /*Reviews*/
@@ -509,7 +479,7 @@ b, strong, .bold{
     content: "";
     width: 8px;
     height: 8px;
-    background: #035D92;
+    background: var(--e-global-color-secondary, #035D92);
     position: absolute;
     inset-inline-start: 0;
     top: 0.7em;
@@ -539,14 +509,14 @@ b, strong, .bold{
 .vacature-tekst .wp-block-separator{
     margin:40px 0px;
     padding: 0 0 0 0;
-    border: 1px solid #00A1FF;
+    border: 1px solid var(--e-global-color-accent, #00A1FF);
 }
 
 /*FAQ styling*/
 .rank-math-list-item{
     margin:20px 0;
     padding:10px 20px 20px 20px;
-    background:#F2F2F2
+    background:var(--e-global-color-71835498, #F2F2F2)
 }
 
 /* post archive pagination*/
@@ -554,7 +524,7 @@ b, strong, .bold{
     margin:10px 0;
     padding:20px 0;
     background:transparent;
-    border:1px solid  #D5D5D5;
+    border:1px solid  var(--e-global-color-3a5c802f, #D5D5D5);
 }
 .elementor-pagination .page-numbers{
     margin:0 5px 0 5px;
@@ -565,13 +535,13 @@ b, strong, .bold{
 }
 .elementor-pagination .page-numbers.current{
     background-color:transparent;
-    border:1px solid #000;
-    color:#000;
+    border:1px solid var(--e-global-color-text, #000);
+    color:var(--e-global-color-text, #000);
 }
 .elementor-pagination .page-numbers:hover{
     background-color:transparent;
-    border:1px solid #E87500;
-    color:#E87500;
+    border:1px solid var(--e-global-color-7b119a4e, #E87500);
+    color:var(--e-global-color-7b119a4e, #E87500);
 }
 
 /***** Forms *****/
@@ -591,7 +561,7 @@ Staat bij page custom css*/
 /* form checkbox privacy statement */
 .elementor-popup-modal .dialog-message{
     font-size:18px;
-    color:#111
+    color:var(--e-global-color-641714f6, #111)
 }
 
 .form-link-bold{
@@ -643,8 +613,8 @@ Staat bij page custom css*/
     transition: all 0.2s ease;
 }
 .elementor-form input[type=checkbox]+label:after{
-    border-right: 2px solid #fff;
-    border-top: 2px solid #fff;
+    border-right: 2px solid var(--e-global-color-3df8c800, #fff);
+    border-top: 2px solid var(--e-global-color-3df8c800, #fff);
     content: "";
     height: 11px;
     left: 2px;
@@ -656,11 +626,11 @@ Staat bij page custom css*/
     display: none;
 }
 .elementor-form input[type=checkbox]:hover +label:before{
-    border-color: #00a1ff;
+    border-color: var(--e-global-color-accent, #00a1ff);
 }
 .elementor-form input[type=checkbox]:checked +label:before{
-    border-color: #00a1ff;
-    background: #00a1ff;
+    border-color: var(--e-global-color-accent, #00a1ff);
+    background: var(--e-global-color-accent, #00a1ff);
 }
 .elementor-form input[type=checkbox]:checked +label:after{
      -moz-animation: check 0.8s ease 0s running;
@@ -669,7 +639,7 @@ Staat bij page custom css*/
     display: block;
     width: 6px;
     height: 11px;
-    border-color: #fff;
+    border-color: var(--e-global-color-3df8c800, #fff);
 }
 
 /*** FOOTER ***/
@@ -697,16 +667,10 @@ Staat bij page custom css*/
 
 /*Vacatures & Archives*/
 .loop-vacature .elementor-heading-title:hover{
-    color:#00A1FF
+    color:var(--e-global-color-accent, #00A1FF)
 }
 
 @media only screen and (max-width: 1024px) {
-    H1.elementor-heading-title,.elementor-shortcode H1{font-size:30px}
-    H2.elementor-heading-title,.elementor-shortcode H2{font-size:24px}
-    H3.elementor-heading-title,.elementor-shortcode H3{font-size:20px}
-    H4.elementor-heading-title,.elementor-shortcode H4{font-size:18px}
-    H5.elementor-heading-title,.elementor-shortcode H5{font-size:16px}
-    H6.elementor-heading-title,.elementor-shortcode H6{font-size:14px}
 
     .hide-mobile{
         display:none !important
@@ -746,7 +710,7 @@ Staat bij page custom css*/
 
 /* Inputs remain accessible while the visible checkbox receives the focus ring. */
 .elementor-form input[type="checkbox"]:focus-visible + label::before {
-    outline: 3px solid #00355B;
+    outline: 3px solid var(--e-global-color-primary, #00355B);
     outline-offset: 3px;
 }
 
@@ -760,3 +724,6 @@ Staat bij page custom css*/
         -moz-animation: none;
     }
 }
+
+/* Search-result emphasis follows Elementor’s accent color. */
+.tfsc-search-query { color: var(--e-global-color-accent, #00A1FF); }

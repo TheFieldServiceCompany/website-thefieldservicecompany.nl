@@ -1,0 +1,307 @@
+{
+  "default_generic_fonts": "Sans-Serif",
+  "container_width": {
+    "unit": "px",
+    "size": "1200",
+    "sizes": []
+  },
+  "space_between_widgets": {
+    "column": "20",
+    "row": "20",
+    "isLinked": true,
+    "unit": "px",
+    "size": "20",
+    "sizes": []
+  },
+  "custom_colors": [
+    {
+      "_id": "3d35a9f",
+      "title": "transparent",
+      "color": "#00000000"
+    },
+    {
+      "_id": "3df8c800",
+      "title": "white",
+      "color": "#FFF"
+    },
+    {
+      "_id": "64bfcef",
+      "title": "white-body",
+      "color": "#FAFAFA"
+    },
+    {
+      "_id": "71835498",
+      "title": "white-broken",
+      "color": "#F2F2F2"
+    },
+    {
+      "_id": "3a5c802f",
+      "title": "grey-light",
+      "color": "#D5D5D5"
+    },
+    {
+      "_id": "c6b9bfb",
+      "title": "grey-dark",
+      "color": "#787878"
+    },
+    {
+      "_id": "7dcec797",
+      "title": "antracite",
+      "color": "#2D2D2D"
+    },
+    {
+      "_id": "641714f6",
+      "title": "black-broken",
+      "color": "#111111"
+    },
+    {
+      "_id": "4cf9287",
+      "title": "black",
+      "color": "#000000"
+    },
+    {
+      "_id": "4518449",
+      "title": "Saved Color #10",
+      "color": "#007AC1"
+    },
+    {
+      "_id": "82f09e9",
+      "title": "overlay",
+      "color": "#035D92"
+    },
+    {
+      "_id": "17b73e75",
+      "title": "accent-1-dark",
+      "color": "#00355B"
+    },
+    {
+      "_id": "7b119a4e",
+      "title": "accent-2",
+      "color": "#E87500"
+    },
+    {
+      "_id": "6b55b03c",
+      "title": "accent-2-dark",
+      "color": "#8F3D00"
+    },
+    {
+      "_id": "893afbb",
+      "title": "accent-3",
+      "color": "#00B900"
+    },
+    {
+      "_id": "6a20acf",
+      "title": "accent-3-broken",
+      "color": "#00A700"
+    },
+    {
+      "_id": "5fff745",
+      "title": "accent-3-dark",
+      "color": "#008900"
+    },
+    {
+      "_id": "7e3ff06",
+      "title": "Light blue",
+      "color": "#EFF9FF"
+    },
+    {
+      "_id": "16f7d21",
+      "title": "Grey - newspaper",
+      "color": "#EBF4FA"
+    },
+    {
+      "_id": "21c68ce",
+      "title": "Grey - Archive Beroepengids",
+      "color": "#EBF4FA"
+    }
+  ],
+  "system_colors": [
+    {
+      "_id": "primary",
+      "title": "Primary",
+      "color": "#00355B"
+    },
+    {
+      "_id": "secondary",
+      "title": "Secondary",
+      "color": "#035D92"
+    },
+    {
+      "_id": "text",
+      "title": "Text",
+      "color": "#000000"
+    },
+    {
+      "_id": "accent",
+      "title": "accent-1",
+      "color": "#00A1FF"
+    }
+  ],
+  "system_typography": [
+    {
+      "_id": "primary",
+      "title": "Primary",
+      "typography_font_family": "Headings | Barlow Semi Condensed",
+      "typography_font_weight": "700"
+    },
+    {
+      "_id": "secondary",
+      "title": "Secondary",
+      "typography_font_family": "Body | Inter Tight",
+      "typography_font_weight": "800"
+    },
+    {
+      "_id": "text",
+      "title": "Text",
+      "typography_font_weight": "400",
+      "typography_font_size": {
+        "unit": "px",
+        "size": 18,
+        "sizes": []
+      },
+      "typography_font_family": "Headings | Barlow Semi Condensed"
+    },
+    {
+      "_id": "accent",
+      "title": "Accent",
+      "typography_font_family": "Inter",
+      "typography_font_weight": "700"
+    }
+  ],
+  "custom_typography": [],
+  "site_name": "The Field Service Company",
+  "site_description": "Onze Service Werkt",
+  "page_title_selector": "h1.entry-title",
+  "activeItemIndex": 1,
+  "viewport_md": 768,
+  "viewport_lg": 1025,
+  "body_typography_line_height": {
+    "unit": "px",
+    "size": 34,
+    "sizes": []
+  },
+  "__globals__": {
+    "body_color": "",
+    "link_normal_color": "",
+    "link_hover_color": "",
+    "body_background_color": "globals/colors?id=secondary",
+    "form_field_border_color": "",
+    "settings_page_transitions_preloader_color": "globals/colors?id=7b119a4e",
+    "settings_page_transitions_background_color": "",
+    "settings_page_transitions_background_color_b": "globals/colors?id=17b73e75",
+    "h1_color": "",
+    "mobile_browser_background": ""
+  },
+  "body_background_color": "#035D92",
+  "global_image_lightbox": "",
+  "lightbox_enable_counter": "",
+  "lightbox_enable_fullscreen": "",
+  "lightbox_enable_zoom": "",
+  "lightbox_enable_share": "",
+  "default_page_template": "elementor_header_footer",
+  "body_typography_font_family": "Body | Inter Tight",
+  "body_typography_font_weight": "400",
+  "h1_typography_text_transform": "uppercase",
+  "h2_typography_font_size": {
+    "unit": "px",
+    "size": 24,
+    "sizes": []
+  },
+  "h2_typography_font_weight": "400",
+  "h3_typography_font_size": {
+    "unit": "px",
+    "size": 20,
+    "sizes": []
+  },
+  "h3_typography_font_weight": "400",
+  "form_field_border_width": {
+    "unit": "px",
+    "top": "1",
+    "right": "1",
+    "bottom": "1",
+    "left": "1",
+    "isLinked": true
+  },
+  "form_field_border_radius": {
+    "unit": "px",
+    "top": "0",
+    "right": "0",
+    "bottom": "0",
+    "left": "0",
+    "isLinked": true
+  },
+  "settings_page_transitions_background_background": "",
+  "settings_page_transitions_background_color": "",
+  "settings_page_transitions_preloader_animation_type": "opposing-nested-spinners",
+  "settings_page_transitions_preloader_animation": "eicon-spin",
+  "settings_page_transitions_preloader_animation_duration": {
+    "unit": "ms",
+    "size": 1400,
+    "sizes": []
+  },
+  "settings_page_transitions_preloader_delay": {
+    "unit": "ms",
+    "size": 100,
+    "sizes": []
+  },
+  "settings_page_transitions_preloader_color": "#E87500",
+  "settings_page_transitions_preloader_size": {
+    "unit": "px",
+    "size": 44,
+    "sizes": []
+  },
+  "h1_typography_line_height": {
+    "unit": "px",
+    "size": 40,
+    "sizes": []
+  },
+  "h1_typography_font_size": {
+    "unit": "px",
+    "size": 40,
+    "sizes": []
+  },
+  "h1_typography_font_weight": "700",
+  "settings_page_transitions_background_color_b": "#00355B",
+  "h1_typography_line_height_tablet": {
+    "unit": "px",
+    "size": 38,
+    "sizes": []
+  },
+  "h1_typography_line_height_mobile": {
+    "unit": "px",
+    "size": 30,
+    "sizes": []
+  },
+  "h1_typography_font_size_tablet": {
+    "unit": "px",
+    "size": 34,
+    "sizes": []
+  },
+  "h1_typography_font_size_mobile": {
+    "unit": "px",
+    "size": 28,
+    "sizes": []
+  },
+  "colors_enable_styleguide_preview": "yes",
+  "typography_enable_styleguide_preview": "yes",
+  "body_typography_font_size": {
+    "unit": "px",
+    "size": 18,
+    "sizes": []
+  },
+  "link_normal_typography_font_family": "Body | Inter Tight",
+  "link_normal_typography_font_size": {
+    "unit": "px",
+    "size": 18,
+    "sizes": []
+  },
+  "h4_typography_font_size": {
+    "unit": "px",
+    "size": 18,
+    "sizes": []
+  },
+  "h4_typography_font_weight": "700",
+  "h1_typography_typography": "custom",
+  "h2_typography_typography": "custom",
+  "h3_typography_typography": "custom"
+}

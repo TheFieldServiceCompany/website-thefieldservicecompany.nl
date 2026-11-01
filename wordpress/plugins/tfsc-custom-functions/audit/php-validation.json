@@ -17,8 +17,8 @@
         "Shortcode syntax excluded from word count",
         "Current URL shortcode remains compatible",
         "Current URL handles absent request",
-        "Preloads reference current local fonts",
-        "Existing SVG\/icon-font policy preserved",
+        "No fixed font preloads compete with Elementor typography",
+        "Elementor may load the icon fonts its widgets require",
         "Public shortcode names preserved"
     ]
 }

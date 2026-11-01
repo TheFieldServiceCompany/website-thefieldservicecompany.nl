@@ -1,54 +1,43 @@
-# TFSC Custom Functions 0.3.0 — opgeschoonde kandidaat
+# TFSC Custom Functions 0.4.0
 
-Status op 1 november 2026: broncode en herstelversie opgeslagen in GitHub. **Deze versie is nog niet op de live website geïnstalleerd.**
+**Actief op de live website sinds 1 november 2026.** PHP, CSS en de bijbehorende Elementor-kitinstellingen zijn geplaatst en teruggelezen.
 
-De live versie 0.2.0 gebruikt een vast CSS-versienummer en bevat oude instellingen. De kandidaat vernieuwt de CSS-URL automatisch na een bestandswijziging, herstelt toetsenbordfocus en voorkomt dat een link midden in een opsomming als een aparte kolom wordt behandeld.
+## Waar beheer je wat?
 
-## Bestanden
+| Instelling | Beheerplek | Werking |
+| --- | --- | --- |
+| Huisstijlkleuren | Elementor → Site Settings → Global Colors | CSS verwijst naar `--e-global-color-*`; hexwaarden in `var(..., #...)` zijn terugvalwaarden. |
+| Basistekst en H1–H6 | Elementor → Site Settings → Typography | Bestaande effectieve fonts, groottes, gewichten en mobiele maten zijn hier vastgelegd. Dubbele algemene kopgroottes zijn uit de CSS gehaald. |
+| Global Fonts | Elementor → Site Settings → Global Fonts | Oude fontaliassen zijn gecorrigeerd; de CSS gebruikt de fontfamilievariabelen als basis/fallback. |
+| Lokale fontbestanden | `@font-face` in de CSS | Alleen bestandsdefinities; geen tweede vaste preloadconfiguratie in PHP. |
+| Knoppen, formulieren, lijsten, tabellen en focus | Plugin-CSS | Componentgedrag en bewuste uitzonderingen, met kleuren uit Elementor. |
+| H2/H3 in artikelinhoud | `.elementor-widget-theme-post-content h2/h3` in CSS | Bewuste uitzondering: 26/22 px; algemene H2/H3 blijven 24/20 px. |
 
-- `tfsc-custom-functions.php`: actuele functies en de automatische CSS-versie.
-- `tfsc-custom-stylesheet.css`: globale frontendstijlen.
-- `audit/`: bevindingen, gebruiksinventarisatie en uitgevoerde controles.
-- [Ongewijzigde live back-up](../../exports/plugins/2026-11-01-before-custom-functions-cleanup/): alle drie de oorspronkelijke bestanden en SHA-256-controlegetallen.
+Verander algemene kopmaten in Site Settings en alleen de afwijkende artikelmaten bij de genoemde componentregels. Voeg geen tweede algemene H1–H6-regel toe in de CSS. Individuele widgets kunnen nog bewuste lokale afwijkingen hebben; deze migratie herschrijft niet alle widgets.
 
-## Belangrijkste wijzigingen
+## PHP-correcties
 
-- CSS-versie via `filemtime()` in plaats van de vaste waarde `0.1.0`. De bestaande naam `theme-override` en laadprioriteit blijven behouden.
-- 19 niet aangetroffen maatwerkregels zijn gearchiveerd in `unused-selectors.css`, buiten de actieve plugin. Eén exact dubbel stijlblok, één leeg blok en uitgeschakelde voorbeeldcode zijn verwijderd.
-- Zichtbare focus voor toetsenbordgebruik; de focus van verborgen checkboxinputs wordt op hun zichtbare vakje getoond.
-- Opsommingen blijven normale tekstregels. Links en vetgedrukte woorden worden geen losse flexkolommen. Vierkante opsommingstekens blijven behouden.
-- Brede tabellen schuiven binnen hun eigen kader, zonder de mobiele pagina uit te rekken.
-- Checkboxanimaties respecteren de instelling voor minder beweging.
-- Twee oude Inter-preloads vervangen door de daadwerkelijk gebruikte lokale Inter Tight- en Barlow-lettertypen.
-- De algemene uitschakeling van de WordPress-blokbibliotheek is verwijderd. WordPress kan daardoor zelf de stijlen voor onder andere tabellen en afbeeldingen laden.
-- PHP-functienamen hebben een TFSC-prefix. Leesduur kan met ontbrekende berichten omgaan en telt woorden met accenten beter. De bestaande shortcode-namen blijven werken.
+- CSS-versie via `filemtime()`; bestaande handle `theme-override` en laadprioriteit behouden.
+- Unieke functienamen en afvang voor directe toegang buiten WordPress.
+- Zoektekst geëncodeerd; accentkleur via een CSS-klasse in plaats van inline PHP-opmaak.
+- Leesduur ondersteunt ontbrekende berichten, Unicode-woorden en correct enkelvoud.
+- Bestaande shortcode-namen behouden.
+- Oude recente-reacties-filter, Eicons-voorbeeldcode, vaste fontpreloads en globale Font Awesome-deregistratie verwijderd.
+- Globale uitschakeling van WordPress-blokstijlen verwijderd; de browser bevestigt dat `wp-block-library-css` weer laadt.
+- Het niet-geladen admin-CSS-bestand is als herstelbestand op de server gelaten, zonder actief te worden.
 
-De CSS gaat van **18.544 naar 16.786 bytes**: 1.758 bytes minder, ongeveer 9,5%. Dit is een onderhouds- en betrouwbaarheidsverbetering; er is geen gemeten snelheidswinst geclaimd.
+## Validatie
 
-## Plaatsen en terugzetten
+18 PHP-controles en 13 controles met echte WordPress-hulpfuncties zijn geslaagd. Vooraf zijn zes paginatypen op desktop en mobiel vergeleken (24 ladingen). Vervolgens is de echte WordPress 7.1.4-/Elementor-site gecontroleerd: zes pagina’s geven HTTP 200, hashes en pluginstatus kloppen, checkboxfocus werkt, mobiel menu opent/sluit, tabellen blijven binnen het scherm en Meer toont extra loop-items (52 → 54). Geen formulier is verstuurd.
 
-1. Test de kandidaat eerst in een volledige WordPress/Elementor-testomgeving. Controleer vooral de herstelde blokstijlen, opsommingen, knoppen en formulieren op desktop en mobiel.
-2. Plaats de twee bestanden in de bestaande map `wp-content/plugins/tfsc-custom-functions/`.
-3. Verwijder het niet-geladen `custom-stylesheet-wp-admin.css` alleen als de beheerde map exact aan deze kandidaat gelijk moet zijn. De oude versie staat in de back-up.
-4. Vernieuw de LiteSpeed-pagina- en CSS-cache en een eventuele CDN-cache. Anders kan oude HTML naar de vorige CSS-versie blijven verwijzen.
-5. Controleer dat de pagina naar een nieuwe, op wijzigingsdatum gebaseerde `?ver=` verwijst. Open een vacature, artikel, archief en formulier. Verstuur geen echte sollicitatie als test.
+Zie [beheer en livegang 0.4.0](audit/beheer-en-livegang-0.4.0.md). De eerdere audits van kandidaat 0.3.0 zijn historisch; uitspraken daarin over nog niet live geplaatst gelden niet meer voor 0.4.0.
 
-Terugzetten: herstel de drie originele bestanden uit de back-up in dezelfde pluginmap en vernieuw daarna de caches.
+## Versies en herstel
 
-Deze wijziging vernieuwt bestanden bij een volgende paginalading. Een reeds geopende pagina krijgt hierdoor geen live stylesheet-update. De parameter vernieuwt de browsercache; het is geen Git-versiegeschiedenis. De broncodegeschiedenis staat apart in GitHub.
+- [Originele back-up 0.2.0](../../exports/plugins/2026-11-01-before-custom-functions-cleanup/).
+- [Verse back-up inclusief Elementor-instellingen vóór 0.4.0](../../exports/plugins/2026-11-01-before-custom-functions-0.4.0/).
+- [Kitpatch en live bewijs](audit/0.4.0/).
 
-## Uitgevoerde controles en grenzen
+0.4.0 hoort bij de gesynchroniseerde Elementor-kit 9367. De kitpatch in het installatiepakket wordt niet automatisch uitgevoerd bij een plugin-upload. Voor exact herstel moeten zowel pluginbestanden als de bijbehorende kitinstellingen worden teruggezet, rekening houdend met latere wijzigingen. Genereer daarna de kit-CSS opnieuw en vernieuw de caches.
 
-171 openbare HTML-pagina's, 96 gepubliceerde/concept-Elementor-templates en gepubliceerde inhoud via REST zijn onderzocht. 18 functionele PHP-controles op PHP 8.3.33 en 41 CSS-/bronnencontroles zijn geslaagd. De PHP-controles gebruiken WordPress-stubs, geen volledige WordPress-installatie.
-
-De lokale browsertoegang en mobiele scherminstelling werken nu. Zes paginatypen zijn met oude en nieuwe CSS vergeleken op desktop (1280 × 720) en mobiel (390 × 844): homepage, adviesformulier, vacature, blogartikel, vacaturearchief en Kennisbankartikel. Dit zijn 12 voor/na-paren en 24 paginaladingen. De inhoud en aantallen gemeten elementen blijven gelijk. De gemeten stijlen verschillen uitsluitend bij de bedoelde lijstaanpassingen.
-
-Geen nieuwe kopie heeft horizontale pagina-overloop. De blog- en Kennisbankkopieën hadden die op mobiel wel met de oude CSS. Brede tabellen schuiven nu binnen hun eigen kader. De browser bevestigt ook dat de tekst 'Basissalaris afhankelijk van jouw kennis en werkervaring' één doorlopende zin is geworden. De formuliercheckbox heeft een zichtbare focusrand en is met de spatiebalk aangevinkt; het zichtbare vinkje verscheen. Geen formulier is verstuurd.
-
-Dit zijn statische HTML-kopieën met scripts en iframes verwijderd en formulierverzending uitgeschakeld. Afbeeldingen die via lazy loading verschijnen zijn placeholders. Dynamische filters, menu's en popups zijn hiermee niet volledig getest. De nieuwe PHP-plugin is nog niet binnen een volledige WordPress-/Elementoromgeving geladen. Vooral het hervatten van native WordPress-blokstijlen vereist nog die controle. De meetresultaten staan in `browser-validation.json`.
-
-Zie [het auditrapport](audit/bevindingen.md) voor de functiebeoordeling, gebruiksinventaris en resterende aandachtspunten.
-
-De PHP-controles zijn herhaalbaar met `npm install` en `npm test` in `audit/` (Node.js vereist). Dit testscript en de ontwikkeldependencies zitten niet in het installatiepakket.
-
-Een [verdiepende PHP-controle](audit/php-verdieping.md) omvat daarnaast 13 geslaagde controles met echte WordPress-hulpfuncties. Uitvoering: `node verify-core.mjs /pad/naar/wordpress` vanuit `audit/`. Zie het rapport voor de afbakening van deze test.
+PHP-controles herhalen: `npm install` en `npm test` in `audit/` (Node.js vereist). Extra kerncontrole: `node verify-core.mjs /pad/naar/wordpress`. Dependencies en fixtures zitten niet in het installatiepakket.

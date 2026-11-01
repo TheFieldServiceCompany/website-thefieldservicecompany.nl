@@ -144,5 +144,7 @@
     }
   },
   "passed": true,
-  "remaining": "Native WordPress block-style enqueueing and dynamic Elementor menus/popups/filters must still be checked in a complete WordPress environment."
+  "remaining": "Native WordPress block-style enqueueing and dynamic Elementor menus/popups/filters must still be checked in a complete WordPress environment.",
+  "source_version": "0.3.0",
+  "status": "Historical candidate validation; current live 0.4.0 evidence is in audit/0.4.0/."
 }

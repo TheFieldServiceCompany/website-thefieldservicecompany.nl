@@ -1,0 +1,11 @@
+{
+  "wordpress": "7.1.4",
+  "kit": 9367,
+  "settings_sha256": "8582aa9208e8ec9558ff4a69b10cef7620a1694f874f627759eac1b1558e2189",
+  "files": {
+    "tfsc-custom-functions.php": "d50a195c121324f1d04cbfdfe11840e267c56347d7a6d7b56fd1d10ccfa5a931",
+    "tfsc-custom-stylesheet.css": "a4580832cba685461520ec41916b9d28dc69b711b59c351626cdf21abb4ebae1",
+    "custom-stylesheet-wp-admin.css": "b5965cbfd22a43f0f2caa1dc1405d1494c10f75524a97fd11f0823d38d3e6d5c"
+  },
+  "captured_backup": "tfsc-before-0.4.0-20261101T105406Z"
+}

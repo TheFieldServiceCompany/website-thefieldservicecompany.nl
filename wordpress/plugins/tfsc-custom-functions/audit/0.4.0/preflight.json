@@ -1,0 +1,8 @@
+{
+  "page_viewport_pairs": 12,
+  "loads": 24,
+  "unexpected_measured_style_changes": 0,
+  "overflow_after": 0,
+  "font_families": "Same primary family, fallback lists may differ.",
+  "scope": "CSS plus proposed Elementor kit settings in static preview; production runtime validation follows."
+}

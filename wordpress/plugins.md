@@ -4,12 +4,12 @@ Wordt ingevuld tijdens de inventarisatie van de huidige website.
 
 ## TFSC Custom Functions
 
-- Broncode kandidaat 0.3.0: [plugins/tfsc-custom-functions](plugins/tfsc-custom-functions/).
-- [Audit en functiebeoordeling](plugins/tfsc-custom-functions/audit/bevindingen.md).
-- [Exacte live back-up 0.2.0 van 1 november 2026](exports/plugins/2026-11-01-before-custom-functions-cleanup/).
-- [Installatiepakket kandidaat 0.3.0](plugins/dist/tfsc-custom-functions-0.3.0-kandidaat.zip).
-- Doel: globale frontend-CSS met automatische URL-versie, lokale fonts, zoekresultatentitel en bestaande shortcodes.
-- Status: bron- en PHP-controles geslaagd; kandidaat staat in GitHub en is nog niet live geïnstalleerd. Statische desktop-/mobiele vergelijkingen zijn geslaagd; de volledige WordPress-runtimecontrole staat nog open.
+- [Actieve broncode 0.4.0](plugins/tfsc-custom-functions/).
+- [Beheerindeling, livegang en controles](plugins/tfsc-custom-functions/audit/beheer-en-livegang-0.4.0.md).
+- [Installatiepakket 0.4.0](plugins/dist/tfsc-custom-functions-0.4.0.zip).
+- [Originele back-up 0.2.0](exports/plugins/2026-11-01-before-custom-functions-cleanup/).
+- [Verse back-up inclusief Elementor-instellingen vóór 0.4.0](exports/plugins/2026-11-01-before-custom-functions-0.4.0/).
+- Status: 0.4.0 actief op de live website sinds 1 november 2026. Kleuren en basistypografie via Elementor; componenten via CSS. Herstel bestanden en kitinstellingen samen.
 
 ## TFSC Mediafilters
 

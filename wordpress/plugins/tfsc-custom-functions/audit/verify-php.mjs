@@ -54,9 +54,8 @@ $test_post=new WP_Post(str_repeat('woord ',400));check(tfsc_custom_functions_rea
 $test_post=new WP_Post('[test word word]'.str_repeat('woord ',199));check(tfsc_custom_functions_reading_time()==='Minder dan 1 minuut.','Shortcode syntax excluded from word count');
 $wp=(object)['request'=>'vacatures'];check(tfsc_custom_functions_current_page_url()==='https://example.test/vacatures','Current URL shortcode remains compatible');
 unset($wp);check(tfsc_custom_functions_current_page_url()==='https://example.test','Current URL handles absent request');
-ob_start();tfsc_custom_functions_preload_fonts();$fonts=ob_get_clean();
-check(strpos($fonts,'inter-tight-v9')!==false && strpos($fonts,'barlow-semi-condensed-v16')!==false && strpos($fonts,'inter-v12')===false,'Preloads reference current local fonts');
-tfsc_custom_functions_remove_icon_fonts();check(count($removed)===3,'Existing SVG/icon-font policy preserved');
+check(!isset($actions['wp_head']),'No fixed font preloads compete with Elementor typography');
+check(!isset($actions['elementor/frontend/after_register_styles']),'Elementor may load the icon fonts its widgets require');
 check(isset($shortcodes['rm_get_estimated_time_to_read']) && isset($shortcodes['current_page_url']),'Public shortcode names preserved');
 echo json_encode(['php'=>PHP_VERSION,'passed'=>count($checks),'checks'=>$checks],JSON_PRETTY_PRINT);
 `;
