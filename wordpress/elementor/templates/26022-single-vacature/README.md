@@ -1,49 +1,43 @@
-# Vacaturetemplate: scrollpaneel
+# Vacaturetemplate: vast titel- en knoppenpaneel
 
-- Omgeving: LIVE, thefieldservicecompany.nl.
-- Document: `26022`, **single | vacature**; conditie `include/singular/vacature`.
-- Paneel: container `044c4a6`, class `scroll-sticky-wrapper`.
-- Code: HTML-widget `2c4849c`, binnen het paneel.
-- `scroll-sticky.html`: actuele HTML-inhoud van die widget na de editorreparatie.
-- `scroll-sticky-base.css`: bestaande Custom CSS van dezelfde widget, ongewijzigd.
-- Status op 31 oktober 2026: via WordPress REST opgeslagen en teruggelezen.
+LIVE sinds de reparatie op 1 november 2026. Document **26022**, single | vacature.
 
-De editoruitzondering staat bewust inline in het HTML-blok: de editor krijgt
-haar bij het renderen van de widget, zonder afhankelijkheid van regeneratie
-van een extern CSS-cachebestand. Zij geldt alleen onder Elementors editormarkeringen.
-In de editor staat het paneel zichtbaar in de normale documentflow, zonder
-hoge z-index die de bewerking van andere elementen kan hinderen.
+- Wrapper: 044c4a6, class scroll-sticky-wrapper.
+- Binnenpaneel: 9d55293. Elementor sticky is hier leeg/uitgeschakeld.
+- HTML-widget: 2c4849c.
+- scroll-sticky.html: complete live HTML inclusief inline CSS en JS.
+- scroll-sticky-base.css en scroll-sticky.js: leesbare bronnen van die inhoud.
+- Custom CSS-veld van widget 2c4849c is leeg; alle paneelstijl staat inline.
 
-Voor bezoekers blijven de oorspronkelijke basis-CSS en de scroll-/resize-/
-orientationlogica behouden. In de JavaScript-code is alleen een vroege
-editoruitzondering toegevoegd. Bestaande logregels zijn niet aangepast.
+## Werking
 
-Controles: tien geïsoleerde JavaScript-scenario’s en zes CSS-cascadecontroles
-geslaagd; slechts één `settings.html` gewijzigd; andere templategegevens en
-formuliercode behouden. REST-readback komt exact overeen. De openbare voorbeeld-
-vacature geeft HTTP 200. De aanvullende GUI-controle is inmiddels geslaagd: het paneel is zichtbaar
-en selecteerbaar in de desktop- en mobiele Elementor-editor; op de desktop-
-vacaturepagina verschijnt het na scrollen en verdwijnt het weer bovenaan.
-Er is geen afzonderlijke mobiele bezoekersproef uitgevoerd.
+De wrapper heeft voor bezoekers altijd position:fixed, ook als hij verborgen
+is. Hij neemt daardoor geen ruimte in de artikeltekst in. Bovenrand volgt
+de werkelijk gemeten onderrand van header 17275 (inclusief beheerbalk),
+links en breedte volgen de artikelkolom. De bestaande sticky-trigger bepaalt
+zichtbaarheid: tonen bij het bereiken van de headeronderrand; verbergen pas
+16 px verder terug. Dit voorkomt wisselen bij kleine scrollbewegingen.
 
-Herstelbron: `wordpress/exports/elementor/2026-10-31/26022-2c4849c-scroll-sticky-before.html`.
-Herstel alleen de HTML van widget `2c4849c`, met een actuele read vóór schrijven.
-Een volledige eerdere templatekopie terugzetten kan latere bewerkingen overschrijven.
+Er is één eigenaar van de paneelpositie; Elementors tweede stickyregel op
+het binnenpaneel is uitgeschakeld. De oude resize-dispatch is verwijderd.
+ResizeObserver volgt scherm-/inhoudswijzigingen, MutationObserver volgt het
+activeren van de native header bij herladen op een bewaarde scrollpositie.
 
-Zie `audits/2026-10-31-vacaturetemplate-elementor-en-formuliercontext.md` voor
-opdracht, toestemming, API-toegang, bevindingen en resterende controle.
+In de Elementor-editor staat de wrapper zichtbaar in de normale documentflow.
+Voor bezoekers is het verborgen paneel inert. prefers-reduced-motion slaat
+de korte zichtbaarheidsanimatie over.
 
-## Gedeelde scrollheader sinds 1 november 2026
+De gedeelde header blijft sticky, de native Anchor Offset blijft 90 px en
+scrollheadersnippet 359 blijft uit. De onderste mobiele sollicitatiebalk en
+alle bestaande knoppen, bestemmingen en overige templatevelden zijn behouden.
 
-Snippet 359 laat het binnenpaneel 9d55293 dynamisch aansluiten op de zichtbare
-header. Dit template, de inline HTML-widget en de oorspronkelijke offsets
-70/60/50 zijn daarvoor niet aangepast. Bij deactivatie van snippet 359 werkt
-de oorspronkelijke stickypositie weer. Zie
-`audits/2026-11-01-shared-scroll-navigation.md`.
+## Herstel
 
-### Teruggedraaid op 1 november 2026
+Herstelkopie: wordpress/exports/elementor/2026-11-01-before-vacancy-panel-fix/26022.json.
+Herstel gericht de drie aangepaste instellingen: HTML en custom_css van
+widget 2c4849c plus sticky van container 9d55293. Controleer vooraf op
+nieuwere wijzigingen. Wis daarna Elementor- en LiteSpeed-cache.
 
-Snippet 359 is op gebruikersverzoek gedeactiveerd en de paginacache is
-ververst. De oorspronkelijke vaste sticky header en paneel-offsets zijn
-weer actief. Header- en vacaturetemplate zijn gelijk aan de herstelkopieën.
-Een niet-sticky header met Naar boven-knop wordt pas later onderzocht.
+De eerdere editorreparatie van 31 oktober is historisch gedocumenteerd in
+audits/2026-10-31-vacaturetemplate-elementor-en-formuliercontext.md.
+De huidige reparatie en controles staan in audits/2026-11-01-vacancy-panel-flicker.md.

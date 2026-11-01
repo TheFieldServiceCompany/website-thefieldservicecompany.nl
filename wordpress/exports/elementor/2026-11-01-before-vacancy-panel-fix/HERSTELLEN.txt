@@ -1,0 +1,7 @@
+Herstel alleen de drie instellingen uit deze kopie na controle op latere wijzigingen:
+- 2c4849c.settings.html
+- 2c4849c.settings.custom_css
+- 9d55293.settings.sticky (was top)
+Wis daarna Elementor- en LiteSpeed-cache.
+De kopie bevat het oude gedrag met het gemelde omslagprobleem.
+Laat de header en Anchor Offset 90 px ongemoeid.

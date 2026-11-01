@@ -1,0 +1,51 @@
+[
+  {
+    "height": 6207,
+    "panelTop": 102,
+    "triggerBottom": 90,
+    "visible": true,
+    "y": 374
+  },
+  {
+    "height": 6207,
+    "panelTop": 102,
+    "triggerBottom": 112,
+    "visible": true,
+    "y": 352
+  },
+  {
+    "height": 6207,
+    "panelTop": 102,
+    "triggerBottom": 126,
+    "visible": false,
+    "y": 338
+  },
+  {
+    "height": 6207,
+    "panelTop": 102,
+    "triggerBottom": 112,
+    "visible": false,
+    "y": 352
+  },
+  {
+    "height": 6207,
+    "panelTop": 102,
+    "triggerBottom": 90,
+    "visible": true,
+    "y": 374
+  },
+  {
+    "height": 6207,
+    "panelTop": 102,
+    "triggerBottom": 97,
+    "visible": true,
+    "y": 367
+  },
+  {
+    "height": 6207,
+    "panelTop": 102,
+    "triggerBottom": 90,
+    "visible": true,
+    "y": 374
+  }
+]

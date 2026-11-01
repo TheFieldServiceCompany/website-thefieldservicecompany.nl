@@ -1,17 +1,33 @@
-.scroll-sticky-wrapper {
-    position: absolute;
+.elementor-26022 .scroll-sticky-wrapper {
+    position: fixed;
+    top: var(--tfsc-vacancy-panel-top, 0px);
+    left: var(--tfsc-vacancy-panel-left, 0px);
+    width: var(--tfsc-vacancy-panel-width, 100%);
+    margin: 0;
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
     z-index: 999;
-
-    transition: opacity 0.25s ease;
+    transition: opacity 120ms ease;
 }
-
-.scroll-sticky-wrapper.is-visible {
-    position: sticky;
+.elementor-26022 .scroll-sticky-wrapper.is-visible {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
 }
-
+/* In Elementor the whole panel stays visible, selectable and in normal flow. */
+body.elementor-editor-active .elementor-26022 .scroll-sticky-wrapper,
+.elementor-26022.elementor-edit-mode .scroll-sticky-wrapper {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transition: none;
+    z-index: auto;
+}
+@media (prefers-reduced-motion: reduce) {
+    .elementor-26022 .scroll-sticky-wrapper { transition: none; }
+}

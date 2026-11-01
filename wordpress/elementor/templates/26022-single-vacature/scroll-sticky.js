@@ -1,0 +1,57 @@
+/* One fixed panel; its visibility never changes the article layout. */
+(function () {
+    'use strict';
+    function init() {
+        const panel = document.querySelector('.elementor-26022 .scroll-sticky-wrapper');
+        const trigger = document.querySelector('.elementor-26022 .sticky-trigger');
+        if (!panel || !trigger || panel.dataset.tfscPanelReady) return;
+        const editor = document.body.classList.contains('elementor-editor-active') ||
+            document.querySelector('.elementor-26022.elementor-edit-mode') ||
+            (window.elementorFrontend && window.elementorFrontend.isEditMode && window.elementorFrontend.isEditMode());
+        if (editor) { panel.classList.add('is-visible'); return; }
+        const column = panel.parentElement;
+        const header = document.querySelector('.elementor-17275 [data-id="5b8468be"]');
+        panel.dataset.tfscPanelReady = '1';
+        let visible = false;
+        let pending = false;
+        panel.inert = true;
+
+        function update() {
+            pending = false;
+            const headerBottom = header ? Math.max(0, header.getBoundingClientRect().bottom) : 0;
+            const bounds = column.getBoundingClientRect();
+            panel.style.setProperty('--tfsc-vacancy-panel-top', headerBottom + 'px');
+            panel.style.setProperty('--tfsc-vacancy-panel-left', bounds.left + 'px');
+            panel.style.setProperty('--tfsc-vacancy-panel-width', bounds.width + 'px');
+            const triggerBottom = trigger.getBoundingClientRect().bottom;
+            // A small reverse margin prevents toggling on tiny scroll movements.
+            const next = visible ? triggerBottom <= headerBottom + 16 : triggerBottom <= headerBottom;
+            if (next !== visible) {
+                visible = next;
+                panel.classList.toggle('is-visible', visible);
+                panel.inert = !visible;
+            }
+        }
+        function schedule() {
+            if (!pending) { pending = true; window.requestAnimationFrame(update); }
+        }
+        window.addEventListener('scroll', schedule, { passive: true });
+        window.addEventListener('resize', schedule, { passive: true });
+        window.addEventListener('orientationchange', schedule);
+        window.addEventListener('pageshow', schedule);
+        // Elementor can activate its header after a restored scroll position.
+        // Its height stays equal, so a ResizeObserver alone misses that change.
+        if (header && window.MutationObserver) {
+            const observer = new MutationObserver(schedule);
+            observer.observe(header, { attributes: true, attributeFilter: ['class', 'style'] });
+        }
+        if (window.ResizeObserver) {
+            const observer = new ResizeObserver(schedule);
+            observer.observe(column);
+            if (header) observer.observe(header);
+        }
+        update();
+    }
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init, { once: true });
+    else init();
+}());
