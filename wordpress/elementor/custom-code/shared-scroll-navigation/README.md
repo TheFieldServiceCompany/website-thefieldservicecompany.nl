@@ -1,7 +1,8 @@
 # Gedeelde scrollheader en vacaturepaneel
 
 **Status: INACTIEF, op 1 november 2026 op gebruikersverzoek teruggedraaid.**
-De oorspronkelijke sticky header is hersteld. Geen Anchor Offset toegevoegd.
+De oorspronkelijke sticky header is hersteld. Bij de terugdraaiing was nog geen Anchor Offset toegevoegd. Inmiddels staat
+de native headerinstelling op 90 px; zie ../../templates/17275-header-main/README.md.
 Onderstaande beschrijving betreft de bewaarde proefversie 1.0.0. Uitvoering via Code Snippets **359**,
 scope **front-end**; CSS via wp_head prioriteit 90, JavaScript via wp_footer
 prioriteit 90. Geen Elementor Custom Code-post; deze map bevat de beheerde
