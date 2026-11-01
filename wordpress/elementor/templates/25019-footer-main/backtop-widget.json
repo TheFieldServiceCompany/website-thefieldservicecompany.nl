@@ -1,0 +1,105 @@
+{
+  "id": "530b4f2e",
+  "elType": "widget",
+  "settings": {
+    "selected_icon": {
+      "value": {
+        "url": "https://thefieldservicecompany.nl/wp-content/uploads/up-arrow-key-1.svg",
+        "id": 19332
+      },
+      "library": "svg"
+    },
+    "link": {
+      "url": "#",
+      "is_external": "",
+      "nofollow": "",
+      "custom_attributes": "aria-label|Terug naar boven"
+    },
+    "primary_color": "#FFF",
+    "size": {
+      "unit": "px",
+      "size": 30,
+      "sizes": []
+    },
+    "size_mobile": {
+      "unit": "px",
+      "size": 20,
+      "sizes": []
+    },
+    "_padding": {
+      "unit": "px",
+      "top": "0",
+      "right": "0",
+      "bottom": "0",
+      "left": "0",
+      "isLinked": true
+    },
+    "_padding_mobile": {
+      "unit": "px",
+      "top": "0",
+      "right": "0",
+      "bottom": "0",
+      "left": "0",
+      "isLinked": true
+    },
+    "_element_width": "initial",
+    "_element_custom_width": {
+      "unit": "px",
+      "size": 60,
+      "sizes": []
+    },
+    "_element_custom_width_mobile": {
+      "unit": "px",
+      "size": 44,
+      "sizes": []
+    },
+    "_position": "fixed",
+    "_offset_orientation_h": "end",
+    "_offset_x_end": {
+      "unit": "px",
+      "size": 40,
+      "sizes": []
+    },
+    "_offset_x_end_tablet": {
+      "unit": "px",
+      "size": 20,
+      "sizes": []
+    },
+    "_offset_orientation_v": "end",
+    "_offset_y_end": {
+      "unit": "px",
+      "size": 24,
+      "sizes": []
+    },
+    "_offset_y_end_tablet": {
+      "unit": "px",
+      "size": 24,
+      "sizes": []
+    },
+    "_offset_y_end_mobile": {
+      "unit": "px",
+      "size": 24,
+      "sizes": []
+    },
+    "_z_index": 1600,
+    "_background_background": "classic",
+    "_background_color": "#00355B8C",
+    "__globals__": {
+      "_background_color": "",
+      "primary_color": "",
+      "_border_color": "globals/colors?id=3df8c800"
+    },
+    "_border_border": "solid",
+    "_border_width": {
+      "unit": "px",
+      "top": "1",
+      "right": "1",
+      "bottom": "1",
+      "left": "1",
+      "isLinked": true
+    },
+    "_css_classes": "tfsc-back-to-top"
+  },
+  "elements": [],
+  "widgetType": "icon"
+}

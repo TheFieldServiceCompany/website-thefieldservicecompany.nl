@@ -41,3 +41,10 @@ nieuwere wijzigingen. Wis daarna Elementor- en LiteSpeed-cache.
 De eerdere editorreparatie van 31 oktober is historisch gedocumenteerd in
 audits/2026-10-31-vacaturetemplate-elementor-en-formuliercontext.md.
 De huidige reparatie en controles staan in audits/2026-11-01-vacancy-panel-flicker.md.
+
+## Centrale Naar boven-knop
+
+Op 1 november 2026 zijn alleen de losse iconwidget 530b4f2e en bijbehorende
+scrollscriptwidget 74f5021 uit dit template naar footer_main 25019 verplaatst.
+Het vaste titel-/knoppenpaneel uit dit document blijft ongewijzigd. Zie
+wordpress/elementor/templates/25019-footer-main/README.md.

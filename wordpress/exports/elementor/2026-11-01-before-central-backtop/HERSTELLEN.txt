@@ -1,0 +1,14 @@
+Herstel centrale Naar boven-knop — 1 november 2026
+
+De bestaande iconwidget 530b4f2e en scriptwidget 74f5021 zijn verplaatst
+van vacaturetemplate 26022 naar gedeelde footer 25019.
+
+Voor gericht herstel na controle op latere wijzigingen:
+1. Verwijder uitsluitend die twee widgets uit footer 25019.
+2. Zet de oorspronkelijke widgets uit 26022.json terug op hun oorspronkelijke
+   plekken: iconwidget in container 66c0eae2, HTML-widget in 88b0a3d.
+3. Wis Elementor- en LiteSpeed-cache en controleer op één knop.
+
+25019.json en 26022.json bevatten de exacte oorspronkelijke template-meta.
+Zet geen volledige oudere templates terug over nieuwere wijzigingen heen.
+De stabiele vacaturebalk, header en Anchor Offset 90 px zijn niet gewijzigd.
