@@ -93,7 +93,7 @@ if (
 ) {
     define(
         'TFSC_COMBO_SITEMAP_MIN_DIMENSIONS',
-        1
+        2
     );
 }
 
@@ -110,7 +110,7 @@ if (
 ) {
     define(
         'TFSC_COMBO_SITEMAP_CACHE_KEY',
-        'tfsc_combo_sitemap_links_v7_canonical_roots_max2'
+        'tfsc_combo_sitemap_links_v8_function_combos_rankmath'
     );
 }
 
@@ -851,8 +851,7 @@ function tfsc_combo_sitemap_generate_links() {
     }
 
 
-    $taxonomies =
-        tfsc_get_allowed_combo_taxonomies();
+    $taxonomies = function_exists('tfsc_combo_policy_combo_taxonomies') ? tfsc_combo_policy_combo_taxonomies() : array();
 
 
     if ( ! $taxonomies ) {
@@ -1044,6 +1043,7 @@ function tfsc_combo_sitemap_generate_links() {
                 $dimension_sets
                 as $taxonomy_set
             ) {
+                if(!in_array('functienaam',$taxonomy_set,true))continue;
 
                 $taxonomy_set =
                     tfsc_combo_sitemap_order_taxonomies(

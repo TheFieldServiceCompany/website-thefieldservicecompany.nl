@@ -581,6 +581,12 @@ function tfsc_combo_get_index_status(
     }
 
 
+    // Standalone archives belong to Rank Math, never to manager release controls.
+    if (tfsc_combo_count_taxonomies($combo)===1) {
+        $term=$combo[0]['term']??null;$index=$term instanceof WP_Term && class_exists('RankMath\\Helper') && \RankMath\Helper::is_term_indexable($term);
+        return array('index'=>$index,'reason'=>$index?'rankmath_single_indexable':'rankmath_single_noindex','results'=>null,'taxonomies'=>1);
+    }
+    if(!tfsc_combo_has_function_name($combo))return array('index'=>false,'reason'=>'no_function_name','results'=>null,'taxonomies'=>tfsc_combo_count_taxonomies($combo));
     // Persistent manager controls survive plugin deactivation; only explicit exclusions.
     $denial = '';
     if ( function_exists('tfsc_combo_manager_index_denial') ) {
@@ -620,6 +626,8 @@ function tfsc_combo_get_index_status(
         ];
     }
 
+
+    foreach($combo as $item)if(!tfsc_combo_policy_rankmath_taxonomy_enabled($item['taxonomy'])||!tfsc_combo_policy_rankmath_term_allowed($item['term']))return array('index'=>false,'reason'=>'rankmath_excluded','results'=>null,'taxonomies'=>$taxonomy_count);
 
     $has_function =
         tfsc_combo_has_function_name(
@@ -1308,6 +1316,8 @@ function tfsc_native_canonical_is_target() {
     }
 
 
+    if(class_exists('RankMath\\Helper')&&\RankMath\Helper::get_term_meta('canonical_url',$term,$term->taxonomy))return false;
+
     return true;
 }
 
@@ -1876,22 +1886,7 @@ function tfsc_native_rankmath_robots(
     }
 
 
-    if (
-        ! is_array(
-            $robots
-        )
-    ) {
-        $robots = [];
-    }
-
-
-    $robots['index'] =
-        'index';
-
-    $robots['follow'] =
-        'follow';
-
-
+    // Preserve Rank Math's own index/noindex choice for standalone archives.
     return $robots;
 }
 
@@ -3098,15 +3093,30 @@ add_action(
 );
 
 
-/**
- * Canonieke vacaturearchieven staan in de combositemap (148), inclusief
- * functienaam-only en locatie-only. De native duplicaten horen niet óók in XML.
- * Dit verandert geen routes, redirects, canonical of robots van de pagina's.
- * Beroepengids-, blog- en kennisbanktaxonomieën vallen buiten deze allowlist.
- */
-add_filter( 'rank_math/sitemap/exclude_taxonomy', function( $excluded, $taxonomy ) {
-    if ( function_exists( 'tfsc_combo_taxonomy_allowed' ) && tfsc_combo_taxonomy_allowed( $taxonomy ) ) {
-        return true;
-    }
-    return $excluded;
-}, 30, 2 );
+/** Rank Math owns standalone taxonomy maps; use the already canonical TFSC URL. */
+add_filter('rank_math/sitemap/entry',function($entry,$type,$object){
+    if($type!=='term'||!is_array($entry)||!$object instanceof WP_Term||!function_exists('tfsc_combo_taxonomy_allowed')||!tfsc_combo_taxonomy_allowed($object->taxonomy))return $entry;
+    if(class_exists('RankMath\\Helper')&&\RankMath\Helper::get_term_meta('canonical_url',$object,$object->taxonomy))return $entry;
+    if(function_exists('tfsc_combo_sitemap_make_item')&&function_exists('tfsc_combo_sitemap_build_url'))$entry['loc']=tfsc_combo_sitemap_build_url(array(tfsc_combo_sitemap_make_item($object)));
+    return $entry;
+},30,3);
+
+/** Available combo filters follow Rank Math, without changing router availability. */
+function tfsc_combo_policy_rankmath_reset_cache(){ $GLOBALS['tfsc_combo_rankmath_cache']=array(); }
+function tfsc_combo_policy_rankmath_taxonomy_enabled($taxonomy){
+    $cache=&$GLOBALS['tfsc_combo_rankmath_cache'];if(isset($cache['tax'][$taxonomy]))return $cache['tax'][$taxonomy];
+    if(!class_exists('RankMath\\Helper'))return false;
+    $available=\RankMath\Helper::get_accessible_taxonomies();
+    if(!isset($available[$taxonomy])||!\RankMath\Helper::is_taxonomy_indexable($taxonomy))return $cache['tax'][$taxonomy]=false;
+    return $cache['tax'][$taxonomy]=!apply_filters('rank_math/sitemap/exclude_taxonomy',false,$taxonomy);
+}
+function tfsc_combo_policy_combo_taxonomies(){
+    return array_values(array_filter(tfsc_combo_policy_allowed_taxonomies(),'tfsc_combo_policy_rankmath_taxonomy_enabled'));
+}
+function tfsc_combo_policy_rankmath_term_allowed($term){
+    if(!$term instanceof WP_Term)return false;
+    $key=$term->taxonomy.':'.$term->term_id;$cache=&$GLOBALS['tfsc_combo_rankmath_cache'];if(isset($cache['term'][$key]))return $cache['term'][$key];
+    if(!$term instanceof WP_Term||!class_exists('RankMath\\Helper')||!\RankMath\Helper::is_term_indexable($term))return $cache['term'][$key]=false;
+    $excluded=wp_parse_id_list(\RankMath\Helper::get_settings('sitemap.exclude_terms'));
+    return $cache['term'][$key]=!in_array((int)$term->term_id,$excluded,true);
+}
