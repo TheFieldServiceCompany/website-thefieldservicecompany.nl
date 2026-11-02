@@ -605,3 +605,15 @@ Bij iedere latere wijziging leggen we vast:
 - hoe de wijziging op desktop, mobiel, formulieren, SEO en structured data is
   getest;
 - welke rollback beschikbaar is.
+
+
+## 2026-11-02 — combo-archieven: volledige resultaten, filters en sitemap
+
+De actuele bronnen van snippets [148](php/148-combo-vacancy-sitemap.php), [186](php/186-combo-archive-base.php) en [193](php/193-combo-archive-seo.php) zijn gesynchroniseerd met de uitgevoerde reparatie.
+
+- [376](php/376-extra-advice-without-replacing-vacancies.php) voegt advies **extra** toe na vijf vacatures; document 25495/grid 44137129 heeft Alternate Template uit. De query blijft tien vacatures per pagina. De native statische positie is niet uitgerold vanwege een aangetoond pagineringsgat in de praktijktest.
+- Pagineren blijft op de canonieke combo-URL. Filter wijzigen gaat met behoud van de selectie naar het algemene vacatureoverzicht; reset wist de combo-selectie.
+- Sitemap: ook canonieke hoofden met één taxonomie; maximaal twee taxonomieën. Native vacaturetaxonomieën komen niet dubbel in XML. Live policy staat op twee, zonder diepe vrijgaven.
+- De actieve managerplugin 0.2.0 is een teller en read-only simulatie. Hij past de live sitemaps niet aan. De publieke keten blijft 186 → 193 → 148.
+
+Zie het [uitvoerings- en testrapport](../../audits/2026-11-02-combo-archives-pagination-sitemaps.md), inclusief resultaten voor alle 21 FSE-vacatures, alle 47 open vacatures, de filters, mobiel en 1.144 unieke sitemap-URL’s.

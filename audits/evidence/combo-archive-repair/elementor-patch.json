@@ -1,0 +1,13 @@
+{
+  "document": 25495,
+  "widget": "44137129",
+  "settings": {
+    "alternate_template": {
+      "before": "yes",
+      "after": ""
+    },
+    "posts_per_page": 10
+  },
+  "advice_template": 20568,
+  "source": "snippet 376 adds advice after fifth vacancy without replacing query results"
+}

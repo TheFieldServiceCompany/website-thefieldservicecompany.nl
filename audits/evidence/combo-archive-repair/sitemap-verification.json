@@ -1,0 +1,64 @@
+{
+  "combo_parts": [
+    "https://thefieldservicecompany.nl/combo-vacatures-sitemap1.xml",
+    "https://thefieldservicecompany.nl/combo-vacatures-sitemap2.xml",
+    "https://thefieldservicecompany.nl/combo-vacatures-sitemap3.xml"
+  ],
+  "combo_urls": 1144,
+  "unique_urls": 1144,
+  "depths": {
+    "1": 70,
+    "2": 1074
+  },
+  "fse_included": true,
+  "native_sitemaps_remaining": [],
+  "all_sitemaps": [
+    "https://thefieldservicecompany.nl/page-sitemap.xml",
+    "https://thefieldservicecompany.nl/beroepengids-sitemap.xml",
+    "https://thefieldservicecompany.nl/blog-sitemap.xml",
+    "https://thefieldservicecompany.nl/kennisbankartikel-sitemap.xml",
+    "https://thefieldservicecompany.nl/vacature-sitemap.xml",
+    "https://thefieldservicecompany.nl/vacature_ingevuld-sitemap.xml",
+    "https://thefieldservicecompany.nl/beroep_bedrijfssector-sitemap.xml",
+    "https://thefieldservicecompany.nl/beroep_functie-inhoud-sitemap.xml",
+    "https://thefieldservicecompany.nl/beroep_functienaam-sitemap.xml",
+    "https://thefieldservicecompany.nl/beroep_kennisgebied-sitemap.xml",
+    "https://thefieldservicecompany.nl/beroep_studierichting-sitemap.xml",
+    "https://thefieldservicecompany.nl/combo-vacatures-sitemap1.xml",
+    "https://thefieldservicecompany.nl/combo-vacatures-sitemap2.xml",
+    "https://thefieldservicecompany.nl/combo-vacatures-sitemap3.xml",
+    "https://thefieldservicecompany.nl/local-sitemap.xml"
+  ],
+  "pages": [
+    {
+      "path": "/vacatures/functienaam/field-service-engineer/",
+      "canonical": "https://thefieldservicecompany.nl/vacatures/functienaam/field-service-engineer/",
+      "robots": "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    {
+      "path": "/vacatures/functienaam/field-service-engineer/page/2/",
+      "canonical": "https://thefieldservicecompany.nl/vacatures/functienaam/field-service-engineer/page/2/",
+      "robots": "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    {
+      "path": "/functienaam/field-service-engineer/",
+      "canonical": "https://thefieldservicecompany.nl/vacatures/functienaam/field-service-engineer/",
+      "robots": "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    {
+      "path": "/blog/",
+      "canonical": "https://thefieldservicecompany.nl/blog/",
+      "robots": "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    {
+      "path": "/kennisbank/",
+      "canonical": "https://thefieldservicecompany.nl/kennisbank/",
+      "robots": "follow, index"
+    },
+    {
+      "path": "/beroepengids/",
+      "canonical": "https://thefieldservicecompany.nl/beroepengids/",
+      "robots": "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    }
+  ]
+}

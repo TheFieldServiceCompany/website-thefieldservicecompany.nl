@@ -1,0 +1,8 @@
+[
+  {
+    "plugin": "tfsc-combo-archive-manager/tfsc-combo-archive-manager",
+    "status": "active",
+    "version": "0.2.0",
+    "name": "TFSC Combo Archive Manager"
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "reset": {
+    "url": "https://thefieldservicecompany.nl/vacatures/",
+    "jobs": 10,
+    "ad": 1
+  },
+  "mobile": {
+    "width": 390,
+    "scrollWidth": 390,
+    "jobs": 10,
+    "ad": 1,
+    "adBox": {
+      "x": 4,
+      "width": 382,
+      "height": 345
+    }
+  },
+  "errors": []
+}
