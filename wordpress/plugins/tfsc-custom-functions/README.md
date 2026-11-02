@@ -1,5 +1,11 @@
 # TFSC Custom Functions 0.5.0
 
+**Versie 0.5.0 is actief op de live website sinds 2 november 2026.** De
+pluginversie is in WordPress teruggelezen en alle 63 openbare vacaturepagina's
+zijn na de uitrol gecontroleerd. Zie
+`audits/2026-11-02-vacancy-application-context.md` voor oorzaak, uitvoering,
+testresultaten en herstelpad.
+
 ## Vacaturecontext voor solliciteren
 
 Versie 0.5.0 vervangt de oude Elementor-widget die zichtbare tekst als
