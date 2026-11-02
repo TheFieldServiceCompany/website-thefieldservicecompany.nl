@@ -1210,9 +1210,7 @@ function tfsc_combo_sitemap_flush_cache() {
         )
     ) {
 
-        \RankMath\Sitemap\Cache::invalidate_storage(
-            'combo-vacatures'
-        );
+        \RankMath\Sitemap\Cache::invalidate_storage(); // XML index and parts must agree after permission changes.
     }
 }
 

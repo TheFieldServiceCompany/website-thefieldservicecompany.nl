@@ -595,6 +595,7 @@ function tfsc_combo_get_index_status(
         $controls = get_option('tfsc_combo_manager_controls_v1', null);
         if (is_array($controls)) {
             if (isset($controls['blocks'][tfsc_combo_policy_signature($combo)])) $denial='manager_excluded_url';
+            if(!empty($controls['function_rules_ready'])){$fn=0;$extras=array();foreach($combo as $item){if($item['taxonomy']==='functienaam')$fn=(int)$item['term']->term_id;else $extras[]=$item['taxonomy'];}if(!$fn||array_diff($extras,$controls['function_rules'][$fn]['taxonomies']??array()))$denial='function_excluded_taxonomy';}
             foreach ($combo as $item) if (!in_array($item['taxonomy'],(array)($controls['index_taxonomies']??array()),true)) $denial='manager_excluded_taxonomy';
         }
     }
