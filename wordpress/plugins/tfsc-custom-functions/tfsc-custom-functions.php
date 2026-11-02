@@ -2,7 +2,7 @@
 /**
  * Plugin Name: TFSC Custom Functions Plugin
  * Description: TFSC frontend styles, local fonts, search titles and compatibility shortcodes.
- * Version: 0.5.0
+ * Version: 0.6.0
  * Author: The Field Service Company
  */
 
@@ -10,9 +10,11 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-define( 'TFSC_CUSTOM_FUNCTIONS_VERSION', '0.5.0' );
+define( 'TFSC_CUSTOM_FUNCTIONS_VERSION', '0.6.0' );
 
 define( 'TFSC_APPLICATION_FORM_PAGE_ID', 21465 );
+define( 'TFSC_ADVICE_FORM_PAGE_ID', 21445 );
+define( 'TFSC_QUESTION_FORM_PAGE_ID', 21455 );
 define( 'TFSC_LEGACY_VACANCY_TRANSFER_WIDGET_ID', '62cd538' );
 
 // Fonts are hosted locally; Elementor must not request Google Fonts remotely.
@@ -130,18 +132,32 @@ function tfsc_custom_functions_remove_legacy_vacancy_transfer( $content, $widget
 }
 
 /**
- * Accept the vacancy context only from the dedicated application button POST.
- * Elementor's existing hidden field currently reads the `vacaturenummer`
- * request parameter as GET; promoting the validated POST value server-side
- * keeps that form configuration compatible while the browser URL stays clean.
+ * Accept vacancy context only from one of the dedicated vacancy-button POSTs.
+ * Elementor's existing hidden fields currently read the `vacaturenummer`
+ * request parameter; promoting the validated POST value server-side keeps all
+ * three form configurations compatible while the browser URL stays clean.
  */
-add_action( 'template_redirect', 'tfsc_custom_functions_receive_application_context', 0 );
-function tfsc_custom_functions_receive_application_context() {
-    if (
-        'POST' !== strtoupper( isset( $_SERVER['REQUEST_METHOD'] ) ? (string) $_SERVER['REQUEST_METHOD'] : '' ) ||
-        empty( $_POST['tfsc_vacancy_application'] ) ||
-        ! is_page( TFSC_APPLICATION_FORM_PAGE_ID )
-    ) {
+add_action( 'template_redirect', 'tfsc_custom_functions_receive_vacancy_context', 0 );
+function tfsc_custom_functions_receive_vacancy_context() {
+    if ( 'POST' !== strtoupper( isset( $_SERVER['REQUEST_METHOD'] ) ? (string) $_SERVER['REQUEST_METHOD'] : '' ) ) {
+        return;
+    }
+
+    $routes = array(
+        'tfsc_vacancy_application' => TFSC_APPLICATION_FORM_PAGE_ID,
+        'tfsc_vacancy_advice'      => TFSC_ADVICE_FORM_PAGE_ID,
+        'tfsc_vacancy_question'    => TFSC_QUESTION_FORM_PAGE_ID,
+    );
+    $matched = false;
+
+    foreach ( $routes as $field => $page_id ) {
+        if ( ! empty( $_POST[ $field ] ) && is_page( $page_id ) ) {
+            $matched = true;
+            break;
+        }
+    }
+
+    if ( ! $matched ) {
         return;
     }
 
@@ -163,9 +179,10 @@ function tfsc_custom_functions_receive_application_context() {
 }
 
 /**
- * Render one hidden POST form and one click handler for every application CTA
- * on a single vacancy page. Existing data-tfsc-* attributes stay on the real
- * buttons, so GTM can keep attributing the click location.
+ * Render three hidden POST forms and one click handler for every application,
+ * advice and question CTA on a single vacancy page. Existing data-tfsc-*
+ * attributes stay on the real buttons, so GTM can keep attributing the click
+ * location.
  */
 add_action( 'wp_footer', 'tfsc_custom_functions_render_vacancy_context', 5 );
 function tfsc_custom_functions_render_vacancy_context() {
@@ -175,20 +192,31 @@ function tfsc_custom_functions_render_vacancy_context() {
 
     $number       = tfsc_custom_functions_vacancy_number();
     $apply_url    = home_url( '/formulier-solliciteren/' );
+    $advice_url   = home_url( '/formulier-advies/' );
     $question_url = home_url( '/formulier-vraag/' );
     ?>
     <form id="tfsc-vacancy-application-context" method="post" action="<?php echo esc_url( $apply_url ); ?>" hidden>
         <input type="hidden" name="tfsc_vacancy_application" value="1">
         <input type="hidden" name="vacaturenummer" value="<?php echo esc_attr( $number ); ?>">
     </form>
+    <form id="tfsc-vacancy-advice-context" method="post" action="<?php echo esc_url( $advice_url ); ?>" hidden>
+        <input type="hidden" name="tfsc_vacancy_advice" value="1">
+        <input type="hidden" name="vacaturenummer" value="<?php echo esc_attr( $number ); ?>">
+    </form>
+    <form id="tfsc-vacancy-question-context" method="post" action="<?php echo esc_url( $question_url ); ?>" hidden>
+        <input type="hidden" name="tfsc_vacancy_question" value="1">
+        <input type="hidden" name="vacaturenummer" value="<?php echo esc_attr( $number ); ?>">
+    </form>
     <script id="tfsc-vacancy-context-handler">
     (() => {
         const vacancyNumber = <?php echo wp_json_encode( $number ); ?>;
         const applicationForm = document.getElementById('tfsc-vacancy-application-context');
-        const questionUrl = <?php echo wp_json_encode( $question_url ); ?>;
+        const adviceForm = document.getElementById('tfsc-vacancy-advice-context');
+        const questionForm = document.getElementById('tfsc-vacancy-question-context');
 
         const applicationSelector = '[data-tfsc-cta-action="apply"], .button-solliciteren a, a.button-solliciteren';
-        const questionSelector = '.button-vac-email a, a.button-vac-email';
+        const adviceSelector = '[data-tfsc-cta-action="advice"], .button-advies a, a.button-advies';
+        const questionSelector = '[data-tfsc-cta-action="question"], .button-vac-email a, a.button-vac-email';
 
         document.addEventListener('click', (event) => {
             if (!(event.target instanceof Element)) {
@@ -196,9 +224,10 @@ function tfsc_custom_functions_render_vacancy_context() {
             }
 
             const applicationButton = event.target.closest(applicationSelector);
+            const adviceButton = event.target.closest(adviceSelector);
             const questionButton = event.target.closest(questionSelector);
 
-            if (!applicationButton && !questionButton) {
+            if (!applicationButton && !adviceButton && !questionButton) {
                 return;
             }
 
@@ -217,9 +246,12 @@ function tfsc_custom_functions_render_vacancy_context() {
                     return;
                 }
 
-                const url = new URL(questionUrl, window.location.origin);
-                url.searchParams.set('vacaturenummer', vacancyNumber);
-                window.location.assign(url.toString());
+                if (adviceButton) {
+                    adviceForm.submit();
+                    return;
+                }
+
+                questionForm.submit();
             }, 0);
         });
     })();

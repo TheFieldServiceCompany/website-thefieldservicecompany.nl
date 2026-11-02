@@ -69,7 +69,7 @@ unset($wp);check(tfsc_custom_functions_current_page_url()==='https://example.tes
 check(!isset($actions['wp_head']),'No fixed font preloads compete with Elementor typography');
 check(!isset($actions['elementor/frontend/after_register_styles']),'Elementor may load the icon fonts its widgets require');
 check(isset($shortcodes['rm_get_estimated_time_to_read']) && isset($shortcodes['current_page_url']),'Public shortcode names preserved');
-check(TFSC_CUSTOM_FUNCTIONS_VERSION==='0.5.0','Plugin version records the vacancy-context release');
+check(TFSC_CUSTOM_FUNCTIONS_VERSION==='0.6.0','Plugin version records the three-form vacancy-context release');
 $queried_id=358;$post_types=[358=>'vacature'];$post_meta=[358=>['vacaturenummer'=>' 358 ']];
 check(tfsc_custom_functions_vacancy_number()==='358','Stored vacancy field is used as the business reference');
 $post_meta[358]['vacaturenummer']='358<script>';
@@ -83,14 +83,25 @@ check(tfsc_custom_functions_remove_legacy_vacancy_transfer('legacy-script',new T
 $page_id=TFSC_APPLICATION_FORM_PAGE_ID;
 $_SERVER['REQUEST_METHOD']='POST';
 $_POST=['tfsc_vacancy_application'=>'1','vacaturenummer'=>'358'];
-tfsc_custom_functions_receive_application_context();
-check($_GET['vacaturenummer']==='358' && $_REQUEST['vacaturenummer']==='358','Validated POST context reaches the existing Elementor request field');
+tfsc_custom_functions_receive_vacancy_context();
+check($_GET['vacaturenummer']==='358' && $_REQUEST['vacaturenummer']==='358','Validated application POST reaches the existing Elementor request field');
 $_POST=['tfsc_vacancy_application'=>'1','vacaturenummer'=>'358<script>'];$status_code=null;$blocked=false;
-try{tfsc_custom_functions_receive_application_context();}catch(Exception $error){$blocked=str_starts_with($error->getMessage(),'WP_DIE:');}
+try{tfsc_custom_functions_receive_vacancy_context();}catch(Exception $error){$blocked=str_starts_with($error->getMessage(),'WP_DIE:');}
 check($blocked && $status_code===400,'Invalid POST context is stopped with HTTP 400');
+foreach ([
+ ['page'=>TFSC_ADVICE_FORM_PAGE_ID,'flag'=>'tfsc_vacancy_advice','label'=>'advice'],
+ ['page'=>TFSC_QUESTION_FORM_PAGE_ID,'flag'=>'tfsc_vacancy_question','label'=>'question'],
+] as $route) {
+ $page_id=$route['page'];$_GET=[];$_REQUEST=[];$_POST=[$route['flag']=>'1','vacaturenummer'=>'358'];
+ tfsc_custom_functions_receive_vacancy_context();
+ check($_GET['vacaturenummer']==='358' && $_REQUEST['vacaturenummer']==='358','Validated '.$route['label'].' POST reaches the existing Elementor request field');
+}
 $_POST=['tfsc_vacancy_application'=>'1','vacaturenummer'=>'358'];
+$page_id=TFSC_APPLICATION_FORM_PAGE_ID;
 $singular='vacature';ob_start();tfsc_custom_functions_render_vacancy_context();$context=ob_get_clean();
-check(strpos($context,'method="post"')!==false && strpos($context,'name="vacaturenummer" value="358"')!==false,'Application context renders as POST without a query string');
+check(substr_count($context,'method="post"')===3 && substr_count($context,'name="vacaturenummer" value="358"')===3,'All three vacancy contexts render as POST without query strings');
+check(strpos($context,'tfsc_vacancy_advice')!==false && strpos($context,'tfsc_vacancy_question')!==false,'Advice and question routes have dedicated POST markers');
+check(strpos($context,'searchParams')===false && strpos($context,'?vacaturenummer=')===false,'Vacancy context JavaScript does not put vacancy data in URLs');
 check(strpos($context,'postTitle')===false && strpos($context,'contractvorm')===false && strpos($context,'bedrijfsnaam')===false,'Redundant browser-derived vacancy fields are absent');
 echo json_encode(['php'=>PHP_VERSION,'passed'=>count($checks),'checks'=>$checks],JSON_PRETTY_PRINT);
 `;

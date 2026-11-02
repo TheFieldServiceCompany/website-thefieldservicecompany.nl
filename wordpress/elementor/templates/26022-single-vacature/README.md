@@ -48,3 +48,12 @@ Op 1 november 2026 zijn alleen de losse iconwidget 530b4f2e en bijbehorende
 scrollscriptwidget 74f5021 uit dit template naar footer_main 25019 verplaatst.
 Het vaste titel-/knoppenpaneel uit dit document blijft ongewijzigd. Zie
 wordpress/elementor/templates/25019-footer-main/README.md.
+
+## Vacaturecontext 0.6.0
+
+Op 2 november 2026 is de oude HTML-widget `62cd538` fysiek uit dit template
+verwijderd. TFSC Custom Functions 0.6.0 beheert nu centraal de POST-overdracht
+voor solliciteren, advies en vragen. De templateback-up staat in
+`wordpress/exports/elementor/2026-11-02-before-all-vacancy-context-post/`.
+Zie `audits/2026-11-02-vacancy-context-all-forms.md` voor de livecontrole en
+rollbackvolgorde.
