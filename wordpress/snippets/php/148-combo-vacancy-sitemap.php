@@ -1,4 +1,5 @@
 <?php
+if (!defined('TFSC_COMBO_MANAGER_SITEMAP_HOOK_V1')) define('TFSC_COMBO_MANAGER_SITEMAP_HOOK_V1',true);
 
 /**
  * TFSC - Combo Vacancy Sitemap
@@ -1005,7 +1006,7 @@ function tfsc_combo_sitemap_generate_links() {
 
         $policy_max =
             function_exists( 'tfsc_combo_policy_sitemap_max_dimensions' )
-                ? min( 2, tfsc_combo_policy_sitemap_max_dimensions() )
+                ? tfsc_combo_policy_sitemap_max_dimensions()
                 : 2;
 
 

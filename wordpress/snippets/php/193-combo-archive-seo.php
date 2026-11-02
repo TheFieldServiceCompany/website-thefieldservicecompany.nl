@@ -1,4 +1,5 @@
 <?php
+if (!defined('TFSC_COMBO_MANAGER_POLICY_HOOK_V1')) define('TFSC_COMBO_MANAGER_POLICY_HOOK_V1',true);
 
 /**
  * TFSC - Combo Archive SEO + Native Archive Canonicals + Filter SEO
@@ -579,6 +580,19 @@ function tfsc_combo_get_index_status(
         ];
     }
 
+
+    // Persistent manager controls survive plugin deactivation; only explicit exclusions.
+    $denial = '';
+    if ( function_exists('tfsc_combo_manager_index_denial') ) {
+        $denial = tfsc_combo_manager_index_denial($combo);
+    } else {
+        $controls = get_option('tfsc_combo_manager_controls_v1', null);
+        if (is_array($controls)) {
+            if (isset($controls['blocks'][tfsc_combo_policy_signature($combo)])) $denial='manager_excluded_url';
+            foreach ($combo as $item) if (!in_array($item['taxonomy'],(array)($controls['index_taxonomies']??array()),true)) $denial='manager_excluded_taxonomy';
+        }
+    }
+    if ($denial) return array('index'=>false,'reason'=>$denial,'results'=>null,'taxonomies'=>tfsc_combo_count_taxonomies($combo));
 
     $taxonomy_count =
         tfsc_combo_count_taxonomies(
