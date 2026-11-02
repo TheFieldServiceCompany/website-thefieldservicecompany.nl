@@ -1,6 +1,6 @@
 {
     "php": "8.3.33",
-    "passed": 18,
+    "passed": 27,
     "checks": [
         "Styles retain final enqueue priority",
         "Existing stylesheet handle preserved",
@@ -19,6 +19,15 @@
         "Current URL handles absent request",
         "No fixed font preloads compete with Elementor typography",
         "Elementor may load the icon fonts its widgets require",
-        "Public shortcode names preserved"
+        "Public shortcode names preserved",
+        "Plugin version records the vacancy-context release",
+        "Stored vacancy field is used as the business reference",
+        "Invalid vacancy values are rejected rather than guessed",
+        "Legacy Elementor transfer widget is suppressed on vacancies",
+        "Unrelated pages are unchanged",
+        "Validated POST context reaches the existing Elementor request field",
+        "Invalid POST context is stopped with HTTP 400",
+        "Application context renders as POST without a query string",
+        "Redundant browser-derived vacancy fields are absent"
     ]
 }
