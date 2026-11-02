@@ -571,16 +571,16 @@ endpoint geheel worden verwijderd.
 
 ### Adviesknop
 
-Zoekt uitsluitend naar het zichtbare `Vacaturenummer:` in de gerenderde
-Elementor-HTML. Bij een klik op `.button-advies` opent de code het
-adviesformulier op het huidige domein en geeft zij, wanneer aanwezig, alleen
-`?vacaturenummer=<nummer>` mee. Op algemene archiefpagina's zonder één concrete
-vacature opent hetzelfde formulier bewust zonder vacatureparameter.
+Historisch: Custom Code 21893 zocht naar het zichtbare `Vacaturenummer:` in de
+gerenderde Elementor-HTML en gaf `?vacaturenummer=<nummer>` mee. Het blok is op
+2 november 2026 naar de WordPress-prullenbak verplaatst. TFSC Custom Functions
+0.6.0 leest nu het opgeslagen vacatureveld en gebruikt POST voor solliciteren,
+advies en vragen vanaf een afzonderlijke vacaturepagina.
 
-Bedrijfsnaam, contractvorm, paginatitel en pagina-URL worden niet meer uit de
-pagina geschraapt of als queryparameter meegestuurd. Supabase leidt de
-vacaturecontext af uit het canonieke vacaturenummer. De vereenvoudigde code is
-op 21 oktober 2026 LIVE gezet. De algemene adviesroute is gecontroleerd. Een
+Bedrijfsnaam, contractvorm en paginatitel worden niet uit de pagina geschraapt
+of als queryparameter meegestuurd. Supabase leidt de vacaturecontext af uit het
+canonieke vacaturenummer en behoudt exacte URL-herkenning als fallback. De
+eerdere vereenvoudigde code was op 21 oktober 2026 live gezet. Een
 openbare proef met WordPress-vacaturenummer `359` bewees dat het nummer correct
 in mappingversie `4` aankomt; Supabase zette de inzending terecht op
 `optional_vacancy_not_found` omdat deze vacature nog niet is gemigreerd. De

@@ -1,4 +1,23 @@
-# TFSC Custom Functions 0.5.0
+# TFSC Custom Functions 0.6.0
+
+**Versie 0.6.0 is actief op de live website sinds 2 november 2026.** Alle 63
+individuele vacaturepagina's en het vacaturearchief zijn na de uitrol
+gecontroleerd. Zie `audits/2026-11-02-vacancy-context-all-forms.md` voor de
+livecontrole, Supabase-fallbackproef en het herstelpad.
+
+Versie 0.6.0 breidt dezelfde gevalideerde POST-route uit naar advies en vragen
+vanaf een afzonderlijke vacaturepagina. Solliciteren, advies en vragen openen
+daardoor alle drie een schone formulier-URL en geven uitsluitend het opgeslagen
+`vacaturenummer` door. Algemene adviesknoppen buiten vacaturepagina's blijven
+contextvrij en behouden hun bestaande bestemming.
+
+Het oude globale Elementor Custom Code-blok `21893` is niet meer nodig. Het
+scrapete een verouderd zichtbaar label, voegde een queryparameter toe en kon op
+algemene pagina's een registratieknop kapen. Het blok wordt bij de livegang van
+0.6.0 verwijderd. De databasefallback op de exacte bron-URL blijft actief voor
+historisch herstel en als onafhankelijke reserveroute.
+
+## Eerdere livebasis
 
 **Versie 0.5.0 is actief op de live website sinds 2 november 2026.** De
 pluginversie is in WordPress teruggelezen en alle 63 openbare vacaturepagina's
@@ -32,8 +51,6 @@ melding. De plugin kiest nooit een vacature op basis van titel, label of URL.
 De controles in `audit/verify-php.mjs` bewijzen onder meer opslagvelduitlezing,
 validatie, uitschakeling van de oude widget, POST-overdracht en afwezigheid van
 de overbodige browservelden.
-
-## Eerdere livebasis
 
 **Versie 0.4.1 is actief op de live website sinds 1 november 2026.** PHP en CSS zijn geplaatst en teruggelezen; de Elementor-kitinstellingen uit 0.4.0 zijn ongewijzigd.
 

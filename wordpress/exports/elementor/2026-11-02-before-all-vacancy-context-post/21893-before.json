@@ -1,0 +1,86 @@
+{
+  "id": 21893,
+  "date": "2024-02-27T08:44:42",
+  "date_gmt": "2024-02-27T07:44:42",
+  "guid": {
+    "rendered": "https://thefieldservicecompany.nl/?post_type=elementor_snippet&#038;p=21893",
+    "raw": "https://thefieldservicecompany.nl/?post_type=elementor_snippet&#038;p=21893"
+  },
+  "modified": "2026-10-21T02:00:54",
+  "modified_gmt": "2026-10-21T00:00:54",
+  "password": "",
+  "slug": "script-advies-buttons-varlink-build",
+  "status": "publish",
+  "type": "elementor_snippet",
+  "link": "https://thefieldservicecompany.nl/?elementor_snippet=script-advies-buttons-varlink-build",
+  "title": {
+    "raw": "Script Advies Buttons VarLink Build",
+    "rendered": "Script Advies Buttons VarLink Build"
+  },
+  "author": 3,
+  "template": "",
+  "meta": {
+    "_elementor_location": "elementor_body_start",
+    "_elementor_priority": 1,
+    "_elementor_code": "<script>\r\ndocument.addEventListener('DOMContentLoaded', function () {\r\n    var buttons = document.querySelectorAll('.button-advies');\r\n\r\n    function getVacancyNumber() {\r\n        var vacancyNumber = '';\r\n\r\n        document.querySelectorAll('.elementor-icon-list-text').forEach(function (element) {\r\n            var text = element.textContent.trim();\r\n\r\n            if (text.indexOf('Vacaturenummer:') === 0) {\r\n                vacancyNumber = text.replace('Vacaturenummer:', '').trim();\r\n            }\r\n        });\r\n\r\n        return vacancyNumber;\r\n    }\r\n\r\n    buttons.forEach(function (button) {\r\n        button.addEventListener('click', function (event) {\r\n            event.preventDefault();\r\n\r\n            var url = new URL('/formulier-advies/', window.location.origin);\r\n            var vacancyNumber = getVacancyNumber();\r\n\r\n            if (vacancyNumber) {\r\n                url.searchParams.set('vacaturenummer', vacancyNumber);\r\n            }\r\n\r\n            window.location.href = url.toString();\r\n        });\r\n    });\r\n});\r\n</script>"
+  },
+  "_links": {
+    "self": [
+      {
+        "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/elementor_snippet/21893",
+        "targetHints": {
+          "allow": [
+            "GET",
+            "POST",
+            "PUT",
+            "PATCH",
+            "DELETE"
+          ]
+        }
+      }
+    ],
+    "collection": [
+      {
+        "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/elementor_snippet"
+      }
+    ],
+    "about": [
+      {
+        "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/types/elementor_snippet"
+      }
+    ],
+    "author": [
+      {
+        "embeddable": true,
+        "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/users/3"
+      }
+    ],
+    "wp:attachment": [
+      {
+        "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/media?parent=21893"
+      }
+    ],
+    "wp:action-publish": [
+      {
+        "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/elementor_snippet/21893"
+      }
+    ],
+    "wp:action-unfiltered-html": [
+      {
+        "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/elementor_snippet/21893"
+      }
+    ],
+    "wp:action-assign-author": [
+      {
+        "href": "https://thefieldservicecompany.nl/wp-json/wp/v2/elementor_snippet/21893"
+      }
+    ],
+    "curies": [
+      {
+        "name": "wp",
+        "href": "https://api.w.org/{rel}",
+        "templated": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "checked_at": "2026-11-02T12:36:07.460Z",
+  "plugin_version": "0.6.0",
+  "plugin_active": true,
+  "template_id": 26022,
+  "legacy_widget_present": false,
+  "custom_code_21893_status": "trash",
+  "vacancy_pages": {
+    "sitemap_entries": 64,
+    "expected": 63,
+    "checked": 63,
+    "http_200": 63,
+    "numeric_number": 63,
+    "handler_present": 63,
+    "three_post_forms": 63,
+    "old_query_code_absent": 63,
+    "old_advice_custom_code_absent": 63
+  },
+  "vacancy_archive": {
+    "url": "https://thefieldservicecompany.nl/vacatures/",
+    "status": 200,
+    "old_advice_custom_code_absent": true
+  },
+  "form_checks": [
+    {
+      "path": "/formulier-solliciteren/",
+      "valid_status": 200,
+      "clean_final_url": true,
+      "valid_hidden_value": true,
+      "invalid_status": 400
+    },
+    {
+      "path": "/formulier-advies/",
+      "valid_status": 200,
+      "clean_final_url": true,
+      "valid_hidden_value": true,
+      "invalid_status": 400
+    },
+    {
+      "path": "/formulier-vraag/",
+      "valid_status": 200,
+      "clean_final_url": true,
+      "valid_hidden_value": true,
+      "invalid_status": 400
+    }
+  ],
+  "failures": []
+}
