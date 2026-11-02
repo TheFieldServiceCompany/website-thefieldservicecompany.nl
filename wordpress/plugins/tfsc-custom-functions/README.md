@@ -1,4 +1,33 @@
-# TFSC Custom Functions 0.4.1
+# TFSC Custom Functions 0.5.0
+
+## Vacaturecontext voor solliciteren
+
+Versie 0.5.0 vervangt de oude Elementor-widget die zichtbare tekst als
+`Vacaturenummer:` uitleest en titel, bedrijf, contractvorm en pagina-URL door
+middel van losse queryparameters verstuurt.
+
+Op een afzonderlijke vacaturepagina leest de plugin uitsluitend het opgeslagen
+Pods-/postveld `vacaturenummer`. Alle knoppen met
+`data-tfsc-cta-action="apply"` of de bestaande class `button-solliciteren`
+gebruiken één verborgen POST-formulier naar `/formulier-solliciteren/`. De
+formulier-URL blijft daardoor schoon. De bestaande Elementor Request Parameter
+blijft compatibel doordat alleen de gevalideerde POST-waarde server-side aan de
+bestaande formulierrendering wordt aangeboden.
+
+De oude Elementor HTML-widget `62cd538` wordt op vacaturepagina's niet meer
+gerenderd. De centrale handler houdt de bestaande `data-tfsc-*` attributen op
+de zichtbare knoppen intact, zodat GTM de kliklocatie kan blijven meten. De
+bestaande vacature-vraagknoppen krijgen alleen `vacaturenummer` mee; titel,
+bedrijf en contractvorm worden niet meer uit de browser-HTML afgeleid.
+
+Een ontbrekend of niet-numeriek vacaturenummer stopt de route met een duidelijke
+melding. De plugin kiest nooit een vacature op basis van titel, label of URL.
+
+De controles in `audit/verify-php.mjs` bewijzen onder meer opslagvelduitlezing,
+validatie, uitschakeling van de oude widget, POST-overdracht en afwezigheid van
+de overbodige browservelden.
+
+## Eerdere livebasis
 
 **Versie 0.4.1 is actief op de live website sinds 1 november 2026.** PHP en CSS zijn geplaatst en teruggelezen; de Elementor-kitinstellingen uit 0.4.0 zijn ongewijzigd.
 
