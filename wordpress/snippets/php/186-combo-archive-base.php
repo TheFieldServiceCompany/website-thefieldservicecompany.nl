@@ -1,8 +1,7 @@
 <?php
-
 /**
  * TFSC - Volledig dynamische vacature-archieven
- * Version 4.3 - Stable Legacy Logic + S&F Pagination Sync
+ * Version 4.4 - Native and Combo Archive Pagination Sync
  *
  * Gebaseerd op de oude werkende combo-architectuur.
  *
@@ -909,6 +908,17 @@ add_action(
             'tax_query',
             $tax_query
         );
+
+
+        // Current Query grids inherit this archive query, including its page size.
+        // Keep native vacancy archives aligned with the existing Search & Filter query.
+        $posts_per_page = tfsc_get_search_filter_posts_per_page();
+        if ( null !== $posts_per_page ) {
+            $query->set( 'posts_per_page', $posts_per_page );
+            $query->set( 'posts_per_archive_page', $posts_per_page );
+        }
+        $query->set( 'no_found_rows', false );
+        // Preserve WordPress's parsed paged value; do not introduce an offset.
     },
     1
 );
@@ -1465,11 +1475,11 @@ add_action(
             // Canonical paging is an ordinary navigation; Search & Filter only
             // redirects actual filter changes to the general vacancy overview.
             document.addEventListener('click', function(event) {
-                if (!IS_COMBO || event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+                if (event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
                 const target = event.target instanceof Element ? event.target : null;
                 if (!target) return;
                 const reset = target.closest('.search-filter-field--control-type-reset');
-                if (reset) {
+                if (IS_COMBO && reset) {
                     event.preventDefault(); event.stopImmediatePropagation();
                     window.location.assign(<?php echo wp_json_encode( home_url('/' . TFSC_COMBO_BASE . '/') ); ?>);
                     return;
@@ -2135,10 +2145,18 @@ add_shortcode(
 
 /** Canonical, crawlable pagination links for the shared vacancy Loop Grid. */
 add_filter('elementor/widget/render_content', function($html, $widget) {
-    if ($widget->get_id() !== '44137129' || !tfsc_is_combo_archive() || !class_exists('WP_HTML_Tag_Processor')) return $html;
-    $path = (string) get_query_var('tfsc_combo_path');
-    if (!$path) return $html;
-    $base = trailingslashit(home_url('/' . TFSC_COMBO_BASE . '/' . trim($path, '/')));
+    if ($widget->get_id() !== '44137129' || !tfsc_is_vacancy_seo_landing() || !class_exists('WP_HTML_Tag_Processor')) return $html;
+    if (tfsc_is_combo_archive()) {
+        $path = (string) get_query_var('tfsc_combo_path');
+        if (!$path) return $html;
+        $base = trailingslashit(home_url('/' . TFSC_COMBO_BASE . '/' . trim($path, '/')));
+    } else {
+        $term = get_queried_object();
+        if (!$term instanceof WP_Term) return $html;
+        $base = get_term_link($term);
+        if (is_wp_error($base)) return $html;
+        if (!wp_parse_url($base, PHP_URL_QUERY)) $base = trailingslashit($base);
+    }
     $tags = new WP_HTML_Tag_Processor($html);
     while ($tags->next_tag(array('tag_name'=>'A','class_name'=>'page-numbers'))) {
         $href = $tags->get_attribute('href');
@@ -2147,7 +2165,9 @@ add_filter('elementor/widget/render_content', function($html, $widget) {
         $page = isset($args['e-page-44137129']) ? absint($args['e-page-44137129']) : 0;
         if (!$page && preg_match('~/page/(\d+)/?~', (string) wp_parse_url($href, PHP_URL_PATH), $match)) $page = absint($match[1]);
         if (!$page) $page = 1;
-        $url = $page > 1 ? $base . 'page/' . $page . '/' : $base;
+        $url = wp_parse_url($base, PHP_URL_QUERY)
+            ? ($page > 1 ? add_query_arg('paged', $page, $base) : remove_query_arg('paged', $base))
+            : ($page > 1 ? $base . 'page/' . $page . '/' : $base);
         // Preserve the existing controlled-test marker, never user filter args.
         if (isset($_GET['tfsc_test']) && $_GET['tfsc_test']==='codex') $url = add_query_arg('tfsc_test','codex',$url);
         $tags->set_attribute('href',esc_url_raw($url));
