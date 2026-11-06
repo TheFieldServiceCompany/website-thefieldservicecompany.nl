@@ -12,3 +12,5 @@ De gekoppelde pCloud-projectmap `TvC Website Plugins/backup plugin WordPress` is
 ## 2026-11-06
 
 - De broncode, handleiding en installatie-ZIP in de werkmap zijn byte voor byte vergeleken met GitHub. Het beheerbeeld van dev staat in de werkmap.
+- [TeamUpdraft beschrijft](https://teamupdraft.com/privacy/) een ingebouwde pCloud-app met OAuth. De aanmelding loopt via de authenticatieserver van TeamUpdraft. De back-upbestanden gaan rechtstreeks van de WordPress-host naar pCloud. Met onze eigen OAuth-app volgt eerst de goedkeuring van pCloud.
+- [TeamUpdraft documenteert](https://teamupdraft.com/docs/updraftplus/migration/how-to/wordpress-migration-failed/) uploads in delen met cURL. De precieze pCloud-endpoints voor die uploads zijn niet vastgesteld.
