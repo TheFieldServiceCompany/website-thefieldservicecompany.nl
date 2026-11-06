@@ -2,7 +2,7 @@
 /**
  * Plugin Name: TFSC Updraft to PCloud
  * Description: Kopieert lokale UpdraftPlus-back-ups op een ingesteld tijdstip naar pCloud.
- * Version: 0.2.0
+ * Version: 0.2.1
  * Requires at least: 6.5
  * Requires PHP: 8.1
  * License: GPL-2.0-or-later
@@ -645,12 +645,18 @@ function render(): void {
                     <option value="<?php echo esc_attr((string) $entry['id']); ?>"><?php echo esc_html($entry['name']); ?></option>
                 <?php endforeach; ?>
             </select></label></p>
+            <p><label><input type="checkbox" name="force_download" value="1"> Download alle archiefdelen opnieuw voor controle</label></p>
+            <p>Ook als dezelfde back-up lokaal al aanwezig is, haalt de plug-in een tijdelijke kopie uit pCloud.</p>
             <?php submit_button('Terughalen naar UpdraftPlus', 'primary'); ?></form>
         <?php elseif ($connection && !$recovery) : ?>
             <p><?php echo $catalog ? 'Geen herstelpunten met een voltooiingslijst gevonden.' : 'Controleer eerst de pCloud-map om herstelpunten te laden.'; ?></p>
         <?php endif; ?>
         <?php if (!empty($state['recovered'])) : ?>
-            <div class="notice notice-success inline"><p><strong>Herstelpunt opgehaald.</strong> Bekijk <?php echo esc_html($state['recovered']['name']); ?> onder <a href="<?php echo esc_url(admin_url('options-general.php?page=updraftplus')); ?>">Bestaande back-ups in UpdraftPlus</a>.</p></div>
+            <div class="notice notice-success inline"><p><strong>Herstelpunt beschikbaar in UpdraftPlus.</strong>
+                <?php if (isset($state['recovered']['downloaded'], $state['recovered']['local'])) : ?>
+                    <?php echo esc_html(sprintf('Uit pCloud gedownload en gecontroleerd: %d. Lokale archiefdelen hergebruikt: %d.', $state['recovered']['downloaded'], $state['recovered']['local'])); ?>
+                <?php endif; ?>
+                Bekijk <?php echo esc_html($state['recovered']['name']); ?> onder <a href="<?php echo esc_url(admin_url('options-general.php?page=updraftplus')); ?>">Bestaande back-ups in UpdraftPlus</a>.</p></div>
         <?php endif; ?>
         <?php if ($recovery) : ?>
             <p><?php echo esc_html(sprintf('Download: %d van %d archiefdelen gecontroleerd.', count($recovery['confirmed']), count($recovery['files']))); ?>

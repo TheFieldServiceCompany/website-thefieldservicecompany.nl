@@ -1,4 +1,4 @@
-# TFSC Updraft to PCloud 0.2.0
+# TFSC Updraft to PCloud 0.2.1
 
 De plug-in kopieert geslaagde lokale UpdraftPlus-back-ups naar pCloud en kan ze terughalen. UpdraftPlus bepaalt de inhoud van de archieven, maakt de back-ups en voert het websiteherstel uit.
 
@@ -27,6 +27,6 @@ De pCloud-bewaarlimiet staat standaard op **0**, wat alles bewaart. Een ingestel
 
 ## Terughalen
 
-Klik op **pCloud-map en herstelpunten controleren**, kies het herstelpunt en klik op **Terughalen naar UpdraftPlus**. De plug-in controleert de gedownloade archiefdelen en maakt ze pas na verificatie beschikbaar voor UpdraftPlus. Een afwijkend lokaal bestand met dezelfde naam blijft behouden en de plug-in meldt het conflict. Start het websiteherstel zelf bij **Bestaande back-ups** in UpdraftPlus.
+Klik op **pCloud-map en herstelpunten controleren**, kies het herstelpunt en klik op **Terughalen naar UpdraftPlus**. De plug-in controleert de gedownloade archiefdelen en maakt ze pas na verificatie beschikbaar voor UpdraftPlus. Een afwijkend lokaal bestand met dezelfde naam blijft behouden en de plug-in meldt het conflict. Vink **Download alle archiefdelen opnieuw voor controle** aan om ook een identiek lokaal archief opnieuw uit pCloud te downloaden en te verifiëren. De bestaande lokale kopie blijft daarbij behouden. Het resultaat maakt onderscheid tussen gedownloade en hergebruikte delen. Start het websiteherstel zelf bij **Bestaande back-ups** in UpdraftPlus.
 
 Versie 0.2.0 is lokaal geactiveerd en het beheerscherm is met echte UpdraftPlus-archieven gecontroleerd. De pCloud-overdracht en bewaarlimiet zijn met nagebootste API-antwoorden getest. De eerste echte proefupload en terughaalproef op dev staan open.

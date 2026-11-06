@@ -70,7 +70,7 @@ function get_download(array $connection, int $file_id, int $limit, string $desti
     return $destination === '' ? wp_remote_retrieve_body($response) : null;
 }
 
-function recovery_job(array $connection, int $folder_id): array {
+function recovery_job(array $connection, int $folder_id, bool $force_download = false): array {
     $catalog = remote_catalog($connection);
     $set = $catalog['backups'][$folder_id] ?? null;
     if (!$set) {
@@ -112,6 +112,7 @@ function recovery_job(array $connection, int $folder_id): array {
     return $set + [
         'account' => $connection['account'], 'files' => $files, 'stage' => $stage,
         'confirmed' => [], 'attempts' => 0, 'next' => 0, 'error' => '',
+        'force_download' => $force_download,
     ];
 }
 
@@ -134,8 +135,10 @@ function recovery_next(array &$job, array $connection): bool {
         $local = backup_directory() . '/' . $name;
         if (file_exists($local) || is_link($local)) {
             verify_local_archive($local, $file);
-            $job['confirmed'][$name] = true;
-            return false;
+            if (empty($job['force_download'])) {
+                $job['confirmed'][$name] = 'local';
+                return false;
+            }
         }
         $temporary = $target . '.part';
         if (is_link($temporary)) {
@@ -152,7 +155,7 @@ function recovery_next(array &$job, array $connection): bool {
                 unlink($temporary);
             }
         }
-        $job['confirmed'][$name] = true;
+        $job['confirmed'][$name] = 'downloaded';
         return false;
     }
 
@@ -253,7 +256,7 @@ function handle_recovery(string $action, array $state, array $connection): strin
         if (!$id) {
             throw new \RuntimeException('Kies een herstelpunt uit pCloud.');
         }
-        $state['recovery'] = recovery_job($connection, $id);
+        $state['recovery'] = recovery_job($connection, $id, '1' === field('force_download'));
         unset($state['recovered']);
         $notice = 'Herstelpunt staat klaar om naar de lokale UpdraftPlus-map terug te halen.';
     } elseif (!$job || $job['account'] !== $connection['account']) {
@@ -284,6 +287,11 @@ function process_recovery(array $state, array $job, array $connection): void {
         }
         if (recovery_next($job, $connection)) {
             $state['recovered'] = ['name' => $job['name'], 'time' => time()];
+            if (!in_array(true, $job['confirmed'], true)) {
+                $counts = array_count_values($job['confirmed']);
+                $state['recovered']['downloaded'] = $counts['downloaded'] ?? 0;
+                $state['recovered']['local'] = $counts['local'] ?? 0;
+            }
             unset($state['recovery']);
             update_option(STATE, $state, false);
             clean_recovery_stage($job);
