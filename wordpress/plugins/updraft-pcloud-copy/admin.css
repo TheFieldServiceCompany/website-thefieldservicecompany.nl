@@ -56,11 +56,28 @@
     font-weight: 400;
 }
 
+.upc-admin .upc-schedule-days {
+    margin-bottom: 12px;
+}
+
+.upc-admin .upc-schedule-days legend {
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.upc-admin .upc-schedule-days > div,
 .upc-admin .upc-schedule-time {
     display: flex;
     flex-wrap: wrap;
-    align-items: flex-end;
     gap: 8px 16px;
+}
+
+.upc-admin .upc-schedule-days label {
+    white-space: nowrap;
+}
+
+.upc-admin .upc-schedule-time {
+    align-items: flex-end;
 }
 
 .upc-admin .upc-schedule-time span {

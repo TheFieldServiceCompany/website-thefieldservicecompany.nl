@@ -2,7 +2,7 @@
 /**
  * Plugin Name: TFSC Updraft to PCloud
  * Description: Kopieert lokale UpdraftPlus-back-ups op een ingesteld tijdstip naar pCloud.
- * Version: 0.2.2
+ * Version: 0.2.3
  * Requires at least: 6.5
  * Requires PHP: 8.1
  * License: GPL-2.0-or-later
@@ -18,6 +18,7 @@ const STATE = 'upc_state';
 const SOURCE_HISTORY = 'upc_source_history';
 const TICK = 'upc_upload_tick';
 const INTERVAL = 'upc_every_minute';
+const WEEKDAYS = ['Maandag', 'Dinsdag', 'Woensdag', 'Donderdag', 'Vrijdag', 'Zaterdag', 'Zondag'];
 
 require_once __DIR__ . '/recovery.php';
 
@@ -48,7 +49,7 @@ add_action('admin_menu', static function () {
 });
 add_action('admin_enqueue_scripts', static function ($hook) {
     if ('tools_page_updraft-pcloud-copy' === $hook) {
-        wp_enqueue_style('upc-admin', plugins_url('admin.css', __FILE__), [], '0.2.2');
+        wp_enqueue_style('upc-admin', plugins_url('admin.css', __FILE__), [], '0.2.3');
     }
 });
 add_filter('updraftplus_save_last_backup', __NAMESPACE__ . '\\record_successful_backup');
@@ -56,7 +57,7 @@ add_action('admin_post_upc_change', __NAMESPACE__ . '\\handle_admin');
 
 function settings(): array {
     return wp_parse_args(get_option(SETTINGS, []), [
-        'enabled' => false, 'day' => '7', 'time' => '04:00', 'client' => '',
+        'enabled' => false, 'day' => '7', 'time' => '04:00', 'time_second' => '', 'client' => '',
         'source' => 'any', 'keep' => 0,
     ]);
 }
@@ -278,9 +279,29 @@ function new_job(array $backup, array $connection): array {
     ];
 }
 
-function schedule_due(array $config, \DateTimeImmutable $now, array $state): bool {
-    return $config['enabled'] && ($config['day'] === 'daily' || $config['day'] === $now->format('N')) &&
-        $now->format('H:i') >= $config['time'] && ($state['schedule_date'] ?? '') !== $now->format('Y-m-d');
+function schedule_days($stored): array {
+    // Earlier versions stored a single ISO weekday or the string 'daily'.
+    return 'daily' === $stored ? range(1, count(WEEKDAYS)) : array_map('intval', (array) $stored);
+}
+
+function due_upload_slot(array $config, \DateTimeImmutable $now, array $state): ?string {
+    if (!$config['enabled'] || !in_array((int) $now->format('N'), schedule_days($config['day']), true)) {
+        return null;
+    }
+
+    $time = $now->format('H:i');
+    if ($time < $config['time']) {
+        return null;
+    }
+    $second = $config['time_second'];
+    $date = $now->format('Y-m-d');
+    $slot = $date . ' ' . ($second !== '' && $time >= $second ? $second : $config['time']);
+    $last_slot = $state['schedule_slot'] ?? '';
+    // A run recorded by an earlier version already used today's schedule.
+    if ($last_slot >= $slot || ($last_slot === '' && ($state['schedule_date'] ?? '') === $date)) {
+        return null;
+    }
+    return $slot;
 }
 
 function tick(bool $manual = false): void {
@@ -301,7 +322,7 @@ function tick(bool $manual = false): void {
             return;
         }
 
-        if (!$manual && (!$job || $job['attempts'] >= 5) && schedule_due($config, $now, $state)) {
+        if (!$manual && (!$job || $job['attempts'] >= 5) && ($slot = due_upload_slot($config, $now, $state)) !== null) {
             try {
                 $backup = latest_backup($config['source']);
                 $same_failed_job = $job && $job['id'] === $backup['id'];
@@ -310,6 +331,7 @@ function tick(bool $manual = false): void {
                     $job = new_job($backup, $connection);
                     $state['job'] = $job;
                     $state['schedule_date'] = $now->format('Y-m-d');
+                    $state['schedule_slot'] = $slot;
                     unset($state['schedule_error']);
                     update_option(STATE, $state, false);
                 }
@@ -494,17 +516,31 @@ function handle_admin(): void {
             $config = settings();
             $state = get_option(STATE, []);
             if ('schedule' === $action) {
-                $day = field('day');
+                $enabled = '1' === field('enabled');
+                $submitted = isset($_POST['days']) && is_array($_POST['days']) ? $_POST['days'] : [];
+                $days = array_values(array_filter(range(1, count(WEEKDAYS)), static fn ($day) => '1' === ($submitted[$day] ?? null)));
                 $time = field('time');
+                $second = field('time_second');
                 $source = field('source');
                 $keep = filter_var(field('keep'), FILTER_VALIDATE_INT, ['options' => ['min_range' => 0, 'max_range' => 1000]]);
-                if (!preg_match('/^(daily|[1-7])$/D', $day) || !preg_match('/^(?:[01]\d|2[0-3]):[0-5]\d$/D', $time)
-                    || !array_key_exists($source, source_labels()) || false === $keep) {
-                    throw new \RuntimeException('Kies een geldige dag, tijd, back-upsoort en bewaarlimiet.');
+                if ($enabled && !$days) {
+                    throw new \RuntimeException('Vink minstens één uploaddag aan.');
                 }
-                $config['enabled'] = '1' === field('enabled');
-                $config['day'] = $day;
+                if (!preg_match('/^(?:[01]\d|2[0-3]):[0-5]\d$/D', $time)
+                    || !array_key_exists($source, source_labels()) || false === $keep) {
+                    throw new \RuntimeException('Kies een geldige tijd, back-upsoort en bewaarlimiet.');
+                }
+                if ($second !== '' && (!preg_match('/^(?:[01]\d|2[0-3]):[0-5]\d$/D', $second) || $second <= $time)) {
+                    throw new \RuntimeException('Kies een tweede tijdstip dat later is dan het eerste.');
+                }
+                $config['enabled'] = $enabled;
+                $config['day'] = match (count($days)) {
+                    count(WEEKDAYS) => 'daily',
+                    1 => (string) $days[0],
+                    default => $days,
+                };
                 $config['time'] = $time;
+                $config['time_second'] = $second;
                 $config['source'] = $source;
                 $config['keep'] = $keep;
                 update_option(SETTINGS, $config, false);
@@ -657,13 +693,19 @@ function render(): void {
                         <option value="<?php echo esc_attr($value); ?>" <?php selected($config['source'], $value); ?>><?php echo esc_html($label); ?></option>
                     <?php endforeach; ?>
                 </select></label></p>
+                <fieldset class="upc-schedule-days">
+                    <legend>Uploaddagen</legend>
+                    <div>
+                        <?php $days = schedule_days($config['day']); ?>
+                        <?php foreach (WEEKDAYS as $index => $label) : $day = $index + 1; ?>
+                            <label><input type="checkbox" name="days[<?php echo esc_attr((string) $day); ?>]" value="1" <?php checked(in_array($day, $days, true)); ?>> <?php echo esc_html($label); ?></label>
+                        <?php endforeach; ?>
+                    </div>
+                    <p class="description">Vink alle zeven dagen aan om iedere dag te uploaden.</p>
+                </fieldset>
                 <div class="upc-schedule-time">
-                    <label>Dag <select name="day">
-                    <?php foreach (['daily' => 'Iedere dag', '1' => 'Maandag', '2' => 'Dinsdag', '3' => 'Woensdag', '4' => 'Donderdag', '5' => 'Vrijdag', '6' => 'Zaterdag', '7' => 'Zondag'] as $day => $label) : ?>
-                        <option value="<?php echo esc_attr((string) $day); ?>" <?php selected($config['day'], (string) $day); ?>><?php echo esc_html($label); ?></option>
-                    <?php endforeach; ?>
-                    </select></label>
-                    <label>Tijd <input type="time" name="time" value="<?php echo esc_attr($config['time']); ?>" required></label>
+                    <label>Eerste tijdstip <input type="time" name="time" value="<?php echo esc_attr($config['time']); ?>" required></label>
+                    <label>Tweede tijdstip (optioneel) <input type="time" name="time_second" value="<?php echo esc_attr($config['time_second']); ?>"></label>
                     <span><?php echo esc_html(wp_timezone_string()); ?></span>
                 </div>
                 <p class="upc-field"><label>Herstelpunten bewaren in pCloud <input type="number" min="0" max="1000" step="1" name="keep" value="<?php echo esc_attr((string) $config['keep']); ?>" required></label></p>
