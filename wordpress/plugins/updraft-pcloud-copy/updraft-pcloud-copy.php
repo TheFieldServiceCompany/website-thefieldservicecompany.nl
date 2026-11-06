@@ -1,8 +1,8 @@
 <?php
 /**
- * Plugin Name: Updraft naar pCloud
+ * Plugin Name: TFSC Updraft to PCloud
  * Description: Kopieert lokale UpdraftPlus-back-ups op een ingesteld tijdstip naar pCloud.
- * Version: 0.1.0
+ * Version: 0.1.1
  * Requires at least: 6.5
  * Requires PHP: 8.1
  * License: GPL-2.0-or-later
@@ -13,12 +13,13 @@ defined('ABSPATH') || exit;
 
 const SETTINGS = 'upc_settings';
 const CONNECTION = 'upc_connection';
+const CONNECTION_STATUS = 'upc_connection_status';
 const STATE = 'upc_state';
 const TICK = 'upc_upload_tick';
 const INTERVAL = 'upc_every_minute';
 
 add_filter('cron_schedules', static function ($schedules) {
-    $schedules[INTERVAL] = ['interval' => MINUTE_IN_SECONDS, 'display' => 'Updraft naar pCloud'];
+    $schedules[INTERVAL] = ['interval' => MINUTE_IN_SECONDS, 'display' => 'TFSC Updraft to PCloud'];
     return $schedules;
 });
 
@@ -40,7 +41,7 @@ register_deactivation_hook(__FILE__, static function () {
 
 add_action(TICK, __NAMESPACE__ . '\\tick');
 add_action('admin_menu', static function () {
-    add_management_page('Updraft naar pCloud', 'Updraft naar pCloud', 'manage_options', 'updraft-pcloud-copy', __NAMESPACE__ . '\\render');
+    add_management_page('TFSC Updraft to PCloud', 'TFSC Updraft to PCloud', 'manage_options', 'updraft-pcloud-copy', __NAMESPACE__ . '\\render');
 });
 add_action('admin_post_upc_change', __NAMESPACE__ . '\\handle_admin');
 
@@ -76,7 +77,7 @@ function api(string $region, string $method, array $body, string $token = '', ar
         'headers' => $token ? ['Authorization' => 'Bearer ' . $token] : [],
     ]);
     if (is_wp_error($response)) {
-        throw new \RuntimeException('Cloud86 kon de pCloud-API niet bereiken.');
+        throw new \RuntimeException('WordPress could not reach the pCloud API.');
     }
     return api_result(wp_remote_retrieve_response_code($response), wp_remote_retrieve_body($response), $method, $allow);
 }
@@ -84,11 +85,11 @@ function api(string $region, string $method, array $body, string $token = '', ar
 function api_result(int $http, string $body, string $method, array $allow = []): array {
     $data = json_decode($body, true);
     if ($http < 200 || $http >= 300 || !is_array($data) || !isset($data['result'])) {
-        throw new \RuntimeException(sprintf('Ongeldig antwoord van pCloud bij %s (HTTP %d).', $method, $http));
+        throw new \RuntimeException(sprintf('Invalid response from pCloud for %s (HTTP %d).', $method, $http));
     }
     $result = (int) $data['result'];
     if ($result && !in_array($result, $allow, true)) {
-        throw new \RuntimeException(sprintf('pCloud weigerde %s (code %d).', $method, $result));
+        throw new \RuntimeException(sprintf('pCloud rejected %s (code %d).', $method, $result));
     }
     return $data;
 }
@@ -98,23 +99,34 @@ function connect(array $config, array $state): void {
     $code = field('code');
     $secret = field('secret');
     if (!in_array($region, ['EU', 'US'], true) || !$config['client'] || !$code || !$secret) {
-        throw new \RuntimeException('Vul de regio, pCloud-appsleutel, het appgeheim en de eenmalige code in.');
+        throw new \RuntimeException('Choose the storage region and enter the Client ID, Client Secret and Access Code.');
     }
     $data = api($region, 'oauth2_token', [
         'client_id' => $config['client'], 'client_secret' => $secret, 'code' => $code,
     ]);
     $token = $data['access_token'] ?? '';
-    if (!is_string($token) || !preg_match('/^[A-Za-z0-9._~+\/=:-]+$/D', $token) || empty($data['uid'])) {
-        throw new \RuntimeException('pCloud gaf geen bruikbare toegangssleutel terug.');
+    if (!is_string($token) || !preg_match('/^[A-Za-z0-9._~+\/=:-]+$/D', $token)) {
+        throw new \RuntimeException('The pCloud response did not contain a valid access token.');
     }
-    $account = $region . ':' . $data['uid'];
+    // The pCloud reference uses uid, while its SDK example uses userid.
+    $id_options = ['options' => ['min_range' => 1]];
+    $user_id = filter_var($data['uid'] ?? null, FILTER_VALIDATE_INT, $id_options)
+        ?: filter_var($data['userid'] ?? null, FILTER_VALIDATE_INT, $id_options);
+    if (false === $user_id) {
+        $profile = api($region, 'userinfo', [], $token);
+        $user_id = filter_var($profile['userid'] ?? null, FILTER_VALIDATE_INT, $id_options);
+        if (false === $user_id) {
+            throw new \RuntimeException('pCloud issued an access token, but the account ID could not be verified.');
+        }
+    }
+    $account = $region . ':' . $user_id;
     if (!empty($state['job']) && $state['job']['account'] !== $account) {
-        throw new \RuntimeException('Er staat nog een upload klaar voor een ander pCloud-account.');
+        throw new \RuntimeException('An upload is still queued for a different pCloud account.');
     }
     $iv = random_bytes(12);
     $ciphertext = openssl_encrypt($token, 'aes-256-gcm', secret_key(), OPENSSL_RAW_DATA, $iv, $tag);
     if (false === $ciphertext) {
-        throw new \RuntimeException('De toegangssleutel kon niet worden versleuteld.');
+        throw new \RuntimeException('The pCloud access token could not be encrypted.');
     }
     update_option(CONNECTION, [
         'account' => $account, 'region' => $region, 'sealed' => base64_encode($iv . $tag . $ciphertext),
@@ -375,13 +387,20 @@ function handle_admin(): void {
                 update_option(SETTINGS, $config, false);
             } elseif ('app' === $action) {
                 if (!preg_match('/^[A-Za-z0-9_-]+$/D', field('client'))) {
-                    throw new \RuntimeException('Vul de appsleutel uit pCloud My Apps in.');
+                    throw new \RuntimeException('Enter the Client ID from pCloud My Apps.');
                 }
                 $config['client'] = field('client');
                 update_option(SETTINGS, $config, false);
             } elseif ('connect' === $action) {
-                connect($config, $state);
-                $notice = 'pCloud is gekoppeld.';
+                $attempt = ['time' => time(), 'success' => false, 'message' => ''];
+                try {
+                    connect($config, $state);
+                    $attempt['success'] = true;
+                } catch (\RuntimeException $error) {
+                    $attempt['message'] = $error->getMessage();
+                }
+                update_option(CONNECTION_STATUS, $attempt, false);
+                $notice = '';
             } elseif (in_array($action, ['queue', 'retry'], true)) {
                 $connection = get_option(CONNECTION, []);
                 token_from($connection);
@@ -416,6 +435,7 @@ function render(): void {
     $config = settings();
     $state = get_option(STATE, []);
     $connection = get_option(CONNECTION, []);
+    $connection_status = get_option(CONNECTION_STATUS, []);
     $job = $state['job'] ?? null;
     $done = $state['done'][$connection['account'] ?? ''] ?? null;
     $notice_key = 'upc_notice_' . get_current_user_id();
@@ -423,7 +443,7 @@ function render(): void {
     delete_transient($notice_key);
     ?>
     <div class="wrap">
-        <h1>Updraft naar pCloud</h1>
+        <h1>TFSC Updraft to PCloud</h1>
         <?php if ($notice) : ?><div class="notice notice-info"><p><?php echo esc_html($notice); ?></p></div><?php endif; ?>
         <h2>Uploadschema</h2>
         <?php form_start('schedule'); ?>
@@ -437,23 +457,29 @@ function render(): void {
         <p>Plan deze tijd na de UpdraftPlus-back-up. WordPress start de upload rond of na de gekozen tijd.</p>
         <?php submit_button('Schema opslaan', 'primary'); ?></form>
 
-        <h2>pCloud koppelen</h2>
-        <p><?php echo $connection ? 'Gekoppeld (' . esc_html($connection['region']) . ').' : 'Nog geen pCloud-account gekoppeld.'; ?></p>
-        <p>Maak een eigen app in <a href="https://docs.pcloud.com/my_apps/" target="_blank" rel="noopener noreferrer">pCloud My Apps</a>. Kopieer de appsleutel van die app.</p>
+        <h2>pCloud connection</h2>
+        <p><strong><?php echo $connection ? 'Connected (' . esc_html($connection['region']) . ')' : 'Not connected'; ?></strong></p>
+        <?php if ($connection_status) : ?>
+            <p>Last connection attempt <?php echo esc_html(wp_date('d-m-Y H:i', $connection_status['time'])); ?>.
+            <strong><?php echo $connection_status['success'] ? 'Succeeded' : 'Failed'; ?></strong>
+            <?php if (!$connection_status['success']) : ?>. <?php echo esc_html($connection_status['message']); ?><?php endif; ?></p>
+        <?php endif; ?>
+        <p>Open your approved app in <a href="https://docs.pcloud.com/my_apps/" target="_blank" rel="noopener noreferrer">pCloud My Apps</a> to find its Client ID and Client Secret.</p>
         <?php form_start('app'); ?>
-        <p><label>Appsleutel (Client ID) <input type="text" name="client" value="<?php echo esc_attr($config['client']); ?>" required></label></p>
-        <?php submit_button('Appsleutel opslaan', 'secondary'); ?></form>
+        <p><label>Client ID <input type="text" name="client" value="<?php echo esc_attr($config['client']); ?>" required></label></p>
+        <?php submit_button('Save Client ID', 'secondary'); ?></form>
         <?php if ($config['client']) : ?>
             <?php $auth = add_query_arg(['client_id' => $config['client'], 'response_type' => 'code'], 'https://my.pcloud.com/oauth2/authorize'); ?>
-            <p><a href="<?php echo esc_url($auth); ?>" target="_blank" rel="noopener noreferrer">Geef toegang in pCloud en haal de eenmalige code op</a>.</p>
+            <p><a href="<?php echo esc_url($auth); ?>" target="_blank" rel="noopener noreferrer">Authorize in pCloud and get an Access Code</a>.</p>
             <?php form_start('connect'); ?>
-            <p><label>Opslagregio <select name="region">
-                <option value="EU" <?php selected($connection['region'] ?? 'EU', 'EU'); ?>>Europa</option>
-                <option value="US" <?php selected($connection['region'] ?? 'EU', 'US'); ?>>Verenigde Staten</option>
+            <p><label>Storage region <select name="region">
+                <option value="EU" <?php selected($connection['region'] ?? 'EU', 'EU'); ?>>Europe (eapi.pcloud.com)</option>
+                <option value="US" <?php selected($connection['region'] ?? 'EU', 'US'); ?>>United States (api.pcloud.com)</option>
             </select></label></p>
-            <p><label>Appgeheim <input type="password" name="secret" autocomplete="off" required></label></p>
-            <p><label>Eenmalige code <input type="password" name="code" autocomplete="off" required></label></p>
-            <?php submit_button('pCloud koppelen', 'secondary'); ?></form>
+            <p><label>Client Secret <input type="password" name="secret" autocomplete="off" required></label></p>
+            <p><label>Access Code <input type="password" name="code" autocomplete="off" required></label></p>
+            <p>Use the Host Name shown by pCloud to select the storage region. Copy the Access Code from the authorization page.</p>
+            <?php submit_button('Connect to pCloud', 'secondary'); ?></form>
         <?php endif; ?>
 
         <h2>Uploadstatus</h2>

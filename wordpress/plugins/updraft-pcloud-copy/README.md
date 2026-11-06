@@ -1,14 +1,14 @@
-# Updraft naar pCloud 0.1.0
+# TFSC Updraft to PCloud 0.1.1
 
 De plug-in kopieert de laatst geslaagde lokale UpdraftPlus-back-up naar pCloud. Je kiest een dag en tijd of laat WordPress het elke dag proberen. UpdraftPlus blijft de archieven maken en terugzetten.
 
 ## Installeren
 
 1. Open **WordPress → Plugins → Nieuwe plugin → Plugin uploaden**. Kies de ZIP en activeer de plug-in.
-2. Open **Gereedschap → Updraft naar pCloud**.
+2. Open **Gereedschap → TFSC Updraft to PCloud**.
 3. Ga naar [pCloud My Apps](https://docs.pcloud.com/my_apps/), log in en maak een app voor deze koppeling. Bewaar de appgegevens privé.
-4. Sla de appsleutel (Client ID) op in WordPress. Open daarna de link **Geef toegang in pCloud en haal de eenmalige code op**. Geef toestemming en kopieer de code die pCloud toont.
-5. Kies de opslagregio van je account en vul het appgeheim en de eenmalige code in. Klik op **pCloud koppelen**. WordPress bewaart de verkregen toegangssleutel versleuteld met de sleutels van je installatie. Na wijziging van die WordPress-sleutels moet je pCloud opnieuw koppelen.
+4. Vul de **Client ID** in en klik op **Save Client ID**. Klik daarna op **Authorize in pCloud and get an Access Code**. Geef toestemming en kopieer de **Access Code** die pCloud toont.
+5. Kies bij **Storage region** de regio die overeenkomt met **Host Name** op de pCloud-pagina. Vul de **Client Secret** uit My Apps en de **Access Code** in. Klik op **Connect to pCloud**. Het scherm toont de verbindingsstatus en het resultaat van de laatste poging. WordPress bewaart de verkregen toegangssleutel versleuteld met de sleutels van je installatie. Na wijziging van die WordPress-sleutels moet je pCloud opnieuw koppelen.
 
 De eerste versie is bedoeld voor een losse WordPress-installatie met WordPress 6.5 of hoger, PHP 8.1 of hoger en de PHP-extensies cURL en OpenSSL. Gebruik een HTTPS-verbinding voor je WordPress-beheer.
 
