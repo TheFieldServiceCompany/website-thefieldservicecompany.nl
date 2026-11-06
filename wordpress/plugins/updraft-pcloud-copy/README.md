@@ -1,4 +1,4 @@
-# TFSC Updraft to PCloud 0.2.3
+# TFSC Updraft to PCloud 0.2.4
 
 De plug-in kopieert geslaagde lokale UpdraftPlus-back-ups naar pCloud en kan ze terughalen. UpdraftPlus bepaalt de inhoud van de archieven, maakt de back-ups en voert het websiteherstel uit.
 
@@ -23,7 +23,9 @@ Stel in UpdraftPlus de eigen back-upplanning en lokale bewaartermijn in. Kies ve
 
 Vink bij **Uploaddagen** de gewenste weekdagen aan. Vink alle zeven aan voor een dagelijkse upload. Kies één tijdstip of voeg een tweede, later tijdstip toe. Dezelfde tijden en back-upsoort gelden op alle gekozen dagen. Plan de tijden na de UpdraftPlus-back-ups, in de WordPress-tijdzone. Per tijdstip kijkt de plug-in naar de nieuwste passende set en slaat die over als dit de laatst bevestigde upload is. Het startmoment hangt af van de geplande taken van de hosting. Een mislukte overdracht krijgt maximaal vijf automatische pogingen per onderdeel, met vijf minuten wachttijd.
 
-De pCloud-bewaarlimiet staat standaard op **0**, wat alles bewaart. Een ingestelde limiet bewaart de laatst geüploade herstelpunten die deze installatie sinds 0.2.0 heeft geregistreerd. Na een geslaagde upload kan de plug-in oudere geregistreerde mappen opruimen zodra hij de verwachte inhoud heeft gecontroleerd. Bij een wijziging aan de verwachte mapinhoud stopt het opruimen. De lokale UpdraftPlus-back-ups worden door UpdraftPlus beheerd.
+Kies onder **Bewaartermijnen in pCloud** per soort een positief aantal dagen, weken, maanden of jaren. **Geen vervaldatum** bewaart die soort onbeperkt. De termijn begint bij de bevestigde upload. Verlopen herstelpunten worden na een nieuwe upload en bij de dagelijkse controle opgeruimd. Het nieuwste herstelpunt per soort blijft behouden. De plug-in controleert de map en voltooiingslijst van de verlopen kopie en de nieuwere kopie voordat hij opruimt. Als de nieuwere kopie ontbreekt, stopt het opruimen.
+
+De bestaande gezamenlijke limiet op aantal blijft gelden totdat je afzonderlijke termijnen opslaat. Je kunt de gezamenlijke limiet later weer kiezen. Daarmee vervang je alle afzonderlijke termijnen. Alleen door deze installatie beheerde pCloud-kopieën vallen onder de regels. UpdraftPlus beheert de lokale back-ups.
 
 ## Terughalen
 

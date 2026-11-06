@@ -2,7 +2,7 @@
 /**
  * Plugin Name: TFSC Updraft to PCloud
  * Description: Kopieert lokale UpdraftPlus-back-ups op een ingesteld tijdstip naar pCloud.
- * Version: 0.2.3
+ * Version: 0.2.4
  * Requires at least: 6.5
  * Requires PHP: 8.1
  * License: GPL-2.0-or-later
@@ -49,7 +49,7 @@ add_action('admin_menu', static function () {
 });
 add_action('admin_enqueue_scripts', static function ($hook) {
     if ('tools_page_updraft-pcloud-copy' === $hook) {
-        wp_enqueue_style('upc-admin', plugins_url('admin.css', __FILE__), [], '0.2.3');
+        wp_enqueue_style('upc-admin', plugins_url('admin.css', __FILE__), [], '0.2.4');
     }
 });
 add_filter('updraftplus_save_last_backup', __NAMESPACE__ . '\\record_successful_backup');
@@ -58,7 +58,7 @@ add_action('admin_post_upc_change', __NAMESPACE__ . '\\handle_admin');
 function settings(): array {
     return wp_parse_args(get_option(SETTINGS, []), [
         'enabled' => false, 'day' => '7', 'time' => '04:00', 'time_second' => '', 'client' => '',
-        'source' => 'any', 'keep' => 0,
+        'source' => 'any', 'keep' => 0, 'retention' => [],
     ]);
 }
 
@@ -342,8 +342,8 @@ function tick(bool $manual = false): void {
         }
 
         if (!$job || $job['attempts'] >= 5 || (!$manual && $job['next'] > time())) {
-            if (!$manual && !$job && !empty($state['retention_pending'])) {
-                apply_retention($state, $connection, (int) $config['keep']);
+            if (!$manual && (!$job || $job['attempts'] >= 5)) {
+                apply_retention($state, $connection, $config, $now);
             }
             return;
         }
@@ -365,6 +365,7 @@ function tick(bool $manual = false): void {
                 ];
                 $state['managed'][$connection['account']][$job['folder_id']] = [
                     'name' => $job['folder'],
+                    'type' => $job['type'] ?? null,
                     'parent_id' => $job['parent_id'],
                     'manifest' => $job['manifest'],
                     'files' => array_merge(array_keys($job['files']), ['VOLTOOID.json']),
@@ -385,7 +386,7 @@ function tick(bool $manual = false): void {
         }
         update_option(STATE, $state, false);
         if (!isset($state['job']) && !empty($state['retention_pending'])) {
-            apply_retention($state, $connection, (int) $config['keep']);
+            apply_retention($state, $connection, $config, $now);
         }
     }, $manual);
 }
@@ -522,13 +523,12 @@ function handle_admin(): void {
                 $time = field('time');
                 $second = field('time_second');
                 $source = field('source');
-                $keep = filter_var(field('keep'), FILTER_VALIDATE_INT, ['options' => ['min_range' => 0, 'max_range' => 1000]]);
                 if ($enabled && !$days) {
                     throw new \RuntimeException('Vink minstens één uploaddag aan.');
                 }
                 if (!preg_match('/^(?:[01]\d|2[0-3]):[0-5]\d$/D', $time)
-                    || !array_key_exists($source, source_labels()) || false === $keep) {
-                    throw new \RuntimeException('Kies een geldige tijd, back-upsoort en bewaarlimiet.');
+                    || !array_key_exists($source, source_labels())) {
+                    throw new \RuntimeException('Kies een geldige tijd en back-upsoort.');
                 }
                 if ($second !== '' && (!preg_match('/^(?:[01]\d|2[0-3]):[0-5]\d$/D', $second) || $second <= $time)) {
                     throw new \RuntimeException('Kies een tweede tijdstip dat later is dan het eerste.');
@@ -542,8 +542,26 @@ function handle_admin(): void {
                 $config['time'] = $time;
                 $config['time_second'] = $second;
                 $config['source'] = $source;
-                $config['keep'] = $keep;
                 update_option(SETTINGS, $config, false);
+            } elseif ('retention' === $action || 'retention_count' === $action) {
+                if ('retention_count' === $action) {
+                    $keep = filter_var(field('keep'), FILTER_VALIDATE_INT, ['options' => ['min_range' => 0, 'max_range' => 1000]]);
+                    if (false === $keep) {
+                        throw new \RuntimeException('Kies een bewaarlimiet van 0 tot en met 1000.');
+                    }
+                    $config['keep'] = $keep;
+                    $config['retention'] = [];
+                } else {
+                    $config['retention'] = read_retention_rules();
+                    $config['keep'] = 0;
+                }
+                update_option(SETTINGS, $config, false);
+                $account = get_option(CONNECTION, [])['account'] ?? '';
+                if ($account !== '') {
+                    $state['retention_pending'] = $account;
+                    update_option(STATE, $state, false);
+                }
+                $notice = 'Bewaarinstellingen opgeslagen.';
             } elseif ('app' === $action) {
                 if (!preg_match('/^[A-Za-z0-9_-]+$/D', field('client'))) {
                     throw new \RuntimeException('Enter the Client ID from pCloud My Apps.');
@@ -591,7 +609,33 @@ function handle_admin(): void {
 }
 
 function source_labels(): array {
-    return ['any' => 'Elke geslaagde back-up', 'full' => 'Bestanden en database', 'database' => 'Alleen database', 'files' => 'Alleen bestanden'];
+    return ['any' => 'Elke geslaagde back-up'] + retention_labels();
+}
+
+function retention_labels(): array {
+    return ['database' => 'Alleen database', 'full' => 'Bestanden en database', 'files' => 'Alleen bestanden'];
+}
+
+function retention_units(): array {
+    return ['none' => 'Geen vervaldatum', 'days' => 'Dagen', 'weeks' => 'Weken', 'months' => 'Maanden', 'years' => 'Jaren'];
+}
+
+function read_retention_rules(): array {
+    $posted = isset($_POST['retention']) && is_array($_POST['retention']) ? $_POST['retention'] : [];
+    $rules = [];
+    foreach (retention_labels() as $type => $label) {
+        $unit = $posted[$type]['unit'] ?? '';
+        if ('none' === $unit) {
+            $rules[$type] = null;
+            continue;
+        }
+        $amount = filter_var($posted[$type]['amount'] ?? '', FILTER_VALIDATE_INT, ['options' => ['min_range' => 1, 'max_range' => 1000]]);
+        if (!is_string($unit) || !isset(retention_units()[$unit]) || false === $amount) {
+            throw new \RuntimeException(sprintf('Kies een eenheid en vul een aantal van 1 tot en met 1000 in bij %s.', $label));
+        }
+        $rules[$type] = ['unit' => $unit, 'amount' => $amount];
+    }
+    return $rules;
 }
 
 function form_start(string $operation): void {
@@ -685,7 +729,7 @@ function render(): void {
                 </section>
             </div>
             <section class="upc-panel">
-                <h2>Automatisch uploaden en bewaren</h2>
+                <h2>Automatisch uploaden</h2>
                 <?php form_start('schedule'); ?>
                 <p><label><input type="checkbox" name="enabled" value="1" <?php checked($config['enabled']); ?>> Automatisch uploaden</label></p>
                 <p class="upc-field"><label>Welke back-ups <select name="source">
@@ -708,11 +752,38 @@ function render(): void {
                     <label>Tweede tijdstip (optioneel) <input type="time" name="time_second" value="<?php echo esc_attr($config['time_second']); ?>"></label>
                     <span><?php echo esc_html(wp_timezone_string()); ?></span>
                 </div>
-                <p class="upc-field"><label>Herstelpunten bewaren in pCloud <input type="number" min="0" max="1000" step="1" name="keep" value="<?php echo esc_attr((string) $config['keep']); ?>" required></label></p>
-                <p>0 bewaart alles. Met een limiet ruimt de plug-in na een nieuwe geslaagde upload oudere, door deze installatie beheerde pCloud-kopieën op. Stel het aantal lokale back-ups apart in UpdraftPlus in.</p>
-                <?php submit_button('Schema opslaan', 'primary'); ?></form>
+                <?php submit_button('Schema opslaan', 'primary', 'upc_save_schedule'); ?></form>
                 <?php if (!empty($state['schedule_error'])) : ?><p><?php echo esc_html($state['schedule_error']); ?></p><?php endif; ?>
-                <?php if (!empty($state['retention_error'])) : ?><p><?php echo esc_html($state['retention_error']); ?></p><?php endif; ?>
+            </section>
+            <section class="upc-panel">
+                <h2>Bewaartermijnen in pCloud</h2>
+                <p>De termijn gaat in bij de bevestigde upload. Het nieuwste herstelpunt van elke soort blijft bewaard.</p>
+                <?php if (!$config['retention']) : ?>
+                    <p><?php echo $config['keep'] ? 'De gezamenlijke limiet is actief totdat je termijnen opslaat.' : 'Er is nog geen automatische opruiming ingesteld. Hieronder staat een voorstel.'; ?></p>
+                <?php endif; ?>
+                <?php form_start('retention'); ?>
+                <?php $rules = $config['retention'] ?: ['database' => ['amount' => 30, 'unit' => 'days'], 'full' => ['amount' => 8, 'unit' => 'weeks']]; ?>
+                <?php foreach (retention_labels() as $type => $label) : ?>
+                    <fieldset class="upc-retention-rule">
+                        <legend><?php echo esc_html($label); ?></legend>
+                        <label>Aantal <input type="number" min="1" max="1000" step="1" name="retention[<?php echo esc_attr($type); ?>][amount]" value="<?php echo esc_attr((string) ($rules[$type]['amount'] ?? '')); ?>"></label>
+                        <label>Eenheid <select name="retention[<?php echo esc_attr($type); ?>][unit]">
+                            <?php foreach (retention_units() as $unit => $name) : ?>
+                                <option value="<?php echo esc_attr($unit); ?>" <?php selected($rules[$type]['unit'] ?? 'none', $unit); ?>><?php echo esc_html($name); ?></option>
+                            <?php endforeach; ?>
+                        </select></label>
+                    </fieldset>
+                <?php endforeach; ?>
+                <p>Na opslaan worden verlopen pCloud-kopieën opgeruimd. Lokale back-ups worden beheerd door UpdraftPlus.</p>
+                <?php submit_button('Bewaartermijnen opslaan', 'primary', 'upc_save_retention'); ?></form>
+                <?php if (!empty($state['retention_error'])) : ?><p role="alert"><?php echo esc_html($state['retention_error']); ?></p><?php endif; ?>
+                <details class="upc-retention-count">
+                    <summary>Gezamenlijke limiet op aantal</summary>
+                    <p>Deze instelling vervangt alle termijnen hierboven. Met 0 vervalt de gezamenlijke limiet.</p>
+                    <?php form_start('retention_count'); ?>
+                    <p><label>Aantal herstelpunten <input type="number" min="0" max="1000" step="1" name="keep" value="<?php echo esc_attr((string) $config['keep']); ?>" required></label></p>
+                    <?php submit_button('Gezamenlijke limiet opslaan', 'secondary', 'upc_save_count'); ?></form>
+                </details>
             </section>
         <?php elseif ('upload' === $tab) : ?>
             <section class="upc-panel">

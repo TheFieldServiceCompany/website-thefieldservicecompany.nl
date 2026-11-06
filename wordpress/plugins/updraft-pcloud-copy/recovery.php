@@ -205,36 +205,103 @@ function clean_recovery_stage(array $job): void {
     rmdir($stage);
 }
 
-function prune_managed_backups(array $connection, array &$managed, int $keep): void {
-    if ($keep < 1 || count($managed) <= $keep) {
-        return;
+function managed_backup_type(array $entry): ?string {
+    $type = $entry['type'] ?? null;
+    if (in_array($type, ['database', 'full', 'files'], true)) {
+        return $type;
+    }
+    // Existing uploads recorded their archive names before storing the type.
+    $nonce = substr($entry['name'], -12);
+    $archives = array_diff($entry['files'], ['VOLTOOID.json']);
+    $has_database = false;
+    $has_files = false;
+    foreach ($archives as $name) {
+        if (!valid_archive_name($name, $nonce)) {
+            return null;
+        }
+        if (preg_match('/-db\.gz(?:\.crypt)?$/Di', $name)) {
+            $has_database = true;
+        } else {
+            $has_files = true;
+        }
+    }
+    return $has_database ? ($has_files ? 'full' : 'database') : ($has_files ? 'files' : null);
+}
+
+function retention_expiry(\DateTimeImmutable $uploaded, array $rule): \DateTimeImmutable {
+    $amount = $rule['amount'];
+    $unit = $rule['unit'];
+    if ('days' === $unit || 'weeks' === $unit) {
+        return $uploaded->modify("+$amount $unit");
+    }
+
+    $months = 'years' === $unit ? $amount * 12 : $amount;
+    $month = $uploaded->modify('first day of this month')->modify("+$months months");
+    $day = min((int) $uploaded->format('j'), (int) $month->format('t'));
+    return $month->setDate((int) $month->format('Y'), (int) $month->format('n'), $day);
+}
+
+function retention_targets(array $managed, int $keep, array $rules, \DateTimeImmutable $now): array {
+    if (!$rules && ($keep < 1 || count($managed) <= $keep)) {
+        return [];
     }
     uasort($managed, static fn ($left, $right) =>
         ($right['uploaded_at'] <=> $left['uploaded_at']) ?: strcmp($right['name'], $left['name']));
-    foreach (array_slice($managed, $keep, null, true) as $id => $entry) {
-        $folder = cloud_folder($connection, (int) $id, false, [2005]);
-        if (!$folder) {
+    if (!$rules) {
+        return array_fill_keys(array_keys(array_slice($managed, $keep, null, true)), null);
+    }
+
+    $latest = [];
+    $targets = [];
+    foreach ($managed as $id => $entry) {
+        $type = managed_backup_type($entry);
+        if ($type === null || !isset($rules[$type]) || $entry['uploaded_at'] < 1) {
+            continue;
+        }
+        if (!isset($latest[$type])) {
+            $latest[$type] = $id;
+        } elseif (retention_expiry($now->setTimestamp($entry['uploaded_at']), $rules[$type]) <= $now) {
+            $targets[$id] = $latest[$type];
+        }
+    }
+    return array_reverse($targets, true);
+}
+
+function verify_managed_folder(array $connection, int $id, array $entry): bool {
+    $folder = cloud_folder($connection, $id, false, [2005]);
+    if (!$folder) {
+        return false;
+    }
+    $actual = cloud_children($folder);
+    $expected = $entry['files'];
+    $names = array_keys($actual);
+    sort($expected);
+    sort($names);
+    if (($folder['name'] ?? '') !== $entry['name'] ||
+        (int) ($folder['parentfolderid'] ?? 0) !== $entry['parent_id'] ||
+        empty($folder['ismine']) || !empty($folder['isshared']) || $expected !== $names) {
+        throw new \RuntimeException('Opruimen gestopt. Een pCloud-map wijkt af van de verwachte inhoud.');
+    }
+    foreach ($actual as $child) {
+        if (!empty($child['isfolder']) || !empty($child['isshared']) || empty($child['ismine'])) {
+            throw new \RuntimeException('Opruimen gestopt. Een pCloud-map bevat gedeelde of extra inhoud.');
+        }
+    }
+    $marker = api($connection['region'], 'checksumfile', ['fileid' => (int) $actual['VOLTOOID.json']['fileid']], token_from($connection));
+    if (!hash_equals($entry['manifest'], (string) ($marker['sha1'] ?? ''))) {
+        throw new \RuntimeException('Opruimen gestopt. De voltooiingslijst van een pCloud-map is gewijzigd.');
+    }
+    return true;
+}
+
+function prune_managed_backups(array $connection, array &$managed, array $targets): void {
+    foreach ($targets as $id => $protected) {
+        if (!verify_managed_folder($connection, (int) $id, $managed[$id])) {
             unset($managed[$id]);
             continue;
         }
-        $actual = cloud_children($folder);
-        $expected = $entry['files'];
-        $names = array_keys($actual);
-        sort($expected);
-        sort($names);
-        if (($folder['name'] ?? '') !== $entry['name'] ||
-            (int) ($folder['parentfolderid'] ?? 0) !== $entry['parent_id'] ||
-            empty($folder['ismine']) || !empty($folder['isshared']) || $expected !== $names) {
-            throw new \RuntimeException('Bewaarlimiet niet toegepast. Een oude pCloud-map wijkt af van de verwachte inhoud.');
-        }
-        foreach ($actual as $child) {
-            if (!empty($child['isfolder']) || !empty($child['isshared']) || empty($child['ismine'])) {
-                throw new \RuntimeException('Bewaarlimiet niet toegepast. Een oude pCloud-map bevat gedeelde of extra inhoud.');
-            }
-        }
-        $marker = api($connection['region'], 'checksumfile', ['fileid' => (int) $actual['VOLTOOID.json']['fileid']], token_from($connection));
-        if (!hash_equals($entry['manifest'], (string) ($marker['sha1'] ?? ''))) {
-            throw new \RuntimeException('Bewaarlimiet niet toegepast. De voltooiingslijst van een oude map is gewijzigd.');
+        if ($protected !== null && !verify_managed_folder($connection, (int) $protected, $managed[$protected])) {
+            throw new \RuntimeException('Opruimen gestopt. Het nieuwste herstelpunt van deze soort ontbreekt in pCloud.');
         }
         api($connection['region'], 'deletefolderrecursive', ['folderid' => (int) $id], token_from($connection), [2005]);
         unset($managed[$id]);
@@ -310,24 +377,30 @@ function process_recovery(array $state, array $job, array $connection): void {
     update_option(STATE, $state, false);
 }
 
-function apply_retention(array $state, array $connection, int $keep): void {
+function apply_retention(array $state, array $connection, array $config, \DateTimeImmutable $now): void {
     $account = $connection['account'];
-    if ($state['retention_pending'] !== $account) {
+    $today = $now->format('Y-m-d');
+    $pending = ($state['retention_pending'] ?? '') === $account;
+    $due = array_filter($config['retention']) && ($state['retention_date'][$account] ?? '') !== $today;
+    if ((!$pending && !$due) || !empty($state['recovery'])) {
         return;
     }
     $managed = $state['managed'][$account] ?? [];
+    $previous_count = count($managed);
+    $targets = retention_targets($managed, (int) $config['keep'], $config['retention'], $now);
+    unset($state['retention_pending']);
     try {
-        prune_managed_backups($connection, $managed, $keep);
+        prune_managed_backups($connection, $managed, $targets);
         unset($state['retention_error']);
-        if ($keep < 1 || count($managed) <= $keep) {
-            unset($state['retention_pending']);
+        if (array_intersect_key($targets, $managed)) {
+            $state['retention_pending'] = $account;
         }
     } catch (\RuntimeException $error) {
         $state['retention_error'] = $error->getMessage();
-        unset($state['retention_pending']);
     }
+    $state['retention_date'][$account] = $today;
     $state['managed'][$account] = $managed;
-    if (isset($state['catalog'])) {
+    if ($pending || count($managed) !== $previous_count) {
         unset($state['catalog']);
     }
     update_option(STATE, $state, false);
