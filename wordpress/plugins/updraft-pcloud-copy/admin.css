@@ -1,0 +1,90 @@
+.upc-admin {
+    max-width: 900px;
+}
+
+.upc-admin .upc-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin: 18px 0;
+}
+
+.upc-admin .upc-tabs .nav-tab {
+    float: none;
+    margin: 0 0 -1px;
+}
+
+.upc-admin .upc-panel {
+    box-sizing: border-box;
+    margin: 0 0 14px;
+    padding: 16px 20px;
+    border: 1px solid #c3c4c7;
+    background: #fff;
+}
+
+.upc-admin .upc-overview {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.upc-admin .upc-panel h2 {
+    margin: 0 0 8px;
+}
+
+.upc-admin .upc-panel > :last-child,
+.upc-admin .upc-panel form > :last-child {
+    margin-bottom: 0;
+}
+
+.upc-admin .upc-connection summary {
+    cursor: pointer;
+}
+
+.upc-admin .upc-field label,
+.upc-admin .upc-schedule-time label {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    font-weight: 600;
+}
+
+.upc-admin .upc-panel select,
+.upc-admin .upc-panel input:not([type="checkbox"], [type="hidden"]) {
+    max-width: 100%;
+    font-weight: 400;
+}
+
+.upc-admin .upc-schedule-time {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 8px 16px;
+}
+
+.upc-admin .upc-schedule-time span {
+    padding-bottom: 5px;
+}
+
+.upc-admin code {
+    overflow-wrap: anywhere;
+}
+
+.upc-admin .upc-note {
+    color: #50575e;
+}
+
+@media screen and (max-width: 782px) {
+    .upc-admin .upc-overview {
+        display: block;
+    }
+
+    .upc-admin .upc-panel {
+        padding: 12px 14px;
+    }
+
+    .upc-admin .upc-tabs .nav-tab {
+        padding-inline: 9px;
+    }
+}
