@@ -116,7 +116,8 @@
 }
 
 .upc-admin .upc-retention-rule input,
-.upc-admin .upc-retention-count input {
+.upc-admin .upc-retention-count input,
+.upc-admin input[name="local_days"] {
     width: 5em;
 }
 

@@ -1,4 +1,4 @@
-# TFSC Updraft to PCloud 0.2.4
+# TFSC Updraft to PCloud 0.2.5
 
 De plug-in kopieert geslaagde lokale UpdraftPlus-back-ups naar pCloud en kan ze terughalen. UpdraftPlus bepaalt de inhoud van de archieven, maakt de back-ups en voert het websiteherstel uit.
 
@@ -25,7 +25,11 @@ Vink bij **Uploaddagen** de gewenste weekdagen aan. Vink alle zeven aan voor een
 
 Kies onder **Bewaartermijnen in pCloud** per soort een positief aantal dagen, weken, maanden of jaren. **Geen vervaldatum** bewaart die soort onbeperkt. De termijn begint bij de bevestigde upload. Verlopen herstelpunten worden na een nieuwe upload en bij de dagelijkse controle opgeruimd. Het nieuwste herstelpunt per soort blijft behouden. De plug-in controleert de map en voltooiingslijst van de verlopen kopie en de nieuwere kopie voordat hij opruimt. Als de nieuwere kopie ontbreekt, stopt het opruimen.
 
-De bestaande gezamenlijke limiet op aantal blijft gelden totdat je afzonderlijke termijnen opslaat. Je kunt de gezamenlijke limiet later weer kiezen. Daarmee vervang je alle afzonderlijke termijnen. Alleen door deze installatie beheerde pCloud-kopieën vallen onder de regels. UpdraftPlus beheert de lokale back-ups.
+De bestaande gezamenlijke limiet op aantal blijft gelden totdat je afzonderlijke termijnen opslaat. Je kunt de gezamenlijke limiet later weer kiezen. Daarmee vervang je alle afzonderlijke termijnen. Alleen door deze installatie beheerde pCloud-kopieën vallen onder de regels.
+
+## Lokale bewaartermijn
+
+Vul bij **Lokale back-ups** het aantal dagen in. Met 0 staat deze regel uit. De plug-in controleert de UpdraftPlus-map wanneer de pCloud-koppeling actief is. Hij ruimt verlopen lokale archieven van geregistreerde back-ups op. Het nieuwste complete lokale herstelpunt per soort, gemarkeerde sets en lopende overdrachten zijn beschermd. De plug-in verwijdert geen kopieën uit externe opslag bij lokale opruiming. Laat geen kortere UpdraftPlus-limiet naast deze regeling draaien als je alle lokale herstelpunten binnen de ingestelde termijn wilt bewaren.
 
 ## Terughalen
 

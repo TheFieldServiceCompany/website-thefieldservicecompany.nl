@@ -2,7 +2,7 @@
 /**
  * Plugin Name: TFSC Updraft to PCloud
  * Description: Kopieert lokale UpdraftPlus-back-ups op een ingesteld tijdstip naar pCloud.
- * Version: 0.2.4
+ * Version: 0.2.5
  * Requires at least: 6.5
  * Requires PHP: 8.1
  * License: GPL-2.0-or-later
@@ -21,6 +21,7 @@ const INTERVAL = 'upc_every_minute';
 const WEEKDAYS = ['Maandag', 'Dinsdag', 'Woensdag', 'Donderdag', 'Vrijdag', 'Zaterdag', 'Zondag'];
 
 require_once __DIR__ . '/recovery.php';
+require_once __DIR__ . '/local-retention.php';
 
 add_filter('cron_schedules', static function ($schedules) {
     $schedules[INTERVAL] = ['interval' => MINUTE_IN_SECONDS, 'display' => 'TFSC Updraft to PCloud'];
@@ -49,7 +50,7 @@ add_action('admin_menu', static function () {
 });
 add_action('admin_enqueue_scripts', static function ($hook) {
     if ('tools_page_updraft-pcloud-copy' === $hook) {
-        wp_enqueue_style('upc-admin', plugins_url('admin.css', __FILE__), [], '0.2.4');
+        wp_enqueue_style('upc-admin', plugins_url('admin.css', __FILE__), [], '0.2.5');
     }
 });
 add_filter('updraftplus_save_last_backup', __NAMESPACE__ . '\\record_successful_backup');
@@ -58,7 +59,7 @@ add_action('admin_post_upc_change', __NAMESPACE__ . '\\handle_admin');
 function settings(): array {
     return wp_parse_args(get_option(SETTINGS, []), [
         'enabled' => false, 'day' => '7', 'time' => '04:00', 'time_second' => '', 'client' => '',
-        'source' => 'any', 'keep' => 0, 'retention' => [],
+        'source' => 'any', 'keep' => 0, 'retention' => [], 'local_days' => 0,
     ]);
 }
 
@@ -344,6 +345,7 @@ function tick(bool $manual = false): void {
         if (!$job || $job['attempts'] >= 5 || (!$manual && $job['next'] > time())) {
             if (!$manual && (!$job || $job['attempts'] >= 5)) {
                 apply_retention($state, $connection, $config, $now);
+                prune_local_backups((int) $config['local_days'], $now, get_option(STATE, []));
             }
             return;
         }
@@ -562,6 +564,16 @@ function handle_admin(): void {
                     update_option(STATE, $state, false);
                 }
                 $notice = 'Bewaarinstellingen opgeslagen.';
+            } elseif ('local_retention' === $action) {
+                $days = filter_var(field('local_days'), FILTER_VALIDATE_INT, ['options' => ['min_range' => 0, 'max_range' => 365]]);
+                if (false === $days) {
+                    throw new \RuntimeException('Kies een lokale bewaartermijn van 0 tot en met 365 dagen.');
+                }
+                $config['local_days'] = $days;
+                update_option(SETTINGS, $config, false);
+                unset($state['local_retention_date'], $state['local_retention_error']);
+                update_option(STATE, $state, false);
+                $notice = 'Lokale bewaartermijn opgeslagen.';
             } elseif ('app' === $action) {
                 if (!preg_match('/^[A-Za-z0-9_-]+$/D', field('client'))) {
                     throw new \RuntimeException('Enter the Client ID from pCloud My Apps.');
@@ -721,6 +733,11 @@ function render(): void {
                     <h2>Lokale back-ups</h2>
                     <p>Maak, bekijk en herstel back-ups in UpdraftPlus.</p>
                     <p><a class="button" href="<?php echo esc_url(admin_url('options-general.php?page=updraftplus')); ?>">Open UpdraftPlus</a></p>
+                    <?php form_start('local_retention'); ?>
+                    <p><label>Lokaal bewaren in dagen <input type="number" min="0" max="365" step="1" name="local_days" value="<?php echo esc_attr((string) $config['local_days']); ?>" required></label></p>
+                    <p>0 schakelt lokaal opruimen uit. Het nieuwste complete herstelpunt per soort blijft bewaard.</p>
+                    <?php submit_button('Lokale termijn opslaan', 'secondary', 'upc_save_local_retention'); ?></form>
+                    <?php if (!empty($state['local_retention_error'])) : ?><p role="alert"><?php echo esc_html($state['local_retention_error']); ?></p><?php endif; ?>
                 </section>
                 <section class="upc-panel">
                     <h2>pCloud-doelmap</h2>
@@ -774,7 +791,7 @@ function render(): void {
                         </select></label>
                     </fieldset>
                 <?php endforeach; ?>
-                <p>Na opslaan worden verlopen pCloud-kopieën opgeruimd. Lokale back-ups worden beheerd door UpdraftPlus.</p>
+                <p>Deze termijnen gelden voor verlopen kopieën in pCloud. De lokale termijn stel je afzonderlijk in.</p>
                 <?php submit_button('Bewaartermijnen opslaan', 'primary', 'upc_save_retention'); ?></form>
                 <?php if (!empty($state['retention_error'])) : ?><p role="alert"><?php echo esc_html($state['retention_error']); ?></p><?php endif; ?>
                 <details class="upc-retention-count">
