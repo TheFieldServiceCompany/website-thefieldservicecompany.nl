@@ -1,32 +1,32 @@
-# TFSC Updraft to PCloud 0.1.1
+# TFSC Updraft to PCloud 0.2.0
 
-De plug-in kopieert de laatst geslaagde lokale UpdraftPlus-back-up naar pCloud. Je kiest een dag en tijd of laat WordPress het elke dag proberen. UpdraftPlus blijft de archieven maken en terugzetten.
+De plug-in kopieert geslaagde lokale UpdraftPlus-back-ups naar pCloud en kan ze terughalen. UpdraftPlus bepaalt de inhoud van de archieven, maakt de back-ups en voert het websiteherstel uit.
 
-## Installeren
+## Verbinden
 
-1. Open **WordPress → Plugins → Nieuwe plugin → Plugin uploaden**. Kies de ZIP en activeer de plug-in.
-2. Open **Gereedschap → TFSC Updraft to PCloud**.
-3. Ga naar [pCloud My Apps](https://docs.pcloud.com/my_apps/), log in en maak een app voor deze koppeling. Bewaar de appgegevens privé.
-4. Vul de **Client ID** in en klik op **Save Client ID**. Klik daarna op **Authorize in pCloud and get an Access Code**. Geef toestemming en kopieer de **Access Code** die pCloud toont.
-5. Kies bij **Storage region** de regio die overeenkomt met **Host Name** op de pCloud-pagina. Vul de **Client Secret** uit My Apps en de **Access Code** in. Klik op **Connect to pCloud**. Het scherm toont de verbindingsstatus en het resultaat van de laatste poging. WordPress bewaart de verkregen toegangssleutel versleuteld met de sleutels van je installatie. Na wijziging van die WordPress-sleutels moet je pCloud opnieuw koppelen.
+1. Upload de ZIP via **Plugins → Nieuwe plugin → Plugin uploaden**. Open daarna **Gereedschap → TFSC Updraft to PCloud**.
+2. Open je goedgekeurde app in [pCloud My Apps](https://docs.pcloud.com/my_apps/). Vul de **Client ID** in en klik op **Save Client ID**.
+3. Klik op **Authorize in pCloud and get an Access Code**. Geef de app toestemming en kopieer de **Access Code**.
+4. Kies **Storage region** op basis van **Host Name** in pCloud. Vul de **Client Secret** uit My Apps en de **Access Code** in. Klik op **Connect to pCloud**. Bovenaan zie je of de koppeling gelukt is. De verbinding wordt versleuteld opgeslagen met de sleutels van de WordPress-installatie.
 
-De eerste versie is bedoeld voor een losse WordPress-installatie met WordPress 6.5 of hoger, PHP 8.1 of hoger en de PHP-extensies cURL en OpenSSL. Gebruik een HTTPS-verbinding voor je WordPress-beheer.
+Vereist zijn een losse WordPress-installatie vanaf 6.5, PHP vanaf 8.1 met cURL en OpenSSL, en UpdraftPlus. Gebruik HTTPS voor WordPress-beheer.
 
-## Eerste proef
+## Doelmap en eerste proefupload
 
-1. Maak met UpdraftPlus één back-up waarin je **de bestanden én database** aanvinkt. De archieven moeten lokaal bij UpdraftPlus beschikbaar blijven tot de upload klaar is.
-2. Klik op **Nieuwste back-up klaarzetten voor upload** en open de statuspagina opnieuw om de voortgang te zien. WordPress verwerkt de onderdelen op de achtergrond.
-3. Zoek in pCloud de map die bij **Laatste volledige upload** staat. Daarin staan de originele UpdraftPlus-archieven en `VOLTOOID.json`. Dat laatste bestand bevat de gecontroleerde SHA-1-sommen.
-4. Download alle originele archieven uit die map en upload ze bij **UpdraftPlus → Bestaande back-ups** op een aparte WordPress-testinstallatie. Gebruik daar **Herstellen**. Het bestand `VOLTOOID.json` hoort niet bij de UpdraftPlus-archieven.
+- De doelmap heet **WordPress-backups-** gevolgd door de websitehost en een korte unieke code. Het scherm toont de exacte naam. Bij de eerste upload maakt de plug-in de map aan in de opslag waartoe de gekoppelde app toegang heeft. Gebruik **pCloud-map en herstelpunten controleren** om de door pCloud teruggegeven locatie te zien.
+- Maak in UpdraftPlus een back-up met bestanden en database. Kies die onder **Back-up uploaden**. Bewaar alle lokale archiefdelen tot de upload klaar is. Onder **Laatste bevestigde upload** staat de map van het herstelpunt. Pas na controle van alle delen komt er een geverifieerde voltooiingslijst in de pCloud-map.
+- Als geplande WordPress-taken op dev uitstaan, verwerk je een wachtende upload of download met **Volgende overdrachtstap nu uitvoeren**. Elke beurt verwerkt één deel. Als een groot deel herhaaldelijk afbreekt, kan het helpen om in de expertinstellingen van UpdraftPlus kleinere archieven te laten maken.
 
-Als één archiefdeel herhaaldelijk te groot blijkt voor de beschikbare uploadtijd, verklein bij **UpdraftPlus → Instellingen → Expertinstellingen** de instelling **Archieven splitsen** en maak een nieuwe back-up. Een groot database-archief of een groot individueel mediabestand kan alsnog een aparte beperking zijn.
+## Automatische upload en bewaarlimiet
 
-## Automatisch uploaden
+Stel in UpdraftPlus de eigen back-upplanning en lokale bewaartermijn in. Kies vervolgens in deze plug-in welke lokaal beschikbare sets automatisch naar pCloud moeten. De keuze gaat over complete, geslaagde sets van bestanden en database samen, alleen database of alleen bestanden. Het scherm kan de laatste succesvolle back-up uit UpdraftPlus en tot 30 geslaagde sets die deze versie daarna heeft gezien aanbieden.
 
-- Laat UpdraftPlus de volledige back-up maken en plan het uploadmoment daarna. Kies een dag en tijd, vink **Automatisch uploaden** aan en sla op. Een voorbeeld is UpdraftPlus op zondag om 02.00 uur en uploaden vanaf 04.00 uur.
-- Het gekozen tijdstip gebruikt de WordPress-tijdzone. WordPress moet geplande taken uitvoeren. Zonder een aparte crontrigger kan de start opschuiven tot het volgende websitebezoek. Op de gekozen dag blijft WordPress na het gekozen tijdstip zoeken naar een nieuw herstelpunt tot er een is klaargezet.
-- Per beurt verwerkt WordPress één archiefdeel. Bij onderbreking probeert het hetzelfde onderdeel na vijf minuten opnieuw, tot vijf pogingen. Een archiefdeel dat al met dezelfde controlesom in pCloud staat, wordt overgeslagen.
-- De uploader kopieert het laatste succesvolle UpdraftPlus-resultaat zoals het is. Een losse databaseback-up levert dus alleen een databasekopie op. Gebruik voor volledige herstelpunten een UpdraftPlus-schema waarbij bestanden en database samen in dezelfde back-up worden gemaakt.
-- De pCloud-mappen blijven bewaard totdat je ze zelf opruimt. Dit zijn aparte UpdraftPlus-archieven per herstelpunt. Een map zonder `VOLTOOID.json` is nog niet als compleet bevestigd.
+Plan de upload na de back-up, in de WordPress-tijdzone. Het startmoment hangt af van de geplande taken van de hosting. Een mislukte overdracht krijgt maximaal vijf automatische pogingen per onderdeel, met vijf minuten wachttijd.
 
-De planning, retry en controle van archiefdelen zijn lokaal met nagebootste WordPress- en pCloud-antwoorden getest. De pCloud-koppeling, grootste upload en herstel moeten nog op een echte installatie worden geprobeerd.
+De pCloud-bewaarlimiet staat standaard op **0**, wat alles bewaart. Een ingestelde limiet bewaart de laatst geüploade herstelpunten die deze installatie sinds 0.2.0 heeft geregistreerd. Na een geslaagde upload kan de plug-in oudere geregistreerde mappen opruimen zodra hij de verwachte inhoud heeft gecontroleerd. Bij een wijziging aan de verwachte mapinhoud stopt het opruimen. De lokale UpdraftPlus-back-ups worden door UpdraftPlus beheerd.
+
+## Terughalen
+
+Klik op **pCloud-map en herstelpunten controleren**, kies het herstelpunt en klik op **Terughalen naar UpdraftPlus**. De plug-in controleert de gedownloade archiefdelen en maakt ze pas na verificatie beschikbaar voor UpdraftPlus. Een afwijkend lokaal bestand met dezelfde naam blijft behouden en de plug-in meldt het conflict. Start het websiteherstel zelf bij **Bestaande back-ups** in UpdraftPlus.
+
+Versie 0.2.0 is lokaal geactiveerd en het beheerscherm is met echte UpdraftPlus-archieven gecontroleerd. De pCloud-overdracht en bewaarlimiet zijn met nagebootste API-antwoorden getest. De eerste echte proefupload en terughaalproef op dev staan open.

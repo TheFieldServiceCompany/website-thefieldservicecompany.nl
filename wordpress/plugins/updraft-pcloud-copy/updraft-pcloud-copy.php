@@ -2,7 +2,7 @@
 /**
  * Plugin Name: TFSC Updraft to PCloud
  * Description: Kopieert lokale UpdraftPlus-back-ups op een ingesteld tijdstip naar pCloud.
- * Version: 0.1.1
+ * Version: 0.2.0
  * Requires at least: 6.5
  * Requires PHP: 8.1
  * License: GPL-2.0-or-later
@@ -15,8 +15,11 @@ const SETTINGS = 'upc_settings';
 const CONNECTION = 'upc_connection';
 const CONNECTION_STATUS = 'upc_connection_status';
 const STATE = 'upc_state';
+const SOURCE_HISTORY = 'upc_source_history';
 const TICK = 'upc_upload_tick';
 const INTERVAL = 'upc_every_minute';
+
+require_once __DIR__ . '/recovery.php';
 
 add_filter('cron_schedules', static function ($schedules) {
     $schedules[INTERVAL] = ['interval' => MINUTE_IN_SECONDS, 'display' => 'TFSC Updraft to PCloud'];
@@ -43,11 +46,13 @@ add_action(TICK, __NAMESPACE__ . '\\tick');
 add_action('admin_menu', static function () {
     add_management_page('TFSC Updraft to PCloud', 'TFSC Updraft to PCloud', 'manage_options', 'updraft-pcloud-copy', __NAMESPACE__ . '\\render');
 });
+add_filter('updraftplus_save_last_backup', __NAMESPACE__ . '\\record_successful_backup');
 add_action('admin_post_upc_change', __NAMESPACE__ . '\\handle_admin');
 
 function settings(): array {
     return wp_parse_args(get_option(SETTINGS, []), [
         'enabled' => false, 'day' => '7', 'time' => '04:00', 'client' => '',
+        'source' => 'any', 'keep' => 0,
     ]);
 }
 
@@ -120,66 +125,116 @@ function connect(array $config, array $state): void {
         }
     }
     $account = $region . ':' . $user_id;
-    if (!empty($state['job']) && $state['job']['account'] !== $account) {
-        throw new \RuntimeException('An upload is still queued for a different pCloud account.');
+    if ((!empty($state['job']) && $state['job']['account'] !== $account) ||
+        (!empty($state['recovery']) && $state['recovery']['account'] !== $account)) {
+        throw new \RuntimeException('A transfer is still queued for a different pCloud account.');
     }
     $iv = random_bytes(12);
     $ciphertext = openssl_encrypt($token, 'aes-256-gcm', secret_key(), OPENSSL_RAW_DATA, $iv, $tag);
     if (false === $ciphertext) {
         throw new \RuntimeException('The pCloud access token could not be encrypted.');
     }
-    update_option(CONNECTION, [
+    if (!update_option(CONNECTION, [
         'account' => $account, 'region' => $region, 'sealed' => base64_encode($iv . $tag . $ciphertext),
-    ], false);
+    ], false)) {
+        throw new \RuntimeException('WordPress could not save the pCloud connection.');
+    }
 }
 
-function latest_backup(): array {
+function valid_backup_id($id): bool {
+    return is_string($id) && 1 === preg_match('/^[a-f0-9]{12}$/D', $id);
+}
+
+function valid_archive_name($name, string $id): bool {
+    return is_string($name) && valid_backup_id($id)
+        && !str_contains($name, '\\')
+        && 1 === preg_match('~^backup_[^/\x00-\x1f]+_' . $id . '-[a-z0-9-]+\.(?:zip|gz(?:\.crypt)?)$~Di', $name);
+}
+
+function record_successful_backup(array $last): array {
+    if (!empty($last['success']) && valid_backup_id($last['backup_nonce'] ?? '')) {
+        $history = get_option(SOURCE_HISTORY, []);
+        unset($history[$last['backup_nonce']]);
+        $history[$last['backup_nonce']] = array_intersect_key($last, array_flip(['success', 'backup_nonce', 'backup_time', 'backup_array']));
+        update_option(SOURCE_HISTORY, array_slice($history, -30, null, true), false);
+    }
+    return $last;
+}
+
+function available_backups(): array {
     global $updraftplus;
-    if (!is_object($updraftplus) || !class_exists('UpdraftPlus_Options') || !method_exists($updraftplus, 'backups_dir_location')) {
+    if (!is_object($updraftplus) || !class_exists('UpdraftPlus_Options') || !method_exists($updraftplus, 'get_backupable_file_entities')) {
         throw new \RuntimeException('Activeer eerst UpdraftPlus.');
     }
+    $history = get_option(SOURCE_HISTORY, []);
     $last = \UpdraftPlus_Options::get_updraft_option('updraft_last_backup', []);
-    if (empty($last['success']) || empty($last['backup_time']) || empty($last['backup_array']) ||
-        !preg_match('/^[a-f0-9]{12}$/D', $last['backup_nonce'] ?? '')) {
-        throw new \RuntimeException('UpdraftPlus heeft geen recente geslaagde back-up gemeld.');
+    if (!empty($last['success']) && valid_backup_id($last['backup_nonce'] ?? '')) {
+        $history[$last['backup_nonce']] = $last;
     }
-
-    $nonce = $last['backup_nonce'];
-    $names = [];
     $entities = array_keys($updraftplus->get_backupable_file_entities());
-    $entities[] = 'db';
-    foreach ($entities as $entity) {
-        foreach ((array) ($last['backup_array'][$entity] ?? []) as $name) {
-            if (!is_string($name) || basename($name) !== $name ||
-                !preg_match('/^backup_[^\/\\\\]+_' . $nonce . '-[^\/\\\\]+\.(zip|gz|crypt)$/D', $name)) {
-                throw new \RuntimeException('UpdraftPlus gaf een onverwachte archiefnaam terug.');
-            }
-            $names[] = $name;
+    $sets = [];
+    foreach ($history as $entry) {
+        try {
+            $backup = local_backup($entry, $entities);
+            $sets[$backup['id']] = $backup;
+        } catch (\RuntimeException $error) {
+            // UpdraftPlus can prune local archives independently.
         }
     }
-    if (!$names || count($names) !== count(array_unique($names))) {
-        throw new \RuntimeException('De back-up bevat geen bruikbare lijst met archiefdelen.');
-    }
-    $files = [];
-    foreach ($names as $name) {
-        $path = local_file($name);
-        $size = filesize($path);
-        if (false === $size || $size < 1) {
-            throw new \RuntimeException('Een archiefdeel is leeg of onleesbaar.');
-        }
-        $files[$name] = $size;
-    }
-    $timestamp = (int) $last['backup_time'];
-    return ['id' => $nonce, 'timestamp' => $timestamp, 'files' => $files];
+    uasort($sets, static fn ($left, $right) => $right['timestamp'] <=> $left['timestamp']);
+    return $sets;
 }
 
-function local_file(string $name): string {
+function latest_backup(string $type = 'any', string $id = ''): array {
+    foreach (available_backups() as $backup) {
+        if (($id === '' || $backup['id'] === $id) && ($type === 'any' || $backup['type'] === $type)) {
+            return $backup;
+        }
+    }
+    throw new \RuntimeException('Geen geschikte geslaagde UpdraftPlus-back-up met alle archiefdelen op de server gevonden.');
+}
+
+function local_backup(array $entry, array $entities): array {
+    $id = $entry['backup_nonce'];
+    $files = [];
+    $has_database = false;
+    $has_files = false;
+    foreach (array_merge($entities, ['db']) as $entity) {
+        foreach ((array) ($entry['backup_array'][$entity] ?? []) as $name) {
+            if (!valid_archive_name($name, $id) || isset($files[$name])) {
+                throw new \RuntimeException('UpdraftPlus gaf een onverwachte archiefnaam terug.');
+            }
+            $size = filesize(local_file($name));
+            if (false === $size || $size < 1) {
+                throw new \RuntimeException('Een archiefdeel is leeg of onleesbaar.');
+            }
+            $files[$name] = $size;
+            $has_database = $has_database || 'db' === $entity;
+            $has_files = $has_files || 'db' !== $entity;
+        }
+    }
+    if (!$files || empty($entry['backup_time'])) {
+        throw new \RuntimeException('De back-up bevat geen bruikbare archiefdelen.');
+    }
+    $type = $has_database ? ($has_files ? 'full' : 'database') : 'files';
+    return ['id' => $id, 'timestamp' => (int) $entry['backup_time'], 'files' => $files, 'type' => $type];
+}
+
+function backup_directory(): string {
     global $updraftplus;
     if (!is_object($updraftplus) || !method_exists($updraftplus, 'backups_dir_location')) {
         throw new \RuntimeException('Activeer eerst UpdraftPlus.');
     }
     $dir = realpath($updraftplus->backups_dir_location());
-    $path = $dir ? realpath($dir . DIRECTORY_SEPARATOR . $name) : false;
+    if (!$dir || !is_dir($dir)) {
+        throw new \RuntimeException('De lokale UpdraftPlus-map is niet beschikbaar.');
+    }
+    return $dir;
+}
+
+function local_file(string $name): string {
+    $dir = backup_directory();
+    $path = realpath($dir . DIRECTORY_SEPARATOR . $name);
     if (!$path || dirname($path) !== $dir || basename($path) !== $name || !is_file($path) || !is_readable($path)) {
         throw new \RuntimeException('Een lokaal back-uponderdeel ontbreekt. Bewaar de UpdraftPlus-archieven op de server.');
     }
@@ -203,11 +258,15 @@ function locked(callable $task, bool $admin = false): void {
     }
 }
 
-function new_job(array $backup, array $connection): array {
+function backup_parent_name(): string {
     $url = home_url();
     $host = sanitize_title((string) wp_parse_url($url, PHP_URL_HOST));
+    return 'WordPress-backups-' . $host . '-' . substr(hash('sha256', $url), 0, 8);
+}
+
+function new_job(array $backup, array $connection): array {
     return $backup + [
-        'parent' => 'WordPress-backups-' . $host . '-' . substr(hash('sha256', $url), 0, 8),
+        'parent' => backup_parent_name(),
         'account' => $connection['account'], 'confirmed' => [], 'attempts' => 0,
         'next' => 0, 'error' => '',
         'folder' => gmdate('Y-m-d_H-i-s', $backup['timestamp']) . '_UTC_' . $backup['id'],
@@ -219,20 +278,27 @@ function schedule_due(array $config, \DateTimeImmutable $now, array $state): boo
         $now->format('H:i') >= $config['time'] && ($state['schedule_date'] ?? '') !== $now->format('Y-m-d');
 }
 
-function tick(): void {
+function tick(bool $manual = false): void {
     if (!get_option(CONNECTION)) {
         return;
     }
-    locked(static function () {
+    locked(static function () use ($manual) {
         $config = settings();
         $connection = get_option(CONNECTION, []);
         $state = get_option(STATE, []);
         $now = current_datetime();
         $job = $state['job'] ?? null;
+        $recovery = $state['recovery'] ?? null;
+        if ($recovery && $recovery['attempts'] < 5) {
+            if ($manual || $recovery['next'] <= time()) {
+                process_recovery($state, $recovery, $connection);
+            }
+            return;
+        }
 
-        if ((!$job || $job['attempts'] >= 5) && schedule_due($config, $now, $state)) {
+        if (!$manual && (!$job || $job['attempts'] >= 5) && schedule_due($config, $now, $state)) {
             try {
-                $backup = latest_backup();
+                $backup = latest_backup($config['source']);
                 $same_failed_job = $job && $job['id'] === $backup['id'];
                 $already_sent = ($state['done'][$connection['account']]['id'] ?? '') === $backup['id'];
                 if (!$same_failed_job && !$already_sent) {
@@ -248,7 +314,10 @@ function tick(): void {
             }
         }
 
-        if (!$job || $job['attempts'] >= 5 || $job['next'] > time()) {
+        if (!$job || $job['attempts'] >= 5 || (!$manual && $job['next'] > time())) {
+            if (!$manual && !$job && !empty($state['retention_pending'])) {
+                apply_retention($state, $connection, (int) $config['keep']);
+            }
             return;
         }
 
@@ -267,7 +336,16 @@ function tick(): void {
                 $state['done'][$connection['account']] = [
                     'id' => $job['id'], 'folder' => $job['parent'] . '/' . $job['folder'], 'time' => time(),
                 ];
+                $state['managed'][$connection['account']][$job['folder_id']] = [
+                    'name' => $job['folder'],
+                    'parent_id' => $job['parent_id'],
+                    'manifest' => $job['manifest'],
+                    'files' => array_merge(array_keys($job['files']), ['VOLTOOID.json']),
+                    'uploaded_at' => time(),
+                ];
+                $state['retention_pending'] = $connection['account'];
                 unset($state['job'], $state['schedule_error']);
+                update_option(STATE, $state, false);
             } else {
                 $job['attempts'] = 0;
                 $job['next'] = 0;
@@ -279,16 +357,26 @@ function tick(): void {
             $state['job'] = $job;
         }
         update_option(STATE, $state, false);
-    });
+        if (!isset($state['job']) && !empty($state['retention_pending'])) {
+            apply_retention($state, $connection, (int) $config['keep']);
+        }
+    }, $manual);
 }
 
 function copy_next(array &$job, array $connection): bool {
     $region = $connection['region'];
     $token = token_from($connection);
     if (!isset($job['folder_id'])) {
-        $parent = create_folder($region, $token, 0, $job['parent']);
-        $job['folder_id'] = create_folder($region, $token, $parent, $job['folder']);
+        $job['parent_id'] = create_folder($region, $token, 0, $job['parent']);
+        $job['folder_id'] = create_folder($region, $token, $job['parent_id'], $job['folder']);
+    } elseif (!isset($job['parent_id'])) {
+        $job['parent_id'] = create_folder($region, $token, 0, $job['parent']);
     }
+    $folder = cloud_folder($connection, $job['folder_id']);
+    if (($folder['name'] ?? '') !== $job['folder'] || (int) ($folder['parentfolderid'] ?? 0) !== $job['parent_id']) {
+        throw new \RuntimeException('De pCloud-map voor deze back-up is verplaatst of hernoemd.');
+    }
+    $remote_files = cloud_children($folder);
 
     $remaining = array_diff_key($job['files'], $job['confirmed']);
     if ($remaining) {
@@ -301,12 +389,14 @@ function copy_next(array &$job, array $connection): bool {
         if (!$hash) {
             throw new \RuntimeException('De controlesom van een archiefdeel kon niet worden berekend.');
         }
-        $remote_path = '/' . $job['parent'] . '/' . $job['folder'] . '/' . $name;
-        $remote = api($region, 'checksumfile', ['path' => $remote_path], $token, [2009]);
-        if (!hash_equals($hash, (string) ($remote['sha1'] ?? ''))) {
+        $file_id = (int) ($remote_files[$name]['fileid'] ?? 0);
+        if (!$file_id) {
+            if (isset($remote_files['VOLTOOID.json']) || isset($remote_files[$name])) {
+                throw new \RuntimeException('De pCloud-map bevat al een voltooid herstelpunt of een conflicterend bestand.');
+            }
             $file_id = upload($region, $token, $job['folder_id'], new \CURLFile($path, 'application/octet-stream', $name));
-            $remote = api($region, 'checksumfile', ['fileid' => $file_id], $token);
         }
+        $remote = api($region, 'checksumfile', ['fileid' => $file_id], $token);
         if (!hash_equals($hash, (string) ($remote['sha1'] ?? ''))) {
             throw new \RuntimeException('De controlesom van het geüploade archiefdeel komt niet overeen.');
         }
@@ -321,7 +411,15 @@ function copy_next(array &$job, array $connection): bool {
     if (false === $manifest) {
         throw new \RuntimeException('De lijst van geverifieerde archieven kon niet worden gemaakt.');
     }
-    upload($region, $token, $job['folder_id'], new \CURLStringFile($manifest, 'VOLTOOID.json', 'application/json'));
+    $job['manifest'] = sha1($manifest);
+    $marker_id = (int) ($remote_files['VOLTOOID.json']['fileid'] ?? 0);
+    if (!$marker_id) {
+        $marker_id = upload($region, $token, $job['folder_id'], new \CURLStringFile($manifest, 'VOLTOOID.json', 'application/json'));
+    }
+    $marker = api($region, 'checksumfile', ['fileid' => $marker_id], $token);
+    if (!hash_equals($job['manifest'], (string) ($marker['sha1'] ?? ''))) {
+        throw new \RuntimeException('De voltooiingslijst in pCloud wijkt af van de archiefdelen.');
+    }
     return true;
 }
 
@@ -341,7 +439,7 @@ function upload(string $region, string $token, int $folder, \CURLFile|\CURLStrin
     $handle = curl_init('https://' . api_host($region) . '/uploadfile');
     curl_setopt_array($handle, [
         CURLOPT_POST => true,
-        CURLOPT_POSTFIELDS => ['folderid' => (string) $folder, 'nopartial' => '1', 'file' => $file],
+        CURLOPT_POSTFIELDS => ['folderid' => (string) $folder, 'nopartial' => '1', 'renameifexists' => '1', 'file' => $file],
         CURLOPT_HTTPHEADER => ['Authorization: Bearer ' . $token],
         CURLOPT_RETURNTRANSFER => true,
         CURLOPT_FOLLOWLOCATION => false,
@@ -354,7 +452,7 @@ function upload(string $region, string $token, int $folder, \CURLFile|\CURLStrin
     }
     $data = api_result(curl_getinfo($handle, CURLINFO_RESPONSE_CODE), $body, 'uploadfile');
     $id = (int) ($data['metadata'][0]['fileid'] ?? 0);
-    if ($id < 1) {
+    if ($id < 1 || ($data['metadata'][0]['name'] ?? '') !== $file->postname) {
         throw new \RuntimeException('pCloud bevestigde het geüploade bestand niet.');
     }
     return $id;
@@ -371,6 +469,11 @@ function handle_admin(): void {
     check_admin_referer('upc_change');
     $notice = 'Opgeslagen.';
     try {
+        if ('process' === field('operation')) {
+            tick(true);
+            wp_safe_redirect(admin_url('tools.php?page=updraft-pcloud-copy#upc-transfer'));
+            exit;
+        }
         locked(static function () use (&$notice) {
             $config = settings();
             $state = get_option(STATE, []);
@@ -378,12 +481,17 @@ function handle_admin(): void {
             if ('schedule' === $action) {
                 $day = field('day');
                 $time = field('time');
-                if (!preg_match('/^(daily|[1-7])$/D', $day) || !preg_match('/^(?:[01]\d|2[0-3]):[0-5]\d$/D', $time)) {
-                    throw new \RuntimeException('Kies een geldige dag en tijd.');
+                $source = field('source');
+                $keep = filter_var(field('keep'), FILTER_VALIDATE_INT, ['options' => ['min_range' => 0, 'max_range' => 1000]]);
+                if (!preg_match('/^(daily|[1-7])$/D', $day) || !preg_match('/^(?:[01]\d|2[0-3]):[0-5]\d$/D', $time)
+                    || !array_key_exists($source, source_labels()) || false === $keep) {
+                    throw new \RuntimeException('Kies een geldige dag, tijd, back-upsoort en bewaarlimiet.');
                 }
                 $config['enabled'] = '1' === field('enabled');
                 $config['day'] = $day;
                 $config['time'] = $time;
+                $config['source'] = $source;
+                $config['keep'] = $keep;
                 update_option(SETTINGS, $config, false);
             } elseif ('app' === $action) {
                 if (!preg_match('/^[A-Za-z0-9_-]+$/D', field('client'))) {
@@ -411,10 +519,16 @@ function handle_admin(): void {
                 } elseif (!empty($state['job']) && $state['job']['attempts'] < 5) {
                     throw new \RuntimeException('Er staat al een back-up klaar voor verzending.');
                 } else {
-                    $state['job'] = new_job(latest_backup(), $connection);
+                    $id = field('backup');
+                    if (!valid_backup_id($id)) {
+                        throw new \RuntimeException('Kies eerst een UpdraftPlus-back-up.');
+                    }
+                    $state['job'] = new_job(latest_backup('any', $id), $connection);
                 }
                 update_option(STATE, $state, false);
                 $notice = 'De back-up staat klaar. WordPress verwerkt de upload op de achtergrond.';
+            } elseif (in_array($action, ['scan', 'recover', 'recover_retry', 'recover_cancel'], true)) {
+                $notice = handle_recovery($action, $state, get_option(CONNECTION, []));
             }
         }, true);
     } catch (\RuntimeException $error) {
@@ -423,6 +537,10 @@ function handle_admin(): void {
     set_transient('upc_notice_' . get_current_user_id(), $notice, MINUTE_IN_SECONDS);
     wp_safe_redirect(admin_url('tools.php?page=updraft-pcloud-copy'));
     exit;
+}
+
+function source_labels(): array {
+    return ['any' => 'Elke geslaagde back-up', 'full' => 'Bestanden en database', 'database' => 'Alleen database', 'files' => 'Alleen bestanden'];
 }
 
 function form_start(string $operation): void {
@@ -435,70 +553,138 @@ function render(): void {
     $config = settings();
     $state = get_option(STATE, []);
     $connection = get_option(CONNECTION, []);
-    $connection_status = get_option(CONNECTION_STATUS, []);
+    $attempt = get_option(CONNECTION_STATUS, []);
+    $failed = $attempt && empty($attempt['success']);
+    $account = $connection['account'] ?? '';
+    $done = $state['done'][$account] ?? null;
+    $catalog = ($state['catalog']['account'] ?? '') === $account ? ($state['catalog'] ?? []) : [];
     $job = $state['job'] ?? null;
-    $done = $state['done'][$connection['account'] ?? ''] ?? null;
+    $recovery = $state['recovery'] ?? null;
+    $labels = source_labels();
+    try {
+        $sources = available_backups();
+    } catch (\RuntimeException $error) {
+        $sources = [];
+    }
     $notice_key = 'upc_notice_' . get_current_user_id();
     $notice = get_transient($notice_key);
     delete_transient($notice_key);
     ?>
     <div class="wrap">
         <h1>TFSC Updraft to PCloud</h1>
-        <?php if ($notice) : ?><div class="notice notice-info"><p><?php echo esc_html($notice); ?></p></div><?php endif; ?>
-        <h2>Uploadschema</h2>
+        <?php if ($failed) : ?>
+            <div class="notice notice-error inline" role="alert"><p><strong>pCloud connection failed.</strong> <?php echo esc_html($attempt['message']); ?>
+                <?php if ($connection) : ?>The previous connection was kept.<?php endif; ?></p></div>
+        <?php elseif ($connection) : ?>
+            <div class="notice notice-success inline" role="status"><p><strong>Connected to pCloud (<?php echo esc_html($connection['region']); ?>).</strong>
+                Je kunt nu <a href="#upc-transfer">een UpdraftPlus-back-up kiezen en uploaden</a>.</p></div>
+        <?php else : ?>
+            <div class="notice notice-info inline"><p><strong>pCloud is not connected.</strong> Use the connection settings below to get started.</p></div>
+        <?php endif; ?>
+        <?php if ($attempt) : ?>
+            <p>Last connection attempt <?php echo esc_html(wp_date('d-m-Y H:i', $attempt['time'])); ?>.</p>
+        <?php endif; ?>
+        <?php if ($notice) : ?><div class="notice notice-info inline" role="status"><p><?php echo esc_html($notice); ?></p></div><?php endif; ?>
+
+        <details <?php echo (!$connection || $failed) ? 'open' : ''; ?>>
+            <summary><strong><?php echo $connection ? 'Change pCloud connection' : 'Set up pCloud connection'; ?></strong></summary>
+            <p>Open your approved app in <a href="https://docs.pcloud.com/my_apps/" target="_blank" rel="noopener noreferrer">pCloud My Apps</a> to find its Client ID and Client Secret.</p>
+            <?php form_start('app'); ?>
+            <p><label>Client ID <input type="text" name="client" value="<?php echo esc_attr($config['client']); ?>" required></label></p>
+            <?php submit_button('Save Client ID', 'secondary'); ?></form>
+            <?php if ($config['client']) : ?>
+                <?php $auth = add_query_arg(['client_id' => $config['client'], 'response_type' => 'code'], 'https://my.pcloud.com/oauth2/authorize'); ?>
+                <p><a href="<?php echo esc_url($auth); ?>" target="_blank" rel="noopener noreferrer">Authorize in pCloud and get an Access Code</a>.</p>
+                <?php form_start('connect'); ?>
+                <p><label>Storage region <select name="region">
+                    <option value="EU" <?php selected($connection['region'] ?? 'EU', 'EU'); ?>>Europe (eapi.pcloud.com)</option>
+                    <option value="US" <?php selected($connection['region'] ?? 'EU', 'US'); ?>>United States (api.pcloud.com)</option>
+                </select></label></p>
+                <p><label>Client Secret <input type="password" name="secret" autocomplete="off" required></label></p>
+                <p><label>Access Code <input type="password" name="code" autocomplete="off" required></label></p>
+                <p>Use the Host Name shown by pCloud to select the storage region. Copy the Access Code from the authorization page.</p>
+                <?php submit_button('Connect to pCloud', 'primary'); ?></form>
+            <?php endif; ?>
+        </details>
+
+        <h2>pCloud-doelmap</h2>
+        <p><code><?php echo esc_html(!empty($catalog['path']) ? $catalog['path'] : backup_parent_name()); ?></code></p>
+        <p>Elke back-up krijgt een gedateerde submap. De doelmap wordt bij de eerste upload aangemaakt binnen de opslag waartoe de app toegang heeft. Zoek de mapnaam in <a href="https://my.pcloud.com/" target="_blank" rel="noopener noreferrer">pCloud Files</a>.</p>
+        <?php if ($done) : ?>
+            <p>Laatste bevestigde upload <?php echo esc_html(wp_date('d-m-Y H:i', $done['time'])); ?>. Map <code><?php echo esc_html($done['folder']); ?></code>.</p>
+        <?php endif; ?>
+        <?php if ($connection) : ?>
+            <?php form_start('scan'); submit_button('pCloud-map en herstelpunten controleren', 'secondary'); ?></form>
+        <?php endif; ?>
+
+        <h2 id="upc-transfer">Back-up uploaden</h2>
+        <p>UpdraftPlus bepaalt welke bestanden en database in de back-up zitten. Kies hier welke complete, geslaagde set de plug-in kopieert.</p>
+        <?php if (!$sources) : ?><p>Er is geen geslaagde lokale UpdraftPlus-back-up met alle archiefdelen gevonden.</p><?php endif; ?>
+        <?php if ($connection && $sources && (!$job || $job['attempts'] >= 5)) : ?>
+            <?php form_start('queue'); ?>
+            <p><label>Lokale back-up <select name="backup" required>
+                <?php foreach ($sources as $source) : ?>
+                    <option value="<?php echo esc_attr($source['id']); ?>"><?php echo esc_html(wp_date('d-m-Y H:i', $source['timestamp']) . ' · ' . $labels[$source['type']] . ' · ' . count($source['files']) . ' archiefdelen'); ?></option>
+                <?php endforeach; ?>
+            </select></label></p>
+            <?php submit_button('Gekozen back-up klaarzetten voor upload', 'primary'); ?></form>
+        <?php endif; ?>
+        <?php if ($job) : ?>
+            <p><?php echo esc_html(sprintf('Upload: %d van %d archiefdelen gecontroleerd.', count($job['confirmed']), count($job['files']))); ?>
+            <?php if ($job['attempts'] >= 5) : ?> Automatische pogingen gestopt.<?php endif; ?></p>
+            <?php if ($job['error']) : ?><p><?php echo esc_html($job['error']); ?></p><?php endif; ?>
+            <?php if ($job['error']) : form_start('retry'); submit_button('Upload opnieuw proberen', 'secondary'); ?></form><?php endif; ?>
+        <?php endif; ?>
+
+        <h2>Back-up uit pCloud terughalen</h2>
+        <p>De plug-in haalt de archieven naar de lokale UpdraftPlus-map. Daarna kies je in UpdraftPlus zelf of je de website wilt herstellen.</p>
+        <?php if ($connection && !$recovery && !empty($catalog['backups'])) : ?>
+            <?php form_start('recover'); ?>
+            <p><label>Herstelpunt in pCloud <select name="remote_backup" required>
+                <?php foreach ($catalog['backups'] as $entry) : ?>
+                    <option value="<?php echo esc_attr((string) $entry['id']); ?>"><?php echo esc_html($entry['name']); ?></option>
+                <?php endforeach; ?>
+            </select></label></p>
+            <?php submit_button('Terughalen naar UpdraftPlus', 'primary'); ?></form>
+        <?php elseif ($connection && !$recovery) : ?>
+            <p><?php echo $catalog ? 'Geen herstelpunten met een voltooiingslijst gevonden.' : 'Controleer eerst de pCloud-map om herstelpunten te laden.'; ?></p>
+        <?php endif; ?>
+        <?php if (!empty($state['recovered'])) : ?>
+            <div class="notice notice-success inline"><p><strong>Herstelpunt opgehaald.</strong> Bekijk <?php echo esc_html($state['recovered']['name']); ?> onder <a href="<?php echo esc_url(admin_url('options-general.php?page=updraftplus')); ?>">Bestaande back-ups in UpdraftPlus</a>.</p></div>
+        <?php endif; ?>
+        <?php if ($recovery) : ?>
+            <p><?php echo esc_html(sprintf('Download: %d van %d archiefdelen gecontroleerd.', count($recovery['confirmed']), count($recovery['files']))); ?>
+            <?php if ($recovery['attempts'] >= 5) : ?> Automatische pogingen gestopt.<?php endif; ?></p>
+            <?php if ($recovery['error']) : ?><p><?php echo esc_html($recovery['error']); ?></p>
+                <?php form_start('recover_retry'); submit_button('Terughalen opnieuw proberen', 'secondary'); ?></form>
+            <?php endif; ?>
+            <?php form_start('recover_cancel'); submit_button('Tijdelijke download opruimen', 'secondary'); ?></form>
+        <?php endif; ?>
+        <?php if ($connection && (($recovery && $recovery['attempts'] < 5) || ($job && $job['attempts'] < 5))) : ?>
+            <?php form_start('process'); submit_button('Volgende overdrachtstap nu uitvoeren', 'secondary'); ?></form>
+        <?php endif; ?>
+
+        <h2>Automatisch uploaden en bewaren</h2>
         <?php form_start('schedule'); ?>
         <p><label><input type="checkbox" name="enabled" value="1" <?php checked($config['enabled']); ?>> Automatisch uploaden</label></p>
+        <p><label>Welke back-ups <select name="source">
+            <?php foreach ($labels as $value => $label) : ?>
+                <option value="<?php echo esc_attr($value); ?>" <?php selected($config['source'], $value); ?>><?php echo esc_html($label); ?></option>
+            <?php endforeach; ?>
+        </select></label></p>
         <p><label>Dag <select name="day">
             <?php foreach (['daily' => 'Iedere dag', '1' => 'Maandag', '2' => 'Dinsdag', '3' => 'Woensdag', '4' => 'Donderdag', '5' => 'Vrijdag', '6' => 'Zaterdag', '7' => 'Zondag'] as $day => $label) : ?>
                 <option value="<?php echo esc_attr((string) $day); ?>" <?php selected($config['day'], (string) $day); ?>><?php echo esc_html($label); ?></option>
             <?php endforeach; ?>
         </select></label> <label>Tijd <input type="time" name="time" value="<?php echo esc_attr($config['time']); ?>" required></label>
         <span><?php echo esc_html(wp_timezone_string()); ?></span></p>
-        <p>Plan deze tijd na de UpdraftPlus-back-up. WordPress start de upload rond of na de gekozen tijd.</p>
-        <?php submit_button('Schema opslaan', 'primary'); ?></form>
-
-        <h2>pCloud connection</h2>
-        <p><strong><?php echo $connection ? 'Connected (' . esc_html($connection['region']) . ')' : 'Not connected'; ?></strong></p>
-        <?php if ($connection_status) : ?>
-            <p>Last connection attempt <?php echo esc_html(wp_date('d-m-Y H:i', $connection_status['time'])); ?>.
-            <strong><?php echo $connection_status['success'] ? 'Succeeded' : 'Failed'; ?></strong>
-            <?php if (!$connection_status['success']) : ?>. <?php echo esc_html($connection_status['message']); ?><?php endif; ?></p>
-        <?php endif; ?>
-        <p>Open your approved app in <a href="https://docs.pcloud.com/my_apps/" target="_blank" rel="noopener noreferrer">pCloud My Apps</a> to find its Client ID and Client Secret.</p>
-        <?php form_start('app'); ?>
-        <p><label>Client ID <input type="text" name="client" value="<?php echo esc_attr($config['client']); ?>" required></label></p>
-        <?php submit_button('Save Client ID', 'secondary'); ?></form>
-        <?php if ($config['client']) : ?>
-            <?php $auth = add_query_arg(['client_id' => $config['client'], 'response_type' => 'code'], 'https://my.pcloud.com/oauth2/authorize'); ?>
-            <p><a href="<?php echo esc_url($auth); ?>" target="_blank" rel="noopener noreferrer">Authorize in pCloud and get an Access Code</a>.</p>
-            <?php form_start('connect'); ?>
-            <p><label>Storage region <select name="region">
-                <option value="EU" <?php selected($connection['region'] ?? 'EU', 'EU'); ?>>Europe (eapi.pcloud.com)</option>
-                <option value="US" <?php selected($connection['region'] ?? 'EU', 'US'); ?>>United States (api.pcloud.com)</option>
-            </select></label></p>
-            <p><label>Client Secret <input type="password" name="secret" autocomplete="off" required></label></p>
-            <p><label>Access Code <input type="password" name="code" autocomplete="off" required></label></p>
-            <p>Use the Host Name shown by pCloud to select the storage region. Copy the Access Code from the authorization page.</p>
-            <?php submit_button('Connect to pCloud', 'secondary'); ?></form>
-        <?php endif; ?>
-
-        <h2>Uploadstatus</h2>
-        <?php if ($done) : ?>
-            <p>Laatste volledige upload <?php echo esc_html(wp_date('d-m-Y H:i', $done['time'])); ?>.
-                Map <code><?php echo esc_html($done['folder']); ?></code>.</p>
-        <?php endif; ?>
-        <?php if ($job) : ?>
-            <p><?php echo esc_html(sprintf('%d van %d archiefdelen gecontroleerd.', count($job['confirmed']), count($job['files']))); ?>
-            <?php if ($job['attempts'] >= 5) : ?> Automatische pogingen gestopt.<?php endif; ?></p>
-            <?php if ($job['error']) : ?><p><?php echo esc_html($job['error']); ?></p><?php endif; ?>
-            <?php if ($job['error']) : form_start('retry'); submit_button('Opnieuw proberen', 'secondary'); ?></form><?php endif; ?>
-        <?php endif; ?>
+        <p><label>Herstelpunten bewaren in pCloud <input type="number" min="0" max="1000" step="1" name="keep" value="<?php echo esc_attr((string) $config['keep']); ?>" required></label></p>
+        <p>0 bewaart alles. Met een limiet ruimt de plug-in na een nieuwe geslaagde upload oudere, door deze installatie beheerde pCloud-kopieën op. Stel het aantal lokale back-ups apart in UpdraftPlus in.</p>
+        <?php submit_button('Instellingen opslaan', 'secondary'); ?></form>
         <?php if (!empty($state['schedule_error'])) : ?><p><?php echo esc_html($state['schedule_error']); ?></p><?php endif; ?>
-        <?php if ($connection && (!$job || $job['attempts'] >= 5)) : ?>
-            <?php form_start('queue'); submit_button('Nieuwste back-up klaarzetten voor upload', 'secondary'); ?></form>
-        <?php endif; ?>
+        <?php if (!empty($state['retention_error'])) : ?><p><?php echo esc_html($state['retention_error']); ?></p><?php endif; ?>
         <?php if (!wp_next_scheduled(TICK) || (defined('DISABLE_WP_CRON') && DISABLE_WP_CRON)) : ?>
-            <p>Controleer of je hosting de geplande WordPress-taken uitvoert. Anders blijft de upload in de wachtrij staan.</p>
+            <div class="notice notice-warning inline"><p>Controleer of de hosting geplande WordPress-taken uitvoert. Voor een proef kun je de volgende overdrachtstap ook handmatig uitvoeren.</p></div>
         <?php endif; ?>
     </div>
     <?php
