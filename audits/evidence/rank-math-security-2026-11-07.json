@@ -1,0 +1,89 @@
+{
+  "date": "2026-11-07",
+  "version": "0.3.1",
+  "live_active": true,
+  "pro_active": false,
+  "seo_analyzer": true,
+  "finding": {
+    "affected_version": "0.3.0",
+    "attacker_role": "author",
+    "requires_own_post_edit_and_delete": true,
+    "meta_write_http": 200,
+    "own_post_delete_http": 200,
+    "unrelated_redirect_survives_before": false,
+    "unrelated_redirect_survives_after": true,
+    "tested_on_production": false
+  },
+  "isolated_tests": {
+    "wordpress": "6.8.3",
+    "php": "8.3.33",
+    "elementor": "4.3.6",
+    "rank_math_free": "1.0.281",
+    "sqlite_database_integration": "2.2.14",
+    "rest_transport": "WordPress in-process REST dispatcher",
+    "security_assertions": 54,
+    "hostile_widget_assertions": 9,
+    "missing_dependency_assertions": 6,
+    "direct_php_entry_assertions": 2,
+    "full_compatibility_assertions": 56,
+    "free_baseline_assertions": 8,
+    "cleanup_workflow_assertions": 18,
+    "focused_widget_assertions": 27
+  },
+  "live_verification": {
+    "time_utc": "2026-11-07T13:22:34+00:00",
+    "redirect_rows_preserved": 265,
+    "post_legacy_associations_preserved": 37,
+    "term_legacy_associations_preserved": 15,
+    "migration": {
+      "verified_records": {
+        "post": 37,
+        "term": 15
+      },
+      "deleted_redirects": 0
+    },
+    "rank_math_settings_hashes_preserved": true,
+    "structured_data_source_hashes_preserved": true,
+    "public_pages": 48,
+    "public_page_differences": [],
+    "reachable_sitemaps_and_kml": 30,
+    "raw_sitemap_hash_changes_vs_morning": 10,
+    "sitemap_note": "new content and ordering differences; not all XML is byte-identical",
+    "temporary_helper_active": false,
+    "public_surface": [
+      {
+        "path": "/wp-content/plugins/tfsc-rank-math-breadcrumbs/tfsc-rank-math-breadcrumbs.php",
+        "status": 200,
+        "body_bytes": 0
+      },
+      {
+        "path": "/wp-content/plugins/tfsc-rank-math-breadcrumbs/widget-breadcrumbs.php",
+        "status": 200,
+        "body_bytes": 0
+      },
+      {
+        "path": "/wp-json/tfsc-rankmath-review/v1/location-review",
+        "status": 404,
+        "body_bytes": 125
+      },
+      {
+        "path": "/wp-json/tfsc-rankmath-review/v1/seal-reviewed-redirects",
+        "status": 404,
+        "body_bytes": 125
+      }
+    ]
+  },
+  "deployed_file_sha256": {
+    "tfsc-rank-math-breadcrumbs.php": "e1abcf81e30963d95eafbf647c16712d380f37e7d86a786820fffe7df23cddaa",
+    "widget-breadcrumbs.php": "ddd501debe1974acf3a95fe8cc6ef8ceb857ca53a648927938f3b331ef75b129",
+    "README.md": "def1902798c39a0c604c60aa6f414b2d36cbfea184cb1248c2843b1b79e84031"
+  },
+  "package_sha256": "45adafce0a1d701896025358a307883bd24e1aaad08cfff9a9387e21b7a5fdd8",
+  "limitations": [
+    "Production PHP 8.5.12 versus local PHP 8.3.33",
+    "Not a whole-site or independent penetration test",
+    "No destructive attacks against production",
+    "Pro cleanup itself outside review",
+    "Preserve signing key and proof metadata in database backups"
+  ]
+}

@@ -1,0 +1,1348 @@
+{
+  "date": "2026-11-07",
+  "site": "https://thefieldservicecompany.nl",
+  "time_utc": "2026-11-07T10:43:47+00:00",
+  "state": {
+    "free_active": true,
+    "pro_active": false,
+    "extension_active": true,
+    "extension_version": "0.2.0",
+    "search_intent": "off"
+  },
+  "official_catalog": {
+    "source": "https://rankmath.com/free-vs-pro/",
+    "rows": 204,
+    "free_pro_presentation_differences": 80,
+    "groups": {
+      "analytics": 27,
+      "ai_subscription": 1,
+      "link_tools": 5,
+      "mcp": 1,
+      "schema": 35,
+      "editor": 15,
+      "news": 1,
+      "video": 4,
+      "image_and_social": 18,
+      "local": 7,
+      "commerce": 3,
+      "podcast": 2,
+      "commercial": 18,
+      "marked_entities": 1,
+      "redirects_and_404": 16,
+      "import_export": 6,
+      "builders": 2,
+      "breadcrumbs": 2,
+      "crawler_controls": 13,
+      "affiliate_links": 1,
+      "core_metadata": 18,
+      "seo_analysis": 8
+    },
+    "coverage": [
+      {
+        "id": "1:2",
+        "group": "analytics",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "1:3",
+        "group": "analytics",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "1:4",
+        "group": "analytics",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "1:5",
+        "group": "ai_subscription",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "1:6",
+        "group": "link_tools",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "1:7",
+        "group": "link_tools",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "1:8",
+        "group": "link_tools",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "1:9",
+        "group": "link_tools",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "1:10",
+        "group": "mcp",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "1:11",
+        "group": "analytics",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "1:12",
+        "group": "analytics",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "1:13",
+        "group": "schema",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "1:14",
+        "group": "analytics",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "1:15",
+        "group": "analytics",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "1:16",
+        "group": "schema",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "1:17",
+        "group": "schema",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "1:18",
+        "group": "editor",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "1:19",
+        "group": "news",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "1:20",
+        "group": "video",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "1:21",
+        "group": "image_and_social",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "1:22",
+        "group": "local",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "1:23",
+        "group": "commerce",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "1:24",
+        "group": "commerce",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "1:25",
+        "group": "editor",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "1:26",
+        "group": "podcast",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "1:27",
+        "group": "schema",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "1:28",
+        "group": "schema",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "1:29",
+        "group": "video",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "1:30",
+        "group": "commercial",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "1:31",
+        "group": "analytics",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "1:32",
+        "group": "analytics",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "1:33",
+        "group": "analytics",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "1:34",
+        "group": "commercial",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "1:35",
+        "group": "analytics",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "1:36",
+        "group": "analytics",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "1:37",
+        "group": "analytics",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "1:38",
+        "group": "analytics",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "1:39",
+        "group": "analytics",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "1:40",
+        "group": "analytics",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "1:41",
+        "group": "analytics",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "1:42",
+        "group": "schema",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "1:43",
+        "group": "schema",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "1:44",
+        "group": "schema",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "1:45",
+        "group": "schema",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "1:46",
+        "group": "schema",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "1:47",
+        "group": "schema",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "1:48",
+        "group": "schema",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "1:49",
+        "group": "schema",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "1:50",
+        "group": "podcast",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "1:51",
+        "group": "schema",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "1:52",
+        "group": "marked_entities",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "1:53",
+        "group": "schema",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "1:54",
+        "group": "redirects_and_404",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "1:55",
+        "group": "local",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "1:56",
+        "group": "analytics",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "1:57",
+        "group": "analytics",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "1:58",
+        "group": "commercial",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "1:59",
+        "group": "image_and_social",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "1:60",
+        "group": "editor",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "1:61",
+        "group": "import_export",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "1:62",
+        "group": "builders",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "1:63",
+        "group": "breadcrumbs",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "1:64",
+        "group": "schema",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "1:65",
+        "group": "builders",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "1:66",
+        "group": "schema",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "1:67",
+        "group": "editor",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "1:68",
+        "group": "import_export",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "1:69",
+        "group": "redirects_and_404",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "1:70",
+        "group": "editor",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "1:71",
+        "group": "link_tools",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "1:72",
+        "group": "analytics",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "1:73",
+        "group": "video",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "1:74",
+        "group": "analytics",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "1:75",
+        "group": "analytics",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "1:76",
+        "group": "redirects_and_404",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "1:77",
+        "group": "crawler_controls",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "1:78",
+        "group": "redirects_and_404",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "1:79",
+        "group": "schema",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "1:80",
+        "group": "affiliate_links",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "1:81",
+        "group": "image_and_social",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "1:82",
+        "group": "image_and_social",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "2:1",
+        "group": "commercial",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:2",
+        "group": "commercial",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:3",
+        "group": "commercial",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:4",
+        "group": "commercial",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:5",
+        "group": "core_metadata",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:6",
+        "group": "analytics",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:7",
+        "group": "analytics",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:8",
+        "group": "analytics",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "2:9",
+        "group": "analytics",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "2:10",
+        "group": "analytics",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "2:11",
+        "group": "import_export",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:12",
+        "group": "import_export",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:13",
+        "group": "import_export",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:14",
+        "group": "schema",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:15",
+        "group": "redirects_and_404",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:16",
+        "group": "seo_analysis",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:17",
+        "group": "seo_analysis",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:18",
+        "group": "seo_analysis",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "2:19",
+        "group": "seo_analysis",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "2:20",
+        "group": "seo_analysis",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:21",
+        "group": "seo_analysis",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:22",
+        "group": "seo_analysis",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:23",
+        "group": "seo_analysis",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "2:24",
+        "group": "image_and_social",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:25",
+        "group": "image_and_social",
+        "free_pro_presentation_differs": true
+      },
+      {
+        "id": "2:26",
+        "group": "editor",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:27",
+        "group": "commercial",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:28",
+        "group": "editor",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:29",
+        "group": "editor",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:30",
+        "group": "editor",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:31",
+        "group": "core_metadata",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:32",
+        "group": "core_metadata",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:33",
+        "group": "core_metadata",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:34",
+        "group": "core_metadata",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:35",
+        "group": "editor",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:36",
+        "group": "crawler_controls",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:37",
+        "group": "core_metadata",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:38",
+        "group": "editor",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:39",
+        "group": "editor",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:40",
+        "group": "editor",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:41",
+        "group": "editor",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:42",
+        "group": "editor",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:43",
+        "group": "core_metadata",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:44",
+        "group": "commercial",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:45",
+        "group": "redirects_and_404",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:46",
+        "group": "redirects_and_404",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:47",
+        "group": "redirects_and_404",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:48",
+        "group": "redirects_and_404",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:49",
+        "group": "redirects_and_404",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:50",
+        "group": "redirects_and_404",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:51",
+        "group": "redirects_and_404",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:52",
+        "group": "commercial",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:53",
+        "group": "redirects_and_404",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:54",
+        "group": "redirects_and_404",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:55",
+        "group": "redirects_and_404",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:56",
+        "group": "redirects_and_404",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:57",
+        "group": "commercial",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:58",
+        "group": "schema",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:59",
+        "group": "schema",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:60",
+        "group": "schema",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:61",
+        "group": "schema",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:62",
+        "group": "schema",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:63",
+        "group": "local",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:64",
+        "group": "schema",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:65",
+        "group": "schema",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:66",
+        "group": "schema",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:67",
+        "group": "schema",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:68",
+        "group": "schema",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:69",
+        "group": "schema",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:70",
+        "group": "schema",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:71",
+        "group": "schema",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:72",
+        "group": "video",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:73",
+        "group": "schema",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:74",
+        "group": "schema",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:75",
+        "group": "local",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:76",
+        "group": "image_and_social",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:77",
+        "group": "image_and_social",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:78",
+        "group": "image_and_social",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:79",
+        "group": "image_and_social",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:80",
+        "group": "image_and_social",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:81",
+        "group": "image_and_social",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:82",
+        "group": "image_and_social",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:83",
+        "group": "image_and_social",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:84",
+        "group": "image_and_social",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:85",
+        "group": "image_and_social",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:86",
+        "group": "image_and_social",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:87",
+        "group": "schema",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:88",
+        "group": "commercial",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:89",
+        "group": "local",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:90",
+        "group": "local",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:91",
+        "group": "core_metadata",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:92",
+        "group": "core_metadata",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:93",
+        "group": "core_metadata",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:94",
+        "group": "crawler_controls",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:95",
+        "group": "crawler_controls",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:96",
+        "group": "crawler_controls",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:97",
+        "group": "crawler_controls",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:98",
+        "group": "crawler_controls",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:99",
+        "group": "crawler_controls",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:100",
+        "group": "crawler_controls",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:101",
+        "group": "crawler_controls",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:102",
+        "group": "breadcrumbs",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:103",
+        "group": "core_metadata",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:104",
+        "group": "image_and_social",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:105",
+        "group": "core_metadata",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:106",
+        "group": "core_metadata",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:107",
+        "group": "local",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:108",
+        "group": "commerce",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:109",
+        "group": "commercial",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:110",
+        "group": "core_metadata",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:111",
+        "group": "core_metadata",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:112",
+        "group": "crawler_controls",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:113",
+        "group": "crawler_controls",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:114",
+        "group": "crawler_controls",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:115",
+        "group": "import_export",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:116",
+        "group": "core_metadata",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:117",
+        "group": "core_metadata",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:118",
+        "group": "core_metadata",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:119",
+        "group": "commercial",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:120",
+        "group": "commercial",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:121",
+        "group": "commercial",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:122",
+        "group": "commercial",
+        "free_pro_presentation_differs": false
+      },
+      {
+        "id": "2:123",
+        "group": "commercial",
+        "free_pro_presentation_differs": false
+      }
+    ],
+    "unmapped": [],
+    "method": "All feature rows from both comparison tables; business/agency columns retained privately. Rows are grouped for TFSC review; repeated marketing claims are not counted as separate technical dependencies."
+  },
+  "pro_source_revalidation": {
+    "files": 212,
+    "changed_files": []
+  },
+  "metadata": {
+    "schema_all_tables": {
+      "postmeta": [],
+      "termmeta": [],
+      "usermeta": []
+    },
+    "schema_templates": [],
+    "nonempty_overlays": {
+      "postmeta": [],
+      "termmeta": [],
+      "usermeta": []
+    },
+    "pro_variable_occurrences": []
+  },
+  "content_markers_by_status": {
+    "publish": {
+      "data-schema-attribute": 36,
+      "wp:rank-math/faq-block": 16
+    },
+    "draft": {
+      "wp:rank-math/faq-block": 1
+    }
+  },
+  "code_and_builder_scan": {
+    "elementor_documents_all_states": 105,
+    "elementor_pro_shortcodes": [],
+    "active_snippets_scanned": 35,
+    "direct_pro_references_in_snippets": [],
+    "other_tfsc_php_files_scanned": 47,
+    "direct_pro_references_in_other_tfsc_plugins": []
+  },
+  "public_after_owner_deactivation": {
+    "pages": 48,
+    "differences": [],
+    "sitemaps": 30,
+    "sitemap_changes": []
+  },
+  "faq": {
+    "pages": 16,
+    "expected_questions": 39,
+    "failures": [],
+    "pages_checked": [
+      {
+        "id": 12943,
+        "url": "https://thefieldservicecompany.nl/vacature/internationaal-commissioning-engineer-renewable-energy/",
+        "expected_count": 3,
+        "schema_count": 3,
+        "visible_count": 3,
+        "all_expected_questions_in_schema": true,
+        "all_expected_questions_visible": true,
+        "missing_schema": []
+      },
+      {
+        "id": 13153,
+        "url": "https://thefieldservicecompany.nl/vacature/service-engineer-offshore-kranen/",
+        "expected_count": 3,
+        "schema_count": 3,
+        "visible_count": 3,
+        "all_expected_questions_in_schema": true,
+        "all_expected_questions_visible": true,
+        "missing_schema": []
+      },
+      {
+        "id": 13190,
+        "url": "https://thefieldservicecompany.nl/vacature/field-service-engineer-verpakkingsmachines/",
+        "expected_count": 4,
+        "schema_count": 4,
+        "visible_count": 4,
+        "all_expected_questions_in_schema": true,
+        "all_expected_questions_visible": true,
+        "missing_schema": []
+      },
+      {
+        "id": 13315,
+        "url": "https://thefieldservicecompany.nl/vacature/service-monteur-verpakkingsmachines/",
+        "expected_count": 2,
+        "schema_count": 2,
+        "visible_count": 2,
+        "all_expected_questions_in_schema": true,
+        "all_expected_questions_visible": true,
+        "missing_schema": []
+      },
+      {
+        "id": 14729,
+        "url": "https://thefieldservicecompany.nl/vacature/internationaal-service-engineer-verpakkingsmachines/",
+        "expected_count": 2,
+        "schema_count": 2,
+        "visible_count": 2,
+        "all_expected_questions_in_schema": true,
+        "all_expected_questions_visible": true,
+        "missing_schema": []
+      },
+      {
+        "id": 14942,
+        "url": "https://thefieldservicecompany.nl/vacature/service-engineer-koeltechniek-vacature/",
+        "expected_count": 1,
+        "schema_count": 1,
+        "visible_count": 1,
+        "all_expected_questions_in_schema": true,
+        "all_expected_questions_visible": true,
+        "missing_schema": []
+      },
+      {
+        "id": 14952,
+        "url": "https://thefieldservicecompany.nl/vacature/internationaal-service-engineer-koeltechniek-wereldwijd/",
+        "expected_count": 2,
+        "schema_count": 2,
+        "visible_count": 2,
+        "all_expected_questions_in_schema": true,
+        "all_expected_questions_visible": true,
+        "missing_schema": []
+      },
+      {
+        "id": 18590,
+        "url": "https://thefieldservicecompany.nl/vacature/koelmonteur-koudetechniek/",
+        "expected_count": 5,
+        "schema_count": 5,
+        "visible_count": 5,
+        "all_expected_questions_in_schema": true,
+        "all_expected_questions_visible": true,
+        "missing_schema": []
+      },
+      {
+        "id": 18605,
+        "url": "https://thefieldservicecompany.nl/vacature/junior-koelmonteur/",
+        "expected_count": 4,
+        "schema_count": 4,
+        "visible_count": 4,
+        "all_expected_questions_in_schema": true,
+        "all_expected_questions_visible": true,
+        "missing_schema": []
+      },
+      {
+        "id": 18645,
+        "url": "https://thefieldservicecompany.nl/vacature/koeltechnieker-belgie/",
+        "expected_count": 2,
+        "schema_count": 2,
+        "visible_count": 2,
+        "all_expected_questions_in_schema": true,
+        "all_expected_questions_visible": true,
+        "missing_schema": []
+      },
+      {
+        "id": 20453,
+        "url": "https://thefieldservicecompany.nl/vacature/field-service-engineer-elektrotechniek/",
+        "expected_count": 1,
+        "schema_count": 1,
+        "visible_count": 1,
+        "all_expected_questions_in_schema": true,
+        "all_expected_questions_visible": true,
+        "missing_schema": []
+      },
+      {
+        "id": 20517,
+        "url": "https://thefieldservicecompany.nl/vacature/field-service-engineer-vacature/",
+        "expected_count": 2,
+        "schema_count": 2,
+        "visible_count": 2,
+        "all_expected_questions_in_schema": true,
+        "all_expected_questions_visible": true,
+        "missing_schema": []
+      },
+      {
+        "id": 20806,
+        "url": "https://thefieldservicecompany.nl/vacature/service-engineer-aandrijftechniek-elektrotechniek/",
+        "expected_count": 2,
+        "schema_count": 2,
+        "visible_count": 2,
+        "all_expected_questions_in_schema": true,
+        "all_expected_questions_visible": true,
+        "missing_schema": []
+      },
+      {
+        "id": 20823,
+        "url": "https://thefieldservicecompany.nl/vacature/service-monteur-internationaal/",
+        "expected_count": 2,
+        "schema_count": 2,
+        "visible_count": 2,
+        "all_expected_questions_in_schema": true,
+        "all_expected_questions_visible": true,
+        "missing_schema": []
+      },
+      {
+        "id": 22531,
+        "url": "https://thefieldservicecompany.nl/vacature/field-service-engineer-internationaal/",
+        "expected_count": 3,
+        "schema_count": 3,
+        "visible_count": 3,
+        "all_expected_questions_in_schema": true,
+        "all_expected_questions_visible": true,
+        "missing_schema": []
+      },
+      {
+        "id": 22702,
+        "url": "https://thefieldservicecompany.nl/vacature/service-engineer-mechanisch-elektrisch/",
+        "expected_count": 1,
+        "schema_count": 1,
+        "visible_count": 1,
+        "all_expected_questions_in_schema": true,
+        "all_expected_questions_visible": true,
+        "missing_schema": []
+      }
+    ]
+  },
+  "other_endpoints": [
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "type": "text/plain"
+    },
+    {
+      "path": "/llms.txt",
+      "status": 404
+    },
+    {
+      "path": "/feed/",
+      "status": 200,
+      "type": "application/rss+xml; charset=UTF-8",
+      "xml_root": "rss"
+    },
+    {
+      "path": "/vacatures/page/2/",
+      "status": 200,
+      "type": "text/html; charset=UTF-8"
+    },
+    {
+      "path": "/beroepengids/artikelen/page/2/",
+      "status": 200,
+      "type": "text/html; charset=UTF-8"
+    }
+  ],
+  "pagination": [
+    {
+      "path": "/vacatures/page/2/",
+      "status": 200,
+      "canonical": "https://thefieldservicecompany.nl/vacatures/page/2/",
+      "robots": "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+      "breadcrumb_count": 2
+    },
+    {
+      "path": "/beroepengids/artikelen/page/2/",
+      "status": 200,
+      "canonical": "https://thefieldservicecompany.nl/beroepengids/artikelen/page/2/",
+      "robots": "follow, index",
+      "breadcrumb_count": 1
+    }
+  ],
+  "local_tests": {
+    "compatibility_checks_passed": 56,
+    "additional_free_workflow_checks_passed": 8,
+    "earlier_focused_widget_checks_passed": 27,
+    "scope": "fresh disposable WordPress database; no live content edits"
+  },
+  "correction": {
+    "feature": "noindex_password_protected",
+    "official_matrix_labels_pro": true,
+    "implemented_in_installed_free": true,
+    "local_free_renderer_verified": true,
+    "tfsc_setting": "off"
+  },
+  "acf_images": {
+    "acf_function_exists": false,
+    "include_acf_images_option_set": false,
+    "sitemap_comparison_equal": true
+  },
+  "static_files_present": {
+    "robots_txt": true,
+    "llms_txt": false,
+    "htaccess": true
+  },
+  "audit_route": {
+    "temporary_snippet_id": 410,
+    "active_after_cleanup": false,
+    "http_after_cleanup": 404,
+    "methods_during_audit": [
+      "GET"
+    ]
+  },
+  "content_template_seo_setting_changes_during_followup": []
+}

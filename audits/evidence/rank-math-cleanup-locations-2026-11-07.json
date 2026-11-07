@@ -1,0 +1,406 @@
+{
+  "date": "2026-11-07",
+  "site": "https://thefieldservicecompany.nl",
+  "time_utc": "2026-11-07T12:31:35+00:00",
+  "extension_version": "0.3.0",
+  "pro_active": false,
+  "seo_analyzer": true,
+  "cleanup_enabled": true,
+  "cleanup_hooks": {
+    "post_tracking": 20,
+    "term_tracking": 20,
+    "post_deletion": 20,
+    "term_deletion": 20
+  },
+  "extension_sha256": {
+    "tfsc-rank-math-breadcrumbs.php": "67a76d9284fa20233c5b046a8f12db7b456595d9dc4f0216a85110775b75f5eb",
+    "widget-breadcrumbs.php": "1c4bcd6a5c33a9f066c1413c3adac7760db5e9bcc4ec5b9f8ed48df6fb2b1840",
+    "README.md": "717d8de1824801fcf96fa3deca02886170eaf33cf26955e3387950e9f4f8b28c"
+  },
+  "existing_redirects_preserved": 265,
+  "existing_post_associations_preserved": 37,
+  "existing_term_associations_preserved": 15,
+  "rank_math_settings_unchanged": true,
+  "structured_data": {
+    "version": "0.5.3",
+    "repository": "https://github.com/TheFieldServiceCompany/tfsc-structured-data",
+    "source_sha256": {
+      "tfsc-structured-data.php": "4ad76e0026316fd703350cb2a1798271c52712981788816cf83bf85df0e4dab5",
+      "includes/class-tfsc-structured-data.php": "d3b6e0e98f535119cf44f6646012e5ada4ccefe6b180218370d52e49e5240b68",
+      "includes/class-tfsc-wordpress-data.php": "b64a154d53648823d9867f1ac2f397bd4c0483a4eae254d54eb092efecdebf2b",
+      "includes/class-tfsc-schema-builder.php": "306ae494d62eea5b717d707f3475b35dbd0238a2200deac59a54e967fde77b27",
+      "includes/class-tfsc-custom-schema.php": "279ea8bbd6867e3507018feac6f18d858117ca354d4f5043620b2e30b65cf6ec"
+    },
+    "github_blob_sha1": {
+      "tfsc-structured-data.php": "530e6e6f7d8fd7c3d2a2dd96bc1971daafd93275",
+      "includes/class-tfsc-structured-data.php": "db6f10c485ead706a5e416b46524d4c21f48a38a",
+      "includes/class-tfsc-wordpress-data.php": "3ce2ceee4f1f2f9cece2c844a00125e6188f1199",
+      "includes/class-tfsc-schema-builder.php": "793bf9b6edb6270fc89738ca6557a85845232611",
+      "includes/class-tfsc-custom-schema.php": "8e8433debd014d50eb471cc0a96a4bb747bcaf07",
+      "tests/run.php": "37acf802857c36804df334ba7551703d899a2f6a"
+    },
+    "independent_of_rank_math_pro": true,
+    "taxonomy": "locatie",
+    "term_count": 60,
+    "agency_homepage_enabled": false,
+    "multi_location_examples": [
+      {
+        "url": "https://thefieldservicecompany.nl/vacature/internationaal-service-monteur-renewable-energy/",
+        "physical_locations": 43
+      },
+      {
+        "url": "https://thefieldservicecompany.nl/vacature/internationaal-commissioning-engineer-renewable-energy/",
+        "physical_locations": 43
+      },
+      {
+        "url": "https://thefieldservicecompany.nl/vacature/internationaal-service-engineer-offshore/",
+        "physical_locations": 24
+      },
+      {
+        "url": "https://thefieldservicecompany.nl/vacature/service-engineer-maritiem-offshore-internationaal/",
+        "physical_locations": 18
+      },
+      {
+        "url": "https://thefieldservicecompany.nl/vacature/service-engineer-offshore-kranen/",
+        "physical_locations": 44
+      },
+      {
+        "url": "https://thefieldservicecompany.nl/vacature/field-service-engineer-biogas-green-energy/",
+        "physical_locations": 44
+      },
+      {
+        "url": "https://thefieldservicecompany.nl/vacature/service-engineer-packaging-internationaal/",
+        "physical_locations": 43
+      },
+      {
+        "url": "https://thefieldservicecompany.nl/vacature/service-monteur-verpakkingsmachines/",
+        "physical_locations": 43
+      },
+      {
+        "url": "https://thefieldservicecompany.nl/vacature/field-service-engineer-high-tech/",
+        "physical_locations": 9
+      },
+      {
+        "url": "https://thefieldservicecompany.nl/vacature/junior-koelmonteur/",
+        "physical_locations": 43
+      },
+      {
+        "url": "https://thefieldservicecompany.nl/vacature/internationaal-service-monteur-machinebouw/",
+        "physical_locations": 20
+      },
+      {
+        "url": "https://thefieldservicecompany.nl/vacature/field-service-engineer-elektrotechniek/",
+        "physical_locations": 24
+      },
+      {
+        "url": "https://thefieldservicecompany.nl/vacature/service-monteur-mechanisch/",
+        "physical_locations": 4
+      },
+      {
+        "url": "https://thefieldservicecompany.nl/vacature/internationaal-service-engineer-koeltechniek-wereldwijd/",
+        "physical_locations": 42
+      },
+      {
+        "url": "https://thefieldservicecompany.nl/vacature/koeltechnieker-belgie/",
+        "physical_locations": 5
+      },
+      {
+        "url": "https://thefieldservicecompany.nl/vacature/service-engineer-koeltechniek-vacature/",
+        "physical_locations": 43
+      },
+      {
+        "url": "https://thefieldservicecompany.nl/vacature/koelmonteur-koudetechniek/",
+        "physical_locations": 40
+      },
+      {
+        "url": "https://thefieldservicecompany.nl/vacature/service-monteur-scrubbers/",
+        "physical_locations": 6
+      },
+      {
+        "url": "https://thefieldservicecompany.nl/vacature/field-service-engineer-allround/",
+        "physical_locations": 34
+      },
+      {
+        "url": "https://thefieldservicecompany.nl/vacature/service-monteur-internationaal/",
+        "physical_locations": 27
+      },
+      {
+        "url": "https://thefieldservicecompany.nl/vacature/field-service-engineer-internationaal/",
+        "physical_locations": 29
+      },
+      {
+        "url": "https://thefieldservicecompany.nl/vacature/service-engineer-mechanisch-elektrisch/",
+        "physical_locations": 19
+      },
+      {
+        "url": "https://thefieldservicecompany.nl/vacature/field-service-engineer-verpakkingsmachines/",
+        "physical_locations": 44
+      },
+      {
+        "url": "https://thefieldservicecompany.nl/vacature/field-service-engineer-australie/",
+        "physical_locations": 44
+      },
+      {
+        "url": "https://thefieldservicecompany.nl/vacature/service-monteur-zonnepanelen-b2b/",
+        "physical_locations": 29
+      },
+      {
+        "url": "https://thefieldservicecompany.nl/vacature/field-service-engineer-zonnepanelen/",
+        "physical_locations": 38
+      },
+      {
+        "url": "https://thefieldservicecompany.nl/vacature/field-service-engineer-benelux/",
+        "physical_locations": 30
+      }
+    ]
+  },
+  "tests": {
+    "focused_widget": 27,
+    "full_compatibility": 56,
+    "free_baseline": 8,
+    "cleanup_workflows": 18,
+    "structured_data_assertions": 92,
+    "deletion_tests_scope": "Disposable local WordPress database only; no live content deletion"
+  },
+  "public_comparison_with_morning_baseline": {
+    "pages": 48,
+    "differences": [],
+    "sitemaps": 30,
+    "sitemap_changes": [
+      "https://thefieldservicecompany.nl/locatie-sitemap.xml",
+      "https://thefieldservicecompany.nl/kennisbankartikel-sitemap.xml",
+      "https://thefieldservicecompany.nl/beroep_bedrijfssector-sitemap.xml",
+      "https://thefieldservicecompany.nl/werkgebied-sitemap.xml",
+      "https://thefieldservicecompany.nl/vac_studierichting-sitemap.xml",
+      "https://thefieldservicecompany.nl/bedrijfssector-sitemap.xml",
+      "https://thefieldservicecompany.nl/functie-inhoud-sitemap.xml",
+      "https://thefieldservicecompany.nl/beroep_kennisgebied-sitemap.xml",
+      "https://thefieldservicecompany.nl/beroepengids-sitemap.xml",
+      "https://thefieldservicecompany.nl/kennisgebied-sitemap.xml",
+      "https://thefieldservicecompany.nl/vacature-sitemap.xml"
+    ]
+  },
+  "sitemap_generator_control": {
+    "method": "Independent authenticated generator requests; compare parsed XML values, ignoring element order and lastmod timestamps. No cleanup action is invoked.",
+    "checked": 30,
+    "differences": [],
+    "results": [
+      {
+        "type": "page",
+        "page": 1,
+        "same": true,
+        "with_cleanup_sha256": "2010eb4a2a907fcc5fb34ac5b23a5ea9a6ad7af4ce5f3e3110c619fad2c147b8",
+        "without_cleanup_sha256": "2010eb4a2a907fcc5fb34ac5b23a5ea9a6ad7af4ce5f3e3110c619fad2c147b8"
+      },
+      {
+        "type": "beroepengids",
+        "page": 1,
+        "same": true,
+        "with_cleanup_sha256": "a71d50e036e07fea07e13d21973fcfacabb4d33cb89c0ec901ca7de91ff522d3",
+        "without_cleanup_sha256": "a71d50e036e07fea07e13d21973fcfacabb4d33cb89c0ec901ca7de91ff522d3"
+      },
+      {
+        "type": "blog",
+        "page": 1,
+        "same": true,
+        "with_cleanup_sha256": "5c2c3047d40637d9a46ac648629d600627b5648612d7c4a7cb4d2d2a230b0e38",
+        "without_cleanup_sha256": "5c2c3047d40637d9a46ac648629d600627b5648612d7c4a7cb4d2d2a230b0e38"
+      },
+      {
+        "type": "kennisbankartikel",
+        "page": 1,
+        "same": true,
+        "with_cleanup_sha256": "9feffe41cc31e601736562adc5828d4098a20cf0dd3f6e8bd90a07fab75154f6",
+        "without_cleanup_sha256": "9feffe41cc31e601736562adc5828d4098a20cf0dd3f6e8bd90a07fab75154f6"
+      },
+      {
+        "type": "vacature",
+        "page": 1,
+        "same": true,
+        "with_cleanup_sha256": "eeff62749166457dc1c32dfb60788ed9638256af211803e6cc8102004bc9cde9",
+        "without_cleanup_sha256": "eeff62749166457dc1c32dfb60788ed9638256af211803e6cc8102004bc9cde9"
+      },
+      {
+        "type": "vacature_ingevuld",
+        "page": 1,
+        "same": true,
+        "with_cleanup_sha256": "9ed4cb766ecf8ff4cfdea7bc7910faa4860bac8ad69e2ddde60ea84a0ecd203b",
+        "without_cleanup_sha256": "9ed4cb766ecf8ff4cfdea7bc7910faa4860bac8ad69e2ddde60ea84a0ecd203b"
+      },
+      {
+        "type": "bedrijfssector",
+        "page": 1,
+        "same": true,
+        "with_cleanup_sha256": "81e37fd59732fde6102bbbef6d46470c55b6fe4c28430790026a09601b626c4c",
+        "without_cleanup_sha256": "81e37fd59732fde6102bbbef6d46470c55b6fe4c28430790026a09601b626c4c"
+      },
+      {
+        "type": "beroep_bedrijfssector",
+        "page": 1,
+        "same": true,
+        "with_cleanup_sha256": "fcc8ae119c485fab1efc4a3c7ffa885be5f592f499766b16edf6451bf748ddc2",
+        "without_cleanup_sha256": "fcc8ae119c485fab1efc4a3c7ffa885be5f592f499766b16edf6451bf748ddc2"
+      },
+      {
+        "type": "dagen-internationaal",
+        "page": 1,
+        "same": true,
+        "with_cleanup_sha256": "fd18f82622015dc31585b17fab745dd4b8a7074e39e7c5389a979464b3257342",
+        "without_cleanup_sha256": "fd18f82622015dc31585b17fab745dd4b8a7074e39e7c5389a979464b3257342"
+      },
+      {
+        "type": "dienstverband",
+        "page": 1,
+        "same": true,
+        "with_cleanup_sha256": "cd3cbe60ce93de590ad23e054e67c52a891a2bf34286979cbd9aaaceeb48739b",
+        "without_cleanup_sha256": "cd3cbe60ce93de590ad23e054e67c52a891a2bf34286979cbd9aaaceeb48739b"
+      },
+      {
+        "type": "functie-inhoud",
+        "page": 1,
+        "same": true,
+        "with_cleanup_sha256": "24568866a2b08c6cd0f648b399d666db00c731623fa4e085eaf66881519b97eb",
+        "without_cleanup_sha256": "24568866a2b08c6cd0f648b399d666db00c731623fa4e085eaf66881519b97eb"
+      },
+      {
+        "type": "beroep_functie-inhoud",
+        "page": 1,
+        "same": true,
+        "with_cleanup_sha256": "8655162e846c3021b6f9fe3e39c1b181ac846f5738f50eb407e00f2126bba007",
+        "without_cleanup_sha256": "8655162e846c3021b6f9fe3e39c1b181ac846f5738f50eb407e00f2126bba007"
+      },
+      {
+        "type": "functienaam",
+        "page": 1,
+        "same": true,
+        "with_cleanup_sha256": "01e7b5d17beec5dc28eed0b79984f09b251e22ef481fd475e7d286bfe093393f",
+        "without_cleanup_sha256": "01e7b5d17beec5dc28eed0b79984f09b251e22ef481fd475e7d286bfe093393f"
+      },
+      {
+        "type": "beroep_functienaam",
+        "page": 1,
+        "same": true,
+        "with_cleanup_sha256": "9209f1be1348aef1b8825b2476f1c25ef5390e17120d21018a2b1bc09de28040",
+        "without_cleanup_sha256": "9209f1be1348aef1b8825b2476f1c25ef5390e17120d21018a2b1bc09de28040"
+      },
+      {
+        "type": "hotel-nachten-maand",
+        "page": 1,
+        "same": true,
+        "with_cleanup_sha256": "7ff9ac167bb67e796113497332566530084c1a2ef4195554c8ec55fd61fb3ac4",
+        "without_cleanup_sha256": "7ff9ac167bb67e796113497332566530084c1a2ef4195554c8ec55fd61fb3ac4"
+      },
+      {
+        "type": "kennisgebied",
+        "page": 1,
+        "same": true,
+        "with_cleanup_sha256": "1db2aa70f651ded5adcec03b11c3478ea458d045b89381de1ce60d76bc146e36",
+        "without_cleanup_sha256": "1db2aa70f651ded5adcec03b11c3478ea458d045b89381de1ce60d76bc146e36"
+      },
+      {
+        "type": "beroep_kennisgebied",
+        "page": 1,
+        "same": true,
+        "with_cleanup_sha256": "a1bfeedcff82c0905f1c8efca384af3d4e7e7f63d39f8ba89b5bd5136653267e",
+        "without_cleanup_sha256": "a1bfeedcff82c0905f1c8efca384af3d4e7e7f63d39f8ba89b5bd5136653267e"
+      },
+      {
+        "type": "locatie",
+        "page": 1,
+        "same": true,
+        "with_cleanup_sha256": "b049c7057d2ec4d80dd8a16f85dc04e33f97d7bb7d8df2d9319dff333429a2f1",
+        "without_cleanup_sha256": "b049c7057d2ec4d80dd8a16f85dc04e33f97d7bb7d8df2d9319dff333429a2f1"
+      },
+      {
+        "type": "opleidingsniveau",
+        "page": 1,
+        "same": true,
+        "with_cleanup_sha256": "cf0a06e3157b0c2a3804937be6c8bf10c40c11433988814336bbebd8fd9a821c",
+        "without_cleanup_sha256": "cf0a06e3157b0c2a3804937be6c8bf10c40c11433988814336bbebd8fd9a821c"
+      },
+      {
+        "type": "reisprofiel",
+        "page": 1,
+        "same": true,
+        "with_cleanup_sha256": "5e2f9dd49acfd506d540eef03bb08b5556e758fc613bd4e4647ff9caa5bdefbf",
+        "without_cleanup_sha256": "5e2f9dd49acfd506d540eef03bb08b5556e758fc613bd4e4647ff9caa5bdefbf"
+      },
+      {
+        "type": "vac_studierichting",
+        "page": 1,
+        "same": true,
+        "with_cleanup_sha256": "3952fb4ffd18915cf2ccc64fc556d8f85da2b54225ca021d149f77881cd0d2be",
+        "without_cleanup_sha256": "3952fb4ffd18915cf2ccc64fc556d8f85da2b54225ca021d149f77881cd0d2be"
+      },
+      {
+        "type": "beroep_studierichting",
+        "page": 1,
+        "same": true,
+        "with_cleanup_sha256": "3d84b5ea90fae2db0c974b07d66c4ef2bdc56934cb432e1589374d47b254a0de",
+        "without_cleanup_sha256": "3d84b5ea90fae2db0c974b07d66c4ef2bdc56934cb432e1589374d47b254a0de"
+      },
+      {
+        "type": "weekenden-thuis",
+        "page": 1,
+        "same": true,
+        "with_cleanup_sha256": "b05f56d3f98307b02c876a3ccd43f4896e141d8a0b55eb5d0ee7150155254dcc",
+        "without_cleanup_sha256": "b05f56d3f98307b02c876a3ccd43f4896e141d8a0b55eb5d0ee7150155254dcc"
+      },
+      {
+        "type": "werkgebied",
+        "page": 1,
+        "same": true,
+        "with_cleanup_sha256": "0dd868c964703e94f4bff4e9ed85330a529ef67d597ed832e4f28dbb2372f6da",
+        "without_cleanup_sha256": "0dd868c964703e94f4bff4e9ed85330a529ef67d597ed832e4f28dbb2372f6da"
+      },
+      {
+        "type": "combo-vacatures",
+        "page": 1,
+        "same": true,
+        "with_cleanup_sha256": "10c608fd77ce22d1b3f339429c9cbeaecccf9cbb3accdea09f6112b5ddf3adb1",
+        "without_cleanup_sha256": "10c608fd77ce22d1b3f339429c9cbeaecccf9cbb3accdea09f6112b5ddf3adb1"
+      },
+      {
+        "type": "combo-vacatures",
+        "page": 2,
+        "same": true,
+        "with_cleanup_sha256": "06ebbdd64ee71826592e3dc3cd6bf5ef88b3447df92497891d28cebcd3f60796",
+        "without_cleanup_sha256": "06ebbdd64ee71826592e3dc3cd6bf5ef88b3447df92497891d28cebcd3f60796"
+      },
+      {
+        "type": "combo-vacatures",
+        "page": 3,
+        "same": true,
+        "with_cleanup_sha256": "b7ae9b37f04d30b0727d7a1626e61c042f2cf634968ac2ac99a9e27f5f4d4d54",
+        "without_cleanup_sha256": "b7ae9b37f04d30b0727d7a1626e61c042f2cf634968ac2ac99a9e27f5f4d4d54"
+      },
+      {
+        "type": "local",
+        "page": 1,
+        "same": true,
+        "with_cleanup_sha256": "05a2509b0f86982d6ac73e908f79516fac6332db1e4eda6cd72202a919212cea",
+        "without_cleanup_sha256": "05a2509b0f86982d6ac73e908f79516fac6332db1e4eda6cd72202a919212cea"
+      },
+      {
+        "type": "1",
+        "page": 1,
+        "same": true,
+        "with_cleanup_sha256": "4a8397c0861c879cdd6a899e6a5dcbd5b2629e218992ce981b7c41a81fd4c1cf",
+        "without_cleanup_sha256": "4a8397c0861c879cdd6a899e6a5dcbd5b2629e218992ce981b7c41a81fd4c1cf"
+      },
+      {
+        "type": "locations",
+        "page": 1,
+        "same": true,
+        "with_cleanup_sha256": "7d6b1982f60c4f0dd13899bf85aecb2d7743b6f75ac567778643f1456895f873",
+        "without_cleanup_sha256": "7d6b1982f60c4f0dd13899bf85aecb2d7743b6f75ac567778643f1456895f873"
+      }
+    ]
+  },
+  "temporary_snippet": {
+    "id": 410,
+    "active": false,
+    "route_after_cleanup": 404
+  },
+  "package_sha256": "510f8b6f7151255475094090ff507769e791dc9f598812343b26734291ea227d"
+}
