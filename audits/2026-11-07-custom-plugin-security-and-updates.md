@@ -1,5 +1,7 @@
 # Eigen WordPress-plugins: beveiliging, aanvalstests en updates
 
+**Later op 7 november:** de vier bevindingen zijn gerepareerd en de twee nieuwe versies zijn geplaatst. Zie [het herstelverslag](2026-11-07-custom-plugin-security-fixes.md). Hieronder staat de oorspronkelijke nulmeting, inclusief de toenmalige nog-open-status.
+
 Onderzocht op 7 november 2026, op basis van de daadwerkelijk geïnstalleerde broncode van elf TFSC-plugins. Productie: WordPress **7.1.4**, PHP **8.5.12**. Er zijn vier bevindingen gereproduceerd. **De audit is afgerond; de hieronder voorgestelde reparaties zijn nog niet uitgevoerd.**
 
 De hoogste prioriteit ligt bij de herkomstcontrole van documenten in Form Bridge. Daarna volgen de integriteit en begrenzing van de diagnostiek en de aanvraaglimiet van de serverprobe. De andere plugins hebben in de onderzochte paden geen nieuwe aangetoonde beveiligingsfout opgeleverd. Dat is geen verklaring dat alle mogelijke aanvallen uitgesloten zijn.
