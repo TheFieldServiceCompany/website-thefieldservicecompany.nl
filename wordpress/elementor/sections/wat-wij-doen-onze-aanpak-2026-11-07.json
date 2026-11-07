@@ -1,0 +1,124 @@
+{
+  "id": "7441fe7",
+  "elType": "container",
+  "settings": {
+    "background_background": "classic",
+    "box_shadow_box_shadow": {
+      "horizontal": 0,
+      "vertical": 0,
+      "blur": 10,
+      "spread": 0,
+      "color": "rgba(0, 0, 0, 0.1)"
+    },
+    "padding": {
+      "unit": "px",
+      "top": "40",
+      "right": "40",
+      "bottom": "40",
+      "left": "40",
+      "isLinked": true
+    },
+    "padding_mobile": {
+      "unit": "px",
+      "top": "30",
+      "right": "20",
+      "bottom": "20",
+      "left": "20",
+      "isLinked": false
+    },
+    "__globals__": {
+      "background_color": "globals/colors?id=3df8c800",
+      "border_color": "globals/colors?id=3a5c802f"
+    },
+    "content_width": "full",
+    "border_border": "solid",
+    "border_width": {
+      "unit": "px",
+      "top": "1",
+      "right": "1",
+      "bottom": "1",
+      "left": "1",
+      "isLinked": true
+    },
+    "_element_id": "onze-aanpak"
+  },
+  "elements": [
+    {
+      "id": "5786a80",
+      "elType": "widget",
+      "settings": {
+        "title": "Onze aanpak",
+        "align_mobile": "left",
+        "dce_visibility_repeater": [],
+        "_padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "20",
+          "left": "0",
+          "isLinked": false
+        },
+        "_border_border": "solid",
+        "_border_width": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "1",
+          "left": "0",
+          "isLinked": false
+        },
+        "__globals__": {
+          "_border_color": "globals/colors?id=3a5c802f"
+        },
+        "_padding_tablet": {
+          "unit": "em",
+          "top": "0",
+          "right": "0",
+          "bottom": "1",
+          "left": "0",
+          "isLinked": false
+        },
+        "_padding_mobile": {
+          "unit": "em",
+          "top": "",
+          "right": "",
+          "bottom": "",
+          "left": "",
+          "isLinked": true
+        },
+        "align": "start",
+        "header_size": "h2"
+      },
+      "elements": [],
+      "widgetType": "heading"
+    },
+    {
+      "id": "65affb8",
+      "elType": "widget",
+      "settings": {
+        "editor": "<p>Jouw volgende baan moet passen bij je technische kennis, je ambities en het leven dat je wilt leiden. Daarom kijken we bij The Field Service Company naar het hele plaatje: wat wil je, wat kun je en waar woon je?</p>\n<h3>Werkgevers die we zorgvuldig selecteren</h3>\n<p>We zijn kritisch op de werkgevers waarmee we samenwerken. We verdiepen ons in hun machines, techniek en manier van werken. Hoe wordt het serviceteam aangestuurd? Hoe gaan ze met hun mensen om? Welke vrijheid krijg je om problemen op te lossen en jezelf verder te ontwikkelen? We leren de leidinggevenden kennen en kijken naar de bedrijfscultuur, de kwaliteit van het werk en de toekomstplannen. We werken met bedrijven waar we vertrouwen in hebben.</p>\n<h3>Jouw vak en jouw leven als vertrekpunt</h3>\n<p>We bespreken waar jij technisch goed in bent, wat je graag doet en waarin je wilt groeien. Ook de praktische kant telt mee: waar je woont, hoeveel je wilt reizen en hoe vaak je thuis wilt zijn. Het salaris, de voorwaarden en de sfeer binnen het team horen daar net zo goed bij. Zo verbinden we jouw kennis en wensen aan een werkgever die daarbij past.</p>\n<h3>Weten waar je voor kiest</h3>\n<p>We vertellen je welke werkgever we op het oog hebben, aan welke machines je gaat werken, wie je leidinggevende wordt en wat je van het werk en de voorwaarden kunt verwachten. Jij bepaalt of je verder wilt. Pas na jouw akkoord stellen we je voor. Zo ga je goed voorbereid het gesprek aan over jouw volgende stap in field service.</p>",
+        "align_mobile": "left",
+        "dce_visibility_repeater": [],
+        "_margin": {
+          "unit": "em",
+          "top": "",
+          "right": "",
+          "bottom": "",
+          "left": "",
+          "isLinked": true
+        },
+        "_margin_tablet": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        }
+      },
+      "elements": [],
+      "widgetType": "text-editor"
+    }
+  ],
+  "isInner": true
+}
