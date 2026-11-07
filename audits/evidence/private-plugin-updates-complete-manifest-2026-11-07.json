@@ -1,0 +1,345 @@
+{
+  "wordpress": "7.1.4",
+  "plugins": {
+    "tfsc-cache-warmer/tfsc-cache-warmer.php": {
+      "version": "0.6.4",
+      "active": true
+    },
+    "tfsc-combo-archive-manager/tfsc-combo-archive-manager.php": {
+      "version": "0.5.0",
+      "active": true
+    },
+    "tfsc-ai-crawler-log-main/tfsc-ai-crawler-log.php": {
+      "version": "1.4.5",
+      "active": true
+    },
+    "tfsc-custom-functions/tfsc-custom-functions.php": {
+      "version": "0.6.0",
+      "active": true
+    },
+    "tfsc-form-bridge/tfsc-form-bridge.php": {
+      "version": "0.5.6",
+      "active": true
+    },
+    "tfsc-media-filters/tfsc-media-filters.php": {
+      "version": "1.0.0",
+      "active": true
+    },
+    "tfsc-rank-math-breadcrumbs/tfsc-rank-math-breadcrumbs.php": {
+      "version": "0.3.1",
+      "active": true
+    },
+    "tfsc-schema-read-endpoint/tfsc-schema-read-endpoint.php": {
+      "version": "2.1.0",
+      "active": true
+    },
+    "server-location-test-probe/server-location-test-probe.php": {
+      "version": "0.1.2",
+      "active": true
+    },
+    "tfsc-structured-data/tfsc-structured-data.php": {
+      "version": "0.5.3",
+      "active": true
+    },
+    "updraft-pcloud-copy/updraft-pcloud-copy.php": {
+      "version": "0.2.4",
+      "active": true
+    },
+    "tfsc-private-updates/tfsc-private-updates.php": {
+      "version": "0.1.0",
+      "active": true
+    }
+  },
+  "sources": {
+    "tfsc-cache-warmer/docs/ARCHITECTURE.md": {
+      "sha256": "0268f87b300951f390de95e37eca406fb64071406f55352ecfa41c0d45774ec3"
+    },
+    "tfsc-cache-warmer/includes/class-admin.php": {
+      "sha256": "206ca3ddb2cb8fe96de0ace4c0804bc1de1bac67923740bafe8a4c63f4c37193"
+    },
+    "tfsc-cache-warmer/includes/class-assets.php": {
+      "sha256": "33ecb83e39ad27272319378536de8676df907a09b48157f54f9d5275df58f186"
+    },
+    "tfsc-cache-warmer/includes/class-discovery.php": {
+      "sha256": "c4fc76d97f6a0ab56ed3a97cd41d88ec5427c5056b65e0d10638e246526dcfd5"
+    },
+    "tfsc-cache-warmer/includes/class-plugin.php": {
+      "sha256": "3cc552a6c2806b7181a54932e83191fa08f041f73abacacff7e8e788fb9b2a24"
+    },
+    "tfsc-cache-warmer/includes/class-queue.php": {
+      "sha256": "e818caeaa8c417ab2166ad9594ebf89222b208cdf239b0ddc79d79ffed0f134a"
+    },
+    "tfsc-cache-warmer/includes/class-worker.php": {
+      "sha256": "344f66fe0f85bbe0d1a0ab69a90d98d3562406dcac7551cf8ada6154eff7a1e1"
+    },
+    "tfsc-cache-warmer/readme.txt": {
+      "sha256": "ddc60f98184ec04285d54ff2df22db64a35f4eb6cdcdbbc69a05f752112a4774"
+    },
+    "tfsc-cache-warmer/tfsc-cache-warmer.php": {
+      "sha256": "8876131ebacce967db789605ea6af1fde849a6d623e151f37d42b4db4dfdcad0"
+    },
+    "tfsc-combo-archive-manager/assets/admin.css": {
+      "sha256": "b9fdb4c35951fb56b07712956e81154eb104d985badc40fd770b46f3cc8a75a3"
+    },
+    "tfsc-combo-archive-manager/assets/admin.js": {
+      "sha256": "a3d6b12605cf16719054d652f29947b0eb26d164662da1c9b682947637703cd1"
+    },
+    "tfsc-combo-archive-manager/includes/class-admin.php": {
+      "sha256": "d3d27c3ea920bfd3c8480411267660953cc7375fe28f3e12118303aaab13b4bf"
+    },
+    "tfsc-combo-archive-manager/includes/class-audit.php": {
+      "sha256": "20f75d6a697576a22dad68f44be4f94ee1a2880408be0c7860bd42a2764c36b1"
+    },
+    "tfsc-combo-archive-manager/includes/class-counter.php": {
+      "sha256": "9cba784318e2f6ed6eaa85715054efb9b703dc202e0f28066a05efbc28556751"
+    },
+    "tfsc-combo-archive-manager/includes/class-functions.php": {
+      "sha256": "f6c8e589603e1aab8c86dcfe79e52418fdbb413960ec08ae4cf984524cefd40d"
+    },
+    "tfsc-combo-archive-manager/includes/class-plugin.php": {
+      "sha256": "0175378aeff8b40eb11f4be4fef5b0c4022f4396b8604f7663ab81f048e3e440"
+    },
+    "tfsc-combo-archive-manager/includes/class-policy.php": {
+      "sha256": "fa6ed6195ea13fd4535cfb5a6a3629863c8545adb1088a08af04b3d993c3d217"
+    },
+    "tfsc-combo-archive-manager/includes/class-rest.php": {
+      "sha256": "661418ca6e2b4b4af42786d6faee4d84499bda993fa7103e40cba6d536a25e2f"
+    },
+    "tfsc-combo-archive-manager/includes/class-selection.php": {
+      "sha256": "2ff89485fd9c7dd30836ffbbe9a73d30cdc7768b568fd378634513921d70cec1"
+    },
+    "tfsc-combo-archive-manager/includes/class-snapshots.php": {
+      "sha256": "145808251a696e38d7030fefb1e5ab6a3f30a1362a26fc312fcb7291a389ef1f"
+    },
+    "tfsc-combo-archive-manager/readme.txt": {
+      "sha256": "bd91f246772353f52d960927b6e3e498d34b1f6364ad44c1d6b2701bbfbc248c"
+    },
+    "tfsc-combo-archive-manager/tfsc-combo-archive-manager.php": {
+      "sha256": "24021e7ddde0b2d9f11cdc31f35b18245aecb152437e426f2e3825274fd2fbed"
+    },
+    "tfsc-ai-crawler-log-main/tfsc-ai-crawler-log.php": {
+      "sha256": "a8ad1a23816b5618b2863e9e1412461baef66a9333df2d8260c3cbfbf75e9b5f"
+    },
+    "tfsc-custom-functions/tfsc-custom-functions.php": {
+      "sha256": "67228d7a6b26c8be5bd09752b3ffd8b2cb05651da6e18f6925f258b52c3614cc"
+    },
+    "tfsc-custom-functions/tfsc-custom-stylesheet.css": {
+      "sha256": "cf4868a97d96805e8033fb76b05d886ef489fc8ce6aef766b625012b502fc6ed"
+    },
+    "tfsc-form-bridge/README.md": {
+      "sha256": "66580e276ac0f6f33791aafefb998d44ccea073e3d77be98c3d485ccde1b5d36"
+    },
+    "tfsc-form-bridge/assets/diagnostics.js": {
+      "sha256": "8d22fcd3728f3ebb1bc1be85699667ff0d2ade8fcb5c29dc72dd16b7d6d47076"
+    },
+    "tfsc-form-bridge/src/Activator.php": {
+      "sha256": "29db5caec6bd021431bd96167cbfe080a8102a645027260da1a5ce897378057b"
+    },
+    "tfsc-form-bridge/src/AdminPage.php": {
+      "sha256": "aa67e1c518825e8f459272e6f70e822698749bc276b3abc067564c4a4a6fa8da"
+    },
+    "tfsc-form-bridge/src/BackblazeClient.php": {
+      "sha256": "f635e7dee622e64ba0de13e27c24690d74eb405d9c4609dac81309330a6c70d6"
+    },
+    "tfsc-form-bridge/src/BricksAdapter.php": {
+      "sha256": "c9e6686b49d53b3fd4152e9009368db6ee7eed75eda6cc463ba360ad2096865a"
+    },
+    "tfsc-form-bridge/src/DeliveryWorker.php": {
+      "sha256": "ba49eb412e6727bf1f1fafb5165f1872273fa52d9cc6bec2e02fc8175b2bf660"
+    },
+    "tfsc-form-bridge/src/DiagnosticRepository.php": {
+      "sha256": "6d154c1be5c2da2f8e39e27bf3adc7b0d2b349b95cc88d6abe13cdbac15aa863"
+    },
+    "tfsc-form-bridge/src/DocumentManifest.php": {
+      "sha256": "f59af658b07c4bd77aa2857e4e3f8a1e11dfa9db73fb86083fed901075a0a0b0"
+    },
+    "tfsc-form-bridge/src/ElementorDiagnostics.php": {
+      "sha256": "4aa0d5155b6675ed0b4a419987ec9d61a17fecfde9dff49af7629d6a7aa6788f"
+    },
+    "tfsc-form-bridge/src/ElementorProAdapter.php": {
+      "sha256": "c3d25b8e9f3fe9bea7ab61cc7a6f42bf119f4a225eeed355adfa121e2ef31922"
+    },
+    "tfsc-form-bridge/src/EnvelopeSanitizer.php": {
+      "sha256": "d815abce4239e5b0874ca7353151054c345991eeeb298a98564cdd5b09b16fff"
+    },
+    "tfsc-form-bridge/src/FormDiscovery.php": {
+      "sha256": "5676d9318dd2e9f26dc2f2bca068709af32e96ff84691f4b39ce49ad042ae7dc"
+    },
+    "tfsc-form-bridge/src/MappingRepository.php": {
+      "sha256": "ff7ff8f1c476a0d6c08dd855843cff8ef0e395c17ea71562eac8a167d1b91699"
+    },
+    "tfsc-form-bridge/src/OutboxRepository.php": {
+      "sha256": "3a1500bf06608af58e93ea343c242ff3ee234ea66e3d809c9d83561df82e5249"
+    },
+    "tfsc-form-bridge/src/Plugin.php": {
+      "sha256": "bd0f67803abb1fc37364af5f46df857dc1c5d8d80575b82fa737879ef316fb2a"
+    },
+    "tfsc-form-bridge/src/RequestBudget.php": {
+      "sha256": "436dcf314f588c14afa3a20438d54f8d8d7d9a3b29ce7b5b4ce051ffcafcf5d2"
+    },
+    "tfsc-form-bridge/src/SubmissionNormalizer.php": {
+      "sha256": "d2baddafaf7e6ba7ec1c90f3ed7788d0f6bc5d6fb618a7d272a5c5102f843478"
+    },
+    "tfsc-form-bridge/src/TargetRegistry.php": {
+      "sha256": "8b6e950526480042fa080991d3aa1998e1798a7e89a5f137ddd023434e8067d3"
+    },
+    "tfsc-form-bridge/src/UploadProvenance.php": {
+      "sha256": "ff7001c1f093252197992f51eaed179915599bf0b9578c7ac0fab24b2ee22a59"
+    },
+    "tfsc-form-bridge/tfsc-form-bridge.php": {
+      "sha256": "45e59da678b38fa2bc8e0b3c3582962ae0b6a1fcb7dd89c49fe5379b315412af"
+    },
+    "tfsc-media-filters/README.md": {
+      "sha256": "f90575823866dfa754f3e148b673ed185d94877a8996f138767556d75ebc39ea"
+    },
+    "tfsc-media-filters/assets/media-filters.css": {
+      "sha256": "619c7497243533e94a81b1edf0327350e8cf8f41814ca0f7d5468ac01020ad2f"
+    },
+    "tfsc-media-filters/assets/media-filters.js": {
+      "sha256": "15f49b383ccdb7fdf503f1623c8dd3c2e6b3ab5df756a6b840850d511bdfcf03"
+    },
+    "tfsc-media-filters/readme.txt": {
+      "sha256": "ff68d0df99600de991acc120f1bbb870ea3270eef09c7fed0aa009f8de254667"
+    },
+    "tfsc-media-filters/tfsc-media-filters.php": {
+      "sha256": "5cd511f85d731cbf4972dd9df10e111d68caa258487043f24aa777bf3bf67a5b"
+    },
+    "tfsc-media-filters/uninstall.php": {
+      "sha256": "fec8c54136dc2588329b7dde93d6a0ada4a51b9c743564786356bc4125bede5f"
+    },
+    "tfsc-rank-math-breadcrumbs/README.md": {
+      "sha256": "def1902798c39a0c604c60aa6f414b2d36cbfea184cb1248c2843b1b79e84031"
+    },
+    "tfsc-rank-math-breadcrumbs/tfsc-rank-math-breadcrumbs.php": {
+      "sha256": "e1abcf81e30963d95eafbf647c16712d380f37e7d86a786820fffe7df23cddaa"
+    },
+    "tfsc-rank-math-breadcrumbs/widget-breadcrumbs.php": {
+      "sha256": "ddd501debe1974acf3a95fe8cc6ef8ceb857ca53a648927938f3b331ef75b129"
+    },
+    "tfsc-schema-read-endpoint/README.md": {
+      "sha256": "93d67cb1515a1a5396c750142f38eee418ae9c1c0b2258c75c82deac114d4a58"
+    },
+    "tfsc-schema-read-endpoint/tfsc-schema-read-endpoint.php": {
+      "sha256": "dbe3d1e95086ee74b022259b6d00606d93c061bd6d4f5cd117ec37bf3fd0ad1f"
+    },
+    "server-location-test-probe/README.md": {
+      "sha256": "6146f29a73649e881c33f7ce44f72fc6cf8d9370eacaf8d6d5aef51f30f96961"
+    },
+    "server-location-test-probe/includes/class-sltp-admin.php": {
+      "sha256": "3036c4149bc98d739a3833a139b46b7ebfa5a0dd3dfdb47c3bc80af3cab5758f"
+    },
+    "server-location-test-probe/includes/class-sltp-plugin.php": {
+      "sha256": "f53d465c17f86cb31a50dba4ed06054ed4b91d77e74a79a02623732048311299"
+    },
+    "server-location-test-probe/includes/class-sltp-probe.php": {
+      "sha256": "fe6d8c46d39735a0943a7114dfa2d2872ff777e2335f48396c53884346a29388"
+    },
+    "server-location-test-probe/includes/class-sltp-request-budget.php": {
+      "sha256": "eda6e74213c78e32d5e56ca5c39cb8925fe4170553c31814f520f0c1da442bd6"
+    },
+    "server-location-test-probe/includes/class-sltp-rest.php": {
+      "sha256": "b98b6f8b6787158d71831b8f12d5d9e6e961c1175ca79a48218a41d21ec006e9"
+    },
+    "server-location-test-probe/readme.txt": {
+      "sha256": "a83e05199f734c5d11aac6573c1cbba51a5bf568058fb1dd0c88ebf1f9db8b5d"
+    },
+    "server-location-test-probe/server-location-test-probe.php": {
+      "sha256": "126309e2ec6b7b23c6a1262e67ecc37296929edb5ce2aa3b9616021a05aeec33"
+    },
+    "tfsc-structured-data/.gitignore": {
+      "sha256": "f0164b34fc0f121714a7f3ac0de19a28d7aa181a2664d1b99137230b8c0ece4a"
+    },
+    "tfsc-structured-data/CHANGELOG.md": {
+      "sha256": "3f9e66a0a7419a8651ebdd1601639cdcd1d58c1bdbcb80135c532d56f901c163"
+    },
+    "tfsc-structured-data/LICENSE": {
+      "sha256": "7868a4a05f1891f0c2eca94a54bda4697b9ad34bfd6c25a9804cbffb26afb9b5"
+    },
+    "tfsc-structured-data/README.md": {
+      "sha256": "3bcdb1a5b14398a0b48b96d23c078b414320aeac3d3160e748e4924454d13f26"
+    },
+    "tfsc-structured-data/assets/admin.css": {
+      "sha256": "abb8318d290973b65421daf45f06520462edaadc8bad1d7f833794a19f4c0b22"
+    },
+    "tfsc-structured-data/assets/admin.js": {
+      "sha256": "0b564c5f98cd1ec33f5d0350c3e62e61160864d8eaebda6c71e853707d0b38a7"
+    },
+    "tfsc-structured-data/docs/deployments/2026-10-25-live-v0.1.1.md": {
+      "sha256": "e7c46c78fa4f3dc42030fe04167bcd3a0b72093ae11dfa057ce2832fdb473a46"
+    },
+    "tfsc-structured-data/docs/deployments/2026-10-26-live-v0.2.1.md": {
+      "sha256": "976a101ce382fed6b4be98078320200b03415d536d1461d79eebd0b552e684ff"
+    },
+    "tfsc-structured-data/docs/deployments/2026-10-26-live-v0.3.1.md": {
+      "sha256": "ca81324b180da82e3aba5562b7da856efa52decf23c9848ce3cb4477564e1e1c"
+    },
+    "tfsc-structured-data/docs/deployments/2026-10-26-live-v0.3.2.md": {
+      "sha256": "3b4411eb4e2ffb73d85856785a1672bdf8b5c8167902e52ae44d173e9122a783"
+    },
+    "tfsc-structured-data/docs/deployments/2026-10-26-live-v0.3.3.md": {
+      "sha256": "39d331785335fbe0e5409fecb30061d95a244b76dce6756f44c3472b23100ce4"
+    },
+    "tfsc-structured-data/docs/deployments/2026-10-26-pods-salary-direct-apply.md": {
+      "sha256": "5187869e388172d2cafb944ad585e16fcc00ceaf293c08ed6aa2fd1684d3137c"
+    },
+    "tfsc-structured-data/docs/deployments/2026-11-03-live-v0.5.0.md": {
+      "sha256": "6e5ca2c14cc48ec69416f678c0270123180fdcc6eb930c6cf8863a8980613984"
+    },
+    "tfsc-structured-data/docs/deployments/2026-11-03-live-v0.5.1.md": {
+      "sha256": "3011e81ca46454e1a323ed964c03d3bc37c1833a21dc025b2751c48aa4f94043"
+    },
+    "tfsc-structured-data/docs/deployments/2026-11-04-live-v0.5.2.md": {
+      "sha256": "4e0652e005a10156fd49e80128737cdae1f2a22feb701d15ae32d6e4adcb989c"
+    },
+    "tfsc-structured-data/docs/field-map.md": {
+      "sha256": "00d3fb19fe7911fe41d96b8d007966e35f4572a9fd8d4a17d1b48ecd3c68fa37"
+    },
+    "tfsc-structured-data/includes/class-tfsc-admin.php": {
+      "sha256": "ffb1236a0279eee47e992953d2c138d56326d68e2699449a7fabee632b9cc28b"
+    },
+    "tfsc-structured-data/includes/class-tfsc-audit-cache.php": {
+      "sha256": "b70b6d9e4170f7abcb0ae49049e69ff15dbae90fac4481e24d28423d88dc4bd7"
+    },
+    "tfsc-structured-data/includes/class-tfsc-cli.php": {
+      "sha256": "767fa483043979d4f54e78ca3f3283015e14d598011c494058203a47b7dfdd4a"
+    },
+    "tfsc-structured-data/includes/class-tfsc-custom-schema.php": {
+      "sha256": "279ea8bbd6867e3507018feac6f18d858117ca354d4f5043620b2e30b65cf6ec"
+    },
+    "tfsc-structured-data/includes/class-tfsc-schema-builder.php": {
+      "sha256": "306ae494d62eea5b717d707f3475b35dbd0238a2200deac59a54e967fde77b27"
+    },
+    "tfsc-structured-data/includes/class-tfsc-structured-data.php": {
+      "sha256": "d3b6e0e98f535119cf44f6646012e5ada4ccefe6b180218370d52e49e5240b68"
+    },
+    "tfsc-structured-data/includes/class-tfsc-wordpress-data.php": {
+      "sha256": "b64a154d53648823d9867f1ac2f397bd4c0483a4eae254d54eb092efecdebf2b"
+    },
+    "tfsc-structured-data/readme.txt": {
+      "sha256": "caef1a54b89475970a5391694ef348b3334e39024eb876d062df27339bb3d4be"
+    },
+    "tfsc-structured-data/tfsc-structured-data.php": {
+      "sha256": "4ad76e0026316fd703350cb2a1798271c52712981788816cf83bf85df0e4dab5"
+    },
+    "updraft-pcloud-copy/LEESMIJ.md": {
+      "sha256": "bc855e8bb71527a713e5d396a9f8d68131208c2e924bc162500707b0765592f2"
+    },
+    "updraft-pcloud-copy/admin.css": {
+      "sha256": "ff5614a4a0bf3b2f9551b608f55ba25a86dfec08866deb366f59fb495a92b69a"
+    },
+    "updraft-pcloud-copy/recovery.php": {
+      "sha256": "d85a637de3818be3740129e6c1bc53b524345b74b27c68969d1f55ab08979108"
+    },
+    "updraft-pcloud-copy/updraft-pcloud-copy.php": {
+      "sha256": "c80a76077eb94fed2bd46d1b91b550b8b8ec882117306ef31c69e6f655d1b1a6"
+    },
+    "tfsc-private-updates/README.md": {
+      "sha256": "882ace8fc567da9c50e015a2f5ea46e5bdd35637c3fbf887a66a011e8246b43c"
+    },
+    "tfsc-private-updates/tfsc-private-updates.php": {
+      "sha256": "eebf7bbaade6fcc58ce8d41c7272aa00666e15a5cf811031276312bf64be6833"
+    }
+  },
+  "date": "2026-11-07",
+  "scope": "Complete current installed plugin source snapshot, synthetic test settings only"
+}

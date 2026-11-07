@@ -1,0 +1,74 @@
+[
+  {
+    "plugin": "tfsc-cache-warmer/tfsc-cache-warmer.php",
+    "version": "0.6.4",
+    "filename": "tfsc-cache-warmer-0.6.4.zip",
+    "sha256": "7985f0795c1423a43ae1711f546c94ea863eeff14d10d0763d9cdbf9459702e5",
+    "files": 9,
+    "zip_bytes": 44166
+  },
+  {
+    "plugin": "tfsc-combo-archive-manager/tfsc-combo-archive-manager.php",
+    "version": "0.5.0",
+    "filename": "tfsc-combo-archive-manager-0.5.0.zip",
+    "sha256": "b562bb7bfb4d20ea5882d5861a95648583c54cfbd7a7fd71e0261fad3de33ed1",
+    "files": 13,
+    "zip_bytes": 38937
+  },
+  {
+    "plugin": "tfsc-ai-crawler-log-main/tfsc-ai-crawler-log.php",
+    "version": "1.4.5",
+    "filename": "tfsc-ai-crawler-log-main-1.4.5.zip",
+    "sha256": "11e58abc08e40af2e9751af85fb742171e7370c96925c27bc65fed04bf79228a",
+    "files": 1,
+    "zip_bytes": 13625
+  },
+  {
+    "plugin": "tfsc-custom-functions/tfsc-custom-functions.php",
+    "version": "0.6.0",
+    "filename": "tfsc-custom-functions-0.6.0.zip",
+    "sha256": "88d733d27071118335f7d453b5f6be512128f84d6daba0a59fb0e5f99d0b283e",
+    "files": 2,
+    "zip_bytes": 7863
+  },
+  {
+    "plugin": "tfsc-media-filters/tfsc-media-filters.php",
+    "version": "1.0.0",
+    "filename": "tfsc-media-filters-1.0.0.zip",
+    "sha256": "1455e37103c8736004df86497af7976b774605a334bd4630999318d1b7372952",
+    "files": 6,
+    "zip_bytes": 14388
+  },
+  {
+    "plugin": "tfsc-rank-math-breadcrumbs/tfsc-rank-math-breadcrumbs.php",
+    "version": "0.3.1",
+    "filename": "tfsc-rank-math-breadcrumbs-0.3.1.zip",
+    "sha256": "756a98b91e6952f91834c8f881b3e0d78cd2fcbde19a1547a1dbe0562d42a773",
+    "files": 3,
+    "zip_bytes": 8297
+  },
+  {
+    "plugin": "tfsc-schema-read-endpoint/tfsc-schema-read-endpoint.php",
+    "version": "2.1.0",
+    "filename": "tfsc-schema-read-endpoint-2.1.0.zip",
+    "sha256": "d21ec0d35f6d13d1691dc948c89b7c1470192438c6778f91e3ed54c4129e68e7",
+    "files": 2,
+    "zip_bytes": 3924
+  },
+  {
+    "plugin": "tfsc-structured-data/tfsc-structured-data.php",
+    "version": "0.5.3",
+    "filename": "tfsc-structured-data-0.5.3.zip",
+    "sha256": "1c825e740e21317e8471fad6f54baf82d6839b9d3a02b489d3db6a280b7d9565",
+    "files": 25,
+    "zip_bytes": 49876
+  },
+  {
+    "plugin": "updraft-pcloud-copy/updraft-pcloud-copy.php",
+    "version": "0.2.4",
+    "filename": "updraft-pcloud-copy-0.2.4.zip",
+    "sha256": "1d9ccc80139106be118ba5b3a0f4773f7fc57d3d88822b3d6b72d39fd1a68f4e",
+    "files": 4,
+    "zip_bytes": 20270
+  }
+]

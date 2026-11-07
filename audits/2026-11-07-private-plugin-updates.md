@@ -2,6 +2,8 @@
 
 **TFSC Private Updates 0.1.0 is actief op productie.** Goedgekeurde nieuwe versies van onze eigen plugins verschijnen bij **Plugins** en **Dashboard → Updates**. Het overzicht staat onder **Gereedschap → TFSC Updates**. Installeren gebeurt met de gewone WordPress-updateknop.
 
+**Aanvulling later op dezelfde dag:** ook de overige negen pakketten zijn vrijgegeven; alle twaalf componenten zijn nu aangesloten. De [volledige aansluiting, bredere GitHub-instructies en extra aanvalstests](2026-11-07-private-plugin-updates-complete.md) zijn apart vastgelegd.
+
 Automatische installatie is niet ingeschakeld. De bestaande selectie voor automatische updates is ongewijzigd en op dit moment leeg. De eigenaar kan die later per plugin in het normale WordPress-scherm instellen.
 
 ## Wat is aangesloten?
@@ -16,7 +18,7 @@ Als beginpunt zijn drie complete, gecontroleerde ZIP-pakketten vrijgegeven:
 | Server Location Test Probe | 0.1.2 | Huidige beveiligde versie; geen overbodige update |
 | TFSC Private Updates | 0.1.0 | Kan toekomstige eigen releases via hetzelfde kanaal ontvangen |
 
-Voor de overige negen plugins is nog geen pakket gepubliceerd. Hun huidige werking is behouden; zij krijgen pas een melding wanneer een complete nieuwe release is getest en vrijgegeven. De eerdere auditselectie van bronbestanden wordt niet als installabel ZIP gebruikt, omdat zo'n selectie statische of binaire bestanden kan missen.
+Bij deze eerste plaatsing was voor de overige negen plugins nog geen pakket gepubliceerd. Die volledige pakketten zijn inmiddels alsnog gecontroleerd en vrijgegeven; de huidige werking is behouden. Zij krijgen pas een melding wanneer een hogere complete release is getest en vrijgegeven. De eerdere beperkte auditselectie van bronbestanden is niet als installabel ZIP gebruikt, omdat zo'n selectie statische of binaire bestanden kan missen.
 
 Een GitHub-commit installeert niet automatisch code. De workflow is: wijziging beoordelen → versie verhogen → volledig pakket bouwen → toepasselijke tests uitvoeren → checksum vastleggen → pakket vrijgeven via bestaande beveiligde WordPress-toegang → normale updatemelding → beheerder installeert. Compatibiliteit met een toekomstige WordPress-versie moet per relevante release worden gecontroleerd; een updatevoorziening herschrijft de plugin niet vanzelf.
 
