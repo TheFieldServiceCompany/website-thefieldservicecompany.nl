@@ -1,0 +1,25 @@
+<?php
+/** Bounded adversarial bursts in disposable WordPress. Never target production. */
+define('WP_ADMIN',true);define('DOING_AJAX',true);require '/wordpress/wp-load.php';
+$checks=[];$measurements=[];$findings=[];
+function stress_check($ok,$name){global $checks;if(!$ok)throw new Exception('FAILED: '.$name);$checks[]=$name;}
+function bench($name,$fn){global $measurements;$start=microtime(true);$value=$fn();$measurements[$name]=['elapsed_ms'=>(int)round((microtime(true)-$start)*1000)];return $value;}
+wp_set_current_user(1);do_action('admin_init');
+$targets=new TFSC\FormBridge\TargetRegistry();$maps=new TFSC\FormBridge\MappingRepository($targets);$repo=new TFSC\FormBridge\DiagnosticRepository();
+update_option(TFSC\FormBridge\MappingRepository::OPTION_NAME,['elementor:123:fixture'=>['enabled'=>true,'form_type'=>'candidate','field_map'=>[]]],false);
+wp_set_current_user(0);global $wpdb;
+$before=(int)$wpdb->get_var("SELECT COUNT(*) FROM {$wpdb->prefix}tfsc_form_bridge_diagnostics");
+$created=bench('sixty_unvalidated_server_diagnostics',function()use($maps,$repo){for($i=0;$i<60;$i++){$_POST=['post_id'=>123,'form_id'=>'fixture','tfsc_diagnostic_request_id'=>wp_generate_uuid4(),'form_fields'=>['email'=>'synthetic@example.test','message'=>'fixture '.$i]];$_REQUEST=$_POST;$_FILES=[];$d=new TFSC\FormBridge\ElementorDiagnostics($maps,$repo);$level=ob_get_level();$d->begin_request();while(ob_get_level()>$level)ob_end_clean();}});
+$after=(int)$wpdb->get_var("SELECT COUNT(*) FROM {$wpdb->prefix}tfsc_form_bridge_diagnostics");
+$findings['unvalidated_server_diagnostic_rows_from_60_attempts']=$after-$before;
+stress_check($after-$before===60,'Reproduced diagnostic write before form authentication/rate checks in 60 attempts');
+bench('media_filter_fuzz_1000',function(){for($i=0;$i<1000;$i++){$value=TFSC_Media_Filters::sanitize(['extension'=>str_repeat("pdf,../php,';--,",100),'width_min'=>($i%2)?'INF':['bad'],'size_max'=>'1e999','orientation'=>'<script>']);if(isset($value['extension'])&&!preg_match('/^[a-z0-9,]+$/D',$value['extension']))throw new Exception('Unsafe extension token');}});stress_check(true,'1000 hostile media filters remain bounded and have safe tokens');
+$products=bench('cartesian_product_limit',function(){return TFSC_Combo_Archive_Manager_Counter::cartesian_product(['a'=>range(1,200),'b'=>range(1,200),'c'=>range(1,200),'d'=>range(1,200)],500);});stress_check(count($products)===500,'Combo helper caps 1.6 billion potential combinations to 500 requested products');
+$policy=new TFSC_Combo_Archive_Manager_Policy();$result=$policy->locked(function()use($policy){return $policy->locked(function(){return 'unexpected';});});stress_check(is_wp_error($result)&&$result->get_error_code()==='manager_busy','Concurrent combo operation refused by real database option lock');stress_check(get_option(TFSC_Combo_Archive_Manager_Policy::LOCK,false)===false,'Combo lock released after failure');
+$worker=new TFSC_Cache_Warmer_Worker(new TFSC_Cache_Warmer_Queue(),TFSC_Cache_Warmer_Plugin::get_settings());$acquire=new ReflectionMethod(get_class($worker),'acquire_lock');$release=new ReflectionMethod(get_class($worker),'release_lock');$token=$acquire->invoke($worker);stress_check(is_string($token)&&$acquire->invoke($worker)===false,'Cache warmer refuses second worker under lock');$release->invoke($worker,'forged-token');stress_check($acquire->invoke($worker)===false,'Forged token cannot release cache-worker lock');$release->invoke($worker,$token);stress_check(get_option(TFSC_Cache_Warmer_Worker::LOCK_OPTION,false)===false,'Genuine token releases cache-worker lock');
+bench('backup_filename_fuzz_1000',function(){for($i=0;$i<1000;$i++)if(Updraft_PCloud_Copy\valid_archive_name('../'.str_repeat('x',20).'_'.$i.'_abcdef123456-db.gz','abcdef123456'))throw new Exception('Traversal accepted');});stress_check(true,'1000 traversal archive names rejected');
+bench('crawler_cursor_fuzz_1000',function(){for($i=0;$i<1000;$i++)if(TFSC_AI_Crawler_Log::sanitize_datetime_cursor("2026-01-01 00:00:00' OR id=".$i)!=='')throw new Exception('SQL cursor accepted');});stress_check(true,'1000 SQL-like crawler cursors rejected');
+$cap=bench('large_reading_time_input',function(){global $post;$post=new WP_Post((object)['ID'=>999,'filter'=>'raw','post_content'=>str_repeat('fixture word ',100000),'post_type'=>'post','post_status'=>'publish']);return tfsc_custom_functions_reading_time();});stress_check(is_string($cap)&&preg_match('/^[0-9]+ minuten$/',$cap),'Custom Functions handles a 1.3MB article without executing its content');
+foreach([1,2,7,8,99999] as $attempt){$delay=TFSC\FormBridge\DeliveryWorker::retry_delay_seconds($attempt);stress_check($attempt>=8?$delay===null:is_int($delay),'Form delivery retry bound for attempt '.$attempt);}
+$_POST=$_REQUEST=$_FILES=[];
+echo json_encode(['test'=>'bounded isolated stress','wordpress'=>$wp_version,'php'=>PHP_VERSION,'passed'=>count($checks),'checks'=>$checks,'measurements'=>$measurements,'peak_memory_bytes'=>memory_get_peak_usage(true),'confirmed_findings'=>$findings],JSON_PRETTY_PRINT|JSON_UNESCAPED_SLASHES);
