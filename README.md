@@ -33,3 +33,7 @@ en wijzigingsreden vast.
 
 Bewaar hier geen wachtwoorden, API-sleutels, licentiesleutels, persoonsgegevens
 of databaseback-ups.
+
+## WordPress-updatekanaal
+
+De eigen WordPress-componenten gebruiken **TFSC Private Updates**. Lees vóór ontwikkeling of release [WORDPRESS-RELEASES.md](WORDPRESS-RELEASES.md) en de [actuele basis-/bronregistratie](https://github.com/TheFieldServiceCompany/architecture/blob/main/wordpress/plugin-release-registry.json). Een hoofdbranch kan afwijken van productie; complete, geteste pakketten worden afzonderlijk vrijgegeven en daarna via de gewone WordPress-updateknop geïnstalleerd.
