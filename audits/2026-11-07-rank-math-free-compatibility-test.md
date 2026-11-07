@@ -2,6 +2,8 @@
 
 Gecontroleerd op 7 november 2026 voor thefieldservicecompany.nl.
 
+**Latere eindstand:** de eigenaar heeft Pro na deze proef zelf gedeactiveerd. Free en de uitbreiding zijn nu actief. De [volledige eindcontrole](2026-11-07-rank-math-final-free-pro-double-check.md) bevestigt de werking opnieuw en corrigeert het eerdere Pro-label voor wachtwoord-noindex. Onderstaand verslag beschrijft de voorafgaande gecontroleerde omschakelproef.
+
 De aangetroffen openbare afhankelijkheden van Rank Math Pro zijn opgevangen met **TFSC Rank Math Breadcrumbs 0.2.0**. De uitbreiding is geïnstalleerd en gecontroleerd met Pro tijdelijk uit. De onderzochte uitvoer bleef gelijk. Na de proef is Pro weer aangezet; de uitbreiding blijft actief en laat de uitvoering dan aan Pro over. De zoekintentieanalyse is op verzoek uitgezet.
 
 ## Wat About en Mentions betekenen

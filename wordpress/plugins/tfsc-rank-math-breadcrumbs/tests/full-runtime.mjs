@@ -75,6 +75,7 @@ echo 'Installed disposable in-memory WordPress';
 `);
   const phpTest = fs.readFileSync(new URL('./full-runtime.php', import.meta.url), 'utf8');
   await run(phpTest);
+  await run(fs.readFileSync(new URL('./free-workflows.php', import.meta.url), 'utf8'));
 } finally {
   if (php.fileExists('/wordpress/wp-content/debug.log')) {
     console.log('PHP debug log', php.readFileAsText('/wordpress/wp-content/debug.log').slice(-5000));

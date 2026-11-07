@@ -6,7 +6,7 @@ Gecontroleerd op 7 november 2026 voor thefieldservicecompany.nl. Geïnstalleerd 
 
 Alleen het breadcrumb-widget vervangen was onvoldoende. De vervolgaudit bevestigde ook Pro-afhankelijk schema uit linkmarkeringen, een queryparameterregel en het inschakelen van de lokale sitemap. **Versie 0.2.0 van de eigen uitbreiding vangt deze vier bestaande aansluitingen op. De gecontroleerde live proef met Pro uit is geslaagd.** Het [vervolgverslag](2026-11-07-rank-math-free-compatibility-test.md) bevat de meetresultaten en overstapstappen.
 
-**TFSC Rank Math Breadcrumbs 0.2.0 is geïnstalleerd en actief. Rank Math Pro is na de proef weer aangezet. Zoekintentieanalyse is op verzoek uitgezet.** De eerste audit was te stellig over een overstap naar Free. Met name het Elementor-widget en de omzetting van linkmarkeringen naar schema waren daarin onvoldoende gecontroleerd.
+**Actuele eindstand: Free en TFSC Rank Math Breadcrumbs 0.2.0 zijn actief; Pro is door de eigenaar gedeactiveerd.** De [eindcontrole na deactivering](2026-11-07-rank-math-final-free-pro-double-check.md) bevestigt opnieuw de uitvoer en behandelt alle 204 regels uit de officiële vergelijking. Zoekintentieanalyse is op verzoek uitgezet. De eerste audit was te stellig over een overstap naar Free. Met name het Elementor-widget en de omzetting van linkmarkeringen naar schema waren daarin onvoldoende gecontroleerd.
 
 ## Wat is onderzocht
 
@@ -56,7 +56,8 @@ De Pro-bron leest deze markeringen uit de bestaande berichtinhoud en voegt ze to
 | Local SEO | Een bedrijfsidentiteit en enkele locatie werken in Free. Meerdere locaties, routezoeker en aanvullende kaartopties zijn Pro. | Meerdere locaties, locatiedetectie en uitgebreide zoekfunctie staan uit. Bedrijfsschema bleef live gelijk; de apart ingeschakelde lokale sitemap wordt hierboven behandeld. |
 | WooCommerce, EDD, bbPress en Divi | De bijbehorende Pro-integraties breiden die andere producten uit. | Geen actief gebruik van die producten aangetroffen. Een aangevinkte WooCommerce-module zonder WooCommerce-plugin is geen werkende winkelintegratie. |
 | Watermerken en aanvullende social-image overlays | Pro breidt de gewone sociale afbeeldingen uit. | Geen standaard watermerk of custom-overlaylijst ingesteld en geen overeenkomstige overlay-metadata gevonden. De 72 `rank_math_og_content_image`-velden zijn een cache die ook in Free bestaat. |
-| Automatische noindex voor wachtwoordpagina’s en affiliate-prefixen | Aanvullende Pro-instellingen. | Noindex-optie staat uit en de prefixlijst is leeg. |
+| Automatische noindex voor wachtwoordpagina’s | De verkooplijst noemt Pro, maar instelling en uitvoering bestaan al in de geïnstalleerde Free 1.0.281. De aanvullende lokale test bevestigt dit. | Optie staat uit. Voor deze installatie geen ontbrekende Pro-functie. |
+| Affiliate-prefixen | Pro kan verhulde affiliate-links extra behandelen. | De prefixlijst is leeg. Geen actieve bewerking te vervangen. |
 | Focuskeywords | In de geïnstalleerde editorcode is de limiet vijf voor Free en honderd met de Pro-filter. | Alle 314 onderzochte records hebben maximaal vijf focuskeywords. De verdeling is 213×1, 27×2, 57×3, 12×4 en 5×5. |
 | Bulkbewerking, quick edit, filteren, Google Trends en PageSpeed/performance-overzichten | Pro voegt beheer- en analysefuncties toe. | Deze extra mogelijkheden verdwijnen. Historisch klikgebruik kan de databasecontrole niet vaststellen. Er is geen zelfstandige openbare uitvoer van aangetoond. |
 | SEO Analyzer | De basisanalyse bestaat in Free. Pro voegt onder meer aanvullende concurrentieanalyse toe. | De actuele effectieve module staat aan. Dat wijkt af van de eerdere aanname dat hij uit stond. Tijdens deze audit is deze instelling niet gewijzigd. |
@@ -68,7 +69,7 @@ De Pro-bron leest deze markeringen uit de bestaande berichtinhoud en voegt ze to
 
 De uitbreiding is via 0.1.0 en 0.1.1 bijgewerkt naar 0.2.0. De bronhashes van de geïnstalleerde bestanden komen overeen met de geteste repositorybestanden. Er slagen 27 gerichte controles en 56 controles in de tijdelijke volledige WordPress-installatie. De live proef omvatte 48 pagina’s, 30 sitemap-/locatiebestanden en 14 desktop-/mobiele vergelijkingen. Er zijn geen verschillen gevonden in de gecontroleerde breadcrumbs, metadata, volledige schema-uitvoer, sitemapinhoud, widgetstijlen en screenshots.
 
-De tijdelijke installatie- en auditroutes zijn gedeactiveerd via snippet 410. De auditroute retourneert daarna HTTP 404. Het eindresultaat is Free actief, Pro na de proef weer actief en TFSC Rank Math Breadcrumbs 0.2.0 actief in stand-by. Alleen de gevraagde zoekintentie-instelling is uitgezet; inhoud, templates en TFSC-snippets zijn ongewijzigd.
+De tijdelijke installatie- en auditroutes zijn gedeactiveerd via snippet 410. De auditroute retourneert daarna HTTP 404. Na de eerste proef is Pro weer aangezet; daarna heeft de eigenaar Pro definitief gedeactiveerd. De actuele eindstand is Free actief, Pro inactief en TFSC Rank Math Breadcrumbs 0.2.0 actief. De laatste hercontrole veranderde geen inhoud, templates of SEO-instellingen.
 
 De [samengevatte controlegegevens](evidence/rank-math-free-2026-11-07.json) leggen de aantallen, aangetroffen schema-uitvoer, bronhashes en installatiestatus vast. Ruwe instellingen, ontvangers, aanmeldgegevens en de waarden van de queryparameters zijn daarin weggelaten.
 

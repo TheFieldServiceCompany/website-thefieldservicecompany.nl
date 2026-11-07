@@ -27,7 +27,7 @@ Het detailarchief heeft in de huidige weergave geen afzonderlijke kruimel ‘Ber
 
 De eigenaar heeft gevraagd om een eigen uitbreiding waarmee de bestaande widgets kunnen blijven werken. Daarvoor is [TFSC Rank Math Breadcrumbs 0.1.0](../wordpress/plugins/tfsc-rank-math-breadcrumbs/README.md) ontwikkeld. Die registreert hetzelfde Elementor-widgettype `breadcrumbs` zodra Rank Math Pro uitstaat en gebruikt de bestaande Free-renderer. De shortcodevervanging hieronder is daarmee een terugvaloptie.
 
-De uitbreiding is inmiddels als versie 0.2.0 geïnstalleerd en actief. Naast het widget bewaart die de bestaande About/Mentions-markeringen, queryparameterredirect en lokale sitemap. Er slagen 27 gerichte controles en 56 controles in een volledige tijdelijke WordPress-installatie. De [live proef met Pro uit](2026-11-07-rank-math-free-compatibility-test.md) is geslaagd: 48 pagina’s, 30 sitemap-/locatiebestanden en 14 desktop-/mobiele vergelijkingen zonder verschil in de onderzochte uitvoer. Pro is na de proef weer aangezet. Zoekintentieanalyse is op verzoek uitgezet.
+De uitbreiding is inmiddels als versie 0.2.0 geïnstalleerd en actief. Naast het widget bewaart die de bestaande About/Mentions-markeringen, queryparameterredirect en lokale sitemap. De [live proef met Pro uit](2026-11-07-rank-math-free-compatibility-test.md) is geslaagd: 48 pagina’s, 30 sitemap-/locatiebestanden en 14 desktop-/mobiele vergelijkingen zonder verschil in de onderzochte uitvoer. Pro is daarna door de eigenaar definitief gedeactiveerd. De [eindcontrole](2026-11-07-rank-math-final-free-pro-double-check.md) bevestigt opnieuw de werking; aanvullend zijn toekomstige bewerkingen met Free lokaal getest. Zoekintentieanalyse is op verzoek uitgezet.
 
 ## Eerder voorgestelde shortcodevervanging
 
