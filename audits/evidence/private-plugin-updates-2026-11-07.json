@@ -1,0 +1,362 @@
+{
+  "date": "2026-11-07",
+  "provider_version": "0.1.0",
+  "wordpress": "7.1.4",
+  "live_php": "8.5.12",
+  "matrix": [
+    {
+      "php_requested": "8.3",
+      "result": {
+        "test": "private updater native install and attacks",
+        "wordpress": "7.1.4",
+        "php": "8.3.33",
+        "passed": 60,
+        "checks": [
+          "anonymous cannot publish executable releases",
+          "anonymous cannot inspect private catalog",
+          "subscriber cannot publish executable releases",
+          "subscriber cannot inspect private catalog",
+          "author cannot publish executable releases",
+          "author cannot inspect private catalog",
+          "editor cannot publish executable releases",
+          "editor cannot inspect private catalog",
+          "ZIP inspection available",
+          "Other update providers remain untouched",
+          "Unapproved slug collision cannot replace a private target",
+          "Concurrent catalog publisher is refused",
+          "A blocked publisher cannot overwrite or release another owner",
+          "Unsafe package refused: traversal.zip",
+          "Unsafe package refused: wrong-root.zip",
+          "Unsafe package refused: wrong-main.zip",
+          "Unsafe package refused: symlink.zip",
+          "Unsafe package refused: oversized-expanded.zip",
+          "Non-allowlisted plugin refused",
+          "Publisher checksum mismatch refused",
+          "Administrator can approve reviewed release",
+          "Publication response exposes no archive or signing proof",
+          "Same version cannot silently receive different code",
+          "Approved release appears in native WordPress update data",
+          "Native update references private local package identifier",
+          "Native plugin information uses approved details with escaped notes",
+          "Management page points to native update and plugin screens",
+          "Anonymous code cannot retrieve private package",
+          "Approved archive cannot update a different target",
+          "Third-party update handling is unchanged",
+          "Tampered metadata loses approval",
+          "Tampered approval cannot reach installer",
+          "Corrupt package rejected before extraction",
+          "Incompatible PHP requirement stops actual installation",
+          "Approved administrator can withdraw a faulty release",
+          "Withdrawn future version is no longer offered",
+          "Anonymous request cannot withdraw release",
+          "Withdrawn version disappears from updates",
+          "Withdrawn package cannot be installed from an old cached identifier",
+          "Identical reviewed release can be reapproved",
+          "No public archive download route exists",
+          "Installer receives exact verified private ZIP",
+          "Real WordPress bulk update path used by the Plugins screen installs approved release",
+          "Installed PHP header has new version",
+          "Native update preserves database settings",
+          "Native update preserves active plugin identity",
+          "Updater does not enable automatic installation",
+          "Completed version is no longer offered as an update",
+          "All eleven existing custom plugins and the updater are covered",
+          "An earlier security filter remains authoritative",
+          "Additional approved version published: 1.0.2",
+          "Additional approved version published: 1.0.3",
+          "Additional approved version published: 1.0.4",
+          "Additional approved version published: 1.0.5",
+          "Private package retention is bounded to three versions per plugin",
+          "Pruned package payload is removed from private storage",
+          "Newest approved release wins without installing anything automatically",
+          "Approval proof cannot be copied to another site identity",
+          "Background request without explicit opt-in cannot obtain update package",
+          "Explicit native per-plugin auto-update opt-in works in cron context"
+        ],
+        "native_upgrade_success": true
+      },
+      "direct_php_files_checked": 60
+    },
+    {
+      "php_requested": "8.5",
+      "result": {
+        "test": "private updater native install and attacks",
+        "wordpress": "7.1.4",
+        "php": "8.5.10",
+        "passed": 60,
+        "checks": [
+          "anonymous cannot publish executable releases",
+          "anonymous cannot inspect private catalog",
+          "subscriber cannot publish executable releases",
+          "subscriber cannot inspect private catalog",
+          "author cannot publish executable releases",
+          "author cannot inspect private catalog",
+          "editor cannot publish executable releases",
+          "editor cannot inspect private catalog",
+          "ZIP inspection available",
+          "Other update providers remain untouched",
+          "Unapproved slug collision cannot replace a private target",
+          "Concurrent catalog publisher is refused",
+          "A blocked publisher cannot overwrite or release another owner",
+          "Unsafe package refused: traversal.zip",
+          "Unsafe package refused: wrong-root.zip",
+          "Unsafe package refused: wrong-main.zip",
+          "Unsafe package refused: symlink.zip",
+          "Unsafe package refused: oversized-expanded.zip",
+          "Non-allowlisted plugin refused",
+          "Publisher checksum mismatch refused",
+          "Administrator can approve reviewed release",
+          "Publication response exposes no archive or signing proof",
+          "Same version cannot silently receive different code",
+          "Approved release appears in native WordPress update data",
+          "Native update references private local package identifier",
+          "Native plugin information uses approved details with escaped notes",
+          "Management page points to native update and plugin screens",
+          "Anonymous code cannot retrieve private package",
+          "Approved archive cannot update a different target",
+          "Third-party update handling is unchanged",
+          "Tampered metadata loses approval",
+          "Tampered approval cannot reach installer",
+          "Corrupt package rejected before extraction",
+          "Incompatible PHP requirement stops actual installation",
+          "Approved administrator can withdraw a faulty release",
+          "Withdrawn future version is no longer offered",
+          "Anonymous request cannot withdraw release",
+          "Withdrawn version disappears from updates",
+          "Withdrawn package cannot be installed from an old cached identifier",
+          "Identical reviewed release can be reapproved",
+          "No public archive download route exists",
+          "Installer receives exact verified private ZIP",
+          "Real WordPress bulk update path used by the Plugins screen installs approved release",
+          "Installed PHP header has new version",
+          "Native update preserves database settings",
+          "Native update preserves active plugin identity",
+          "Updater does not enable automatic installation",
+          "Completed version is no longer offered as an update",
+          "All eleven existing custom plugins and the updater are covered",
+          "An earlier security filter remains authoritative",
+          "Additional approved version published: 1.0.2",
+          "Additional approved version published: 1.0.3",
+          "Additional approved version published: 1.0.4",
+          "Additional approved version published: 1.0.5",
+          "Private package retention is bounded to three versions per plugin",
+          "Pruned package payload is removed from private storage",
+          "Newest approved release wins without installing anything automatically",
+          "Approval proof cannot be copied to another site identity",
+          "Background request without explicit opt-in cannot obtain update package",
+          "Explicit native per-plugin auto-update opt-in works in cron context"
+        ],
+        "native_upgrade_success": true
+      },
+      "direct_php_files_checked": 60
+    }
+  ],
+  "live": {
+    "time_utc": "2026-11-07T15:21:15.444Z",
+    "catalog": {
+      "version": "0.1.0",
+      "zip_available": true,
+      "plugins": [
+        {
+          "plugin": "tfsc-cache-warmer/tfsc-cache-warmer.php",
+          "name": "TFSC Cache Warmer",
+          "installed": "0.6.4",
+          "approved": null,
+          "sha256": null,
+          "update_available": false,
+          "auto_update_enabled": false
+        },
+        {
+          "plugin": "tfsc-combo-archive-manager/tfsc-combo-archive-manager.php",
+          "name": "TFSC Combo Archive Manager",
+          "installed": "0.5.0",
+          "approved": null,
+          "sha256": null,
+          "update_available": false,
+          "auto_update_enabled": false
+        },
+        {
+          "plugin": "tfsc-ai-crawler-log-main/tfsc-ai-crawler-log.php",
+          "name": "TFSC Crawler Log",
+          "installed": "1.4.5",
+          "approved": null,
+          "sha256": null,
+          "update_available": false,
+          "auto_update_enabled": false
+        },
+        {
+          "plugin": "tfsc-custom-functions/tfsc-custom-functions.php",
+          "name": "TFSC Custom Functions",
+          "installed": "0.6.0",
+          "approved": null,
+          "sha256": null,
+          "update_available": false,
+          "auto_update_enabled": false
+        },
+        {
+          "plugin": "tfsc-form-bridge/tfsc-form-bridge.php",
+          "name": "TFSC Form Bridge",
+          "installed": "0.5.6",
+          "approved": "0.5.6",
+          "sha256": "9ddd9717fbcb90446a872e29b369a21dce2f6fee374496e054c54ec700bf6906",
+          "update_available": false,
+          "auto_update_enabled": false
+        },
+        {
+          "plugin": "tfsc-media-filters/tfsc-media-filters.php",
+          "name": "TFSC Mediafilters",
+          "installed": "1.0.0",
+          "approved": null,
+          "sha256": null,
+          "update_available": false,
+          "auto_update_enabled": false
+        },
+        {
+          "plugin": "tfsc-rank-math-breadcrumbs/tfsc-rank-math-breadcrumbs.php",
+          "name": "TFSC Rank Math Breadcrumbs",
+          "installed": "0.3.1",
+          "approved": null,
+          "sha256": null,
+          "update_available": false,
+          "auto_update_enabled": false
+        },
+        {
+          "plugin": "tfsc-schema-read-endpoint/tfsc-schema-read-endpoint.php",
+          "name": "TFSC Schema Read Endpoint",
+          "installed": "2.1.0",
+          "approved": null,
+          "sha256": null,
+          "update_available": false,
+          "auto_update_enabled": false
+        },
+        {
+          "plugin": "server-location-test-probe/server-location-test-probe.php",
+          "name": "TFSC Server Location Test Probe",
+          "installed": "0.1.2",
+          "approved": "0.1.2",
+          "sha256": "ca0614f13e0c9a966c6a6c03e83297862505a1e40819cbcdcd2838e3019f16bc",
+          "update_available": false,
+          "auto_update_enabled": false
+        },
+        {
+          "plugin": "tfsc-structured-data/tfsc-structured-data.php",
+          "name": "TFSC Structured Data",
+          "installed": "0.5.3",
+          "approved": null,
+          "sha256": null,
+          "update_available": false,
+          "auto_update_enabled": false
+        },
+        {
+          "plugin": "updraft-pcloud-copy/updraft-pcloud-copy.php",
+          "name": "TFSC Updraft to pCloud",
+          "installed": "0.2.4",
+          "approved": null,
+          "sha256": null,
+          "update_available": false,
+          "auto_update_enabled": false
+        },
+        {
+          "plugin": "tfsc-private-updates/tfsc-private-updates.php",
+          "name": "TFSC Private Updates",
+          "installed": "0.1.0",
+          "approved": "0.1.0",
+          "sha256": "b802ecc6145c25dc9b69b1b760b5fe5520c123088a274bd57397df72c5d8bf19",
+          "update_available": false,
+          "auto_update_enabled": false
+        }
+      ]
+    },
+    "public_checks": [
+      {
+        "route": "private release catalog",
+        "method": "GET",
+        "status": 401
+      },
+      {
+        "route": "private release catalog",
+        "method": "POST",
+        "status": 401
+      },
+      {
+        "route": "/wp-json/tfsc-updates/v1/releases/RELEASE_ID/download",
+        "method": "GET",
+        "status": 404
+      },
+      {
+        "route": "/wp-json/tfsc-updater-bootstrap/v1/state",
+        "method": "GET",
+        "status": 404
+      },
+      {
+        "route": "/wp-json/tfsc-updater-bootstrap/v1/install",
+        "method": "GET",
+        "status": 404
+      },
+      {
+        "route": "/wp-json/tfsc-security-fix/v1/state",
+        "method": "GET",
+        "status": 404
+      },
+      {
+        "route": "/wp-json/tfsc-security-fix/v1/install",
+        "method": "GET",
+        "status": 404
+      },
+      {
+        "route": "/",
+        "method": "GET",
+        "status": 200
+      },
+      {
+        "route": "/formulier-solliciteren/",
+        "method": "GET",
+        "status": 200
+      },
+      {
+        "route": "/formulier-advies/",
+        "method": "GET",
+        "status": 200
+      }
+    ],
+    "temporary_helper": {
+      "inactive": true,
+      "original_code_restored": true
+    },
+    "test_forms_submitted": 0
+  },
+  "installation": {
+    "source_hashes": {
+      "tfsc-private-updates.php": "eebf7bbaade6fcc58ce8d41c7272aa00666e15a5cf811031276312bf64be6833",
+      "README.md": "882ace8fc567da9c50e015a2f5ea46e5bdd35637c3fbf887a66a011e8246b43c"
+    },
+    "existing_plugin_activation_preserved": true,
+    "existing_active_plugins": 31,
+    "active_plugins_after": 32,
+    "settings_and_probe_token_preserved": true,
+    "auto_update_selection_preserved": true
+  },
+  "packages": [
+    {
+      "filename": "tfsc-form-bridge-0.5.6.zip",
+      "sha256": "9ddd9717fbcb90446a872e29b369a21dce2f6fee374496e054c54ec700bf6906",
+      "bytes": 61987
+    },
+    {
+      "filename": "server-location-test-probe-0.1.2.zip",
+      "sha256": "ca0614f13e0c9a966c6a6c03e83297862505a1e40819cbcdcd2838e3019f16bc",
+      "bytes": 12116
+    },
+    {
+      "filename": "tfsc-private-updates-0.1.0.zip",
+      "sha256": "b802ecc6145c25dc9b69b1b760b5fe5520c123088a274bd57397df72c5d8bf19",
+      "bytes": 9279
+    }
+  ],
+  "limits": [
+    "Native upgrade executed only in disposable WordPress, not as an artificial production release",
+    "No live form or CRM/B2 test data created",
+    "No end-to-end future Elementor submission or multisite administration proof",
+    "PHP-WASM 8.5.10 differs from live PHP 8.5.12; source identity and normal public endpoints checked live"
+  ]
+}
