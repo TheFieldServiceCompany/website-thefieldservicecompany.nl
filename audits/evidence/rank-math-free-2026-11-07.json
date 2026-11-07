@@ -6,13 +6,13 @@
     "pro": "3.0.124",
     "elementor": "4.3.6",
     "elementor_pro": "4.3.3",
-    "extension": "0.1.1"
+    "extension": "0.2.0"
   },
   "extension_installed": true,
   "extension_active": true,
   "pro_active": true,
   "php_source_hashes": {
-    "plugin": "095b4393cd8cdf3fb02c5bbde68cca7ec7846539403371fb0fd746726b5855cf",
+    "plugin": "438da55977bf95703cae5951eb7264de014f6023c8123716232d4c972409a87f",
     "widget": "1c4bcd6a5c33a9f066c1413c3adac7760db5e9bcc4ec5b9f8ed48df6fb2b1840"
   },
   "temporary_snippet": {
@@ -587,5 +587,928 @@
     },
     "flagged": []
   },
-  "pro_switch_test_completed": false
+  "pro_switch_test_completed": false,
+  "compatibility_0_2_0": {
+    "report": "../2026-11-07-rank-math-free-compatibility-test.md",
+    "pro_restored_after_test": true,
+    "free_widget_runtime": "TFSC\\RankMathBreadcrumbs\\Widget_Breadcrumbs",
+    "local_tests": {
+      "focused_checks_passed": 27,
+      "full_runtime_checks_passed": 56
+    },
+    "public_comparison": {
+      "pages": 48,
+      "differences": [],
+      "sitemaps": 30,
+      "sitemap_changes": []
+    },
+    "visual_comparison": {
+      "cases": 14,
+      "computed_style_or_markup_changes": [],
+      "screenshot_changes": []
+    },
+    "public_cache": {
+      "before_misses": 48,
+      "after_misses": 48,
+      "headers": [
+        "x-litespeed-cache",
+        "x-qc-cache"
+      ]
+    },
+    "sitemap_normalization": "XML lastmod elements excluded; all other parsed XML compared",
+    "redirect_control": {
+      "active_rules": 234,
+      "query_rules": [
+        {
+          "id": 133,
+          "code": 410,
+          "match": true,
+          "different_query_matches": false
+        }
+      ],
+      "data_sha256": "8fde5df5e063ac5b2ff0a41bc1cee32684ce141db4902bc3cd64d2616591069f"
+    },
+    "search_intent": {
+      "value": "off",
+      "changed_keys": [
+        "determine_search_intent"
+      ],
+      "other_general_settings_preserved": true
+    },
+    "package_sha256": "fd16b2ee52e564a914d52f71aad8aad830e324698a8ac20a803e65278df6aed8",
+    "page_results": [
+      {
+        "url": "https://thefieldservicecompany.nl/beroepengids/artikel/wat-is-een-field-service-engineer/",
+        "status_before": 200,
+        "status_after": 200,
+        "equal_fields": [
+          "status",
+          "title",
+          "canonical",
+          "meta",
+          "schema",
+          "breadcrumbs",
+          "widgets"
+        ],
+        "schema_sha256": "f004812087516dd6b9a93776968b641687d4a8ceb1fdc390085d04e31f2bc6fe"
+      },
+      {
+        "url": "https://thefieldservicecompany.nl/vacature/internationaal-service-monteur-renewable-energy/",
+        "status_before": 200,
+        "status_after": 200,
+        "equal_fields": [
+          "status",
+          "title",
+          "canonical",
+          "meta",
+          "schema",
+          "breadcrumbs",
+          "widgets"
+        ],
+        "schema_sha256": "e86c27ee63590d756577cc4eb91be42890d38ea4bca179468e62bfdb99e42584"
+      },
+      {
+        "url": "https://thefieldservicecompany.nl/vacature/internationaal-commissioning-engineer-renewable-energy/",
+        "status_before": 200,
+        "status_after": 200,
+        "equal_fields": [
+          "status",
+          "title",
+          "canonical",
+          "meta",
+          "schema",
+          "breadcrumbs",
+          "widgets"
+        ],
+        "schema_sha256": "7c2835e9fc3e0546ff385a5ff8385f3c902a740debc15bc382dd3ee43409663a"
+      },
+      {
+        "url": "https://thefieldservicecompany.nl/vacature/internationaal-service-engineer-offshore/",
+        "status_before": 200,
+        "status_after": 200,
+        "equal_fields": [
+          "status",
+          "title",
+          "canonical",
+          "meta",
+          "schema",
+          "breadcrumbs",
+          "widgets"
+        ],
+        "schema_sha256": "4ec7982fa8b8ad4049a9456d5ccd375addef6526fce386361806f8070740d416"
+      },
+      {
+        "url": "https://thefieldservicecompany.nl/vacature/service-engineer-maritiem-offshore-internationaal/",
+        "status_before": 200,
+        "status_after": 200,
+        "equal_fields": [
+          "status",
+          "title",
+          "canonical",
+          "meta",
+          "schema",
+          "breadcrumbs",
+          "widgets"
+        ],
+        "schema_sha256": "1f6e1788b5ab5ec1359c985793666afb6cfc4c6a44094618677734b1ef9a3bfc"
+      },
+      {
+        "url": "https://thefieldservicecompany.nl/vacature/service-engineer-offshore-kranen/",
+        "status_before": 200,
+        "status_after": 200,
+        "equal_fields": [
+          "status",
+          "title",
+          "canonical",
+          "meta",
+          "schema",
+          "breadcrumbs",
+          "widgets"
+        ],
+        "schema_sha256": "1c415b31556c1f0f78ae7000317653bd1be11adfb7b617308cb2d2b95a8e0f93"
+      },
+      {
+        "url": "https://thefieldservicecompany.nl/vacature/field-service-engineer-biogas-green-energy/",
+        "status_before": 200,
+        "status_after": 200,
+        "equal_fields": [
+          "status",
+          "title",
+          "canonical",
+          "meta",
+          "schema",
+          "breadcrumbs",
+          "widgets"
+        ],
+        "schema_sha256": "2fe9543081d901bd3c79dc8a4b863d7e18dc6dc9d354db4be15619de8c327447"
+      },
+      {
+        "url": "https://thefieldservicecompany.nl/vacature/service-engineer-packaging-internationaal/",
+        "status_before": 200,
+        "status_after": 200,
+        "equal_fields": [
+          "status",
+          "title",
+          "canonical",
+          "meta",
+          "schema",
+          "breadcrumbs",
+          "widgets"
+        ],
+        "schema_sha256": "f8c8b5f74e04b3e28940520c9cc983137e4d55ec266a5fd6319e307e6c9c94c4"
+      },
+      {
+        "url": "https://thefieldservicecompany.nl/vacature/service-engineer-verpakkingsmachines-zzp-freelance/",
+        "status_before": 200,
+        "status_after": 200,
+        "equal_fields": [
+          "status",
+          "title",
+          "canonical",
+          "meta",
+          "schema",
+          "breadcrumbs",
+          "widgets"
+        ],
+        "schema_sha256": "add24770b38e26168f165557ba25f29c30b5bed2a096822bcf56a3658a6d0b31"
+      },
+      {
+        "url": "https://thefieldservicecompany.nl/vacature/service-monteur-verpakkingsmachines/",
+        "status_before": 200,
+        "status_after": 200,
+        "equal_fields": [
+          "status",
+          "title",
+          "canonical",
+          "meta",
+          "schema",
+          "breadcrumbs",
+          "widgets"
+        ],
+        "schema_sha256": "aeb6da219f3074b58258eb2af06e823cc0cfa397d91578fd5653e25fb2cf619b"
+      },
+      {
+        "url": "https://thefieldservicecompany.nl/vacature/internationaal-service-monteur-maritiem/",
+        "status_before": 200,
+        "status_after": 200,
+        "equal_fields": [
+          "status",
+          "title",
+          "canonical",
+          "meta",
+          "schema",
+          "breadcrumbs",
+          "widgets"
+        ],
+        "schema_sha256": "2f5cdaeffffe8f5e37ac5e5e37df8fcb48d98331d8781dfd945b0914a5f79566"
+      },
+      {
+        "url": "https://thefieldservicecompany.nl/vacature/field-service-engineer-high-tech/",
+        "status_before": 200,
+        "status_after": 200,
+        "equal_fields": [
+          "status",
+          "title",
+          "canonical",
+          "meta",
+          "schema",
+          "breadcrumbs",
+          "widgets"
+        ],
+        "schema_sha256": "a1645ec75e5bdaf1325daf8acc72c8e320d3fa14cf32b62828b32ce02aa388e8"
+      },
+      {
+        "url": "https://thefieldservicecompany.nl/vacature/freelance-service-engineer/",
+        "status_before": 200,
+        "status_after": 200,
+        "equal_fields": [
+          "status",
+          "title",
+          "canonical",
+          "meta",
+          "schema",
+          "breadcrumbs",
+          "widgets"
+        ],
+        "schema_sha256": "e0b4a2523b7debd544c7b90dd42aef4be62a0b55489e46e17cfd51e812370bb2"
+      },
+      {
+        "url": "https://thefieldservicecompany.nl/vacature/service-monteur-rotating-equipment-internationaal/",
+        "status_before": 200,
+        "status_after": 200,
+        "equal_fields": [
+          "status",
+          "title",
+          "canonical",
+          "meta",
+          "schema",
+          "breadcrumbs",
+          "widgets"
+        ],
+        "schema_sha256": "c9c6b2338872c856b10663a11a46f555eef4225e0171f8b8409e1a6952d020ff"
+      },
+      {
+        "url": "https://thefieldservicecompany.nl/vacature/freelance-service-engineer-hydrauliek/",
+        "status_before": 200,
+        "status_after": 200,
+        "equal_fields": [
+          "status",
+          "title",
+          "canonical",
+          "meta",
+          "schema",
+          "breadcrumbs",
+          "widgets"
+        ],
+        "schema_sha256": "be40d9b41085049b65e73bbf1df3bc1b0dff744dafcca8ea6748e04bd08bb21b"
+      },
+      {
+        "url": "https://thefieldservicecompany.nl/vacature/junior-koelmonteur/",
+        "status_before": 200,
+        "status_after": 200,
+        "equal_fields": [
+          "status",
+          "title",
+          "canonical",
+          "meta",
+          "schema",
+          "breadcrumbs",
+          "widgets"
+        ],
+        "schema_sha256": "2f95c01217264d20e78bf6179256c8d1af6d8b2c5fed5cfdbf6b27284b414430"
+      },
+      {
+        "url": "https://thefieldservicecompany.nl/vacature/internationaal-service-monteur-machinebouw/",
+        "status_before": 200,
+        "status_after": 200,
+        "equal_fields": [
+          "status",
+          "title",
+          "canonical",
+          "meta",
+          "schema",
+          "breadcrumbs",
+          "widgets"
+        ],
+        "schema_sha256": "067f7bb3568151e36cc0a7cd406716b259e40347ba6d4c3476aded8ad4d4ca39"
+      },
+      {
+        "url": "https://thefieldservicecompany.nl/vacature/field-service-engineer-elektrotechniek/",
+        "status_before": 200,
+        "status_after": 200,
+        "equal_fields": [
+          "status",
+          "title",
+          "canonical",
+          "meta",
+          "schema",
+          "breadcrumbs",
+          "widgets"
+        ],
+        "schema_sha256": "8a6ec063be33df0df5e234ecd34db928d7a1f0aaaabb290438dc80d3eabb8301"
+      },
+      {
+        "url": "https://thefieldservicecompany.nl/vacature/service-monteur-mechanisch/",
+        "status_before": 200,
+        "status_after": 200,
+        "equal_fields": [
+          "status",
+          "title",
+          "canonical",
+          "meta",
+          "schema",
+          "breadcrumbs",
+          "widgets"
+        ],
+        "schema_sha256": "63679b9c33d3c971df755417d9664973b1d7529920b485a5692a45d64859ded2"
+      },
+      {
+        "url": "https://thefieldservicecompany.nl/vacature/service-engineer-verpakkingsmachines-noord-europa/",
+        "status_before": 200,
+        "status_after": 200,
+        "equal_fields": [
+          "status",
+          "title",
+          "canonical",
+          "meta",
+          "schema",
+          "breadcrumbs",
+          "widgets"
+        ],
+        "schema_sha256": "aa57b2d5af0973ead1258ff42048e3ec5df53e45089e75fe3b6a178e4ab802db"
+      },
+      {
+        "url": "https://thefieldservicecompany.nl/vacature/internationaal-service-engineer-koeltechniek-wereldwijd/",
+        "status_before": 200,
+        "status_after": 200,
+        "equal_fields": [
+          "status",
+          "title",
+          "canonical",
+          "meta",
+          "schema",
+          "breadcrumbs",
+          "widgets"
+        ],
+        "schema_sha256": "cfd71bc3886072b581d7075290a475a8352d865187c1325654c5e40f99d0ef7d"
+      },
+      {
+        "url": "https://thefieldservicecompany.nl/vacature/koeltechnieker-belgie/",
+        "status_before": 200,
+        "status_after": 200,
+        "equal_fields": [
+          "status",
+          "title",
+          "canonical",
+          "meta",
+          "schema",
+          "breadcrumbs",
+          "widgets"
+        ],
+        "schema_sha256": "336a34cd0dc5c91513891d22df0eaed06c2861af99c74921b3439144c7a34ab2"
+      },
+      {
+        "url": "https://thefieldservicecompany.nl/vacature/service-engineer-koeltechniek-vacature/",
+        "status_before": 200,
+        "status_after": 200,
+        "equal_fields": [
+          "status",
+          "title",
+          "canonical",
+          "meta",
+          "schema",
+          "breadcrumbs",
+          "widgets"
+        ],
+        "schema_sha256": "5563b594dc9ade0b146e6ab1d2cb11808a3fb253de5f929a937a646efb56fd79"
+      },
+      {
+        "url": "https://thefieldservicecompany.nl/vacature/koelmonteur-koudetechniek/",
+        "status_before": 200,
+        "status_after": 200,
+        "equal_fields": [
+          "status",
+          "title",
+          "canonical",
+          "meta",
+          "schema",
+          "breadcrumbs",
+          "widgets"
+        ],
+        "schema_sha256": "edaf7354004a4bb9a1cea70c85d6d69ac9719053d710ea89bc770beb340f8ae2"
+      },
+      {
+        "url": "https://thefieldservicecompany.nl/vacature/service-monteur-verpakkingsmachines-zzp-freelance/",
+        "status_before": 200,
+        "status_after": 200,
+        "equal_fields": [
+          "status",
+          "title",
+          "canonical",
+          "meta",
+          "schema",
+          "breadcrumbs",
+          "widgets"
+        ],
+        "schema_sha256": "efb2c65a42ba7d1b7f1a9da5860ad647448c7a9d5ef22c64fcafb3bf3f87d82b"
+      },
+      {
+        "url": "https://thefieldservicecompany.nl/vacature/service-monteur-scrubbers/",
+        "status_before": 200,
+        "status_after": 200,
+        "equal_fields": [
+          "status",
+          "title",
+          "canonical",
+          "meta",
+          "schema",
+          "breadcrumbs",
+          "widgets"
+        ],
+        "schema_sha256": "c67a60fc7ef4fe2221418e7ed024019b9bd90a3fc1a26ca67729849f83e66c72"
+      },
+      {
+        "url": "https://thefieldservicecompany.nl/vacature/field-service-engineer-allround/",
+        "status_before": 200,
+        "status_after": 200,
+        "equal_fields": [
+          "status",
+          "title",
+          "canonical",
+          "meta",
+          "schema",
+          "breadcrumbs",
+          "widgets"
+        ],
+        "schema_sha256": "546950b7489541c4efd1ce3231571e7bcd536634066baf33a31f9de9cf3b309d"
+      },
+      {
+        "url": "https://thefieldservicecompany.nl/vacature/service-monteur-internationaal/",
+        "status_before": 200,
+        "status_after": 200,
+        "equal_fields": [
+          "status",
+          "title",
+          "canonical",
+          "meta",
+          "schema",
+          "breadcrumbs",
+          "widgets"
+        ],
+        "schema_sha256": "341c1142fb0cfd09fb48d3d63701610cdc4a0591dbeb1eacf3ccd3753dd48b1d"
+      },
+      {
+        "url": "https://thefieldservicecompany.nl/vacature/field-service-engineer-internationaal/",
+        "status_before": 200,
+        "status_after": 200,
+        "equal_fields": [
+          "status",
+          "title",
+          "canonical",
+          "meta",
+          "schema",
+          "breadcrumbs",
+          "widgets"
+        ],
+        "schema_sha256": "a5b77456e1e012a5d4e2b5299bc5987518b0224869ce4eaf7988479fc93a6dbb"
+      },
+      {
+        "url": "https://thefieldservicecompany.nl/vacature/service-engineer-mechanisch-elektrisch/",
+        "status_before": 200,
+        "status_after": 200,
+        "equal_fields": [
+          "status",
+          "title",
+          "canonical",
+          "meta",
+          "schema",
+          "breadcrumbs",
+          "widgets"
+        ],
+        "schema_sha256": "f6814799d1acd0648063c362a2e05a29c0cffb05de23887991b1a432d5f39f6f"
+      },
+      {
+        "url": "https://thefieldservicecompany.nl/vacature/field-service-engineer-verpakkingsmachines/",
+        "status_before": 200,
+        "status_after": 200,
+        "equal_fields": [
+          "status",
+          "title",
+          "canonical",
+          "meta",
+          "schema",
+          "breadcrumbs",
+          "widgets"
+        ],
+        "schema_sha256": "1ab1b3190bf4f6507d0588b3d23abfa80f9141d42848db6e747b0dc9d37fc2d2"
+      },
+      {
+        "url": "https://thefieldservicecompany.nl/vacature/field-service-engineer-australie/",
+        "status_before": 200,
+        "status_after": 200,
+        "equal_fields": [
+          "status",
+          "title",
+          "canonical",
+          "meta",
+          "schema",
+          "breadcrumbs",
+          "widgets"
+        ],
+        "schema_sha256": "c68f77f5e74abe85e1478da2c71df286ae7b5fb292604a15edf937f7c5f99282"
+      },
+      {
+        "url": "https://thefieldservicecompany.nl/vacature/service-monteur-zonnepanelen-b2b/",
+        "status_before": 200,
+        "status_after": 200,
+        "equal_fields": [
+          "status",
+          "title",
+          "canonical",
+          "meta",
+          "schema",
+          "breadcrumbs",
+          "widgets"
+        ],
+        "schema_sha256": "6957df134b1dc0b70347ad202c64215853ead9d55e981d132de6c083b3cd253e"
+      },
+      {
+        "url": "https://thefieldservicecompany.nl/vacature/field-service-engineer-zonnepanelen/",
+        "status_before": 200,
+        "status_after": 200,
+        "equal_fields": [
+          "status",
+          "title",
+          "canonical",
+          "meta",
+          "schema",
+          "breadcrumbs",
+          "widgets"
+        ],
+        "schema_sha256": "3fd3cb4ebd4cbb676c6376929aae28ee2af4b488b5e967696c87abc02be24ac6"
+      },
+      {
+        "url": "https://thefieldservicecompany.nl/vacature/field-service-engineer-benelux/",
+        "status_before": 200,
+        "status_after": 200,
+        "equal_fields": [
+          "status",
+          "title",
+          "canonical",
+          "meta",
+          "schema",
+          "breadcrumbs",
+          "widgets"
+        ],
+        "schema_sha256": "e3db5b21e2b80d6612dcc0e0dd7ea7941ff3993f3c88c53b61829329eee39464"
+      },
+      {
+        "url": "https://thefieldservicecompany.nl/vacature-ingevuld/service-engineer-spuitgietmachines/",
+        "status_before": 200,
+        "status_after": 200,
+        "equal_fields": [
+          "status",
+          "title",
+          "canonical",
+          "meta",
+          "schema",
+          "breadcrumbs",
+          "widgets"
+        ],
+        "schema_sha256": "e89a90431881ffe4299ae05963e6adcc5bdb7ad43e453d1954bdd5399c707cfe"
+      },
+      {
+        "url": "https://thefieldservicecompany.nl/",
+        "status_before": 200,
+        "status_after": 200,
+        "equal_fields": [
+          "status",
+          "title",
+          "canonical",
+          "meta",
+          "schema",
+          "breadcrumbs",
+          "widgets"
+        ],
+        "schema_sha256": "38b1e7d20d9da3d14d59af012efc11f2d79c97eadfb6ae1b76335dd8ed53fb27"
+      },
+      {
+        "url": "https://thefieldservicecompany.nl/beroepengids/",
+        "status_before": 200,
+        "status_after": 200,
+        "equal_fields": [
+          "status",
+          "title",
+          "canonical",
+          "meta",
+          "schema",
+          "breadcrumbs",
+          "widgets"
+        ],
+        "schema_sha256": "7cc83d6732dcfbacbf53e3c62d37ab54b2939adfef0f5b47b3a7c1b0ca01ef62"
+      },
+      {
+        "url": "https://thefieldservicecompany.nl/beroepengids/functienamen/",
+        "status_before": 200,
+        "status_after": 200,
+        "equal_fields": [
+          "status",
+          "title",
+          "canonical",
+          "meta",
+          "schema",
+          "breadcrumbs",
+          "widgets"
+        ],
+        "schema_sha256": "b81eaa8f63764f6797a5a8f2afd0215396866747472752a3333497b326099154"
+      },
+      {
+        "url": "https://thefieldservicecompany.nl/beroepengids/functienamen/field-service-engineer/",
+        "status_before": 200,
+        "status_after": 200,
+        "equal_fields": [
+          "status",
+          "title",
+          "canonical",
+          "meta",
+          "schema",
+          "breadcrumbs",
+          "widgets"
+        ],
+        "schema_sha256": "f040743dad94a8d167b52c62cbc96505f4fc75be8ff2bf93f0db751f3bb418ab"
+      },
+      {
+        "url": "https://thefieldservicecompany.nl/beroepengids/artikelen/",
+        "status_before": 200,
+        "status_after": 200,
+        "equal_fields": [
+          "status",
+          "title",
+          "canonical",
+          "meta",
+          "schema",
+          "breadcrumbs",
+          "widgets"
+        ],
+        "schema_sha256": "9c288ecd6973bf59ab05031dfb32965247666c3c5d2b652e38e649b25af841bf"
+      },
+      {
+        "url": "https://thefieldservicecompany.nl/vacatures/",
+        "status_before": 200,
+        "status_after": 200,
+        "equal_fields": [
+          "status",
+          "title",
+          "canonical",
+          "meta",
+          "schema",
+          "breadcrumbs",
+          "widgets"
+        ],
+        "schema_sha256": "c5c2a4869abb8a067be0cdb08e0ab65b6e3ab1df588fb7676180197a865c23e6"
+      },
+      {
+        "url": "https://thefieldservicecompany.nl/vacatures/functienaam/commissioning-engineer/bedrijfssector/energie/",
+        "status_before": 200,
+        "status_after": 200,
+        "equal_fields": [
+          "status",
+          "title",
+          "canonical",
+          "meta",
+          "schema",
+          "breadcrumbs",
+          "widgets"
+        ],
+        "schema_sha256": "2d3d0c122fe779c9aa7da133e45338c2cd130158f422cbc7454c1e14fe353b5f"
+      },
+      {
+        "url": "https://thefieldservicecompany.nl/field-service-engineer-blog/",
+        "status_before": 200,
+        "status_after": 200,
+        "equal_fields": [
+          "status",
+          "title",
+          "canonical",
+          "meta",
+          "schema",
+          "breadcrumbs",
+          "widgets"
+        ],
+        "schema_sha256": "8ec0fcd0c1c7f4ca6edd8ab241c9bd87fce9a1e0508c2ab7436b09c113db5e4f"
+      },
+      {
+        "url": "https://thefieldservicecompany.nl/blog/hoe-vind-ik-een-baan-in-field-service-die-bij-mij-past/",
+        "status_before": 200,
+        "status_after": 200,
+        "equal_fields": [
+          "status",
+          "title",
+          "canonical",
+          "meta",
+          "schema",
+          "breadcrumbs",
+          "widgets"
+        ],
+        "schema_sha256": "9e68a4218baa5a4a1b868a1fb95e1be76bdc55863218af88e3e8993fada9e166"
+      },
+      {
+        "url": "https://thefieldservicecompany.nl/voor-werkgevers/",
+        "status_before": 200,
+        "status_after": 200,
+        "equal_fields": [
+          "status",
+          "title",
+          "canonical",
+          "meta",
+          "schema",
+          "breadcrumbs",
+          "widgets"
+        ],
+        "schema_sha256": "003303af6177a97cf2050828af5f3b10744fe0c34a49c727f048a7b104730ec6"
+      },
+      {
+        "url": "https://thefieldservicecompany.nl/kennisbank/",
+        "status_before": 200,
+        "status_after": 200,
+        "equal_fields": [
+          "status",
+          "title",
+          "canonical",
+          "meta",
+          "schema",
+          "breadcrumbs",
+          "widgets"
+        ],
+        "schema_sha256": "969b8cf2af56e871859a370eae3b6b31025e0d3d7cdf7ee1894008fd65d761ac"
+      },
+      {
+        "url": "https://thefieldservicecompany.nl/kennisbank/welke-bedrijfssectoren-en-machines-horen-bij-industriele-machinebouw/",
+        "status_before": 200,
+        "status_after": 200,
+        "equal_fields": [
+          "status",
+          "title",
+          "canonical",
+          "meta",
+          "schema",
+          "breadcrumbs",
+          "widgets"
+        ],
+        "schema_sha256": "ff3a963d6eebe5f41a0bb694cc16d98b532e263cba2d83d4c5cec8809b2f0bdf"
+      }
+    ],
+    "sitemap_results": {
+      "https://thefieldservicecompany.nl/page-sitemap.xml": {
+        "status": 200,
+        "sha256": "2f645016f07cd14531d2a38bb7482152254211a826a4bb9e23d698ed0c08b901",
+        "entries": 19
+      },
+      "https://thefieldservicecompany.nl/beroepengids-sitemap.xml": {
+        "status": 200,
+        "sha256": "f8baad4f19ad8f238dde8f6450545902e7d9cd5e2a5f59b33618476bd795d218",
+        "entries": 75
+      },
+      "https://thefieldservicecompany.nl/blog-sitemap.xml": {
+        "status": 200,
+        "sha256": "96e82acd8c60c9464bfb0f29bba21db33665d206fc41ab793df19d74f02339f8",
+        "entries": 10
+      },
+      "https://thefieldservicecompany.nl/kennisbankartikel-sitemap.xml": {
+        "status": 200,
+        "sha256": "0da130eb90df881a6604881462e8c2fef879ae11378613dca94b357ed7de8e08",
+        "entries": 108
+      },
+      "https://thefieldservicecompany.nl/vacature-sitemap.xml": {
+        "status": 200,
+        "sha256": "377d27f74ddd0200c0c6da907a3f20e9a10360faa0e74ca9dbf46b20e949c806",
+        "entries": 64
+      },
+      "https://thefieldservicecompany.nl/vacature_ingevuld-sitemap.xml": {
+        "status": 200,
+        "sha256": "7d6145a0d592759e5b7660b5f0e97b8e3e8503664ad1ed7873f1e194b6b1af9a",
+        "entries": 68
+      },
+      "https://thefieldservicecompany.nl/bedrijfssector-sitemap.xml": {
+        "status": 200,
+        "sha256": "735c8358dd56ec98140933f164c45b46cdd4c3f78440f722cf9b100ddc6372a1",
+        "entries": 19
+      },
+      "https://thefieldservicecompany.nl/beroep_bedrijfssector-sitemap.xml": {
+        "status": 200,
+        "sha256": "6263745dfa4104dc251d9bae4ed59dc2bc4f3f68101ffc95ca1ba6f0220a24e8",
+        "entries": 10
+      },
+      "https://thefieldservicecompany.nl/dagen-internationaal-sitemap.xml": {
+        "status": 200,
+        "sha256": "afe0ec07782cc2bd3e91c0b0060885b960f09237580509eb5ee1564935055b76",
+        "entries": 4
+      },
+      "https://thefieldservicecompany.nl/dienstverband-sitemap.xml": {
+        "status": 200,
+        "sha256": "d61011627faf9713beb0342bbfc117b8cbbb3b4142cfe559c9f58b70991ceddc",
+        "entries": 2
+      },
+      "https://thefieldservicecompany.nl/functie-inhoud-sitemap.xml": {
+        "status": 200,
+        "sha256": "4a2f1826144e4adf1785c551ecdc3a6a94254c107c9723f458656b75882aa58b",
+        "entries": 26
+      },
+      "https://thefieldservicecompany.nl/beroep_functie-inhoud-sitemap.xml": {
+        "status": 200,
+        "sha256": "59df922732c6cf7d540fe03153b4eb33fd146d0113ac58f5cd5a983218899333",
+        "entries": 7
+      },
+      "https://thefieldservicecompany.nl/functienaam-sitemap.xml": {
+        "status": 200,
+        "sha256": "63347a46abdb42392bc1fb6edb258b987fa03d5391678045190fbd3872935b01",
+        "entries": 13
+      },
+      "https://thefieldservicecompany.nl/beroep_functienaam-sitemap.xml": {
+        "status": 200,
+        "sha256": "fb9bf7fe772842b6733b2dff0acc41486c4287d5de2ffb9697522fb746cea318",
+        "entries": 33
+      },
+      "https://thefieldservicecompany.nl/hotel-nachten-maand-sitemap.xml": {
+        "status": 200,
+        "sha256": "44a44347a97d14a61b971b747f1a99432c80f316f3101d4488553f7e9fed17b6",
+        "entries": 3
+      },
+      "https://thefieldservicecompany.nl/kennisgebied-sitemap.xml": {
+        "status": 200,
+        "sha256": "dad5c5c87b343a61eaadecf693a0585703c39bf01492ef426842e07a96b28a51",
+        "entries": 20
+      },
+      "https://thefieldservicecompany.nl/beroep_kennisgebied-sitemap.xml": {
+        "status": 200,
+        "sha256": "72bb7818d9f9f1a1b3bc1a575809b82fb444383ac049fa3b5eaa31d1cf8cf3ee",
+        "entries": 7
+      },
+      "https://thefieldservicecompany.nl/locatie-sitemap.xml": {
+        "status": 200,
+        "sha256": "e730603a866ad1e714f1ac71ddaeedf178eb72f72d71e63a1b16f6ccce4c2b4b",
+        "entries": 60
+      },
+      "https://thefieldservicecompany.nl/opleidingsniveau-sitemap.xml": {
+        "status": 200,
+        "sha256": "4193fd01e400d464e42fd7778e949b11d13ca0d45b74b1fe3b697b6239b485a9",
+        "entries": 4
+      },
+      "https://thefieldservicecompany.nl/reisprofiel-sitemap.xml": {
+        "status": 200,
+        "sha256": "7bd0a4ead7db1cb0d8d1d370b46ce8d852f82284e0189b02ce7eb0436f8eac9c",
+        "entries": 3
+      },
+      "https://thefieldservicecompany.nl/vac_studierichting-sitemap.xml": {
+        "status": 200,
+        "sha256": "8ea98ea7ee7506de70fbff725aa0a246a127e219a4eb4063b1de8a92ec8b98df",
+        "entries": 23
+      },
+      "https://thefieldservicecompany.nl/beroep_studierichting-sitemap.xml": {
+        "status": 200,
+        "sha256": "33cdc5f0885f46fccd10c5250f73c641aabc267a13626a925cd358d5b0d33238",
+        "entries": 10
+      },
+      "https://thefieldservicecompany.nl/weekenden-thuis-sitemap.xml": {
+        "status": 200,
+        "sha256": "1f236e1c9877fe42e06ff8c4b94dc03ec50ea0945e4b16c3dff6852b70266036",
+        "entries": 4
+      },
+      "https://thefieldservicecompany.nl/werkgebied-sitemap.xml": {
+        "status": 200,
+        "sha256": "890fae061c1e1ec3d0febf2e3edf75c2c258ce1fb6b69c6823011526c006ff3a",
+        "entries": 8
+      },
+      "https://thefieldservicecompany.nl/combo-vacatures-sitemap1.xml": {
+        "status": 200,
+        "sha256": "99d3330646cdc0d0c94c8da009ab6bfe3e7f4822f013d6baf0faa72665cc54c3",
+        "entries": 501
+      },
+      "https://thefieldservicecompany.nl/combo-vacatures-sitemap2.xml": {
+        "status": 200,
+        "sha256": "a59ce907abe3de9926d8b947dc2f3d0a063aaca010720d89580ef96d90e9e679",
+        "entries": 501
+      },
+      "https://thefieldservicecompany.nl/combo-vacatures-sitemap3.xml": {
+        "status": 200,
+        "sha256": "5e8f07d478373dcb117616897a05b28df98896ba7158a090a894a29b963c3359",
+        "entries": 69
+      },
+      "https://thefieldservicecompany.nl/local-sitemap.xml": {
+        "status": 200,
+        "sha256": "98b934656cb72053e1df77c31e59743f1cf81839f07cc8071f6bf0669c6d6e46",
+        "entries": 1
+      },
+      "https://thefieldservicecompany.nl/sitemap_index.xml": {
+        "status": 200,
+        "sha256": "1ef65b5e37c49bc6c8389aaf84a708b64eac014446e8b6f168380bed790bfa31",
+        "entries": 28
+      },
+      "https://thefieldservicecompany.nl/locations.kml": {
+        "status": 200,
+        "sha256": "8bbf77b94e2129fa900adf55a689a97b20f6725c07256e288f583cb5ee71c46b",
+        "entries": 1
+      }
+    }
+  }
 }

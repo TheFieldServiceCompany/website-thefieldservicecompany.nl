@@ -27,7 +27,7 @@ Het detailarchief heeft in de huidige weergave geen afzonderlijke kruimel ‘Ber
 
 De eigenaar heeft gevraagd om een eigen uitbreiding waarmee de bestaande widgets kunnen blijven werken. Daarvoor is [TFSC Rank Math Breadcrumbs 0.1.0](../wordpress/plugins/tfsc-rank-math-breadcrumbs/README.md) ontwikkeld. Die registreert hetzelfde Elementor-widgettype `breadcrumbs` zodra Rank Math Pro uitstaat en gebruikt de bestaande Free-renderer. De shortcodevervanging hieronder is daarmee een terugvaloptie.
 
-De uitbreiding is inmiddels als versie 0.1.1 geïnstalleerd en actief. Er slagen 27 gerichte controles en 37 controles in een volledige tijdelijke WordPress-installatie met Elementor 4.3.6 en Rank Math Free 1.0.281. Rank Math Pro blijft actief omdat de [tweede functionaliteitsaudit](2026-11-07-rank-math-pro-feature-audit.md) aanvullende afhankelijkheden vond. De visuele vergelijking met Pro uit staat open. De handleiding beschrijft de precieze testdekking, beperkingen, installatie en herstelstappen.
+De uitbreiding is inmiddels als versie 0.2.0 geïnstalleerd en actief. Naast het widget bewaart die de bestaande About/Mentions-markeringen, queryparameterredirect en lokale sitemap. Er slagen 27 gerichte controles en 56 controles in een volledige tijdelijke WordPress-installatie. De [live proef met Pro uit](2026-11-07-rank-math-free-compatibility-test.md) is geslaagd: 48 pagina’s, 30 sitemap-/locatiebestanden en 14 desktop-/mobiele vergelijkingen zonder verschil in de onderzochte uitvoer. Pro is na de proef weer aangezet. Zoekintentieanalyse is op verzoek uitgezet.
 
 ## Eerder voorgestelde shortcodevervanging
 
@@ -35,4 +35,4 @@ De uitbreiding is inmiddels als versie 0.1.1 geïnstalleerd en actief. Er slagen
 2. Test met Rank Math Pro uit en Free aan. Vergelijk labels, volgorde en linkbestemmingen. Klik vanaf het Beroepengids-detailarchief terug naar het tussenarchief en vanaf het comboarchief terug naar het bovenliggende vacaturearchief. Vergelijk ook `BreadcrumbList`, mobiele scroll en opmaak.
 3. Werk de overige bevestigde templates en losse pagina’s pas bij als de proef overeenkomt. Controleer eerst of 28197 en 27450 ergens live worden gebruikt.
 
-De inventarisatie is afgerond. De templates, snippets en plugininstellingen zijn tijdens dit onderzoek niet gewijzigd.
+De templates en bestaande functionele TFSC-snippets zijn niet gewijzigd. De gevraagde uitbreiding is geïnstalleerd en zoekintentieanalyse is afzonderlijk uitgezet. De tijdelijke beheersnippet staat weer uit.

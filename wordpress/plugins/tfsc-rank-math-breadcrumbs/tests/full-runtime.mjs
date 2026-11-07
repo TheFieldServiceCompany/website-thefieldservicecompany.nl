@@ -59,6 +59,7 @@ async function run(code) {
   const result = await php.run({ code, relativeUri: '/', $_SERVER: { HTTP_HOST: 'example.test', REQUEST_URI: '/', HTTPS: 'on', SERVER_PROTOCOL: 'HTTP/1.1', REQUEST_METHOD: 'GET' } });
   console.log(result.text);
   if (result.errors) console.error(result.errors);
+  if (result.exitCode !== 0) throw new Error('PHP integration test failed with exit code ' + result.exitCode);
   return result;
 }
 try {

@@ -1,14 +1,22 @@
-# TFSC Rank Math Breadcrumbs 0.1.1
+# TFSC Rank Math Breadcrumbs 0.2.0
 
 Deze uitbreiding laat de bestaande Elementor-breadcrumbwidgets werken met Rank Math Free. De templates bevatten het widgettype `breadcrumbs`. De plugin registreert datzelfde type en roept `rank_math_the_breadcrumbs()` aan. Daardoor blijven de opgeslagen widget-ID’s, stijlinstellingen, CSS-klassen en de filters van TFSC-snippets 99 en 199 bruikbaar.
 
 Bij actieve Rank Math Pro slaat de uitbreiding haar registratie over. Na deactivering van Pro neemt ze het widget bij de volgende aanvraag over. Elementor en Rank Math Free moeten actief zijn en de breadcrumbfunctie van Rank Math moet aanstaan.
 
+Versie 0.2.0 bewaart daarnaast drie bestaande aansluitingen zodra Pro uitstaat:
+
+- `about` en `mentions` uit al gemarkeerde links in de oorspronkelijke berichtinhoud, op hetzelfde `rank_math/json_ld`-moment als Pro. De plugin markeert geen nieuwe links en maakt geen nieuw WebPage-schema aan.
+- Matchen van opgeslagen redirectregels inclusief queryparameters, met de vergelijking uit Rank Math Free. Bestaande matchtypes en HTTP-codes blijven door Free beheerd.
+- De ingeschakelde lokale sitemap en `locations.kml`, met de generator uit Free. Alleen de bestaande enkele bedrijfslocatie wordt ondersteund; meerdere locaties blijven een Pro-functie.
+
+Alle aansluitingen laten de uitvoering aan Pro over zodra Pro actief is. De uitbreiding wijzigt geen opgeslagen instellingen, inhoud of templates en vervangt geen Rank Math-editorfuncties. De afzonderlijk door de eigenaar gevraagde uitschakeling van zoekintentieanalyse gebeurt eenmalig buiten deze plugin.
+
 ## Installatie en live controle
 
-1. Maak een herstelkopie van de huidige site. Upload `tfsc-rank-math-breadcrumbs-0.1.1.zip` via WordPress → Plugins → Nieuwe plugin → Plugin uploaden en activeer de uitbreiding terwijl Rank Math Pro nog actief is.
+1. Maak een herstelkopie van de huidige site. Upload `tfsc-rank-math-breadcrumbs-0.2.0.zip` via WordPress → Plugins → Nieuwe plugin → Plugin uploaden en activeer de uitbreiding terwijl Rank Math Pro nog actief is.
 2. Leg op de testpagina’s de huidige breadcrumbs en vormgeving vast. Deactiveer daarna uitsluitend Rank Math Pro. Laat Elementor, Elementor Pro en Rank Math Free actief.
-3. Vernieuw de paginacache van de test-URL’s en vergelijk de zichtbare paden, linkbestemmingen, kleuren, marges, mobiele scroll en `BreadcrumbList`. Controleer het vacature-comboarchief, het Beroepengids-tussenarchief, een detailarchief, een artikel en het blog.
+3. Vergelijk met verse pagina-aanvragen de zichtbare paden, linkbestemmingen, kleuren, marges, mobiele scroll en `BreadcrumbList`. Controleer het vacature-comboarchief, het Beroepengids-tussenarchief, een detailarchief, een artikel en het blog. Vergelijk ook de volledige JSON-LD, metadata, XML-sitemaps en `locations.kml`. Test queryregels met fixtures, zonder beveiligings-URL’s te activeren.
 4. Controleer in de Elementor-editor of het bestaande widget als TFSC Breadcrumbs beschikbaar is. Controleer ook opnieuw gegenereerde Elementor-CSS voordat de overstap definitief wordt afgerond.
 
 Herstel gaat door Rank Math Pro opnieuw te activeren. De uitbreiding laat het widget dan weer aan Pro over. Daarna kan de uitbreiding worden gedeactiveerd.
@@ -16,9 +24,9 @@ Herstel gaat door Rank Math Pro opnieuw te activeren. De uitbreiding laat het wi
 ## Getest op 7 november 2026
 
 - 27 controles met PHP 8.3.33, de echte WordPress-hookregistratie, Rank Math Free 1.0.281 en de opgeslagen bronnen van snippets 99 en 199. De Elementor-controls en querycontext gebruiken hier fixtures. De uitvoer komt per getest paginatype byte voor byte overeen met de Free-renderer.
-- 37 controles in een tijdelijke, volledige WordPress 6.8.3-installatie met SQLite, Elementor 4.3.6 en Rank Math Free 1.0.281. Het normale Elementor-widgetregister herkent de opgeslagen data. Getest zijn een Beroepengids-tussenarchief, detailarchief, artikel, artikelarchief en een combo-context, de widget-ID en klassen, de binnenste CSS-wrapper, breadcrumb-schema en opnieuw gegenereerde stijlen.
+- 56 controles in een tijdelijke, volledige WordPress 6.8.3-installatie met SQLite, Elementor 4.3.6 en Rank Math Free 1.0.281. Naast widgetregistratie, breadcrumbs en opnieuw gegenereerde CSS zijn de gemarkeerde entiteiten, behoud van de organisatieverwijzing, ontbrekende gegevens, queryvergelijking, lokale sitemap en Pro-voorrang getest.
 - In de volledige test zijn de artikel- en termqueries echte WordPress-queries. De virtuele basisquery en de combo-routergegevens zijn nagebootst. Snippets 99 en 199 worden ongewijzigd geladen. Elementor Pro, snippet 113, de volledige router 406 en de schema-aanpassing van 193 zitten buiten deze lokale testinstallatie.
-- Na de ontwikkelvalidatie is versie 0.1.1 op productie geïnstalleerd en actief bevonden. Rank Math Pro blijft actief. De proef met Pro uit en de visuele controle op desktop en mobiel staan open. De [tweede functionaliteitsaudit](../../../audits/2026-11-07-rank-math-pro-feature-audit.md) beschrijft aanvullende Pro-afhankelijkheden die eerst moeten worden behandeld.
+- De [functionaliteitsaudit](../../../audits/2026-11-07-rank-math-pro-feature-audit.md) en het vervolgverslag beschrijven de actuele productiecontrole en migratiestatus. Lokale tests vormen op zichzelf geen bewijs voor iedere live template of toekomstige pluginversie.
 
 De plugin bevat eigen widgetcode. De breadcrumb-engine en de gestructureerde gegevens worden door Rank Math Free geleverd. De gebruikte opgeslagen instellingen zijn geïnventariseerd op de TFSC-site. Versie 0.1.1 volgt na controle van de geïnstalleerde Pro-bron ook de standaard globale typografie, responsive uitlijningsklassen en de optionele HTML-tag van het bestaande widget.
 
