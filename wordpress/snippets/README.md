@@ -1,5 +1,16 @@
 # WordPress-snippets
 
+## Actuele routerstatus — 7 november 2026
+
+Na expliciete goedkeuring is de geldige hotelnachten-slug `0` hersteld. De werkelijk actieve voorganger was **406** (native pagination sync); die is behouden en staat nu inactief. **411** is actief en voegt uitsluitend de callback `strlen` toe in `tfsc_resolve_term_path()`, zodat de string `0` niet als lege waarde verdwijnt. De bestaande query- en pagineringslogica is behouden. Snippet 186 hieronder is een oudere bronversie en geen actuele uitrolbasis.
+
+- [Actieve bron 411](php/411-combo-archive-base-zero-slug.php).
+- [Herstelrapport en nacontroles](../../audits/2026-11-07-ahrefs-zero-slug-and-vacancy-link.md).
+- [Gedateerde gerichte exports vóór en na](../exports/code-snippets/2026-11-07-zero-slug/).
+- Rollback: 411 uitschakelen, 406 inschakelen. Geen automatische uitrol vanuit GitHub.
+
+De eerdere inventaris en gedateerde bevindingen hieronder blijven als historie bewaard.
+
 Inventarisdatum: 17 oktober 2026. Deze map is de beheerde bron voor losse
 WordPress-snippets. De documentatie beschrijft de aangetroffen code en de
 onderlinge afhankelijkheden. Bestanden worden niet automatisch naar WordPress
