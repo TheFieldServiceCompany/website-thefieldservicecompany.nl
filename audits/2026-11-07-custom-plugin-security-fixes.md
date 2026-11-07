@@ -43,4 +43,4 @@ De interne uploadbewijssleutel en de bewijsmetadata horen bij de databasebackup.
 - [Form Bridge 0.5.6](../wordpress/plugins/dist/tfsc-form-bridge-0.5.6.zip).
 - [Serverprobe 0.1.2](../wordpress/plugins/dist/server-location-test-probe-0.1.2.zip).
 
-De bron-PR’s staan als concept ter beoordeling; plaatsing op de website is afzonderlijk uitgevoerd en hierboven gecontroleerd. De nieuwe Update URI’s identificeren de eigen plugins. De afzonderlijk gevraagde updatevoorziening wordt apart gebouwd; een identificatieheader alleen bezorgt geen releases.
+De bron-PR’s staan als concept ter beoordeling; plaatsing op de website is afzonderlijk uitgevoerd en hierboven gecontroleerd. De nieuwe Update URI’s identificeren de eigen plugins. De afzonderlijk gevraagde [updatevoorziening is inmiddels gebouwd en geplaatst](2026-11-07-private-plugin-updates.md); een identificatieheader alleen bezorgt geen releases.
