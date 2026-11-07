@@ -12,6 +12,8 @@ use Elementor\Widget_Base;
 
 defined( 'ABSPATH' ) || exit;
 
+defined( 'ABSPATH' ) || exit;
+
 class Widget_Breadcrumbs extends Widget_Base {
 
     public function get_name() {

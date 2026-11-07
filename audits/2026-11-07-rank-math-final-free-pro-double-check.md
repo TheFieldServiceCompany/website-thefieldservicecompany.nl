@@ -2,7 +2,7 @@
 
 Controle van 7 november 2026 voor thefieldservicecompany.nl, na de definitieve deactivering van Pro door de eigenaar.
 
-**Later vervolg:** op verzoek is ook de automatische redirectopruiming nagebouwd en geïnstalleerd in versie 0.3.0. De werking van de eigen plugin voor meerdere vacaturewerklocaties is bevestigd. Zie [opruiming en vacaturelocaties](2026-11-07-rank-math-redirect-cleanup-and-job-locations.md). De onderstaande controlegegevens beschrijven de eerdere versie 0.2.0.
+**Later vervolg:** de automatische redirectopruiming is op verzoek toegevoegd en vervolgens beveiligd in de actuele versie 0.3.1. Zie de [beveiligingsreview](2026-11-07-rank-math-security-review.md) en [opruiming en vacaturelocaties](2026-11-07-rank-math-redirect-cleanup-and-job-locations.md). De onderstaande controlegegevens beschrijven de eerdere versie 0.2.0.
 
 **Free 1.0.281 en TFSC Rank Math Breadcrumbs 0.2.0 zijn actief; Pro 3.0.124 is inactief. Er is bij deze hercontrole geen nieuwe uitval gevonden in de onderzochte, gebruikte websitefuncties. Er is geen aanvullende uitbreiding op productie geplaatst.** De bestaande vier aansluitingen blijven nodig: Elementor-breadcrumbs, gemarkeerde About/Mentions-entiteiten, queryparametervergelijking en de lokale sitemap.
 
@@ -78,7 +78,7 @@ Daarom is dit voor deze installatie **geen ontbrekende Pro-functie**. De eerdere
 
 Tijdens deze hercontrole is Pro niet opnieuw aangezet. Er zijn geen content-, template-, schema- of SEO-instellingen gewijzigd. Alleen een tijdelijke, geauthenticeerde leesroute is gebruikt; die is weer gedeactiveerd en geeft HTTP 404. De acht bewerkingstests draaiden uitsluitend in een tijdelijke lokale database. De dev-site is niet aangeraakt.
 
-Het advies na het vervolg is **Free met uitbreiding 0.3.0 actief houden**. De extra automatische opruiming is inmiddels op verzoek beschikbaar. Meerdere werklocaties in vacatures worden al door TFSC Structured Data geleverd en zijn geen Pro-afhankelijkheid. Bij nieuwe soorten content of toekomstige updates hoort een gerichte test op dev; de huidige proef bewijst geen gedrag van nog onbekende versies of verwerking door Google.
+Het advies na de beveiligingsreview is **Free met uitbreiding 0.3.1 actief houden**. De extra automatische opruiming is beschikbaar met ondertekende serverbewijzen. Meerdere werklocaties in vacatures worden al door TFSC Structured Data geleverd en zijn geen Pro-afhankelijkheid. Bij nieuwe soorten content of toekomstige updates hoort een gerichte test op dev; de huidige proef bewijst geen gedrag van nog onbekende versies of verwerking door Google.
 
 ## Aanvullende primaire bronnen
 

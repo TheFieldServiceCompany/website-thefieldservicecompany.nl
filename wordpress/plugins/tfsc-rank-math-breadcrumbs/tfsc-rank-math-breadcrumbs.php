@@ -2,7 +2,7 @@
 /**
  * Plugin Name: TFSC Rank Math Breadcrumbs
  * Description: Preserves TFSC breadcrumbs, marked schema, query redirects, the local sitemap and automatic redirect cleanup with Rank Math Free.
- * Version: 0.3.0
+ * Version: 0.3.1
  * Requires at least: 6.5
  * Requires PHP: 7.4
  * Author: The Field Service Company
@@ -37,12 +37,14 @@ add_action( 'elementor/widgets/register', __NAMESPACE__ . '\\register_widget', 1
 /** Preserve only entity links already marked in the original post content. */
 function preserve_marked_entities( $data ) {
     global $post;
-    if ( defined( 'RANK_MATH_PRO_VERSION' ) || ! is_singular() || empty( $data['WebPage'] ) || empty( $post->post_content ) ) {
+    if ( defined( 'RANK_MATH_PRO_VERSION' ) || ! class_exists( '\\RankMath\\Helpers\\HTML' ) || ! is_array( $data ) || ! is_singular() || empty( $data['WebPage'] ) || ! is_array( $data['WebPage'] ) || empty( $post->post_content ) || ! is_string( $post->post_content ) ) {
         return $data;
     }
 
     // Match the existing plain-text anchor convention, without tagging new links.
-    preg_match_all( '|<a[^>]+>([^<]+)</a>|', $post->post_content, $links );
+    if ( ! preg_match_all( '|<a[^>]+>([^<]+)</a>|', $post->post_content, $links ) ) {
+        return $data;
+    }
     foreach ( $links[0] as $link ) {
         $attributes = \RankMath\Helpers\HTML::extract_attributes( $link );
         $properties = explode( ' ', $attributes['data-schema-attribute'] ?? '' );
@@ -51,6 +53,9 @@ function preserve_marked_entities( $data ) {
         }
         foreach ( [ 'about', 'mentions' ] as $property ) {
             if ( ! in_array( $property, $properties, true ) ) {
+                continue;
+            }
+            if ( isset( $data['WebPage'][$property] ) && ! is_array( $data['WebPage'][$property] ) ) {
                 continue;
             }
             if ( ! empty( $data['WebPage'][$property]['@id'] ) ) {
@@ -68,7 +73,7 @@ function preserve_marked_entities( $data ) {
 
 /** Let the Free redirect engine verify a stored rule against the full URI. */
 function match_query_redirect( $matched, $redirection ) {
-    if ( defined( 'RANK_MATH_PRO_VERSION' ) || $matched || empty( $redirection['sources'] ) ) {
+    if ( defined( 'RANK_MATH_PRO_VERSION' ) || $matched || ! is_array( $redirection ) || empty( $redirection['sources'] ) || ! class_exists( '\\RankMath\\Redirections\\DB' ) || ! class_exists( '\\RankMath\\Redirections\\Redirection' ) ) {
         return $matched;
     }
     return \RankMath\Redirections\DB::compare_sources(
@@ -105,24 +110,77 @@ function associated_redirect_ids( $value ) {
     $ids = [];
     foreach ( $value as $id ) {
         if ( ( is_int( $id ) || is_string( $id ) ) && preg_match( '/^[1-9][0-9]*$/D', (string) $id ) ) {
-            $ids[] = (int) $id;
+            $integer = (int) $id;
+            if ( $integer > 0 && (string) $integer === (string) $id ) {
+                $ids[] = $integer;
+            }
         }
     }
     return array_values( array_unique( $ids ) );
 }
 
+/** Private per-site key; never exposed as REST metadata or generated on reads. */
+function redirect_signing_key( $create = false ) {
+    $key = get_option( '_tfsc_rm_redirect_signing_key', '' );
+    if ( ! $key && $create ) {
+        try {
+            $generated = bin2hex( random_bytes( 32 ) );
+        } catch ( \Exception $error ) {
+            return '';
+        }
+        add_option( '_tfsc_rm_redirect_signing_key', $generated, '', false );
+        $key = get_option( '_tfsc_rm_redirect_signing_key', '' );
+    }
+    return is_string( $key ) && preg_match( '/^[a-f0-9]{64}$/D', $key ) ? $key : '';
+}
+
+/** Bind the association to this site, object type, object ID and exact ID list. */
+function redirect_signature( $object_id, $type, $ids, $key ) {
+    return hash_hmac( 'sha256', wp_json_encode( [ get_current_blog_id(), $type, (int) $object_id, $ids ] ), $key );
+}
+
+/** Untrusted Rank Math metadata never authorizes deletion on its own. */
+function verified_redirect_ids( $object_id, $type ) {
+    $proof = get_metadata( $type, $object_id, '_tfsc_rm_verified_redirects', true );
+    $key = redirect_signing_key();
+    if ( ! $key || ! is_array( $proof ) || ! isset( $proof['ids'], $proof['signature'] ) || ! is_string( $proof['signature'] ) ) {
+        return [];
+    }
+    $ids = associated_redirect_ids( $proof['ids'] );
+    return hash_equals( redirect_signature( $object_id, $type, $ids, $key ), $proof['signature'] ) ? $ids : [];
+}
+
+/** Internal PHP API for trusted watcher events and reviewed legacy migration. */
+function seal_redirect_ids( $object_id, $type, $ids ) {
+    if ( (int) $object_id <= 0 || ! in_array( $type, [ 'post', 'term' ], true ) ) {
+        return false;
+    }
+    $key = redirect_signing_key( true );
+    if ( ! $key ) {
+        return false;
+    }
+    $ids = associated_redirect_ids( $ids );
+    return update_metadata( $type, $object_id, '_tfsc_rm_verified_redirects', [
+        'ids' => $ids, 'signature' => redirect_signature( $object_id, $type, $ids, $key ),
+    ] );
+}
+
 /** Keep Pro-compatible associations for redirects made by the Free watcher. */
 function remember_auto_redirect( $redirect_id, $object_id, $type ) {
-    if ( ! can_manage_auto_redirects() || ! in_array( $type, [ 'post', 'term' ], true ) ) {
+    if ( ! class_exists( '\\RankMath\\Helper' ) || ! \RankMath\Helper::is_module_active( 'redirections' ) || ! in_array( $type, [ 'post', 'term' ], true ) ) {
         return;
     }
     $new_id = associated_redirect_ids( [ $redirect_id ] );
     if ( ! $new_id || (int) $object_id <= 0 ) {
         return;
     }
-    $ids = associated_redirect_ids( get_metadata( $type, $object_id, 'rank_math_auto_redirect', true ) );
+    // Do not launder a forged legacy field through a genuine later slug change.
+    $ids = verified_redirect_ids( $object_id, $type );
     if ( ! in_array( $new_id[0], $ids, true ) ) {
         $ids[] = $new_id[0];
+        seal_redirect_ids( $object_id, $type, $ids );
+    }
+    if ( ! defined( 'RANK_MATH_PRO_VERSION' ) ) {
         update_metadata( $type, $object_id, 'rank_math_auto_redirect', $ids );
     }
 }
@@ -132,7 +190,7 @@ function remove_auto_redirects( $object_id, $type ) {
     if ( ! can_manage_auto_redirects() || ! in_array( $type, [ 'post', 'term' ], true ) ) {
         return;
     }
-    $ids = associated_redirect_ids( get_metadata( $type, $object_id, 'rank_math_auto_redirect', true ) );
+    $ids = verified_redirect_ids( $object_id, $type );
     if ( $ids ) {
         \RankMath\Redirections\DB::delete( $ids );
     }

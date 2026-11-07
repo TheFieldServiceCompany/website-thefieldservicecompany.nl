@@ -2,7 +2,7 @@
 
 Vervolg op verzoek van de eigenaar, 7 november 2026.
 
-**TFSC Rank Math Breadcrumbs 0.3.0 is geïnstalleerd en actief.** De uitbreiding neemt nu ook de automatische redirectopruiming van Pro over. Rank Math Free blijft actief, Pro blijft inactief en SEO Analyzer blijft aan. TFSC Structured Data 0.5.3 is onderzocht en ongewijzigd gebleven.
+**Actuele versie: TFSC Rank Math Breadcrumbs 0.3.1 is geïnstalleerd en actief.** De [beveiligingsreview](2026-11-07-rank-math-security-review.md) heeft een fout in het vertrouwen op gewone metadata aangetoond en verholpen met serverbewijzen. Gebruik 0.3.0 niet meer voor opruiming. De onderstaande oorspronkelijke beschrijving legt de functionele aansluiting vast. Rank Math Free blijft actief, Pro blijft inactief en SEO Analyzer blijft aan. TFSC Structured Data 0.5.3 is onderzocht en ongewijzigd gebleven.
 
 ## Opruiming zoals in Pro
 
@@ -48,6 +48,6 @@ De actuele samenvatting van de bronhashes, locatievoorbeelden en verdere openbar
 
 ## Installatie en herstel
 
-Het geïnstalleerde pakket is [0.3.0](../wordpress/plugins/dist/tfsc-rank-math-breadcrumbs-0.3.0.zip). Laat Rank Math Free en deze uitbreiding actief. Er zijn geen extra handmatige beheerregels of nieuwe instellingen nodig voor de opruiming.
+Het actuele geïnstalleerde pakket is [0.3.1](../wordpress/plugins/dist/tfsc-rank-math-breadcrumbs-0.3.1.zip). De 52 bestaande koppelingen zijn gecontroleerd en ondertekend overgenomen. Laat Rank Math Free en deze uitbreiding actief. Er zijn op deze site geen extra handmatige beheerregels nodig voor de opruiming.
 
 Het pakket 0.2.0 en de vorige bron zijn bewaard. Terugzetten naar 0.2.0 stopt de toekomstige automatische opruiming. Opnieuw activeren van Pro geeft de uitvoering weer aan Pro. Reeds als gevolg van een definitieve contentverwijdering verwijderde redirectregels worden daarmee niet automatisch teruggezet.

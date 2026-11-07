@@ -52,6 +52,7 @@ cleanup_check( ! \RankMath\Redirections\DB::get_redirection_by_id( $term_ids[0] 
 $legacy = wp_insert_post( [ 'post_type' => 'vacature', 'post_status' => 'publish', 'post_title' => 'Legacy fixture' ] );
 $legacy_rule = cleanup_fixture_rule( 'legacy-auto', get_permalink( $legacy ) );
 update_post_meta( $legacy, 'rank_math_auto_redirect', [ (string) $legacy_rule ] );
+\TFSC\RankMathBreadcrumbs\seal_redirect_ids( $legacy, 'post', [ $legacy_rule ] );
 wp_delete_post( $legacy, true );
 cleanup_check( ! \RankMath\Redirections\DB::get_redirection_by_id( $legacy_rule ), 'Associations previously stored by Pro remain compatible' );
 $unmarked = wp_insert_post( [ 'post_type' => 'vacature', 'post_status' => 'publish', 'post_title' => 'Unmarked fixture' ] );
@@ -63,6 +64,7 @@ cleanup_check( \TFSC\RankMathBreadcrumbs\associated_redirect_ids( '2' ) === [], 
 $disabled = wp_insert_post( [ 'post_type' => 'vacature', 'post_status' => 'publish', 'post_title' => 'Disabled fixture' ] );
 $disabled_rule = cleanup_fixture_rule( 'disabled-auto', get_permalink( $disabled ) );
 update_post_meta( $disabled, 'rank_math_auto_redirect', [ $disabled_rule ] );
+\TFSC\RankMathBreadcrumbs\seal_redirect_ids( $disabled, 'post', [ $disabled_rule ] );
 update_option( 'rank_math_modules', [] );
 wp_delete_post( $disabled, true );
 cleanup_check( (bool) \RankMath\Redirections\DB::get_redirection_by_id( $disabled_rule ), 'Disabled redirect module prevents automatic cleanup' );

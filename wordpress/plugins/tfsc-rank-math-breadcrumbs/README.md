@@ -1,4 +1,4 @@
-# TFSC Rank Math Breadcrumbs 0.3.0
+# TFSC Rank Math Breadcrumbs 0.3.1
 
 Deze uitbreiding laat de bestaande Elementor-breadcrumbwidgets werken met Rank Math Free. De templates bevatten het widgettype `breadcrumbs`. De plugin registreert datzelfde type en roept `rank_math_the_breadcrumbs()` aan. Daardoor blijven de opgeslagen widget-ID’s, stijlinstellingen, CSS-klassen en de filters van TFSC-snippets 99 en 199 bruikbaar.
 
@@ -10,19 +10,23 @@ Versie 0.2.0 bewaart daarnaast drie bestaande aansluitingen zodra Pro uitstaat:
 - Matchen van opgeslagen redirectregels inclusief queryparameters, met de vergelijking uit Rank Math Free. Bestaande matchtypes en HTTP-codes blijven door Free beheerd.
 - De ingeschakelde lokale sitemap en `locations.kml`, met de generator uit Free. Alleen de bestaande enkele bedrijfslocatie wordt ondersteund; meerdere locaties blijven een Pro-functie.
 
-Alle aansluitingen laten de uitvoering aan Pro over zodra Pro actief is. De uitbreiding wijzigt geen opgeslagen instellingen, inhoud of templates en vervangt geen Rank Math-editorfuncties. De afzonderlijk door de eigenaar gevraagde uitschakeling van zoekintentieanalyse gebeurt eenmalig buiten deze plugin.
+De bestaande Pro-functies houden bij actieve Pro hun uitvoering. De uitbreiding wijzigt geen SEO-instellingen, inhoud of templates en vervangt geen Rank Math-editorfuncties. Voor veilige redirectopruiming bewaart zij interne bewijsgegevens en een eigen geheime sitesleutel. De afzonderlijk door de eigenaar gevraagde uitschakeling van zoekintentieanalyse gebeurt eenmalig buiten deze plugin.
 
 ## Automatische opruiming vanaf 0.3.0
 
-De uitbreiding bewaart nu ook de relatie tussen een bericht/term en de automatisch door Rank Math gemaakte redirect. Zij gebruikt daarvoor hetzelfde metadata-veld `rank_math_auto_redirect` als Pro. Daardoor blijven zowel bestaande Pro-koppelingen als nieuwe URL-wijzigingen bruikbaar.
+De uitbreiding bewaart ook de relatie tussen een bericht/term en de automatisch door Rank Math gemaakte redirect. Zij blijft het metadata-veld `rank_math_auto_redirect` voor Pro-compatibiliteit bijhouden. Vanaf 0.3.1 vertrouwt opruiming uitsluitend een afzonderlijk, cryptografisch ondertekend serverbewijs. Losse waarden uit het gewone berichtveld geven geen toestemming om redirects te verwijderen.
+
+De handtekening bindt de exacte redirect-ID’s aan site, objecttype en object-ID. De eigen 256-bit sitesleutel staat in een niet-autoloadende WordPress-optie en wordt niet aan REST of de browser blootgesteld. Het bewijs staat in afgeschermde metadata. De sleutel wordt bij vertrouwde schrijfhandelingen gemaakt, nooit tijdens een leescontrole. Ongeldige of ontbrekende bewijzen leiden tot overslaan van opruiming, niet tot bredere verwijdering. Deze gegevens horen bij de normale databasebackup.
+
+De bestaande TFSC-koppelingen zijn bij de beveiligde installatie gecontroleerd en eenmalig ondertekend. Op een andere bestaande site moeten oude koppelingen eveneens door een beheerder gecontroleerd worden overgenomen. Er is bewust geen automatische vertrouwensfallback op onbeveiligde legacyvelden. Nieuwe echte URL-wijzigingen maken zelf een geldig bewijs. Dit voorkomt ook dat eerst geïnjecteerde legacy-ID’s via een latere echte URL-wijziging alsnog vertrouwd worden.
 
 Bij definitieve verwijdering van een bericht of term verwijdert zij uitsluitend de expliciet eraan gekoppelde regels via de cachebewuste Free-API. Verplaatsen naar de prullenbak en herstellen verwijderen geen regels. Handmatige regels zonder zo’n koppeling blijven bestaan, ook wanneer hun bestemming hetzelfde is. De uitbreiding zoekt niet achteraf op bestemming om regels te verwijderen en voert bij installatie geen opruimronde uit.
 
-De redirectmodule moet aanstaan. Bij actieve Pro laat de uitbreiding ook deze registratie en opruiming aan Pro over. De installatie wijzigt geen bestaande koppelingen of redirects; toekomstige automatische URL-wijzigingen slaan de koppeling op en toekomstige definitieve verwijderingen activeren de opruiming.
+De redirectmodule moet aanstaan. Bij actieve Pro houdt de uitbreiding alleen haar interne serverbewijzen bij vanuit de echte automatische redirectgebeurtenissen; Pro beheert dan het gewone koppelingenveld en de verwijdering. De installatie verwijdert geen bestaande redirects. Toekomstige automatische URL-wijzigingen slaan de koppeling op en toekomstige definitieve verwijderingen activeren de opruiming.
 
 ## Installatie en live controle
 
-1. Maak een herstelkopie van de huidige site. Upload `tfsc-rank-math-breadcrumbs-0.3.0.zip` via WordPress → Plugins → Nieuwe plugin → Plugin uploaden. Bij een eerste overstap kan de uitbreiding eerst naast Pro worden geactiveerd. Bij een bestaande Free-installatie moeten Free en deze uitbreiding actief blijven.
+1. Maak een herstelkopie van de huidige site. Upload `tfsc-rank-math-breadcrumbs-0.3.1.zip` via WordPress → Plugins → Nieuwe plugin → Plugin uploaden. Bij een eerste overstap kan de uitbreiding eerst naast Pro worden geactiveerd. Bij een bestaande Free-installatie moeten Free en deze uitbreiding actief blijven. Laat bestaande legacykoppelingen gecontroleerd overnemen voordat je vertrouwt op hun automatische opruiming.
 2. Leg op de testpagina’s de huidige breadcrumbs en vormgeving vast. Deactiveer daarna uitsluitend Rank Math Pro. Laat Elementor, Elementor Pro en Rank Math Free actief.
 3. Vergelijk met verse pagina-aanvragen de zichtbare paden, linkbestemmingen, kleuren, marges, mobiele scroll en `BreadcrumbList`. Controleer het vacature-comboarchief, het Beroepengids-tussenarchief, een detailarchief, een artikel en het blog. Vergelijk ook de volledige JSON-LD, metadata, XML-sitemaps en `locations.kml`. Test queryregels met fixtures, zonder beveiligings-URL’s te activeren.
 4. Controleer in de Elementor-editor of het bestaande widget als TFSC Breadcrumbs beschikbaar is. Controleer ook opnieuw gegenereerde Elementor-CSS voordat de overstap definitief wordt afgerond.
@@ -35,6 +39,9 @@ Herstel gaat door Rank Math Pro opnieuw te activeren. De uitbreiding laat het wi
 - 56 controles in een tijdelijke, volledige WordPress 6.8.3-installatie met SQLite, Elementor 4.3.6 en Rank Math Free 1.0.281. Naast widgetregistratie, breadcrumbs en opnieuw gegenereerde CSS zijn de gemarkeerde entiteiten, behoud van de organisatieverwijzing, ontbrekende gegevens, queryvergelijking, lokale sitemap en Pro-voorrang getest.
 - Acht afzonderlijke baselinecontroles tonen de Free-werkwijze zonder onze opruimcallbacks: gewone automatische post-/termredirects werken en de wachtwoord-noindex-optie werkt; automatische opruiming ontbreekt daar.
 - Achttien aanvullende controles testen de opruimaansluiting met echte WordPress-wijzigingen en verwijderingen: post-/termkoppeling, herhaalde URL-wijzigingen, prullenbak/herstel, definitief verwijderen, bestaande Pro-metadata, onaangetaste handmatige regels, cacheverwijdering, ongeldige gegevens, uitgeschakelde module en voorrang van Pro. Deze bewerkingstests draaien uitsluitend in de tijdelijke lokale database.
+- Een afzonderlijke autorisatie-aanval demonstreerde in 0.3.0 een probleem met vervalste legacy-metadata. Dezelfde aanval laat in 0.3.1 de onafhankelijke redirect intact. Aanvullende beveiligingstests controleren rollen, bewijsvervalsing en kopiëren, foutieve en te grote ID’s, ontbrekende/verkeerde sleutel, legitieme systeemverwijdering, schema-invoer en directe PHP-toegang. Het beveiligingsverslag bevat de actuele telling en grenzen van deze tests.
+
+Gebruik 0.3.1 of hoger voor de opruimfunctie. Terugzetten naar 0.3.0 herintroduceert het gevonden metadata-probleem. Het uitzetten van deze uitbreiding behoudt haar interne sleutel en bewijzen voor later hergebruik.
 - In de volledige test zijn de artikel- en termqueries echte WordPress-queries. De virtuele basisquery en de combo-routergegevens zijn nagebootst. Snippets 99 en 199 worden ongewijzigd geladen. Elementor Pro, snippet 113, de volledige router 406 en de schema-aanpassing van 193 zitten buiten deze lokale testinstallatie.
 - De [functionaliteitsaudit](../../../audits/2026-11-07-rank-math-pro-feature-audit.md) en het vervolgverslag beschrijven de actuele productiecontrole en migratiestatus. Lokale tests vormen op zichzelf geen bewijs voor iedere live template of toekomstige pluginversie.
 

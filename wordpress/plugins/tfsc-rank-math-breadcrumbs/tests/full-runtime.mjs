@@ -80,6 +80,15 @@ echo 'Installed disposable in-memory WordPress';
   // The next request must use the actual module manager, rather than a stub.
   await run("<?php require '/wordpress/wp-load.php'; update_option('rank_math_registration_skip',true);");
   await run(fs.readFileSync(new URL('./cleanup-workflows.php', import.meta.url), 'utf8'));
+  await run(fs.readFileSync(new URL('./security-regression.php', import.meta.url), 'utf8'));
+  await run(fs.readFileSync(new URL('./security.php', import.meta.url), 'utf8'));
+  await run(fs.readFileSync(new URL('./security-widget.php', import.meta.url), 'utf8'));
+  await run(fs.readFileSync(new URL('./security-dependencies.php', import.meta.url), 'utf8'));
+  for (const filename of ['tfsc-rank-math-breadcrumbs.php', 'widget-breadcrumbs.php']) {
+    const response = await run("<?php require '/wordpress/wp-content/plugins/tfsc-rank-math-breadcrumbs/" + filename + "'; echo 'UNEXPECTED_DIRECT_OUTPUT';");
+    if (response.text !== '') throw new Error('Direct PHP entry was not blocked: ' + filename);
+  }
+  console.log('Direct PHP entry checks: 2 passed');
 } finally {
   if (php.fileExists('/wordpress/wp-content/debug.log')) {
     console.log('PHP debug log', php.readFileAsText('/wordpress/wp-content/debug.log').slice(-5000));
