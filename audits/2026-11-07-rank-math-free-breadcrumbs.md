@@ -27,7 +27,7 @@ Het detailarchief heeft in de huidige weergave geen afzonderlijke kruimel ‘Ber
 
 De eigenaar heeft gevraagd om een eigen uitbreiding waarmee de bestaande widgets kunnen blijven werken. Daarvoor is [TFSC Rank Math Breadcrumbs 0.1.0](../wordpress/plugins/tfsc-rank-math-breadcrumbs/README.md) ontwikkeld. Die registreert hetzelfde Elementor-widgettype `breadcrumbs` zodra Rank Math Pro uitstaat en gebruikt de bestaande Free-renderer. De shortcodevervanging hieronder is daarmee een terugvaloptie.
 
-De ontwikkeling is lokaal gecontroleerd met 23 gerichte controles en 37 controles in een volledige tijdelijke WordPress-installatie met Elementor 4.3.6 en Rank Math Free 1.0.281. De productie-installatie en de visuele vergelijking met Pro uit staan nog open. De handleiding beschrijft de precieze testdekking, beperkingen, installatie en herstelstappen.
+De uitbreiding is inmiddels als versie 0.1.1 geïnstalleerd en actief. Er slagen 27 gerichte controles en 37 controles in een volledige tijdelijke WordPress-installatie met Elementor 4.3.6 en Rank Math Free 1.0.281. Rank Math Pro blijft actief omdat de [tweede functionaliteitsaudit](2026-11-07-rank-math-pro-feature-audit.md) aanvullende afhankelijkheden vond. De visuele vergelijking met Pro uit staat open. De handleiding beschrijft de precieze testdekking, beperkingen, installatie en herstelstappen.
 
 ## Eerder voorgestelde shortcodevervanging
 

@@ -1,0 +1,591 @@
+{
+  "date": "2026-11-07",
+  "site": "https://thefieldservicecompany.nl",
+  "versions": {
+    "free": "1.0.281",
+    "pro": "3.0.124",
+    "elementor": "4.3.6",
+    "elementor_pro": "4.3.3",
+    "extension": "0.1.1"
+  },
+  "extension_installed": true,
+  "extension_active": true,
+  "pro_active": true,
+  "php_source_hashes": {
+    "plugin": "095b4393cd8cdf3fb02c5bbde68cca7ec7846539403371fb0fd746726b5855cf",
+    "widget": "1c4bcd6a5c33a9f066c1413c3adac7760db5e9bcc4ec5b9f8ed48df6fb2b1840"
+  },
+  "temporary_snippet": {
+    "id": 410,
+    "active": false,
+    "route_status_after_cleanup": 404
+  },
+  "runtime_flags": {
+    "analytics": false,
+    "seo_analysis": true,
+    "email_report_callback": false,
+    "rank_math_breadcrumbs": true
+  },
+  "modules": [
+    "rich-snippet",
+    "woocommerce",
+    "buddypress",
+    "bbpress",
+    "acf",
+    "web-stories",
+    "instant-indexing",
+    "redirections",
+    "404-monitor",
+    "image-seo",
+    "local-seo",
+    "sitemap",
+    "seo-analysis",
+    "marketplace"
+  ],
+  "coverage": {
+    "published_records": 654,
+    "elementor_documents": 99,
+    "pro_source_files": 212,
+    "source_snapshot_sha256": "e0e33b9d39029abc0572e2dd17703a9998bb4b085837aefc1cfb3af4c7cf9b1d",
+    "public_pages_checked": 36,
+    "public_fetch_failures": 0
+  },
+  "schema_metadata_by_status": [],
+  "about_mentions": {
+    "marked_records": 36,
+    "rendered_pages": 14,
+    "pages": [
+      {
+        "id": 27533,
+        "type": "beroepengids",
+        "link": "https://thefieldservicecompany.nl/beroepengids/artikel/wat-is-een-field-service-engineer/",
+        "counts": {
+          "about": 0,
+          "mentions": 5
+        },
+        "status": 200,
+        "rendered_properties": [
+          {
+            "entity": "WebPage",
+            "property": "mentions",
+            "count": 5
+          }
+        ]
+      },
+      {
+        "id": 12940,
+        "type": "vacature",
+        "link": "https://thefieldservicecompany.nl/vacature/internationaal-service-monteur-renewable-energy/",
+        "counts": {
+          "about": 0,
+          "mentions": 1
+        },
+        "status": 200,
+        "rendered_properties": []
+      },
+      {
+        "id": 12943,
+        "type": "vacature",
+        "link": "https://thefieldservicecompany.nl/vacature/internationaal-commissioning-engineer-renewable-energy/",
+        "counts": {
+          "about": 0,
+          "mentions": 1
+        },
+        "status": 200,
+        "rendered_properties": [
+          {
+            "entity": "FAQPage",
+            "property": "mentions",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "id": 12956,
+        "type": "vacature",
+        "link": "https://thefieldservicecompany.nl/vacature/internationaal-service-engineer-offshore/",
+        "counts": {
+          "about": 0,
+          "mentions": 1
+        },
+        "status": 200,
+        "rendered_properties": []
+      },
+      {
+        "id": 13139,
+        "type": "vacature",
+        "link": "https://thefieldservicecompany.nl/vacature/service-engineer-maritiem-offshore-internationaal/",
+        "counts": {
+          "about": 0,
+          "mentions": 1
+        },
+        "status": 200,
+        "rendered_properties": []
+      },
+      {
+        "id": 13153,
+        "type": "vacature",
+        "link": "https://thefieldservicecompany.nl/vacature/service-engineer-offshore-kranen/",
+        "counts": {
+          "about": 0,
+          "mentions": 1
+        },
+        "status": 200,
+        "rendered_properties": [
+          {
+            "entity": "FAQPage",
+            "property": "mentions",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "id": 13172,
+        "type": "vacature",
+        "link": "https://thefieldservicecompany.nl/vacature/field-service-engineer-biogas-green-energy/",
+        "counts": {
+          "about": 0,
+          "mentions": 1
+        },
+        "status": 200,
+        "rendered_properties": []
+      },
+      {
+        "id": 13195,
+        "type": "vacature",
+        "link": "https://thefieldservicecompany.nl/vacature/service-engineer-packaging-internationaal/",
+        "counts": {
+          "about": 0,
+          "mentions": 1
+        },
+        "status": 200,
+        "rendered_properties": []
+      },
+      {
+        "id": 13272,
+        "type": "vacature",
+        "link": "https://thefieldservicecompany.nl/vacature/service-engineer-verpakkingsmachines-zzp-freelance/",
+        "counts": {
+          "about": 0,
+          "mentions": 1
+        },
+        "status": 200,
+        "rendered_properties": []
+      },
+      {
+        "id": 13315,
+        "type": "vacature",
+        "link": "https://thefieldservicecompany.nl/vacature/service-monteur-verpakkingsmachines/",
+        "counts": {
+          "about": 1,
+          "mentions": 1
+        },
+        "status": 200,
+        "rendered_properties": [
+          {
+            "entity": "FAQPage",
+            "property": "about",
+            "count": 1
+          },
+          {
+            "entity": "FAQPage",
+            "property": "mentions",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "id": 15530,
+        "type": "vacature",
+        "link": "https://thefieldservicecompany.nl/vacature/internationaal-service-monteur-maritiem/",
+        "counts": {
+          "about": 0,
+          "mentions": 1
+        },
+        "status": 200,
+        "rendered_properties": []
+      },
+      {
+        "id": 15757,
+        "type": "vacature",
+        "link": "https://thefieldservicecompany.nl/vacature/field-service-engineer-high-tech/",
+        "counts": {
+          "about": 0,
+          "mentions": 1
+        },
+        "status": 200,
+        "rendered_properties": []
+      },
+      {
+        "id": 17752,
+        "type": "vacature",
+        "link": "https://thefieldservicecompany.nl/vacature/freelance-service-engineer/",
+        "counts": {
+          "about": 0,
+          "mentions": 4
+        },
+        "status": 200,
+        "rendered_properties": []
+      },
+      {
+        "id": 12934,
+        "type": "vacature",
+        "link": "https://thefieldservicecompany.nl/vacature/service-monteur-rotating-equipment-internationaal/",
+        "counts": {
+          "about": 1,
+          "mentions": 1
+        },
+        "status": 200,
+        "rendered_properties": []
+      },
+      {
+        "id": 18275,
+        "type": "vacature",
+        "link": "https://thefieldservicecompany.nl/vacature/freelance-service-engineer-hydrauliek/",
+        "counts": {
+          "about": 0,
+          "mentions": 1
+        },
+        "status": 200,
+        "rendered_properties": []
+      },
+      {
+        "id": 18605,
+        "type": "vacature",
+        "link": "https://thefieldservicecompany.nl/vacature/junior-koelmonteur/",
+        "counts": {
+          "about": 0,
+          "mentions": 3
+        },
+        "status": 200,
+        "rendered_properties": [
+          {
+            "entity": "FAQPage",
+            "property": "mentions",
+            "count": 3
+          }
+        ]
+      },
+      {
+        "id": 19739,
+        "type": "vacature",
+        "link": "https://thefieldservicecompany.nl/vacature/internationaal-service-monteur-machinebouw/",
+        "counts": {
+          "about": 0,
+          "mentions": 2
+        },
+        "status": 200,
+        "rendered_properties": []
+      },
+      {
+        "id": 20453,
+        "type": "vacature",
+        "link": "https://thefieldservicecompany.nl/vacature/field-service-engineer-elektrotechniek/",
+        "counts": {
+          "about": 0,
+          "mentions": 1
+        },
+        "status": 200,
+        "rendered_properties": [
+          {
+            "entity": "FAQPage",
+            "property": "mentions",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "id": 20460,
+        "type": "vacature",
+        "link": "https://thefieldservicecompany.nl/vacature/service-monteur-mechanisch/",
+        "counts": {
+          "about": 0,
+          "mentions": 7
+        },
+        "status": 200,
+        "rendered_properties": []
+      },
+      {
+        "id": 20504,
+        "type": "vacature",
+        "link": "https://thefieldservicecompany.nl/vacature/service-engineer-verpakkingsmachines-noord-europa/",
+        "counts": {
+          "about": 0,
+          "mentions": 2
+        },
+        "status": 200,
+        "rendered_properties": []
+      },
+      {
+        "id": 14952,
+        "type": "vacature",
+        "link": "https://thefieldservicecompany.nl/vacature/internationaal-service-engineer-koeltechniek-wereldwijd/",
+        "counts": {
+          "about": 0,
+          "mentions": 1
+        },
+        "status": 200,
+        "rendered_properties": [
+          {
+            "entity": "FAQPage",
+            "property": "mentions",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "id": 18645,
+        "type": "vacature",
+        "link": "https://thefieldservicecompany.nl/vacature/koeltechnieker-belgie/",
+        "counts": {
+          "about": 1,
+          "mentions": 1
+        },
+        "status": 200,
+        "rendered_properties": [
+          {
+            "entity": "FAQPage",
+            "property": "about",
+            "count": 1
+          },
+          {
+            "entity": "FAQPage",
+            "property": "mentions",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "id": 14942,
+        "type": "vacature",
+        "link": "https://thefieldservicecompany.nl/vacature/service-engineer-koeltechniek-vacature/",
+        "counts": {
+          "about": 0,
+          "mentions": 2
+        },
+        "status": 200,
+        "rendered_properties": [
+          {
+            "entity": "FAQPage",
+            "property": "mentions",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "id": 18590,
+        "type": "vacature",
+        "link": "https://thefieldservicecompany.nl/vacature/koelmonteur-koudetechniek/",
+        "counts": {
+          "about": 0,
+          "mentions": 4
+        },
+        "status": 200,
+        "rendered_properties": [
+          {
+            "entity": "FAQPage",
+            "property": "mentions",
+            "count": 4
+          }
+        ]
+      },
+      {
+        "id": 20724,
+        "type": "vacature",
+        "link": "https://thefieldservicecompany.nl/vacature/service-monteur-verpakkingsmachines-zzp-freelance/",
+        "counts": {
+          "about": 1,
+          "mentions": 3
+        },
+        "status": 200,
+        "rendered_properties": []
+      },
+      {
+        "id": 20733,
+        "type": "vacature",
+        "link": "https://thefieldservicecompany.nl/vacature/service-monteur-scrubbers/",
+        "counts": {
+          "about": 1,
+          "mentions": 2
+        },
+        "status": 200,
+        "rendered_properties": []
+      },
+      {
+        "id": 21006,
+        "type": "vacature",
+        "link": "https://thefieldservicecompany.nl/vacature/field-service-engineer-allround/",
+        "counts": {
+          "about": 0,
+          "mentions": 2
+        },
+        "status": 200,
+        "rendered_properties": []
+      },
+      {
+        "id": 20823,
+        "type": "vacature",
+        "link": "https://thefieldservicecompany.nl/vacature/service-monteur-internationaal/",
+        "counts": {
+          "about": 0,
+          "mentions": 4
+        },
+        "status": 200,
+        "rendered_properties": [
+          {
+            "entity": "FAQPage",
+            "property": "mentions",
+            "count": 4
+          }
+        ]
+      },
+      {
+        "id": 22531,
+        "type": "vacature",
+        "link": "https://thefieldservicecompany.nl/vacature/field-service-engineer-internationaal/",
+        "counts": {
+          "about": 0,
+          "mentions": 4
+        },
+        "status": 200,
+        "rendered_properties": [
+          {
+            "entity": "FAQPage",
+            "property": "mentions",
+            "count": 4
+          }
+        ]
+      },
+      {
+        "id": 22702,
+        "type": "vacature",
+        "link": "https://thefieldservicecompany.nl/vacature/service-engineer-mechanisch-elektrisch/",
+        "counts": {
+          "about": 0,
+          "mentions": 2
+        },
+        "status": 200,
+        "rendered_properties": [
+          {
+            "entity": "FAQPage",
+            "property": "mentions",
+            "count": 2
+          }
+        ]
+      },
+      {
+        "id": 13190,
+        "type": "vacature",
+        "link": "https://thefieldservicecompany.nl/vacature/field-service-engineer-verpakkingsmachines/",
+        "counts": {
+          "about": 0,
+          "mentions": 3
+        },
+        "status": 200,
+        "rendered_properties": [
+          {
+            "entity": "FAQPage",
+            "property": "mentions",
+            "count": 3
+          }
+        ]
+      },
+      {
+        "id": 22727,
+        "type": "vacature",
+        "link": "https://thefieldservicecompany.nl/vacature/field-service-engineer-australie/",
+        "counts": {
+          "about": 0,
+          "mentions": 1
+        },
+        "status": 200,
+        "rendered_properties": []
+      },
+      {
+        "id": 23170,
+        "type": "vacature",
+        "link": "https://thefieldservicecompany.nl/vacature/service-monteur-zonnepanelen-b2b/",
+        "counts": {
+          "about": 0,
+          "mentions": 1
+        },
+        "status": 200,
+        "rendered_properties": []
+      },
+      {
+        "id": 23148,
+        "type": "vacature",
+        "link": "https://thefieldservicecompany.nl/vacature/field-service-engineer-zonnepanelen/",
+        "counts": {
+          "about": 0,
+          "mentions": 1
+        },
+        "status": 200,
+        "rendered_properties": []
+      },
+      {
+        "id": 22784,
+        "type": "vacature",
+        "link": "https://thefieldservicecompany.nl/vacature/field-service-engineer-benelux/",
+        "counts": {
+          "about": 0,
+          "mentions": 1
+        },
+        "status": 200,
+        "rendered_properties": []
+      },
+      {
+        "id": 13641,
+        "type": "vacature_ingevuld",
+        "link": "https://thefieldservicecompany.nl/vacature-ingevuld/service-engineer-spuitgietmachines/",
+        "counts": {
+          "about": 0,
+          "mentions": 1
+        },
+        "status": 200,
+        "rendered_properties": []
+      }
+    ]
+  },
+  "redirects": {
+    "total": 265,
+    "active": 234,
+    "trashed": 31,
+    "active_query_source_rule_ids": [
+      133
+    ],
+    "scheduled_actions": [
+      {
+        "hook": "rank_math/analytics/email_report_event",
+        "status": "failed",
+        "total": "1"
+      },
+      {
+        "hook": "rank_math/analytics/email_report_event",
+        "status": "pending",
+        "total": "1"
+      }
+    ]
+  },
+  "focus_keyword_distribution": {
+    "1": 213,
+    "2": 27,
+    "3": 57,
+    "4": 12,
+    "5": 5
+  },
+  "elementor_pro_schema_flags_found": 0,
+  "media_content_scan": {
+    "scanned": 348,
+    "byType": {
+      "blog": 9,
+      "beroepengids": 74,
+      "kennisbankartikel": 107,
+      "pages": 27,
+      "vacature": 63,
+      "vacature_ingevuld": 68
+    },
+    "flagged": []
+  },
+  "pro_switch_test_completed": false
+}

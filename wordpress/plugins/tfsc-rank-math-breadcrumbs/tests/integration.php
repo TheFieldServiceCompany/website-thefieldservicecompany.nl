@@ -8,6 +8,7 @@ namespace Elementor {
     class Controls_Manager {
         const CHOOSE = 'choose';
         const COLOR = 'color';
+        const SELECT = 'select';
         const TAB_STYLE = 'style';
     }
 
@@ -17,6 +18,8 @@ namespace Elementor {
 
     class Widget_Base {
         public $controls = [];
+        public $settings = [];
+        public function get_settings( $key ) { return $this->settings[$key] ?? null; }
         public function start_controls_section( $name, $settings ) {}
         public function end_controls_section() {}
         public function add_control( $name, $settings ) { $this->controls[$name] = $settings; }
@@ -25,6 +28,12 @@ namespace Elementor {
         public function render_for_test() { ob_start(); $this->render(); return ob_get_clean(); }
         public function controls_for_test() { $this->register_controls(); return $this->controls; }
         public function dynamic_for_test() { return $this->is_dynamic_content(); }
+    }
+}
+
+namespace Elementor\Core\Kits\Documents\Tabs {
+    class Global_Typography {
+        const TYPOGRAPHY_SECONDARY = 'secondary';
     }
 }
 
@@ -121,6 +130,8 @@ namespace {
     check( $controls['typography']['selector'] === '{{WRAPPER}}', 'Saved typography keeps its wrapper selector' );
     check( $controls['text_color']['selectors']['{{WRAPPER}}'] === 'color: {{VALUE}};', 'Stored text colors use the original selector' );
     check( $controls['link_color']['selectors']['{{WRAPPER}} a'] === 'color: {{VALUE}};', 'Stored link colors use the original selector' );
+    check( $controls['typography']['global']['default'] === 'secondary', 'Default global typography matches the installed Pro widget' );
+    check( $controls['align']['prefix_class'] === 'elementor%s-align-', 'Responsive alignment retains the original CSS classes' );
 
     foreach ( [ 'base', 'term', 'article', 'archive', 'combo' ] as $context ) {
         $query_vars = [ 'post_type' => 'beroepengids' ];
@@ -148,6 +159,13 @@ namespace {
         }
     }
 
+    $context = 'base';
+    $query_vars = [ 'tfsc_taxonomy_archive' => 'beroep_functienaam' ];
+    $widget->settings['html_tag'] = 'div';
+    check( strpos( $widget->render_for_test(), '<div>' ) === 0, 'Stored alternate HTML wrapper is supported' );
+    $widget->settings['html_tag'] = 'script';
+    check( strpos( $widget->render_for_test(), '<nav aria-label="breadcrumbs"' ) === 0, 'Unrecognized HTML tag falls back to safe Rank Math markup' );
+    $widget->settings = [];
     \RankMath\Helper::$enabled = false;
     check( $widget->render_for_test() === '', 'Disabled breadcrumb setting is respected' );
     define( 'RANK_MATH_PRO_VERSION', 'fixture' );

@@ -2,7 +2,7 @@
 /**
  * Plugin Name: TFSC Rank Math Breadcrumbs
  * Description: Keeps existing Elementor breadcrumb widgets working with Rank Math Free.
- * Version: 0.1.0
+ * Version: 0.1.1
  * Requires at least: 6.5
  * Requires PHP: 7.4
  * Author: The Field Service Company
