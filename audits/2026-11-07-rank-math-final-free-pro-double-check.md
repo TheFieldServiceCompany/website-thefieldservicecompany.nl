@@ -2,6 +2,8 @@
 
 Controle van 7 november 2026 voor thefieldservicecompany.nl, na de definitieve deactivering van Pro door de eigenaar.
 
+**Later vervolg:** op verzoek is ook de automatische redirectopruiming nagebouwd en geïnstalleerd in versie 0.3.0. De werking van de eigen plugin voor meerdere vacaturewerklocaties is bevestigd. Zie [opruiming en vacaturelocaties](2026-11-07-rank-math-redirect-cleanup-and-job-locations.md). De onderstaande controlegegevens beschrijven de eerdere versie 0.2.0.
+
 **Free 1.0.281 en TFSC Rank Math Breadcrumbs 0.2.0 zijn actief; Pro 3.0.124 is inactief. Er is bij deze hercontrole geen nieuwe uitval gevonden in de onderzochte, gebruikte websitefuncties. Er is geen aanvullende uitbreiding op productie geplaatst.** De bestaande vier aansluitingen blijven nodig: Elementor-breadcrumbs, gemarkeerde About/Mentions-entiteiten, queryparametervergelijking en de lokale sitemap.
 
 ## Volledigheid van de vergelijking
@@ -59,7 +61,7 @@ Daarom is dit voor deze installatie **geen ontbrekende Pro-functie**. De eerdere
 
 **URL wijzigen blijft automatisch werken.** In een afzonderlijke tijdelijke WordPress-installatie met alleen Free zijn een echte CPT-slugwijziging en een taxonomie-slugwijziging uitgevoerd. In beide gevallen maakte Free de juiste 301-regel naar de nieuwe URL. Dit is dus niet alleen uit de documentatie afgeleid. [Automatische redirects](https://rankmath.com/kb/how-to-redirect-posts-after-changing-urls/).
 
-**Definitief verwijderen vraagt een redirectcontrole.** In dezelfde proef bleven de gemaakte regels na definitieve verwijdering van het bericht of de term bestaan. Pro voegt juist extra koppeling en automatische opruiming toe. Controleer daarom bij verwijderen of oude verwijzingen moeten blijven doorsturen naar een relevante vervanger, of een andere afhandeling nodig hebben. Hiervoor is nu geen automatische nieuwe bedrijfsregel geïnstalleerd.
+**Definitief verwijderen in Free alleen vraagt een redirectcontrole.** In dezelfde baselineproef bleven de gemaakte regels na definitieve verwijdering van het bericht of de term bestaan. Pro voegt extra koppeling en automatische opruiming toe. Op het latere verzoek van de eigenaar is die aansluiting nu in onze versie 0.3.0 opgenomen en getest; zie het vervolgverslag hierboven.
 
 **Nieuwe video’s, meerdere bedrijfslocaties en geavanceerde schema’s zijn een nieuwe keuze.** Het huidige ontbreken van die content maakt ze geen migratieblokkade, maar Free neemt de Pro-automatisering niet vanzelf over zodra zulke inhoud wordt toegevoegd. Onze uitbreiding ondersteunt de huidige enkele locatie en leest bestaande About/Mentions-markeringen; ze biedt geen Pro-schema-editor. Voor nieuwe gemarkeerde links kunnen dezelfde attributen via de bestaande REST-publicatie worden aangeleverd.
 
@@ -76,7 +78,7 @@ Daarom is dit voor deze installatie **geen ontbrekende Pro-functie**. De eerdere
 
 Tijdens deze hercontrole is Pro niet opnieuw aangezet. Er zijn geen content-, template-, schema- of SEO-instellingen gewijzigd. Alleen een tijdelijke, geauthenticeerde leesroute is gebruikt; die is weer gedeactiveerd en geeft HTTP 404. De acht bewerkingstests draaiden uitsluitend in een tijdelijke lokale database. De dev-site is niet aangeraakt.
 
-Mijn advies is **Free met de bestaande uitbreiding 0.2.0 actief houden**. Er is nu geen aangetroffen gebruikte functie waarvoor nog een extra vervanger nodig is. Neem de redirectcontrole bij definitief verwijderen op in het normale beheer. Bij nieuwe soorten content of toekomstige updates hoort een gerichte test op dev; de huidige proef bewijst geen gedrag van nog onbekende versies of verwerking door Google.
+Het advies na het vervolg is **Free met uitbreiding 0.3.0 actief houden**. De extra automatische opruiming is inmiddels op verzoek beschikbaar. Meerdere werklocaties in vacatures worden al door TFSC Structured Data geleverd en zijn geen Pro-afhankelijkheid. Bij nieuwe soorten content of toekomstige updates hoort een gerichte test op dev; de huidige proef bewijst geen gedrag van nog onbekende versies of verwerking door Google.
 
 ## Aanvullende primaire bronnen
 

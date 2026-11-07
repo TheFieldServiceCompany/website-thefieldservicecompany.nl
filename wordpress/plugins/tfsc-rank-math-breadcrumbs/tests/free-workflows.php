@@ -8,6 +8,11 @@ function workflow_check( $condition, $message ) {
     $GLOBALS['checks'][] = $message;
 }
 workflow_check( ! defined( 'RANK_MATH_PRO_VERSION' ), 'Workflow test runs without Rank Math Pro' );
+// Keep this baseline test separate from the compatibility cleanup workflow.
+remove_action( 'rank_math/redirection/post_updated', 'TFSC\\RankMathBreadcrumbs\\remember_post_redirect', 20 );
+remove_action( 'rank_math/redirection/term_updated', 'TFSC\\RankMathBreadcrumbs\\remember_term_redirect', 20 );
+remove_action( 'before_delete_post', 'TFSC\\RankMathBreadcrumbs\\remove_post_redirects', 20 );
+remove_action( 'pre_delete_term', 'TFSC\\RankMathBreadcrumbs\\remove_term_redirects', 20 );
 \RankMath\Installer::create_tables( [ 'redirections' ] );
 rank_math()->settings->set( 'general', 'redirections_post_redirect', true );
 register_post_type( 'vacature', [ 'public' => true, 'show_ui' => true, 'rewrite' => [ 'slug' => 'vacature' ] ] );
