@@ -23,7 +23,13 @@ Het detailarchief heeft in de huidige weergave geen afzonderlijke kruimel ‘Ber
 - Templates **28197** en **27450** bevatten ook een breadcrumb-widget. Live gebruik daarvan is nog niet bevestigd.
 - De algemene CSS op `.rank-math-breadcrumb` kan blijven werken met dezelfde uitvoer van Free. Widgetgebonden opmaak moet mee naar de vervanger. Op het blog zijn linkkleur, onderrand en marge aan het huidige widget gekoppeld. Behoud bestaande klassen zoals `tfsc-breadcrumb-scroll` en `broodkruimel` waar ze worden gebruikt en vergelijk desktop en mobiel.
 
-## Vervolg op 8 november
+## Aanvulling na hervatting op 7 november
+
+De eigenaar heeft gevraagd om een eigen uitbreiding waarmee de bestaande widgets kunnen blijven werken. Daarvoor is [TFSC Rank Math Breadcrumbs 0.1.0](../wordpress/plugins/tfsc-rank-math-breadcrumbs/README.md) ontwikkeld. Die registreert hetzelfde Elementor-widgettype `breadcrumbs` zodra Rank Math Pro uitstaat en gebruikt de bestaande Free-renderer. De shortcodevervanging hieronder is daarmee een terugvaloptie.
+
+De ontwikkeling is lokaal gecontroleerd met 23 gerichte controles en 37 controles in een volledige tijdelijke WordPress-installatie met Elementor 4.3.6 en Rank Math Free 1.0.281. De productie-installatie en de visuele vergelijking met Pro uit staan nog open. De handleiding beschrijft de precieze testdekking, beperkingen, installatie en herstelstappen.
+
+## Eerder voorgestelde shortcodevervanging
 
 1. Leg de huidige breadcrumbs vast en maak een herstelkopie van de templates. Begin met **25495** en **24908**. Vervang daar bij voorkeur op een testomgeving het widget op dezelfde plek door een Elementor Shortcode-widget met `[rank_math_breadcrumb]`.
 2. Test met Rank Math Pro uit en Free aan. Vergelijk labels, volgorde en linkbestemmingen. Klik vanaf het Beroepengids-detailarchief terug naar het tussenarchief en vanaf het comboarchief terug naar het bovenliggende vacaturearchief. Vergelijk ook `BreadcrumbList`, mobiele scroll en opmaak.
