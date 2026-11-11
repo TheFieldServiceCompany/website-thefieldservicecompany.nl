@@ -527,15 +527,22 @@ function tfsc_combo_get_current_result_count() {
  *
  * Regels:
  *
- * - combo met functienaam: toegestaan
- * - locatie-only combo: toegestaan
- * - overige combo zonder functienaam: noindex
+ * - los taxonomiearchief: Rank Math beslist
+ * - combo's vereisen een functienaam
  * - maximaal ingestelde aantal taxonomies
- * - frontend moet minimaal 1 resultaat hebben
+ * - combo's met een bekend aantal moeten voldoende open vacatures hebben
  */
 
+function tfsc_combo_index_min_open_vacancies(): int {
+    return max( 1, (int) apply_filters( 'tfsc_combo_index_min_open_vacancies', 1 ) );
+}
+
+/**
+ * Een expliciete combo zonder aantal wordt alleen aan het structurele beleid getoetst.
+ */
 function tfsc_combo_get_index_status(
-    $combo = null
+    $combo = null,
+    ?int $result_count = null
 ) {
 
     $is_frontend_combo =
@@ -690,21 +697,25 @@ function tfsc_combo_get_index_status(
 
         $result_count =
             tfsc_combo_get_current_result_count();
+    }
 
 
-        if (
-            $result_count < 1
-        ) {
+    if (
+        null !== $result_count
+        &&
+        $result_count < tfsc_combo_index_min_open_vacancies()
+    ) {
 
-            return [
-                'index' => false,
-                'reason' => 'no_results',
-                'results' => $result_count,
-                'taxonomies' => $taxonomy_count,
-            ];
-        }
+        return [
+            'index' => false,
+            'reason' => $result_count < 1 ? 'no_results' : 'below_minimum_open_vacancies',
+            'results' => $result_count,
+            'taxonomies' => $taxonomy_count,
+        ];
+    }
 
 
+    if ( $is_frontend_combo ) {
         return [
             'index' => true,
             'reason' =>
@@ -726,7 +737,7 @@ function tfsc_combo_get_index_status(
                 ? 'valid_sitemap_location_combo'
                 : 'valid_sitemap_function_combo',
 
-        'results' => null,
+        'results' => $result_count,
         'taxonomies' => $taxonomy_count,
     ];
 }
@@ -737,12 +748,14 @@ function tfsc_combo_get_index_status(
  * ============================================================ */
 
 function tfsc_combo_should_index(
-    $combo = null
+    $combo = null,
+    ?int $result_count = null
 ) {
 
     $status =
         tfsc_combo_get_index_status(
-            $combo
+            $combo,
+            $result_count
         );
 
 
