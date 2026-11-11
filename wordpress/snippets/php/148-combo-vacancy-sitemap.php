@@ -1,5 +1,8 @@
 <?php
 if (!defined('TFSC_COMBO_MANAGER_SITEMAP_HOOK_V1')) define('TFSC_COMBO_MANAGER_SITEMAP_HOOK_V1',true);
+if ( ! defined( 'TFSC_COMBO_SITEMAP_COUNTS_SUPPORTED' ) ) {
+    define( 'TFSC_COMBO_SITEMAP_COUNTS_SUPPORTED', true );
+}
 
 /**
  * TFSC - Combo Vacancy Sitemap
@@ -101,7 +104,7 @@ if (
 
 
 /**
- * Cache key met lastmod-support. Nieuwe sleutel forceert fase 1 opnieuw.
+ * Cache key voor sitemaplinks met het gebruikte minimum aantal vacatures.
  */
 if (
     ! defined(
@@ -110,7 +113,7 @@ if (
 ) {
     define(
         'TFSC_COMBO_SITEMAP_CACHE_KEY',
-        'tfsc_combo_sitemap_links_v8_function_combos_rankmath'
+        'tfsc_combo_sitemap_links_v9_open_counts'
     );
 }
 
@@ -829,6 +832,20 @@ function tfsc_combo_sitemap_term_products(
  * ============================================================
  */
 
+function tfsc_combo_sitemap_taxonomy_set_allowed( array $taxonomies ): bool {
+    $depth = count( array_unique( $taxonomies ) );
+    $max = function_exists( 'tfsc_combo_policy_sitemap_max_dimensions' )
+        ? tfsc_combo_policy_sitemap_max_dimensions()
+        : 2;
+
+    return in_array( 'functienaam', $taxonomies, true )
+        && $depth >= max( 1, (int) TFSC_COMBO_SITEMAP_MIN_DIMENSIONS )
+        && $depth <= $max
+        && ( ! function_exists( 'tfsc_combo_policy_sitemap_taxonomy_set_allowed' )
+            || tfsc_combo_policy_sitemap_taxonomy_set_allowed( $taxonomies ) );
+}
+
+
 function tfsc_combo_sitemap_generate_links() {
 
     if (
@@ -838,6 +855,9 @@ function tfsc_combo_sitemap_generate_links() {
     }
 
 
+    $minimum = function_exists( 'tfsc_combo_index_min_open_vacancies' )
+        ? tfsc_combo_index_min_open_vacancies()
+        : 1;
     $cached =
         get_transient(
             TFSC_COMBO_SITEMAP_CACHE_KEY
@@ -846,8 +866,10 @@ function tfsc_combo_sitemap_generate_links() {
 
     if (
         is_array( $cached )
+        && $minimum === ( $cached['minimum'] ?? null )
+        && is_array( $cached['links'] ?? null )
     ) {
-        return $cached;
+        return $cached['links'];
     }
 
 
@@ -913,7 +935,7 @@ function tfsc_combo_sitemap_generate_links() {
 
         set_transient(
             TFSC_COMBO_SITEMAP_CACHE_KEY,
-            [],
+            [ 'minimum' => $minimum, 'links' => [] ],
             TFSC_COMBO_SITEMAP_CACHE_TTL
         );
 
@@ -923,6 +945,12 @@ function tfsc_combo_sitemap_generate_links() {
 
 
     $links = [];
+    $seen_posts = [];
+    $allowed_taxonomy_sets = [];
+    $min = max( 1, (int) TFSC_COMBO_SITEMAP_MIN_DIMENSIONS );
+    $policy_max = function_exists( 'tfsc_combo_policy_sitemap_max_dimensions' )
+        ? tfsc_combo_policy_sitemap_max_dimensions()
+        : 2;
 
 
     foreach (
@@ -939,6 +967,12 @@ function tfsc_combo_sitemap_generate_links() {
 
         $post_id =
             (int) $post->ID;
+
+        if ( isset( $seen_posts[ $post_id ] ) ) {
+            continue;
+        }
+        $seen_posts[ $post_id ] = true;
+        $seen_urls = [];
 
 
         $post_lastmod =
@@ -995,20 +1029,6 @@ function tfsc_combo_sitemap_generate_links() {
             );
 
 
-        $min =
-            max(
-                1,
-                (int)
-                TFSC_COMBO_SITEMAP_MIN_DIMENSIONS
-            );
-
-
-        $policy_max =
-            function_exists( 'tfsc_combo_policy_sitemap_max_dimensions' )
-                ? tfsc_combo_policy_sitemap_max_dimensions()
-                : 2;
-
-
         $max =
             min(
                 count(
@@ -1043,19 +1063,16 @@ function tfsc_combo_sitemap_generate_links() {
                 $dimension_sets
                 as $taxonomy_set
             ) {
-                if(!in_array('functienaam',$taxonomy_set,true))continue;
-
                 $taxonomy_set =
                     tfsc_combo_sitemap_order_taxonomies(
                         $taxonomy_set
                     );
 
 
-                if (
-                    function_exists( 'tfsc_combo_policy_sitemap_taxonomy_set_allowed' )
-                    &&
-                    ! tfsc_combo_policy_sitemap_taxonomy_set_allowed( $taxonomy_set )
-                ) {
+                $set_key = implode( '|', $taxonomy_set );
+                $allowed_taxonomy_sets[ $set_key ] = $allowed_taxonomy_sets[ $set_key ]
+                    ?? tfsc_combo_sitemap_taxonomy_set_allowed( $taxonomy_set );
+                if ( ! $allowed_taxonomy_sets[ $set_key ] ) {
                     continue;
                 }
 
@@ -1078,24 +1095,16 @@ function tfsc_combo_sitemap_generate_links() {
                         );
 
 
-                    if (
-                        ! tfsc_combo_should_index(
-                            $combo
-                        )
-                    ) {
-                        continue;
-                    }
-
-
                     $url =
                         tfsc_combo_sitemap_build_url(
                             $combo
                         );
 
 
-                    if ( '' === $url ) {
+                    if ( '' === $url || isset( $seen_urls[ $url ] ) ) {
                         continue;
                     }
+                    $seen_urls[ $url ] = true;
 
 
                     if (
@@ -1109,46 +1118,34 @@ function tfsc_combo_sitemap_generate_links() {
                         $links[
                             $url
                         ] = [
-                            'loc' =>
-                                $url,
-
-                            'lastmod' =>
-                                $post_lastmod,
+                            'loc' => $url,
+                            'lastmod' => $post_lastmod,
+                            'combo' => $combo,
+                            'count' => 1,
                         ];
 
                         continue;
                     }
 
 
-                    $links[
-                        $url
-                    ][
-                        'lastmod'
-                    ] =
-                        tfsc_combo_sitemap_newest_lastmod(
-                            isset(
-                                $links[
-                                    $url
-                                ][
-                                    'lastmod'
-                                ]
-                            )
-                                ?
-                                $links[
-                                    $url
-                                ][
-                                    'lastmod'
-                                ]
-                                :
-                                '',
-
-                            $post_lastmod
-                        );
+                    ++$links[ $url ]['count'];
+                    $links[ $url ]['lastmod'] = tfsc_combo_sitemap_newest_lastmod(
+                        $links[ $url ]['lastmod'],
+                        $post_lastmod
+                    );
                 }
             }
         }
     }
 
+
+    foreach ( $links as $url => $entry ) {
+        if ( ! tfsc_combo_should_index( $entry['combo'], $entry['count'] ) ) {
+            unset( $links[ $url ] );
+            continue;
+        }
+        unset( $links[ $url ]['combo'], $links[ $url ]['count'] );
+    }
 
     ksort(
         $links,
@@ -1164,7 +1161,7 @@ function tfsc_combo_sitemap_generate_links() {
 
     set_transient(
         TFSC_COMBO_SITEMAP_CACHE_KEY,
-        $links,
+        [ 'minimum' => $minimum, 'links' => $links ],
         TFSC_COMBO_SITEMAP_CACHE_TTL
     );
 
@@ -1197,6 +1194,8 @@ function tfsc_combo_sitemap_flush_cache() {
     delete_transient(
         'tfsc_combo_sitemap_links_v3'
     );
+
+    delete_transient( 'tfsc_combo_sitemap_links_v8_function_combos_rankmath' );
 
 
     if (
@@ -1247,6 +1246,29 @@ add_action(
     3
 );
 
+add_action(
+    'transition_post_status',
+    static function ( $new_status, $old_status, $post ) {
+        if ( $post instanceof WP_Post && TFSC_VACANCY_POST_TYPE === $post->post_type
+            && $new_status !== $old_status && in_array( 'publish', [ $new_status, $old_status ], true ) ) {
+            tfsc_combo_sitemap_flush_cache();
+        }
+    },
+    20,
+    3
+);
+
+add_action(
+    'after_delete_post',
+    static function ( $post_id, $post ) {
+        if ( $post instanceof WP_Post && TFSC_VACANCY_POST_TYPE === $post->post_type ) {
+            tfsc_combo_sitemap_flush_cache();
+        }
+    },
+    20,
+    2
+);
+
 
 /**
  * ============================================================
@@ -1254,54 +1276,35 @@ add_action(
  * ============================================================
  */
 
+function tfsc_combo_sitemap_vacancy_terms_changed( $object_id, $taxonomy ) {
+    if ( TFSC_VACANCY_POST_TYPE !== get_post_type( $object_id ) ) {
+        return;
+    }
+
+    if ( TFSC_STATUS_TAXONOMY !== $taxonomy
+        && ( ! function_exists( 'tfsc_combo_taxonomy_allowed' ) || ! tfsc_combo_taxonomy_allowed( $taxonomy ) ) ) {
+        return;
+    }
+
+    tfsc_combo_sitemap_flush_cache();
+}
+
 add_action(
     'set_object_terms',
-
-    function(
-        $object_id,
-        $terms,
-        $tt_ids,
-        $taxonomy,
-        $append,
-        $old_tt_ids
-    ) {
-
-        if (
-            ! function_exists(
-                'tfsc_combo_taxonomy_allowed'
-            )
-        ) {
-            return;
-        }
-
-
-        if (
-            TFSC_STATUS_TAXONOMY
-                !== $taxonomy
-            &&
-            ! tfsc_combo_taxonomy_allowed(
-                $taxonomy
-            )
-        ) {
-            return;
-        }
-
-
-        if (
-            TFSC_VACANCY_POST_TYPE
-            !== get_post_type(
-                $object_id
-            )
-        ) {
-            return;
-        }
-
-
-        tfsc_combo_sitemap_flush_cache();
+    static function ( $object_id, $terms, $tt_ids, $taxonomy ) {
+        tfsc_combo_sitemap_vacancy_terms_changed( $object_id, $taxonomy );
     },
-
     20,
-    6
+    4
+);
+
+add_action(
+    'deleted_term_relationships',
+    static function ( $object_id, $tt_ids, $taxonomy ) {
+        tfsc_combo_sitemap_vacancy_terms_changed( $object_id, $taxonomy );
+    },
+    20,
+    3
 );
 
 
