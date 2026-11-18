@@ -1,7 +1,7 @@
 <?php
 /**
  * TFSC - Generic Derived Relationship Taxonomy Terms
- * WordPress snippet 330 v5.9 - optional Elementor manual term selection
+ * WordPress snippet 330 v5.10 - optional Elementor manual term selection
  *
  * ============================================================
  * DOEL
@@ -1134,7 +1134,23 @@ add_action( 'elementor/frontend/widget/after_render', function( $widget ) {
 function tfsc_derived_rel_v3_manual_ids( $eligible, $args, $taxonomy ) {
     if ( ! empty( $args['include'] ) ) {
         // Houd ook de Elementor-volgorde aan voor orderby=include.
-        $eligible = array_intersect( wp_parse_id_list( $args['include'] ), $eligible );
+        $roots = wp_parse_id_list( $args['include'] );
+        $included = array_fill_keys( $roots, true );
+        if ( is_taxonomy_hierarchical( $taxonomy ) ) {
+            // Termen op het doelniveau hebben geen kinderen op datzelfde niveau.
+            foreach ( array_diff( $roots, $eligible ) as $root ) {
+                if ( ! $root ) {
+                    continue;
+                }
+                $children = get_term_children( $root, $taxonomy );
+                if ( ! is_wp_error( $children ) ) {
+                    foreach ( $children as $child ) {
+                        $included[ $child ] = true;
+                    }
+                }
+            }
+        }
+        $eligible = array_intersect( array_keys( $included ), $eligible );
     }
 
     $excluded = wp_parse_id_list( $args['exclude'] ?? [] );
