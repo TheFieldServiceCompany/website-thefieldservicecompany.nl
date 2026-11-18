@@ -1,7 +1,7 @@
 <?php
 /**
  * TFSC - Generic Derived Relationship Taxonomy Terms
- * WordPress snippet 330 v5.8 - optional Elementor manual term selection
+ * WordPress snippet 330 v5.9 - optional Elementor manual term selection
  *
  * ============================================================
  * DOEL
@@ -1365,7 +1365,6 @@ add_filter(
     ) {
 
         if (
-            is_admin() ||
             empty(
                 $args[
                     'tfsc_derived_relationship_query'
@@ -1730,3 +1729,19 @@ add_filter(
     30,
     3
 );
+
+// In de editor moet de termenquery al vóór paginering de gekozen volgorde hebben.
+add_filter( 'terms_clauses', function( $clauses, $taxonomies, $args ) {
+    if ( empty( $args['tfsc_derived_relationship_query'] ) || ! did_action( 'elementor/loaded' )
+        || ! \Elementor\Plugin::$instance->editor->is_edit_mode() ) {
+        return $clauses;
+    }
+    $columns = [ 'name' => 't.name', 'term_id' => 't.term_id', 'id' => 't.term_id' ];
+    $column = $columns[ $args['orderby'] ?? 'name' ] ?? null;
+    if ( $column ) {
+        $direction = strtoupper( $args['order'] ?? 'ASC' ) === 'DESC' ? 'DESC' : 'ASC';
+        $clauses['orderby'] = 'ORDER BY ' . $column . ' ' . $direction . ', t.term_id';
+        $clauses['order'] = $direction;
+    }
+    return $clauses;
+}, PHP_INT_MAX, 3 );
