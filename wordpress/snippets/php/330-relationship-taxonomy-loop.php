@@ -1,7 +1,7 @@
 <?php
 /**
  * TFSC - Generic Derived Relationship Taxonomy Terms
- * WordPress snippet 330 v5.6 - optional Elementor manual term selection
+ * WordPress snippet 330 v5.7 - optional Elementor manual term selection
  *
  * ============================================================
  * DOEL
@@ -77,8 +77,8 @@
  * relationship_level_2
  * → exact twee ancestors
  *
- * Voeg _manual toe aan de Query ID om ook Elementor Include en Exclude
- * toe te passen, bijvoorbeeld relationship_level_2_manual voor plaatsen.
+ * De gewone Query ID volgt de handmatige selectie van Elementor.
+ * De bestaande suffix _manual blijft beschikbaar.
  * Elementor Filter by Depth kan UIT blijven.
  */
 
@@ -1118,7 +1118,9 @@ function tfsc_derived_rel_v3_parse_query_id(
 // gebruikt. De oorspronkelijke relationship_level_N houdt zijn eigen linklogica.
 add_action( 'elementor/frontend/widget/before_render', function( $widget ) {
     if ( in_array( $widget->get_name(), [ 'loop-grid', 'loop-carousel' ], true ) ) {
-        $GLOBALS['tfsc_330_loop_scopes'][] = [];
+        $GLOBALS['tfsc_330_loop_scopes'][] = [
+            '_manual_selection' => 'manual_selection' === $widget->get_settings( 'post_taxonomy_query_filter_by' ),
+        ];
     }
 } );
 
@@ -1173,6 +1175,11 @@ add_filter(
 
         if ( ! $parsed ) {
             return $args;
+        }
+
+        $scope = ! empty( $GLOBALS['tfsc_330_loop_scopes'] ) ? end( $GLOBALS['tfsc_330_loop_scopes'] ) : [];
+        if ( ! empty( $scope['_manual_selection'] ) ) {
+            $parsed['manual'] = true;
         }
 
 
