@@ -46,6 +46,8 @@ function loop_ids( $id, $args = [], $setting = 'term_taxonomy_id' ) {
 
 class FixtureLoopWidget {
     private $name;
+    public $mode = 'show_all';
+    public function get_settings( $key ) { return $key === 'post_taxonomy_query_filter_by' ? $this->mode : null; }
 
     public function __construct( $name ) { $this->name = $name; }
     public function get_name() { return $this->name; }
@@ -117,6 +119,14 @@ try {
     expect_same( [ $nh, $ut ], loop_ids( 'relationship_level_1_manual' ), 'inferred provinces of open vacancies' );
     expect_same( $native, get_term_link( $ams, 'locatie' ), 'query outside a widget does not rewrite links' );
 
+    do_action( $before, $grid );
+    do_action( $after, $grid );
+    $grid->mode = 'manual_selection';
+    do_action( $before, $grid );
+    expect_same( [ $ams ], loop_ids( $legacy, [ 'include' => [ $ams ] ] ), 'standard ID follows Elementor manual include' );
+    expect_same( [ $amf ], loop_ids( $legacy, [ 'exclude' => [ $ams ] ] ), 'standard ID follows Elementor manual exclude' );
+    do_action( $after, $grid );
+    $grid->mode = 'show_all';
     do_action( $before, $grid );
     $amsterdam_args = [ 'include' => [ $ams ], 'term_taxonomy_id' => $manual ];
     expect_same( [ $ams ], loop_ids( $manual, $amsterdam_args, 'post_taxonomy_term_taxonomy_id' ), 'include Amsterdam using the prefixed Query ID setting' );
