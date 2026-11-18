@@ -618,6 +618,10 @@ De actuele bronnen van snippets [148](php/148-combo-vacancy-sitemap.php), [186](
 
 Zie het [uitvoerings- en testrapport](../../audits/2026-11-02-combo-archives-pagination-sitemaps.md), inclusief resultaten voor alle 21 FSE-vacatures, alle 47 open vacatures, de filters, mobiel en 1.144 unieke sitemap-URL’s.
 
+## Snippet 330 v5.7 — dezelfde Query ID voor beide selectiestanden
+
+Op dev en productie actief sinds 18 november 2026. Gebruik bijvoorbeeld `relationship_level_2` voor plaatsen. Met **Filter op → Handmatige selectie** gebruikt de query de ingestelde opname en uitsluiting. **Alles weergeven** behoudt de oorspronkelijke selectie en linkwerking. De ID met `_manual` blijft als alias beschikbaar. In de dev-test leverde de gewone ID één Amsterdamkaart bij opnemen, 40 andere plaatsen bij uitsluiten en nul kaarten bij selectie van een provincie op plaatsniveau. De bron op productie is na uitrol teruggelezen.
+
 ## Snippet 330 v5.6 — handmatige termselectie in Elementor
 
 [Snippet 330](php/330-relationship-taxonomy-loop.php) draait als globale PHP-snippet. Het Loop Grid gebruikt de kaarten van de ingestelde taxonomie, de Pods-relaties van de pagina en open vacatures. Voor bestaande rasters geldt de oorspronkelijke Query ID `relationship_level_N`. Elk nieuw raster kan de selectie afzonderlijk inschakelen met `relationship_level_N_manual`.
