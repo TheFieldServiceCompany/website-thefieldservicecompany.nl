@@ -103,7 +103,7 @@ try {
     expect_same( [ $amf ], loop_ids( $manual, [ 'exclude' => [ $ams ] ] ), 'exclude Amsterdam' );
     expect_same( [ $ams ], loop_ids( $manual, [ 'include' => "$ams,$amf", 'exclude' => (string) $amf ] ), 'CSV selection and exclusion precedence' );
     expect_same( [], loop_ids( $manual, [ 'include' => [ $ams ], 'exclude' => [ $ams ] ] ), 'excluded final card stays empty' );
-    expect_same( [], loop_ids( $manual, [ 'include' => [ $edam, $nh ] ] ), 'closed vacancies and the wrong depth are ineligible' );
+    expect_same( [ $ams ], loop_ids( $manual, [ 'include' => [ $edam, $nh ] ] ), 'a selected province includes eligible cities and skips closed vacancies' );
     expect_same( [ $amf ], loop_ids( $manual, [ 'exclude_tree' => [ $nh ] ] ), 'exclude_tree removes descendant cities' );
     expect_same( [ $amf, $ams ], loop_ids( $manual, [ 'include' => [ $amf, $ams ], 'orderby' => 'include' ] ), 'native include order' );
     expect_same( [ $amf ], loop_ids( $manual, [ 'number' => 1, 'offset' => 1 ] ), 'pagination follows the filtered selection' );
