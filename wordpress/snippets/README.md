@@ -617,3 +617,15 @@ De actuele bronnen van snippets [148](php/148-combo-vacancy-sitemap.php), [186](
 - De actieve managerplugin 0.2.0 is een teller en read-only simulatie. Hij past de live sitemaps niet aan. De publieke keten blijft 186 → 193 → 148.
 
 Zie het [uitvoerings- en testrapport](../../audits/2026-11-02-combo-archives-pagination-sitemaps.md), inclusief resultaten voor alle 21 FSE-vacatures, alle 47 open vacatures, de filters, mobiel en 1.144 unieke sitemap-URL’s.
+
+## Snippet 330 v5.6 — handmatige termselectie in Elementor
+
+[Snippet 330](php/330-relationship-taxonomy-loop.php) draait als globale PHP-snippet. Het Loop Grid gebruikt de kaarten van de ingestelde taxonomie, de Pods-relaties van de pagina en open vacatures. Voor bestaande rasters geldt de oorspronkelijke Query ID `relationship_level_N`. Elk nieuw raster kan de selectie afzonderlijk inschakelen met `relationship_level_N_manual`.
+
+Kies voor Nederlandse steden in het taxonomie-Loop Grid de bron **Locaties**, **Filter op → Handmatige selectie** en de Query ID `relationship_level_2_manual`. De kaartcontainer gebruikt de dynamische Archief-URL. Alleen plaatsen op niveau twee met passende open vacatures komen in aanmerking. Opnemen beperkt de lijst, Uitsluiten trekt locaties ervan af en een lege doorsnede geeft nul kaarten. De afbakening van combo-links loopt tot het einde van dit raster. Ook geneste Loop Grids en Loop Carousels krijgen een eigen context. De historische Query ID behoudt de bestaande bredere linkwerking voor de rest van hetzelfde verzoek.
+
+Op 18 november 2026 is v5.6 geactiveerd op dev. In een aparte Elementor-testtemplate gaf Opnemen één Amsterdamkaart. Een klik opende het vacaturearchief onder `/vacatures/locatie/nederland/noord-holland/amsterdam/`. Uitsluiten gaf 40 andere plaatsen. De Noord-Hollandselectie op plaatsniveau gaf nul kaarten. De standaardrasters voor en na de selectie behielden de gewone Amsterdam-URL. Het bestaande raster met `relationship_level_2` behield zijn combo-links. De productiebron tijdens de proef was v5.5.
+
+De [integratietest](../../audits/tests/relationship-taxonomy-selection.php) draaide met WordPress 6.8.2 en 7.1.4. Per versie slaagden 31 controles. Herhaling van dezelfde selectie binnen één verzoek kostte in de test nul extra SQL-query’s. De snippet hergebruikt vacature-ID’s binnen één verzoek en bouwt de lijst met bovenliggende termen zonder herhaald kopiëren op. De test meet geen volledige paginalaadtijd.
+
+Om een raster terug te zetten, herstel de eerdere Query ID. De hele v5.5 is beschikbaar als ID 330 in de [oorspronkelijke WordPress-export](../exports/code-snippets/2026-10-30-before-cleanup/all-snippets.code-snippets.json).
