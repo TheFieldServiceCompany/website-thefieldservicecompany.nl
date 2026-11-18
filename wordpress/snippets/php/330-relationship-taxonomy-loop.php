@@ -1,7 +1,7 @@
 <?php
 /**
  * TFSC - Generic Derived Relationship Taxonomy Terms
- * WordPress snippet 330 v5.7 - optional Elementor manual term selection
+ * WordPress snippet 330 v5.8 - optional Elementor manual term selection
  *
  * ============================================================
  * DOEL
@@ -1178,7 +1178,12 @@ add_filter(
         }
 
         $scope = ! empty( $GLOBALS['tfsc_330_loop_scopes'] ) ? end( $GLOBALS['tfsc_330_loop_scopes'] ) : [];
-        if ( ! empty( $scope['_manual_selection'] ) ) {
+        // Elementor kan het editorraster rechtstreeks renderen, zonder frontend-widgetscope.
+        $editor_filter = empty( $scope )
+            && ( ! empty( $args['include'] ) || ! empty( $args['exclude'] ) || ! empty( $args['exclude_tree'] ) )
+            && did_action( 'elementor/loaded' )
+            && \Elementor\Plugin::$instance->editor->is_edit_mode();
+        if ( $editor_filter || ! empty( $scope['_manual_selection'] ) ) {
             $parsed['manual'] = true;
         }
 
